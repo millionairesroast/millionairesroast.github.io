@@ -1,14 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Millionaire’s Roast — Luxury in every cup. Small-batch, rotating single-origin coffees. Order by text or email. Follow Facebook & Instagram for weekly locations." />
+  <meta name="description" content="Millionaire’s Roast — Luxury in every cup. Small-batch, rotating single-origin coffees. Order online, text, or email. Follow Facebook & Instagram for weekly locations." />
   <meta name="theme-color" content="#07070a" />
-
   <title>Millionaire’s Roast — Luxury in every cup.</title>
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Millionaire’s Roast" />
   <meta property="og:description" content="Luxury in every cup. Small-batch, rotating single-origin coffees. Order by text or email." />
   <meta property="og:type" content="website" />
@@ -18,7 +16,7 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
   <header class="site-header" id="top">
     <div class="container header-inner">
@@ -26,27 +24,44 @@
         <img class="brand-mark" src="logo.png" alt="" width="44" height="44" />
         <span class="brand-text">
           <span class="brand-name">Millionaire’s Roast</span>
-          <span class="brand-tag">Luxury in every cup.</span>
+          <span class="brand-tag" data-i18n="tagline">Luxury in every cup.</span>
         </span>
       </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a class="nav-link" href="#about">About</a>
-        <a class="nav-link" href="#faq">FAQ</a>
-        <a class="nav-link" href="#contact">Contact</a>
-        <a class="nav-cta" href="#contact">ORDER</a>
-      </nav>
+      <div class="header-right">
+        <!-- Desktop language toggle -->
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-lang-btn="es" aria-pressed="false">ES</button>
+        </div>
 
-      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
-        <span></span><span></span><span></span>
-      </button>
+        <nav class="nav" aria-label="Primary">
+          <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
+          <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
+          <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
+          <a class="nav-cta" href="#contact" data-i18n="nav.order">ORDER</a>
+        </nav>
+
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
 
-    <div class="mobile-nav" id="mobile-nav" hidden>
-      <a class="nav-link" href="#about">About</a>
-      <a class="nav-link" href="#faq">FAQ</a>
-      <a class="nav-link" href="#contact">Contact</a>
-      <a class="nav-cta" href="#contact">ORDER</a>
+    <!-- Mobile menu (animated open/close) -->
+    <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+      <div class="mobile-lang">
+        <span class="mobile-lang-label" data-i18n="lang.label">Language</span>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-lang-btn="es" aria-pressed="false">ES</button>
+        </div>
+      </div>
+
+      <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
+      <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
+      <a class="nav-cta" href="#contact" data-i18n="nav.order">ORDER</a>
     </div>
   </header>
 
@@ -54,31 +69,36 @@
     <section class="hero">
       <div class="container">
         <div class="hero-plate">
-          <p class="kicker">SMALL BATCH ROASTERY</p>
+          <p class="kicker" data-i18n="hero.kicker">SMALL BATCH ROASTERY</p>
           <h1 class="hero-title">Millionaire’s Roast</h1>
-          <p class="hero-tagline">Luxury in every cup.</p>
+          <p class="hero-tagline" data-i18n="tagline">Luxury in every cup.</p>
 
-          <p class="hero-sub">
+          <p class="hero-sub" data-i18n="hero.sub">
             Small-batch, rotating single-origin coffees for those with discerning taste.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-gold" href="mailto:millionairesroast@gmail.com?subject=Coffee%20Order%20%7C%20Millionaire%E2%80%99s%20Roast">
+            <!-- Square Buy Now: paste your Square payment link into index.js (SQUARE_BUY_LINK) -->
+            <a class="btn btn-gold" id="squareBuyBtn" href="#" target="_blank" rel="noopener noreferrer" data-i18n="cta.buy">
+              Buy Now
+            </a>
+
+            <a class="btn btn-outline" href="mailto:millionairesroast@gmail.com?subject=Coffee%20Order%20%7C%20Millionaire%E2%80%99s%20Roast" data-i18n="cta.email">
               Email to Order
             </a>
 
-            <a class="btn btn-outline" id="textOrderBtn" href="#">
+            <a class="btn btn-outline" id="textOrderBtn" href="#" data-i18n="cta.text">
               Text to Order
             </a>
           </div>
 
-          <p class="hero-note">No online checkout — order by text or email.</p>
+          <p class="hero-note" data-i18n="hero.note">Order online, or order by text or email.</p>
           <div class="divider divider-ornate" aria-hidden="true"></div>
         </div>
 
         <div class="callout">
-          <span class="callout-label">Where to find us</span>
-          <span class="callout-text">
+          <span class="callout-label" data-i18n="find.label">Where to find us</span>
+          <span class="callout-text" data-i18n="find.text">
             Catch us at Central Illinois farmers markets. Follow us for weekly locations and updates.
           </span>
           <div class="callout-links">
@@ -93,31 +113,29 @@
     <section class="section" id="about">
       <div class="container">
         <div class="section-head">
-          <h2 class="section-title">Refined Roasts for Discerning Tastes.</h2>
-          <p class="section-subtitle">
+          <h2 class="section-title" data-i18n="about.title">Refined Roasts for Discerning Tastes.</h2>
+          <p class="section-subtitle" data-i18n="about.subtitle">
             At Millionaire’s Roast, we craft exclusive small-batch roasts using a rotating selection of the finest single-origin beans.
           </p>
         </div>
 
         <div class="about-grid">
           <article class="card card-plate">
-            <h3 class="card-title">The Roast</h3>
-            <p class="card-text">
+            <h3 class="card-title" data-i18n="about.card1.title">The Roast</h3>
+            <p class="card-text" data-i18n="about.card1.text">
               Our beans rotate based on the roaster’s choice — selected for character, balance, and a clean finish.
               Each batch is roasted to bring out the best of its origin.
             </p>
-            <p class="card-text emphasis">
-              Experience luxury in every cup.
-            </p>
+            <p class="card-text emphasis" data-i18n="about.card1.emphasis">Experience luxury in every cup.</p>
           </article>
 
           <aside class="card card-plate">
-            <h3 class="card-title">What you’re getting</h3>
+            <h3 class="card-title" data-i18n="about.card2.title">What you’re getting</h3>
             <ul class="checklist">
-              <li>Rotating single-origin coffees</li>
-              <li>Roasted fresh in small batches</li>
-              <li>Premium presentation &amp; gifting-ready</li>
-              <li>Order directly by text or email</li>
+              <li data-i18n="about.card2.li1">Rotating single-origin coffees</li>
+              <li data-i18n="about.card2.li2">Roasted fresh in small batches</li>
+              <li data-i18n="about.card2.li3">Premium presentation &amp; gifting-ready</li>
+              <li data-i18n="about.card2.li4">Order online, text, or email</li>
             </ul>
           </aside>
         </div>
@@ -127,52 +145,41 @@
     <section class="section" id="faq">
       <div class="container">
         <div class="section-head center">
-          <h2 class="section-title">Have Questions?</h2>
-          <p class="section-subtitle">Quick answers. If you don’t see what you need, reach out.</p>
+          <h2 class="section-title" data-i18n="faq.title">Have Questions?</h2>
+          <p class="section-subtitle" data-i18n="faq.subtitle">Quick answers. If you don’t see what you need, reach out.</p>
         </div>
 
         <div class="faq card card-plate" data-accordion>
           <button class="faq-item" type="button" aria-expanded="false">
-            <span class="faq-q">What beans are available right now?</span>
+            <span class="faq-q" data-i18n="faq.q1">What beans are available right now?</span>
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
-          <div class="faq-a" hidden>
-            <p>
-              Our selection rotates based on the roaster’s choice of single-origin beans.
-              For this week’s options, check Facebook/Instagram or text/email us.
-            </p>
+          <div class="faq-a" data-panel>
+            <p data-i18n="faq.a1">Our selection rotates based on the roaster’s choice of single-origin beans. For this week’s options, check Facebook/Instagram or text/email us.</p>
           </div>
 
           <button class="faq-item" type="button" aria-expanded="false">
-            <span class="faq-q">How do I order?</span>
+            <span class="faq-q" data-i18n="faq.q2">How do I order?</span>
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
-          <div class="faq-a" hidden>
-            <p>
-              Order directly by <a href="mailto:millionairesroast@gmail.com">email</a> or by text.
-              Tell us what you want (whole bean vs. ground), how many bags, and your preferred pickup.
-            </p>
+          <div class="faq-a" data-panel>
+            <p data-i18n="faq.a2">Order online, or order directly by email or by text. Tell us what you want (whole bean vs. ground), how many bags, and your preferred pickup.</p>
           </div>
 
           <button class="faq-item" type="button" aria-expanded="false">
-            <span class="faq-q">Do you ship?</span>
+            <span class="faq-q" data-i18n="faq.q3">Do you ship?</span>
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
-          <div class="faq-a" hidden>
-            <p>
-              Not reliably yet. For now, the best way to get coffee is to meet us at a market or arrange local pickup.
-              Follow Facebook/Instagram for weekly locations.
-            </p>
+          <div class="faq-a" data-panel>
+            <p data-i18n="faq.a3">Not reliably yet. For now, the best way to get coffee is to meet us at a market or arrange local pickup. Follow Facebook/Instagram for weekly locations.</p>
           </div>
 
           <button class="faq-item" type="button" aria-expanded="false">
-            <span class="faq-q">Do you offer K-Cups?</span>
+            <span class="faq-q" data-i18n="faq.q4">Do you offer K-Cups?</span>
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
-          <div class="faq-a" hidden>
-            <p>
-              We’re exploring single-serve options. Follow us for announcements and new drops.
-            </p>
+          <div class="faq-a" data-panel>
+            <p data-i18n="faq.a4">We’re exploring single-serve options. Follow us for announcements and new drops.</p>
           </div>
         </div>
       </div>
@@ -181,15 +188,15 @@
     <section class="section" id="contact">
       <div class="container">
         <div class="section-head center">
-          <h2 class="section-title">Contact &amp; Follow Us</h2>
-          <p class="section-subtitle">Fastest response: text or email. Weekly locations: socials.</p>
+          <h2 class="section-title" data-i18n="contact.title">Contact &amp; Follow Us</h2>
+          <p class="section-subtitle" data-i18n="contact.subtitle">Fastest response: text or email. Weekly locations: socials.</p>
         </div>
 
         <div class="contact-grid">
           <a class="card card-action" href="mailto:millionairesroast@gmail.com?subject=Coffee%20Order%20%7C%20Millionaire%E2%80%99s%20Roast">
             <div class="card-icon" aria-hidden="true">✉</div>
             <div class="card-meta">
-              <div class="card-kicker">Email Us</div>
+              <div class="card-kicker" data-i18n="contact.email.kicker">Email Us</div>
               <div class="card-main">millionairesroast@gmail.com</div>
             </div>
           </a>
@@ -197,18 +204,18 @@
           <a class="card card-action" id="textUsCard" href="#">
             <div class="card-icon" aria-hidden="true">💬</div>
             <div class="card-meta">
-              <div class="card-kicker">Text Us</div>
+              <div class="card-kicker" data-i18n="contact.text.kicker">Text Us</div>
               <div class="card-main">(217) 416-7072</div>
-              <div class="card-sub">Tap to message</div>
+              <div class="card-sub" data-i18n="contact.text.sub">Tap to message</div>
             </div>
           </a>
 
           <div class="card card-action card-follow">
             <div class="card-icon" aria-hidden="true">★</div>
             <div class="card-meta">
-              <div class="card-kicker">Follow Us</div>
+              <div class="card-kicker" data-i18n="contact.follow.kicker">Follow Us</div>
               <div class="card-main">Millionaire’s Roast</div>
-              <div class="card-sub">Weekly locations &amp; updates</div>
+              <div class="card-sub" data-i18n="contact.follow.sub">Weekly locations &amp; updates</div>
               <div class="follow-links">
                 <a class="pill" href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer">Facebook</a>
                 <a class="pill" href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer">Instagram</a>

@@ -1,5 +1,7 @@
 /* Millionaire’s Roast — black/gold luxury (no external deps) */
 
+[hidden]{ display: none !important; }
+
 :root{
   --bg0: #07070a;
   --bg1: #0b0b10;

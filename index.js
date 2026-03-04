@@ -3,7 +3,7 @@
 (() => {
   // ====== EDIT THIS LATER ======
   // Replace with real US number (digits only). Example: "12175551234"
-  const PHONE_NUMBER = "1XXXXXXXXXX";
+  const PHONE_NUMBER = "12174167072";
   // ============================
 
   const yearEl = document.getElementById("year");

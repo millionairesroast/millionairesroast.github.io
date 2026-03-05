@@ -4,6 +4,7 @@
   // ==========================
 
   const PHONE_NUMBER = "12174167072"; // digits only
+  const LANG_FADE_MS = 160;
 
   const T = {
     en: {
@@ -49,8 +50,6 @@
       "contact.text.sub": "Tap to message",
       "contact.follow.kicker": "Follow Us",
       "contact.follow.sub": "Weekly locations & updates",
-
-      // Used for the SMS prefill body
       "sms.body": "Hi! I'd like to order coffee from Millionaire’s Roast."
     },
     es: {
@@ -96,8 +95,6 @@
       "contact.text.sub": "Toca para enviar",
       "contact.follow.kicker": "Síguenos",
       "contact.follow.sub": "Ubicaciones y novedades",
-
-      // Used for the SMS prefill body
       "sms.body": "¡Hola! Me gustaría pedir café de Millionaire’s Roast."
     }
   };
@@ -109,7 +106,6 @@
   // Square button (safe: link-out only)
   const squareBtn = document.getElementById("squareBuyBtn");
   const squarePlaceholder = SQUARE_BUY_LINK.includes("PASTE_YOUR_LINK_HERE");
-
   if (squareBtn) {
     squareBtn.href = SQUARE_BUY_LINK;
     if (squarePlaceholder) {
@@ -122,7 +118,7 @@
     }
   }
 
-  // Text links (SMS) - iOS uses '&body=', others usually use '?body='
+  // SMS helpers (Android vs iOS URL format differences)
   const textBtn = document.getElementById("textOrderBtn");
   const textCard = document.getElementById("textUsCard");
   const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -136,7 +132,7 @@
     if (textCard) textCard.href = sms;
   }
 
-  // Mobile nav smooth open/close
+  // Mobile nav smooth open/close (overlay)
   const toggle = document.querySelector(".nav-toggle");
   const mobileNav = document.getElementById("mobile-nav");
 
@@ -145,7 +141,18 @@
     toggle.setAttribute("aria-expanded", String(open));
     mobileNav.classList.toggle("is-open", open);
     mobileNav.setAttribute("aria-hidden", String(!open));
-    mobileNav.style.maxHeight = open ? (mobileNav.scrollHeight + "px") : "0px";
+
+    if (open) {
+      const header = document.querySelector(".site-header");
+      const headerH = header ? header.offsetHeight : 64;
+      const maxAvail = Math.max(160, window.innerHeight - headerH - 8);
+      const target = Math.min(mobileNav.scrollHeight, maxAvail);
+      mobileNav.style.maxHeight = target + "px";
+      mobileNav.style.overflowY = (mobileNav.scrollHeight > maxAvail) ? "auto" : "hidden";
+    } else {
+      mobileNav.style.maxHeight = "0px";
+      mobileNav.style.overflowY = "hidden";
+    }
   }
 
   if (toggle && mobileNav) {
@@ -161,9 +168,7 @@
     });
 
     window.addEventListener("resize", () => {
-      if (toggle.getAttribute("aria-expanded") === "true") {
-        mobileNav.style.maxHeight = mobileNav.scrollHeight + "px";
-      }
+      if (toggle.getAttribute("aria-expanded") === "true") setMobile(true);
     });
 
     document.addEventListener("keydown", (e) => {
@@ -201,31 +206,41 @@
     });
   }
 
-  // Language toggle (EN/ES), persists choice
+  // Language toggle (EN/ES), persists choice + fade
   const root = document.documentElement;
 
   function applyLang(lang) {
     const dict = T[lang] || T.en;
-    root.setAttribute("lang", lang === "es" ? "es" : "en");
-    root.dataset.lang = lang;
 
-    document.querySelectorAll("[data-i18n]").forEach((el) => {
-      const key = el.getAttribute("data-i18n");
-      if (dict[key]) el.textContent = dict[key];
-    });
+    // Fade out current copy, swap text, then fade back in
+    root.classList.add("is-lang-fading");
 
-    document.querySelectorAll("[data-lang-btn]").forEach((btn) => {
-      btn.setAttribute("aria-pressed", String(btn.getAttribute("data-lang-btn") === lang));
-    });
+    window.setTimeout(() => {
+      root.setAttribute("lang", lang === "es" ? "es" : "en");
+      root.dataset.lang = lang;
 
-    try { localStorage.setItem("mr_lang", lang); } catch {}
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if (dict[key]) el.textContent = dict[key];
+      });
 
-    setSmsLink(lang);
+      document.querySelectorAll("[data-lang-btn]").forEach((btn) => {
+        btn.setAttribute("aria-pressed", String(btn.getAttribute("data-lang-btn") === lang));
+      });
 
-    // keep mobile height accurate if open
-    if (mobileNav && toggle && toggle.getAttribute("aria-expanded") === "true") {
-      mobileNav.style.maxHeight = mobileNav.scrollHeight + "px";
-    }
+      try { localStorage.setItem("mr_lang", lang); } catch {}
+
+      setSmsLink(lang);
+
+      // keep mobile height accurate if open
+      if (mobileNav && toggle && toggle.getAttribute("aria-expanded") === "true") {
+        setMobile(true);
+      }
+
+      requestAnimationFrame(() => {
+        root.classList.remove("is-lang-fading");
+      });
+    }, LANG_FADE_MS);
   }
 
   document.querySelectorAll("[data-lang-btn]").forEach((btn) => {

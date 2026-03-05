@@ -39,6 +39,10 @@ body::after{
 a{ color:inherit; text-decoration-color:rgba(200,164,77,.55); text-underline-offset:3px; }
 a:hover{ text-decoration-color:rgba(200,164,77,.9); }
 
+/* Language switch refinement: fade out old copy, then fade in new copy */
+[data-i18n]{ transition: opacity 180ms var(--ease); }
+html.is-lang-fading [data-i18n]{ opacity:0; }
+
 .container{
   width:min(var(--container), calc(100% - 40px));
   margin:0 auto;
@@ -59,6 +63,9 @@ a:hover{ text-decoration-color:rgba(200,164,77,.9); }
   border-bottom:1px solid rgba(200,164,77,.18);
   backdrop-filter: blur(10px);
   background: rgba(7,7,10,.55);
+  /* Anchor overlay mobile menu */
+  position:sticky;
+overflow:visible;
 }
 .header-inner{
   display:flex; align-items:center; justify-content:space-between; gap:14px;
@@ -107,24 +114,33 @@ a:hover{ text-decoration-color:rgba(200,164,77,.9); }
   margin:4px auto; border-radius:99px;
 }
 
-/* Mobile menu animation */
+/* Mobile menu animation (overlay; does not push page content) */
 .mobile-nav{
+  position:absolute;
+  left:0;
+  right:0;
+  top:100%;
   border-top:1px solid rgba(200,164,77,.16);
   overflow:hidden;
-  max-height:0; opacity:0; transform:translateY(-4px);
+  max-height:0;
+  opacity:0;
+  transform:translateY(-4px);
   transition: max-height var(--t) var(--ease), opacity var(--t) var(--ease), transform var(--t) var(--ease);
   padding:0 20px;
+  background: rgba(7,7,10,.92);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 60px rgba(0,0,0,.55);
+  pointer-events:none;
 }
-
-/* Keep padding consistent so scrollHeight math stays stable */
 .mobile-nav.is-open{
-  opacity:1; transform:translateY(0);
+  opacity:1;
+  transform:translateY(0);
   padding:10px 20px 18px;
+  pointer-events:auto;
 }
-
 .mobile-nav .nav-link, .mobile-nav .nav-cta{ display:block; margin-top:10px; }
 .mobile-lang{
-  display:none; /* only show inside the mobile menu on small screens */
+  display:none;
   align-items:center; justify-content:space-between;
   margin-top:10px; gap:12px;
 }
@@ -172,13 +188,7 @@ a:hover{ text-decoration-color:rgba(200,164,77,.9); }
   color:#17120a; border-color:rgba(226,196,106,.65);
 }
 .btn-outline{ background:rgba(0,0,0,.18); color:rgba(244,241,234,.92); }
-
-/* Optional: visually disable the Square button until the link is set */
-.btn.is-disabled{
-  opacity:.55;
-  cursor:not-allowed;
-  transform:none !important;
-}
+.btn.is-disabled{ opacity:.55; cursor:not-allowed; transform:none !important; }
 
 .hero-note{ margin:18px 0 0; text-align:center; color:var(--muted2); font-size:13px; }
 
@@ -303,13 +313,15 @@ a:hover{ text-decoration-color:rgba(200,164,77,.9); }
   .about-grid{ grid-template-columns:1fr; }
   .contact-grid{ grid-template-columns:1fr; }
 
-  /* IMPORTANT: hide only the DESKTOP toggle, not the one inside the mobile menu */
+  /* Hide only the DESKTOP language toggle */
   .header-right > .lang-switch{ display:none; }
+
+  /* Show the language toggle INSIDE the mobile menu */
   .mobile-lang{ display:flex; }
+  .mobile-nav .lang-switch{ display:inline-flex; }
 }
 
 @media (min-width:981px){
-  /* Prevent any weirdness / layout flashes on desktop */
   .mobile-nav{ display:none; }
 }
 

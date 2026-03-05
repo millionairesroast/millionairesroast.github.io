@@ -36,7 +36,7 @@
       "faq.title": "Have Questions?",
       "faq.subtitle": "Quick answers. If you don’t see what you need, reach out.",
       "faq.q1": "What beans are available right now?",
-      "faq.a1": "Our selection rotates based on the roaster’s choice of single-origin beans. For this week’s options, check Facebook/Instagram or text/email us.",
+      "faq.a1": "En este momento tenemos México Finca Fátima Altura (Lavado) de Coatepec, Veracruz — una taza limpia y elegante con dulzor de chocolate y nougat, y un final cítrico brillante. Cuerpo ligero y acidez media: excelente solo, y espectacular en pour-over. ¿Lo quieres en grano o molido? Envíanos un texto o correo y lo preparamos.",
       "faq.q2": "How do I order?",
       "faq.a2": "Order online, or order directly by email or by text. Tell us what you want (whole bean vs. ground), how many bags, and your preferred pickup.",
       "faq.q3": "Do you ship?",

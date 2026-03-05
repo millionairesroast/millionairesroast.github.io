@@ -49,6 +49,9 @@
       "contact.text.sub": "Tap to message",
       "contact.follow.kicker": "Follow Us",
       "contact.follow.sub": "Weekly locations & updates",
+
+      // Used for the SMS prefill body
+      "sms.body": "Hi! I'd like to order coffee from Millionaire’s Roast."
     },
     es: {
       skip: "Saltar al contenido",
@@ -93,6 +96,9 @@
       "contact.text.sub": "Toca para enviar",
       "contact.follow.kicker": "Síguenos",
       "contact.follow.sub": "Ubicaciones y novedades",
+
+      // Used for the SMS prefill body
+      "sms.body": "¡Hola! Me gustaría pedir café de Millionaire’s Roast."
     }
   };
 
@@ -102,9 +108,13 @@
 
   // Square button (safe: link-out only)
   const squareBtn = document.getElementById("squareBuyBtn");
+  const squarePlaceholder = SQUARE_BUY_LINK.includes("PASTE_YOUR_LINK_HERE");
+
   if (squareBtn) {
     squareBtn.href = SQUARE_BUY_LINK;
-    if (SQUARE_BUY_LINK.includes("PASTE_YOUR_LINK_HERE")) {
+    if (squarePlaceholder) {
+      squareBtn.classList.add("is-disabled");
+      squareBtn.setAttribute("aria-disabled", "true");
       squareBtn.addEventListener("click", (e) => {
         e.preventDefault();
         alert("Paste your Square payment link into index.js (SQUARE_BUY_LINK).");
@@ -112,12 +122,19 @@
     }
   }
 
-  // Text links (SMS)
-  const sms = `sms:${PHONE_NUMBER}?&body=${encodeURIComponent("Hi! I'd like to order coffee from Millionaire’s Roast.")}`;
+  // Text links (SMS) - iOS uses '&body=', others usually use '?body='
   const textBtn = document.getElementById("textOrderBtn");
   const textCard = document.getElementById("textUsCard");
-  if (textBtn) textBtn.href = sms;
-  if (textCard) textCard.href = sms;
+  const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  function setSmsLink(lang) {
+    const dict = T[lang] || T.en;
+    const body = encodeURIComponent(dict["sms.body"] || T.en["sms.body"]);
+    const sep = isIOS ? "&" : "?";
+    const sms = `sms:${PHONE_NUMBER}${sep}body=${body}`;
+    if (textBtn) textBtn.href = sms;
+    if (textCard) textCard.href = sms;
+  }
 
   // Mobile nav smooth open/close
   const toggle = document.querySelector(".nav-toggle");
@@ -202,6 +219,8 @@
     });
 
     try { localStorage.setItem("mr_lang", lang); } catch {}
+
+    setSmsLink(lang);
 
     // keep mobile height accurate if open
     if (mobileNav && toggle && toggle.getAttribute("aria-expanded") === "true") {

@@ -36,7 +36,7 @@
       "faq.title": "Have Questions?",
       "faq.subtitle": "Quick answers. If you don’t see what you need, reach out.",
       "faq.q1": "What beans are available right now?",
-      "faq.a1": "Right now we’re featuring Mexico Finca Fátima Altura (Washed) from Coatepec, Veracruz — a clean, elegant cup with chocolate and nougat sweetness, lifted by a bright citrus finish. Light-bodied with medium acidity, it’s smooth black and stunning as a refined pour-over. Want it whole bean or ground? Text or email and we’ll set you up.",
+      "faq.a1": "This rotation is Costa Rica Tarrazú “San Diego Jaguar” (Honey Process) — a rich, dessert‑leaning cup with chocolate sweetness and a honeyed finish, layered with nectarine, guava, berry, and a bright citrus lift. Full-bodied with medium acidity, it’s bold, silky, and ridiculously satisfying hot or iced. Want it whole bean or ground? Text or email and we’ll get your order ready.",
       "faq.q2": "How do I order?",
       "faq.a2": "Order online, or order directly by email or by text. Tell us what you want (whole bean vs. ground), how many bags, and your preferred pickup.",
       "faq.q3": "Do you ship?",
@@ -81,7 +81,7 @@
       "faq.title": "¿Tienes preguntas?",
       "faq.subtitle": "Respuestas rápidas. Si no ves lo que necesitas, contáctanos.",
       "faq.q1": "¿Qué granos hay disponibles ahora?",
-      "faq.a1": "En este momento tenemos México Finca Fátima Altura (Lavado) de Coatepec, Veracruz — una taza limpia y elegante con dulzor de chocolate y nougat, y un final cítrico brillante. Cuerpo ligero y acidez media: excelente solo, y espectacular en pour-over. ¿Lo quieres en grano o molido? Envíanos un texto o correo y lo preparamos.",
+      "faq.a1": "En esta rotación tenemos Costa Rica Tarrazú “San Diego Jaguar” (Proceso Honey) — una taza intensa y sedosa con dulzor de chocolate y un final con miel, con capas de nectarina, guayaba, frutos rojos y un toque cítrico brillante. Cuerpo alto y acidez media: potente, suave y deliciosa tanto caliente como en frío. ¿Lo quieres en grano o molido? Envíanos un texto o correo y preparamos tu pedido.",
       "faq.q2": "¿Cómo hago un pedido?",
       "faq.a2": "Ordena en línea, o directamente por correo o por texto. Dinos qué quieres (grano entero o molido), cuántas bolsas y tu forma de entrega preferida.",
       "faq.q3": "¿Hacen envíos?",
@@ -113,7 +113,7 @@
       squareBtn.setAttribute("aria-disabled", "true");
       squareBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        alert("Paste your Square payment link into index.js (SQUARE_BUY_LINK).");
+        alert("Online purchasing is currently under maintenance. Please order by text or email — we’ll take care of you right away.");
       });
     }
   }
@@ -208,16 +208,21 @@
 
   // Language toggle (EN/ES), persists choice + fade
   const root = document.documentElement;
+  let langInitialized = false;
 
   function applyLang(lang) {
     const dict = T[lang] || T.en;
+    const current = root.dataset.lang || (root.getAttribute("lang") === "es" ? "es" : "en");
+    if (langInitialized && lang === current) return;
 
-    // Fade out current copy, swap text, then fade back in
-    root.classList.add("is-lang-fading");
+    const shouldAnimate = Boolean(root.dataset.lang);
+    if (shouldAnimate) root.classList.add("is-lang-fading");
 
     window.setTimeout(() => {
+
       root.setAttribute("lang", lang === "es" ? "es" : "en");
       root.dataset.lang = lang;
+      langInitialized = true;
 
       document.querySelectorAll("[data-i18n]").forEach((el) => {
         const key = el.getAttribute("data-i18n");
@@ -240,7 +245,7 @@
       requestAnimationFrame(() => {
         root.classList.remove("is-lang-fading");
       });
-    }, LANG_FADE_MS);
+    }, shouldAnimate ? LANG_FADE_MS : 0);
   }
 
   document.querySelectorAll("[data-lang-btn]").forEach((btn) => {

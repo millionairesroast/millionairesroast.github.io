@@ -29,13 +29,7 @@
       </a>
 
       <div class="header-right">
-        <!-- Desktop language toggle -->
-        <div class="lang-switch" role="group" aria-label="Language">
-          <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="true">EN</button>
-          <button type="button" class="lang-btn" data-lang-btn="es" aria-pressed="false">ES</button>
-        </div>
-
-        <nav class="nav" aria-label="Primary">
+<nav class="nav" aria-label="Primary">
           <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
           <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
           <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
@@ -50,14 +44,6 @@
 
     <!-- Mobile menu (animated open/close) -->
     <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
-      <div class="mobile-lang">
-        <span class="mobile-lang-label" data-i18n="lang.label">Language</span>
-        <div class="lang-switch" role="group" aria-label="Language">
-          <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="true">EN</button>
-          <button type="button" class="lang-btn" data-lang-btn="es" aria-pressed="false">ES</button>
-        </div>
-      </div>
-
       <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
       <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
       <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
@@ -91,11 +77,11 @@
               Text to Order
             </a>
           </div>
+      </div>
+    </section>
 
-          <p class="hero-note" data-i18n="hero.note">Order online, or order by text or email.</p>
-          <div class="divider divider-ornate" aria-hidden="true"></div>
-        </div>
-
+    <section class="hero-after">
+      <div class="container">
         <div class="callout">
           <span class="callout-label" data-i18n="find.label">Where to find us</span>
           <span class="callout-text" data-i18n="find.text">
@@ -106,7 +92,16 @@
             <span class="callout-sep" aria-hidden="true">•</span>
             <a class="callout-link" href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer">Instagram</a>
           </div>
-        </div>
+      </div>
+    </section>
+
+    <section class="lang-section" aria-label="Language selection">
+      <div class="container">
+        <div class="lang-bar" aria-label="Language selection">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="true">English</button>
+            <button type="button" class="lang-btn" data-lang-btn="es" aria-pressed="false">Español</button>
+          </div>
       </div>
     </section>
 

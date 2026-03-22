@@ -20,8 +20,19 @@
 
   <header class="site-header" id="top">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Millionaire’s Roast (home)">
-        <img class="brand-mark" src="logo.png" alt="Millionaire’s Roast logo" width="44" height="44" />
+      <a class="brand" href="#top" aria-label="Millionaire’s Roast home">
+        <span class="brand-mark-wrap" aria-hidden="true">
+          <img
+            class="brand-mark"
+            src="logo.png"
+            alt=""
+            width="52"
+            height="52"
+            decoding="async"
+          />
+          <span class="brand-mark-fallback">MR</span>
+        </span>
+
         <span class="brand-text">
           <span class="brand-name">Millionaire’s Roast</span>
           <span class="brand-tag" data-i18n="tagline">Luxury in every cup.</span>
@@ -29,7 +40,7 @@
       </a>
 
       <div class="header-right">
-<nav class="nav" aria-label="Primary">
+        <nav class="nav" aria-label="Primary">
           <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
           <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
           <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
@@ -42,7 +53,6 @@
       </div>
     </div>
 
-    <!-- Mobile menu (animated open/close) -->
     <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
       <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
       <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
@@ -64,62 +74,102 @@
           </p>
 
           <div class="hero-actions">
-            <!-- Square Buy Now: paste your Square payment link into index.js (SQUARE_BUY_LINK) -->
             <a class="btn btn-gold" id="squareBuyBtn" href="#" target="_blank" rel="noopener noreferrer" data-i18n="cta.buy">
               Buy Now
             </a>
 
-            <a class="btn btn-outline" href="mailto:millionairesroast@gmail.com?subject=Coffee%20Order%20%7C%20Millionaire%E2%80%99s%20Roast" data-i18n="cta.email">
+            <a class="btn btn-outline btn-email" href="mailto:millionairesroast@gmail.com?subject=Coffee%20Order%20%7C%20Millionaire%E2%80%99s%20Roast" data-i18n="cta.email">
               Email to Order
             </a>
 
-            <a class="btn btn-outline" id="textOrderBtn" href="#" data-i18n="cta.text">
+            <a class="btn btn-outline btn-text" id="textOrderBtn" href="#" data-i18n="cta.text">
               Text to Order
             </a>
           </div>
+
+          <p class="hero-note" data-i18n="hero.note">
+            Need coffee this week? Text us for the fastest order and pickup details.
+          </p>
+        </div>
       </div>
     </section>
 
     <section class="hero-after">
       <div class="container">
         <div class="callout">
-          <span class="callout-label" data-i18n="find.label">Where to find us</span>
-          <span class="callout-text" data-i18n="find.text">
-            Catch us at Central Illinois farmers markets. Follow us for weekly locations and updates.
-          </span>
-          <div class="callout-links">
-            <a class="callout-link" href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer">Facebook</a>
-            <span class="callout-sep" aria-hidden="true">•</span>
-            <a class="callout-link" href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <div class="callout-topline">
+            <span class="callout-label" data-i18n="find.label">Where to find us</span>
+            <span class="callout-mini" data-i18n="find.mini">Best place for weekly locations and market updates.</span>
           </div>
+
+          <p class="callout-text" data-i18n="find.text">
+            Catch us at Central Illinois farmers markets. Follow us for weekly locations and updates.
+          </p>
+
+          <div class="callout-links">
+            <a class="pill pill-soft" href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a class="pill pill-soft" href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="lang-section" aria-label="Language selection">
       <div class="container">
-        <div class="lang-bar" aria-label="Language selection">
-          <div class="lang-switch" role="group" aria-label="Language">
+        <div class="lang-bar">
+          <p class="lang-caption" data-i18n="lang.label">Language</p>
+          <div class="lang-switch" role="group" aria-label="Language selection">
             <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="true">English</button>
             <button type="button" class="lang-btn" data-lang-btn="es" aria-pressed="false">Español</button>
           </div>
+        </div>
       </div>
     </section>
 
     <section class="section" id="about">
       <div class="container">
-        <div class="section-head">
-          <h2 class="section-title" data-i18n="about.title">Refined Roasts for Discerning Tastes.</h2>
-          <p class="section-subtitle" data-i18n="about.subtitle">
-            At Millionaire’s Roast, we craft exclusive small-batch roasts using a rotating selection of the finest single-origin beans.
-          </p>
+        <div class="featured-roast card card-plate">
+          <div class="featured-copy">
+            <p class="featured-kicker" data-i18n="featured.kicker">Current Roast</p>
+            <h2 class="featured-title" data-i18n="featured.title">Costa Rica Tarrazú “San Diego Jaguar”</h2>
+            <p class="featured-subtitle" data-i18n="featured.process">Honey Process</p>
+            <p class="featured-text" data-i18n="featured.text">
+              A rich, dessert-leaning cup with chocolate sweetness and a honeyed finish, layered with nectarine, guava, berry, and a bright citrus lift. Full-bodied with medium acidity, bold and silky hot or iced.
+            </p>
+          </div>
+
+          <div class="featured-side">
+            <div class="tag-row" aria-label="Current roast highlights">
+              <span class="tag-chip" data-i18n="featured.tag1">Chocolate sweetness</span>
+              <span class="tag-chip" data-i18n="featured.tag2">Honeyed finish</span>
+              <span class="tag-chip" data-i18n="featured.tag3">Hot or iced</span>
+              <span class="tag-chip" data-i18n="featured.tag4">Whole bean or ground</span>
+            </div>
+
+            <p class="featured-note" data-i18n="featured.note">
+              Want it whole bean or ground? Text or email and we’ll get your order ready.
+            </p>
+
+            <div class="featured-actions">
+              <a class="btn btn-outline btn-text" href="#contact" data-i18n="featured.action">Order this roast</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-head section-head-split">
+          <div>
+            <h2 class="section-title" data-i18n="about.title">Refined Roasts for Discerning Tastes.</h2>
+            <p class="section-subtitle" data-i18n="about.subtitle">
+              At Millionaire’s Roast, we craft exclusive small-batch roasts using a rotating selection of the finest single-origin beans.
+            </p>
+          </div>
         </div>
 
         <div class="about-grid">
           <article class="card card-plate">
             <h3 class="card-title" data-i18n="about.card1.title">The Roast</h3>
             <p class="card-text" data-i18n="about.card1.text">
-              Our beans rotate based on the roaster’s choice — selected for character, balance, and a clean finish.
-              Each batch is roasted to bring out the best of its origin.
+              Our beans rotate based on the roaster’s choice — selected for character, balance, and a clean finish. Each batch is roasted to bring out the best of its origin.
             </p>
             <p class="card-text emphasis" data-i18n="about.card1.emphasis">Experience luxury in every cup.</p>
           </article>
@@ -139,18 +189,18 @@
 
     <section class="section" id="faq">
       <div class="container">
-        <div class="section-head center">
+        <div class="section-head center narrow-head">
           <h2 class="section-title" data-i18n="faq.title">Have Questions?</h2>
           <p class="section-subtitle" data-i18n="faq.subtitle">Quick answers. If you don’t see what you need, reach out.</p>
         </div>
 
         <div class="faq card card-plate" data-accordion>
-          <button class="faq-item" type="button" aria-expanded="false">
+          <button class="faq-item" type="button" aria-expanded="true" data-open-default="true">
             <span class="faq-q" data-i18n="faq.q1">What beans are available right now?</span>
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-a" data-panel>
-            <p data-i18n="faq.a1">Our selection rotates based on the roaster’s choice of single-origin beans. For this week’s options, check Facebook/Instagram or text/email us.</p>
+            <p data-i18n="faq.a1">This rotation is Costa Rica Tarrazú “San Diego Jaguar” (Honey Process) — a rich, dessert-leaning cup with chocolate sweetness and a honeyed finish, layered with nectarine, guava, berry, and a bright citrus lift. Full-bodied with medium acidity, it’s bold, silky, and ridiculously satisfying hot or iced. Want it whole bean or ground? Text or email and we’ll get your order ready.</p>
           </div>
 
           <button class="faq-item" type="button" aria-expanded="false">
@@ -182,9 +232,10 @@
 
     <section class="section" id="contact">
       <div class="container">
-        <div class="section-head center">
+        <div class="section-head center narrow-head">
           <h2 class="section-title" data-i18n="contact.title">Contact &amp; Follow Us</h2>
           <p class="section-subtitle" data-i18n="contact.subtitle">Fastest response: text or email. Weekly locations: socials.</p>
+          <p class="contact-prompt" data-i18n="contact.prompt">Ready to order? Text us first.</p>
         </div>
 
         <div class="contact-grid">
@@ -196,11 +247,11 @@
             </div>
           </a>
 
-          <a class="card card-action" id="textUsCard" href="#">
+          <a class="card card-action card-action-primary" id="textUsCard" href="#">
             <div class="card-icon" aria-hidden="true">💬</div>
             <div class="card-meta">
               <div class="card-kicker" data-i18n="contact.text.kicker">Text Us</div>
-              <div class="card-main">(217) 416-7072</div>
+              <div class="card-main card-main-strong">(217) 416-7072</div>
               <div class="card-sub" data-i18n="contact.text.sub">Tap to message</div>
             </div>
           </a>
@@ -221,14 +272,18 @@
 
         <footer class="footer">
           <div class="footer-rule" aria-hidden="true"></div>
-          <div class="footer-row">
-            <span>© <span id="year"></span> Millionaire’s Roast</span>
-            <span class="footer-dot" aria-hidden="true">•</span>
-            <a href="mailto:millionairesroast@gmail.com">millionairesroast@gmail.com</a>
-            <span class="footer-dot" aria-hidden="true">•</span>
-            <a href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer">Facebook</a>
-            <span class="footer-dot" aria-hidden="true">•</span>
-            <a href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <div class="footer-stack">
+            <div class="footer-line">
+              <span>© <span id="year"></span> Millionaire’s Roast</span>
+            </div>
+            <div class="footer-line">
+              <a href="mailto:millionairesroast@gmail.com">millionairesroast@gmail.com</a>
+            </div>
+            <div class="footer-line footer-links">
+              <a href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <span class="footer-dot" aria-hidden="true">•</span>
+              <a href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
           </div>
         </footer>
       </div>

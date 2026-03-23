@@ -7,20 +7,22 @@
     en: {
       skip: "Skip to content",
       tagline: "Luxury in every cup.",
+      "meta.title": "Millionaire’s Roast | Small Batch Coffee Roastery in Springfield, IL",
+      "meta.description": "Luxury small-batch coffee roastery serving Springfield and Central Illinois. Fresh roasted single-origin coffees with simple ordering by text or email and weekly market updates.",
       "lang.label": "Language",
       "nav.about": "About",
       "nav.faq": "FAQ",
       "nav.contact": "Contact",
       "nav.order": "ORDER",
       "hero.kicker": "SMALL BATCH ROASTERY",
-      "hero.sub": "Small-batch, rotating single-origin coffees for those with discerning taste.",
-      "hero.note": "Need coffee this week? Text us for the fastest order and pickup details.",
+      "hero.sub": "Luxury small-batch coffee roastery serving Springfield and Central Illinois with rotating single-origin coffees for discerning taste.",
+      "hero.note": "Need coffee in Springfield or Central Illinois this week? Text us for the fastest order and pickup details.",
       "cta.buy": "Buy Now",
       "cta.email": "Email to Order",
       "cta.text": "Text to Order",
       "find.label": "Where to find us",
       "find.mini": "Best place for weekly locations and market updates.",
-      "find.text": "Catch us at Central Illinois farmers markets. Follow us for weekly locations and updates.",
+      "find.text": "Catch us at Springfield and Central Illinois farmers markets. Follow us for weekly locations and updates.",
       "featured.kicker": "Current Roast",
       "featured.title": "Costa Rica Tarrazú “San Diego Jaguar”",
       "featured.process": "Honey Process",
@@ -32,7 +34,7 @@
       "featured.tag4": "Whole bean or ground",
       "featured.action": "Order this roast",
       "about.title": "Refined Roasts for Discerning Tastes.",
-      "about.subtitle": "At Millionaire’s Roast, we craft exclusive small-batch roasts using a rotating selection of the finest single-origin beans.",
+      "about.subtitle": "At Millionaire’s Roast, we craft exclusive small-batch roasts using a rotating selection of the finest single-origin beans for Springfield, Illinois and surrounding Central Illinois communities.",
       "about.card1.title": "The Roast",
       "about.card1.text": "Our beans rotate based on the roaster’s choice — selected for character, balance, and a clean finish. Each batch is roasted to bring out the best of its origin.",
       "about.card1.emphasis": "Experience luxury in every cup.",
@@ -46,14 +48,15 @@
       "faq.q1": "What beans are available right now?",
       "faq.a1": "This rotation is Costa Rica Tarrazú “San Diego Jaguar” (Honey Process) — a rich, dessert-leaning cup with chocolate sweetness and a honeyed finish, layered with nectarine, guava, berry, and a bright citrus lift. Full-bodied with medium acidity, it’s bold, silky, and ridiculously satisfying hot or iced. Want it whole bean or ground? Text or email and we’ll get your order ready.",
       "faq.q2": "How do I order?",
-      "faq.a2": "Order online, or order directly by email or by text. Tell us what you want (whole bean vs. ground), how many bags, and your preferred pickup.",
+      "faq.a2": "Order online, or order directly by email or by text. Tell us what you want (whole bean vs. ground), how many bags, and your preferred pickup in Springfield or Central Illinois.",
       "faq.q3": "Do you ship?",
-      "faq.a3": "Not reliably yet. For now, the best way to get coffee is to meet us at a market or arrange local pickup. Follow Facebook or Instagram for weekly locations.",
+      "faq.a3": "Not reliably yet. For now, the best way to get coffee is to meet us at a market or arrange local pickup in Springfield or Central Illinois. Follow Facebook or Instagram for weekly locations.",
       "faq.q4": "Do you offer K-Cups?",
       "faq.a4": "We’re exploring single-serve options. Follow us for announcements and new drops.",
       "contact.title": "Contact & Follow Us",
-      "contact.subtitle": "Fastest response: text or email. Weekly locations: socials.",
-      "contact.prompt": "Ready to order? Text us first.",
+      "contact.subtitle": "Fastest response: text or email. Best for Springfield and Central Illinois pickup updates: socials.",
+      "contact.prompt": "Ready to order in Springfield or Central Illinois? Text us first.",
+      "footer.service": "Serving Springfield, Illinois and Central Illinois.",
       "contact.email.kicker": "Email Us",
       "contact.text.kicker": "Text Us",
       "contact.text.sub": "Tap to message",
@@ -64,20 +67,22 @@
     es: {
       skip: "Saltar al contenido",
       tagline: "Lujo en cada taza.",
+      "meta.title": "Millionaire’s Roast | Tostaduría de café artesanal en Springfield, Illinois",
+      "meta.description": "Tostaduría de café artesanal de lujo para Springfield y el centro de Illinois. Cafés frescos de origen único con pedido sencillo por texto o correo y novedades semanales del mercado.",
       "lang.label": "Idioma",
       "nav.about": "Acerca de",
       "nav.faq": "Preguntas",
       "nav.contact": "Contacto",
       "nav.order": "ORDENAR",
       "hero.kicker": "TOSTADORÍA ARTESANAL",
-      "hero.sub": "Café de lotes pequeños, de origen único y rotativo, para paladares exigentes.",
-      "hero.note": "¿Quieres café esta semana? Envíanos un texto para la forma más rápida de pedir y coordinar tu entrega.",
+      "hero.sub": "Tostaduría de café artesanal de lotes pequeños para Springfield y el centro de Illinois, con cafés de origen único y rotativos para paladares exigentes.",
+      "hero.note": "¿Quieres café esta semana en Springfield o el centro de Illinois? Envíanos un texto para la forma más rápida de pedir y coordinar tu entrega.",
       "cta.buy": "Comprar ahora",
       "cta.email": "Pedir por correo",
       "cta.text": "Pedir por texto",
       "find.label": "Dónde encontrarnos",
       "find.mini": "El mejor lugar para ver ubicaciones semanales y novedades del mercado.",
-      "find.text": "Encuéntranos en mercados de agricultores del centro de Illinois. Síguenos para ubicaciones y novedades semanales.",
+      "find.text": "Encuéntranos en mercados de agricultores de Springfield y del centro de Illinois. Síguenos para ubicaciones y novedades semanales.",
       "featured.kicker": "Tostado actual",
       "featured.title": "Costa Rica Tarrazú “San Diego Jaguar”",
       "featured.process": "Proceso Honey",
@@ -89,7 +94,7 @@
       "featured.tag4": "En grano o molido",
       "featured.action": "Pedir este tostado",
       "about.title": "Tostados refinados para paladares exigentes.",
-      "about.subtitle": "En Millionaire’s Roast, elaboramos tostados exclusivos en lotes pequeños con una selección rotativa de los mejores granos de origen único.",
+      "about.subtitle": "En Millionaire’s Roast, elaboramos tostados exclusivos en lotes pequeños con una selección rotativa de los mejores granos de origen único para Springfield, Illinois y las comunidades cercanas del centro de Illinois.",
       "about.card1.title": "El tostado",
       "about.card1.text": "Nuestros granos rotan según la selección del tostador — elegidos por su carácter, balance y final limpio. Cada lote se tuesta para resaltar lo mejor de su origen.",
       "about.card1.emphasis": "Vive el lujo en cada taza.",
@@ -103,14 +108,15 @@
       "faq.q1": "¿Qué granos hay disponibles ahora?",
       "faq.a1": "En esta rotación tenemos Costa Rica Tarrazú “San Diego Jaguar” (Proceso Honey) — una taza intensa y sedosa con dulzor de chocolate y un final con miel, con capas de nectarina, guayaba, frutos rojos y un toque cítrico brillante. Cuerpo alto y acidez media: potente, suave y deliciosa tanto caliente como en frío. ¿Lo quieres en grano o molido? Envíanos un texto o correo y preparamos tu pedido.",
       "faq.q2": "¿Cómo hago un pedido?",
-      "faq.a2": "Ordena en línea, o directamente por correo o por texto. Dinos qué quieres (grano entero o molido), cuántas bolsas y tu forma de entrega preferida.",
+      "faq.a2": "Ordena en línea, o directamente por correo o por texto. Dinos qué quieres (grano entero o molido), cuántas bolsas y tu forma de entrega preferida en Springfield o el centro de Illinois.",
       "faq.q3": "¿Hacen envíos?",
-      "faq.a3": "Aún no de forma constante. Por ahora, lo mejor es encontrarnos en un mercado o coordinar recogida local. Sigue Facebook o Instagram para ubicaciones semanales.",
+      "faq.a3": "Aún no de forma constante. Por ahora, lo mejor es encontrarnos en un mercado o coordinar recogida local en Springfield o el centro de Illinois. Sigue Facebook o Instagram para ubicaciones semanales.",
       "faq.q4": "¿Ofrecen K-Cups?",
       "faq.a4": "Estamos explorando opciones de porción individual. Síguenos para anuncios y lanzamientos.",
       "contact.title": "Contacto y redes",
-      "contact.subtitle": "Respuesta más rápida: texto o correo. Ubicaciones semanales: redes.",
-      "contact.prompt": "¿Listo para pedir? Mándanos un texto primero.",
+      "contact.subtitle": "Respuesta más rápida: texto o correo. Lo mejor para novedades de recogida en Springfield y el centro de Illinois: redes.",
+      "contact.prompt": "¿Listo para pedir en Springfield o el centro de Illinois? Mándanos un texto primero.",
+      "footer.service": "Atendiendo a Springfield, Illinois y al centro de Illinois.",
       "contact.email.kicker": "Correo",
       "contact.text.kicker": "Texto",
       "contact.text.sub": "Toca para enviar",
@@ -130,6 +136,13 @@
   const toggle = document.querySelector(".nav-toggle");
   const mobileNav = document.getElementById("mobile-nav");
   const brandMark = document.querySelector(".brand-mark");
+  const titleEl = document.querySelector("title");
+  const metaDescriptionEl = document.querySelector('meta[name="description"]');
+  const ogTitleEl = document.querySelector('meta[property="og:title"]');
+  const ogDescriptionEl = document.querySelector('meta[property="og:description"]');
+  const ogLocaleEl = document.querySelector('meta[property="og:locale"]');
+  const twitterTitleEl = document.querySelector('meta[name="twitter:title"]');
+  const twitterDescriptionEl = document.querySelector('meta[name="twitter:description"]');
   const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
   const squarePlaceholder = SQUARE_BUY_LINK.includes("PASTE_YOUR_LINK_HERE");
   let langInitialized = false;
@@ -175,6 +188,22 @@
     if (textBtn) textBtn.href = smsUrl;
     if (textCard) textCard.href = smsUrl;
   }
+
+  function updateSeo(lang) {
+    const dict = T[lang] || T.en;
+    const title = dict["meta.title"] || T.en["meta.title"];
+    const description = dict["meta.description"] || T.en["meta.description"];
+    const locale = lang === "es" ? "es_US" : "en_US";
+
+    if (titleEl) titleEl.textContent = title;
+    if (metaDescriptionEl) metaDescriptionEl.setAttribute("content", description);
+    if (ogTitleEl) ogTitleEl.setAttribute("content", title);
+    if (ogDescriptionEl) ogDescriptionEl.setAttribute("content", description);
+    if (ogLocaleEl) ogLocaleEl.setAttribute("content", locale);
+    if (twitterTitleEl) twitterTitleEl.setAttribute("content", title);
+    if (twitterDescriptionEl) twitterDescriptionEl.setAttribute("content", description);
+  }
+
 
   function setMobile(open) {
     if (!toggle || !mobileNav) return;
@@ -300,6 +329,7 @@
       } catch {}
 
       setSmsLink(lang);
+      updateSeo(lang);
       updateOpenPanels();
 
       if (mobileNav && toggle && toggle.getAttribute("aria-expanded") === "true") {

@@ -3,16 +3,110 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Millionaire’s Roast — Luxury in every cup. Small-batch, rotating single-origin coffees. Order online, text, or email. Follow Facebook & Instagram for weekly locations." />
+  <title>Millionaire’s Roast | Small Batch Coffee Roastery in Springfield, IL</title>
+  <meta name="description" content="Luxury small-batch coffee roastery serving Springfield and Central Illinois. Fresh roasted single-origin coffees with simple ordering by text or email and weekly market updates." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Millionaire’s Roast" />
   <meta name="theme-color" content="#07070a" />
-  <title>Millionaire’s Roast — Luxury in every cup.</title>
-  <link rel="icon" href="logo.png" type="image/png">   
 
-  <meta property="og:title" content="Millionaire’s Roast" />
-  <meta property="og:description" content="Luxury in every cup. Small-batch, rotating single-origin coffees. Order by text or email." />
+  <meta property="og:title" content="Millionaire’s Roast | Small Batch Coffee Roastery in Springfield, IL" />
+  <meta property="og:description" content="Luxury small-batch coffee roastery serving Springfield and Central Illinois. Fresh roasted single-origin coffees with simple ordering by text or email and weekly market updates." />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Millionaire’s Roast" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="es_US" />
 
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Millionaire’s Roast | Small Batch Coffee Roastery in Springfield, IL" />
+  <meta name="twitter:description" content="Luxury small-batch coffee roastery serving Springfield and Central Illinois. Fresh roasted single-origin coffees with simple ordering by text or email and weekly market updates." />
+
+  <link rel="preload" href="logo.png" as="image" />
   <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "#localbusiness",
+      "name": "Millionaire’s Roast",
+      "description": "Luxury small-batch coffee roastery serving Springfield and Central Illinois with rotating single-origin coffees and direct ordering by text or email.",
+      "slogan": "Luxury in every cup.",
+      "telephone": "+1-217-416-7072",
+      "email": "millionairesroast@gmail.com",
+      "priceRange": "$$",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Springfield",
+          "addressRegion": "IL",
+          "addressCountry": "US"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Central Illinois",
+          "addressRegion": "IL",
+          "addressCountry": "US"
+        }
+      ],
+      "availableLanguage": ["English", "Spanish"],
+      "sameAs": [
+        "https://www.facebook.com/millionairesroast",
+        "https://www.instagram.com/millionairesroast"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "telephone": "+1-217-416-7072",
+          "email": "millionairesroast@gmail.com",
+          "areaServed": "US-IL",
+          "availableLanguage": ["English", "Spanish"]
+        }
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What beans are available right now?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This rotation is Costa Rica Tarrazu San Diego Jaguar, a honey process coffee with chocolate sweetness, a honeyed finish, and layers of nectarine, guava, berry, and bright citrus. It is full bodied with medium acidity and available whole bean or ground by text or email order."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I order?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Order online when the hosted payment link is active, or order directly by email or text. Customers can request whole bean or ground coffee, choose quantity, and arrange pickup in Springfield or Central Illinois."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you ship?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shipping is not a consistent option yet. The best way to get coffee right now is local pickup or meeting at a Springfield or Central Illinois market location."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer K-Cups?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Single serve options are being explored. Follow Millionaire’s Roast for announcements and new drops."
+          }
+        }
+      ]
+    }
+  </script>
+
   <script defer src="index.js"></script>
 </head>
 
@@ -30,6 +124,8 @@
             width="52"
             height="52"
             decoding="async"
+            loading="eager"
+            fetchpriority="high"
           />
           <span class="brand-mark-fallback">MR</span>
         </span>
@@ -63,15 +159,15 @@
   </header>
 
   <main id="main">
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="container">
         <div class="hero-plate">
           <p class="kicker" data-i18n="hero.kicker">SMALL BATCH ROASTERY</p>
-          <h1 class="hero-title">Millionaire’s Roast</h1>
+          <h1 class="hero-title" id="hero-title">Millionaire’s Roast</h1>
           <p class="hero-tagline" data-i18n="tagline">Luxury in every cup.</p>
 
           <p class="hero-sub" data-i18n="hero.sub">
-            Small-batch, rotating single-origin coffees for those with discerning taste.
+            Luxury small-batch coffee roastery serving Springfield and Central Illinois with rotating single-origin coffees for discerning taste.
           </p>
 
           <div class="hero-actions">
@@ -89,7 +185,7 @@
           </div>
 
           <p class="hero-note" data-i18n="hero.note">
-            Need coffee this week? Text us for the fastest order and pickup details.
+            Need coffee in Springfield or Central Illinois this week? Text us for the fastest order and pickup details.
           </p>
         </div>
       </div>
@@ -104,12 +200,12 @@
           </div>
 
           <p class="callout-text" data-i18n="find.text">
-            Catch us at Central Illinois farmers markets. Follow us for weekly locations and updates.
+            Catch us at Springfield and Central Illinois farmers markets. Follow us for weekly locations and updates.
           </p>
 
           <div class="callout-links">
-            <a class="pill pill-soft" href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer">Facebook</a>
-            <a class="pill pill-soft" href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="pill pill-soft" href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer" aria-label="Follow Millionaire’s Roast on Facebook">Facebook</a>
+            <a class="pill pill-soft" href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer" aria-label="Follow Millionaire’s Roast on Instagram">Instagram</a>
           </div>
         </div>
       </div>
@@ -127,7 +223,7 @@
       </div>
     </section>
 
-    <section class="section" id="about">
+    <section class="section" id="about" aria-labelledby="about-title">
       <div class="container">
         <div class="featured-roast card card-plate">
           <div class="featured-copy">
@@ -159,9 +255,9 @@
 
         <div class="section-head section-head-split">
           <div>
-            <h2 class="section-title" data-i18n="about.title">Refined Roasts for Discerning Tastes.</h2>
+            <h2 class="section-title" id="about-title" data-i18n="about.title">Refined Roasts for Discerning Tastes.</h2>
             <p class="section-subtitle" data-i18n="about.subtitle">
-              At Millionaire’s Roast, we craft exclusive small-batch roasts using a rotating selection of the finest single-origin beans.
+              At Millionaire’s Roast, we craft exclusive small-batch roasts using a rotating selection of the finest single-origin beans for Springfield, Illinois and surrounding Central Illinois communities.
             </p>
           </div>
         </div>
@@ -188,10 +284,10 @@
       </div>
     </section>
 
-    <section class="section" id="faq">
+    <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="container">
         <div class="section-head center narrow-head">
-          <h2 class="section-title" data-i18n="faq.title">Have Questions?</h2>
+          <h2 class="section-title" id="faq-title" data-i18n="faq.title">Have Questions?</h2>
           <p class="section-subtitle" data-i18n="faq.subtitle">Quick answers. If you don’t see what you need, reach out.</p>
         </div>
 
@@ -209,7 +305,7 @@
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-a" data-panel>
-            <p data-i18n="faq.a2">Order online, or order directly by email or by text. Tell us what you want (whole bean vs. ground), how many bags, and your preferred pickup.</p>
+            <p data-i18n="faq.a2">Order online, or order directly by email or by text. Tell us what you want (whole bean vs. ground), how many bags, and your preferred pickup in Springfield or Central Illinois.</p>
           </div>
 
           <button class="faq-item" type="button" aria-expanded="false">
@@ -217,7 +313,7 @@
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-a" data-panel>
-            <p data-i18n="faq.a3">Not reliably yet. For now, the best way to get coffee is to meet us at a market or arrange local pickup. Follow Facebook/Instagram for weekly locations.</p>
+            <p data-i18n="faq.a3">Not reliably yet. For now, the best way to get coffee is to meet us at a market or arrange local pickup in Springfield or Central Illinois. Follow Facebook or Instagram for weekly locations.</p>
           </div>
 
           <button class="faq-item" type="button" aria-expanded="false">
@@ -231,12 +327,12 @@
       </div>
     </section>
 
-    <section class="section" id="contact">
+    <section class="section" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <div class="section-head center narrow-head">
-          <h2 class="section-title" data-i18n="contact.title">Contact &amp; Follow Us</h2>
-          <p class="section-subtitle" data-i18n="contact.subtitle">Fastest response: text or email. Weekly locations: socials.</p>
-          <p class="contact-prompt" data-i18n="contact.prompt">Ready to order? Text us first.</p>
+          <h2 class="section-title" id="contact-title" data-i18n="contact.title">Contact &amp; Follow Us</h2>
+          <p class="section-subtitle" data-i18n="contact.subtitle">Fastest response: text or email. Best for Springfield and Central Illinois pickup updates: socials.</p>
+          <p class="contact-prompt" data-i18n="contact.prompt">Ready to order in Springfield or Central Illinois? Text us first.</p>
         </div>
 
         <div class="contact-grid">
@@ -264,8 +360,8 @@
               <div class="card-main">Millionaire’s Roast</div>
               <div class="card-sub" data-i18n="contact.follow.sub">Weekly locations &amp; updates</div>
               <div class="follow-links">
-                <a class="pill" href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer">Facebook</a>
-                <a class="pill" href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a class="pill" href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer" aria-label="Follow Millionaire’s Roast on Facebook">Facebook</a>
+                <a class="pill" href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer" aria-label="Follow Millionaire’s Roast on Instagram">Instagram</a>
               </div>
             </div>
           </div>
@@ -277,13 +373,17 @@
             <div class="footer-line">
               <span>© <span id="year"></span> Millionaire’s Roast</span>
             </div>
+            <div class="footer-line" data-i18n="footer.service">Serving Springfield, Illinois and Central Illinois.</div>
+            <div class="footer-line">
+              <a href="tel:+12174167072">(217) 416-7072</a>
+            </div>
             <div class="footer-line">
               <a href="mailto:millionairesroast@gmail.com">millionairesroast@gmail.com</a>
             </div>
             <div class="footer-line footer-links">
-              <a href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer" aria-label="Follow Millionaire’s Roast on Facebook">Facebook</a>
               <span class="footer-dot" aria-hidden="true">•</span>
-              <a href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer" aria-label="Follow Millionaire’s Roast on Instagram">Instagram</a>
             </div>
           </div>
         </footer>

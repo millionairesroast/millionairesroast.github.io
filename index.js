@@ -1,7 +1,9 @@
 (() => {
   const SQUARE_BUY_LINK = "https://square.link/u/PASTE_YOUR_LINK_HERE";
   const PHONE_NUMBER = "12174167072";
-  const LANG_FADE_MS = 160;
+  const STORAGE_KEY = "mr_lang";
+  const REDUCE_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const LANG_FADE_MS = REDUCE_MOTION ? 0 : 160;
 
   const T = {
     en: {
@@ -143,9 +145,18 @@
   const ogLocaleEl = document.querySelector('meta[property="og:locale"]');
   const twitterTitleEl = document.querySelector('meta[name="twitter:title"]');
   const twitterDescriptionEl = document.querySelector('meta[name="twitter:description"]');
+  const i18nBindings = [...document.querySelectorAll("[data-i18n]")]
+    .map((element) => [element, element.getAttribute("data-i18n")])
+    .filter(([, key]) => Boolean(key));
+  const langButtons = [...document.querySelectorAll("[data-lang-btn]")];
+  const langSwitch = document.querySelector(".lang-switch");
+  const accordion = document.querySelector("[data-accordion]");
+  const accordionButtons = accordion ? [...accordion.querySelectorAll(".faq-item")] : [];
   const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
   const squarePlaceholder = SQUARE_BUY_LINK.includes("PASTE_YOUR_LINK_HERE");
   let langInitialized = false;
+  let currentLang = root.dataset.lang || (root.getAttribute("lang") === "es" ? "es" : "en");
+  let openAccordionButton = null;
 
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
@@ -154,13 +165,15 @@
   function applyBrandFallback() {
     if (!brandMark) return;
 
-    if (brandMark.complete && (!brandMark.naturalWidth || !brandMark.naturalHeight)) {
+    const showFallback = () => {
       brandMark.classList.add("is-hidden");
+    };
+
+    if (brandMark.complete && (!brandMark.naturalWidth || !brandMark.naturalHeight)) {
+      showFallback();
     }
 
-    brandMark.addEventListener("error", () => {
-      brandMark.classList.add("is-hidden");
-    });
+    brandMark.addEventListener("error", showFallback, { once: true });
   }
 
   function setupBuyButton() {
@@ -189,40 +202,56 @@
     if (textCard) textCard.href = smsUrl;
   }
 
+  function setMetaContent(element, value) {
+    if (element && element.getAttribute("content") !== value) {
+      element.setAttribute("content", value);
+    }
+  }
+
   function updateSeo(lang) {
     const dict = T[lang] || T.en;
     const title = dict["meta.title"] || T.en["meta.title"];
     const description = dict["meta.description"] || T.en["meta.description"];
     const locale = lang === "es" ? "es_US" : "en_US";
 
-    if (titleEl) titleEl.textContent = title;
-    if (metaDescriptionEl) metaDescriptionEl.setAttribute("content", description);
-    if (ogTitleEl) ogTitleEl.setAttribute("content", title);
-    if (ogDescriptionEl) ogDescriptionEl.setAttribute("content", description);
-    if (ogLocaleEl) ogLocaleEl.setAttribute("content", locale);
-    if (twitterTitleEl) twitterTitleEl.setAttribute("content", title);
-    if (twitterDescriptionEl) twitterDescriptionEl.setAttribute("content", description);
+    if (titleEl && titleEl.textContent !== title) titleEl.textContent = title;
+    setMetaContent(metaDescriptionEl, description);
+    setMetaContent(ogTitleEl, title);
+    setMetaContent(ogDescriptionEl, description);
+    setMetaContent(ogLocaleEl, locale);
+    setMetaContent(twitterTitleEl, title);
+    setMetaContent(twitterDescriptionEl, description);
   }
 
+  function syncMobileMenuHeight() {
+    if (!toggle || !mobileNav || toggle.getAttribute("aria-expanded") !== "true") return;
+
+    const headerHeight = header ? header.offsetHeight : 64;
+    const maxAvailable = Math.max(160, window.innerHeight - headerHeight - 8);
+    const targetHeight = Math.min(mobileNav.scrollHeight, maxAvailable);
+
+    mobileNav.style.maxHeight = `${targetHeight}px`;
+    mobileNav.style.overflowY = mobileNav.scrollHeight > maxAvailable ? "auto" : "hidden";
+  }
 
   function setMobile(open) {
     if (!toggle || !mobileNav) return;
 
     toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     mobileNav.classList.toggle("is-open", open);
     mobileNav.setAttribute("aria-hidden", String(!open));
+    body.classList.toggle("nav-open", open);
+
+    if ("inert" in mobileNav) {
+      mobileNav.inert = !open;
+    }
 
     if (open) {
-      const headerHeight = header ? header.offsetHeight : 64;
-      const maxAvailable = Math.max(160, window.innerHeight - headerHeight - 8);
-      const targetHeight = Math.min(mobileNav.scrollHeight, maxAvailable);
-      mobileNav.style.maxHeight = `${targetHeight}px`;
-      mobileNav.style.overflowY = mobileNav.scrollHeight > maxAvailable ? "auto" : "hidden";
-      body.classList.add("nav-open");
+      syncMobileMenuHeight();
     } else {
       mobileNav.style.maxHeight = "0px";
       mobileNav.style.overflowY = "hidden";
-      body.classList.remove("nav-open");
     }
   }
 
@@ -242,10 +271,15 @@
       }
     });
 
+    let resizeFrame = 0;
+
     window.addEventListener("resize", () => {
-      if (toggle.getAttribute("aria-expanded") === "true") {
-        setMobile(true);
-      }
+      if (resizeFrame) cancelAnimationFrame(resizeFrame);
+      resizeFrame = requestAnimationFrame(() => {
+        resizeFrame = 0;
+        syncMobileMenuHeight();
+        syncOpenAccordionHeight();
+      });
     });
 
     document.addEventListener("keydown", (event) => {
@@ -255,103 +289,124 @@
     });
   }
 
-  function updateOpenPanels() {
-    document.querySelectorAll("[data-panel]").forEach((panel) => {
-      const button = panel.previousElementSibling;
-      if (!button || !button.matches(".faq-item")) return;
-      panel.style.maxHeight = button.getAttribute("aria-expanded") === "true" ? `${panel.scrollHeight}px` : "0px";
-    });
+  function getAccordionPanel(button) {
+    const panel = button?.nextElementSibling;
+    return panel && panel.matches("[data-panel]") ? panel : null;
+  }
+
+  function closeAccordionButton(button) {
+    const panel = getAccordionPanel(button);
+    if (!panel) return;
+    button.setAttribute("aria-expanded", "false");
+    panel.style.maxHeight = "0px";
+  }
+
+  function openAccordionButtonElement(button) {
+    const panel = getAccordionPanel(button);
+    if (!panel) return;
+    button.setAttribute("aria-expanded", "true");
+    panel.style.maxHeight = `${panel.scrollHeight}px`;
+  }
+
+  function syncOpenAccordionHeight() {
+    if (!openAccordionButton) return;
+    const panel = getAccordionPanel(openAccordionButton);
+    if (panel) {
+      panel.style.maxHeight = `${panel.scrollHeight}px`;
+    }
   }
 
   function setupAccordion() {
-    const accordion = document.querySelector("[data-accordion]");
-    if (!accordion) return;
+    if (!accordion || !accordionButtons.length) return;
 
-    const items = [...accordion.querySelectorAll(".faq-item")];
+    accordionButtons.forEach(closeAccordionButton);
 
-    const openPanel = (button) => {
-      const panel = button.nextElementSibling;
-      if (!panel || !panel.matches("[data-panel]")) return;
-      button.setAttribute("aria-expanded", "true");
-      panel.style.maxHeight = `${panel.scrollHeight}px`;
-    };
+    openAccordionButton = accordionButtons.find((button) => button.hasAttribute("data-open-default")) || accordionButtons[0] || null;
+    if (openAccordionButton) {
+      openAccordionButtonElement(openAccordionButton);
+    }
 
-    const closePanel = (button) => {
-      const panel = button.nextElementSibling;
-      if (!panel || !panel.matches("[data-panel]")) return;
-      button.setAttribute("aria-expanded", "false");
-      panel.style.maxHeight = "0px";
-    };
+    accordion.addEventListener("click", (event) => {
+      const button = event.target.closest(".faq-item");
+      if (!button || !accordion.contains(button)) return;
 
-    const closeAll = () => {
-      items.forEach(closePanel);
-    };
+      const isExpanded = button.getAttribute("aria-expanded") === "true";
+      if (openAccordionButton) {
+        closeAccordionButton(openAccordionButton);
+      }
 
-    closeAll();
-    const defaultButton = items.find((button) => button.hasAttribute("data-open-default")) || items[0];
-    if (defaultButton) openPanel(defaultButton);
+      if (isExpanded) {
+        openAccordionButton = null;
+        return;
+      }
 
-    items.forEach((button) => {
-      button.addEventListener("click", () => {
-        const expanded = button.getAttribute("aria-expanded") === "true";
-        closeAll();
-        if (!expanded) openPanel(button);
-      });
+      openAccordionButton = button;
+      openAccordionButtonElement(button);
     });
   }
 
-  function applyLang(lang) {
+  function applyTranslations(lang) {
     const dict = T[lang] || T.en;
-    const current = root.dataset.lang || (root.getAttribute("lang") === "es" ? "es" : "en");
-    if (langInitialized && lang === current) return;
 
-    const shouldAnimate = Boolean(root.dataset.lang);
-    if (shouldAnimate) root.classList.add("is-lang-fading");
-
-    window.setTimeout(() => {
-      root.setAttribute("lang", lang === "es" ? "es" : "en");
-      root.dataset.lang = lang;
-      langInitialized = true;
-
-      document.querySelectorAll("[data-i18n]").forEach((element) => {
-        const key = element.getAttribute("data-i18n");
-        if (dict[key]) {
-          element.textContent = dict[key];
-        }
-      });
-
-      document.querySelectorAll("[data-lang-btn]").forEach((button) => {
-        button.setAttribute("aria-pressed", String(button.getAttribute("data-lang-btn") === lang));
-      });
-
-      try {
-        localStorage.setItem("mr_lang", lang);
-      } catch {}
-
-      setSmsLink(lang);
-      updateSeo(lang);
-      updateOpenPanels();
-
-      if (mobileNav && toggle && toggle.getAttribute("aria-expanded") === "true") {
-        setMobile(true);
+    for (const [element, key] of i18nBindings) {
+      const value = dict[key];
+      if (typeof value === "string" && element.textContent !== value) {
+        element.textContent = value;
       }
+    }
 
-      requestAnimationFrame(() => {
-        root.classList.remove("is-lang-fading");
-      });
-    }, shouldAnimate ? LANG_FADE_MS : 0);
+    for (const button of langButtons) {
+      button.setAttribute("aria-pressed", String(button.getAttribute("data-lang-btn") === lang));
+    }
+  }
+
+  function commitLanguage(lang) {
+    root.setAttribute("lang", lang === "es" ? "es" : "en");
+    root.dataset.lang = lang;
+    currentLang = lang;
+    langInitialized = true;
+
+    applyTranslations(lang);
+    setSmsLink(lang);
+    updateSeo(lang);
+    syncOpenAccordionHeight();
+    syncMobileMenuHeight();
+
+    try {
+      localStorage.setItem(STORAGE_KEY, lang);
+    } catch {}
+
+    requestAnimationFrame(() => {
+      root.classList.remove("is-lang-fading");
+    });
+  }
+
+  function applyLang(nextLang) {
+    const lang = nextLang === "es" ? "es" : "en";
+    if (langInitialized && lang === currentLang) return;
+
+    if (langInitialized && LANG_FADE_MS > 0) {
+      root.classList.add("is-lang-fading");
+      window.setTimeout(() => commitLanguage(lang), LANG_FADE_MS);
+      return;
+    }
+
+    commitLanguage(lang);
   }
 
   function setupLangButtons() {
-    document.querySelectorAll("[data-lang-btn]").forEach((button) => {
-      button.addEventListener("click", () => {
+    if (langSwitch) {
+      langSwitch.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-lang-btn]");
+        if (!button || !langSwitch.contains(button)) return;
         applyLang(button.getAttribute("data-lang-btn"));
       });
-    });
+    }
 
-    let initial = "en";
+    let initial = currentLang;
+
     try {
-      const saved = localStorage.getItem("mr_lang");
+      const saved = localStorage.getItem(STORAGE_KEY);
       if (saved === "en" || saved === "es") {
         initial = saved;
       }

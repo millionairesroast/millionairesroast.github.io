@@ -97,7 +97,7 @@
           "name": "How do I order?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Order online when the hosted payment link is active, or order directly by email or text. Customers can request whole bean or ground coffee, choose quantity, and arrange pickup in Springfield or Central Illinois."
+            "text": "Order online when the hosted payment link is active if your order is for Illinois shipping or Illinois pickup, or order directly by email or text. Free pickup is available in Beardstown and Springfield. Beardstown delivery is free. Springfield delivery may incur a fee depending on the order and distance."
           }
         },
         {
@@ -105,7 +105,7 @@
           "name": "Do you ship?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Shipping is not a consistent option yet. The best way to get coffee right now is local pickup or meeting at a Springfield or Central Illinois market location."
+            "text": "Yes, but only within Illinois for online orders. Because of compliance restrictions, Millionaire’s Roast cannot sell or ship outside Illinois. Free pickup is available in Beardstown and Springfield. Beardstown delivery is free. Springfield delivery may incur a fee depending on the order and distance. Orders placed with an out of state address will be canceled and refunded."
           }
         },
         {
@@ -196,8 +196,12 @@
             </a>
           </div>
 
+          <p class="hero-compliance" data-i18n="hero.compliance">
+            Online orders are for Illinois only. Because of compliance restrictions, we cannot sell or ship outside Illinois.
+          </p>
+
           <p class="hero-note" data-i18n="hero.note">
-            Need coffee in Springfield or Central Illinois this week? Text us for the fastest order and pickup details.
+            Free pickup is available in Beardstown and Springfield. Beardstown delivery is free. Springfield delivery may incur a fee. Text us for the fastest order and pickup details.
           </p>
         </div>
       </div>
@@ -370,7 +374,7 @@
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-a" data-panel>
-            <p data-i18n="faq.a2">Order online, or order directly by email or by text. Tell us what you want (whole bean vs. ground), how many bags, and your preferred pickup in Springfield or Central Illinois.</p>
+            <p data-i18n="faq.a2">Order online if your order is for Illinois shipping or Illinois pickup, or order directly by email or by text. Free pickup is available in Beardstown and Springfield. Beardstown delivery is free. Springfield delivery may incur a fee depending on the order and distance.</p>
           </div>
 
           <button class="faq-item" type="button" aria-expanded="false">
@@ -378,7 +382,7 @@
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-a" data-panel>
-            <p data-i18n="faq.a3">Not reliably yet. For now, the best way to get coffee is to meet us at a market or arrange local pickup in Springfield or Central Illinois. Follow Facebook or Instagram for weekly locations.</p>
+            <p data-i18n="faq.a3">Yes, but only within Illinois for online orders. Because of compliance restrictions, we cannot sell or ship outside Illinois. Free pickup is available in Beardstown and Springfield. Beardstown delivery is free. Springfield delivery may incur a fee depending on the order and distance. Orders placed with an out-of-state address will be canceled and refunded.</p>
           </div>
 
           <button class="faq-item" type="button" aria-expanded="false">
@@ -455,5 +459,35 @@
       </div>
     </section>
   </main>
+
+  <div class="buy-guard" id="buyGuard" hidden aria-hidden="true">
+    <div class="buy-guard__backdrop" data-buy-guard-close></div>
+    <div class="buy-guard__dialog card card-plate" role="dialog" aria-modal="true" aria-labelledby="buyGuardTitle" aria-describedby="buyGuardDesc">
+      <button
+        class="buy-guard__close"
+        type="button"
+        data-buy-guard-close
+        aria-label="Close Illinois order notice"
+        data-i18n-attr="aria-label"
+        data-i18n-attr-key="buy.guard.close.aria"
+      >
+        ×
+      </button>
+      <p class="buy-guard__eyebrow" data-i18n="buy.guard.kicker">Illinois only</p>
+      <h2 class="buy-guard__title" id="buyGuardTitle" data-i18n="buy.guard.title">Before you continue</h2>
+      <p class="buy-guard__text" id="buyGuardDesc" data-i18n="buy.guard.body">
+        Online checkout is for Illinois orders only. Free pickup is available in Beardstown and Springfield. Beardstown delivery is free. Springfield delivery may incur a fee. If your shipping or pickup address is outside Illinois, please do not continue. Orders placed outside Illinois will be canceled and refunded.
+      </p>
+      <label class="buy-guard__check" for="buyGuardCheckbox">
+        <input type="checkbox" id="buyGuardCheckbox" />
+        <span data-i18n="buy.guard.checkbox">I confirm this order is for an Illinois address or Illinois pickup.</span>
+      </label>
+      <div class="buy-guard__actions">
+        <button type="button" class="btn btn-outline" data-buy-guard-close data-i18n="buy.guard.cancel">Cancel</button>
+        <button type="button" class="btn btn-gold" id="buyGuardContinue" data-i18n="buy.guard.continue" disabled>Continue to secure checkout</button>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

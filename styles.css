@@ -303,6 +303,18 @@ html.is-lang-fading [data-i18n]{ opacity:0; }
   color:var(--muted2);
   font-size:14px;
 }
+.hero-compliance{
+  margin:16px auto 0;
+  max-width:58ch;
+  padding:12px 14px;
+  border-radius:16px;
+  border:1px solid rgba(200,164,77,.24);
+  background:linear-gradient(180deg, rgba(46,28,12,.44), rgba(18,12,8,.62));
+  text-align:center;
+  color:rgba(244,241,234,.92);
+  font-size:14px;
+  line-height:1.45;
+}
 
 .btn{
   display:inline-flex;
@@ -885,4 +897,112 @@ html.is-lang-fading [data-i18n]{ opacity:0; }
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior:auto; }
   *{ transition:none !important; }
+}
+
+
+body.modal-open{ overflow:hidden; }
+
+.buy-guard[hidden]{ display:none !important; }
+.buy-guard{
+  position:fixed;
+  inset:0;
+  z-index:2000;
+  display:grid;
+  place-items:center;
+  padding:24px;
+}
+.buy-guard__backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.72);
+  backdrop-filter:blur(6px);
+}
+.buy-guard__dialog{
+  position:relative;
+  width:min(100%, 560px);
+  padding:24px 22px 22px;
+  display:grid;
+  gap:16px;
+  box-shadow:0 28px 80px rgba(0,0,0,.46);
+}
+.buy-guard__close{
+  position:absolute;
+  top:12px;
+  right:12px;
+  width:40px;
+  height:40px;
+  border-radius:999px;
+  border:1px solid rgba(200,164,77,.28);
+  background:rgba(255,255,255,.03);
+  color:rgba(244,241,234,.88);
+  font-size:26px;
+  line-height:1;
+  cursor:pointer;
+}
+.buy-guard__close:hover{
+  background:rgba(200,164,77,.10);
+  border-color:rgba(200,164,77,.44);
+}
+.buy-guard__eyebrow{
+  margin:0;
+  color:rgba(200,164,77,.96);
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-size:12px;
+}
+.buy-guard__title{
+  margin:0;
+  font-family:var(--serif);
+  font-size:clamp(28px, 4vw, 38px);
+  line-height:1.02;
+}
+.buy-guard__text{
+  margin:0;
+  color:var(--muted);
+  line-height:1.65;
+}
+.buy-guard__check{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  padding:14px 15px;
+  border-radius:16px;
+  border:1px solid rgba(200,164,77,.22);
+  background:rgba(255,255,255,.03);
+  color:rgba(244,241,234,.94);
+  cursor:pointer;
+}
+.buy-guard__check input{
+  margin-top:3px;
+  accent-color:rgba(226,196,106,.96);
+}
+.buy-guard__actions{
+  display:flex;
+  justify-content:flex-end;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.buy-guard__actions .btn:disabled{
+  opacity:.58;
+  cursor:not-allowed;
+  transform:none !important;
+}
+
+@media (max-width: 760px){
+  .hero-compliance{
+    margin-top:14px;
+    padding:11px 12px;
+    font-size:13px;
+  }
+  .buy-guard{ padding:16px; }
+  .buy-guard__dialog{
+    width:min(100%, 100%);
+    padding:22px 16px 16px;
+    gap:14px;
+  }
+  .buy-guard__actions{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  .buy-guard__actions .btn{ width:100%; }
 }

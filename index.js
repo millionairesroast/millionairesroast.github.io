@@ -1,5 +1,5 @@
 (() => {
-  const SQUARE_BUY_LINK = "https://square.link/u/PASTE_YOUR_LINK_HERE";
+  const SQUARE_BUY_LINK = "https://square.link/u/JRlFCpYu";
   const PHONE_NUMBER = "12174167072";
   const STORAGE_KEY = "mr_lang";
   const REDUCE_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -18,10 +18,18 @@
       "nav.order": "ORDER",
       "hero.kicker": "SMALL BATCH ROASTERY",
       "hero.sub": "Luxury small-batch coffee roastery serving Springfield and Central Illinois with rotating single-origin coffees for discerning taste.",
-      "hero.note": "Need coffee in Springfield or Central Illinois this week? Text us for the fastest order and pickup details.",
+      "hero.note": "Free pickup is available in Beardstown and Springfield. Beardstown delivery is free. Springfield delivery may incur a fee. Text us for the fastest order and pickup details.",
+      "hero.compliance": "Online orders are for Illinois only. Because of compliance restrictions, we cannot sell or ship outside Illinois.",
       "cta.buy": "Buy Now",
       "cta.email": "Email to Order",
       "cta.text": "Text to Order",
+      "buy.guard.kicker": "Illinois only",
+      "buy.guard.title": "Before you continue",
+      "buy.guard.body": "Online checkout is for Illinois orders only. Free pickup is available in Beardstown and Springfield. Beardstown delivery is free. Springfield delivery may incur a fee. If your shipping or pickup address is outside Illinois, please do not continue. Orders placed outside Illinois will be canceled and refunded.",
+      "buy.guard.checkbox": "I confirm this order is for an Illinois address or Illinois pickup.",
+      "buy.guard.cancel": "Cancel",
+      "buy.guard.continue": "Continue to secure checkout",
+      "buy.guard.close.aria": "Close Illinois order notice",
       "find.label": "Where to find us",
       "find.mini": "Best place for weekly locations and market updates.",
       "find.text": "Catch us at Springfield and Central Illinois farmers markets. Follow us for weekly locations and updates.",
@@ -60,9 +68,9 @@
       "faq.q1": "What beans are available right now?",
       "faq.a1": "This rotation is Costa Rica Tarrazú “San Diego Jaguar” (Honey Process) — a rich, dessert-leaning cup with chocolate sweetness and a honeyed finish, layered with nectarine, guava, berry, and a bright citrus lift. Full-bodied with medium acidity, it’s bold, silky, and ridiculously satisfying hot or iced. Want it whole bean or ground? Text or email and we’ll get your order ready.",
       "faq.q2": "How do I order?",
-      "faq.a2": "Order online, or order directly by email or by text. Tell us what you want (whole bean vs. ground), how many bags, and your preferred pickup in Springfield or Central Illinois.",
+      "faq.a2": "Order online if your order is for Illinois shipping or Illinois pickup, or order directly by email or by text. Free pickup is available in Beardstown and Springfield. Beardstown delivery is free. Springfield delivery may incur a fee depending on the order and distance.",
       "faq.q3": "Do you ship?",
-      "faq.a3": "Not reliably yet. For now, the best way to get coffee is to meet us at a market or arrange local pickup in Springfield or Central Illinois. Follow Facebook or Instagram for weekly locations.",
+      "faq.a3": "Yes, but only within Illinois for online orders. Because of compliance restrictions, we cannot sell or ship outside Illinois. Free pickup is available in Beardstown and Springfield. Beardstown delivery is free. Springfield delivery may incur a fee depending on the order and distance. Orders placed with an out-of-state address will be canceled and refunded.",
       "faq.q4": "Do you offer K-Cups?",
       "faq.a4": "Yes. We offer K-Cups now. Text or email us to ask what’s currently available.",
       "contact.title": "Contact & Follow Us",
@@ -88,10 +96,18 @@
       "nav.order": "ORDENAR",
       "hero.kicker": "TOSTADORÍA ARTESANAL",
       "hero.sub": "Tostaduría de café artesanal de lotes pequeños para Springfield y el centro de Illinois, con cafés de origen único y rotativos para paladares exigentes.",
-      "hero.note": "¿Quieres café esta semana en Springfield o el centro de Illinois? Envíanos un texto para la forma más rápida de pedir y coordinar tu entrega.",
+      "hero.note": "La recogida gratis está disponible en Beardstown y Springfield. La entrega en Beardstown es gratis. La entrega en Springfield puede tener un costo. Envíanos un texto para la forma más rápida de pedir y coordinar tu entrega.",
+      "hero.compliance": "Los pedidos en línea son solo para Illinois. Por restricciones de cumplimiento, no podemos vender ni enviar fuera del estado.",
       "cta.buy": "Comprar ahora",
       "cta.email": "Pedir por correo",
       "cta.text": "Pedir por texto",
+      "buy.guard.kicker": "Solo Illinois",
+      "buy.guard.title": "Antes de continuar",
+      "buy.guard.body": "El pago en línea es solo para pedidos dentro de Illinois. La recogida gratis está disponible en Beardstown y Springfield. La entrega en Beardstown es gratis. La entrega en Springfield puede tener un costo. Si tu dirección de envío o recogida está fuera de Illinois, por favor no continúes. Los pedidos fuera de Illinois serán cancelados y reembolsados.",
+      "buy.guard.checkbox": "Confirmo que este pedido es para una dirección en Illinois o para recogida en Illinois.",
+      "buy.guard.cancel": "Cancelar",
+      "buy.guard.continue": "Continuar al pago seguro",
+      "buy.guard.close.aria": "Cerrar aviso de pedidos solo en Illinois",
       "find.label": "Dónde encontrarnos",
       "find.mini": "El mejor lugar para ver ubicaciones semanales y novedades del mercado.",
       "find.text": "Encuéntranos en mercados de agricultores de Springfield y del centro de Illinois. Síguenos para ubicaciones y novedades semanales.",
@@ -130,9 +146,9 @@
       "faq.q1": "¿Qué granos hay disponibles ahora?",
       "faq.a1": "En esta rotación tenemos Costa Rica Tarrazú “San Diego Jaguar” (Proceso Honey) — una taza intensa y sedosa con dulzor de chocolate y un final con miel, con capas de nectarina, guayaba, frutos rojos y un toque cítrico brillante. Cuerpo alto y acidez media: potente, suave y deliciosa tanto caliente como en frío. ¿Lo quieres en grano o molido? Envíanos un texto o correo y preparamos tu pedido.",
       "faq.q2": "¿Cómo hago un pedido?",
-      "faq.a2": "Ordena en línea, o directamente por correo o por texto. Dinos qué quieres (grano entero o molido), cuántas bolsas y tu forma de entrega preferida en Springfield o el centro de Illinois.",
+      "faq.a2": "Ordena en línea si tu pedido es para envío dentro de Illinois o para recogida en Illinois, o directamente por correo o por texto. La recogida gratis está disponible en Beardstown y Springfield. La entrega en Beardstown es gratis. La entrega en Springfield puede tener un costo según el pedido y la distancia.",
       "faq.q3": "¿Hacen envíos?",
-      "faq.a3": "Aún no de forma constante. Por ahora, lo mejor es encontrarnos en un mercado o coordinar recogida local en Springfield o el centro de Illinois. Sigue Facebook o Instagram para ubicaciones semanales.",
+      "faq.a3": "Sí, pero solo dentro de Illinois para pedidos en línea. Por restricciones de cumplimiento, no podemos vender ni enviar fuera del estado. La recogida gratis está disponible en Beardstown y Springfield. La entrega en Beardstown es gratis. La entrega en Springfield puede tener un costo según el pedido y la distancia. Los pedidos con una dirección fuera de Illinois serán cancelados y reembolsados.",
       "faq.q4": "¿Ofrecen K-Cups?",
       "faq.a4": "Sí. Ya ofrecemos K-Cups. Envíanos un texto o correo para preguntar qué opciones hay disponibles.",
       "contact.title": "Contacto y redes",
@@ -153,6 +169,10 @@
   const header = document.querySelector(".site-header");
   const yearEl = document.getElementById("year");
   const squareBtn = document.getElementById("squareBuyBtn");
+  const buyGuard = document.getElementById("buyGuard");
+  const buyGuardCheckbox = document.getElementById("buyGuardCheckbox");
+  const buyGuardContinue = document.getElementById("buyGuardContinue");
+  const buyGuardClosers = [...document.querySelectorAll("[data-buy-guard-close]")];
   const textBtn = document.getElementById("textOrderBtn");
   const textCard = document.getElementById("textUsCard");
   const toggle = document.querySelector(".nav-toggle");
@@ -185,6 +205,7 @@
   let langInitialized = false;
   let currentLang = root.dataset.lang || (root.getAttribute("lang") === "es" ? "es" : "en");
   let openAccordionButton = null;
+  let lastActiveElement = null;
 
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
@@ -226,6 +247,34 @@
     }, { once: true });
   }
 
+
+  function openBuyGuard() {
+    if (!buyGuard || !buyGuardCheckbox || !buyGuardContinue) {
+      window.open(SQUARE_BUY_LINK, "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    lastActiveElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    buyGuard.hidden = false;
+    buyGuard.setAttribute("aria-hidden", "false");
+    body.classList.add("modal-open");
+    buyGuardCheckbox.checked = false;
+    buyGuardContinue.disabled = true;
+    window.requestAnimationFrame(() => {
+      buyGuardCheckbox.focus();
+    });
+  }
+
+  function closeBuyGuard() {
+    if (!buyGuard) return;
+    buyGuard.hidden = true;
+    buyGuard.setAttribute("aria-hidden", "true");
+    body.classList.remove("modal-open");
+    if (lastActiveElement && typeof lastActiveElement.focus === "function") {
+      lastActiveElement.focus();
+    }
+  }
+
   function setupBuyButton() {
     if (!squareBtn) return;
 
@@ -239,7 +288,41 @@
         event.preventDefault();
         alert("Online purchasing is currently under maintenance. Please order by text or email — we’ll take care of you right away.");
       });
+      return;
     }
+
+    squareBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+      openBuyGuard();
+    });
+
+    if (buyGuardCheckbox && buyGuardContinue) {
+      buyGuardCheckbox.addEventListener("change", () => {
+        buyGuardContinue.disabled = !buyGuardCheckbox.checked;
+      });
+
+      buyGuardContinue.addEventListener("click", () => {
+        if (!buyGuardCheckbox.checked) return;
+        window.open(SQUARE_BUY_LINK, "_blank", "noopener,noreferrer");
+        closeBuyGuard();
+      });
+    }
+
+    buyGuardClosers.forEach((element) => {
+      element.addEventListener("click", closeBuyGuard);
+    });
+
+    if (buyGuard) {
+      buyGuard.addEventListener("click", (event) => {
+        if (event.target === buyGuard) closeBuyGuard();
+      });
+    }
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && buyGuard && !buyGuard.hidden) {
+        closeBuyGuard();
+      }
+    });
   }
 
   function setSmsLink(lang) {

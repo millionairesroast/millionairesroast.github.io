@@ -22,7 +22,7 @@
   <meta name="twitter:description" content="Luxury small-batch coffee roastery serving Springfield and Central Illinois. Fresh roasted single-origin coffees with simple ordering by text or email and weekly market updates." />
 
   <link rel="canonical" href="https://millionairesroast.com/" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=7" />
 
   <script type="application/ld+json">
     {
@@ -120,7 +120,7 @@
     }
   </script>
 
-  <script defer src="index.js"></script>
+  <script defer src="index.js?v=7"></script>
 </head>
 
 <body>
@@ -298,6 +298,8 @@
             alt="Portrait of Maximiliano Gomez, founder of Millionaire’s Roast"
             data-i18n-attr="alt"
             data-i18n-attr-key="about.photo.alt"
+            width="3060"
+            height="4080"
             loading="lazy"
             decoding="async"
           />
@@ -361,35 +363,35 @@
         </div>
 
         <div class="faq card card-plate" data-accordion>
-          <button class="faq-item" type="button" aria-expanded="true" data-open-default="true">
+          <button class="faq-item" id="faq-trigger-1" type="button" aria-expanded="true" aria-controls="faq-panel-1" data-open-default="true">
             <span class="faq-q" data-i18n="faq.q1">What beans are available right now?</span>
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
-          <div class="faq-a" data-panel>
+          <div class="faq-a" id="faq-panel-1" data-panel role="region" aria-labelledby="faq-trigger-1">
             <p data-i18n="faq.a1">This rotation is Costa Rica Tarrazú “San Diego Jaguar” (Honey Process) — a rich, dessert-leaning cup with chocolate sweetness and a honeyed finish, layered with nectarine, guava, berry, and a bright citrus lift. Full-bodied with medium acidity, it’s bold, silky, and ridiculously satisfying hot or iced. Want it whole bean or ground? Text or email and we’ll get your order ready.</p>
           </div>
 
-          <button class="faq-item" type="button" aria-expanded="false">
+          <button class="faq-item" id="faq-trigger-2" type="button" aria-expanded="false" aria-controls="faq-panel-2">
             <span class="faq-q" data-i18n="faq.q2">How do I order?</span>
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
-          <div class="faq-a" data-panel>
+          <div class="faq-a" id="faq-panel-2" data-panel role="region" aria-labelledby="faq-trigger-2">
             <p data-i18n="faq.a2">Use online checkout only for Illinois shipping orders. For free pickup in Beardstown or Springfield, or for local delivery, order directly by email or by text. Beardstown delivery is free. Springfield delivery may incur a fee depending on the order and distance.</p>
           </div>
 
-          <button class="faq-item" type="button" aria-expanded="false">
+          <button class="faq-item" id="faq-trigger-3" type="button" aria-expanded="false" aria-controls="faq-panel-3">
             <span class="faq-q" data-i18n="faq.q3">Do you ship?</span>
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
-          <div class="faq-a" data-panel>
+          <div class="faq-a" id="faq-panel-3" data-panel role="region" aria-labelledby="faq-trigger-3">
             <p data-i18n="faq.a3">Yes, but only for shipping to Illinois addresses through online checkout. Because of compliance restrictions, we cannot sell or ship outside Illinois. For free pickup in Beardstown or Springfield, or for local delivery, please order by text or email. Beardstown delivery is free. Springfield delivery may incur a fee depending on the order and distance. Orders placed with an out-of-state shipping address will be canceled and refunded.</p>
           </div>
 
-          <button class="faq-item" type="button" aria-expanded="false">
+          <button class="faq-item" id="faq-trigger-4" type="button" aria-expanded="false" aria-controls="faq-panel-4">
             <span class="faq-q" data-i18n="faq.q4">Do you offer K-Cups?</span>
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
-          <div class="faq-a" data-panel>
+          <div class="faq-a" id="faq-panel-4" data-panel role="region" aria-labelledby="faq-trigger-4">
             <p data-i18n="faq.a4">Yes. We offer K-Cups now. Text or email us to ask what’s currently available.</p>
           </div>
         </div>
@@ -474,17 +476,17 @@
         ×
       </button>
       <p class="buy-guard__eyebrow" data-i18n="buy.guard.kicker">Illinois shipping only</p>
-      <h2 class="buy-guard__title" id="buyGuardTitle" data-i18n="buy.guard.title">Before you continue</h2>
+      <h2 class="buy-guard__title" id="buyGuardTitle" data-i18n="buy.guard.title">Shipping orders only</h2>
       <p class="buy-guard__text" id="buyGuardDesc" data-i18n="buy.guard.body">
-        Online checkout is for Illinois shipping orders only. If you want free pickup in Beardstown or Springfield, or local delivery, please order by text or email instead. Beardstown delivery is free. Springfield delivery may incur a fee. If your shipping address is outside Illinois, please do not continue. Orders placed outside Illinois will be canceled and refunded.
+        Online checkout is for Illinois shipping orders only. For pickup or local delivery, please text or email us instead.
       </p>
       <label class="buy-guard__check" for="buyGuardCheckbox">
         <input type="checkbox" id="buyGuardCheckbox" />
-        <span data-i18n="buy.guard.checkbox">I confirm this order is for shipment to an Illinois address.</span>
+        <span data-i18n="buy.guard.checkbox">I’m shipping to an Illinois address.</span>
       </label>
       <div class="buy-guard__actions">
         <button type="button" class="btn btn-outline" data-buy-guard-close data-i18n="buy.guard.cancel">Cancel</button>
-        <button type="button" class="btn btn-gold" id="buyGuardContinue" data-i18n="buy.guard.continue" disabled>Continue to secure checkout</button>
+        <button type="button" class="btn btn-gold" id="buyGuardContinue" data-i18n="buy.guard.continue" disabled>Continue to checkout</button>
       </div>
     </div>
   </div>

@@ -24,11 +24,11 @@
       "cta.email": "Email to Order",
       "cta.text": "Text to Order",
       "buy.guard.kicker": "Illinois shipping only",
-      "buy.guard.title": "Before you continue",
-      "buy.guard.body": "Online checkout is for Illinois shipping orders only. If you want free pickup in Beardstown or Springfield, or local delivery, please order by text or email instead. Beardstown delivery is free. Springfield delivery may incur a fee. If your shipping address is outside Illinois, please do not continue. Orders placed outside Illinois will be canceled and refunded.",
-      "buy.guard.checkbox": "I confirm this order is for shipment to an Illinois address.",
+      "buy.guard.title": "Shipping orders only",
+      "buy.guard.body": "Online checkout is for Illinois shipping orders only. For pickup or local delivery, please text or email us instead.",
+      "buy.guard.checkbox": "I’m shipping to an Illinois address.",
       "buy.guard.cancel": "Cancel",
-      "buy.guard.continue": "Continue to secure checkout",
+      "buy.guard.continue": "Continue to checkout",
       "buy.guard.close.aria": "Close Illinois shipping notice",
       "find.label": "Where to find us",
       "find.mini": "Best place for weekly locations and market updates.",
@@ -102,11 +102,11 @@
       "cta.email": "Pedir por correo",
       "cta.text": "Pedir por texto",
       "buy.guard.kicker": "Solo envío en Illinois",
-      "buy.guard.title": "Antes de continuar",
-      "buy.guard.body": "El pago en línea es solo para pedidos con envío dentro de Illinois. Si quieres recogida gratis en Beardstown o Springfield, o entrega local, por favor ordena por texto o correo en su lugar. La entrega en Beardstown es gratis. La entrega en Springfield puede tener un costo. Si tu dirección de envío está fuera de Illinois, por favor no continúes. Los pedidos fuera de Illinois serán cancelados y reembolsados.",
-      "buy.guard.checkbox": "Confirmo que este pedido es para envío a una dirección en Illinois.",
+      "buy.guard.title": "Solo pedidos con envío",
+      "buy.guard.body": "El pago en línea es solo para pedidos con envío dentro de Illinois. Para recogida o entrega local, por favor envíanos un texto o correo.",
+      "buy.guard.checkbox": "Voy a enviar a una dirección en Illinois.",
       "buy.guard.cancel": "Cancelar",
-      "buy.guard.continue": "Continuar al pago seguro",
+      "buy.guard.continue": "Continuar al pago",
       "buy.guard.close.aria": "Cerrar aviso de envío solo en Illinois",
       "find.label": "Dónde encontrarnos",
       "find.mini": "El mejor lugar para ver ubicaciones semanales y novedades del mercado.",
@@ -431,6 +431,7 @@
     const panel = getAccordionPanel(button);
     if (!panel) return;
     button.setAttribute("aria-expanded", "false");
+    panel.hidden = true;
     panel.style.maxHeight = "0px";
   }
 
@@ -438,6 +439,7 @@
     const panel = getAccordionPanel(button);
     if (!panel) return;
     button.setAttribute("aria-expanded", "true");
+    panel.hidden = false;
     panel.style.maxHeight = `${panel.scrollHeight}px`;
   }
 
@@ -445,6 +447,7 @@
     if (!openAccordionButton) return;
     const panel = getAccordionPanel(openAccordionButton);
     if (panel) {
+      panel.hidden = false;
       panel.style.maxHeight = `${panel.scrollHeight}px`;
     }
   }

@@ -415,6 +415,11 @@ a:focus-visible, button:focus-visible{
 .order-card .btn{
   margin-top:auto;
 }
+.order-small-note{
+  margin:0;
+  color:var(--muted2);
+  font-size:14px;
+}
 .order-kicker, .featured-kicker, .card-kicker, .spec-label{
   margin:0;
   color:rgba(200,164,77,.94);
@@ -426,6 +431,12 @@ a:focus-visible, button:focus-visible{
   display:flex;
   flex-wrap:wrap;
   gap:10px;
+}
+.follow-links{
+  width:100%;
+  justify-content:center;
+  margin-top:18px;
+  padding-top:6px;
 }
 .order-note{
   margin-top:18px;
@@ -452,6 +463,14 @@ a:focus-visible, button:focus-visible{
   font-weight:800;
   line-height:1;
 }
+.jaguar-story{
+  margin-top:18px;
+}
+.jaguar-note{
+  margin:10px 0 0;
+  color:var(--muted2);
+  font-size:14px;
+}
 
 .featured-roast{
   display:grid;
@@ -460,7 +479,7 @@ a:focus-visible, button:focus-visible{
     "copy media"
     "details media";
   gap:20px 28px;
-  align-items:start;
+  align-items:center;
 }
 .featured-copy{grid-area:copy}
 .featured-title{
@@ -481,17 +500,25 @@ a:focus-visible, button:focus-visible{
   color:var(--muted);
   font-size:16px;
 }
+.featured-buyer-note{
+  margin:14px 0 0;
+  color:rgba(244,241,234,.9);
+  font-size:15px;
+}
 .featured-media{
   grid-area:media;
   margin:0;
-  align-self:start;
+  align-self:center;
+  justify-self:center;
+  width:min(100%, 460px);
+  padding:18px;
   overflow:hidden;
   border-radius:20px;
   border:1px solid rgba(200,164,77,.24);
   background:linear-gradient(180deg, rgba(255,255,255,.98), rgba(245,241,233,.96));
 }
 .featured-image{
-  aspect-ratio:4/5;
+  width:min(100%, 419px);
   object-fit:contain;
   object-position:center;
 }
@@ -543,6 +570,8 @@ a:focus-visible, button:focus-visible{
   gap:16px;
 }
 .carousel-viewport{
+  justify-self:center;
+  width:min(100%, 920px);
   overflow:hidden;
 }
 .carousel-track{
@@ -554,7 +583,10 @@ a:focus-visible, button:focus-visible{
   min-width:100%;
   margin:0;
   display:grid;
-  gap:14px;
+  grid-template-rows:minmax(0, 540px) auto;
+  gap:16px;
+  justify-items:center;
+  align-items:start;
 }
 .carousel-arrow{
   width:52px;
@@ -607,9 +639,14 @@ a:focus-visible, button:focus-visible{
   background:rgba(226,196,106,.96);
 }
 .proof-image{
-  width:100%;
-  max-height:540px;
+  width:auto;
+  height:100%;
+  max-width:100%;
   object-fit:contain;
+}
+.proof-caption{
+  max-width:62ch;
+  min-height:3.4em;
 }
 
 .about-layout{
@@ -703,7 +740,7 @@ a:focus-visible, button:focus-visible{
 
 .contact-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(2,minmax(0,1fr));
   gap:16px;
 }
 .card-action{
@@ -739,11 +776,12 @@ a:focus-visible, button:focus-visible{
 }
 .card-meta{display:grid;gap:3px}
 .card-main{
-  font-size:22px;
+  font-size:clamp(18px,1.6vw,21px);
   font-weight:800;
   line-height:1.18;
+  overflow-wrap:anywhere;
 }
-.card-main-strong{font-size:26px}
+.card-main-strong{font-size:clamp(22px,2vw,26px)}
 .card-sub{
   color:var(--muted2);
   font-size:14px;
@@ -929,21 +967,19 @@ a:focus-visible, button:focus-visible{
   .carousel-shell{
     grid-template-columns:1fr;
   }
-  .carousel-arrow{
-    width:48px;
-    height:48px;
-  }
-  .carousel-shell > .carousel-arrow:first-child{
-    order:2;
-    justify-self:start;
-  }
   .carousel-viewport{
     order:1;
+    width:100%;
   }
-  .carousel-shell > .carousel-arrow:last-child{
-    order:3;
-    justify-self:end;
-    margin-top:-48px;
+  .carousel-slide{
+    grid-template-rows:minmax(0, 260px) auto;
+  }
+  .carousel-arrow{
+    display:none;
+  }
+  .proof-caption{
+    min-height:0;
+    max-width:34ch;
   }
   .carousel-footer{
     justify-content:center;

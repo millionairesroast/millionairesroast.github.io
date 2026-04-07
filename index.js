@@ -266,49 +266,101 @@
   function setupCarousel() {
     if (!carousel) return;
 
+    const viewport = carousel.querySelector(".carousel-viewport");
     const track = carousel.querySelector(".carousel-track");
-    const slides = track ? [...track.querySelectorAll(".carousel-slide")] : [];
+    const originalSlides = track ? [...track.querySelectorAll(".carousel-slide")] : [];
     const prevButton = carousel.querySelector("[data-carousel-prev]");
     const nextButton = carousel.querySelector("[data-carousel-next]");
     const dots = [...carousel.querySelectorAll("[data-carousel-dot]")];
     const count = carousel.querySelector("[data-carousel-count]");
 
-    if (!track || !slides.length) return;
+    if (!viewport || !track || !originalSlides.length) return;
 
-    let index = 0;
+    const firstClone = originalSlides[0].cloneNode(true);
+    firstClone.setAttribute("aria-hidden", "true");
+    firstClone.dataset.clone = "true";
+    track.appendChild(firstClone);
 
-    function renderCarousel() {
-      track.style.transform = `translateX(-${index * 100}%)`;
+    const slideCount = originalSlides.length;
 
-      slides.forEach((slide, slideIndex) => {
-        slide.setAttribute("aria-hidden", String(slideIndex !== index));
+    let activeIndex = 0;
+    let trackIndex = 0;
+    let autoplayId = 0;
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchActive = false;
+
+    function stopAutoplay() {
+      if (!autoplayId) return;
+      window.clearInterval(autoplayId);
+      autoplayId = 0;
+    }
+
+    function startAutoplay() {
+      stopAutoplay();
+      autoplayId = window.setInterval(() => {
+        goTo(activeIndex + 1, { direction: "next" });
+      }, 5000);
+    }
+
+    function setTrackPosition(animate = true) {
+      if (!animate) {
+        track.style.transition = "none";
+      }
+
+      track.style.transform = `translateX(-${trackIndex * 100}%)`;
+
+      if (!animate) {
+        track.offsetHeight;
+        track.style.transition = "";
+      }
+    }
+
+    function updateCarouselUi() {
+      originalSlides.forEach((slide, slideIndex) => {
+        slide.setAttribute("aria-hidden", String(slideIndex !== activeIndex));
       });
 
       dots.forEach((dot, dotIndex) => {
-        const isActive = dotIndex === index;
+        const isActive = dotIndex === activeIndex;
         dot.classList.toggle("is-active", isActive);
         dot.setAttribute("aria-selected", String(isActive));
       });
 
       if (count) {
-        count.textContent = `${index + 1} / ${slides.length}`;
+        count.textContent = `${activeIndex + 1} / ${slideCount}`;
       }
     }
 
-    function goTo(nextIndex) {
-      index = (nextIndex + slides.length) % slides.length;
-      renderCarousel();
+    function renderCarousel(animate = true) {
+      updateCarouselUi();
+      setTrackPosition(animate);
+    }
+
+    function goTo(nextIndex, options = {}) {
+      const direction = options.direction || "auto";
+
+      if (direction === "next" && activeIndex === slideCount - 1 && nextIndex >= slideCount) {
+        activeIndex = 0;
+        trackIndex = slideCount;
+        renderCarousel(true);
+        return;
+      }
+
+      activeIndex = (nextIndex + slideCount) % slideCount;
+      trackIndex = activeIndex;
+      renderCarousel(true);
     }
 
     if (prevButton) {
       prevButton.addEventListener("click", () => {
-        goTo(index - 1);
+        goTo(activeIndex - 1, { direction: "prev" });
       });
     }
 
     if (nextButton) {
       nextButton.addEventListener("click", () => {
-        goTo(index + 1);
+        goTo(activeIndex + 1, { direction: "next" });
       });
     }
 
@@ -316,12 +368,65 @@
       dot.addEventListener("click", () => {
         const nextIndex = Number(dot.getAttribute("data-carousel-dot"));
         if (!Number.isNaN(nextIndex)) {
-          goTo(nextIndex);
+          const direction = activeIndex === slideCount - 1 && nextIndex === 0 ? "next" : "auto";
+          goTo(nextIndex, { direction });
         }
       });
     });
 
-    renderCarousel();
+    track.addEventListener("transitionend", () => {
+      if (trackIndex === slideCount) {
+        trackIndex = 0;
+        setTrackPosition(false);
+      }
+    });
+
+    carousel.addEventListener("mouseenter", stopAutoplay);
+    carousel.addEventListener("mouseleave", startAutoplay);
+    carousel.addEventListener("focusin", stopAutoplay);
+    carousel.addEventListener("focusout", (event) => {
+      if (!carousel.contains(event.relatedTarget)) {
+        startAutoplay();
+      }
+    });
+
+    viewport.addEventListener("touchstart", (event) => {
+      const touch = event.changedTouches[0];
+      if (!touch) return;
+      touchStartX = touch.clientX;
+      touchStartY = touch.clientY;
+      touchActive = true;
+      stopAutoplay();
+    }, { passive: true });
+
+    viewport.addEventListener("touchend", (event) => {
+      if (!touchActive) return;
+      const touch = event.changedTouches[0];
+      touchActive = false;
+      if (!touch) {
+        startAutoplay();
+        return;
+      }
+
+        const deltaX = touch.clientX - touchStartX;
+        const deltaY = touch.clientY - touchStartY;
+
+        if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY)) {
+          goTo(deltaX < 0 ? activeIndex + 1 : activeIndex - 1, {
+            direction: deltaX < 0 ? "next" : "prev"
+          });
+        }
+
+        startAutoplay();
+      }, { passive: true });
+
+    viewport.addEventListener("touchcancel", () => {
+      touchActive = false;
+      startAutoplay();
+      }, { passive: true });
+
+    renderCarousel(false);
+    startAutoplay();
   }
 
   applyBrandFallback();

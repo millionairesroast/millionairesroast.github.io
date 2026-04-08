@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,7 +20,7 @@
   <link rel="canonical" href="https://millionairesroast.com/" />
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="apple-touch-icon" href="logo.png" />
-  <link rel="stylesheet" href="styles.css?v=14" />
+  <link rel="stylesheet" href="styles.css?v=16" />
 
   <script type="application/ld+json">
     {
@@ -72,7 +72,7 @@
           "name": "How do I order?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Choose the path that fits your order. Use secure online checkout for shipped Illinois orders, text for local pickup or delivery, and text or email for K-Cups."
+            "text": "Use the Millionaire's Roast pickup and delivery profile for local orders, or use the shipping payment links for coffee bags and K-Cups."
           }
         },
         {
@@ -90,15 +90,23 @@
             "@type": "Answer",
             "text": "The current roast is Costa Rica Tarrazu San Diego Jaguar, a honey process coffee with chocolate sweetness, nectarine, guava, berry, and citrus notes."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a current rotation last?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We source green coffee in bulk, but harvest timing differs by region and crop cycle. Once a coffee sells through, there is a high chance that specific lot is gone for now, not forever, and the menu keeps rotating based on demand and availability."
+          }
         }
       ]
     }
   </script>
 
-  <script defer src="index.js?v=14"></script>
+  <script defer src="index.js?v=16"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
   <header class="site-header" id="top">
     <div class="container header-inner">
@@ -109,17 +117,17 @@
         </span>
         <span class="brand-text">
           <span class="brand-name">Millionaire's Roast</span>
-          <span class="brand-tag">Small-batch specialty coffee</span>
+          <span class="brand-tag" data-i18n="brand.tag">Small-batch specialty coffee</span>
         </span>
       </a>
 
       <div class="header-right">
         <nav class="nav" aria-label="Primary">
-          <a class="nav-link" href="#order">Order</a>
-          <a class="nav-link" href="#current-roast">Current Roast</a>
-          <a class="nav-link" href="#about">About</a>
-          <a class="nav-link" href="#faq">FAQ</a>
-          <a class="nav-cta" href="#contact">Contact</a>
+          <a class="nav-link" href="#order" data-i18n="nav.order">Order</a>
+          <a class="nav-link" href="#current-roast" data-i18n="nav.roast">Current Roast</a>
+          <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
+          <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
+          <a class="nav-cta" href="#contact" data-i18n="nav.contact">Contact</a>
         </nav>
 
         <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
@@ -129,44 +137,56 @@
     </div>
 
     <div class="mobile-nav" id="mobile-nav" aria-hidden="true" inert>
-      <a class="nav-link" href="#order">Order</a>
-      <a class="nav-link" href="#current-roast">Current Roast</a>
-      <a class="nav-link" href="#about">About</a>
-      <a class="nav-link" href="#faq">FAQ</a>
-      <a class="nav-cta" href="#contact">Contact</a>
+      <a class="nav-link" href="#order" data-i18n="nav.order">Order</a>
+      <a class="nav-link" href="#current-roast" data-i18n="nav.roast">Current Roast</a>
+      <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
+      <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a class="nav-cta" href="#contact" data-i18n="nav.contact">Contact</a>
     </div>
   </header>
 
   <main id="main">
+    <section class="lang-section" aria-label="Language selection">
+      <div class="container">
+        <div class="lang-bar">
+          <p class="lang-caption" data-i18n="lang.label">Language</p>
+          <div class="lang-switch" role="group" aria-label="Language selection">
+            <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="true">English</button>
+            <button type="button" class="lang-btn" data-lang-btn="es" aria-pressed="false">Español</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-single">
         <div class="hero-plate">
-          <p class="kicker">Roasted in Beardstown, serving Springfield and Central Illinois</p>
-          <h1 class="hero-title" id="hero-title">Specialty coffee with a premium feel, not a premium price.</h1>
-          <p class="hero-sub">
+          <p class="kicker" data-i18n="hero.kicker">Roasted in Beardstown, serving Springfield and Central Illinois</p>
+          <h1 class="hero-title" id="hero-title" data-i18n="hero.title">Specialty coffee with a premium feel, not a premium price.</h1>
+          <p class="hero-sub" data-i18n="hero.sub">
             Millionaire's Roast is a Central Illinois small-batch roaster focused on approachable specialty coffee, rotating origins, and easy everyday drinking.
           </p>
 
           <div class="hero-points" aria-label="Key highlights">
-            <span class="hero-chip">Small-batch roasted</span>
-            <span class="hero-chip">Specialty coffee</span>
-            <span class="hero-chip">Rotating origins</span>
-            <span class="hero-chip">Pickup, delivery, or Illinois shipping</span>
+            <span class="hero-chip" data-i18n="hero.chip1">Small-batch roasted</span>
+            <span class="hero-chip" data-i18n="hero.chip2">Specialty coffee</span>
+            <span class="hero-chip" data-i18n="hero.chip3">Rotating origins</span>
+            <span class="hero-chip" data-i18n="hero.chip4">Pickup, delivery, or Illinois shipping</span>
           </div>
 
           <div class="hero-actions">
-            <a class="btn btn-gold" href="#order">Choose How to Order</a>
-            <a class="btn btn-outline" href="#current-roast">See Current Roast</a>
+            <a class="btn btn-gold" id="heroOrderBtn" href="#order" data-i18n="hero.cta.primary">Choose Order Option</a>
+            <a class="btn btn-outline" href="#current-roast" data-i18n="hero.cta.secondary">See Current Roast</a>
           </div>
 
           <div class="hero-proof">
             <div class="hero-proof-item">
-              <strong>Featured locally</strong>
-              <span>Found at local markets and community events across Central Illinois.</span>
+              <strong data-i18n="hero.proof1.title">Featured locally</strong>
+              <span data-i18n="hero.proof1.body">Found at local markets and community events across Central Illinois.</span>
             </div>
             <div class="hero-proof-item">
-              <strong>Clear roast details</strong>
-              <span>Origin, tasting notes, best use, and pricing are all easy to scan.</span>
+              <strong data-i18n="hero.proof2.title">Clear roast details</strong>
+              <span data-i18n="hero.proof2.body">Origin, tasting notes, best use, and pricing are all easy to scan.</span>
             </div>
           </div>
         </div>
@@ -176,30 +196,33 @@
     <section class="section" id="order" aria-labelledby="order-title">
         <div class="container">
           <div class="section-head center narrow-head">
-            <h2 class="section-title" id="order-title">Two simple ways to order</h2>
-            <p class="section-subtitle">Pick the path that fits your order. No long instructions, no guesswork.</p>
+            <h2 class="section-title" id="order-title" data-i18n="order.title">Two simple ways to order</h2>
+            <p class="section-subtitle" data-i18n="order.subtitle">Use the shipping links for bags or K-Cups, or use the ordering profile for pickup and local delivery.</p>
           </div>
 
           <div class="order-grid order-grid-two">
             <article class="card card-plate order-card">
-              <p class="order-kicker">Ship Coffee</p>
-              <h3 class="card-title">Ship Coffee</h3>
-              <p class="card-text">For Illinois shipping addresses. Best for a 14 oz bag sent straight to you.</p>
-              <a class="btn btn-gold" id="squareBuyBtn" href="#" target="_blank" rel="noopener noreferrer">Shop Shipped Bags</a>
-            <p class="order-small-note">Secure checkout for shipped Illinois orders.</p>
-          </article>
+              <p class="order-kicker" data-i18n="order.ship.kicker">Ship Coffee</p>
+              <h3 class="card-title" data-i18n="order.ship.title">Shipping for Illinois orders</h3>
+              <p class="card-text" data-i18n="order.ship.body">Choose the shipping link that matches what you want sent: coffee bags or K-Cups.</p>
+              <div class="order-actions-stack">
+                <a class="btn btn-gold" id="shipBagBtn" href="#" target="_blank" rel="noopener noreferrer" data-i18n="order.ship.cta1">Ship Coffee Bags</a>
+                <a class="btn btn-outline" id="shipKCupBtn" href="#" target="_blank" rel="noopener noreferrer" data-i18n="order.ship.cta2">Ship K-Cups</a>
+              </div>
+              <p class="order-small-note" data-i18n="order.ship.note">Best for shipped Illinois orders that need a direct payment link.</p>
+            </article>
 
             <article class="card card-plate order-card">
-              <p class="order-kicker">Local Pickup / Delivery</p>
-              <h3 class="card-title">Local Pickup / Delivery</h3>
-              <p class="card-text">For Beardstown, Springfield, nearby orders, and local K-Cup availability. We'll confirm pickup or delivery by text.</p>
-              <a class="btn btn-outline" id="textOrderBtn" href="#">Text for Local Order</a>
-              <p class="order-small-note">Best for direct local coordination, pickup, delivery, and K-Cups.</p>
+              <p class="order-kicker" data-i18n="order.local.kicker">Local Pickup / Delivery</p>
+              <h3 class="card-title" data-i18n="order.local.title">Pickup and local delivery</h3>
+              <p class="card-text" data-i18n="order.local.body">Use the ordering profile for Beardstown, Springfield, and nearby pickup or delivery orders.</p>
+              <a class="btn btn-gold" id="pickupOrderBtn" href="#" target="_blank" rel="noopener noreferrer" data-i18n="order.local.cta">Order Pickup or Delivery</a>
+              <p class="order-small-note" data-i18n="order.local.note">One local ordering profile for pickup and delivery coordination.</p>
             </article>
           </div>
 
           <div class="order-note card card-plate">
-            <p><strong>Need help deciding?</strong> If you're in Central Illinois and want the easiest option, text us first. We'll point you to shipping, pickup, delivery, or K-Cups based on what makes the most sense.</p>
+            <p><strong data-i18n="order.note.lead">Need help deciding?</strong> <span data-i18n="order.note.body">Use the shipping links for coffee bags or K-Cups, and use the ordering profile for pickup or delivery. If you'd rather handle it personally or just want help placing the order, text us instead.</span></p>
           </div>
         </div>
       </section>
@@ -208,11 +231,11 @@
       <div class="container">
         <div class="featured-roast card card-plate">
           <div class="featured-copy">
-            <p class="featured-kicker">Current Roast</p>
-            <h2 class="featured-title" id="current-roast-title">Costa Rica Tarrazu "San Diego Jaguar"</h2>
-            <p class="featured-subtitle">Honey Process</p>
-            <p class="featured-text">A rich, balanced daily drinker with chocolate sweetness, a honeyed finish, and fruit notes that keep the cup lively without getting too sharp.</p>
-            <p class="featured-buyer-note">Best for drinkers who want a balanced, sweet daily coffee with fruit complexity but no harsh edge.</p>
+            <p class="featured-kicker" data-i18n="roast.kicker">Current Roast</p>
+            <h2 class="featured-title" id="current-roast-title" data-i18n="roast.title">Costa Rica Tarrazu "San Diego Jaguar"</h2>
+            <p class="featured-subtitle" data-i18n="roast.process">Honey Process</p>
+            <p class="featured-text" data-i18n="roast.body">A rich, balanced daily drinker with chocolate sweetness, a honeyed finish, and fruit notes that keep the cup lively without getting too sharp.</p>
+            <p class="featured-buyer-note" data-i18n="roast.note">Best for drinkers who want a balanced, sweet daily coffee with fruit complexity but no harsh edge.</p>
           </div>
 
           <figure class="featured-media">
@@ -222,38 +245,38 @@
           <div class="featured-details">
             <div class="roast-spec-grid" aria-label="Current roast details">
               <div class="spec-card">
-                <span class="spec-label">Origin</span>
-                <span class="spec-value">Tarrazu, Costa Rica</span>
+                <span class="spec-label" data-i18n="roast.spec1.label">Origin</span>
+                <span class="spec-value" data-i18n="roast.spec1.value">Tarrazu, Costa Rica</span>
               </div>
               <div class="spec-card">
-                <span class="spec-label">Roast Level</span>
-                <span class="spec-value">Medium</span>
+                <span class="spec-label" data-i18n="roast.spec2.label">Roast Level</span>
+                <span class="spec-value" data-i18n="roast.spec2.value">Medium, Medium Dark, Dark</span>
               </div>
               <div class="spec-card">
-                <span class="spec-label">Tasting Notes</span>
-                <span class="spec-value">Chocolate, honey, nectarine, guava, berry, citrus</span>
+                <span class="spec-label" data-i18n="roast.spec3.label">Tasting Notes</span>
+                <span class="spec-value" data-i18n="roast.spec3.value">Chocolate, honey, nectarine, guava, berry, citrus</span>
               </div>
               <div class="spec-card">
-                <span class="spec-label">Best Use</span>
-                <span class="spec-value">Great for drip, solid iced, easy daily drinker</span>
+                <span class="spec-label" data-i18n="roast.spec4.label">Best Use</span>
+                <span class="spec-value" data-i18n="roast.spec4.value">Great for drip, solid iced, easy daily drinker</span>
               </div>
               <div class="spec-card">
-                <span class="spec-label">Availability</span>
-                <span class="spec-value">Available now in whole bean or ground</span>
+                <span class="spec-label" data-i18n="roast.spec5.label">Availability</span>
+                <span class="spec-value" data-i18n="roast.spec5.value">Available now in whole bean or ground</span>
               </div>
               <div class="spec-card">
-                <span class="spec-label">Cup Profile</span>
-                <span class="spec-value">Balanced, sweet, and easy to come back to</span>
+                <span class="spec-label" data-i18n="roast.spec6.label">Cup Profile</span>
+                <span class="spec-value" data-i18n="roast.spec6.value">Balanced, sweet, and easy to come back to</span>
               </div>
             </div>
 
             <div class="featured-pricing">
               <div class="price-block">
-                <span class="spec-label">14 oz Bag</span>
+                <span class="spec-label" data-i18n="roast.price.bag">14 oz Bag</span>
                 <span class="price-callout">$18</span>
               </div>
               <div class="price-block">
-                <span class="spec-label">K-Cups</span>
+                <span class="spec-label" data-i18n="roast.price.kcups">K-Cups</span>
                 <div class="order-meta">
                   <span class="tag-chip">8 pack $10</span>
                   <span class="tag-chip">18 pack $22</span>
@@ -266,10 +289,10 @@
         </div>
 
         <div class="jaguar-story card card-plate">
-          <p class="featured-kicker">Why "Jaguar"?</p>
-          <h3 class="card-title">A strong cup with a real conservation backstory</h3>
-          <p class="card-text">This Jaguar Honey coffee comes from Beneficio San Diego in Tarrazu, Costa Rica. The Jaguar coffee line has been publicly linked by Volcafe Costa Rica and Genuine Origin to a conservation partnership with Fundazoo supporting jaguar and wild-cat preservation in Costa Rica.</p>
-          <p class="jaguar-note">The current lot page highlights the San Diego mill and the coffee's profile; the conservation story comes from the broader Jaguar coffee program tied to this wet mill.</p>
+          <p class="featured-kicker" data-i18n="jaguar.kicker">Why "Jaguar"?</p>
+          <h3 class="card-title" data-i18n="jaguar.title">A strong cup with a real conservation backstory</h3>
+          <p class="card-text" data-i18n="jaguar.body">This Jaguar Honey coffee comes from Beneficio San Diego in Tarrazu, Costa Rica. The Jaguar coffee line has been publicly linked by Volcafe Costa Rica and Genuine Origin to a conservation partnership with Fundazoo supporting jaguar and wild-cat preservation in Costa Rica.</p>
+          <p class="jaguar-note" data-i18n="jaguar.note">The current lot page highlights the San Diego mill and the coffee's profile; the conservation story comes from the broader Jaguar coffee program tied to this wet mill.</p>
         </div>
       </div>
     </section>
@@ -277,8 +300,8 @@
     <section class="section" id="proof" aria-labelledby="proof-title">
       <div class="container">
         <div class="section-head center narrow-head">
-          <h2 class="section-title" id="proof-title">A real local brand, already in motion</h2>
-          <p class="section-subtitle">The brand looks polished because the work behind it is real: local markets, hands-on roasting, and a founder building it batch by batch.</p>
+          <h2 class="section-title" id="proof-title" data-i18n="proof.title">A real local brand, already in motion</h2>
+          <p class="section-subtitle" data-i18n="proof.subtitle">The brand looks polished because the work behind it is real: local markets, hands-on roasting, and a founder building it batch by batch.</p>
         </div>
 
         <div class="proof-carousel card card-plate" data-carousel aria-label="Millionaire's Roast photo carousel">
@@ -291,17 +314,17 @@
               <div class="carousel-track">
                 <figure class="carousel-slide">
                   <img class="proof-image" src="market2.webp" alt="Jesus Gomez standing behind the Millionaire's Roast booth at the Old Capitol Farmers Market in downtown Springfield, Illinois, with coffee bags, cups, and a chalkboard price sign on display" width="4096" height="3072" loading="lazy" decoding="async" />
-                  <figcaption class="proof-caption">Jesus Gomez, Max's older brother, helping run the Millionaire's Roast booth at the Old Capitol Farmers Market in downtown Springfield with coffee bags, sample cups, and the chalkboard menu out front.</figcaption>
+                  <figcaption class="proof-caption" data-i18n="proof.caption1">Jesus Gomez, Max's older brother, helping run the Millionaire's Roast booth at the Old Capitol Farmers Market in downtown Springfield with coffee bags, sample cups, and the chalkboard menu out front.</figcaption>
                 </figure>
 
                 <figure class="carousel-slide">
                   <img class="proof-image" src="max.webp" alt="Maximiliano Gomez, founder of Millionaire's Roast, visiting Western Illinois University as part of the Cass County CEO program" width="3060" height="4080" loading="lazy" decoding="async" />
-                  <figcaption class="proof-caption">Maximiliano Gomez, founder of Millionaire's Roast, during a Western Illinois University visit through the Cass County CEO program, one of the many places the group tours while building real businesses.</figcaption>
+                  <figcaption class="proof-caption" data-i18n="proof.caption2">Maximiliano Gomez, founder of Millionaire's Roast, during a Western Illinois University visit through the Cass County CEO program, one of the many places the group tours while building real businesses.</figcaption>
                 </figure>
 
                 <figure class="carousel-slide">
                   <img class="proof-image" src="market.webp" alt="Maximiliano Gomez standing behind an earlier Millionaire's Roast booth setup at the Old Capitol Farmers Market in Springfield, Illinois" width="4096" height="3072" loading="lazy" decoding="async" />
-                  <figcaption class="proof-caption">An earlier Old Capitol Farmers Market setup with Max behind a smaller table, showing how the presentation has grown over time while the local, hands-on approach has stayed the same.</figcaption>
+                  <figcaption class="proof-caption" data-i18n="proof.caption3">An earlier Old Capitol Farmers Market setup with Max behind a smaller table, showing how the presentation has grown over time while the local, hands-on approach has stayed the same.</figcaption>
                 </figure>
               </div>
             </div>
@@ -327,37 +350,37 @@
       <div class="container">
         <div class="section-head section-head-split">
           <div>
-            <h2 class="section-title" id="about-title">About Millionaire's Roast</h2>
-            <p class="section-subtitle">A local coffee brand built through the Cass County CEO program and grown through markets, direct orders, and hands-on roasting.</p>
+            <h2 class="section-title" id="about-title" data-i18n="about.title">About Millionaire's Roast</h2>
+            <p class="section-subtitle" data-i18n="about.subtitle">A local coffee brand built through the Cass County CEO program and grown through markets, direct orders, and hands-on roasting.</p>
           </div>
         </div>
 
         <div class="about-layout">
           <article class="card card-plate about-story">
             <div class="about-story-copy">
-              <h3 class="card-title">Meet Maximiliano</h3>
-              <p class="card-text">Millionaire's Roast started through the Cass County CEO program, where Maximiliano Gomez turned a business idea into a real small-batch coffee brand rooted in his community.</p>
-              <p class="card-text">Each batch begins with carefully sourced green coffee, then gets roasted, ground, packed, and prepared by hand. The goal is not to make coffee feel exclusive. It is to offer something genuinely high quality at a price normal people can come back to.</p>
-              <p class="card-text">Roasted in Beardstown and regularly sold around Springfield and Central Illinois, the brand is growing through direct sales, local events, pickup, delivery, and simple online shipping for Illinois customers.</p>
-              <p class="about-ceo-line">Proudly launched through the Cass County CEO program.</p>
-              <a class="about-ceo-link" href="https://www.casscountyceo.com/about-us" target="_blank" rel="noopener noreferrer">Learn more about Cass County CEO</a>
+              <h3 class="card-title" data-i18n="about.story.title">Meet Maximiliano</h3>
+              <p class="card-text" data-i18n="about.story.p1">Millionaire's Roast started through the Cass County CEO program, where Maximiliano Gomez turned a business idea into a real small-batch coffee brand rooted in his community.</p>
+              <p class="card-text" data-i18n="about.story.p2">Each batch begins with carefully sourced green coffee, then gets roasted, ground, packed, and prepared by hand. The goal is not to make coffee feel exclusive. It is to offer something genuinely high quality at a price normal people can come back to.</p>
+              <p class="card-text" data-i18n="about.story.p3">Roasted in Beardstown and regularly sold around Springfield and Central Illinois, the brand is growing through direct sales, local events, pickup, delivery, and simple online shipping for Illinois customers.</p>
+              <p class="about-ceo-line" data-i18n="about.story.line">Proudly launched through the Cass County CEO program.</p>
+              <a class="about-ceo-link" href="https://www.casscountyceo.com/about-us" target="_blank" rel="noopener noreferrer" data-i18n="about.story.link">Learn more about Cass County CEO</a>
             </div>
           </article>
 
           <div class="about-side-stack">
             <aside class="card card-plate">
-              <h3 class="card-title">What sets it apart</h3>
+              <h3 class="card-title" data-i18n="about.side.title">What sets it apart</h3>
               <ul class="checklist">
-                <li>Small-batch roasting with rotating origins</li>
-                <li>Clear roast information that helps people buy confidently</li>
-                <li>Flexible ordering for shipping, pickup, delivery, and K-Cups</li>
-                <li>Built for Central Illinois customers, not just coffee insiders</li>
+                <li data-i18n="about.side.li1">Small-batch roasting with rotating origins</li>
+                <li data-i18n="about.side.li2">Clear roast information that helps people buy confidently</li>
+                <li data-i18n="about.side.li3">Flexible ordering for shipping, pickup, delivery, and K-Cups</li>
+                <li data-i18n="about.side.li4">Built for Central Illinois customers, not just coffee insiders</li>
               </ul>
             </aside>
 
             <aside class="card card-plate">
-              <h3 class="card-title">Where to find us</h3>
-              <p class="card-text">Watch social media for weekly market appearances, pickup coordination, and current availability updates.</p>
+              <h3 class="card-title" data-i18n="about.find.title">Where to find us</h3>
+              <p class="card-text" data-i18n="about.find.body">Watch social media for weekly market appearances, pickup coordination, and current availability updates.</p>
               <div class="follow-links">
                 <a class="pill" href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer">Facebook</a>
                 <a class="pill" href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer">Instagram</a>
@@ -371,33 +394,41 @@
     <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="container">
         <div class="section-head center narrow-head">
-          <h2 class="section-title" id="faq-title">Quick answers</h2>
-          <p class="section-subtitle">Short and useful, so ordering stays easy.</p>
+          <h2 class="section-title" id="faq-title" data-i18n="faq.title">Quick answers</h2>
+          <p class="section-subtitle" data-i18n="faq.subtitle">Short and useful, so ordering stays easy.</p>
         </div>
 
         <div class="faq card card-plate" data-accordion>
           <button class="faq-item" id="faq-trigger-1" type="button" aria-expanded="true" aria-controls="faq-panel-1" data-open-default="true">
-            <span class="faq-q">How do I order?</span>
+            <span class="faq-q" data-i18n="faq.q1">How do I order?</span>
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-a" id="faq-panel-1" data-panel role="region" aria-labelledby="faq-trigger-1">
-            <p>Use secure checkout for shipped Illinois orders. Text for pickup or local delivery. Text or email for K-Cups.</p>
+            <p data-i18n="faq.a1">Use the local ordering profile for pickup or delivery, and use the shipping payment links for coffee bags or K-Cups.</p>
           </div>
 
           <button class="faq-item" id="faq-trigger-2" type="button" aria-expanded="false" aria-controls="faq-panel-2">
-            <span class="faq-q">Where are you based?</span>
+            <span class="faq-q" data-i18n="faq.q2">Where are you based?</span>
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-a" id="faq-panel-2" data-panel role="region" aria-labelledby="faq-trigger-2">
-            <p>Millionaire's Roast is roasted in Beardstown and regularly serves Springfield and the wider Central Illinois area.</p>
+            <p data-i18n="faq.a2">Millionaire's Roast is roasted in Beardstown and regularly serves Springfield and the wider Central Illinois area.</p>
           </div>
 
           <button class="faq-item" id="faq-trigger-3" type="button" aria-expanded="false" aria-controls="faq-panel-3">
-            <span class="faq-q">What is the current roast like?</span>
+            <span class="faq-q" data-i18n="faq.q3">What is the current roast like?</span>
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-a" id="faq-panel-3" data-panel role="region" aria-labelledby="faq-trigger-3">
-            <p>Costa Rica Tarrazu "San Diego Jaguar" is a medium roast honey process coffee with chocolate, honey, nectarine, guava, berry, and citrus notes. It is balanced, sweet, and built for everyday drinking.</p>
+            <p data-i18n="faq.a3">Costa Rica Tarrazu "San Diego Jaguar" is a medium roast honey process coffee with chocolate, honey, nectarine, guava, berry, and citrus notes. It is balanced, sweet, and built for everyday drinking.</p>
+          </div>
+
+          <button class="faq-item" id="faq-trigger-4" type="button" aria-expanded="false" aria-controls="faq-panel-4">
+            <span class="faq-q" data-i18n="faq.q4">How long does a current rotation last?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-panel-4" data-panel role="region" aria-labelledby="faq-trigger-4">
+            <p data-i18n="faq.a4">We source green coffee in bulk, but harvest timing differs by region and crop cycle. Once a coffee sells through, there is a high chance that specific lot is gone for now, not forever, and the menu keeps rotating based on demand and availability.</p>
           </div>
         </div>
       </div>
@@ -406,44 +437,44 @@
     <section class="section" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <div class="section-head center narrow-head">
-          <h2 class="section-title" id="contact-title">Contact & follow</h2>
-          <p class="section-subtitle">Text is the fastest way to start a local order. Email works best for follow-up and custom questions.</p>
+          <h2 class="section-title" id="contact-title" data-i18n="contact.title">Contact & follow</h2>
+          <p class="section-subtitle" data-i18n="contact.subtitle">Text is the fastest way to ask a quick question. Email works best for follow-up and custom questions.</p>
         </div>
 
         <div class="contact-grid">
           <a class="card card-action card-action-primary" id="textUsCard" href="#">
             <div class="card-icon" aria-hidden="true">TXT</div>
             <div class="card-meta">
-              <div class="card-kicker">Text Us</div>
+              <div class="card-kicker" data-i18n="contact.text.kicker">Text Us</div>
               <div class="card-main card-main-strong">(217) 416-7072</div>
-              <div class="card-sub">Fastest way to start a local order</div>
+              <div class="card-sub" data-i18n="contact.text.sub">Fastest way to ask a quick question</div>
             </div>
           </a>
 
           <a class="card card-action" href="mailto:millionairesroast@gmail.com?subject=Coffee%20Order%20%7C%20Millionaire%27s%20Roast">
             <div class="card-icon" aria-hidden="true">EM</div>
             <div class="card-meta">
-              <div class="card-kicker">Email Us</div>
+              <div class="card-kicker" data-i18n="contact.email.kicker">Email Us</div>
               <div class="card-main">millionairesroast@gmail.com</div>
-              <div class="card-sub">Best for follow-up and custom questions</div>
+              <div class="card-sub" data-i18n="contact.email.sub">Best for follow-up and custom questions</div>
             </div>
           </a>
 
           <a class="card card-action" href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer">
             <div class="card-icon" aria-hidden="true">IG</div>
             <div class="card-meta">
-              <div class="card-kicker">Instagram</div>
+              <div class="card-kicker" data-i18n="contact.ig.kicker">Instagram</div>
               <div class="card-main">@millionairesroast</div>
-              <div class="card-sub">Market updates and current availability</div>
+              <div class="card-sub" data-i18n="contact.ig.sub">Market updates and current availability</div>
             </div>
           </a>
 
           <a class="card card-action" href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer">
             <div class="card-icon" aria-hidden="true">FB</div>
             <div class="card-meta">
-              <div class="card-kicker">Facebook</div>
-              <div class="card-main">Millionaire's Roast</div>
-              <div class="card-sub">Announcements, events, and local updates</div>
+              <div class="card-kicker" data-i18n="contact.fb.kicker">Facebook</div>
+              <div class="card-main" data-i18n="contact.fb.main">Millionaire's Roast</div>
+              <div class="card-sub" data-i18n="contact.fb.sub">Announcements, events, and local updates</div>
             </div>
           </a>
         </div>
@@ -454,7 +485,7 @@
             <div class="footer-line">
               <span>&copy; <span id="year"></span> Millionaire's Roast</span>
             </div>
-            <div class="footer-line">Roasted in Beardstown, serving Springfield and Central Illinois.</div>
+            <div class="footer-line" data-i18n="footer.line">Roasted in Beardstown, serving Springfield and Central Illinois.</div>
             <div class="footer-line">
               <a href="tel:+12174167072">(217) 416-7072</a>
             </div>
@@ -472,22 +503,5 @@
     </section>
   </main>
 
-  <div class="buy-guard" id="buyGuard" hidden aria-hidden="true">
-    <div class="buy-guard__backdrop" data-buy-guard-close></div>
-    <div class="buy-guard__dialog card card-plate" role="dialog" aria-modal="true" aria-labelledby="buyGuardTitle" aria-describedby="buyGuardDesc">
-      <button class="buy-guard__close" type="button" data-buy-guard-close aria-label="Close Illinois shipping notice">x</button>
-      <p class="buy-guard__eyebrow">Illinois shipping only</p>
-      <h2 class="buy-guard__title" id="buyGuardTitle">Before you check out</h2>
-      <p class="buy-guard__text" id="buyGuardDesc">This checkout is for shipped Illinois orders. If you want pickup, local delivery, or K-Cups, text or email us instead.</p>
-      <label class="buy-guard__check" for="buyGuardCheckbox">
-        <input type="checkbox" id="buyGuardCheckbox" />
-        <span>My shipping address is in Illinois.</span>
-      </label>
-      <div class="buy-guard__actions">
-        <button type="button" class="btn btn-outline" data-buy-guard-close>Cancel</button>
-        <button type="button" class="btn btn-gold" id="buyGuardContinue" disabled>Go to secure checkout</button>
-      </div>
-    </div>
-  </div>
 </body>
 </html>

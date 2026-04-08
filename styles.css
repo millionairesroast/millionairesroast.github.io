@@ -23,6 +23,12 @@
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+[data-i18n]{
+  transition:opacity 180ms var(--ease);
+}
+html.is-lang-fading [data-i18n]{
+  opacity:0;
+}
 body{
   margin:0;
   min-height:100vh;
@@ -219,6 +225,48 @@ a:focus-visible, button:focus-visible{
 }
 .mobile-nav .nav-link, .mobile-nav .nav-cta{display:block;margin-top:10px}
 
+.lang-section{padding:18px 0 0}
+.lang-bar{
+  width:fit-content;
+  margin:0 auto;
+  padding:10px 12px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  border-radius:999px;
+  border:1px solid rgba(200,164,77,.22);
+  background:linear-gradient(180deg, rgba(20,15,8,.28), rgba(6,6,8,.54));
+  box-shadow:0 10px 30px rgba(0,0,0,.34);
+}
+.lang-caption{
+  margin:0;
+  color:var(--muted2);
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.lang-switch{
+  display:inline-flex;
+  border:1px solid rgba(200,164,77,.22);
+  border-radius:999px;
+  overflow:hidden;
+  background:rgba(0,0,0,.2);
+}
+.lang-btn{
+  border:0;
+  background:transparent;
+  cursor:pointer;
+  color:rgba(244,241,234,.86);
+  padding:9px 14px;
+  font-weight:800;
+  letter-spacing:.08em;
+  font-size:12px;
+}
+.lang-btn[aria-pressed="true"]{
+  background:rgba(200,164,77,.18);
+  color:rgba(244,241,234,.96);
+}
+
 .hero{padding:54px 0 20px}
 .hero-grid,
 .hero-single{
@@ -407,13 +455,34 @@ a:focus-visible, button:focus-visible{
 .order-grid-two{
   grid-template-columns:repeat(2,minmax(0,1fr));
 }
+.order-grid-single{
+  grid-template-columns:minmax(0,780px);
+  justify-content:center;
+}
 .order-card{
   display:flex;
   flex-direction:column;
   gap:14px;
 }
+.order-card-center{
+  text-align:center;
+  align-items:center;
+}
+.order-card-center .card-text,
+.order-card-center .order-small-note{
+  max-width:44rem;
+}
 .order-card .btn{
   margin-top:auto;
+}
+.order-actions-stack{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:12px;
+  margin-top:auto;
+}
+.order-actions-stack .btn{
+  margin-top:0;
 }
 .order-small-note{
   margin:0;
@@ -956,6 +1025,14 @@ a:focus-visible, button:focus-visible{
   .brand-name{font-size:16px}
   .brand-tag{display:none}
 
+  .lang-bar{
+    flex-direction:column;
+    width:min(100%, 340px);
+    border-radius:18px;
+    padding:12px 14px;
+    gap:10px;
+  }
+
   .hero{padding:42px 0 14px}
   .hero-plate{padding:34px 18px 24px}
   .hero-title{font-size:clamp(36px,11vw,56px)}
@@ -963,6 +1040,7 @@ a:focus-visible, button:focus-visible{
   .hero-proof{grid-template-columns:1fr}
   .hero-actions{display:grid;grid-template-columns:1fr}
   .btn{width:100%;min-width:0}
+  .order-actions-stack{grid-template-columns:1fr}
 
   .carousel-shell{
     grid-template-columns:1fr;

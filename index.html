@@ -20,7 +20,7 @@
   <link rel="canonical" href="https://millionairesroast.com/" />
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="apple-touch-icon" href="logo.png" />
-  <link rel="stylesheet" href="styles.css?v=16" />
+  <link rel="stylesheet" href="styles.css?v=17" />
 
   <script type="application/ld+json">
     {
@@ -61,7 +61,7 @@
     }
   </script>
 
-  <script type="application/ld+json">
+  <script id="faq-schema" type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -103,7 +103,7 @@
     }
   </script>
 
-  <script defer src="index.js?v=16"></script>
+  <script defer src="index.js?v=17"></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -123,11 +123,11 @@
 
       <div class="header-right">
         <nav class="nav" aria-label="Primary">
-          <a class="nav-link" href="#order" data-i18n="nav.order">Order</a>
           <a class="nav-link" href="#current-roast" data-i18n="nav.roast">Current Roast</a>
           <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
           <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
-          <a class="nav-cta" href="#contact" data-i18n="nav.contact">Contact</a>
+          <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
+          <a class="nav-cta" href="#order" data-i18n="nav.orderCta">Order Now</a>
         </nav>
 
         <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
@@ -137,27 +137,15 @@
     </div>
 
     <div class="mobile-nav" id="mobile-nav" aria-hidden="true" inert>
-      <a class="nav-link" href="#order" data-i18n="nav.order">Order</a>
+      <a class="nav-cta" href="#order" data-i18n="nav.orderCta">Order Now</a>
       <a class="nav-link" href="#current-roast" data-i18n="nav.roast">Current Roast</a>
       <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
       <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
-      <a class="nav-cta" href="#contact" data-i18n="nav.contact">Contact</a>
+      <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
     </div>
   </header>
 
   <main id="main">
-    <section class="lang-section" aria-label="Language selection">
-      <div class="container">
-        <div class="lang-bar">
-          <p class="lang-caption" data-i18n="lang.label">Language</p>
-          <div class="lang-switch" role="group" aria-label="Language selection">
-            <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="true">English</button>
-            <button type="button" class="lang-btn" data-lang-btn="es" aria-pressed="false">Español</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-single">
         <div class="hero-plate">
@@ -172,6 +160,7 @@
             <span class="hero-chip" data-i18n="hero.chip2">Specialty coffee</span>
             <span class="hero-chip" data-i18n="hero.chip3">Rotating origins</span>
             <span class="hero-chip" data-i18n="hero.chip4">Pickup, delivery, or Illinois shipping</span>
+            <span class="hero-chip" data-i18n="hero.chip5">14 oz bags from $18</span>
           </div>
 
           <div class="hero-actions">
@@ -193,6 +182,18 @@
       </div>
     </section>
 
+    <section class="lang-section" aria-label="Language selection">
+      <div class="container">
+        <div class="lang-bar">
+          <p class="lang-caption" data-i18n="lang.label">Language</p>
+          <div class="lang-switch" role="group" aria-label="Language selection">
+            <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="true">English</button>
+            <button type="button" class="lang-btn" data-lang-btn="es" aria-pressed="false">Español</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="order" aria-labelledby="order-title">
         <div class="container">
           <div class="section-head center narrow-head">
@@ -206,18 +207,18 @@
               <h3 class="card-title" data-i18n="order.ship.title">Shipping for Illinois orders</h3>
               <p class="card-text" data-i18n="order.ship.body">Choose the shipping link that matches what you want sent: coffee bags or K-Cups.</p>
               <div class="order-actions-stack">
-                <a class="btn btn-gold" id="shipBagBtn" href="#" target="_blank" rel="noopener noreferrer" data-i18n="order.ship.cta1">Ship Coffee Bags</a>
-                <a class="btn btn-outline" id="shipKCupBtn" href="#" target="_blank" rel="noopener noreferrer" data-i18n="order.ship.cta2">Ship K-Cups</a>
+                <a class="btn btn-gold" id="shipBagBtn" href="https://square.link/u/JRlFCpYu" target="_blank" rel="noopener noreferrer" data-i18n="order.ship.cta1">Ship Coffee Bags</a>
+                <a class="btn btn-outline" id="shipKCupBtn" href="https://square.link/u/uk8WaB8d" target="_blank" rel="noopener noreferrer" data-i18n="order.ship.cta2">Ship K-Cups</a>
               </div>
-              <p class="order-small-note" data-i18n="order.ship.note">Best for shipped Illinois orders that need a direct payment link.</p>
+              <p class="order-small-note" data-i18n="order.ship.note">Opens secure checkout for shipped Illinois orders.</p>
             </article>
 
             <article class="card card-plate order-card">
               <p class="order-kicker" data-i18n="order.local.kicker">Local Pickup / Delivery</p>
               <h3 class="card-title" data-i18n="order.local.title">Pickup and local delivery</h3>
               <p class="card-text" data-i18n="order.local.body">Use the ordering profile for Beardstown, Springfield, and nearby pickup or delivery orders.</p>
-              <a class="btn btn-gold" id="pickupOrderBtn" href="#" target="_blank" rel="noopener noreferrer" data-i18n="order.local.cta">Order Pickup or Delivery</a>
-              <p class="order-small-note" data-i18n="order.local.note">One local ordering profile for pickup and delivery coordination.</p>
+              <a class="btn btn-gold" id="pickupOrderBtn" href="https://cash.app/order/$millionairesroast" target="_blank" rel="noopener noreferrer" data-i18n="order.local.cta">Order Pickup or Delivery</a>
+              <p class="order-small-note" data-i18n="order.local.note">Opens local ordering profile for pickup or delivery.</p>
             </article>
           </div>
 
@@ -314,17 +315,17 @@
               <div class="carousel-track">
                 <figure class="carousel-slide">
                   <img class="proof-image" src="market2.webp" alt="Jesus Gomez standing behind the Millionaire's Roast booth at the Old Capitol Farmers Market in downtown Springfield, Illinois, with coffee bags, cups, and a chalkboard price sign on display" width="4096" height="3072" loading="lazy" decoding="async" />
-                  <figcaption class="proof-caption" data-i18n="proof.caption1">Jesus Gomez, Max's older brother, helping run the Millionaire's Roast booth at the Old Capitol Farmers Market in downtown Springfield with coffee bags, sample cups, and the chalkboard menu out front.</figcaption>
+                  <figcaption class="proof-caption" data-i18n="proof.caption1">Jesús Gómez helping at the Millionaire's Roast booth during the Old Capitol Farmers Market in downtown Springfield.</figcaption>
                 </figure>
 
                 <figure class="carousel-slide">
                   <img class="proof-image" src="max.webp" alt="Maximiliano Gomez, founder of Millionaire's Roast, visiting Western Illinois University as part of the Cass County CEO program" width="3060" height="4080" loading="lazy" decoding="async" />
-                  <figcaption class="proof-caption" data-i18n="proof.caption2">Maximiliano Gomez, founder of Millionaire's Roast, during a Western Illinois University visit through the Cass County CEO program, one of the many places the group tours while building real businesses.</figcaption>
+                  <figcaption class="proof-caption" data-i18n="proof.caption2">Maximiliano Gómez, founder of Millionaire's Roast, during a Cass County CEO visit to Western Illinois University.</figcaption>
                 </figure>
 
                 <figure class="carousel-slide">
                   <img class="proof-image" src="market.webp" alt="Maximiliano Gomez standing behind an earlier Millionaire's Roast booth setup at the Old Capitol Farmers Market in Springfield, Illinois" width="4096" height="3072" loading="lazy" decoding="async" />
-                  <figcaption class="proof-caption" data-i18n="proof.caption3">An earlier Old Capitol Farmers Market setup with Max behind a smaller table, showing how the presentation has grown over time while the local, hands-on approach has stayed the same.</figcaption>
+                  <figcaption class="proof-caption" data-i18n="proof.caption3">An earlier Old Capitol Farmers Market setup showing how the booth has grown over time.</figcaption>
                 </figure>
               </div>
             </div>
@@ -442,7 +443,7 @@
         </div>
 
         <div class="contact-grid">
-          <a class="card card-action card-action-primary" id="textUsCard" href="#">
+          <a class="card card-action card-action-primary" id="textUsCard" href="sms:12174167072?body=Hi!%20I%20have%20a%20question%20about%20Millionaire%27s%20Roast.">
             <div class="card-icon" aria-hidden="true">TXT</div>
             <div class="card-meta">
               <div class="card-kicker" data-i18n="contact.text.kicker">Text Us</div>

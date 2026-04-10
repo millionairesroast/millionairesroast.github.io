@@ -71,7 +71,7 @@ a:focus-visible, button:focus-visible{
   outline-offset:3px;
 }
 
-#current-roast, #order, #about, #faq, #contact{scroll-margin-top:96px}
+#hero, #current-roast, #order, #about, #faq, #contact{scroll-margin-top:96px}
 
 .container{
   position:relative;
@@ -236,6 +236,7 @@ a:focus-visible, button:focus-visible{
   padding:8px 10px;
   display:flex;
   align-items:center;
+  justify-content:center;
   gap:10px;
   border-radius:16px;
   border:1px solid rgba(200,164,77,.22);
@@ -947,10 +948,15 @@ a:focus-visible, button:focus-visible{
   .brand-tag{display:none}
 
   .lang-bar{
-    width:min(100%, 340px);
+    width:fit-content;
+    max-width:100%;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
     border-radius:16px;
-    padding:8px 10px;
-    gap:8px;
+    padding:10px 14px;
+    gap:10px;
   }
   .lang-btn{padding:8px 12px;font-size:11px}
 

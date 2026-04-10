@@ -20,7 +20,7 @@
   <link rel="canonical" href="https://millionairesroast.com/" />
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="apple-touch-icon" href="logo.png" />
-  <link rel="stylesheet" href="styles.css?v=17" />
+  <link rel="stylesheet" href="styles.css?v=18" />
 
   <script type="application/ld+json">
     {
@@ -72,7 +72,7 @@
           "name": "How do I order?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Use the Millionaire's Roast pickup and delivery profile for local orders, or use the shipping payment links for coffee bags and K-Cups."
+            "text": "Use the Millionaire's Roast online shop to choose shipping, pickup, or delivery in one place."
           }
         },
         {
@@ -103,14 +103,14 @@
     }
   </script>
 
-  <script defer src="index.js?v=17"></script>
+  <script defer src="index.js?v=18"></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
   <header class="site-header" id="top">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Millionaire's Roast home">
+      <a class="brand" href="#hero" aria-label="Millionaire's Roast home">
         <span class="brand-mark-wrap" aria-hidden="true">
           <img class="brand-mark" src="logo.png" alt="" width="52" height="52" decoding="async" loading="eager" />
           <span class="brand-mark-fallback">MR</span>
@@ -146,7 +146,7 @@
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero" id="hero" aria-labelledby="hero-title">
       <div class="container hero-single">
         <div class="hero-plate">
           <p class="kicker" data-i18n="hero.kicker">Roasted in Beardstown, serving Springfield and Central Illinois</p>
@@ -197,33 +197,22 @@
     <section class="section" id="order" aria-labelledby="order-title">
         <div class="container">
           <div class="section-head center narrow-head">
-            <h2 class="section-title" id="order-title" data-i18n="order.title">Two simple ways to order</h2>
-            <p class="section-subtitle" data-i18n="order.subtitle">Use the shipping links for bags or K-Cups, or use the ordering profile for pickup and local delivery.</p>
+            <h2 class="section-title" id="order-title" data-i18n="order.title">Order in one place</h2>
+            <p class="section-subtitle" data-i18n="order.subtitle">Shipping, pickup, and delivery are all handled through one storefront now.</p>
           </div>
 
-          <div class="order-grid order-grid-two">
-            <article class="card card-plate order-card">
-              <p class="order-kicker" data-i18n="order.ship.kicker">Ship Coffee</p>
-              <h3 class="card-title" data-i18n="order.ship.title">Shipping for Illinois orders</h3>
-              <p class="card-text" data-i18n="order.ship.body">Choose the shipping link that matches what you want sent: coffee bags or K-Cups.</p>
-              <div class="order-actions-stack">
-                <a class="btn btn-gold" id="shipBagBtn" href="https://square.link/u/JRlFCpYu" target="_blank" rel="noopener noreferrer" data-i18n="order.ship.cta1">Ship Coffee Bags</a>
-                <a class="btn btn-outline" id="shipKCupBtn" href="https://square.link/u/uk8WaB8d" target="_blank" rel="noopener noreferrer" data-i18n="order.ship.cta2">Ship K-Cups</a>
-              </div>
-              <p class="order-small-note" data-i18n="order.ship.note">Opens secure checkout for shipped Illinois orders.</p>
-            </article>
-
-            <article class="card card-plate order-card">
-              <p class="order-kicker" data-i18n="order.local.kicker">Local Pickup / Delivery</p>
-              <h3 class="card-title" data-i18n="order.local.title">Pickup and local delivery</h3>
-              <p class="card-text" data-i18n="order.local.body">Use the ordering profile for Beardstown, Springfield, and nearby pickup or delivery orders.</p>
-              <a class="btn btn-gold" id="pickupOrderBtn" href="https://cash.app/order/$millionairesroast" target="_blank" rel="noopener noreferrer" data-i18n="order.local.cta">Order Pickup or Delivery</a>
-              <p class="order-small-note" data-i18n="order.local.note">Opens local ordering profile for pickup or delivery.</p>
+          <div class="order-grid order-grid-single">
+            <article class="card card-plate order-card order-card-center">
+              <p class="order-kicker" data-i18n="order.card.kicker">One order link</p>
+              <h3 class="card-title" data-i18n="order.card.title">Choose shipping, pickup, or delivery</h3>
+              <p class="card-text" data-i18n="order.card.body">Open the shop to place your order and choose the fulfillment option that fits best.</p>
+              <a class="btn btn-gold" href="https://millionaires-roast.square.site/" target="_blank" rel="noopener noreferrer" data-i18n="order.card.cta">Open the Shop</a>
+              <p class="order-small-note" data-i18n="order.card.note">Secure checkout for shipping, pickup, and delivery.</p>
             </article>
           </div>
 
           <div class="order-note card card-plate">
-            <p><strong data-i18n="order.note.lead">Need help deciding?</strong> <span data-i18n="order.note.body">Use the shipping links for coffee bags or K-Cups, and use the ordering profile for pickup or delivery. If you'd rather handle it personally or just want help placing the order, text us instead.</span></p>
+            <p><strong data-i18n="order.note.lead">Need help deciding?</strong> <span data-i18n="order.note.body">One link now handles shipping, pickup, and delivery. If you'd rather handle it personally or just want help placing the order, text us instead.</span></p>
           </div>
         </div>
       </section>
@@ -405,7 +394,7 @@
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-a" id="faq-panel-1" data-panel role="region" aria-labelledby="faq-trigger-1">
-            <p data-i18n="faq.a1">Use the local ordering profile for pickup or delivery, and use the shipping payment links for coffee bags or K-Cups.</p>
+            <p data-i18n="faq.a1">Use our online shop to choose shipping, pickup, or delivery in one place.</p>
           </div>
 
           <button class="faq-item" id="faq-trigger-2" type="button" aria-expanded="false" aria-controls="faq-panel-2">

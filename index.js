@@ -19,7 +19,7 @@
     "hero.chip3": "Orígenes rotativos",
     "hero.chip4": "Recogida, entrega o envío en Illinois",
     "hero.chip5": "Bolsas de 14 oz desde $18",
-    "hero.cta.primary": "Elegir forma de ordenar",
+    "hero.cta.primary": "Comprar ahora",
     "hero.cta.secondary": "Ver tostado actual",
     "hero.proof1.title": "Presencia local",
     "hero.proof1.body": "Nos encuentras en mercados locales y eventos comunitarios por todo el centro de Illinois.",
@@ -342,14 +342,20 @@
 
     if (!viewport || !track || !originalSlides.length) return;
 
+    const slideCount = originalSlides.length;
     const firstClone = originalSlides[0].cloneNode(true);
     firstClone.setAttribute("aria-hidden", "true");
     firstClone.dataset.clone = "true";
+
+    const lastClone = originalSlides[slideCount - 1].cloneNode(true);
+    lastClone.setAttribute("aria-hidden", "true");
+    lastClone.dataset.clone = "true";
+
+    track.prepend(lastClone);
     track.appendChild(firstClone);
 
-    const slideCount = originalSlides.length;
     let activeIndex = 0;
-    let trackIndex = 0;
+    let trackIndex = 1;
     let autoplayId = 0;
     let touchStartX = 0;
     let touchStartY = 0;
@@ -391,13 +397,20 @@
     const goTo = (nextIndex, direction = "auto") => {
       if (direction === "next" && activeIndex === slideCount - 1 && nextIndex >= slideCount) {
         activeIndex = 0;
-        trackIndex = slideCount;
+        trackIndex = slideCount + 1;
+        renderCarousel(true);
+        return;
+      }
+
+      if (direction === "prev" && activeIndex === 0 && nextIndex < 0) {
+        activeIndex = slideCount - 1;
+        trackIndex = 0;
         renderCarousel(true);
         return;
       }
 
       activeIndex = (nextIndex + slideCount) % slideCount;
-      trackIndex = activeIndex;
+      trackIndex = activeIndex + 1;
       renderCarousel(true);
     };
 
@@ -412,14 +425,23 @@
       dot.addEventListener("click", () => {
         const nextIndex = Number(dot.getAttribute("data-carousel-dot"));
         if (!Number.isNaN(nextIndex)) {
-          goTo(nextIndex, activeIndex === slideCount - 1 && nextIndex === 0 ? "next" : "auto");
+          let direction = "auto";
+          if (activeIndex === slideCount - 1 && nextIndex === 0) direction = "next";
+          if (activeIndex === 0 && nextIndex === slideCount - 1) direction = "prev";
+          goTo(nextIndex, direction);
         }
       });
     });
 
     track.addEventListener("transitionend", () => {
-      if (trackIndex === slideCount) {
-        trackIndex = 0;
+      if (trackIndex === slideCount + 1) {
+        trackIndex = 1;
+        setTrackPosition(false);
+        return;
+      }
+
+      if (trackIndex === 0) {
+        trackIndex = slideCount;
         setTrackPosition(false);
       }
     });

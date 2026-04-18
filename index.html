@@ -20,7 +20,7 @@
   <link rel="canonical" href="https://millionairesroast.com/" />
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="apple-touch-icon" href="logo.png" />
-  <link rel="stylesheet" href="styles.css?v=18" />
+  <link rel="stylesheet" href="styles.css?v=19" />
 
   <script type="application/ld+json">
     {
@@ -85,10 +85,10 @@
         },
         {
           "@type": "Question",
-          "name": "What is the current roast?",
+          "name": "What coffees are available right now?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The current roast is Costa Rica Tarrazu San Diego Jaguar, a honey process coffee with chocolate sweetness, nectarine, guava, berry, and citrus notes."
+            "text": "We currently offer three single origin coffees: Costa Rican Tarrazú Jaguar Honey as our flagship medium roast that is here to stay, plus Peruvian Chonta G1 Washed and Brazilian Cerrado Natural as rotating origins in the medium dark and dark slots. Each origin is available as whole bean, ground, and K-Cups."
           }
         },
         {
@@ -103,7 +103,7 @@
     }
   </script>
 
-  <script defer src="index.js?v=18"></script>
+  <script defer src="index.js?v=19"></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -123,7 +123,7 @@
 
       <div class="header-right">
         <nav class="nav" aria-label="Primary">
-          <a class="nav-link" href="#current-roast" data-i18n="nav.roast">Current Roast</a>
+          <a class="nav-link" href="#current-roast" data-i18n="nav.roast">Current Coffees</a>
           <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
           <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
           <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
@@ -138,7 +138,7 @@
 
     <div class="mobile-nav" id="mobile-nav" aria-hidden="true" inert>
       <a class="nav-cta" href="#order" data-i18n="nav.orderCta">Order Now</a>
-      <a class="nav-link" href="#current-roast" data-i18n="nav.roast">Current Roast</a>
+      <a class="nav-link" href="#current-roast" data-i18n="nav.roast">Current Coffees</a>
       <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
       <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
       <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
@@ -152,20 +152,20 @@
           <p class="kicker" data-i18n="hero.kicker">Roasted in Beardstown, serving Springfield and Central Illinois</p>
           <h1 class="hero-title" id="hero-title" data-i18n="hero.title">Specialty coffee with a premium feel, not a premium price.</h1>
           <p class="hero-sub" data-i18n="hero.sub">
-            Millionaire's Roast is a Central Illinois small-batch roaster focused on approachable specialty coffee, rotating origins, and easy everyday drinking.
+            Millionaire's Roast is a Central Illinois small-batch roaster offering three current single origin coffees across medium, medium dark, and dark roast profiles.
           </p>
 
           <div class="hero-points" aria-label="Key highlights">
             <span class="hero-chip" data-i18n="hero.chip1">Small-batch roasted</span>
-            <span class="hero-chip" data-i18n="hero.chip2">Specialty coffee</span>
-            <span class="hero-chip" data-i18n="hero.chip3">Rotating origins</span>
+            <span class="hero-chip" data-i18n="hero.chip2">Three single origins</span>
+            <span class="hero-chip" data-i18n="hero.chip3">Medium, medium dark, and dark</span>
             <span class="hero-chip" data-i18n="hero.chip4">Pickup, delivery, or Illinois shipping</span>
-            <span class="hero-chip" data-i18n="hero.chip5">14 oz bags from $18</span>
+            <span class="hero-chip" data-i18n="hero.chip5">K-Cups available</span>
           </div>
 
           <div class="hero-actions">
             <a class="btn btn-gold" id="heroOrderBtn" href="https://millionaires-roast.square.site/" target="_blank" rel="noopener noreferrer" data-i18n="hero.cta.primary">Buy Now</a>
-            <a class="btn btn-outline" href="#current-roast" data-i18n="hero.cta.secondary">See Current Roast</a>
+            <a class="btn btn-outline" href="#current-roast" data-i18n="hero.cta.secondary">See Current Coffees</a>
           </div>
 
           <div class="hero-proof">
@@ -175,7 +175,7 @@
             </div>
             <div class="hero-proof-item">
               <strong data-i18n="hero.proof2.title">Clear roast details</strong>
-              <span data-i18n="hero.proof2.body">Origin, tasting notes, best use, and pricing are all easy to scan.</span>
+              <span data-i18n="hero.proof2.body">Origins, tasting notes, best use, and pricing are all easy to scan.</span>
             </div>
           </div>
         </div>
@@ -197,92 +197,171 @@
     <section class="section" id="order" aria-labelledby="order-title">
         <div class="container">
           <div class="section-head center narrow-head">
-            <h2 class="section-title" id="order-title" data-i18n="order.title">Order in one place</h2>
-            <p class="section-subtitle" data-i18n="order.subtitle">Shipping, pickup, and delivery are all handled through one storefront now.</p>
+            <h2 class="section-title" id="order-title" data-i18n="order.title">Order Online</h2>
+            <p class="section-subtitle" data-i18n="order.subtitle">Use the main shop to place one-time orders for our current coffee lineup.</p>
           </div>
 
           <div class="order-grid order-grid-single">
             <article class="card card-plate order-card order-card-center">
-              <p class="order-kicker" data-i18n="order.card.kicker">One order link</p>
-              <h3 class="card-title" data-i18n="order.card.title">Choose shipping, pickup, or delivery</h3>
-              <p class="card-text" data-i18n="order.card.body">Open the shop to place your order and choose the fulfillment option that fits best.</p>
+              <p class="order-kicker" data-i18n="order.card.kicker">Main storefront</p>
+              <h3 class="card-title" data-i18n="order.card.title">Shop the current lineup</h3>
+              <p class="card-text" data-i18n="order.card.body">Open the shop to place an order for our current origins and choose the fulfillment option that fits best.</p>
               <a class="btn btn-gold" href="https://millionaires-roast.square.site/" target="_blank" rel="noopener noreferrer" data-i18n="order.card.cta">Open the Shop</a>
               <p class="order-small-note" data-i18n="order.card.note">Secure checkout for shipping, pickup, and delivery.</p>
             </article>
           </div>
 
           <div class="order-note card card-plate">
-            <p><strong data-i18n="order.note.lead">Need help deciding?</strong> <span data-i18n="order.note.body">One link now handles shipping, pickup, and delivery. If you'd rather handle it personally or just want help placing the order, text us instead.</span></p>
+            <p><strong data-i18n="order.note.lead">Need help deciding?</strong> <span data-i18n="order.note.body">Questions about which origin is right for you? Text us and we will help you choose.</span></p>
           </div>
         </div>
       </section>
 
     <section class="section" id="current-roast" aria-labelledby="current-roast-title">
-      <div class="container">
-        <div class="featured-roast card card-plate">
-          <div class="featured-copy">
-            <p class="featured-kicker" data-i18n="roast.kicker">Current Roast</p>
-            <h2 class="featured-title" id="current-roast-title" data-i18n="roast.title">Costa Rica Tarrazu "San Diego Jaguar"</h2>
-            <p class="featured-subtitle" data-i18n="roast.process">Honey Process</p>
-            <p class="featured-text" data-i18n="roast.body">A rich, balanced daily drinker with chocolate sweetness, a honeyed finish, and fruit notes that keep the cup lively without getting too sharp.</p>
-            <p class="featured-buyer-note" data-i18n="roast.note">Best for drinkers who want a balanced, sweet daily coffee with fruit complexity but no harsh edge.</p>
-          </div>
-
-          <figure class="featured-media">
-            <img class="featured-image" src="coffee.png" alt="Label art for the current Costa Rica Tarrazu San Diego Jaguar roast" width="419" height="419" loading="lazy" decoding="async" />
-          </figure>
-
-          <div class="featured-details">
-            <div class="roast-spec-grid" aria-label="Current roast details">
-              <div class="spec-card">
-                <span class="spec-label" data-i18n="roast.spec1.label">Origin</span>
-                <span class="spec-value" data-i18n="roast.spec1.value">Tarrazu, Costa Rica</span>
-              </div>
-              <div class="spec-card">
-                <span class="spec-label" data-i18n="roast.spec2.label">Roast Level</span>
-                <span class="spec-value" data-i18n="roast.spec2.value">Medium, Medium Dark, Dark</span>
-              </div>
-              <div class="spec-card">
-                <span class="spec-label" data-i18n="roast.spec3.label">Tasting Notes</span>
-                <span class="spec-value" data-i18n="roast.spec3.value">Chocolate, honey, nectarine, guava, berry, citrus</span>
-              </div>
-              <div class="spec-card">
-                <span class="spec-label" data-i18n="roast.spec4.label">Best Use</span>
-                <span class="spec-value" data-i18n="roast.spec4.value">Great for drip, solid iced, easy daily drinker</span>
-              </div>
-              <div class="spec-card">
-                <span class="spec-label" data-i18n="roast.spec5.label">Availability</span>
-                <span class="spec-value" data-i18n="roast.spec5.value">Available now in whole bean or ground</span>
-              </div>
-              <div class="spec-card">
-                <span class="spec-label" data-i18n="roast.spec6.label">Cup Profile</span>
-                <span class="spec-value" data-i18n="roast.spec6.value">Balanced, sweet, and easy to come back to</span>
-              </div>
-            </div>
-
-            <div class="featured-pricing">
-              <div class="price-block">
-                <span class="spec-label" data-i18n="roast.price.bag">14 oz Bag</span>
-                <span class="price-callout">$18</span>
-              </div>
-              <div class="price-block">
-                <span class="spec-label" data-i18n="roast.price.kcups">K-Cups</span>
-                <div class="order-meta">
-                  <span class="tag-chip">8 pack $10</span>
-                  <span class="tag-chip">18 pack $22</span>
-                  <span class="tag-chip">24 pack $29</span>
-                  <span class="tag-chip">32 pack $35</span>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="container current-coffees">
+        <div class="section-head center narrow-head">
+          <h2 class="section-title" id="current-roast-title" data-i18n="coffees.title">Current Coffees</h2>
+          <p class="section-subtitle" data-i18n="coffees.subtitle">We currently offer three single origin coffees across three roast profiles. Costa Rican Tarrazú Jaguar Honey leads the lineup as our flagship medium roast and is here to stay, while Peruvian Chonta G1 Washed and Brazilian Cerrado Natural rotate through the medium dark and dark slots.</p>
         </div>
 
-        <div class="jaguar-story card card-plate">
-          <p class="featured-kicker" data-i18n="jaguar.kicker">Why "Jaguar"?</p>
-          <h3 class="card-title" data-i18n="jaguar.title">A strong cup with a real conservation backstory</h3>
-          <p class="card-text" data-i18n="jaguar.body">This Jaguar Honey coffee comes from Beneficio San Diego in Tarrazu, Costa Rica. The Jaguar coffee line has been publicly linked by Volcafe Costa Rica and Genuine Origin to a conservation partnership with Fundazoo supporting jaguar and wild-cat preservation in Costa Rica.</p>
-          <p class="jaguar-note" data-i18n="jaguar.note">The current lot page highlights the San Diego mill and the coffee's profile; the conservation story comes from the broader Jaguar coffee program tied to this wet mill.</p>
+        <div class="origin-layout">
+          <article class="card card-plate origin-flagship">
+            <div class="origin-flagship-copy">
+              <div class="origin-header">
+                <p class="order-kicker" data-i18n="coffee.cr.kicker">Flagship Origin</p>
+                <span class="origin-badge" data-i18n="coffee.cr.badge">Medium Roast</span>
+              </div>
+              <h3 class="origin-title" data-i18n="coffee.cr.title">Costa Rican Tarrazú Jaguar Honey</h3>
+              <p class="origin-process" data-i18n="coffee.cr.process">Honey Process</p>
+              <p class="card-text" data-i18n="coffee.cr.body">Our flagship current origin and the brightest profile in the lineup, built around milk chocolate, honey, and raspberry notes with a clean, sweeter finish. This coffee anchors the lineup and is here to stay.</p>
+              <p class="origin-note" data-i18n="coffee.cr.note">Best for customers who want an approachable specialty coffee with sweetness, balance, and a little lift.</p>
+            </div>
+
+            <figure class="origin-flagship-media">
+              <img class="origin-flagship-image" src="coffee.png" alt="Label art for Costa Rican Tarrazú Jaguar Honey, the flagship medium roast coffee" width="419" height="419" loading="lazy" decoding="async" />
+            </figure>
+
+            <div class="origin-flagship-details">
+              <div class="origin-spec-grid">
+                <div class="spec-card">
+                  <span class="spec-label" data-i18n="coffee.spec.origin">Origin</span>
+                  <span class="spec-value" data-i18n="coffee.cr.origin">Tarrazú, Costa Rica</span>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label" data-i18n="coffee.spec.notes">Tasting Notes</span>
+                  <span class="spec-value" data-i18n="coffee.cr.notes">Milk chocolate, honey, raspberry</span>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label" data-i18n="coffee.spec.best">Best Use</span>
+                  <span class="spec-value" data-i18n="coffee.cr.best">Great for drip, pour over, and easy daily drinking</span>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label" data-i18n="coffee.spec.availability">Availability</span>
+                  <span class="spec-value" data-i18n="coffee.cr.availability">Available now in whole bean, ground, or K-Cups</span>
+                </div>
+              </div>
+
+              <div class="origin-pricing">
+                <div class="price-block">
+                  <span class="spec-label" data-i18n="coffee.price.bag">14 oz Bag</span>
+                  <span class="price-callout">$18</span>
+                </div>
+                <div class="price-block">
+                  <span class="spec-label" data-i18n="coffee.price.kcups">K-Cups</span>
+                  <div class="origin-kcup-tiers">
+                    <span class="tag-chip" data-i18n="coffee.kcups.tier1">8 pack $10</span>
+                    <span class="tag-chip" data-i18n="coffee.kcups.tier2">18 pack $22</span>
+                    <span class="tag-chip" data-i18n="coffee.kcups.tier3">24 pack $28</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="origin-conservation">
+                <p class="spec-label" data-i18n="coffee.conservation.kicker">Jaguar Conservation</p>
+                <p class="card-text" data-i18n="coffee.cr.conservation">This origin’s Jaguar name ties into a real conservation story connected to the San Diego mill in Costa Rica. It adds a meaningful backstory to the flagship coffee while keeping the focus on the cup itself.</p>
+              </div>
+
+              <a class="btn btn-gold" href="https://millionaires-roast.square.site/" target="_blank" rel="noopener noreferrer" data-i18n="coffee.shop.cta">Shop This Coffee</a>
+            </div>
+          </article>
+
+          <div class="origin-grid">
+            <article class="card card-plate origin-card">
+              <div class="origin-header">
+                <span class="origin-badge" data-i18n="coffee.pe.badge">Medium Dark Roast</span>
+              </div>
+              <h3 class="origin-title" data-i18n="coffee.pe.title">Peruvian Chonta G1 Washed</h3>
+              <p class="origin-process" data-i18n="coffee.pe.process">Washed</p>
+              <p class="card-text" data-i18n="coffee.pe.body">A rotating medium dark origin with a more developed profile that still keeps some lift, showing chocolate, green apple, plum, roasted almond, and citrus.</p>
+              <div class="origin-spec-grid">
+                <div class="spec-card">
+                  <span class="spec-label" data-i18n="coffee.spec.origin">Origin</span>
+                  <span class="spec-value" data-i18n="coffee.pe.origin">Peru</span>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label" data-i18n="coffee.spec.notes">Tasting Notes</span>
+                  <span class="spec-value" data-i18n="coffee.pe.notes">Chocolate, green apple, plum, roasted almond, citrus</span>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label" data-i18n="coffee.spec.best">Best Use</span>
+                  <span class="spec-value" data-i18n="coffee.pe.best">Great for customers who want deeper roast character without going fully dark</span>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label" data-i18n="coffee.spec.availability">Availability</span>
+                  <span class="spec-value" data-i18n="coffee.pe.availability">Available now in whole bean, ground, or K-Cups</span>
+                </div>
+              </div>
+              <div class="origin-pricing">
+                <div class="price-block">
+                  <span class="spec-label" data-i18n="coffee.price.kcups">K-Cups</span>
+                  <div class="origin-kcup-tiers">
+                    <span class="tag-chip" data-i18n="coffee.kcups.tier1">8 pack $10</span>
+                    <span class="tag-chip" data-i18n="coffee.kcups.tier2">18 pack $22</span>
+                    <span class="tag-chip" data-i18n="coffee.kcups.tier3">24 pack $28</span>
+                  </div>
+                </div>
+              </div>
+              <a class="btn btn-outline" href="https://millionaires-roast.square.site/" target="_blank" rel="noopener noreferrer" data-i18n="coffee.shop.cta">Shop This Coffee</a>
+            </article>
+
+            <article class="card card-plate origin-card">
+              <div class="origin-header">
+                <span class="origin-badge" data-i18n="coffee.br.badge">Dark Roast</span>
+              </div>
+              <h3 class="origin-title" data-i18n="coffee.br.title">Brazilian Cerrado Natural</h3>
+              <p class="origin-process" data-i18n="coffee.br.process">Natural Process</p>
+              <p class="card-text" data-i18n="coffee.br.body">A rotating dark origin with a fuller and smoother cup built around milk chocolate, almond, dried plum, and vanilla.</p>
+              <div class="origin-spec-grid">
+                <div class="spec-card">
+                  <span class="spec-label" data-i18n="coffee.spec.origin">Origin</span>
+                  <span class="spec-value" data-i18n="coffee.br.origin">Brazil</span>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label" data-i18n="coffee.spec.notes">Tasting Notes</span>
+                  <span class="spec-value" data-i18n="coffee.br.notes">Milk chocolate, almond, dried plum, vanilla</span>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label" data-i18n="coffee.spec.best">Best Use</span>
+                  <span class="spec-value" data-i18n="coffee.br.best">Best for customers who want a darker cup that still drinks smooth and sweet</span>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label" data-i18n="coffee.spec.availability">Availability</span>
+                  <span class="spec-value" data-i18n="coffee.br.availability">Available now in whole bean, ground, or K-Cups</span>
+                </div>
+              </div>
+              <div class="origin-pricing">
+                <div class="price-block">
+                  <span class="spec-label" data-i18n="coffee.price.kcups">K-Cups</span>
+                  <div class="origin-kcup-tiers">
+                    <span class="tag-chip" data-i18n="coffee.kcups.tier1">8 pack $10</span>
+                    <span class="tag-chip" data-i18n="coffee.kcups.tier2">18 pack $22</span>
+                    <span class="tag-chip" data-i18n="coffee.kcups.tier3">24 pack $28</span>
+                  </div>
+                </div>
+              </div>
+              <a class="btn btn-outline" href="https://millionaires-roast.square.site/" target="_blank" rel="noopener noreferrer" data-i18n="coffee.shop.cta">Shop This Coffee</a>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -406,11 +485,11 @@
           </div>
 
           <button class="faq-item" id="faq-trigger-3" type="button" aria-expanded="false" aria-controls="faq-panel-3">
-            <span class="faq-q" data-i18n="faq.q3">What is the current roast like?</span>
+            <span class="faq-q" data-i18n="faq.q3">What coffees are available right now?</span>
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-a" id="faq-panel-3" data-panel role="region" aria-labelledby="faq-trigger-3">
-            <p data-i18n="faq.a3">Costa Rica Tarrazu "San Diego Jaguar" is a medium roast honey process coffee with chocolate, honey, nectarine, guava, berry, and citrus notes. It is balanced, sweet, and built for everyday drinking.</p>
+            <p data-i18n="faq.a3">We currently offer three single origin coffees: Costa Rican Tarrazú Jaguar Honey as our flagship medium roast that is here to stay, plus Peruvian Chonta G1 Washed and Brazilian Cerrado Natural as rotating origins in the medium dark and dark slots. Each origin is available as whole bean, ground, and K-Cups.</p>
           </div>
 
           <button class="faq-item" id="faq-trigger-4" type="button" aria-expanded="false" aria-controls="faq-panel-4">

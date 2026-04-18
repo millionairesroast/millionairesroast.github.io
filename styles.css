@@ -350,7 +350,7 @@ a:focus-visible, button:focus-visible{
   font-size:13px;
   font-weight:700;
 }
-.hero-actions, .featured-actions{
+.hero-actions{
   display:flex;
   flex-wrap:wrap;
   gap:12px;
@@ -386,7 +386,7 @@ a:focus-visible, button:focus-visible{
   align-content:start;
   align-self:center;
 }
-.hero-image, .featured-image, .proof-image{
+.hero-image, .proof-image{
   display:block;
   width:100%;
   height:auto;
@@ -495,14 +495,14 @@ a:focus-visible, button:focus-visible{
   color:var(--muted2);
   font-size:14px;
 }
-.order-kicker, .featured-kicker, .card-kicker, .spec-label{
+.order-kicker, .card-kicker, .spec-label{
   margin:0;
   color:rgba(200,164,77,.94);
   font-size:12px;
   letter-spacing:.18em;
   text-transform:uppercase;
 }
-.order-meta, .follow-links, .price-badges{
+.order-meta, .follow-links{
   display:flex;
   flex-wrap:wrap;
   gap:10px;
@@ -519,28 +519,40 @@ a:focus-visible, button:focus-visible{
 }
 .order-note p{margin:0;color:var(--muted)}
 
-.featured-pricing{
-  display:grid;
-  gap:12px;
-}
-.price-block{
-  display:grid;
-  gap:10px;
-  padding:14px;
-  border-radius:18px;
-  border:1px solid rgba(200,164,77,.22);
-  background:rgba(0,0,0,.18);
-}
-.price-callout{
-  color:var(--ink);
-  font-family:var(--serif);
-  font-size:32px;
-  font-weight:800;
-  line-height:1;
-}
 .current-coffees{
   display:grid;
   gap:18px;
+}
+.coffee-pricing-summary{
+  display:grid;
+  gap:14px;
+  justify-items:center;
+  text-align:center;
+}
+.coffee-pricing-title{
+  margin:0;
+  font-family:var(--serif);
+  font-size:clamp(24px,3vw,30px);
+}
+.coffee-pricing-lines{
+  display:grid;
+  gap:10px;
+  width:min(100%, 720px);
+}
+.coffee-pricing-line{
+  margin:0;
+  padding:14px 16px;
+  border-radius:18px;
+  border:1px solid rgba(200,164,77,.22);
+  background:rgba(0,0,0,.18);
+  color:var(--ink);
+  font-size:15px;
+  font-weight:700;
+}
+.coffee-pricing-note{
+  margin:0;
+  color:var(--muted2);
+  font-size:14px;
 }
 .origin-layout{
   display:grid;
@@ -639,6 +651,9 @@ a:focus-visible, button:focus-visible{
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:12px;
 }
+.origin-card .origin-spec-grid{
+  margin-top:auto;
+}
 .spec-card{
   display:grid;
   gap:7px;
@@ -652,15 +667,6 @@ a:focus-visible, button:focus-visible{
   font-size:15px;
   font-weight:600;
 }
-.origin-pricing{
-  display:grid;
-  gap:12px;
-}
-.origin-kcup-tiers{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
 .origin-conservation{
   display:grid;
   gap:8px;
@@ -671,10 +677,7 @@ a:focus-visible, button:focus-visible{
   border:1px solid rgba(200,164,77,.22);
   background:rgba(200,164,77,.08);
 }
-.origin-card .origin-pricing{
-  margin-top:auto;
-}
-.featured-text, .card-text{
+.card-text{
   margin:0;
   color:var(--muted);
   font-size:16px;
@@ -1059,7 +1062,11 @@ a:focus-visible, button:focus-visible{
   .origin-title{font-size:clamp(26px,8vw,36px)}
   .origin-process{font-size:18px}
   .origin-grid, .origin-spec-grid{grid-template-columns:1fr}
-  .featured-text, .card-text, .section-subtitle, .checklist li, .faq-a p{font-size:15px}
+  .origin-flagship .origin-header{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .card-text, .section-subtitle, .checklist li, .faq-a p{font-size:15px}
   .faq-item{padding:18px 14px}
   .faq-q{font-size:clamp(18px,7vw,24px)}
   .card-action{padding:18px 16px}

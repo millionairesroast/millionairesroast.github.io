@@ -586,11 +586,13 @@ a:focus-visible, button:focus-visible{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:18px;
+  align-items:stretch;
 }
 .origin-card{
   display:flex;
   flex-direction:column;
   gap:16px;
+  height:100%;
 }
 .origin-header{
   display:flex;
@@ -662,12 +664,14 @@ a:focus-visible, button:focus-visible{
 .origin-conservation{
   display:grid;
   gap:8px;
+  grid-column:1 / -1;
+  width:100%;
   padding:16px;
   border-radius:18px;
   border:1px solid rgba(200,164,77,.22);
   background:rgba(200,164,77,.08);
 }
-.origin-card .btn{
+.origin-card .origin-pricing{
   margin-top:auto;
 }
 .featured-text, .card-text{
@@ -679,6 +683,39 @@ a:focus-visible, button:focus-visible{
 .proof-carousel{
   display:grid;
   gap:18px;
+}
+.ceo-photo-section .container{
+  display:grid;
+  justify-items:center;
+}
+.ceo-photo-card{
+  width:min(100%, 760px);
+  display:grid;
+  gap:16px;
+}
+.ceo-photo-image{
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:100%;
+  border-radius:20px;
+  object-fit:contain;
+}
+.ceo-photo-caption{
+  margin:0;
+  text-align:center;
+  color:rgba(200,164,77,.92);
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:.05em;
+}
+.ceo-photo-link{
+  justify-self:center;
+  text-decoration:none;
+  transition:color 140ms var(--ease);
+}
+.ceo-photo-link:hover{
+  color:rgba(226,196,106,.98);
 }
 .carousel-shell{
   display:grid;
@@ -790,21 +827,6 @@ a:focus-visible, button:focus-visible{
   color:var(--muted);
 }
 .checklist li{margin:10px 0;font-size:16px}
-.about-ceo-line{
-  margin:18px 0 8px;
-  color:var(--muted2);
-  font-size:15px;
-}
-.about-ceo-link{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  color:rgba(200,164,77,.96);
-  font-weight:700;
-  text-decoration:none;
-}
-.about-ceo-link:hover{color:rgba(226,196,106,.98)}
-
 .faq{max-width:980px;margin:0 auto;padding:8px}
 .faq-item{
   width:100%;

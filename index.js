@@ -17,8 +17,9 @@
     "hero.chip1": "Tostado en lotes pequeños",
     "hero.chip2": "Tres orígenes únicos",
     "hero.chip3": "Medio, medio oscuro y oscuro",
-    "hero.chip4": "Recogida, entrega o envío en Illinois",
     "hero.chip5": "K-Cups disponibles",
+    "hero.pricing": "Bolsas de 14 oz $18 \u2022 K-Cups desde $10",
+    "hero.helper": "Ordena en línea para recogida, entrega o envío en Illinois.",
     "hero.cta.primary": "Comprar ahora",
     "hero.cta.secondary": "Ver cafés actuales",
     "hero.proof1.title": "Presencia local",
@@ -26,14 +27,14 @@
     "hero.proof2.title": "Detalles claros del café",
     "hero.proof2.body": "Orígenes, notas de sabor, mejor uso y precios fáciles de revisar.",
     "order.title": "Ordena en línea",
-    "order.subtitle": "Usa la tienda principal para hacer pedidos de una sola vez para nuestra línea actual de cafés.",
+    "order.subtitle": "Usa la tienda principal para pedir la línea actual en un solo lugar.",
     "order.card.kicker": "Tienda principal",
     "order.card.title": "Compra la línea actual",
-    "order.card.body": "Abre la tienda para hacer un pedido de nuestros orígenes actuales y elegir la opción de cumplimiento que mejor te convenga.",
+    "order.card.body": "Abre la tienda para pedir la línea actual y elegir recogida, entrega o envío en Illinois.",
     "order.card.cta": "Abrir la tienda",
-    "order.card.note": "Pago seguro para envío, recogida y entrega.",
-    "order.note.lead": "¿Necesitas ayuda?",
-    "order.note.body": "¿Tienes preguntas sobre qué origen es mejor para ti? Mándanos un texto y te ayudamos a elegir.",
+    "order.card.note": "Pago seguro para recogida, entrega y envío en Illinois.",
+    "order.note.lead": "¿Necesitas ayuda para elegir?",
+    "order.note.body": "Mándanos un texto y te ayudamos a elegir el café correcto.",
     "coffees.title": "Cafés actuales",
     "coffees.subtitle": "Actualmente ofrecemos tres cafés de origen único dentro de tres perfiles de tueste. Costa Rican Tarrazú Jaguar Honey lidera la línea como nuestro tueste medio insignia y llegó para quedarse, mientras que Peruvian Chonta G1 Washed y Brazilian Cerrado Natural rotan por los espacios de medio oscuro y oscuro.",
     "coffee.pricing.title": "Precio simple",
@@ -121,6 +122,13 @@
   const header = document.querySelector(".site-header");
   const yearEl = document.getElementById("year");
   const textCard = document.getElementById("textUsCard");
+  const emailCard = document.getElementById("emailUsCard");
+  const instagramCard = document.getElementById("instagramCard");
+  const facebookCard = document.getElementById("facebookCard");
+  const heroOrderBtn = document.getElementById("heroOrderBtn");
+  const orderShopBtn = document.getElementById("orderShopBtn");
+  const navOrderBtn = document.getElementById("navOrderBtn");
+  const mobileNavOrderBtn = document.getElementById("mobileNavOrderBtn");
   const toggle = document.querySelector(".nav-toggle");
   const mobileNav = document.getElementById("mobile-nav");
   const brandMark = document.querySelector(".brand-mark");
@@ -210,6 +218,59 @@
     const smsUrl = `sms:${PHONE_NUMBER}${separator}body=${bodyText}`;
 
     if (textCard) textCard.href = smsUrl;
+  }
+
+  function getAnalyticsLanguage() {
+    return root.dataset.lang || root.getAttribute("lang") || "en";
+  }
+
+  function getLinkText(element) {
+    return (element?.textContent || "").replace(/\s+/g, " ").trim();
+  }
+
+  function sendAnalyticsEvent(eventName, params) {
+    if (typeof window.gtag !== "function") return;
+    window.gtag("event", eventName, params);
+  }
+
+  function registerShopClickTracking(element) {
+    if (!element) return;
+
+    element.addEventListener("click", () => {
+      sendAnalyticsEvent("shop_click", {
+        cta_location: element.dataset.ctaLocation || "unknown",
+        destination_url: element.href,
+        language: getAnalyticsLanguage(),
+        link_text: getLinkText(element)
+      });
+    });
+  }
+
+  function registerContactClickTracking(element, eventName, clickLocation) {
+    if (!element) return;
+
+    element.addEventListener("click", () => {
+      sendAnalyticsEvent(eventName, {
+        click_location: clickLocation,
+        destination_url: element.href,
+        language: getAnalyticsLanguage(),
+        link_text: getLinkText(element)
+      });
+    });
+  }
+
+  function setupAnalytics() {
+    [
+      heroOrderBtn,
+      orderShopBtn,
+      navOrderBtn,
+      mobileNavOrderBtn
+    ].forEach(registerShopClickTracking);
+
+    registerContactClickTracking(textCard, "text_click", "contact_text");
+    registerContactClickTracking(emailCard, "email_click", "contact_email");
+    registerContactClickTracking(instagramCard, "instagram_click", "contact_instagram");
+    registerContactClickTracking(facebookCard, "facebook_click", "contact_facebook");
   }
 
   function syncMobileMenuHeight() {
@@ -546,4 +607,5 @@
   setupAccordion();
   setupCarousel();
   setupLanguageToggle();
+  setupAnalytics();
 })();

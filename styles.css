@@ -243,7 +243,7 @@ a:focus-visible, button:focus-visible{
   background:linear-gradient(180deg, rgba(20,15,8,.28), rgba(6,6,8,.54));
   box-shadow:0 10px 30px rgba(0,0,0,.34);
 }
-.lang-section{padding:0 0 10px}
+.lang-section{padding:6px 0 10px}
 .lang-caption{
   margin:0;
   color:var(--muted2);
@@ -337,6 +337,23 @@ a:focus-visible, button:focus-visible{
   flex-wrap:wrap;
   gap:10px;
   margin:22px 0 0;
+}
+.hero-conversion{
+  display:grid;
+  gap:6px;
+  margin-top:18px;
+  max-width:34rem;
+}
+.hero-pricing{
+  margin:0;
+  color:rgba(226,196,106,.94);
+  font-size:15px;
+  font-weight:700;
+}
+.hero-helper{
+  margin:0;
+  color:var(--muted);
+  font-size:15px;
 }
 .hero-chip, .tag-chip{
   display:inline-flex;
@@ -1031,6 +1048,7 @@ a:focus-visible, button:focus-visible{
   .hero-plate{padding:34px 18px 24px}
   .hero-title{font-size:clamp(36px,11vw,56px)}
   .hero-sub{font-size:15px}
+  .hero-pricing, .hero-helper{font-size:14px}
   .hero-proof{grid-template-columns:1fr}
   .hero-actions{display:grid;grid-template-columns:1fr}
   .btn{width:100%;min-width:0}

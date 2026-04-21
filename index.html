@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="en" data-lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LFTJZC85EC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LFTJZC85EC');
+  </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Millionaire's Roast | Central Illinois Small-Batch Specialty Coffee</title>
@@ -20,7 +28,7 @@
   <link rel="canonical" href="https://millionairesroast.com/" />
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="apple-touch-icon" href="logo.png" />
-  <link rel="stylesheet" href="styles.css?v=19" />
+  <link rel="stylesheet" href="styles.css?v=20" />
 
   <script type="application/ld+json">
     {
@@ -103,7 +111,7 @@
     }
   </script>
 
-  <script defer src="index.js?v=19"></script>
+  <script defer src="index.js?v=20"></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -127,7 +135,7 @@
           <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
           <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
           <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
-          <a class="nav-cta" href="#order" data-i18n="nav.orderCta">Order Now</a>
+          <a class="nav-cta" id="navOrderBtn" data-cta-location="nav" href="https://millionaires-roast.square.site/" data-i18n="nav.orderCta">Order Now</a>
         </nav>
 
         <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
@@ -137,7 +145,7 @@
     </div>
 
     <div class="mobile-nav" id="mobile-nav" aria-hidden="true" inert>
-      <a class="nav-cta" href="#order" data-i18n="nav.orderCta">Order Now</a>
+      <a class="nav-cta" id="mobileNavOrderBtn" data-cta-location="mobile_nav" href="https://millionaires-roast.square.site/" data-i18n="nav.orderCta">Order Now</a>
       <a class="nav-link" href="#current-roast" data-i18n="nav.roast">Current Coffees</a>
       <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
       <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
@@ -159,12 +167,16 @@
             <span class="hero-chip" data-i18n="hero.chip1">Small-batch roasted</span>
             <span class="hero-chip" data-i18n="hero.chip2">Three single origins</span>
             <span class="hero-chip" data-i18n="hero.chip3">Medium, medium dark, and dark</span>
-            <span class="hero-chip" data-i18n="hero.chip4">Pickup, delivery, or Illinois shipping</span>
             <span class="hero-chip" data-i18n="hero.chip5">K-Cups available</span>
           </div>
 
+          <div class="hero-conversion">
+            <p class="hero-pricing" data-i18n="hero.pricing">14 oz bags $18 &bull; K-Cups from $10</p>
+            <p class="hero-helper" data-i18n="hero.helper">Order online for pickup, delivery, or Illinois shipping.</p>
+          </div>
+
           <div class="hero-actions">
-            <a class="btn btn-gold" id="heroOrderBtn" href="https://millionaires-roast.square.site/" target="_blank" rel="noopener noreferrer" data-i18n="hero.cta.primary">Buy Now</a>
+            <a class="btn btn-gold" id="heroOrderBtn" data-cta-location="hero" href="https://millionaires-roast.square.site/" data-i18n="hero.cta.primary">Buy Now</a>
             <a class="btn btn-outline" href="#current-roast" data-i18n="hero.cta.secondary">See Current Coffees</a>
           </div>
 
@@ -182,6 +194,29 @@
       </div>
     </section>
 
+    <section class="section" id="order" aria-labelledby="order-title">
+        <div class="container">
+          <div class="section-head center narrow-head">
+            <h2 class="section-title" id="order-title" data-i18n="order.title">Order Online</h2>
+            <p class="section-subtitle" data-i18n="order.subtitle">Use the main shop to order the current lineup in one place.</p>
+          </div>
+
+          <div class="order-grid order-grid-single">
+            <article class="card card-plate order-card order-card-center">
+              <p class="order-kicker" data-i18n="order.card.kicker">Main storefront</p>
+              <h3 class="card-title" data-i18n="order.card.title">Shop the current lineup</h3>
+              <p class="card-text" data-i18n="order.card.body">Open the shop to order the current lineup and choose pickup, delivery, or Illinois shipping.</p>
+              <a class="btn btn-gold" id="orderShopBtn" data-cta-location="order" href="https://millionaires-roast.square.site/" data-i18n="order.card.cta">Open the Shop</a>
+              <p class="order-small-note" data-i18n="order.card.note">Secure checkout for pickup, delivery, and Illinois shipping.</p>
+            </article>
+          </div>
+
+          <div class="order-note card card-plate">
+            <p><strong data-i18n="order.note.lead">Need help choosing?</strong> <span data-i18n="order.note.body">Text us and we will help you pick the right coffee.</span></p>
+          </div>
+        </div>
+      </section>
+
     <section class="lang-section" aria-label="Language selection">
       <div class="container">
         <div class="lang-bar">
@@ -193,29 +228,6 @@
         </div>
       </div>
     </section>
-
-    <section class="section" id="order" aria-labelledby="order-title">
-        <div class="container">
-          <div class="section-head center narrow-head">
-            <h2 class="section-title" id="order-title" data-i18n="order.title">Order Online</h2>
-            <p class="section-subtitle" data-i18n="order.subtitle">Use the main shop to place one-time orders for our current coffee lineup.</p>
-          </div>
-
-          <div class="order-grid order-grid-single">
-            <article class="card card-plate order-card order-card-center">
-              <p class="order-kicker" data-i18n="order.card.kicker">Main storefront</p>
-              <h3 class="card-title" data-i18n="order.card.title">Shop the current lineup</h3>
-              <p class="card-text" data-i18n="order.card.body">Open the shop to place an order for our current origins and choose the fulfillment option that fits best.</p>
-              <a class="btn btn-gold" href="https://millionaires-roast.square.site/" target="_blank" rel="noopener noreferrer" data-i18n="order.card.cta">Open the Shop</a>
-              <p class="order-small-note" data-i18n="order.card.note">Secure checkout for shipping, pickup, and delivery.</p>
-            </article>
-          </div>
-
-          <div class="order-note card card-plate">
-            <p><strong data-i18n="order.note.lead">Need help deciding?</strong> <span data-i18n="order.note.body">Questions about which origin is right for you? Text us and we will help you choose.</span></p>
-          </div>
-        </div>
-      </section>
 
     <section class="section" id="current-roast" aria-labelledby="current-roast-title">
       <div class="container current-coffees">
@@ -498,7 +510,7 @@
             </div>
           </a>
 
-          <a class="card card-action" href="mailto:millionairesroast@gmail.com?subject=Coffee%20Order%20%7C%20Millionaire%27s%20Roast">
+          <a class="card card-action" id="emailUsCard" href="mailto:millionairesroast@gmail.com?subject=Coffee%20Order%20%7C%20Millionaire%27s%20Roast">
             <div class="card-icon" aria-hidden="true">EM</div>
             <div class="card-meta">
               <div class="card-kicker" data-i18n="contact.email.kicker">Email Us</div>
@@ -507,7 +519,7 @@
             </div>
           </a>
 
-          <a class="card card-action" href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer">
+          <a class="card card-action" id="instagramCard" href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer">
             <div class="card-icon" aria-hidden="true">IG</div>
             <div class="card-meta">
               <div class="card-kicker" data-i18n="contact.ig.kicker">Instagram</div>
@@ -516,7 +528,7 @@
             </div>
           </a>
 
-          <a class="card card-action" href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer">
+          <a class="card card-action" id="facebookCard" href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer">
             <div class="card-icon" aria-hidden="true">FB</div>
             <div class="card-meta">
               <div class="card-kicker" data-i18n="contact.fb.kicker">Facebook</div>

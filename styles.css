@@ -332,16 +332,10 @@ a:focus-visible, button:focus-visible{
   color:var(--muted);
   font-size:18px;
 }
-.hero-points{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  margin:22px 0 0;
-}
 .hero-conversion{
   display:grid;
   gap:6px;
-  margin-top:18px;
+  margin-top:22px;
   max-width:34rem;
 }
 .hero-pricing{
@@ -354,18 +348,6 @@ a:focus-visible, button:focus-visible{
   margin:0;
   color:var(--muted);
   font-size:15px;
-}
-.hero-chip, .tag-chip{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:8px 12px;
-  border-radius:999px;
-  border:1px solid rgba(200,164,77,.24);
-  background:rgba(200,164,77,.1);
-  color:rgba(244,241,234,.92);
-  font-size:13px;
-  font-weight:700;
 }
 .hero-actions{
   display:flex;

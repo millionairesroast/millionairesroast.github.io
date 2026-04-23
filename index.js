@@ -13,30 +13,30 @@
     "lang.label": "Idioma",
     "hero.kicker": "Tostado en Beardstown, sirviendo a Springfield y al centro de Illinois",
     "hero.title": "Café de especialidad con sensación premium, no con precio premium.",
-    "hero.sub": "Millionaire's Roast es una tostaduría artesanal del centro de Illinois que ofrece tres cafés de origen único dentro de perfiles de tueste medio, medio oscuro y oscuro.",
+    "hero.sub": "Millionaire's Roast es una tostadur\u00eda artesanal del centro de Illinois que ofrece caf\u00e9s frescos, de origen \u00fanico y de grado de especialidad, seleccionados de lotes que punt\u00faan 80+, dentro de perfiles de tueste medio, medio oscuro y oscuro.",
     "hero.pricing": "Bolsas de 14 oz $18 \u2022 K-Cups desde $10",
-    "hero.helper": "Ordena en línea para recogida, entrega o envío en Illinois.",
+    "hero.helper": "Ordena en l\u00ednea para recogida, entrega o env\u00edo dentro de Illinois.",
     "hero.cta.primary": "Comprar ahora",
     "hero.cta.secondary": "Ver cafés actuales",
-    "hero.proof1.title": "Presencia local",
-    "hero.proof1.body": "Nos encuentras en mercados locales y eventos comunitarios por todo el centro de Illinois.",
-    "hero.proof2.title": "Detalles claros del café",
-    "hero.proof2.body": "Orígenes, notas de sabor, mejor uso y precios fáciles de revisar.",
+    "hero.proof1.title": "Siempre fresco",
+    "hero.proof1.body": "Nuestra l\u00ednea se basa en caf\u00e9 reci\u00e9n tostado, no en caf\u00e9 que lleva tiempo guardado.",
+    "hero.proof2.title": "Grado de especialidad, 80+",
+    "hero.proof2.body": "Cada caf\u00e9 actual es de origen \u00fanico, de grado de especialidad y seleccionado de caf\u00e9s que punt\u00faan 80 o m\u00e1s.",
     "order.title": "Ordena en línea",
-    "order.subtitle": "Usa la tienda principal para pedir la línea actual en un solo lugar.",
+    "order.subtitle": "Usa la tienda principal para pedir caf\u00e9 fresco de origen \u00fanico en un solo lugar.",
     "order.card.kicker": "Tienda principal",
-    "order.card.title": "Compra la línea actual",
-    "order.card.body": "Abre la tienda para pedir la línea actual y elegir recogida, entrega o envío en Illinois.",
+    "order.card.title": "Compra caf\u00e9 fresco de especialidad",
+    "order.card.body": "Abre la tienda para pedir caf\u00e9 fresco, de origen \u00fanico y de grado de especialidad para recogida, entrega o env\u00edo dentro de Illinois.",
     "order.card.cta": "Abrir la tienda",
-    "order.card.note": "Pago seguro para recogida, entrega y envío en Illinois.",
+    "order.card.note": "Pago seguro para recogida, entrega y env\u00edos dentro de Illinois.",
     "order.note.lead": "¿Necesitas ayuda para elegir?",
     "order.note.body": "Mándanos un texto y te ayudamos a elegir el café correcto.",
     "coffees.title": "Cafés actuales",
-    "coffees.subtitle": "Actualmente ofrecemos tres cafés de origen único dentro de tres perfiles de tueste. Costa Rican Tarrazú Jaguar Honey lidera la línea como nuestro tueste medio insignia y llegó para quedarse, mientras que Peruvian Chonta G1 Washed y Brazilian Cerrado Natural rotan por los espacios de medio oscuro y oscuro.",
+    "coffees.subtitle": "Actualmente ofrecemos tres caf\u00e9s frescos de origen \u00fanico dentro de tres perfiles de tueste. Cada caf\u00e9 de la l\u00ednea es de grado de especialidad, seleccionado de caf\u00e9s que punt\u00faan 80+, y elegido para darle a los clientes del centro de Illinois una mejor taza sin precios inflados.",
     "coffee.pricing.title": "Precio simple",
     "coffee.pricing.bag": "Bolsa de 14 oz $18",
     "coffee.pricing.kcups": "K-Cups: 8 pack $10 \u00b7 18 pack $22 \u00b7 24 pack $28",
-    "coffee.pricing.note": "El precio aplica en toda la línea actual.",
+    "coffee.pricing.note": "Caf\u00e9 fresco de especialidad con el mismo precio en toda la l\u00ednea.",
     "coffee.spec.origin": "Origen",
     "coffee.spec.notes": "Notas de sabor",
     "coffee.spec.best": "Mejor uso",
@@ -46,8 +46,8 @@
     "coffee.cr.badge": "Tueste medio",
     "coffee.cr.title": "Costa Rican Tarrazú Jaguar Honey",
     "coffee.cr.process": "Proceso Honey",
-    "coffee.cr.body": "Nuestro origen insignia actual y el perfil más brillante de la línea, construido alrededor de notas de chocolate con leche, miel y frambuesa con un final más limpio y dulce. Este café ancla la línea y llegó para quedarse.",
-    "coffee.cr.note": "Ideal para clientes que quieren un café de especialidad accesible con dulzura, balance y un poco de brillo.",
+    "coffee.cr.body": "Nuestro origen insignia actual y el perfil m\u00e1s brillante de la l\u00ednea, con notas de chocolate con leche, miel y frambuesa y un final m\u00e1s limpio y dulce. Es un caf\u00e9 de especialidad accesible que ancla la l\u00ednea y aqu\u00ed se queda.",
+    "coffee.cr.note": "Ideal para clientes que quieren una taza fresca y de origen \u00fanico con dulzura, balance y un poco de brillo.",
     "coffee.cr.origin": "Tarrazú, Costa Rica",
     "coffee.cr.notes": "Chocolate con leche, miel, frambuesa",
     "coffee.cr.best": "Excelente para drip, pour over y tomar a diario",
@@ -56,7 +56,7 @@
     "coffee.pe.badge": "Tueste medio oscuro",
     "coffee.pe.title": "Peruvian Chonta G1 Washed",
     "coffee.pe.process": "Lavado",
-    "coffee.pe.body": "Un origen rotativo de tueste medio oscuro con un perfil más desarrollado que todavía conserva algo de brillo, con chocolate, manzana verde, ciruela, almendra tostada y cítricos.",
+    "coffee.pe.body": "Un origen rotativo de tueste medio oscuro seleccionado bajo el mismo est\u00e1ndar de origen \u00fanico, grado de especialidad y 80+ que el resto de la l\u00ednea, con un perfil m\u00e1s desarrollado que todav\u00eda conserva algo de brillo, con chocolate, manzana verde, ciruela, almendra tostada y c\u00edtricos.",
     "coffee.pe.origin": "Perú",
     "coffee.pe.notes": "Chocolate, manzana verde, ciruela, almendra tostada, cítricos",
     "coffee.pe.best": "Ideal para clientes que quieren un carácter de tueste más profundo sin llegar por completo al oscuro",
@@ -64,7 +64,7 @@
     "coffee.br.badge": "Tueste oscuro",
     "coffee.br.title": "Brazilian Cerrado Natural",
     "coffee.br.process": "Proceso Natural",
-    "coffee.br.body": "Un origen rotativo oscuro con una taza más llena y suave construida alrededor de chocolate con leche, almendra, ciruela pasa y vainilla.",
+    "coffee.br.body": "Un origen rotativo de tueste oscuro que mantiene el mismo est\u00e1ndar de origen \u00fanico, grado de especialidad y 80+ de la l\u00ednea, con una taza m\u00e1s llena y suave construida alrededor de chocolate con leche, almendra, ciruela pasa y vainilla.",
     "coffee.br.origin": "Brasil",
     "coffee.br.notes": "Chocolate con leche, almendra, ciruela pasa, vainilla",
     "coffee.br.best": "Ideal para clientes que quieren una taza más oscura que siga tomando suave y dulce",
@@ -75,16 +75,16 @@
     "proof.caption2": "Maximiliano Gómez, fundador de Millionaire's Roast, durante una visita de Cass County CEO a Western Illinois University.",
     "proof.caption3": "Una versión más temprana del puesto en el Old Capitol Farmers Market que muestra cómo ha crecido la presentación.",
     "about.title": "Sobre Millionaire's Roast",
-    "about.subtitle": "Una marca local de café creada a través del programa Cass County CEO y desarrollada por medio de mercados, pedidos directos y tostado manual.",
+    "about.subtitle": "Una marca local de caf\u00e9 construida a trav\u00e9s del programa Cass County CEO y fortalecida por mercados, pedidos directos y tostado manual, con caf\u00e9 fresco de origen \u00fanico en el centro de todo.",
     "about.story.title": "Conoce a Maximiliano",
     "about.story.p1": "Millionaire's Roast comenzó a través del programa Cass County CEO, donde Maximiliano Gomez convirtió una idea de negocio en una marca real de café artesanal arraigada en su comunidad.",
-    "about.story.p2": "Cada lote comienza con café verde cuidadosamente seleccionado, luego se tuesta, se muele, se empaca y se prepara a mano. La meta no es hacer que el café se sienta exclusivo. La meta es ofrecer algo genuinamente de alta calidad a un precio al que la gente pueda volver.",
+    "about.story.p2": "Cada lote comienza con caf\u00e9 fresco cuidadosamente seleccionado, escogido como lotes de origen \u00fanico y grado de especialidad de caf\u00e9s que punt\u00faan 80 o m\u00e1s. La meta no es hacer que el caf\u00e9 se sienta exclusivo. Es ofrecer algo de verdad de alta calidad a un precio al que la gente normal pueda volver.",
     "about.story.p3": "Tostado en Beardstown y vendido regularmente en Springfield y el centro de Illinois, la marca sigue creciendo a través de ventas directas, eventos locales, recogida, entrega y envíos sencillos en línea para clientes de Illinois.",
     "about.side.title": "Lo que lo distingue",
-    "about.side.li1": "Tostado en lotes pequeños con orígenes rotativos",
-    "about.side.li2": "Información clara del café que ayuda a comprar con confianza",
+    "about.side.li1": "Caf\u00e9 fresco de origen \u00fanico",
+    "about.side.li2": "Caf\u00e9 de grado de especialidad seleccionado de tazas 80+",
     "about.side.li3": "Pedidos flexibles para envío, recogida, entrega y K-Cups",
-    "about.side.li4": "Hecho para clientes del centro de Illinois, no solo para conocedores",
+    "about.side.li4": "Hecho para clientes del centro de Illinois, no solo para conocedores del caf\u00e9",
     "about.find.title": "Dónde encontrarnos",
     "about.find.body": "Sigue nuestras redes para ver apariciones en mercados, coordinación de recogidas y disponibilidad actual.",
     "ceo.caption": "Lanzado con orgullo a través del programa Cass County CEO.",
@@ -95,9 +95,11 @@
     "faq.q2": "¿Dónde están ubicados?",
     "faq.a2": "Millionaire's Roast se tuesta en Beardstown y sirve regularmente a Springfield y al centro de Illinois.",
     "faq.q3": "¿Qué cafés están disponibles ahora mismo?",
-    "faq.a3": "Actualmente ofrecemos tres cafés de origen único: Costa Rican Tarrazú Jaguar Honey como nuestro tueste medio insignia que llegó para quedarse, además de Peruvian Chonta G1 Washed y Brazilian Cerrado Natural como orígenes rotativos en los espacios de medio oscuro y oscuro. Cada origen está disponible en grano, molido y K-Cups.",
+    "faq.a3": "Actualmente ofrecemos tres caf\u00e9s frescos de origen \u00fanico: Costa Rican Tarraz\u00fa Jaguar Honey como nuestro tueste medio insignia que lleg\u00f3 para quedarse, adem\u00e1s de Peruvian Chonta G1 Washed y Brazilian Cerrado Natural como or\u00edgenes rotativos en los espacios de medio oscuro y oscuro. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido o K-Cups.",
     "faq.q4": "¿Cuánto dura una rotación actual?",
     "faq.a4": "Compramos café verde en volumen, pero los tiempos de cosecha cambian según la región y el ciclo agrícola. Cuando un café se acaba, hay una alta probabilidad de que ese lote en específico se haya ido por ahora, no para siempre, y la rotación sigue cambiando según la demanda y la disponibilidad.",
+    "faq.q5": "\u00bfQu\u00e9 hace que este caf\u00e9 sea de especialidad?",
+    "faq.a5": "Nuestra l\u00ednea actual es caf\u00e9 fresco, de origen \u00fanico y de grado de especialidad, seleccionado de caf\u00e9s que punt\u00faan 80 o m\u00e1s. Eso significa mejor materia prima, sabores m\u00e1s claros y una taza m\u00e1s intencional que el caf\u00e9 comercial com\u00fan.",
     "contact.title": "Contacto y redes",
     "contact.subtitle": "El texto es la forma más rápida de hacer una pregunta rápida. El correo funciona mejor para seguimiento y preguntas personalizadas.",
     "contact.text.kicker": "Texto",
@@ -168,13 +170,13 @@
 
   function buildRoastFaqAnswer(lang) {
     if (lang === "es") {
-      return "Actualmente ofrecemos tres cafés de origen único: Costa Rican Tarrazú Jaguar Honey como nuestro tueste medio insignia que llegó para quedarse, además de Peruvian Chonta G1 Washed y Brazilian Cerrado Natural como orígenes rotativos en los espacios de medio oscuro y oscuro. Cada origen está disponible en grano, molido y K-Cups.";
+      return "Actualmente ofrecemos tres caf\u00e9s frescos de origen \u00fanico: Costa Rican Tarraz\u00fa Jaguar Honey como nuestro tueste medio insignia que lleg\u00f3 para quedarse, adem\u00e1s de Peruvian Chonta G1 Washed y Brazilian Cerrado Natural como or\u00edgenes rotativos en los espacios de medio oscuro y oscuro. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido o K-Cups.";
     }
 
-    return "We currently offer three single origin coffees: Costa Rican Tarrazú Jaguar Honey as our flagship medium roast that is here to stay, plus Peruvian Chonta G1 Washed and Brazilian Cerrado Natural as rotating origins in the medium dark and dark slots. Each origin is available as whole bean, ground, and K-Cups.";
+    return "We currently offer three fresh single-origin coffees: Costa Rican Tarraz\u00fa Jaguar Honey as our flagship medium roast that is here to stay, plus Peruvian Chonta G1 Washed and Brazilian Cerrado Natural as rotating origins in the medium dark and dark slots. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, or K-Cups.";
   }
 
-  function updateFaqSchema() {
+  function updateFaqSchema(lang) {
     if (!faqSchemaScript) return;
 
     const schema = {
@@ -184,23 +186,28 @@
       mainEntity: [
         {
           "@type": "Question",
-          name: "How do I order?",
-          acceptedAnswer: { "@type": "Answer", text: BASE["faq.a1"] }
+          name: getCopy(lang, "faq.q1"),
+          acceptedAnswer: { "@type": "Answer", text: getCopy(lang, "faq.a1") }
         },
         {
           "@type": "Question",
-          name: "Where are you based?",
-          acceptedAnswer: { "@type": "Answer", text: BASE["faq.a2"] }
+          name: getCopy(lang, "faq.q2"),
+          acceptedAnswer: { "@type": "Answer", text: getCopy(lang, "faq.a2") }
         },
         {
           "@type": "Question",
-          name: "What coffees are available right now?",
-          acceptedAnswer: { "@type": "Answer", text: buildRoastFaqAnswer("en") }
+          name: getCopy(lang, "faq.q3"),
+          acceptedAnswer: { "@type": "Answer", text: buildRoastFaqAnswer(lang) }
         },
         {
           "@type": "Question",
-          name: "How long does a current rotation last?",
-          acceptedAnswer: { "@type": "Answer", text: BASE["faq.a4"] }
+          name: getCopy(lang, "faq.q4"),
+          acceptedAnswer: { "@type": "Answer", text: getCopy(lang, "faq.a4") }
+        },
+        {
+          "@type": "Question",
+          name: getCopy(lang, "faq.q5"),
+          acceptedAnswer: { "@type": "Answer", text: getCopy(lang, "faq.a5") }
         }
       ]
     };
@@ -545,7 +552,7 @@
     if (roastFaqAnswer) {
       roastFaqAnswer.textContent = buildRoastFaqAnswer(lang);
     }
-    updateFaqSchema();
+    updateFaqSchema(lang);
   }
 
   function applyTranslations(lang) {

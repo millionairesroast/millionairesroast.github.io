@@ -962,14 +962,22 @@ a:focus-visible, button:focus-visible{
   background:rgba(200,164,77,.18);
 }
 .footer-rule::after{
-  content:"*";
+  content:"\2726";
   position:absolute;
   left:50%;
   top:50%;
   transform:translate(-50%,-50%);
-  padding:0 10px;
-  color:rgba(200,164,77,.72);
-  background:rgba(0,0,0,.45);
+  width:34px;
+  height:34px;
+  display:grid;
+  place-items:center;
+  border-radius:999px;
+  color:rgba(213,181,102,.84);
+  font-size:14px;
+  line-height:1;
+  background:radial-gradient(circle at 50% 45%, rgba(200,164,77,.18), rgba(9,9,12,.94) 68%);
+  border:1px solid rgba(200,164,77,.24);
+  box-shadow:0 0 0 6px rgba(7,7,10,.82);
 }
 .footer-stack{
   display:grid;

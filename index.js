@@ -111,7 +111,7 @@
     "contact.fb.kicker": "Facebook",
     "contact.fb.main": "Millionaire's Roast",
     "contact.fb.sub": "Anuncios, eventos y noticias locales",
-    "footer.line": "Tostado en Beardstown, sirviendo a Springfield y al centro de Illinois.",
+    "footer.line": "Este producto fue elaborado en una cocina del hogar no inspeccionada por un departamento de salud que tambi\u00e9n puede procesar al\u00e9rgenos alimentarios comunes. Si tiene preocupaciones de seguridad, comun\u00edquese con su departamento de salud local.",
     "sms.body": "¡Hola! Tengo una pregunta sobre Millionaire's Roast."
   };
 

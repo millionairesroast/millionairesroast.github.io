@@ -994,6 +994,11 @@ a:focus-visible, button:focus-visible{
   gap:10px;
   flex-wrap:wrap;
 }
+.footer-line[data-i18n="footer.line"]{
+  max-width:min(72ch, 100%);
+  margin:0 auto;
+  line-height:1.5;
+}
 .footer-links a{color:rgba(244,241,234,.88)}
 .footer-dot{color:rgba(244,241,234,.36)}
 

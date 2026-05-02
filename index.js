@@ -12,16 +12,16 @@
     "nav.orderCta": "Ordenar ahora",
     "lang.label": "Idioma",
     "hero.kicker": "Tostado en Beardstown, sirviendo a Springfield y al centro de Illinois",
-    "hero.title": "Café de especialidad con sensación premium, no con precio premium.",
-    "hero.sub": "Millionaire's Roast es una tostadur\u00eda artesanal del centro de Illinois que ofrece caf\u00e9s frescos, de origen \u00fanico y de grado de especialidad, seleccionados de lotes que punt\u00faan 80+, dentro de perfiles de tueste medio, medio oscuro y oscuro.",
+    "hero.title": "Café de especialidad sin el sobreprecio premium.",
+    "hero.sub": "Caf\u00e9s frescos de origen \u00fanico, seleccionados de lotes documentados de grado de especialidad con puntajes de 80+, tostados en lotes peque\u00f1os para Springfield y el centro de Illinois.",
     "hero.pricing": "Bolsas de 14 oz $18 \u2022 K-Cups desde $10",
     "hero.helper": "Ordena en l\u00ednea para recogida, entrega o env\u00edo dentro de Illinois.",
     "hero.cta.primary": "Comprar ahora",
     "hero.cta.secondary": "Ver cafés actuales",
     "hero.proof1.title": "Siempre fresco",
     "hero.proof1.body": "Nuestra l\u00ednea se basa en caf\u00e9 reci\u00e9n tostado, no en caf\u00e9 que lleva tiempo guardado.",
-    "hero.proof2.title": "Grado de especialidad, 80+",
-    "hero.proof2.body": "Cada caf\u00e9 actual es de origen \u00fanico, de grado de especialidad y seleccionado de caf\u00e9s que punt\u00faan 80 o m\u00e1s.",
+    "hero.proof2.title": "Grado de especialidad documentado",
+    "hero.proof2.body": "Seleccionamos caf\u00e9s de lotes verdes documentados con puntajes de 80+, y luego los tostamos frescos para mantener una taza limpia, clara y accesible.",
     "order.title": "Ordena en línea",
     "order.subtitle": "Usa la tienda principal para pedir caf\u00e9 fresco de origen \u00fanico en un solo lugar.",
     "order.card.kicker": "Tienda principal",
@@ -32,11 +32,18 @@
     "order.note.lead": "¿Necesitas ayuda para elegir?",
     "order.note.body": "Mándanos un texto y te ayudamos a elegir el café correcto.",
     "coffees.title": "Cafés actuales",
-    "coffees.subtitle": "Actualmente ofrecemos tres caf\u00e9s frescos de origen \u00fanico dentro de tres perfiles de tueste. Cada caf\u00e9 de la l\u00ednea es de grado de especialidad, seleccionado de caf\u00e9s que punt\u00faan 80+, y elegido para darle a los clientes del centro de Illinois una mejor taza sin precios inflados.",
+    "coffees.subtitle": "Actualmente ofrecemos tres caf\u00e9s frescos de origen \u00fanico dentro de tres perfiles de tueste. Cada caf\u00e9 se selecciona de lotes documentados de grado de especialidad con puntajes de 80+, para darle a los clientes del centro de Illinois una taza m\u00e1s limpia e intencional sin precios inflados.",
     "coffee.pricing.title": "Precio simple",
     "coffee.pricing.bag": "Bolsa de 14 oz $18",
     "coffee.pricing.kcups": "K-Cups: 8 pack $10 \u00b7 18 pack $22 \u00b7 24 pack $28",
-    "coffee.pricing.note": "Caf\u00e9 fresco de especialidad con el mismo precio en toda la l\u00ednea.",
+    "coffee.pricing.note": "Caf\u00e9 de grado de especialidad documentado con precio simple en toda la l\u00ednea.",
+    "roast.selector.label": "Elige tu tueste",
+    "roast.selector.medium": "Medio",
+    "roast.selector.mediumDark": "Medio oscuro",
+    "roast.selector.dark": "Oscuro",
+    "coffee.cta.medium": "Ordenar tueste medio",
+    "coffee.cta.mediumDark": "Ordenar tueste medio oscuro",
+    "coffee.cta.dark": "Ordenar tueste oscuro",
     "coffee.spec.origin": "Origen",
     "coffee.spec.notes": "Notas de sabor",
     "coffee.spec.best": "Mejor uso",
@@ -78,11 +85,11 @@
     "about.subtitle": "Una marca local de caf\u00e9 construida a trav\u00e9s del programa Cass County CEO y fortalecida por mercados, pedidos directos y tostado manual, con caf\u00e9 fresco de origen \u00fanico en el centro de todo.",
     "about.story.title": "Conoce a Maximiliano",
     "about.story.p1": "Millionaire's Roast comenzó a través del programa Cass County CEO, donde Maximiliano Gomez convirtió una idea de negocio en una marca real de café artesanal arraigada en su comunidad.",
-    "about.story.p2": "Cada lote comienza con caf\u00e9 fresco cuidadosamente seleccionado, escogido como lotes de origen \u00fanico y grado de especialidad de caf\u00e9s que punt\u00faan 80 o m\u00e1s. La meta no es hacer que el caf\u00e9 se sienta exclusivo. Es ofrecer algo de verdad de alta calidad a un precio al que la gente normal pueda volver.",
+    "about.story.p2": "Cada lote comienza con caf\u00e9 verde cuidadosamente seleccionado de lotes documentados de origen \u00fanico y grado de especialidad con puntajes de 80+. La meta no es hacer que el caf\u00e9 se sienta exclusivo. Es ofrecer caf\u00e9 de alta calidad a un precio al que la gente normal pueda volver.",
     "about.story.p3": "Tostado en Beardstown y vendido regularmente en Springfield y el centro de Illinois, la marca sigue creciendo a través de ventas directas, eventos locales, recogida, entrega y envíos sencillos en línea para clientes de Illinois.",
     "about.side.title": "Lo que lo distingue",
     "about.side.li1": "Caf\u00e9 fresco de origen \u00fanico",
-    "about.side.li2": "Caf\u00e9 de grado de especialidad seleccionado de tazas 80+",
+    "about.side.li2": "Caf\u00e9 de grado de especialidad documentado de lotes 80+",
     "about.side.li3": "Pedidos flexibles para envío, recogida, entrega y K-Cups",
     "about.side.li4": "Hecho para clientes del centro de Illinois, no solo para conocedores del caf\u00e9",
     "about.find.title": "Dónde encontrarnos",
@@ -99,7 +106,7 @@
     "faq.q4": "¿Cuánto dura una rotación actual?",
     "faq.a4": "Compramos café verde en volumen, pero los tiempos de cosecha cambian según la región y el ciclo agrícola. Cuando un café se acaba, hay una alta probabilidad de que ese lote en específico se haya ido por ahora, no para siempre, y la rotación sigue cambiando según la demanda y la disponibilidad.",
     "faq.q5": "\u00bfQu\u00e9 hace que este caf\u00e9 sea de especialidad?",
-    "faq.a5": "Nuestra l\u00ednea actual es caf\u00e9 fresco, de origen \u00fanico y de grado de especialidad, seleccionado de caf\u00e9s que punt\u00faan 80 o m\u00e1s. Eso significa mejor materia prima, sabores m\u00e1s claros y una taza m\u00e1s intencional que el caf\u00e9 comercial com\u00fan.",
+    "faq.a5": "El caf\u00e9 de grado de especialidad empieza con mejor caf\u00e9 verde antes de llegar al tostador. Nuestros caf\u00e9s se seleccionan de lotes documentados con puntajes de 80+, lo que significa que fueron evaluados por la calidad de la taza en lugar de tratarse como caf\u00e9 comercial com\u00fan.\n\nEn la industria del caf\u00e9, los caf\u00e9s se eval\u00faan mediante cata: un proceso estandarizado que considera aroma, sabor, retrogusto, acidez, cuerpo, balance, dulzura, limpieza y defectos. Un puntaje de 80 o m\u00e1s es el umbral tradicional para caf\u00e9 de grado de especialidad.\n\nPara el cliente, el resultado es simple: sabores m\u00e1s limpios, notas m\u00e1s claras y una taza m\u00e1s intencional.",
     "contact.title": "Contacto y redes",
     "contact.subtitle": "El texto es la forma más rápida de hacer una pregunta rápida. El correo funciona mejor para seguimiento y preguntas personalizadas.",
     "contact.text.kicker": "Texto",
@@ -123,10 +130,6 @@
   const emailCard = document.getElementById("emailUsCard");
   const instagramCard = document.getElementById("instagramCard");
   const facebookCard = document.getElementById("facebookCard");
-  const heroOrderBtn = document.getElementById("heroOrderBtn");
-  const orderShopBtn = document.getElementById("orderShopBtn");
-  const navOrderBtn = document.getElementById("navOrderBtn");
-  const mobileNavOrderBtn = document.getElementById("mobileNavOrderBtn");
   const toggle = document.querySelector(".nav-toggle");
   const mobileNav = document.getElementById("mobile-nav");
   const brandMark = document.querySelector(".brand-mark");
@@ -263,12 +266,7 @@
   }
 
   function setupAnalytics() {
-    [
-      heroOrderBtn,
-      orderShopBtn,
-      navOrderBtn,
-      mobileNavOrderBtn
-    ].forEach(registerShopClickTracking);
+    document.querySelectorAll("[data-shop-cta]").forEach(registerShopClickTracking);
 
     registerContactClickTracking(textCard, "text_click", "contact_text");
     registerContactClickTracking(emailCard, "email_click", "contact_email");
@@ -548,6 +546,135 @@
     startAutoplay();
   }
 
+  function setupRoastSelector() {
+    const roastLayout = document.querySelector("#current-roast .origin-layout");
+    const roastButtons = [...document.querySelectorAll("[data-roast-tab]")];
+    const roastPanels = [...document.querySelectorAll("[data-roast-panel]")];
+    const roastGroups = [...document.querySelectorAll("[data-roast-panel-group]")];
+    const mobileRoastQuery = typeof window.matchMedia === "function"
+      ? window.matchMedia("(max-width: 760px)")
+      : null;
+    const reducedMotionQuery = typeof window.matchMedia === "function"
+      ? window.matchMedia("(prefers-reduced-motion: reduce)")
+      : null;
+    const ROAST_SWITCH_MS = 220;
+
+    if (!roastButtons.length || !roastPanels.length) return;
+
+    const panelByRoast = new Map(
+      roastPanels.map((panel) => [panel.getAttribute("data-roast-panel"), panel])
+    );
+    const defaultRoast = panelByRoast.has("medium")
+      ? "medium"
+      : roastButtons[0]?.getAttribute("data-roast-tab");
+
+    if (!defaultRoast) return;
+
+    let activeRoast = "";
+    let switchTimer = 0;
+
+    const updateRoastButtons = (roast) => {
+      roastButtons.forEach((button) => {
+        const isActive = button.getAttribute("data-roast-tab") === roast;
+        button.setAttribute("aria-selected", String(isActive));
+        button.tabIndex = isActive ? 0 : -1;
+        button.classList.toggle("is-active", isActive);
+      });
+    };
+
+    const syncRoastGroups = () => {
+      roastGroups.forEach((group) => {
+        const directPanels = [...group.children].filter((child) => child.matches?.("[data-roast-panel]"));
+        const hasVisiblePanel = directPanels.some((panel) => !panel.classList.contains("is-roast-hidden"));
+        group.classList.toggle("is-roast-group-hidden", !hasVisiblePanel);
+      });
+    };
+
+    const updateRoastPanels = (roast) => {
+      roastPanels.forEach((panel) => {
+        const isActive = panel.getAttribute("data-roast-panel") === roast;
+        panel.classList.toggle("is-roast-hidden", !isActive);
+      });
+
+      syncRoastGroups();
+    };
+
+    const shouldAnimateRoastSwitch = () => (
+      Boolean(roastLayout)
+      && Boolean(mobileRoastQuery?.matches)
+      && !reducedMotionQuery?.matches
+    );
+
+    const applyRoastState = (roast) => {
+      updateRoastButtons(roast);
+      updateRoastPanels(roast);
+      activeRoast = roast;
+    };
+
+    const clearPendingRoastSwitch = () => {
+      if (!switchTimer) return;
+      window.clearTimeout(switchTimer);
+      switchTimer = 0;
+    };
+
+    const setActiveRoast = (roast, { animate = false } = {}) => {
+      const nextRoast = panelByRoast.has(roast) ? roast : defaultRoast;
+      if (!nextRoast) return;
+
+      if (nextRoast === activeRoast && !switchTimer) {
+        updateRoastButtons(nextRoast);
+        return;
+      }
+
+      clearPendingRoastSwitch();
+
+      if (!animate || !shouldAnimateRoastSwitch()) {
+        roastLayout?.classList.remove("is-roast-switching");
+        applyRoastState(nextRoast);
+        return;
+      }
+
+      updateRoastButtons(nextRoast);
+      roastLayout.classList.add("is-roast-switching");
+
+      switchTimer = window.setTimeout(() => {
+        switchTimer = 0;
+        updateRoastPanels(nextRoast);
+        activeRoast = nextRoast;
+
+        requestAnimationFrame(() => {
+          roastLayout.classList.remove("is-roast-switching");
+        });
+      }, ROAST_SWITCH_MS);
+    };
+
+    roastButtons.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        setActiveRoast(button.getAttribute("data-roast-tab") || defaultRoast, { animate: true });
+      });
+
+      button.addEventListener("keydown", (event) => {
+        if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+
+        event.preventDefault();
+
+        let nextIndex = index;
+        if (event.key === "ArrowRight") nextIndex = (index + 1) % roastButtons.length;
+        if (event.key === "ArrowLeft") nextIndex = (index - 1 + roastButtons.length) % roastButtons.length;
+        if (event.key === "Home") nextIndex = 0;
+        if (event.key === "End") nextIndex = roastButtons.length - 1;
+
+        const nextButton = roastButtons[nextIndex];
+        if (!nextButton) return;
+
+        nextButton.focus();
+        setActiveRoast(nextButton.getAttribute("data-roast-tab") || defaultRoast, { animate: true });
+      });
+    });
+
+    setActiveRoast(defaultRoast);
+  }
+
   function updateDerivedContent(lang) {
     if (roastFaqAnswer) {
       roastFaqAnswer.textContent = buildRoastFaqAnswer(lang);
@@ -609,6 +736,7 @@
   setupMobileNav();
   setupAccordion();
   setupCarousel();
+  setupRoastSelector();
   setupLanguageToggle();
   setupAnalytics();
 })();

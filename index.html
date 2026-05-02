@@ -112,7 +112,7 @@
           "name": "What makes your coffee specialty?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Our current lineup is fresh, single-origin, specialty-grade coffee selected from coffees that cup at 80 or higher. That means better raw material, clearer flavor, and a more intentional cup than standard commodity coffee."
+            "text": "Specialty-grade coffee starts with better green coffee before it ever reaches the roaster. Our coffees are selected from documented 80+ lots, meaning they have been evaluated for cup quality rather than treated like ordinary commodity coffee.\n\nIn the coffee industry, coffees are assessed through cupping: a standardized tasting process that looks at things like aroma, flavor, aftertaste, acidity, body, balance, sweetness, cleanliness, and defects. A score of 80 or higher is the traditional threshold for specialty-grade coffee.\n\nFor customers, the result is simple: cleaner flavor, clearer tasting notes, and a more intentional cup."
           }
         }
       ]
@@ -143,7 +143,7 @@
           <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
           <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
           <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
-          <a class="nav-cta" id="navOrderBtn" data-cta-location="nav" href="https://millionaires-roast.square.site/" data-i18n="nav.orderCta">Order Now</a>
+          <a class="nav-cta" id="navOrderBtn" data-shop-cta data-cta-location="nav" href="https://millionaires-roast.square.site/" data-i18n="nav.orderCta">Order Now</a>
         </nav>
 
         <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
@@ -153,7 +153,7 @@
     </div>
 
     <div class="mobile-nav" id="mobile-nav" aria-hidden="true" inert>
-      <a class="nav-cta" id="mobileNavOrderBtn" data-cta-location="mobile_nav" href="https://millionaires-roast.square.site/" data-i18n="nav.orderCta">Order Now</a>
+      <a class="nav-cta" id="mobileNavOrderBtn" data-shop-cta data-cta-location="mobile_nav" href="https://millionaires-roast.square.site/" data-i18n="nav.orderCta">Order Now</a>
       <a class="nav-link" href="#current-roast" data-i18n="nav.roast">Current Coffees</a>
       <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
       <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
@@ -166,9 +166,9 @@
       <div class="container hero-single">
         <div class="hero-plate">
           <p class="kicker" data-i18n="hero.kicker">Roasted in Beardstown, serving Springfield and Central Illinois</p>
-          <h1 class="hero-title" id="hero-title" data-i18n="hero.title">Specialty coffee with a premium feel, not a premium price.</h1>
+          <h1 class="hero-title" id="hero-title" data-i18n="hero.title">Specialty coffee without the premium markup.</h1>
           <p class="hero-sub" data-i18n="hero.sub">
-            Millionaire's Roast is a Central Illinois small-batch roaster offering fresh, single-origin, specialty-grade coffees selected from lots that cup 80+, across medium, medium dark, and dark roast profiles.
+            Fresh, single-origin coffees selected from documented 80+ specialty-grade lots, roasted in small batches for Springfield and Central Illinois.
           </p>
 
           <div class="hero-conversion">
@@ -177,7 +177,7 @@
           </div>
 
           <div class="hero-actions">
-            <a class="btn btn-gold" id="heroOrderBtn" data-cta-location="hero" href="https://millionaires-roast.square.site/" data-i18n="hero.cta.primary">Buy Now</a>
+            <a class="btn btn-gold" id="heroOrderBtn" data-shop-cta data-cta-location="hero" href="https://millionaires-roast.square.site/" data-i18n="hero.cta.primary">Buy Now</a>
             <a class="btn btn-outline" href="#current-roast" data-i18n="hero.cta.secondary">See Current Coffees</a>
           </div>
 
@@ -187,36 +187,13 @@
               <span data-i18n="hero.proof1.body">Our lineup is built around fresh roasted coffee, not coffee that has been sitting around.</span>
             </div>
             <div class="hero-proof-item">
-              <strong data-i18n="hero.proof2.title">Specialty grade, 80+</strong>
-              <span data-i18n="hero.proof2.body">Every current coffee is single origin, specialty grade, and selected from coffees that cup 80 or higher.</span>
+              <strong data-i18n="hero.proof2.title">Documented specialty grade</strong>
+              <span data-i18n="hero.proof2.body">We select coffees from documented 80+ green coffee lots, then roast them fresh so the cup stays clean, clear, and approachable.</span>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <section class="section" id="order" aria-labelledby="order-title">
-        <div class="container">
-          <div class="section-head center narrow-head">
-            <h2 class="section-title" id="order-title" data-i18n="order.title">Order Online</h2>
-            <p class="section-subtitle" data-i18n="order.subtitle">Use the main shop to order fresh single-origin coffee in one place.</p>
-          </div>
-
-          <div class="order-grid order-grid-single">
-            <article class="card card-plate order-card order-card-center">
-              <p class="order-kicker" data-i18n="order.card.kicker">Main storefront</p>
-              <h3 class="card-title" data-i18n="order.card.title">Shop fresh specialty coffee</h3>
-              <p class="card-text" data-i18n="order.card.body">Open the shop to order fresh, single-origin, specialty-grade coffee for pickup, delivery, or Illinois shipping.</p>
-              <a class="btn btn-gold" id="orderShopBtn" data-cta-location="order" href="https://millionaires-roast.square.site/" data-i18n="order.card.cta">Open the Shop</a>
-              <p class="order-small-note" data-i18n="order.card.note">Secure checkout for pickup, delivery, and Illinois shipping.</p>
-            </article>
-          </div>
-
-          <div class="order-note card card-plate">
-            <p><strong data-i18n="order.note.lead">Need help choosing?</strong> <span data-i18n="order.note.body">Text us and we will help you pick the right coffee.</span></p>
-          </div>
-        </div>
-      </section>
 
     <section class="lang-section" aria-label="Language selection">
       <div class="container">
@@ -234,7 +211,7 @@
       <div class="container current-coffees">
         <div class="section-head center narrow-head">
           <h2 class="section-title" id="current-roast-title" data-i18n="coffees.title">Current Coffees</h2>
-          <p class="section-subtitle" data-i18n="coffees.subtitle">We currently offer three fresh single-origin coffees across three roast profiles. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and chosen to give Central Illinois customers a better cup without luxury-shop pricing.</p>
+          <p class="section-subtitle" data-i18n="coffees.subtitle">We currently offer three fresh single-origin coffees across three roast profiles. Each coffee is selected from documented specialty-grade lots that cup 80+, giving Central Illinois customers a cleaner, more intentional cup without luxury-shop pricing.</p>
         </div>
 
         <article class="card card-plate coffee-pricing-summary" aria-label="Shared pricing for the current lineup">
@@ -243,11 +220,20 @@
             <p class="coffee-pricing-line" data-i18n="coffee.pricing.bag">14 oz Bag $18</p>
             <p class="coffee-pricing-line" data-i18n="coffee.pricing.kcups">K-Cups: 8 pack $10 &middot; 18 pack $22 &middot; 24 pack $28</p>
           </div>
-          <p class="coffee-pricing-note" data-i18n="coffee.pricing.note">Fresh specialty coffee priced across the full lineup.</p>
+          <p class="coffee-pricing-note" data-i18n="coffee.pricing.note">Documented specialty-grade coffee with simple pricing across the full lineup.</p>
         </article>
 
+        <div class="roast-selector" aria-labelledby="roast-selector-label">
+          <p class="roast-selector-label" id="roast-selector-label" data-i18n="roast.selector.label">Choose your roast</p>
+          <div class="roast-selector-tabs" role="tablist" aria-labelledby="roast-selector-label">
+            <button class="roast-selector-btn is-active" id="roast-tab-medium" type="button" role="tab" data-roast-tab="medium" aria-selected="true" aria-controls="roast-panel-medium" tabindex="0" data-i18n="roast.selector.medium">Medium</button>
+            <button class="roast-selector-btn" id="roast-tab-medium-dark" type="button" role="tab" data-roast-tab="medium-dark" aria-selected="false" aria-controls="roast-panel-medium-dark" tabindex="-1" data-i18n="roast.selector.mediumDark">Medium Dark</button>
+            <button class="roast-selector-btn" id="roast-tab-dark" type="button" role="tab" data-roast-tab="dark" aria-selected="false" aria-controls="roast-panel-dark" tabindex="-1" data-i18n="roast.selector.dark">Dark</button>
+          </div>
+        </div>
+
         <div class="origin-layout">
-          <article class="card card-plate origin-flagship">
+          <article class="card card-plate origin-flagship" id="roast-panel-medium" data-roast-panel="medium">
             <div class="origin-flagship-copy">
               <div class="origin-header">
                 <p class="order-kicker" data-i18n="coffee.cr.kicker">Flagship Origin</p>
@@ -282,7 +268,7 @@
                   <span class="spec-value" data-i18n="coffee.cr.availability">Available now in whole bean, ground, or K-Cups</span>
                 </div>
               </div>
-
+              <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_medium" href="https://millionaires-roast.square.site/" data-i18n="coffee.cta.medium">Order Medium Roast</a>
             </div>
 
             <div class="origin-conservation">
@@ -291,8 +277,8 @@
             </div>
           </article>
 
-          <div class="origin-grid">
-            <article class="card card-plate origin-card">
+          <div class="origin-grid is-roast-group-hidden" data-roast-panel-group>
+            <article class="card card-plate origin-card is-roast-hidden" id="roast-panel-medium-dark" data-roast-panel="medium-dark">
               <div class="origin-header">
                 <span class="origin-badge" data-i18n="coffee.pe.badge">Medium Dark Roast</span>
               </div>
@@ -317,9 +303,10 @@
                   <span class="spec-value" data-i18n="coffee.pe.availability">Available now in whole bean, ground, or K-Cups</span>
                 </div>
               </div>
+              <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_medium_dark" href="https://millionaires-roast.square.site/" data-i18n="coffee.cta.mediumDark">Order Medium Dark Roast</a>
             </article>
 
-            <article class="card card-plate origin-card">
+            <article class="card card-plate origin-card is-roast-hidden" id="roast-panel-dark" data-roast-panel="dark">
               <div class="origin-header">
                 <span class="origin-badge" data-i18n="coffee.br.badge">Dark Roast</span>
               </div>
@@ -344,6 +331,7 @@
                   <span class="spec-value" data-i18n="coffee.br.availability">Available now in whole bean, ground, or K-Cups</span>
                 </div>
               </div>
+              <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_dark" href="https://millionaires-roast.square.site/" data-i18n="coffee.cta.dark">Order Dark Roast</a>
             </article>
           </div>
         </div>
@@ -413,7 +401,7 @@
             <div class="about-story-copy">
               <h3 class="card-title" data-i18n="about.story.title">Meet Maximiliano</h3>
               <p class="card-text" data-i18n="about.story.p1">Millionaire's Roast started through the Cass County CEO program, where Maximiliano Gomez turned a business idea into a real small-batch coffee brand rooted in his community.</p>
-              <p class="card-text" data-i18n="about.story.p2">Each batch begins with carefully sourced fresh coffee, selected as single-origin specialty-grade lots from coffees that cup at 80 or higher. The goal is not to make coffee feel exclusive. It is to offer something genuinely high quality at a price normal people can come back to.</p>
+              <p class="card-text" data-i18n="about.story.p2">Each batch begins with carefully sourced green coffee selected from documented single-origin, specialty-grade lots that cup 80+. The goal is not to make coffee feel exclusive. It is to offer genuinely high-quality coffee at a price normal people can come back to.</p>
               <p class="card-text" data-i18n="about.story.p3">Roasted in Beardstown and regularly sold around Springfield and Central Illinois, the brand is growing through direct sales, local events, pickup, delivery, and simple online shipping for Illinois customers.</p>
             </div>
           </article>
@@ -423,7 +411,7 @@
               <h3 class="card-title" data-i18n="about.side.title">What sets it apart</h3>
               <ul class="checklist">
                 <li data-i18n="about.side.li1">Fresh single-origin coffee</li>
-                <li data-i18n="about.side.li2">Specialty-grade coffee selected from 80+ cups</li>
+                <li data-i18n="about.side.li2">Documented specialty-grade coffee from 80+ lots</li>
                 <li data-i18n="about.side.li3">Flexible ordering for shipping, pickup, delivery, and K-Cups</li>
                 <li data-i18n="about.side.li4">Built for Central Illinois customers, not just coffee insiders</li>
               </ul>
@@ -496,7 +484,11 @@
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-a" id="faq-panel-5" data-panel role="region" aria-labelledby="faq-trigger-5">
-            <p data-i18n="faq.a5">Our current lineup is fresh, single-origin, specialty-grade coffee selected from coffees that cup at 80 or higher. That means better raw material, clearer flavor, and a more intentional cup than standard commodity coffee.</p>
+            <p data-i18n="faq.a5">Specialty-grade coffee starts with better green coffee before it ever reaches the roaster. Our coffees are selected from documented 80+ lots, meaning they have been evaluated for cup quality rather than treated like ordinary commodity coffee.
+
+In the coffee industry, coffees are assessed through cupping: a standardized tasting process that looks at things like aroma, flavor, aftertaste, acidity, body, balance, sweetness, cleanliness, and defects. A score of 80 or higher is the traditional threshold for specialty-grade coffee.
+
+For customers, the result is simple: cleaner flavor, clearer tasting notes, and a more intentional cup.</p>
           </div>
         </div>
       </div>

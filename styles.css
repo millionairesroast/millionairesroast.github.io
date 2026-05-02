@@ -71,7 +71,7 @@ a:focus-visible, button:focus-visible{
   outline-offset:3px;
 }
 
-#hero, #current-roast, #order, #about, #faq, #contact{scroll-margin-top:96px}
+#hero, #current-roast, #about, #faq, #contact{scroll-margin-top:96px}
 
 .container{
   position:relative;
@@ -452,48 +452,6 @@ a:focus-visible, button:focus-visible{
   font-size:16px;
 }
 
-.order-grid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:18px;
-}
-.order-grid-two{
-  grid-template-columns:repeat(2,minmax(0,1fr));
-}
-.order-grid-single{
-  grid-template-columns:minmax(0,780px);
-  justify-content:center;
-}
-.order-card{
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-}
-.order-card-center{
-  text-align:center;
-  align-items:center;
-}
-.order-card-center .card-text,
-.order-card-center .order-small-note{
-  max-width:44rem;
-}
-.order-card .btn{
-  margin-top:auto;
-}
-.order-actions-stack{
-  display:grid;
-  grid-template-columns:repeat(2, minmax(0, 1fr));
-  gap:12px;
-  margin-top:auto;
-}
-.order-actions-stack .btn{
-  margin-top:0;
-}
-.order-small-note{
-  margin:0;
-  color:var(--muted2);
-  font-size:14px;
-}
 .order-kicker, .card-kicker, .spec-label{
   margin:0;
   color:rgba(200,164,77,.94);
@@ -501,22 +459,15 @@ a:focus-visible, button:focus-visible{
   letter-spacing:.18em;
   text-transform:uppercase;
 }
-.order-meta, .follow-links{
+.follow-links{
   display:flex;
   flex-wrap:wrap;
   gap:10px;
-}
-.follow-links{
   width:100%;
   justify-content:center;
   margin-top:18px;
   padding-top:6px;
 }
-.order-note{
-  margin-top:18px;
-  text-align:center;
-}
-.order-note p{margin:0;color:var(--muted)}
 
 .current-coffees{
   display:grid;
@@ -566,7 +517,11 @@ a:focus-visible, button:focus-visible{
   gap:20px 28px;
   align-items:center;
 }
-.origin-flagship-copy{grid-area:copy}
+.origin-flagship-copy{
+  grid-area:copy;
+  display:grid;
+  gap:16px;
+}
 .origin-flagship-media{
   grid-area:media;
   margin:0;
@@ -608,9 +563,23 @@ a:focus-visible, button:focus-visible{
 .origin-header{
   display:flex;
   align-items:center;
-  justify-content:space-between;
+  justify-content:center;
   gap:12px;
   flex-wrap:wrap;
+  text-align:center;
+}
+.origin-flagship .origin-header{
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:flex-start;
+  text-align:left;
+}
+.origin-flagship .origin-header .order-kicker{
+  align-self:flex-start;
+  text-align:left;
+}
+.origin-flagship .origin-header .origin-badge{
+  align-self:center;
 }
 .origin-title{
   margin:0;
@@ -631,6 +600,10 @@ a:focus-visible, button:focus-visible{
   color:rgba(244,241,234,.9);
   font-size:15px;
 }
+.coffee-order-btn{
+  align-self:flex-start;
+  justify-self:start;
+}
 .origin-badge{
   display:inline-flex;
   align-items:center;
@@ -644,6 +617,58 @@ a:focus-visible, button:focus-visible{
   font-weight:800;
   letter-spacing:.08em;
   text-transform:uppercase;
+}
+.roast-selector{
+  display:none;
+}
+.roast-selector-label{
+  margin:0;
+  color:var(--muted2);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.roast-selector-tabs{
+  display:grid;
+  gap:10px;
+}
+.roast-selector-btn{
+  appearance:none;
+  border:1px solid rgba(200,164,77,.24);
+  background:rgba(200,164,77,.1);
+  color:rgba(244,241,234,.92);
+  border-radius:999px;
+  padding:12px 14px;
+  min-height:48px;
+  font:inherit;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.08em;
+  line-height:1.2;
+  text-transform:uppercase;
+  text-align:center;
+  cursor:pointer;
+  transition:
+    background var(--t) var(--ease),
+    border-color var(--t) var(--ease),
+    box-shadow var(--t) var(--ease),
+    color var(--t) var(--ease),
+    transform var(--t) var(--ease);
+}
+.roast-selector-btn:hover{
+  border-color:rgba(200,164,77,.42);
+  background:rgba(200,164,77,.14);
+}
+.roast-selector-btn:active{
+  transform:translateY(1px);
+}
+.roast-selector-btn.is-active,
+.roast-selector-btn[aria-selected="true"]{
+  border-color:rgba(226,196,106,.72);
+  background:linear-gradient(180deg, rgba(200,164,77,.28), rgba(200,164,77,.16));
+  box-shadow:0 12px 28px rgba(0,0,0,.28);
+  color:var(--ink);
 }
 .origin-spec-grid{
   display:grid;
@@ -876,7 +901,7 @@ a:focus-visible, button:focus-visible{
   color:var(--muted);
   transition:max-height var(--t) var(--ease);
 }
-.faq-a p{margin:12px 0 18px;font-size:16px}
+.faq-a p{margin:12px 0 18px;font-size:16px;white-space:pre-line}
 .faq-item + .faq-a{border-top:1px solid rgba(200,164,77,.16)}
 
 .contact-grid{
@@ -1005,7 +1030,7 @@ a:focus-visible, button:focus-visible{
 @media (max-width:980px){
   .nav{display:none}
   .nav-toggle{display:inline-block}
-  .hero-grid, .hero-single, .order-grid, .order-grid-two, .about-layout, .contact-grid{grid-template-columns:1fr}
+  .hero-grid, .hero-single, .about-layout, .contact-grid{grid-template-columns:1fr}
   .origin-flagship{
     grid-template-columns:1fr;
     grid-template-areas:"copy" "media" "details";
@@ -1047,8 +1072,6 @@ a:focus-visible, button:focus-visible{
   .hero-proof{grid-template-columns:1fr}
   .hero-actions{display:grid;grid-template-columns:1fr}
   .btn{width:100%;min-width:0}
-  .order-actions-stack{grid-template-columns:1fr}
-
   .carousel-shell{
     grid-template-columns:1fr;
   }
@@ -1072,6 +1095,34 @@ a:focus-visible, button:focus-visible{
 
   .section{padding:40px 0}
   .card-plate{padding:20px 18px}
+  #current-roast .origin-layout{
+    transition:opacity 220ms var(--ease), transform 220ms var(--ease);
+  }
+  #current-roast .origin-layout.is-roast-switching{
+    opacity:0;
+    transform:translateY(8px);
+    pointer-events:none;
+  }
+  #current-roast .origin-layout .origin-badge{
+    display:none;
+  }
+  .roast-selector{
+    display:grid;
+    gap:12px;
+    margin:0 0 18px;
+  }
+  .roast-selector-tabs{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+  .roast-selector-btn{
+    width:100%;
+    min-height:52px;
+    padding:14px 10px;
+  }
+  .origin-layout [data-roast-panel].is-roast-hidden,
+  .origin-layout [data-roast-panel-group].is-roast-group-hidden{
+    display:none;
+  }
   .origin-title{font-size:clamp(26px,8vw,36px)}
   .origin-process{font-size:18px}
   .origin-grid, .origin-spec-grid{grid-template-columns:1fr}

@@ -20,6 +20,7 @@
   --ease:cubic-bezier(.2,.8,.2,1);
   --t:320ms;
   --header-height:76px;
+  --mobile-hero-max-height:820px;
 }
 
 *{box-sizing:border-box}
@@ -329,6 +330,18 @@ a:focus-visible, button:focus-visible{
   background:radial-gradient(760px 280px at 50% -15%, rgba(200,164,77,.14), transparent 60%);
 }
 .hero-plate > *, .card-plate > *{position:relative;z-index:1}
+.hero-copy,
+.hero-offer{
+  position:relative;
+  z-index:1;
+}
+.hero-copy{
+  max-width:44rem;
+}
+.hero-offer{
+  max-width:34rem;
+  margin-top:22px;
+}
 .kicker{
   margin:0 0 16px;
   color:rgba(244,241,234,.8);
@@ -352,7 +365,7 @@ a:focus-visible, button:focus-visible{
 .hero-conversion{
   display:grid;
   gap:6px;
-  margin-top:22px;
+  margin-top:0;
   max-width:34rem;
 }
 .hero-pricing{
@@ -1107,7 +1120,7 @@ a:focus-visible, button:focus-visible{
   .lang-btn{padding:8px 12px;font-size:11px}
 
   .hero{
-    min-height:calc(100dvh - var(--header-height, 66px));
+    min-height:min(calc(100dvh - var(--header-height, 66px)), var(--mobile-hero-max-height, 820px));
     padding:10px 0;
     display:flex;
     align-items:stretch;
@@ -1123,7 +1136,8 @@ a:focus-visible, button:focus-visible{
     min-height:100%;
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:space-between;
+    gap:28px;
     padding:24px 17px 18px;
     border-radius:24px;
     border-color:rgba(200,164,77,.22);
@@ -1141,6 +1155,15 @@ a:focus-visible, button:focus-visible{
   .hero .kicker{
     display:none;
   }
+  .hero-copy{
+    max-width:none;
+  }
+  .hero-offer{
+    width:100%;
+    max-width:none;
+    margin-top:0;
+    text-align:center;
+  }
   .hero-title{
     font-size:clamp(32px, 10vw, 43px);
     line-height:.96;
@@ -1154,14 +1177,17 @@ a:focus-visible, button:focus-visible{
     line-height:1.52;
   }
   .hero-conversion{
-    gap:4px;
-    margin-top:14px;
+    justify-items:center;
+    text-align:center;
+    gap:5px;
+    margin-top:0;
     max-width:none;
   }
   .hero-pricing,
   .hero-helper{
     font-size:14px;
     line-height:1.45;
+    text-align:center;
   }
   .hero-actions{
     display:grid;
@@ -1291,6 +1317,17 @@ a:focus-visible, button:focus-visible{
 
 }
 
+@media (max-width:760px) and (max-height:620px){
+  .hero{
+    min-height:auto;
+  }
+
+  .hero-plate{
+    min-height:auto;
+    justify-content:flex-start;
+  }
+}
+
 @media (max-width:390px){
   .hero{
     padding-top:8px;
@@ -1299,6 +1336,7 @@ a:focus-visible, button:focus-visible{
   .hero-plate{
     padding:22px 15px 17px;
     border-radius:22px;
+    gap:22px;
   }
 
   .hero-title{

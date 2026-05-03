@@ -385,10 +385,11 @@
     if (!accordion || !accordionButtons.length) return;
 
     accordionButtons.forEach((button) => closeAccordionButton(button, true));
-    accordionButtons.filter((button) => button.hasAttribute("data-open-default")).forEach(openAccordionButtonElement);
+
     accordion.addEventListener("click", (event) => {
       const button = event.target.closest(".faq-item");
       if (!button || !accordion.contains(button)) return;
+
       if (button.getAttribute("aria-expanded") === "true") {
         closeAccordionButton(button);
       } else {
@@ -719,7 +720,7 @@
       requestAnimationFrame(() => {
         root.classList.remove("is-lang-fading");
       });
-    }, 180);
+    }, 260);
   }
 
   function setupLanguageToggle() {
@@ -739,11 +740,43 @@
     applyTranslations(initialLang);
   }
 
+  function setupSmoothAnchorScrolling() {
+    const reducedMotionQuery = typeof window.matchMedia === "function"
+      ? window.matchMedia("(prefers-reduced-motion: reduce)")
+      : null;
+
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest('a[href^="#"]');
+      if (!link) return;
+
+      const href = link.getAttribute("href");
+      if (!href || href === "#") return;
+
+      // Do not hijack modified clicks or non-left clicks.
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+        return;
+      }
+
+      const target = document.querySelector(href);
+      if (!target) return;
+
+      event.preventDefault();
+
+      target.scrollIntoView({
+        behavior: reducedMotionQuery?.matches ? "auto" : "smooth",
+        block: "start"
+      });
+
+      history.pushState(null, "", href);
+    });
+  }
+
   applyBrandFallback();
   setupMobileNav();
   setupAccordion();
   setupCarousel();
   setupRoastSelector();
   setupLanguageToggle();
+  setupSmoothAnchorScrolling();
   setupAnalytics();
 })();

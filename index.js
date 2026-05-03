@@ -286,13 +286,7 @@
     root.style.setProperty("--header-height", `${headerHeight}px`);
   }
 
-  function setInitialViewportHeight() {
-    const viewportHeight = window.visualViewport?.height || window.innerHeight;
-    root.style.setProperty("--initial-viewport-height", `${Math.round(viewportHeight)}px`);
-  }
-
   function setupViewportSizing() {
-    setInitialViewportHeight();
     syncHeaderHeight();
 
     window.addEventListener("resize", syncHeaderHeight);

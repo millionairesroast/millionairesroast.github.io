@@ -21,6 +21,7 @@
   --t:320ms;
   --header-height:76px;
   --initial-viewport-height:100vh;
+  --mobile-browser-buffer:56px;
   --mobile-hero-max-height:820px;
 }
 
@@ -1113,6 +1114,14 @@ a:focus-visible, button:focus-visible{
   .mobile-nav{display:none}
 }
 
+@supports not (height: 100svh){
+  @media (max-width:760px){
+    .hero{
+      min-height:min(calc(100vh - var(--header-height, 66px) - var(--mobile-browser-buffer, 56px)), var(--mobile-hero-max-height, 820px));
+    }
+  }
+}
+
 @media (max-width:760px){
   .container{width:min(var(--container), calc(100% - 24px))}
   .site-header{background:rgba(7,7,10,.78)}
@@ -1161,7 +1170,7 @@ a:focus-visible, button:focus-visible{
   .lang-btn{padding:8px 12px;font-size:11px}
 
   .hero{
-    min-height:min(calc(var(--initial-viewport-height, 100vh) - var(--header-height, 66px)), var(--mobile-hero-max-height, 820px));
+    min-height:min(calc(100svh - var(--header-height, 66px) - var(--mobile-browser-buffer, 56px)), var(--mobile-hero-max-height, 820px));
     padding:10px 0;
     display:flex;
     align-items:stretch;

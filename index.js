@@ -281,6 +281,21 @@
     registerContactClickTracking(facebookCard, "facebook_click", "contact_facebook");
   }
 
+  function syncViewportSizing() {
+    const headerHeight = header ? header.offsetHeight : 0;
+    root.style.setProperty("--header-height", `${headerHeight}px`);
+  }
+
+  function setupViewportSizing() {
+    syncViewportSizing();
+
+    window.addEventListener("resize", syncViewportSizing);
+
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener("resize", syncViewportSizing);
+    }
+  }
+
   function syncMobileMenuHeight() {
     if (!toggle || !mobileNav || toggle.getAttribute("aria-expanded") !== "true") return;
 
@@ -322,6 +337,7 @@
       if (event.target.closest("a")) setMobile(false);
     });
     window.addEventListener("resize", () => {
+      syncViewportSizing();
       syncMobileMenuHeight();
       syncOpenAccordionHeight();
     });
@@ -772,6 +788,7 @@
   }
 
   applyBrandFallback();
+  setupViewportSizing();
   setupMobileNav();
   setupAccordion();
   setupCarousel();

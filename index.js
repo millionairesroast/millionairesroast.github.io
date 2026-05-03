@@ -17,7 +17,7 @@
     "lang.label": "Idioma",
     "hero.kicker": "Tostado en Beardstown, sirviendo a Springfield y al centro de Illinois",
     "hero.title": "Café de especialidad sin el sobreprecio premium.",
-    "hero.sub": "Café fresco de origen único, tostado en lotes pequeños y con precio pensado para clientes que vuelven.",
+    "hero.sub": "Café fresco de origen único seleccionado de lotes documentados de grado de especialidad, tostado en lotes pequeños y con precio para que puedas volver por más.",
     "hero.pricing": "Bolsas de 14 oz $18 \u2022 K-Cups desde $10",
     "hero.helper": "Recogida, entrega o envío dentro de Illinois.",
     "hero.cta.primary": "Comprar ahora",

@@ -1,6 +1,10 @@
 (() => {
   const PHONE_NUMBER = "12174167072";
   const STORAGE_KEY = "mr_lang";
+  const SMS_BODY = {
+    en: "Hi! I’d like to order coffee from Millionaire’s Roast. What do you have available?",
+    es: "¡Hola! Me gustaría ordenar café de Millionaire's Roast. ¿Qué tienen disponible?"
+  };
 
   const ES = {
     skip: "Saltar al contenido",
@@ -13,9 +17,9 @@
     "lang.label": "Idioma",
     "hero.kicker": "Tostado en Beardstown, sirviendo a Springfield y al centro de Illinois",
     "hero.title": "Café de especialidad sin el sobreprecio premium.",
-    "hero.sub": "Caf\u00e9s frescos de origen \u00fanico, seleccionados de lotes documentados de grado de especialidad con puntajes de 80+, tostados en lotes peque\u00f1os para Springfield y el centro de Illinois.",
+    "hero.sub": "Café fresco de origen único, tostado en lotes pequeños y con precio pensado para clientes que vuelven.",
     "hero.pricing": "Bolsas de 14 oz $18 \u2022 K-Cups desde $10",
-    "hero.helper": "Ordena en l\u00ednea para recogida, entrega o env\u00edo dentro de Illinois.",
+    "hero.helper": "Recogida, entrega o envío dentro de Illinois.",
     "hero.cta.primary": "Comprar ahora",
     "hero.cta.secondary": "Ver cafés actuales",
     "hero.proof1.title": "Siempre fresco",
@@ -118,8 +122,7 @@
     "contact.fb.kicker": "Facebook",
     "contact.fb.main": "Millionaire's Roast",
     "contact.fb.sub": "Anuncios, eventos y noticias locales",
-    "footer.line": "Este producto fue elaborado en una cocina del hogar no inspeccionada por un departamento de salud que tambi\u00e9n puede procesar al\u00e9rgenos alimentarios comunes. Si tiene preocupaciones de seguridad, comun\u00edquese con su departamento de salud local.",
-    "sms.body": "¡Hola! Tengo una pregunta sobre Millionaire's Roast."
+    "footer.line": "Este producto fue elaborado en una cocina del hogar no inspeccionada por un departamento de salud que tambi\u00e9n puede procesar al\u00e9rgenos alimentarios comunes. Si tiene preocupaciones de seguridad, comun\u00edquese con su departamento de salud local."
   };
 
   const root = document.documentElement;
@@ -168,7 +171,7 @@
   }
 
   function getCopy(lang, key) {
-    return lang === "es" ? (ES[key] ?? BASE[key]) : BASE[key];
+    return lang === "es" ? (ES[key] ?? BASE[key] ?? "") : (BASE[key] ?? "");
   }
 
   function buildRoastFaqAnswer(lang) {
@@ -218,8 +221,12 @@
     faqSchemaScript.textContent = JSON.stringify(schema, null, 2);
   }
 
+  function getSmsBody(lang) {
+    return SMS_BODY[lang] || SMS_BODY.en;
+  }
+
   function setSmsLink(lang) {
-    const bodyText = encodeURIComponent(getCopy(lang, "sms.body"));
+    const bodyText = encodeURIComponent(getSmsBody(lang));
     const separator = isIOS ? "&" : "?";
     const smsUrl = `sms:${PHONE_NUMBER}${separator}body=${bodyText}`;
 

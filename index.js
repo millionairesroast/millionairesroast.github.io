@@ -281,18 +281,24 @@
     registerContactClickTracking(facebookCard, "facebook_click", "contact_facebook");
   }
 
-  function syncViewportSizing() {
+  function syncHeaderHeight() {
     const headerHeight = header ? header.offsetHeight : 0;
     root.style.setProperty("--header-height", `${headerHeight}px`);
   }
 
-  function setupViewportSizing() {
-    syncViewportSizing();
+  function setInitialViewportHeight() {
+    const viewportHeight = window.visualViewport?.height || window.innerHeight;
+    root.style.setProperty("--initial-viewport-height", `${Math.round(viewportHeight)}px`);
+  }
 
-    window.addEventListener("resize", syncViewportSizing);
+  function setupViewportSizing() {
+    setInitialViewportHeight();
+    syncHeaderHeight();
+
+    window.addEventListener("resize", syncHeaderHeight);
 
     if (window.visualViewport) {
-      window.visualViewport.addEventListener("resize", syncViewportSizing);
+      window.visualViewport.addEventListener("resize", syncHeaderHeight);
     }
   }
 
@@ -337,7 +343,7 @@
       if (event.target.closest("a")) setMobile(false);
     });
     window.addEventListener("resize", () => {
-      syncViewportSizing();
+      syncHeaderHeight();
       syncMobileMenuHeight();
       syncOpenAccordionHeight();
     });

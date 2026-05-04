@@ -384,6 +384,15 @@ a:focus-visible, button:focus-visible{
   letter-spacing:.24em;
   text-transform:uppercase;
 }
+.hero-eyebrow{
+  margin:0 0 12px;
+  color:rgba(226,196,106,.88);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.16em;
+  line-height:1.35;
+  text-transform:uppercase;
+}
 .hero-title{
   margin:0;
   max-width:58rem;
@@ -1204,6 +1213,11 @@ a:focus-visible, button:focus-visible{
   /* Hide the desktop kicker only on mobile */
   .hero .kicker{
     display:none;
+  }
+  .hero-eyebrow{
+    margin-bottom:10px;
+    font-size:11px;
+    letter-spacing:.13em;
   }
   .hero-copy{
     max-width:none;

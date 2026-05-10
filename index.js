@@ -2,120 +2,191 @@
   const PHONE_NUMBER = "12174167072";
   const STORAGE_KEY = "mr_lang";
   const SMS_BODY = {
-    en: "Hi! I’d like to order coffee from Millionaire’s Roast. What do you have available?",
-    es: "¡Hola! Me gustaría ordenar café de Millionaire's Roast. ¿Qué tienen disponible?"
+    en: "Hi! I'd like to order coffee from Millionaire's Roast. What do you have available?",
+    es: "\u00a1Hola! Me gustar\u00eda ordenar caf\u00e9 de Millionaire's Roast. \u00bfQu\u00e9 tienen disponible?"
   };
 
   const ES = {
-    skip: "Saltar al contenido",
-    "brand.tag": "Café de especialidad en lotes pequeños",
-    "nav.roast": "Cafés actuales",
+    "skip": "Saltar al contenido",
+    "announce.text": "Recogida en Springfield y Beardstown \u2022 Entrega local \u2022 Env\u00edos en Illinois",
+    "brand.tag": "Caf\u00e9 de especialidad en lotes peque\u00f1os",
+    "nav.roast": "Caf\u00e9s actuales",
+    "nav.choose": "Ay\u00fadame a elegir",
+    "nav.brew": "Gu\u00eda de preparaci\u00f3n",
     "nav.about": "Acerca de",
     "nav.faq": "Preguntas",
     "nav.contact": "Contacto",
     "nav.orderCta": "Ordenar ahora",
     "lang.label": "Idioma",
-    "hero.kicker": "Tostado en Beardstown, sirviendo a Springfield y al centro de Illinois",
-    "hero.eyebrow": "Café en lotes pequeños tostado en Illinois",
-    "hero.title": "Café de especialidad sin el sobreprecio premium.",
-    "hero.sub": "Café fresco de origen único de lotes verificados de grado de especialidad, tostado en lotes pequeños y con precio para tomarlo todos los días.",
-    "hero.pricing": "Bolsas de especialidad de 14 oz $18 \u2022 K-Cups desde $10",
-    "hero.helper": "Recogida en Springfield y Beardstown, entrega local y envío dentro de Illinois.",
-    "hero.cta.primary": "Comprar ahora",
-    "hero.cta.secondary": "Ver cafés actuales",
-    "hero.proof1.title": "Siempre fresco",
-    "hero.proof1.body": "Nuestra l\u00ednea se basa en caf\u00e9 reci\u00e9n tostado, no en caf\u00e9 que lleva tiempo guardado.",
-    "hero.proof2.title": "Grado de especialidad documentado",
-    "hero.proof2.body": "Seleccionamos caf\u00e9s de lotes verdes documentados con puntajes de 80+, y luego los tostamos frescos para mantener una taza limpia, clara y accesible.",
-    "order.title": "Ordena en línea",
-    "order.subtitle": "Usa la tienda principal para pedir caf\u00e9 fresco de origen \u00fanico en un solo lugar.",
-    "order.card.kicker": "Tienda principal",
-    "order.card.title": "Compra caf\u00e9 fresco de especialidad",
-    "order.card.body": "Abre la tienda para pedir caf\u00e9 fresco, de origen \u00fanico y de grado de especialidad para recogida, entrega o env\u00edo dentro de Illinois.",
-    "order.card.cta": "Abrir la tienda",
-    "order.card.note": "Pago seguro para recogida, entrega y env\u00edos dentro de Illinois.",
-    "order.note.lead": "¿Necesitas ayuda para elegir?",
-    "order.note.body": "Mándanos un texto y te ayudamos a elegir el café correcto.",
-    "coffees.title": "Cafés actuales",
-    "coffees.subtitle": "Actualmente ofrecemos tres caf\u00e9s frescos de origen \u00fanico dentro de tres perfiles de tueste. Cada caf\u00e9 se selecciona de lotes documentados de grado de especialidad con puntajes de 80+, para darle a los clientes del centro de Illinois una taza m\u00e1s limpia e intencional sin precios inflados.",
-    "coffee.pricing.title": "Precio simple",
-    "coffee.pricing.bag": "Bolsa de 14 oz $18",
-    "coffee.pricing.kcups": "K-Cups: 8 pack $10 \u00b7 18 pack $22 \u00b7 24 pack $28",
-    "coffee.pricing.note": "Caf\u00e9 de grado de especialidad documentado con precio simple en toda la l\u00ednea.",
-    "roast.selector.label": "Elige tu tueste",
-    "roast.selector.medium": "Medio",
-    "roast.selector.mediumDark": "Medio oscuro",
-    "roast.selector.dark": "Oscuro",
-    "coffee.cta.medium": "Ordenar tueste medio",
-    "coffee.cta.mediumDark": "Ordenar tueste medio oscuro",
-    "coffee.cta.dark": "Ordenar tueste oscuro",
+
+    "hero.eyebrow": "Caf\u00e9 en lotes peque\u00f1os tostado en Illinois",
+    "hero.title": "Caf\u00e9 de especialidad sin el sobreprecio premium.",
+    "hero.sub": "Caf\u00e9 fresco de origen \u00fanico de lotes de especialidad documentados 80+, tostado en lotes peque\u00f1os para Springfield, Beardstown y el centro de Illinois.",
+    "hero.pricing": "Bolsas de 14 oz $18 \u2022 K-Cups desde $10",
+    "hero.helper": "Recogida en Springfield y Beardstown, entrega local y env\u00edo dentro de Illinois.",
+    "hero.cta.primary": "Comprar caf\u00e9s actuales",
+    "hero.cta.secondary": "Ay\u00fadame a elegir",
+    "hero.badge.kicker": "Insignia actual",
+    "hero.badge.title": "Costa Rican Tarraz\u00fa Jaguar Honey",
+    "hero.badge.meta": "Proceso Honey \u2022 Tueste medio",
+
+    "featured.eyebrow": "Oferta destacada",
+    "featured.title": "Costa Rican Tarraz\u00fa Jaguar Honey",
+    "featured.taste": "Chocolate \u2022 Nectarina \u2022 Guayaba \u2022 Frutos rojos \u2022 Miel \u2022 C\u00edtricos",
+    "featured.body": "Nuestro tueste medio insignia es brillante, dulce y accesible, con un final limpio que hace que sea f\u00e1cil volver al caf\u00e9 de especialidad todos los d\u00edas.",
+    "featured.spec.origin": "Origen: Tarraz\u00fa, Costa Rica",
+    "featured.spec.process": "Proceso: Honey",
+    "featured.spec.roast": "Tueste: Medio",
+    "featured.spec.body": "Cuerpo: Pesado",
+    "featured.cta": "Comprar el insignia",
+
+    "coffees.eyebrow": "Caf\u00e9s actuales",
+    "coffees.title": "Una l\u00ednea clara, reci\u00e9n tostada.",
+    "coffees.subtitle": "Tres caf\u00e9s de origen \u00fanico, tres perfiles de tueste y precios simples. Compara la taza que quieres y ordena de la lista actual.",
     "coffee.spec.origin": "Origen",
-    "coffee.spec.notes": "Notas de sabor",
-    "coffee.spec.best": "Cuerpo",
-    "coffee.spec.availability": "Acidez",
-    "coffee.conservation.kicker": "Conservación Jaguar",
-    "coffee.cr.kicker": "Origen insignia",
+    "coffee.spec.body": "Cuerpo",
+    "coffee.spec.acidity": "Acidez",
+    "coffee.price.title": "Precio simple en toda la l\u00ednea",
+    "coffee.price.bag": "Bolsa de 14 oz: $18",
+    "coffee.price.kcups": "K-Cups: desde $10",
     "coffee.cr.badge": "Tueste medio",
-    "coffee.cr.title": "Costa Rican Tarrazú Jaguar Honey",
+    "coffee.cr.title": "Costa Rican Tarraz\u00fa Jaguar Honey",
     "coffee.cr.process": "Proceso Honey",
-    "coffee.cr.body": "Nuestro origen insignia actual y el perfil m\u00e1s brillante de la l\u00ednea, con notas de chocolate, nectarina, guayaba, frutos rojos, miel y c\u00edtricos y un final m\u00e1s limpio y dulce. Es un caf\u00e9 de especialidad accesible que ancla la l\u00ednea y aqu\u00ed se queda.",
-    "coffee.cr.note": "Ideal para clientes que quieren una taza fresca y de origen \u00fanico con dulzura, balance y un poco de brillo.",
-    "coffee.cr.origin": "Tarrazú, Costa Rica",
-    "coffee.cr.notes": "Chocolate, nectarina, guayaba, frutos rojos, miel, cítricos",
-    "coffee.cr.best": "Pesado",
-    "coffee.cr.availability": "Media",
-    "coffee.cr.conservation": "El nombre Jaguar de este origen se conecta con una historia real de conservación vinculada al beneficio San Diego en Costa Rica. Aporta un trasfondo significativo al café insignia sin quitarle el foco a la taza.",
+    "coffee.cr.body": "Brillante, dulce y accesible, con notas de fruta, miel y chocolate sobre un perfil limpio de tueste medio.",
+    "coffee.cr.notes": "Chocolate, nectarina, guayaba, frutos rojos, miel, c\u00edtricos",
+    "coffee.cr.origin": "Tarraz\u00fa, Costa Rica",
+    "coffee.cr.bodyValue": "Pesado",
+    "coffee.cr.acidity": "Media",
     "coffee.pe.badge": "Tueste medio oscuro",
     "coffee.pe.title": "Peruvian Chonta G1 Washed",
-    "coffee.pe.process": "Lavado",
-    "coffee.pe.body": "Un origen rotativo de tueste medio oscuro seleccionado bajo el mismo est\u00e1ndar de origen \u00fanico, grado de especialidad y 80+ que el resto de la l\u00ednea, con un perfil m\u00e1s desarrollado que todav\u00eda conserva algo de brillo, con chocolate, manzana verde, ciruela, almendra tostada y c\u00edtricos.",
-    "coffee.pe.origin": "Perú",
-    "coffee.pe.notes": "Chocolate, manzana verde, ciruela, almendra tostada, cítricos",
-    "coffee.pe.best": "Medio",
-    "coffee.pe.availability": "Media",
+    "coffee.pe.process": "Proceso lavado",
+    "coffee.pe.body": "Balanceado y desarrollado, pero todav\u00eda vivo, con chocolate, fruta de huerto, almendra tostada y c\u00edtricos.",
+    "coffee.pe.notes": "Chocolate, manzana verde, ciruela, almendra tostada, c\u00edtricos",
+    "coffee.pe.origin": "Per\u00fa",
+    "coffee.pe.bodyValue": "Medio",
+    "coffee.pe.acidity": "Media",
     "coffee.br.badge": "Tueste oscuro",
     "coffee.br.title": "Brazilian Cerrado Natural",
     "coffee.br.process": "Proceso Natural",
-    "coffee.br.body": "Un origen rotativo de tueste oscuro que mantiene el mismo est\u00e1ndar de origen \u00fanico, grado de especialidad y 80+ de la l\u00ednea, con una taza m\u00e1s llena y suave construida alrededor de chocolate con leche, almendra, ciruela pasa y vainilla.",
-    "coffee.br.origin": "Brasil",
+    "coffee.br.body": "Suave y cl\u00e1sico, construido alrededor de chocolate, almendra, fruta seca y vainilla en un perfil de tueste oscuro.",
     "coffee.br.notes": "Chocolate con leche, almendra, ciruela pasa, vainilla",
-    "coffee.br.best": "Medio",
-    "coffee.br.availability": "Suave",
+    "coffee.br.origin": "Brasil",
+    "coffee.br.bodyValue": "Medio",
+    "coffee.br.acidity": "Suave",
+    "coffee.cta.medium": "Ordenar tueste medio",
+    "coffee.cta.mediumDark": "Ordenar tueste medio oscuro",
+    "coffee.cta.dark": "Ordenar tueste oscuro",
+
+    "choose.title": "\u00bfNo sabes qu\u00e9 ordenar?",
+    "choose.subtitle": "Elige el tipo de taza que quieres. Te guiaremos hacia el tueste correcto.",
+    "choose.card1.title": "Quiero algo brillante y dulce",
+    "choose.card2.title": "Quiero algo balanceado y familiar",
+    "choose.card3.title": "Quiero algo suave y cl\u00e1sico",
+    "choose.textCta": "\u00bfTodav\u00eda no est\u00e1s seguro? M\u00e1ndanos un texto y te ayudamos.",
+
+    "transparency.title": "Caf\u00e9 de especialidad, explicado sin vueltas.",
+    "transparency.subtitle": "No esperamos que los clientes sean expertos en caf\u00e9. Mostramos los detalles que importan para que sea m\u00e1s f\u00e1cil elegir.",
+    "transparency.card1.title": "Lotes documentados 80+",
+    "transparency.card1.body": "Seleccionamos caf\u00e9s de lotes verdes documentados de grado de especialidad.",
+    "transparency.card2.title": "Enfoque de origen \u00fanico",
+    "transparency.card2.body": "Cada caf\u00e9 actual viene de un origen espec\u00edfico en lugar de esconderse dentro de una mezcla gen\u00e9rica.",
+    "transparency.card3.title": "Tostado en lotes peque\u00f1os",
+    "transparency.card3.body": "El tostado en lotes peque\u00f1os nos ayuda a mantener la l\u00ednea fresca y responder a la demanda.",
+    "transparency.card4.title": "Hecho para tomarlo diario",
+    "transparency.card4.body": "La meta es caf\u00e9 limpio y sabroso a un precio al que los clientes normales puedan volver.",
+
+    "brew.title.line1": "Prepara mejor caf\u00e9",
+    "brew.title.line2": "sin complicarte.",
+    "brew.subtitle": "Puntos de inicio simples para una mejor taza en casa.",
+    "brew.label.grind": "Molienda",
+    "brew.label.ratio": "Proporci\u00f3n",
+    "brew.label.fullPot": "Jarra completa de 12 tazas",
+    "brew.label.time": "Tiempo",
+    "brew.label.setting": "Mejor ajuste",
+    "brew.drip.title": "Cafetera de goteo",
+    "brew.drip.best": "Ideal para: caf\u00e9 diario, jarras completas y conveniencia",
+    "brew.drip.summary": "Molienda media \u2022 55-60 g por litro",
+    "brew.drip.grind": "Media, como sal kosher",
+    "brew.drip.ratio": "Aproximadamente 55-60 g por litro",
+    "brew.drip.fullPot": "Aproximadamente 95-105 g de caf\u00e9, seg\u00fan el tama\u00f1o de la m\u00e1quina",
+    "brew.drip.body": "El caf\u00e9 de goteo es el m\u00e9todo cl\u00e1sico en casa. Usa molienda media, un filtro limpio y agua filtrada si es posible. Para una jarra completa de 12 tazas, empieza con unos 95-105 gramos de caf\u00e9. Si la taza sabe d\u00e9bil o aguada, usa un poco m\u00e1s de caf\u00e9 o muele un poco m\u00e1s fino. Si sabe amarga, usa un poco menos de caf\u00e9 o muele m\u00e1s grueso.",
+    "brew.drip.note": "La NCA describe el caf\u00e9 de goteo como un buen punto de inicio porque es conveniente, consistente y funciona bien para cantidades grandes. Tambi\u00e9n recomienda una molienda media para caf\u00e9 de goteo y se\u00f1ala que una preparaci\u00f3n t\u00edpica tiene unos cinco minutos de contacto.",
+    "brew.french.title": "Prensa francesa",
+    "brew.french.best": "Ideal para: caf\u00e9 intenso y con cuerpo",
+    "brew.french.summary": "Molienda gruesa \u2022 4 minutos",
+    "brew.french.grind": "Gruesa, como sal de roca",
+    "brew.french.ratio": "Aproximadamente de 1:12 a 1:16",
+    "brew.french.time": "Aproximadamente 4 minutos",
+    "brew.french.body": "La prensa francesa produce una taza m\u00e1s pesada y rica porque el caf\u00e9 se infusiona directamente en el agua y se filtra con una malla met\u00e1lica. Usa molienda gruesa, deja reposar unos 4 minutos, luego presiona suavemente y sirve de inmediato. No dejes el caf\u00e9 en la prensa, porque puede seguir extray\u00e9ndose y volverse amargo.",
+    "brew.french.note": "La NCA da para prensa francesa un rango amplio de proporci\u00f3n de 1:10 a 1:16, recomienda agua alrededor de 93 +/- 3 C y da un tiempo aproximado de 4 minutos.",
+    "brew.kcups.title": "K-cups / pods individuales",
+    "brew.kcups.best": "Ideal para: rapidez y conveniencia",
+    "brew.kcups.summary": "Usa el tama\u00f1o de taza m\u00e1s peque\u00f1o para caf\u00e9 m\u00e1s fuerte",
+    "brew.kcups.grind": "Ya viene resuelto dentro del pod",
+    "brew.kcups.setting": "Tama\u00f1o de taza m\u00e1s peque\u00f1o para caf\u00e9 m\u00e1s fuerte",
+    "brew.kcups.body": "Para obtener el mejor sabor de una K-cup, usa el ajuste de 6 oz u 8 oz si tu m\u00e1quina lo permite. Los ajustes m\u00e1s grandes pueden hacer que el caf\u00e9 sepa delgado porque la misma cantidad de caf\u00e9 se estira con m\u00e1s agua. Para una taza m\u00e1s fuerte, usa un tama\u00f1o de preparaci\u00f3n m\u00e1s peque\u00f1o en lugar de preparar el mismo pod dos veces.",
+    "brew.kcups.note": "Para las K-cups de Millionaire's Roast, el consejo clave es simple: un tama\u00f1o de preparaci\u00f3n m\u00e1s peque\u00f1o significa mejor sabor.",
+    "brew.pourover.title": "Pour-over",
+    "brew.pourover.best": "Ideal para: tazas limpias, sabrosas y con m\u00e1s control",
+    "brew.pourover.summary": "Molienda media \u2022 2-4 minutos",
+    "brew.pourover.grind": "Media",
+    "brew.pourover.ratio": "Aproximadamente de 1:15 a 1:16",
+    "brew.pourover.time": "Aproximadamente 2-4 minutos",
+    "brew.pourover.body": "El pour-over te da m\u00e1s control que una cafetera autom\u00e1tica de goteo. Usa molienda media, enjuaga el filtro de papel, agrega el caf\u00e9 y vierte una peque\u00f1a cantidad de agua caliente sobre los granos molidos para dejarlo florecer de 30-45 segundos. Sigue vertiendo lentamente hasta llegar a la cantidad de agua deseada. El tiempo total normalmente debe quedar alrededor de 2-4 minutos.",
+    "brew.pourover.note": "La NCA describe el pour-over como una versi\u00f3n manual del goteo que da m\u00e1s control, con n\u00fameros r\u00e1pidos de 1:13 a 1:16, 93 +/- 3 C y 2-4 minutos de contacto.",
+    "brew.cold.title": "Cold brew",
+    "brew.cold.best": "Ideal para: caf\u00e9 helado suave y lotes preparados con anticipaci\u00f3n",
+    "brew.cold.summary": "Molienda gruesa \u2022 unas 12 horas",
+    "brew.cold.grind": "Gruesa",
+    "brew.cold.ratio": "Concentrado alrededor de 1:4 a 1:5, luego diluir",
+    "brew.cold.time": "Aproximadamente 12 horas",
+    "brew.cold.body": "El cold brew se prepara dejando caf\u00e9 de molienda gruesa en agua fr\u00eda o a temperatura ambiente. Para un concentrado, usa cerca de 1 parte de caf\u00e9 por 4-5 partes de agua, deja reposar unas 12 horas y luego cuela. Sirve sobre hielo y diluye con agua, leche o crema al gusto.",
+    "brew.cold.note": "La NCA da para cold brew n\u00fameros r\u00e1pidos de 1:4 a 1:5, agua a temperatura ambiente o m\u00e1s fr\u00eda, y unas 12 horas de contacto.",
+    "brew.cta": "M\u00e1ndanos texto para ayuda con la molienda",
+
     "proof.title": "Una marca local real y en movimiento",
-    "proof.subtitle": "La marca se ve pulida porque el trabajo detrás es real: mercados locales, tostado manual y un fundador construyendo todo lote por lote.",
-    "proof.caption1": "Jesús Gómez ayudando en el puesto de Millionaire's Roast durante el Old Capitol Farmers Market en el centro de Springfield.",
-    "proof.caption2": "Maximiliano Gómez, fundador de Millionaire's Roast, durante una visita de Cass County CEO a Western Illinois University.",
-    "proof.caption3": "Una versión más temprana del puesto en el Old Capitol Farmers Market que muestra cómo ha crecido la presentación.",
+    "proof.subtitle": "La marca se ve pulida porque el trabajo detr\u00e1s es real: mercados locales, tostado manual y un fundador construyendo todo lote por lote.",
+    "proof.card1.title": "Old Capitol Farmers Market",
+    "proof.card1.body": "Sirviendo a clientes cara a cara en el centro de Springfield.",
+    "proof.card2.title": "Construido con Cass County CEO",
+    "proof.card2.body": "Lanzado a trav\u00e9s de un programa real de emprendimiento, no solo una tienda en l\u00ednea.",
+    "proof.card3.title": "Tostado y vendido en lotes peque\u00f1os",
+    "proof.card3.body": "La l\u00ednea se construye lote por lote mientras la marca crece.",
+
     "about.title": "Sobre Millionaire's Roast",
     "about.subtitle": "Una marca local de caf\u00e9 construida a trav\u00e9s del programa Cass County CEO y fortalecida por mercados, pedidos directos y tostado manual, con caf\u00e9 fresco de origen \u00fanico en el centro de todo.",
     "about.story.title": "Conoce a Maximiliano",
-    "about.story.p1": "Millionaire's Roast comenzó a través del programa Cass County CEO, donde Maximiliano Gomez convirtió una idea de negocio en una marca real de café artesanal arraigada en su comunidad.",
+    "about.story.p1": "Millionaire's Roast comenz\u00f3 a trav\u00e9s del programa Cass County CEO, donde Maximiliano Gomez convirti\u00f3 una idea de negocio en una marca real de caf\u00e9 artesanal arraigada en su comunidad.",
     "about.story.p2": "Cada lote comienza con caf\u00e9 verde cuidadosamente seleccionado de lotes documentados de origen \u00fanico y grado de especialidad con puntajes de 80+. La meta no es hacer que el caf\u00e9 se sienta exclusivo. Es ofrecer caf\u00e9 de alta calidad a un precio al que la gente normal pueda volver.",
-    "about.story.p3": "Tostado en Beardstown y vendido regularmente en Springfield y el centro de Illinois, la marca sigue creciendo a través de ventas directas, eventos locales, recogida, entrega y envíos sencillos en línea para clientes de Illinois.",
+    "about.story.p3": "Tostado en Beardstown y vendido regularmente en Springfield y el centro de Illinois, la marca sigue creciendo a trav\u00e9s de ventas directas, eventos locales, recogida, entrega y env\u00edos sencillos en l\u00ednea para clientes de Illinois.",
     "about.side.title": "Lo que lo distingue",
     "about.side.li1": "Caf\u00e9 fresco de origen \u00fanico",
     "about.side.li2": "Caf\u00e9 de grado de especialidad documentado de lotes 80+",
-    "about.side.li3": "Pedidos flexibles para envío, recogida, entrega y K-Cups",
+    "about.side.li3": "Pedidos flexibles para env\u00edo, recogida, entrega y K-Cups",
     "about.side.li4": "Hecho para clientes del centro de Illinois, no solo para conocedores del caf\u00e9",
-    "about.find.title": "Dónde encontrarnos",
-    "about.find.body": "Sigue nuestras redes para ver apariciones en mercados, coordinación de recogidas y disponibilidad actual.",
-    "ceo.caption": "Lanzado con orgullo a través del programa Cass County CEO.",
-    "faq.title": "Respuestas rápidas",
-    "faq.subtitle": "Corto y útil, para que ordenar sea sencillo.",
-    "faq.q1": "¿Cómo ordeno?",
-    "faq.a1": "Usa nuestra tienda en línea para elegir envío, recogida o entrega en un solo lugar.",
-    "faq.q2": "¿Dónde están ubicados?",
+    "about.find.title": "D\u00f3nde encontrarnos",
+    "about.find.body": "Sigue nuestras redes para ver apariciones en mercados, coordinaci\u00f3n de recogidas y disponibilidad actual.",
+    "about.find.facebook": "Facebook",
+    "about.find.instagram": "Instagram",
+    "ceo.caption": "Lanzado con orgullo a trav\u00e9s del programa Cass County CEO.",
+
+    "faq.title": "Respuestas r\u00e1pidas",
+    "faq.subtitle": "Corto y \u00fatil, para que ordenar sea sencillo.",
+    "faq.q1": "\u00bfC\u00f3mo ordeno?",
+    "faq.a1": "Usa nuestra tienda en l\u00ednea para elegir env\u00edo, recogida o entrega en un solo lugar.",
+    "faq.q2": "\u00bfD\u00f3nde est\u00e1n ubicados?",
     "faq.a2": "Millionaire's Roast se tuesta en Beardstown y sirve regularmente a Springfield y al centro de Illinois.",
-    "faq.q3": "¿Qué cafés están disponibles ahora mismo?",
+    "faq.q3": "\u00bfQu\u00e9 caf\u00e9s est\u00e1n disponibles ahora mismo?",
     "faq.a3": "Actualmente ofrecemos tres caf\u00e9s frescos de origen \u00fanico: Costa Rican Tarraz\u00fa Jaguar Honey como nuestro tueste medio insignia que lleg\u00f3 para quedarse, adem\u00e1s de Peruvian Chonta G1 Washed y Brazilian Cerrado Natural como or\u00edgenes rotativos en los espacios de medio oscuro y oscuro. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido o K-Cups.",
-    "faq.q4": "¿Cuánto dura una rotación actual?",
-    "faq.a4": "Compramos café verde en volumen, pero los tiempos de cosecha cambian según la región y el ciclo agrícola. Cuando un café se acaba, hay una alta probabilidad de que ese lote en específico se haya ido por ahora, no para siempre, y la rotación sigue cambiando según la demanda y la disponibilidad.",
+    "faq.q4": "\u00bfCu\u00e1nto dura una rotaci\u00f3n actual?",
+    "faq.a4": "Compramos caf\u00e9 verde en volumen, pero los tiempos de cosecha cambian seg\u00fan la regi\u00f3n y el ciclo agr\u00edcola. Cuando un caf\u00e9 se acaba, hay una alta probabilidad de que ese lote en espec\u00edfico se haya ido por ahora, no para siempre, y la rotaci\u00f3n sigue cambiando seg\u00fan la demanda y la disponibilidad.",
     "faq.q5": "\u00bfQu\u00e9 hace que este caf\u00e9 sea de especialidad?",
     "faq.a5": "El caf\u00e9 de grado de especialidad empieza con mejor caf\u00e9 verde antes de llegar al tostador. Nuestros caf\u00e9s se seleccionan de lotes documentados con puntajes de 80+, lo que significa que fueron evaluados por la calidad de la taza en lugar de tratarse como caf\u00e9 comercial com\u00fan.\n\nEn la industria del caf\u00e9, los caf\u00e9s se eval\u00faan mediante cata: un proceso estandarizado que considera aroma, sabor, retrogusto, acidez, cuerpo, balance, dulzura, limpieza y defectos. Un puntaje de 80 o m\u00e1s es el umbral tradicional para caf\u00e9 de grado de especialidad.\n\nPara el cliente, el resultado es simple: sabores m\u00e1s limpios, notas m\u00e1s claras y una taza m\u00e1s intencional.",
+
     "contact.title": "Contacto y redes",
-    "contact.subtitle": "El texto es la forma más rápida de hacer una pregunta rápida. El correo funciona mejor para seguimiento y preguntas personalizadas.",
+    "contact.subtitle": "El texto es la forma m\u00e1s r\u00e1pida de hacer una pregunta r\u00e1pida. El correo funciona mejor para seguimiento y preguntas personalizadas.",
     "contact.text.kicker": "Texto",
-    "contact.text.sub": "La forma más rápida de hacer una pregunta rápida",
+    "contact.text.sub": "La forma m\u00e1s r\u00e1pida de hacer una pregunta r\u00e1pida",
     "contact.email.kicker": "Correo",
     "contact.email.sub": "Mejor para seguimiento y preguntas personalizadas",
     "contact.ig.kicker": "Instagram",
@@ -123,6 +194,20 @@
     "contact.fb.kicker": "Facebook",
     "contact.fb.main": "Millionaire's Roast",
     "contact.fb.sub": "Anuncios, eventos y noticias locales",
+
+    "footer.srTitle": "Pie de p\u00e1gina de Millionaire's Roast",
+    "footer.shop.title": "Comprar",
+    "footer.shop.current": "Caf\u00e9s actuales",
+    "footer.shop.kcups": "K-Cups",
+    "footer.shop.order": "Ordenar en l\u00ednea",
+    "footer.learn.title": "Aprender",
+    "footer.learn.specialty": "Qu\u00e9 hace especial al caf\u00e9",
+    "footer.learn.choose": "Ay\u00fadame a elegir",
+    "footer.learn.brew": "Prepararlo simple",
+    "footer.local.title": "Local",
+    "footer.local.springfield": "Recogida en Springfield",
+    "footer.local.beardstown": "Recogida en Beardstown",
+    "footer.local.markets": "Mercados locales",
     "footer.line": "Este producto fue elaborado en una cocina del hogar no inspeccionada por un departamento de salud que tambi\u00e9n puede procesar al\u00e9rgenos alimentarios comunes. Si tiene preocupaciones de seguridad, comun\u00edquese con su departamento de salud local."
   };
 
@@ -140,16 +225,17 @@
   const accordion = document.querySelector("[data-accordion]");
   const accordionButtons = accordion ? [...accordion.querySelectorAll(".faq-item")] : [];
   const carousel = document.querySelector("[data-carousel]");
+  const brewGuide = document.querySelector("[data-brew-guide]");
+  const brewButtons = brewGuide ? [...brewGuide.querySelectorAll("[data-brew-toggle]")] : [];
   const langButtons = [...document.querySelectorAll("[data-lang-btn]")];
   const langSwitch = document.querySelector(".lang-switch");
   const faqSchemaScript = document.getElementById("faq-schema");
   const roastFaqAnswer = document.querySelector('[data-i18n="faq.a3"]');
-  const i18nElements = [...document.querySelectorAll("[data-i18n]")];
-  const i18nBindings = i18nElements
-    .map((element) => [element, element.getAttribute("data-i18n")])
-    .filter(([, key]) => Boolean(key));
   const BASE = Object.fromEntries(
-    i18nBindings.map(([element, key]) => [key, element.textContent])
+    [...document.querySelectorAll("[data-i18n]")].map((element) => [
+      element.getAttribute("data-i18n"),
+      element.textContent
+    ]).filter(([key]) => Boolean(key))
   );
   const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
@@ -176,11 +262,7 @@
   }
 
   function buildRoastFaqAnswer(lang) {
-    if (lang === "es") {
-      return "Actualmente ofrecemos tres caf\u00e9s frescos de origen \u00fanico: Costa Rican Tarraz\u00fa Jaguar Honey como nuestro tueste medio insignia que lleg\u00f3 para quedarse, adem\u00e1s de Peruvian Chonta G1 Washed y Brazilian Cerrado Natural como or\u00edgenes rotativos en los espacios de medio oscuro y oscuro. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido o K-Cups.";
-    }
-
-    return "We currently offer three fresh single-origin coffees: Costa Rican Tarraz\u00fa Jaguar Honey as our flagship medium roast that is here to stay, plus Peruvian Chonta G1 Washed and Brazilian Cerrado Natural as rotating origins in the medium dark and dark slots. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, or K-Cups.";
+    return getCopy(lang, "faq.a3");
   }
 
   function updateFaqSchema(lang) {
@@ -226,12 +308,20 @@
     return SMS_BODY[lang] || SMS_BODY.en;
   }
 
-  function setSmsLink(lang) {
+  function setSmsLinks(lang) {
     const bodyText = encodeURIComponent(getSmsBody(lang));
     const separator = isIOS ? "&" : "?";
     const smsUrl = `sms:${PHONE_NUMBER}${separator}body=${bodyText}`;
+    const links = [...document.querySelectorAll("[data-sms-link]")];
 
-    if (textCard) textCard.href = smsUrl;
+    if (!links.length && textCard) {
+      textCard.href = smsUrl;
+      return;
+    }
+
+    links.forEach((link) => {
+      link.href = smsUrl;
+    });
   }
 
   function getAnalyticsLanguage() {
@@ -276,7 +366,19 @@
   function setupAnalytics() {
     document.querySelectorAll("[data-shop-cta]").forEach(registerShopClickTracking);
 
-    registerContactClickTracking(textCard, "text_click", "contact_text");
+    const smsLinks = [...document.querySelectorAll("[data-sms-link]")];
+    if (smsLinks.length) {
+      smsLinks.forEach((link, index) => {
+        registerContactClickTracking(
+          link,
+          "text_click",
+          link.dataset.contactLocation || `text_${index + 1}`
+        );
+      });
+    } else {
+      registerContactClickTracking(textCard, "text_click", "contact_text");
+    }
+
     registerContactClickTracking(emailCard, "email_click", "contact_email");
     registerContactClickTracking(instagramCard, "instagram_click", "contact_instagram");
     registerContactClickTracking(facebookCard, "facebook_click", "contact_facebook");
@@ -341,6 +443,7 @@
       syncHeaderHeight();
       syncMobileMenuHeight();
       syncOpenAccordionHeight();
+      syncOpenBrewPanels();
     });
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") setMobile(false);
@@ -415,33 +518,105 @@
     });
   }
 
+  function getBrewPanel(button) {
+    const panelId = button?.getAttribute("aria-controls");
+    return panelId ? document.getElementById(panelId) : null;
+  }
+
+  function closeBrewButton(button, immediate = false) {
+    const panel = getBrewPanel(button);
+    const card = button?.closest("[data-brew-card]");
+    if (!panel || !card) return;
+
+    const wasOpen = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", "false");
+
+    if (immediate) {
+      card.classList.remove("is-open");
+      panel.hidden = true;
+      panel.style.maxHeight = "0px";
+      return;
+    }
+
+    if (!wasOpen) {
+      card.classList.remove("is-open");
+      panel.hidden = true;
+      panel.style.maxHeight = "0px";
+      return;
+    }
+
+    card.classList.remove("is-open");
+    panel.style.maxHeight = "0px";
+
+    const handleTransitionEnd = () => {
+      if (button.getAttribute("aria-expanded") === "false") {
+        panel.hidden = true;
+      }
+      panel.removeEventListener("transitionend", handleTransitionEnd);
+    };
+
+    panel.addEventListener("transitionend", handleTransitionEnd);
+  }
+
+  function openBrewButton(button) {
+    const panel = getBrewPanel(button);
+    const card = button?.closest("[data-brew-card]");
+    if (!panel || !card) return;
+
+    button.setAttribute("aria-expanded", "true");
+    panel.hidden = false;
+    card.classList.add("is-open");
+    panel.style.maxHeight = `${panel.scrollHeight}px`;
+  }
+
+  function syncOpenBrewPanels() {
+    brewButtons.forEach((button) => {
+      const panel = getBrewPanel(button);
+      if (panel && button.getAttribute("aria-expanded") === "true") {
+        panel.hidden = false;
+        panel.style.maxHeight = `${panel.scrollHeight}px`;
+      }
+    });
+  }
+
+  function setupBrewGuide() {
+    if (!brewGuide || !brewButtons.length) return;
+
+    brewButtons.forEach((button) => closeBrewButton(button, true));
+
+    brewGuide.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-brew-toggle]");
+      if (!button || !brewGuide.contains(button)) return;
+
+      if (button.getAttribute("aria-expanded") === "true") {
+        closeBrewButton(button);
+      } else {
+        brewButtons.forEach((otherButton) => {
+          if (otherButton !== button) closeBrewButton(otherButton);
+        });
+        openBrewButton(button);
+      }
+    });
+  }
+
   function setupCarousel() {
     if (!carousel) return;
 
     const viewport = carousel.querySelector(".carousel-viewport");
     const track = carousel.querySelector(".carousel-track");
-    const originalSlides = track ? [...track.querySelectorAll(".carousel-slide")] : [];
+    const slides = track ? [...track.querySelectorAll(".carousel-slide")] : [];
     const prevButton = carousel.querySelector("[data-carousel-prev]");
     const nextButton = carousel.querySelector("[data-carousel-next]");
     const dots = [...carousel.querySelectorAll("[data-carousel-dot]")];
     const count = carousel.querySelector("[data-carousel-count]");
+    const reducedMotionQuery = typeof window.matchMedia === "function"
+      ? window.matchMedia("(prefers-reduced-motion: reduce)")
+      : null;
 
-    if (!viewport || !track || !originalSlides.length) return;
+    if (!viewport || !track || !slides.length) return;
 
-    const slideCount = originalSlides.length;
-    const firstClone = originalSlides[0].cloneNode(true);
-    firstClone.setAttribute("aria-hidden", "true");
-    firstClone.dataset.clone = "true";
-
-    const lastClone = originalSlides[slideCount - 1].cloneNode(true);
-    lastClone.setAttribute("aria-hidden", "true");
-    lastClone.dataset.clone = "true";
-
-    track.prepend(lastClone);
-    track.appendChild(firstClone);
-
+    const slideCount = slides.length;
     let activeIndex = 0;
-    let trackIndex = 1;
     let autoplayId = 0;
     let touchStartX = 0;
     let touchStartY = 0;
@@ -454,18 +629,11 @@
       }
     };
 
-    const setTrackPosition = (animate = true) => {
-      if (!animate) track.style.transition = "none";
-      track.style.transform = `translateX(-${trackIndex * 100}%)`;
-      if (!animate) {
-        track.offsetHeight;
-        track.style.transition = "";
-      }
-    };
-
     const updateCarouselUi = () => {
-      originalSlides.forEach((slide, slideIndex) => {
-        slide.setAttribute("aria-hidden", String(slideIndex !== activeIndex));
+      slides.forEach((slide, slideIndex) => {
+        const isActive = slideIndex === activeIndex;
+        slide.classList.toggle("is-active", isActive);
+        slide.setAttribute("aria-hidden", String(!isActive));
       });
       dots.forEach((dot, dotIndex) => {
         const isActive = dotIndex === activeIndex;
@@ -475,61 +643,26 @@
       if (count) count.textContent = `${activeIndex + 1} / ${slideCount}`;
     };
 
-    const renderCarousel = (animate = true) => {
-      updateCarouselUi();
-      setTrackPosition(animate);
-    };
-
-    const goTo = (nextIndex, direction = "auto") => {
-      if (direction === "next" && activeIndex === slideCount - 1 && nextIndex >= slideCount) {
-        activeIndex = 0;
-        trackIndex = slideCount + 1;
-        renderCarousel(true);
-        return;
-      }
-
-      if (direction === "prev" && activeIndex === 0 && nextIndex < 0) {
-        activeIndex = slideCount - 1;
-        trackIndex = 0;
-        renderCarousel(true);
-        return;
-      }
-
+    const goTo = (nextIndex) => {
       activeIndex = (nextIndex + slideCount) % slideCount;
-      trackIndex = activeIndex + 1;
-      renderCarousel(true);
+      updateCarouselUi();
     };
 
     const startAutoplay = () => {
       stopAutoplay();
+      if (reducedMotionQuery?.matches) return;
       autoplayId = window.setInterval(() => goTo(activeIndex + 1, "next"), 5000);
     };
 
-    prevButton?.addEventListener("click", () => goTo(activeIndex - 1, "prev"));
-    nextButton?.addEventListener("click", () => goTo(activeIndex + 1, "next"));
+    prevButton?.addEventListener("click", () => goTo(activeIndex - 1));
+    nextButton?.addEventListener("click", () => goTo(activeIndex + 1));
     dots.forEach((dot) => {
       dot.addEventListener("click", () => {
         const nextIndex = Number(dot.getAttribute("data-carousel-dot"));
         if (!Number.isNaN(nextIndex)) {
-          let direction = "auto";
-          if (activeIndex === slideCount - 1 && nextIndex === 0) direction = "next";
-          if (activeIndex === 0 && nextIndex === slideCount - 1) direction = "prev";
-          goTo(nextIndex, direction);
+          goTo(nextIndex);
         }
       });
-    });
-
-    track.addEventListener("transitionend", () => {
-      if (trackIndex === slideCount + 1) {
-        trackIndex = 1;
-        setTrackPosition(false);
-        return;
-      }
-
-      if (trackIndex === 0) {
-        trackIndex = slideCount;
-        setTrackPosition(false);
-      }
     });
 
     carousel.addEventListener("mouseenter", stopAutoplay);
@@ -556,7 +689,7 @@
         const deltaX = touch.clientX - touchStartX;
         const deltaY = touch.clientY - touchStartY;
         if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY)) {
-          goTo(deltaX < 0 ? activeIndex + 1 : activeIndex - 1, deltaX < 0 ? "next" : "prev");
+          goTo(deltaX < 0 ? activeIndex + 1 : activeIndex - 1);
         }
       }
       startAutoplay();
@@ -567,137 +700,13 @@
       startAutoplay();
     }, { passive: true });
 
-    renderCarousel(false);
-    startAutoplay();
-  }
-
-  function setupRoastSelector() {
-    const roastLayout = document.querySelector("#current-roast .origin-layout");
-    const roastButtons = [...document.querySelectorAll("[data-roast-tab]")];
-    const roastPanels = [...document.querySelectorAll("[data-roast-panel]")];
-    const roastGroups = [...document.querySelectorAll("[data-roast-panel-group]")];
-    const mobileRoastQuery = typeof window.matchMedia === "function"
-      ? window.matchMedia("(max-width: 760px)")
-      : null;
-    const reducedMotionQuery = typeof window.matchMedia === "function"
-      ? window.matchMedia("(prefers-reduced-motion: reduce)")
-      : null;
-    const ROAST_SWITCH_MS = 220;
-
-    if (!roastButtons.length || !roastPanels.length) return;
-
-    const panelByRoast = new Map(
-      roastPanels.map((panel) => [panel.getAttribute("data-roast-panel"), panel])
-    );
-    const defaultRoast = panelByRoast.has("medium")
-      ? "medium"
-      : roastButtons[0]?.getAttribute("data-roast-tab");
-
-    if (!defaultRoast) return;
-
-    let activeRoast = "";
-    let switchTimer = 0;
-
-    const updateRoastButtons = (roast) => {
-      roastButtons.forEach((button) => {
-        const isActive = button.getAttribute("data-roast-tab") === roast;
-        button.setAttribute("aria-selected", String(isActive));
-        button.tabIndex = isActive ? 0 : -1;
-        button.classList.toggle("is-active", isActive);
-      });
-    };
-
-    const syncRoastGroups = () => {
-      roastGroups.forEach((group) => {
-        const directPanels = [...group.children].filter((child) => child.matches?.("[data-roast-panel]"));
-        const hasVisiblePanel = directPanels.some((panel) => !panel.classList.contains("is-roast-hidden"));
-        group.classList.toggle("is-roast-group-hidden", !hasVisiblePanel);
-      });
-    };
-
-    const updateRoastPanels = (roast) => {
-      roastPanels.forEach((panel) => {
-        const isActive = panel.getAttribute("data-roast-panel") === roast;
-        panel.classList.toggle("is-roast-hidden", !isActive);
-      });
-
-      syncRoastGroups();
-    };
-
-    const shouldAnimateRoastSwitch = () => (
-      Boolean(roastLayout)
-      && Boolean(mobileRoastQuery?.matches)
-      && !reducedMotionQuery?.matches
-    );
-
-    const applyRoastState = (roast) => {
-      updateRoastButtons(roast);
-      updateRoastPanels(roast);
-      activeRoast = roast;
-    };
-
-    const clearPendingRoastSwitch = () => {
-      if (!switchTimer) return;
-      window.clearTimeout(switchTimer);
-      switchTimer = 0;
-    };
-
-    const setActiveRoast = (roast, { animate = false } = {}) => {
-      const nextRoast = panelByRoast.has(roast) ? roast : defaultRoast;
-      if (!nextRoast) return;
-
-      if (nextRoast === activeRoast && !switchTimer) {
-        updateRoastButtons(nextRoast);
-        return;
-      }
-
-      clearPendingRoastSwitch();
-
-      if (!animate || !shouldAnimateRoastSwitch()) {
-        roastLayout?.classList.remove("is-roast-switching");
-        applyRoastState(nextRoast);
-        return;
-      }
-
-      updateRoastButtons(nextRoast);
-      roastLayout.classList.add("is-roast-switching");
-
-      switchTimer = window.setTimeout(() => {
-        switchTimer = 0;
-        updateRoastPanels(nextRoast);
-        activeRoast = nextRoast;
-
-        requestAnimationFrame(() => {
-          roastLayout.classList.remove("is-roast-switching");
-        });
-      }, ROAST_SWITCH_MS);
-    };
-
-    roastButtons.forEach((button, index) => {
-      button.addEventListener("click", () => {
-        setActiveRoast(button.getAttribute("data-roast-tab") || defaultRoast, { animate: true });
-      });
-
-      button.addEventListener("keydown", (event) => {
-        if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
-
-        event.preventDefault();
-
-        let nextIndex = index;
-        if (event.key === "ArrowRight") nextIndex = (index + 1) % roastButtons.length;
-        if (event.key === "ArrowLeft") nextIndex = (index - 1 + roastButtons.length) % roastButtons.length;
-        if (event.key === "Home") nextIndex = 0;
-        if (event.key === "End") nextIndex = roastButtons.length - 1;
-
-        const nextButton = roastButtons[nextIndex];
-        if (!nextButton) return;
-
-        nextButton.focus();
-        setActiveRoast(nextButton.getAttribute("data-roast-tab") || defaultRoast, { animate: true });
-      });
+    reducedMotionQuery?.addEventListener?.("change", () => {
+      if (reducedMotionQuery.matches) stopAutoplay();
+      else startAutoplay();
     });
 
-    setActiveRoast(defaultRoast);
+    updateCarouselUi();
+    startAutoplay();
   }
 
   function updateDerivedContent(lang) {
@@ -708,8 +717,9 @@
   }
 
   function applyTranslations(lang) {
-    i18nBindings.forEach(([element, key]) => {
-      element.textContent = getCopy(lang, key);
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+      const key = element.getAttribute("data-i18n");
+      if (key) element.textContent = getCopy(lang, key);
     });
 
     updateDerivedContent(lang);
@@ -718,13 +728,14 @@
     });
     root.setAttribute("lang", lang === "es" ? "es" : "en");
     root.dataset.lang = lang;
-    setSmsLink(lang);
+    setSmsLinks(lang);
 
     try {
       localStorage.setItem(STORAGE_KEY, lang);
     } catch {}
 
     syncOpenAccordionHeight();
+    syncOpenBrewPanels();
     syncMobileMenuHeight();
   }
 
@@ -769,7 +780,6 @@
       const href = link.getAttribute("href");
       if (!href || href === "#") return;
 
-      // Do not hijack modified clicks or non-left clicks.
       if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
         return;
       }
@@ -792,8 +802,8 @@
   setupViewportSizing();
   setupMobileNav();
   setupAccordion();
+  setupBrewGuide();
   setupCarousel();
-  setupRoastSelector();
   setupLanguageToggle();
   setupSmoothAnchorScrolling();
   setupAnalytics();

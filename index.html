@@ -28,7 +28,7 @@
   <link rel="canonical" href="https://millionairesroast.com/" />
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="apple-touch-icon" href="logo.png" />
-  <link rel="stylesheet" href="styles.css?v=40" />
+  <link rel="stylesheet" href="styles.css?v=41" />
 
   <script type="application/ld+json">
     {
@@ -119,10 +119,16 @@
     }
   </script>
 
-  <script defer src="index.js?v=38"></script>
+  <script defer src="index.js?v=39"></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <div class="announcement-bar" role="status">
+    <div class="container announcement-inner">
+      <span data-i18n="announce.text">Pickup in Springfield &amp; Beardstown &bull; Local delivery &bull; Illinois shipping</span>
+    </div>
+  </div>
 
   <header class="site-header" id="top">
     <div class="container header-inner">
@@ -140,7 +146,8 @@
       <div class="header-right">
         <nav class="nav" aria-label="Primary">
           <a class="nav-link" href="#current-roast" data-i18n="nav.roast">Current Coffees</a>
-          <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
+          <a class="nav-link" href="#choose" data-i18n="nav.choose">Help Me Choose</a>
+          <a class="nav-link" href="#brew" data-i18n="nav.brew">Brew Guide</a>
           <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
           <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
           <a class="nav-cta" id="navOrderBtn" data-shop-cta data-cta-location="nav" href="https://millionaires-roast.square.site/" data-i18n="nav.orderCta">Order Now</a>
@@ -155,203 +162,327 @@
     <div class="mobile-nav" id="mobile-nav" aria-hidden="true" inert>
       <a class="nav-cta" id="mobileNavOrderBtn" data-shop-cta data-cta-location="mobile_nav" href="https://millionaires-roast.square.site/" data-i18n="nav.orderCta">Order Now</a>
       <a class="nav-link" href="#current-roast" data-i18n="nav.roast">Current Coffees</a>
+      <a class="nav-link" href="#choose" data-i18n="nav.choose">Help Me Choose</a>
+      <a class="nav-link" href="#brew" data-i18n="nav.brew">Brew Guide</a>
       <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
       <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
       <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
     </div>
   </header>
 
+  <section class="lang-section" aria-label="Language selection">
+    <div class="container">
+      <div class="lang-bar">
+        <p class="lang-caption" data-i18n="lang.label">Language</p>
+        <div class="lang-switch" role="group" aria-label="Language selection">
+          <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="true">English</button>
+          <button type="button" class="lang-btn" data-lang-btn="es" aria-pressed="false">Espa&ntilde;ol</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <main id="main">
     <section class="hero" id="hero" aria-labelledby="hero-title">
-      <div class="container hero-single">
-        <div class="hero-plate">
-          <div class="hero-copy">
-            <p class="kicker" data-i18n="hero.kicker">Roasted in Beardstown, serving Springfield and Central Illinois</p>
-            <p class="hero-eyebrow" data-i18n="hero.eyebrow">Small-batch coffee roasted in Illinois</p>
-            <h1 class="hero-title" id="hero-title" data-i18n="hero.title">Specialty coffee without the premium markup.</h1>
-            <p class="hero-sub" data-i18n="hero.sub">
-              Fresh single-origin coffee from verified specialty-grade lots, roasted in small batches and priced for everyday drinking.
-            </p>
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <p class="hero-eyebrow" data-i18n="hero.eyebrow">Small-batch coffee roasted in Illinois</p>
+          <h1 class="hero-title" id="hero-title" data-i18n="hero.title">Specialty coffee without the premium markup.</h1>
+          <p class="hero-sub" data-i18n="hero.sub">Fresh single-origin coffee from documented 80+ specialty lots, roasted in small batches for Springfield, Beardstown, and Central Illinois.</p>
+
+          <div class="hero-conversion">
+            <p class="hero-pricing" data-i18n="hero.pricing">14 oz bags $18 &bull; K-Cups from $10</p>
+            <p class="hero-helper" data-i18n="hero.helper">Pickup in Springfield and Beardstown, local delivery, and Illinois shipping.</p>
           </div>
 
-          <div class="hero-middle" aria-hidden="true">
-            <div class="hero-ornament">
-              <span class="hero-ornament-line"></span>
-              <img class="hero-ornament-mark" src="logo.png" alt="" width="52" height="52" decoding="async" loading="eager" />
-              <span class="hero-ornament-line"></span>
-            </div>
-          </div>
-
-          <div class="hero-offer">
-            <div class="hero-conversion">
-              <p class="hero-pricing" data-i18n="hero.pricing">14 oz specialty bags $18 &bull; K-Cups from $10</p>
-              <p class="hero-helper" data-i18n="hero.helper">Pickup in Springfield and Beardstown, local delivery, and Illinois shipping.</p>
-            </div>
-
-            <div class="hero-actions">
-              <a class="btn btn-gold" id="heroOrderBtn" data-shop-cta data-cta-location="hero" href="https://millionaires-roast.square.site/" data-i18n="hero.cta.primary">Buy Now</a>
-              <a class="btn btn-outline" href="#current-roast" data-i18n="hero.cta.secondary">See Current Coffees</a>
-            </div>
-          </div>
-
-          <div class="hero-proof">
-            <div class="hero-proof-item">
-              <strong data-i18n="hero.proof1.title">Always fresh</strong>
-              <span data-i18n="hero.proof1.body">Our lineup is built around fresh roasted coffee, not coffee that has been sitting around.</span>
-            </div>
-            <div class="hero-proof-item">
-              <strong data-i18n="hero.proof2.title">Documented specialty grade</strong>
-              <span data-i18n="hero.proof2.body">We select coffees from documented 80+ green coffee lots, then roast them fresh so the cup stays clean, clear, and approachable.</span>
-            </div>
+          <div class="hero-actions">
+            <a class="btn btn-gold" id="heroOrderBtn" data-shop-cta data-cta-location="hero_shop_current" href="https://millionaires-roast.square.site/" data-i18n="hero.cta.primary">Shop Current Coffees</a>
+            <a class="btn btn-outline" href="#choose" data-i18n="hero.cta.secondary">Help Me Choose</a>
           </div>
         </div>
+
+        <figure class="hero-visual">
+          <div class="hero-image-plate">
+            <img class="hero-product-image" src="CostaRica.webp" alt="Millionaire's Roast Costa Rican Tarrazu Jaguar Honey coffee bag" width="1536" height="2048" decoding="async" loading="eager" />
+          </div>
+          <figcaption class="hero-floating-badge">
+            <span class="badge-kicker" data-i18n="hero.badge.kicker">Current Flagship</span>
+            <strong data-i18n="hero.badge.title">Costa Rican Tarraz&uacute; Jaguar Honey</strong>
+            <span data-i18n="hero.badge.meta">Honey Process &bull; Medium Roast</span>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="lang-section" aria-label="Language selection">
+    <section class="section feature-offering" id="featured-offering" aria-labelledby="featured-offering-title">
       <div class="container">
-        <div class="lang-bar">
-          <p class="lang-caption" data-i18n="lang.label">Language</p>
-          <div class="lang-switch" role="group" aria-label="Language selection">
-            <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="true">English</button>
-            <button type="button" class="lang-btn" data-lang-btn="es" aria-pressed="false">Español</button>
+        <article class="feature-panel">
+          <figure class="feature-media">
+            <div class="feature-image-plate">
+              <img class="feature-product-image" src="coffee.png" alt="Costa Rican Tarrazu Jaguar Honey coffee bag from Millionaire's Roast" width="419" height="419" loading="lazy" decoding="async" />
+            </div>
+          </figure>
+
+          <div class="feature-copy">
+            <p class="section-eyebrow" data-i18n="featured.eyebrow">Featured Offering</p>
+            <h2 class="section-title" id="featured-offering-title" data-i18n="featured.title">Costa Rican Tarraz&uacute; Jaguar Honey</h2>
+            <p class="taste-line" data-i18n="featured.taste">Chocolate &bull; Nectarine &bull; Guava &bull; Berry &bull; Honey &bull; Citrus</p>
+            <p class="section-subtitle" data-i18n="featured.body">Our flagship medium roast is bright, sweet, and approachable, with a clean finish that makes specialty coffee easy to come back to every day.</p>
+
+            <div class="feature-specs" aria-label="Featured coffee details">
+              <div class="feature-spec"><span data-i18n="featured.spec.origin">Origin: Tarraz&uacute;, Costa Rica</span></div>
+              <div class="feature-spec"><span data-i18n="featured.spec.process">Process: Honey</span></div>
+              <div class="feature-spec"><span data-i18n="featured.spec.roast">Roast: Medium</span></div>
+              <div class="feature-spec"><span data-i18n="featured.spec.body">Body: Heavy</span></div>
+            </div>
+
+            <a class="btn btn-gold" data-shop-cta data-cta-location="featured_flagship" href="https://millionaires-roast.square.site/" data-i18n="featured.cta">Shop the Flagship</a>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section class="section" id="current-roast" aria-labelledby="current-roast-title">
+    <section class="section coffees-section" id="current-roast" aria-labelledby="current-roast-title">
       <div class="container current-coffees">
         <div class="section-head center narrow-head">
-          <h2 class="section-title" id="current-roast-title" data-i18n="coffees.title">Current Coffees</h2>
-          <p class="section-subtitle" data-i18n="coffees.subtitle">We currently offer three fresh single-origin coffees across three roast profiles. Each coffee is selected from documented specialty-grade lots that cup 80+, giving Central Illinois customers a cleaner, more intentional cup without luxury-shop pricing.</p>
+          <p class="section-eyebrow" data-i18n="coffees.eyebrow">Current Coffees</p>
+          <h2 class="section-title" id="current-roast-title" data-i18n="coffees.title">A clear lineup, roasted fresh.</h2>
+          <p class="section-subtitle" data-i18n="coffees.subtitle">Three single-origin coffees, three roast profiles, simple pricing. Compare the cup you want and order from the current roast list.</p>
         </div>
 
-        <article class="card card-plate coffee-pricing-summary" aria-label="Shared pricing for the current lineup">
-          <h3 class="coffee-pricing-title" data-i18n="coffee.pricing.title">Simple Pricing</h3>
-          <div class="coffee-pricing-lines">
-            <p class="coffee-pricing-line" data-i18n="coffee.pricing.bag">14 oz Bag $18</p>
-            <p class="coffee-pricing-line" data-i18n="coffee.pricing.kcups">K-Cups: 8 pack $10 &middot; 18 pack $22 &middot; 24 pack $28</p>
+        <div class="choose-inline" id="choose" aria-labelledby="choose-inline-title">
+          <div>
+            <h3 id="choose-inline-title" data-i18n="choose.title">Not sure what to order?</h3>
+            <p data-i18n="choose.subtitle">Pick the kind of cup you want. We'll point you toward the right roast.</p>
           </div>
-          <p class="coffee-pricing-note" data-i18n="coffee.pricing.note">Documented specialty-grade coffee with simple pricing across the full lineup.</p>
+          <a class="text-cta" data-sms-link data-contact-location="choose_text_help" href="sms:12174167072?body=Hi!%20I%27d%20like%20help%20choosing%20coffee%20from%20Millionaire%27s%20Roast." data-i18n="choose.textCta">Still unsure? Text us and we'll help.</a>
+        </div>
+
+        <div class="coffee-product-grid">
+          <article class="card card-plate product-card product-card-featured">
+            <div class="product-card-head">
+              <span class="origin-badge" data-i18n="coffee.cr.badge">Medium Roast</span>
+              <span class="product-process" data-i18n="coffee.cr.process">Honey Process</span>
+            </div>
+            <h3 class="origin-title" data-i18n="coffee.cr.title">Costa Rican Tarraz&uacute; Jaguar Honey</h3>
+            <p class="card-text" data-i18n="coffee.cr.body">Bright, sweet, and approachable, with fruit, honey, and chocolate notes over a clean medium roast profile.</p>
+            <p class="product-notes" data-i18n="coffee.cr.notes">Chocolate, nectarine, guava, berry, honey, citrus</p>
+
+            <div class="product-choice">
+              <span data-i18n="choose.card1.title">I want bright and sweet</span>
+            </div>
+
+            <div class="product-spec-grid">
+              <div class="spec-card"><span class="spec-label" data-i18n="coffee.spec.origin">Origin</span><span class="spec-value" data-i18n="coffee.cr.origin">Tarraz&uacute;, Costa Rica</span></div>
+              <div class="spec-card"><span class="spec-label" data-i18n="coffee.spec.body">Body</span><span class="spec-value" data-i18n="coffee.cr.bodyValue">Heavy</span></div>
+              <div class="spec-card"><span class="spec-label" data-i18n="coffee.spec.acidity">Acidity</span><span class="spec-value" data-i18n="coffee.cr.acidity">Medium</span></div>
+            </div>
+
+            <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_medium" href="https://millionaires-roast.square.site/" data-i18n="coffee.cta.medium">Order Medium Roast</a>
+          </article>
+
+          <article class="card card-plate product-card">
+            <div class="product-card-head">
+              <span class="origin-badge" data-i18n="coffee.pe.badge">Medium Dark Roast</span>
+              <span class="product-process" data-i18n="coffee.pe.process">Washed Process</span>
+            </div>
+            <h3 class="origin-title" data-i18n="coffee.pe.title">Peruvian Chonta G1 Washed</h3>
+            <p class="card-text" data-i18n="coffee.pe.body">Balanced and developed while still lively, with chocolate, orchard fruit, roasted almond, and citrus.</p>
+            <p class="product-notes" data-i18n="coffee.pe.notes">Chocolate, green apple, plum, roasted almond, citrus</p>
+
+            <div class="product-choice">
+              <span data-i18n="choose.card2.title">I want balanced and familiar</span>
+            </div>
+
+            <div class="product-spec-grid">
+              <div class="spec-card"><span class="spec-label" data-i18n="coffee.spec.origin">Origin</span><span class="spec-value" data-i18n="coffee.pe.origin">Peru</span></div>
+              <div class="spec-card"><span class="spec-label" data-i18n="coffee.spec.body">Body</span><span class="spec-value" data-i18n="coffee.pe.bodyValue">Medium</span></div>
+              <div class="spec-card"><span class="spec-label" data-i18n="coffee.spec.acidity">Acidity</span><span class="spec-value" data-i18n="coffee.pe.acidity">Medium</span></div>
+            </div>
+
+            <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_medium_dark" href="https://millionaires-roast.square.site/" data-i18n="coffee.cta.mediumDark">Order Medium Dark Roast</a>
+          </article>
+
+          <article class="card card-plate product-card">
+            <div class="product-card-head">
+              <span class="origin-badge" data-i18n="coffee.br.badge">Dark Roast</span>
+              <span class="product-process" data-i18n="coffee.br.process">Natural Process</span>
+            </div>
+            <h3 class="origin-title" data-i18n="coffee.br.title">Brazilian Cerrado Natural</h3>
+            <p class="card-text" data-i18n="coffee.br.body">Smooth and classic, built around chocolate, almond, dried fruit, and vanilla in a darker roast profile.</p>
+            <p class="product-notes" data-i18n="coffee.br.notes">Milk chocolate, almond, dried plum, vanilla</p>
+
+            <div class="product-choice">
+              <span data-i18n="choose.card3.title">I want smooth and classic</span>
+            </div>
+
+            <div class="product-spec-grid">
+              <div class="spec-card"><span class="spec-label" data-i18n="coffee.spec.origin">Origin</span><span class="spec-value" data-i18n="coffee.br.origin">Brazil</span></div>
+              <div class="spec-card"><span class="spec-label" data-i18n="coffee.spec.body">Body</span><span class="spec-value" data-i18n="coffee.br.bodyValue">Medium</span></div>
+              <div class="spec-card"><span class="spec-label" data-i18n="coffee.spec.acidity">Acidity</span><span class="spec-value" data-i18n="coffee.br.acidity">Mild</span></div>
+            </div>
+
+            <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_dark" href="https://millionaires-roast.square.site/" data-i18n="coffee.cta.dark">Order Dark Roast</a>
+          </article>
+        </div>
+
+        <article class="card card-plate lineup-pricing-card">
+          <h3 data-i18n="coffee.price.title">Simple pricing across the lineup</h3>
+          <div class="lineup-pricing-lines">
+            <p data-i18n="coffee.price.bag">14 oz bag: $18</p>
+            <p data-i18n="coffee.price.kcups">K-Cups: from $10</p>
+          </div>
         </article>
+      </div>
+    </section>
 
-        <div class="roast-selector" aria-labelledby="roast-selector-label">
-          <p class="roast-selector-label" id="roast-selector-label" data-i18n="roast.selector.label">Choose your roast</p>
-          <div class="roast-selector-tabs" role="tablist" aria-labelledby="roast-selector-label">
-            <button class="roast-selector-btn is-active" id="roast-tab-medium" type="button" role="tab" data-roast-tab="medium" aria-selected="true" aria-controls="roast-panel-medium" tabindex="0" data-i18n="roast.selector.medium">Medium</button>
-            <button class="roast-selector-btn" id="roast-tab-medium-dark" type="button" role="tab" data-roast-tab="medium-dark" aria-selected="false" aria-controls="roast-panel-medium-dark" tabindex="-1" data-i18n="roast.selector.mediumDark">Medium Dark</button>
-            <button class="roast-selector-btn" id="roast-tab-dark" type="button" role="tab" data-roast-tab="dark" aria-selected="false" aria-controls="roast-panel-dark" tabindex="-1" data-i18n="roast.selector.dark">Dark</button>
-          </div>
+    <section class="section transparency-section" id="transparency" aria-labelledby="transparency-title">
+      <div class="container">
+        <div class="section-head center narrow-head">
+          <h2 class="section-title" id="transparency-title" data-i18n="transparency.title">Specialty coffee, explained plainly.</h2>
+          <p class="section-subtitle" data-i18n="transparency.subtitle">We do not expect customers to be coffee experts. We show the details that matter so the coffee feels easier to choose.</p>
         </div>
 
-        <div class="origin-layout">
-          <article class="card card-plate origin-flagship" id="roast-panel-medium" data-roast-panel="medium">
-            <div class="origin-flagship-copy">
-              <div class="origin-header">
-                <p class="order-kicker" data-i18n="coffee.cr.kicker">Flagship Origin</p>
-                <span class="origin-badge" data-i18n="coffee.cr.badge">Medium Roast</span>
-              </div>
-              <h3 class="origin-title" data-i18n="coffee.cr.title">Costa Rican Tarrazú Jaguar Honey</h3>
-              <p class="origin-process" data-i18n="coffee.cr.process">Honey Process</p>
-              <p class="card-text" data-i18n="coffee.cr.body">Our flagship current origin and the brightest profile in the lineup, built around chocolate, nectarine, guava, berry, honey, and citrus with a clean, sweet finish. It anchors the lineup as an approachable specialty coffee that is here to stay.</p>
-              <p class="origin-note" data-i18n="coffee.cr.note">Best for customers who want a fresh, approachable single-origin cup with sweetness, balance, and a little lift.</p>
-            </div>
+        <div class="transparency-grid">
+          <article class="transparency-card">
+            <span class="transparency-label">01</span>
+            <h3 data-i18n="transparency.card1.title">Documented 80+ Lots</h3>
+            <p data-i18n="transparency.card1.body">We select coffees from documented specialty-grade green coffee lots.</p>
+          </article>
+          <article class="transparency-card">
+            <span class="transparency-label">02</span>
+            <h3 data-i18n="transparency.card2.title">Single-Origin Focus</h3>
+            <p data-i18n="transparency.card2.body">Each current coffee comes from a specific origin instead of being hidden inside a generic blend.</p>
+          </article>
+          <article class="transparency-card">
+            <span class="transparency-label">03</span>
+            <h3 data-i18n="transparency.card3.title">Roasted in Small Batches</h3>
+            <p data-i18n="transparency.card3.body">Small-batch roasting helps us keep the lineup fresh and responsive to demand.</p>
+          </article>
+          <article class="transparency-card">
+            <span class="transparency-label">04</span>
+            <h3 data-i18n="transparency.card4.title">Built for Everyday Drinking</h3>
+            <p data-i18n="transparency.card4.body">The goal is clean, flavorful coffee at a price normal customers can return to.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            <figure class="origin-flagship-media">
-              <img class="origin-flagship-image" src="coffee.png" alt="Label art for Costa Rican Tarrazú Jaguar Honey, the flagship medium roast coffee" width="419" height="419" loading="lazy" decoding="async" />
-            </figure>
+    <section class="section brew-guide" id="brew" aria-labelledby="brew-title">
+      <div class="container">
+        <div class="section-head center narrow-head">
+          <h2 class="section-title" id="brew-title"><span data-i18n="brew.title.line1">Brew better coffee</span><span data-i18n="brew.title.line2">without overthinking it.</span></h2>
+          <p class="section-subtitle" data-i18n="brew.subtitle">Simple starting points for a better cup at home.</p>
+        </div>
 
-            <div class="origin-flagship-details">
-              <div class="origin-spec-grid">
-                <div class="spec-card">
-                  <span class="spec-label" data-i18n="coffee.spec.origin">Origin</span>
-                  <span class="spec-value" data-i18n="coffee.cr.origin">Tarrazú, Costa Rica</span>
-                </div>
-                <div class="spec-card">
-                  <span class="spec-label" data-i18n="coffee.spec.notes">Tasting Notes</span>
-                  <span class="spec-value" data-i18n="coffee.cr.notes">Chocolate, nectarine, guava, berry, honey, citrus</span>
-                </div>
-                <div class="spec-card">
-                  <span class="spec-label" data-i18n="coffee.spec.best">Body</span>
-                  <span class="spec-value" data-i18n="coffee.cr.best">Heavy</span>
-                </div>
-                <div class="spec-card">
-                  <span class="spec-label" data-i18n="coffee.spec.availability">Acidity</span>
-                  <span class="spec-value" data-i18n="coffee.cr.availability">Medium</span>
-                </div>
-              </div>
-              <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_medium" href="https://millionaires-roast.square.site/" data-i18n="coffee.cta.medium">Order Medium Roast</a>
-            </div>
-
-            <div class="origin-conservation">
-              <p class="spec-label" data-i18n="coffee.conservation.kicker">Jaguar Conservation</p>
-              <p class="card-text" data-i18n="coffee.cr.conservation">This origin’s Jaguar name ties into a real conservation story connected to the San Diego mill in Costa Rica. It adds a meaningful backstory to the flagship coffee while keeping the focus on the cup itself.</p>
+        <div class="brew-grid" data-brew-guide>
+          <article class="brew-card card card-plate" data-brew-card>
+            <button class="brew-card-toggle" type="button" aria-expanded="false" aria-controls="brew-panel-drip" data-brew-toggle>
+              <span class="brew-best" data-i18n="brew.drip.best">Best for: everyday coffee, full pots, convenience</span>
+              <span class="brew-card-title-row">
+                <span class="card-title" data-i18n="brew.drip.title">Drip coffee maker</span>
+                <span class="brew-card-icon" aria-hidden="true">+</span>
+              </span>
+              <span class="brew-card-meta" data-i18n="brew.drip.summary">Medium grind &bull; 55-60 g per liter</span>
+            </button>
+            <div class="brew-card-panel" id="brew-panel-drip" data-brew-panel hidden>
+              <dl class="brew-spec-list">
+                <div><dt data-i18n="brew.label.grind">Grind</dt><dd data-i18n="brew.drip.grind">Medium, like kosher salt</dd></div>
+                <div><dt data-i18n="brew.label.ratio">Ratio</dt><dd data-i18n="brew.drip.ratio">About 55-60 g per liter</dd></div>
+                <div><dt data-i18n="brew.label.fullPot">Full 12-cup pot</dt><dd data-i18n="brew.drip.fullPot">About 95-105 g coffee, depending on machine size</dd></div>
+              </dl>
+              <p class="brew-copy" data-i18n="brew.drip.body">Drip coffee is the classic home coffee method. Use a medium grind, a clean filter, and filtered water if possible. For a full 12-cup pot, start around 95-105 grams of coffee. If the cup tastes weak or watery, use a little more coffee or grind slightly finer. If it tastes bitter, use slightly less coffee or grind coarser.</p>
+              <p class="brew-note" data-i18n="brew.drip.note">NCA describes drip coffee as a common starting point because it is convenient, consistent, and good for larger batches. It also recommends a medium grind for drip coffee and notes that a typical drip brew has about five minutes of contact time.</p>
             </div>
           </article>
 
-          <div class="origin-grid is-roast-group-hidden" data-roast-panel-group>
-            <article class="card card-plate origin-card is-roast-hidden" id="roast-panel-medium-dark" data-roast-panel="medium-dark">
-              <div class="origin-header">
-                <span class="origin-badge" data-i18n="coffee.pe.badge">Medium Dark Roast</span>
-              </div>
-              <h3 class="origin-title" data-i18n="coffee.pe.title">Peruvian Chonta G1 Washed</h3>
-              <p class="origin-process" data-i18n="coffee.pe.process">Washed</p>
-              <p class="card-text" data-i18n="coffee.pe.body">A rotating medium dark origin selected to the same single-origin, specialty-grade, 80+ standard as the rest of the lineup, with a more developed profile that still keeps some lift, showing chocolate, green apple, plum, roasted almond, and citrus.</p>
-              <div class="origin-spec-grid">
-                <div class="spec-card">
-                  <span class="spec-label" data-i18n="coffee.spec.origin">Origin</span>
-                  <span class="spec-value" data-i18n="coffee.pe.origin">Peru</span>
-                </div>
-                <div class="spec-card">
-                  <span class="spec-label" data-i18n="coffee.spec.notes">Tasting Notes</span>
-                  <span class="spec-value" data-i18n="coffee.pe.notes">Chocolate, green apple, plum, roasted almond, citrus</span>
-                </div>
-                <div class="spec-card">
-                  <span class="spec-label" data-i18n="coffee.spec.best">Body</span>
-                  <span class="spec-value" data-i18n="coffee.pe.best">Medium</span>
-                </div>
-                <div class="spec-card">
-                  <span class="spec-label" data-i18n="coffee.spec.availability">Acidity</span>
-                  <span class="spec-value" data-i18n="coffee.pe.availability">Medium</span>
-                </div>
-              </div>
-              <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_medium_dark" href="https://millionaires-roast.square.site/" data-i18n="coffee.cta.mediumDark">Order Medium Dark Roast</a>
-            </article>
+          <article class="brew-card card card-plate" data-brew-card>
+            <button class="brew-card-toggle" type="button" aria-expanded="false" aria-controls="brew-panel-french" data-brew-toggle>
+              <span class="brew-best" data-i18n="brew.french.best">Best for: bold, full-bodied coffee</span>
+              <span class="brew-card-title-row">
+                <span class="card-title" data-i18n="brew.french.title">French press</span>
+                <span class="brew-card-icon" aria-hidden="true">+</span>
+              </span>
+              <span class="brew-card-meta" data-i18n="brew.french.summary">Coarse grind &bull; 4 minutes</span>
+            </button>
+            <div class="brew-card-panel" id="brew-panel-french" data-brew-panel hidden>
+              <dl class="brew-spec-list">
+                <div><dt data-i18n="brew.label.grind">Grind</dt><dd data-i18n="brew.french.grind">Coarse, like rock salt</dd></div>
+                <div><dt data-i18n="brew.label.ratio">Ratio</dt><dd data-i18n="brew.french.ratio">About 1:12 to 1:16</dd></div>
+                <div><dt data-i18n="brew.label.time">Time</dt><dd data-i18n="brew.french.time">About 4 minutes</dd></div>
+              </dl>
+              <p class="brew-copy" data-i18n="brew.french.body">French press makes a heavier, richer cup because the coffee steeps directly in the water and is filtered with a metal screen. Use a coarse grind, steep for about 4 minutes, then press gently and pour right away. Do not leave the coffee sitting in the press, or it can keep extracting and turn bitter.</p>
+              <p class="brew-note" data-i18n="brew.french.note">NCA gives French press a broad ratio range of 1:10 to 1:16, recommends water around 93 +/- 3 C, and gives an approximate brew time of 4 minutes.</p>
+            </div>
+          </article>
 
-            <article class="card card-plate origin-card is-roast-hidden" id="roast-panel-dark" data-roast-panel="dark">
-              <div class="origin-header">
-                <span class="origin-badge" data-i18n="coffee.br.badge">Dark Roast</span>
-              </div>
-              <h3 class="origin-title" data-i18n="coffee.br.title">Brazilian Cerrado Natural</h3>
-              <p class="origin-process" data-i18n="coffee.br.process">Natural Process</p>
-              <p class="card-text" data-i18n="coffee.br.body">A rotating dark origin that keeps the lineup's single-origin, specialty-grade, 80+ standard while leaning fuller and smoother in the cup, built around milk chocolate, almond, dried plum, and vanilla.</p>
-              <div class="origin-spec-grid">
-                <div class="spec-card">
-                  <span class="spec-label" data-i18n="coffee.spec.origin">Origin</span>
-                  <span class="spec-value" data-i18n="coffee.br.origin">Brazil</span>
-                </div>
-                <div class="spec-card">
-                  <span class="spec-label" data-i18n="coffee.spec.notes">Tasting Notes</span>
-                  <span class="spec-value" data-i18n="coffee.br.notes">Milk chocolate, almond, dried plum, vanilla</span>
-                </div>
-                <div class="spec-card">
-                  <span class="spec-label" data-i18n="coffee.spec.best">Body</span>
-                  <span class="spec-value" data-i18n="coffee.br.best">Medium</span>
-                </div>
-                <div class="spec-card">
-                  <span class="spec-label" data-i18n="coffee.spec.availability">Acidity</span>
-                  <span class="spec-value" data-i18n="coffee.br.availability">Mild</span>
-                </div>
-              </div>
-              <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_dark" href="https://millionaires-roast.square.site/" data-i18n="coffee.cta.dark">Order Dark Roast</a>
-            </article>
-          </div>
+          <article class="brew-card card card-plate" data-brew-card>
+            <button class="brew-card-toggle" type="button" aria-expanded="false" aria-controls="brew-panel-kcups" data-brew-toggle>
+              <span class="brew-best" data-i18n="brew.kcups.best">Best for: speed and convenience</span>
+              <span class="brew-card-title-row">
+                <span class="card-title" data-i18n="brew.kcups.title">K-cups / single-serve pods</span>
+                <span class="brew-card-icon" aria-hidden="true">+</span>
+              </span>
+              <span class="brew-card-meta" data-i18n="brew.kcups.summary">Use the smaller cup size for stronger coffee</span>
+            </button>
+            <div class="brew-card-panel" id="brew-panel-kcups" data-brew-panel hidden>
+              <dl class="brew-spec-list">
+                <div><dt data-i18n="brew.label.grind">Grind</dt><dd data-i18n="brew.kcups.grind">Already handled inside the pod</dd></div>
+                <div><dt data-i18n="brew.label.setting">Best setting</dt><dd data-i18n="brew.kcups.setting">Smaller cup size for stronger coffee</dd></div>
+              </dl>
+              <p class="brew-copy" data-i18n="brew.kcups.body">For the best K-cup flavor, use the 6 oz or 8 oz setting if your machine allows it. Larger settings can make the coffee taste thin because the same amount of coffee is being stretched across more water. For a stronger cup, use a smaller brew size rather than brewing the same pod twice.</p>
+              <p class="brew-note" data-i18n="brew.kcups.note">For Millionaire's Roast K-cups, the key advice is simple: smaller brew size means better flavor.</p>
+            </div>
+          </article>
+
+          <article class="brew-card card card-plate" data-brew-card>
+            <button class="brew-card-toggle" type="button" aria-expanded="false" aria-controls="brew-panel-pourover" data-brew-toggle>
+              <span class="brew-best" data-i18n="brew.pourover.best">Best for: clean, flavorful cups and more control</span>
+              <span class="brew-card-title-row">
+                <span class="card-title" data-i18n="brew.pourover.title">Pour-over</span>
+                <span class="brew-card-icon" aria-hidden="true">+</span>
+              </span>
+              <span class="brew-card-meta" data-i18n="brew.pourover.summary">Medium grind &bull; 2-4 minutes</span>
+            </button>
+            <div class="brew-card-panel" id="brew-panel-pourover" data-brew-panel hidden>
+              <dl class="brew-spec-list">
+                <div><dt data-i18n="brew.label.grind">Grind</dt><dd data-i18n="brew.pourover.grind">Medium</dd></div>
+                <div><dt data-i18n="brew.label.ratio">Ratio</dt><dd data-i18n="brew.pourover.ratio">About 1:15 to 1:16</dd></div>
+                <div><dt data-i18n="brew.label.time">Time</dt><dd data-i18n="brew.pourover.time">About 2-4 minutes</dd></div>
+              </dl>
+              <p class="brew-copy" data-i18n="brew.pourover.body">Pour-over gives you more control than an automatic drip machine. Use a medium grind, rinse the paper filter, add your coffee, then pour a small amount of hot water over the grounds and let it bloom for 30-45 seconds. Continue pouring slowly until you reach your target amount of water. Total brew time should usually land around 2-4 minutes.</p>
+              <p class="brew-note" data-i18n="brew.pourover.note">NCA describes pour-over as a manual version of drip brewing that gives the brewer more control, with quick numbers of 1:13 to 1:16, 93 +/- 3 C, and 2-4 minutes contact time.</p>
+            </div>
+          </article>
+
+          <article class="brew-card card card-plate" data-brew-card>
+            <button class="brew-card-toggle" type="button" aria-expanded="false" aria-controls="brew-panel-cold" data-brew-toggle>
+              <span class="brew-best" data-i18n="brew.cold.best">Best for: smooth iced coffee and make-ahead batches</span>
+              <span class="brew-card-title-row">
+                <span class="card-title" data-i18n="brew.cold.title">Cold brew</span>
+                <span class="brew-card-icon" aria-hidden="true">+</span>
+              </span>
+              <span class="brew-card-meta" data-i18n="brew.cold.summary">Coarse grind &bull; about 12 hours</span>
+            </button>
+            <div class="brew-card-panel" id="brew-panel-cold" data-brew-panel hidden>
+              <dl class="brew-spec-list">
+                <div><dt data-i18n="brew.label.grind">Grind</dt><dd data-i18n="brew.cold.grind">Coarse</dd></div>
+                <div><dt data-i18n="brew.label.ratio">Ratio</dt><dd data-i18n="brew.cold.ratio">Concentrate around 1:4 to 1:5, then dilute</dd></div>
+                <div><dt data-i18n="brew.label.time">Time</dt><dd data-i18n="brew.cold.time">About 12 hours</dd></div>
+              </dl>
+              <p class="brew-copy" data-i18n="brew.cold.body">Cold brew is made by steeping coarse-ground coffee in cool or room-temperature water. For a concentrate, use about 1 part coffee to 4-5 parts water, steep for about 12 hours, then strain. Serve over ice and dilute with water, milk, or creamer to taste.</p>
+              <p class="brew-note" data-i18n="brew.cold.note">NCA gives cold brew quick numbers of 1:4 to 1:5, room temperature or cooler water, and about 12 hours of contact time.</p>
+            </div>
+          </article>
         </div>
+
+        <p class="text-cta-wrap">
+          <a class="btn btn-outline" data-sms-link data-contact-location="brew_text_help" href="sms:12174167072?body=Hi!%20I%27d%20like%20help%20with%20grind%20size%20for%20Millionaire%27s%20Roast%20coffee." data-i18n="brew.cta">Text us for grind help</a>
+        </p>
       </div>
     </section>
 
-    <section class="section" id="proof" aria-labelledby="proof-title">
+    <section class="section proof-section" id="proof" aria-labelledby="proof-title">
       <div class="container">
         <div class="section-head center narrow-head">
           <h2 class="section-title" id="proof-title" data-i18n="proof.title">A real local brand, already in motion</h2>
@@ -368,17 +499,17 @@
               <div class="carousel-track">
                 <figure class="carousel-slide">
                   <img class="proof-image" src="market2.webp" alt="Jesus Gomez standing behind the Millionaire's Roast booth at the Old Capitol Farmers Market in downtown Springfield, Illinois, with coffee bags, cups, and a chalkboard price sign on display" width="4096" height="3072" loading="lazy" decoding="async" />
-                  <figcaption class="proof-caption" data-i18n="proof.caption1">Jesús Gómez helping at the Millionaire's Roast booth during the Old Capitol Farmers Market in downtown Springfield.</figcaption>
+                  <figcaption class="proof-caption"><strong data-i18n="proof.card1.title">Old Capitol Farmers Market</strong><span data-i18n="proof.card1.body">Serving customers face-to-face in downtown Springfield.</span></figcaption>
                 </figure>
 
                 <figure class="carousel-slide">
                   <img class="proof-image" src="max.webp" alt="Maximiliano Gomez, founder of Millionaire's Roast, visiting Western Illinois University as part of the Cass County CEO program" width="3060" height="4080" loading="lazy" decoding="async" />
-                  <figcaption class="proof-caption" data-i18n="proof.caption2">Maximiliano Gómez, founder of Millionaire's Roast, during a Cass County CEO visit to Western Illinois University.</figcaption>
+                  <figcaption class="proof-caption"><strong data-i18n="proof.card2.title">Built through Cass County CEO</strong><span data-i18n="proof.card2.body">Launched through a real entrepreneurship program, not just an online storefront.</span></figcaption>
                 </figure>
 
                 <figure class="carousel-slide">
                   <img class="proof-image" src="market.webp" alt="Maximiliano Gomez standing behind an earlier Millionaire's Roast booth setup at the Old Capitol Farmers Market in Springfield, Illinois" width="4096" height="3072" loading="lazy" decoding="async" />
-                  <figcaption class="proof-caption" data-i18n="proof.caption3">An earlier Old Capitol Farmers Market setup showing how the booth has grown over time.</figcaption>
+                  <figcaption class="proof-caption"><strong data-i18n="proof.card3.title">Roasted and sold in small batches</strong><span data-i18n="proof.card3.body">The lineup is built batch by batch as the brand grows.</span></figcaption>
                 </figure>
               </div>
             </div>
@@ -434,8 +565,8 @@
               <h3 class="card-title" data-i18n="about.find.title">Where to find us</h3>
               <p class="card-text" data-i18n="about.find.body">Watch social media for weekly market appearances, pickup coordination, and current availability updates.</p>
               <div class="follow-links">
-                <a class="pill" href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer">Facebook</a>
-                <a class="pill" href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a class="pill" href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer" data-i18n="about.find.facebook">Facebook</a>
+                <a class="pill" href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer" data-i18n="about.find.instagram">Instagram</a>
               </div>
             </aside>
           </div>
@@ -510,12 +641,12 @@ For customers, the result is simple: cleaner flavor, clearer tasting notes, and 
     <section class="section" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <div class="section-head center narrow-head">
-          <h2 class="section-title" id="contact-title" data-i18n="contact.title">Contact & follow</h2>
+          <h2 class="section-title" id="contact-title" data-i18n="contact.title">Contact &amp; follow</h2>
           <p class="section-subtitle" data-i18n="contact.subtitle">Text is the fastest way to ask a quick question. Email works best for follow-up and custom questions.</p>
         </div>
 
         <div class="contact-grid">
-          <a class="card card-action card-action-primary" id="textUsCard" href="sms:12174167072?body=Hi!%20I%E2%80%99d%20like%20to%20order%20coffee%20from%20Millionaire%E2%80%99s%20Roast.%20What%20do%20you%20have%20available%3F">
+          <a class="card card-action card-action-primary" id="textUsCard" data-sms-link data-contact-location="contact_text" href="sms:12174167072?body=Hi!%20I%27d%20like%20to%20order%20coffee%20from%20Millionaire%27s%20Roast.%20What%20do%20you%20have%20available%3F">
             <div class="card-icon" aria-hidden="true">TXT</div>
             <div class="card-meta">
               <div class="card-kicker" data-i18n="contact.text.kicker">Text Us</div>
@@ -551,19 +682,44 @@ For customers, the result is simple: cleaner flavor, clearer tasting notes, and 
             </div>
           </a>
         </div>
-
-        <footer class="footer">
-          <div class="footer-rule" aria-hidden="true"></div>
-          <div class="footer-stack">
-            <div class="footer-line">
-              <span>&copy; <span id="year"></span> Millionaire's Roast</span>
-            </div>
-            <div class="footer-line" data-i18n="footer.line">This product was produced in a home kitchen not inspected by a health department that may also process common food allergens. If you have safety concerns, contact your local health department.</div>
-          </div>
-        </footer>
       </div>
     </section>
   </main>
 
+  <footer class="site-footer" aria-labelledby="footer-title">
+    <div class="container">
+      <h2 class="sr-only" id="footer-title" data-i18n="footer.srTitle">Millionaire's Roast footer</h2>
+      <div class="footer-rule" aria-hidden="true"></div>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 data-i18n="footer.shop.title">Shop</h3>
+          <a href="#current-roast" data-i18n="footer.shop.current">Current Coffees</a>
+          <a data-shop-cta data-cta-location="footer_kcups" href="https://millionaires-roast.square.site/" data-i18n="footer.shop.kcups">K-Cups</a>
+          <a data-shop-cta data-cta-location="footer_order_online" href="https://millionaires-roast.square.site/" data-i18n="footer.shop.order">Order Online</a>
+        </div>
+
+        <div class="footer-col">
+          <h3 data-i18n="footer.learn.title">Learn</h3>
+          <a href="#transparency" data-i18n="footer.learn.specialty">What Makes Coffee Specialty</a>
+          <a href="#choose" data-i18n="footer.learn.choose">Help Me Choose</a>
+          <a href="#brew" data-i18n="footer.learn.brew">Brew It Simply</a>
+        </div>
+
+        <div class="footer-col">
+          <h3 data-i18n="footer.local.title">Local</h3>
+          <a href="#contact" data-i18n="footer.local.springfield">Springfield Pickup</a>
+          <a href="#contact" data-i18n="footer.local.beardstown">Beardstown Pickup</a>
+          <a href="#proof" data-i18n="footer.local.markets">Farmers Markets</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Millionaire's Roast</p>
+        <p data-i18n="footer.line">This product was produced in a home kitchen not inspected by a health department that may also process common food allergens. If you have safety concerns, contact your local health department.</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

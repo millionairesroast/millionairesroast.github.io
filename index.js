@@ -57,7 +57,7 @@
     "coffee.cr.origin": "Tarraz\u00fa, Costa Rica",
     "coffee.cr.bodyValue": "Pesado",
     "coffee.cr.acidity": "Media",
-    "coffee.pe.badge": "Tueste medio oscuro",
+    "coffee.pe.badge": "Tueste med-oscuro",
     "coffee.pe.title": "Peruvian Chonta G1 Washed",
     "coffee.pe.process": "Proceso lavado",
     "coffee.pe.body": "Balanceado y desarrollado, pero todav\u00eda vivo, con chocolate, fruta de huerto, almendra tostada y c\u00edtricos.",
@@ -228,7 +228,13 @@
   const brewGuide = document.querySelector("[data-brew-guide]");
   const brewButtons = brewGuide ? [...brewGuide.querySelectorAll("[data-brew-toggle]")] : [];
   const langButtons = [...document.querySelectorAll("[data-lang-btn]")];
-  const langSwitch = document.querySelector(".lang-switch");
+  const langSwitches = [...document.querySelectorAll(".lang-switch")];
+  const productTabList = document.querySelector("[data-product-tabs]");
+  const productTabs = productTabList ? [...productTabList.querySelectorAll("[data-product-tab]")] : [];
+  const productPanels = [...document.querySelectorAll("[data-product-panel]")];
+  const productTabsQuery = typeof window.matchMedia === "function"
+    ? window.matchMedia("(max-width: 760px)")
+    : null;
   const faqSchemaScript = document.getElementById("faq-schema");
   const roastFaqAnswer = document.querySelector('[data-i18n="faq.a3"]');
   const BASE = Object.fromEntries(
@@ -238,6 +244,7 @@
     ]).filter(([key]) => Boolean(key))
   );
   const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  let activeProductIndex = 0;
 
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
@@ -599,6 +606,51 @@
     });
   }
 
+  function isProductTabsMode() {
+    return Boolean(productTabsQuery?.matches);
+  }
+
+  function updateProductTabs() {
+    if (!productTabs.length || !productPanels.length) return;
+
+    const tabsMode = isProductTabsMode();
+    productTabs.forEach((tab, index) => {
+      const isActive = index === activeProductIndex;
+      tab.classList.toggle("is-active", isActive);
+      tab.setAttribute("aria-selected", String(isActive));
+      tab.setAttribute("tabindex", tabsMode && !isActive ? "-1" : "0");
+    });
+
+    productPanels.forEach((panel, index) => {
+      const isActive = index === activeProductIndex;
+      panel.classList.toggle("is-active", isActive);
+      panel.hidden = tabsMode && !isActive;
+    });
+  }
+
+  function setupProductTabs() {
+    if (!productTabList || !productTabs.length || !productPanels.length) return;
+
+    productTabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        activeProductIndex = index;
+        updateProductTabs();
+      });
+
+      tab.addEventListener("keydown", (event) => {
+        if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+        event.preventDefault();
+        const direction = event.key === "ArrowRight" ? 1 : -1;
+        activeProductIndex = (index + direction + productTabs.length) % productTabs.length;
+        updateProductTabs();
+        productTabs[activeProductIndex]?.focus();
+      });
+    });
+
+    productTabsQuery?.addEventListener?.("change", updateProductTabs);
+    updateProductTabs();
+  }
+
   function setupCarousel() {
     if (!carousel) return;
 
@@ -752,11 +804,11 @@
   }
 
   function setupLanguageToggle() {
-    if (!langSwitch) return;
-
-    langSwitch.addEventListener("click", (event) => {
-      const button = event.target.closest("[data-lang-btn]");
-      if (button) fadeToLanguage(button.getAttribute("data-lang-btn"));
+    langSwitches.forEach((langSwitch) => {
+      langSwitch.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-lang-btn]");
+        if (button) fadeToLanguage(button.getAttribute("data-lang-btn"));
+      });
     });
 
     let initialLang = root.dataset.lang || "en";
@@ -803,6 +855,7 @@
   setupMobileNav();
   setupAccordion();
   setupBrewGuide();
+  setupProductTabs();
   setupCarousel();
   setupLanguageToggle();
   setupSmoothAnchorScrolling();

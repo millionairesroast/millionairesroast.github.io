@@ -28,7 +28,7 @@
   <link rel="canonical" href="https://millionairesroast.com/" />
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="apple-touch-icon" href="logo.png" />
-  <link rel="stylesheet" href="styles.css?v=41" />
+  <link rel="stylesheet" href="styles.css?v=45" />
 
   <script type="application/ld+json">
     {
@@ -119,7 +119,7 @@
     }
   </script>
 
-  <script defer src="index.js?v=39"></script>
+  <script defer src="index.js?v=42"></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -167,6 +167,13 @@
       <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
       <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
       <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
+      <div class="mobile-nav-language" aria-label="Language selection">
+        <p class="lang-caption" data-i18n="lang.label">Language</p>
+        <div class="lang-switch" role="group" aria-label="Language selection">
+          <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="true">English</button>
+          <button type="button" class="lang-btn" data-lang-btn="es" aria-pressed="false">Espa&ntilde;ol</button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -258,8 +265,14 @@
           <a class="text-cta" data-sms-link data-contact-location="choose_text_help" href="sms:12174167072?body=Hi!%20I%27d%20like%20help%20choosing%20coffee%20from%20Millionaire%27s%20Roast." data-i18n="choose.textCta">Still unsure? Text us and we'll help.</a>
         </div>
 
+        <div class="mobile-roast-tabs" data-product-tabs role="tablist" aria-labelledby="current-roast-title">
+          <button id="coffee-tab-medium" class="roast-pill is-active" type="button" role="tab" aria-selected="true" aria-controls="coffee-card-medium" data-product-tab="0" data-i18n="coffee.cr.badge">Medium Roast</button>
+          <button id="coffee-tab-medium-dark" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-medium-dark" data-product-tab="1" data-i18n="coffee.pe.badge">Med-Dark Roast</button>
+          <button id="coffee-tab-dark" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-dark" data-product-tab="2" data-i18n="coffee.br.badge">Dark Roast</button>
+        </div>
+
         <div class="coffee-product-grid">
-          <article class="card card-plate product-card product-card-featured">
+          <article class="card card-plate product-card product-card-featured is-active" id="coffee-card-medium" data-product-panel aria-labelledby="coffee-tab-medium">
             <div class="product-card-head">
               <span class="origin-badge" data-i18n="coffee.cr.badge">Medium Roast</span>
               <span class="product-process" data-i18n="coffee.cr.process">Honey Process</span>
@@ -281,9 +294,9 @@
             <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_medium" href="https://millionaires-roast.square.site/" data-i18n="coffee.cta.medium">Order Medium Roast</a>
           </article>
 
-          <article class="card card-plate product-card">
+          <article class="card card-plate product-card" id="coffee-card-medium-dark" data-product-panel aria-labelledby="coffee-tab-medium-dark">
             <div class="product-card-head">
-              <span class="origin-badge" data-i18n="coffee.pe.badge">Medium Dark Roast</span>
+              <span class="origin-badge" data-i18n="coffee.pe.badge">Med-Dark Roast</span>
               <span class="product-process" data-i18n="coffee.pe.process">Washed Process</span>
             </div>
             <h3 class="origin-title" data-i18n="coffee.pe.title">Peruvian Chonta G1 Washed</h3>
@@ -303,7 +316,7 @@
             <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_medium_dark" href="https://millionaires-roast.square.site/" data-i18n="coffee.cta.mediumDark">Order Medium Dark Roast</a>
           </article>
 
-          <article class="card card-plate product-card">
+          <article class="card card-plate product-card" id="coffee-card-dark" data-product-panel aria-labelledby="coffee-tab-dark">
             <div class="product-card-head">
               <span class="origin-badge" data-i18n="coffee.br.badge">Dark Roast</span>
               <span class="product-process" data-i18n="coffee.br.process">Natural Process</span>
@@ -326,7 +339,7 @@
           </article>
         </div>
 
-        <article class="card card-plate lineup-pricing-card">
+        <article class="lineup-pricing-card">
           <h3 data-i18n="coffee.price.title">Simple pricing across the lineup</h3>
           <div class="lineup-pricing-lines">
             <p data-i18n="coffee.price.bag">14 oz bag: $18</p>

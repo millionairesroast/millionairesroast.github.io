@@ -3081,9 +3081,7 @@ a:focus-visible, button:focus-visible{
     transform var(--t) var(--ease);
 }
 .spec-card-button[aria-expanded="true"] .spec-explain,
-.spec-card-button:hover .spec-explain,
-.spec-card-button:focus-visible .spec-explain,
-.spec-card-button:focus-within .spec-explain{
+.spec-card-button.is-open .spec-explain{
   max-height:none;
   margin-top:4px;
   opacity:1;

@@ -2613,7 +2613,18 @@ a:focus-visible, button:focus-visible{
     letter-spacing:.05em;
   }
   .product-card-head{
-    min-height:72px;
+    min-height:0;
+    gap:0;
+  }
+  .coffee-product-grid{
+    transition:opacity 180ms var(--ease), transform 180ms var(--ease);
+  }
+  .coffee-product-grid.is-switching{
+    opacity:0;
+    transform:translateY(6px);
+  }
+  .coffee-product-grid .product-card-head .origin-badge{
+    display:none;
   }
   .product-card{
     grid-template-rows:none;
@@ -2698,6 +2709,15 @@ a:focus-visible, button:focus-visible{
   .brew-grid{
     grid-template-columns:1fr;
   }
+  .brew-guide .section-title{
+    max-width:calc(100vw - 32px);
+    font-size:30px;
+    text-wrap:balance;
+  }
+  .brew-guide .section-title span{
+    white-space:normal;
+    overflow-wrap:break-word;
+  }
   .brew-card-toggle{
     padding:19px 18px;
   }
@@ -2777,7 +2797,7 @@ a:focus-visible, button:focus-visible{
     overflow-wrap:anywhere;
   }
   .brew-guide .section-title{
-    font-size:clamp(26px, 8.2vw, 34px);
+    font-size:28px;
   }
 }
 

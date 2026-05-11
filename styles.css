@@ -2807,3 +2807,540 @@ a:focus-visible, button:focus-visible{
     filter:none;
   }
 }
+
+/* Interaction and motion layer */
+[data-reveal]{
+  --reveal-x:0px;
+  --reveal-y:16px;
+  --reveal-scale:1;
+  opacity:0;
+  transform:translate3d(var(--reveal-x), var(--reveal-y), 0) scale(var(--reveal-scale));
+  transition:
+    opacity 640ms var(--ease),
+    transform 640ms var(--ease);
+  transition-delay:var(--reveal-delay, 0ms);
+  will-change:opacity, transform;
+}
+[data-reveal="fade"]{
+  --reveal-y:0px;
+}
+[data-reveal="left"]{
+  --reveal-x:-18px;
+  --reveal-y:0px;
+}
+[data-reveal="right"]{
+  --reveal-x:18px;
+  --reveal-y:0px;
+}
+[data-reveal="scale"]{
+  --reveal-y:10px;
+  --reveal-scale:.975;
+}
+[data-reveal].is-visible{
+  opacity:1;
+  transform:translate3d(0, 0, 0) scale(1);
+}
+
+.hero-title[data-reveal]{
+  clip-path:inset(0 0 0 0);
+}
+.hero-title[data-reveal]:not(.is-visible){
+  clip-path:inset(0 0 14% 0);
+}
+
+@keyframes productFloat{
+  0%, 100%{
+    transform:translate3d(0, 0, 0) rotate(-.35deg);
+  }
+  50%{
+    transform:translate3d(0, -8px, 0) rotate(.35deg);
+  }
+}
+.hero-product-image,
+.feature-product-image{
+  transform-origin:center;
+  transition:
+    transform 520ms var(--ease),
+    filter 520ms var(--ease),
+    border-color 520ms var(--ease),
+    box-shadow 520ms var(--ease);
+  animation:productFloat 7.4s var(--ease) infinite;
+}
+.feature-product-image{
+  animation-duration:6.8s;
+}
+.hero-image-plate:hover .hero-product-image,
+.hero-image-plate:focus-within .hero-product-image,
+.feature-image-plate:hover .feature-product-image,
+.feature-image-plate:focus-within .feature-product-image{
+  border-color:rgba(226,196,106,.52);
+  filter:brightness(1.06);
+  animation-play-state:paused;
+  transform:translate3d(0, -4px, 0) scale(1.02) rotate(.2deg);
+  box-shadow:
+    0 32px 88px rgba(0,0,0,.58),
+    0 0 0 1px rgba(226,196,106,.1);
+}
+
+.taste-chip-list{
+  display:flex;
+  flex-wrap:wrap;
+  align-content:flex-start;
+  gap:8px;
+  min-height:5.2em;
+  margin:0;
+  padding:14px 0 0;
+  border-top:1px solid rgba(200,164,77,.2);
+  list-style:none;
+}
+.taste-chip-list li{
+  min-width:0;
+  padding:7px 10px;
+  border:1px solid rgba(226,196,106,.24);
+  border-radius:999px;
+  background:rgba(200,164,77,.075);
+  color:rgba(244,241,234,.9);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.08em;
+  line-height:1.2;
+  text-transform:uppercase;
+  transition:
+    transform var(--t) var(--ease),
+    border-color var(--t) var(--ease),
+    background var(--t) var(--ease),
+    color var(--t) var(--ease);
+}
+.taste-chip-list.is-visible li{
+  animation:tasteChipIn 520ms var(--ease) both;
+  animation-delay:calc(var(--reveal-delay, 0ms) + (var(--chip-index, 0) * 44ms));
+}
+.taste-chip-list li:hover,
+.taste-chip-list li:focus-within{
+  transform:translateY(-2px);
+  border-color:rgba(226,196,106,.52);
+  background:rgba(226,196,106,.12);
+  color:rgba(244,241,234,.98);
+}
+@keyframes tasteChipIn{
+  from{
+    opacity:0;
+    transform:translateY(7px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.card-interactive{
+  --mx:50%;
+  --my:50%;
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  transition:
+    transform var(--t) var(--ease),
+    border-color var(--t) var(--ease),
+    background var(--t) var(--ease),
+    box-shadow var(--t) var(--ease);
+}
+.card-interactive > *{
+  position:relative;
+  z-index:1;
+}
+@media (hover:hover) and (pointer:fine){
+  .product-card.card-interactive:hover,
+  .feature-panel.card-interactive:hover,
+  .transparency-card.card-interactive:hover,
+  .brew-card.card-interactive:hover,
+  .proof-carousel.card-interactive:hover,
+  .about-layout .card-interactive:hover,
+  .contact-grid .card-action.card-interactive:hover,
+  .ceo-photo-card:hover{
+    transform:translateY(-4px);
+    border-color:rgba(226,196,106,.56);
+    box-shadow:
+      0 22px 62px rgba(0,0,0,.54),
+      0 0 0 1px rgba(226,196,106,.08) inset;
+  }
+  .feature-panel.card-interactive:hover .feature-product-image,
+  .product-card.card-interactive:hover img,
+  .proof-carousel.card-interactive:hover .proof-image{
+    transform:scale(1.02);
+  }
+  .card-interactive::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+    opacity:0;
+    background:radial-gradient(circle at var(--mx) var(--my), rgba(226,196,106,.13), transparent 38%);
+    transition:opacity var(--t) var(--ease);
+  }
+  .card-interactive.is-glowing::after,
+  .card-interactive:hover::after,
+  .card-interactive:focus-within::after{
+    opacity:1;
+  }
+}
+
+.btn{
+  position:relative;
+  overflow:hidden;
+}
+.btn-gold::before{
+  content:"";
+  position:absolute;
+  inset:-70% auto -70% -42%;
+  width:34%;
+  pointer-events:none;
+  opacity:0;
+  transform:translateX(-120%) rotate(18deg);
+  background:linear-gradient(90deg, transparent, rgba(255,255,255,.48), transparent);
+  transition:
+    transform 700ms var(--ease),
+    opacity 220ms var(--ease);
+}
+.btn-gold:hover::before,
+.btn-gold:focus-visible::before{
+  opacity:.72;
+  transform:translateX(420%) rotate(18deg);
+}
+.btn-gold:active,
+.btn-outline:active,
+.nav-cta:active{
+  transform:translateY(1px);
+}
+.btn-outline{
+  transition:
+    transform var(--t) var(--ease),
+    background var(--t) var(--ease),
+    border-color var(--t) var(--ease),
+    color var(--t) var(--ease),
+    box-shadow var(--t) var(--ease);
+}
+.btn-outline:hover,
+.btn-outline:focus-visible{
+  border-color:rgba(226,196,106,.64);
+  background:linear-gradient(180deg, rgba(226,196,106,.14), rgba(200,164,77,.06));
+  box-shadow:0 12px 30px rgba(0,0,0,.26);
+}
+
+.spec-card-button{
+  width:100%;
+  appearance:none;
+  border-color:rgba(200,164,77,.22);
+  color:inherit;
+  font:inherit;
+  text-align:left;
+  cursor:pointer;
+  grid-template-columns:minmax(0, .82fr) minmax(0, 1fr);
+  transition:
+    transform var(--t) var(--ease),
+    border-color var(--t) var(--ease),
+    background var(--t) var(--ease),
+    box-shadow var(--t) var(--ease);
+}
+.spec-card-button:hover,
+.spec-card-button:focus-visible,
+.spec-card-button[aria-expanded="true"]{
+  border-color:rgba(226,196,106,.54);
+  background:rgba(226,196,106,.09);
+}
+.spec-card-button:hover{
+  transform:translateY(-2px);
+}
+.spec-card-button:focus-visible{
+  outline:2px solid rgba(226,196,106,.92);
+  outline-offset:3px;
+}
+.spec-card-button .spec-label,
+.spec-card-button .spec-value{
+  position:relative;
+  z-index:1;
+}
+.spec-card-button .spec-value{
+  overflow-wrap:anywhere;
+}
+.spec-explain{
+  grid-column:1 / -1;
+  display:grid;
+  max-height:0;
+  opacity:0;
+  overflow:hidden;
+  color:rgba(244,241,234,.7);
+  font-size:13px;
+  font-weight:600;
+  line-height:1.45;
+  text-align:left;
+  transform:translateY(-4px);
+  transition:
+    opacity var(--t) var(--ease),
+    transform var(--t) var(--ease);
+}
+.spec-card-button[aria-expanded="true"] .spec-explain,
+.spec-card-button:hover .spec-explain,
+.spec-card-button:focus-visible .spec-explain,
+.spec-card-button:focus-within .spec-explain{
+  max-height:none;
+  margin-top:4px;
+  opacity:1;
+  transform:translateY(0);
+}
+
+.brew-card-toggle{
+  position:relative;
+}
+.brew-card-toggle::after{
+  content:"";
+  position:absolute;
+  left:22px;
+  right:22px;
+  bottom:0;
+  height:1px;
+  transform:scaleX(0);
+  transform-origin:left;
+  background:linear-gradient(90deg, rgba(226,196,106,.84), transparent);
+  transition:transform 420ms var(--ease);
+}
+.brew-card.is-open .brew-card-toggle::after{
+  transform:scaleX(1);
+}
+.brew-card-panel{
+  transform:translateY(-4px);
+}
+.brew-card.is-open .brew-card-panel{
+  transform:translateY(0);
+}
+.brew-spec-list,
+.brew-copy,
+.brew-note{
+  opacity:0;
+  transform:translateY(8px);
+  transition:
+    opacity 360ms var(--ease),
+    transform 360ms var(--ease);
+}
+.brew-card.is-open .brew-spec-list{
+  opacity:1;
+  transform:translateY(0);
+  transition-delay:70ms;
+}
+.brew-card.is-open .brew-copy{
+  opacity:1;
+  transform:translateY(0);
+  transition-delay:150ms;
+}
+.brew-card.is-open .brew-note{
+  opacity:1;
+  transform:translateY(0);
+  transition-delay:210ms;
+}
+
+.carousel-slide{
+  transform:scale(.992);
+  transition:
+    opacity 520ms var(--ease),
+    transform 700ms var(--ease);
+}
+.carousel-slide.is-active{
+  transform:scale(1);
+}
+.proof-image{
+  transition:
+    transform 900ms var(--ease),
+    opacity 520ms var(--ease),
+    border-color var(--t) var(--ease);
+}
+.carousel-slide.is-active .proof-image{
+  animation:carouselImageSettle 900ms var(--ease) both;
+}
+.proof-caption{
+  opacity:0;
+  transform:translateY(8px);
+  transition:
+    opacity 420ms var(--ease),
+    transform 420ms var(--ease);
+}
+.carousel-slide.is-active .proof-caption{
+  opacity:1;
+  transform:translateY(0);
+  transition-delay:150ms;
+}
+.carousel-dot{
+  position:relative;
+}
+.carousel-dot::after{
+  content:"";
+  position:absolute;
+  inset:-5px;
+  border:1px solid rgba(226,196,106,.0);
+  border-radius:999px;
+  transform:scale(.65);
+  transition:
+    border-color var(--t) var(--ease),
+    transform var(--t) var(--ease);
+}
+.carousel-dot.is-active{
+  transform:scale(1.22);
+}
+.carousel-dot.is-active::after{
+  border-color:rgba(226,196,106,.3);
+  transform:scale(1);
+}
+@keyframes carouselImageSettle{
+  from{
+    transform:scale(1.018);
+  }
+  to{
+    transform:scale(1);
+  }
+}
+
+.nav-link{
+  position:relative;
+}
+.nav-link::after{
+  content:"";
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:5px;
+  height:1px;
+  transform:scaleX(0);
+  transform-origin:left;
+  background:rgba(226,196,106,.82);
+  transition:transform var(--t) var(--ease);
+}
+.nav-link.is-active{
+  color:var(--ink);
+  border-color:rgba(226,196,106,.28);
+  background:rgba(200,164,77,.08);
+}
+.nav-link.is-active::after{
+  transform:scaleX(1);
+}
+
+.editorial-section{
+  position:relative;
+  overflow:hidden;
+}
+.editorial-section .container{
+  isolation:isolate;
+}
+.section-ghost{
+  position:absolute;
+  z-index:0;
+  top:-.38em;
+  left:50%;
+  width:max-content;
+  max-width:100%;
+  pointer-events:none;
+  transform:translateX(-50%) translateY(10px);
+  opacity:0;
+  color:rgba(226,196,106,.055);
+  font-family:var(--serif);
+  font-size:clamp(68px, 13vw, 164px);
+  font-weight:900;
+  letter-spacing:.12em;
+  line-height:1;
+  text-transform:uppercase;
+  white-space:nowrap;
+  transition:
+    opacity 760ms var(--ease),
+    transform 760ms var(--ease);
+}
+.editorial-section::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  z-index:0;
+  width:min(780px, calc(100% - 40px));
+  height:1px;
+  transform:translateX(-50%) scaleX(0);
+  transform-origin:left;
+  background:linear-gradient(90deg, transparent, rgba(226,196,106,.45), transparent);
+  transition:transform 760ms var(--ease);
+}
+.editorial-section.has-revealed::before{
+  transform:translateX(-50%) scaleX(1);
+}
+.editorial-section.has-revealed .section-ghost{
+  opacity:1;
+  transform:translateX(-50%) translateY(0);
+}
+
+@media (max-width:760px){
+  [data-reveal]{
+    --reveal-y:10px;
+  }
+  [data-reveal="left"],
+  [data-reveal="right"]{
+    --reveal-x:0px;
+    --reveal-y:10px;
+  }
+  .taste-chip-list{
+    min-height:0;
+    gap:7px;
+  }
+  .taste-chip-list li{
+    font-size:11px;
+    letter-spacing:.06em;
+  }
+  .spec-card-button,
+  .product-spec-grid .spec-card{
+    grid-template-columns:1fr;
+  }
+  .spec-card-button .spec-value{
+    text-align:left;
+  }
+  .spec-explain{
+    font-size:12.5px;
+  }
+  .section-ghost{
+    top:-.16em;
+    font-size:clamp(52px, 19vw, 92px);
+    letter-spacing:.08em;
+  }
+  .feature-panel.card-interactive:hover,
+  .product-card.card-interactive:hover,
+  .transparency-card.card-interactive:hover,
+  .brew-card.card-interactive:hover,
+  .proof-carousel.card-interactive:hover,
+  .about-layout .card-interactive:hover,
+  .contact-grid .card-action.card-interactive:hover{
+    transform:none;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  [data-reveal],
+  [data-reveal].is-visible{
+    opacity:1!important;
+    transform:none!important;
+    clip-path:none!important;
+    transition:none!important;
+  }
+  .hero-product-image,
+  .feature-product-image,
+  .taste-chip-list.is-visible li,
+  .carousel-slide.is-active .proof-image{
+    animation:none!important;
+  }
+  .brew-spec-list,
+  .brew-copy,
+  .brew-note,
+  .proof-caption,
+  .section-ghost,
+  .editorial-section::before{
+    opacity:1;
+    transform:none;
+    transition:none;
+  }
+  .card-interactive::after{
+    display:none;
+  }
+}

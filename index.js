@@ -29,6 +29,11 @@
     "hero.badge.kicker": "Insignia actual",
     "hero.badge.title": "Costa Rican Tarraz\u00fa Jaguar Honey",
     "hero.badge.meta": "Proceso Honey \u2022 Tueste medio",
+    "ghost.flagship": "INSIGNIA",
+    "ghost.origin": "ORIGEN",
+    "ghost.details": "DETALLES",
+    "ghost.brew": "PREPARAR",
+    "ghost.local": "LOCAL",
 
     "featured.eyebrow": "Oferta destacada",
     "featured.title": "Costa Rican Tarraz\u00fa Jaguar Honey",
@@ -44,8 +49,18 @@
     "coffees.title": "Una l\u00ednea clara, reci\u00e9n tostada.",
     "coffees.subtitle": "Tres caf\u00e9s de origen \u00fanico, tres perfiles de tueste y precios simples. Compara la taza que quieres y ordena de la lista actual.",
     "coffee.spec.origin": "Origen",
+    "coffee.spec.process": "Proceso",
+    "coffee.spec.roast": "Nivel de tueste",
     "coffee.spec.body": "Cuerpo",
     "coffee.spec.acidity": "Acidez",
+    "coffee.spec.specialty": "Especialidad 80+",
+    "coffee.spec.specialty.value": "Lote documentado",
+    "coffee.spec.origin.explain": "De d\u00f3nde viene el caf\u00e9. El origen afecta el clima, el suelo, la variedad y el car\u00e1cter general de la taza.",
+    "coffee.spec.process.explain": "C\u00f3mo se quit\u00f3 y se sec\u00f3 la fruta del caf\u00e9. El proceso puede influir mucho en la dulzura, el cuerpo y el car\u00e1cter frutal.",
+    "coffee.spec.roast.explain": "Qu\u00e9 tan desarrollado est\u00e1 el caf\u00e9 en el tueste. Los tuestes m\u00e1s claros suelen mostrar m\u00e1s brillo, mientras que los m\u00e1s oscuros tienden a ser m\u00e1s suaves y llenos.",
+    "coffee.spec.body.explain": "El peso o la textura del caf\u00e9 en la boca. Un cuerpo m\u00e1s pesado se siente m\u00e1s lleno y rico.",
+    "coffee.spec.acidity.explain": "El brillo o la vivacidad en la taza. Una acidez media puede hacer que el caf\u00e9 sepa m\u00e1s limpio, frutal o vivo.",
+    "coffee.spec.specialty.explain": "El caf\u00e9 de grado de especialidad tradicionalmente empieza en 80 puntos o m\u00e1s en una cata profesional, lo que significa que el caf\u00e9 verde fue evaluado por la calidad de la taza en lugar de tratarse como caf\u00e9 comercial com\u00fan.",
     "coffee.price.title": "Precio simple en toda la l\u00ednea",
     "coffee.price.bag": "Bolsa de 14 oz: $18",
     "coffee.price.kcups": "K-Cups: desde $10",
@@ -54,6 +69,12 @@
     "coffee.cr.process": "Proceso Honey",
     "coffee.cr.body": "Brillante, dulce y accesible, con notas de fruta, miel y chocolate sobre un perfil limpio de tueste medio.",
     "coffee.cr.notes": "Chocolate, nectarina, guayaba, frutos rojos, miel, c\u00edtricos",
+    "coffee.cr.note1": "Chocolate",
+    "coffee.cr.note2": "Nectarina",
+    "coffee.cr.note3": "Guayaba",
+    "coffee.cr.note4": "Frutos rojos",
+    "coffee.cr.note5": "Miel",
+    "coffee.cr.note6": "C\u00edtricos",
     "coffee.cr.origin": "Tarraz\u00fa, Costa Rica",
     "coffee.cr.bodyValue": "Pesado",
     "coffee.cr.acidity": "Media",
@@ -62,6 +83,11 @@
     "coffee.pe.process": "Proceso lavado",
     "coffee.pe.body": "Balanceado y desarrollado, pero todav\u00eda vivo, con chocolate, fruta de huerto, almendra tostada y c\u00edtricos.",
     "coffee.pe.notes": "Chocolate, manzana verde, ciruela, almendra tostada, c\u00edtricos",
+    "coffee.pe.note1": "Chocolate",
+    "coffee.pe.note2": "Manzana verde",
+    "coffee.pe.note3": "Ciruela",
+    "coffee.pe.note4": "Almendra tostada",
+    "coffee.pe.note5": "C\u00edtricos",
     "coffee.pe.origin": "Per\u00fa",
     "coffee.pe.bodyValue": "Medio",
     "coffee.pe.acidity": "Media",
@@ -70,6 +96,10 @@
     "coffee.br.process": "Proceso Natural",
     "coffee.br.body": "Suave y cl\u00e1sico, construido alrededor de chocolate, almendra, fruta seca y vainilla en un perfil de tueste oscuro.",
     "coffee.br.notes": "Chocolate con leche, almendra, ciruela pasa, vainilla",
+    "coffee.br.note1": "Chocolate con leche",
+    "coffee.br.note2": "Almendra",
+    "coffee.br.note3": "Ciruela pasa",
+    "coffee.br.note4": "Vainilla",
     "coffee.br.origin": "Brasil",
     "coffee.br.bodyValue": "Medio",
     "coffee.br.acidity": "Suave",
@@ -238,6 +268,9 @@
     : null;
   const productMotionQuery = typeof window.matchMedia === "function"
     ? window.matchMedia("(prefers-reduced-motion: reduce)")
+    : null;
+  const finePointerQuery = typeof window.matchMedia === "function"
+    ? window.matchMedia("(hover: hover) and (pointer: fine)")
     : null;
   const faqSchemaScript = document.getElementById("faq-schema");
   const roastFaqAnswer = document.querySelector('[data-i18n="faq.a3"]');
@@ -611,6 +644,218 @@
     });
   }
 
+  function setupRevealAnimations() {
+    const revealElements = [...document.querySelectorAll("[data-reveal]")];
+    const editorialSections = [...document.querySelectorAll(".editorial-section")];
+
+    revealElements.forEach((element) => {
+      const delay = Number(element.getAttribute("data-reveal-delay") || 0);
+      element.style.setProperty("--reveal-delay", `${Math.max(0, delay)}ms`);
+
+      if (element.matches(".taste-chip-list")) {
+        [...element.children].forEach((chip, index) => {
+          chip.style.setProperty("--chip-index", String(index));
+        });
+      }
+    });
+
+    const showImmediately = () => {
+      revealElements.forEach((element) => element.classList.add("is-visible"));
+      editorialSections.forEach((section) => section.classList.add("has-revealed"));
+    };
+
+    if (productMotionQuery?.matches || typeof IntersectionObserver !== "function") {
+      showImmediately();
+      return;
+    }
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, {
+      rootMargin: "0px 0px -12% 0px",
+      threshold: 0.12
+    });
+
+    revealElements.forEach((element) => revealObserver.observe(element));
+
+    if (editorialSections.length) {
+      const sectionObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("has-revealed");
+          observer.unobserve(entry.target);
+        });
+      }, {
+        rootMargin: "0px 0px -18% 0px",
+        threshold: 0.08
+      });
+
+      editorialSections.forEach((section) => sectionObserver.observe(section));
+    }
+
+    productMotionQuery?.addEventListener?.("change", () => {
+      if (productMotionQuery.matches) showImmediately();
+    });
+  }
+
+  function setupInteractiveSpecCards() {
+    const specGroups = [...document.querySelectorAll(".product-spec-grid")];
+    if (!specGroups.length) return;
+
+    const closeSpecButton = (button) => {
+      button.setAttribute("aria-expanded", "false");
+      button.classList.remove("is-open");
+    };
+
+    const openSpecButton = (button) => {
+      const group = button.closest(".product-spec-grid");
+      if (!group) return;
+
+      group.querySelectorAll("[data-spec-toggle]").forEach((otherButton) => {
+        if (otherButton !== button) closeSpecButton(otherButton);
+      });
+
+      button.setAttribute("aria-expanded", "true");
+      button.classList.add("is-open");
+    };
+
+    specGroups.forEach((group) => {
+      group.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-spec-toggle]");
+        if (!button || !group.contains(button)) return;
+
+        const isOpen = button.getAttribute("aria-expanded") === "true";
+        if (isOpen) {
+          closeSpecButton(button);
+        } else {
+          openSpecButton(button);
+        }
+      });
+
+      group.addEventListener("keydown", (event) => {
+        const button = event.target.closest("[data-spec-toggle]");
+        if (!button || !group.contains(button)) return;
+
+        if (event.key === "Escape") {
+          closeSpecButton(button);
+          button.focus();
+          return;
+        }
+
+        if (event.key !== "ArrowRight" && event.key !== "ArrowLeft" && event.key !== "ArrowDown" && event.key !== "ArrowUp") {
+          return;
+        }
+
+        const buttons = [...group.querySelectorAll("[data-spec-toggle]")];
+        const currentIndex = buttons.indexOf(button);
+        if (currentIndex < 0) return;
+
+        event.preventDefault();
+        const direction = event.key === "ArrowLeft" || event.key === "ArrowUp" ? -1 : 1;
+        const nextIndex = (currentIndex + direction + buttons.length) % buttons.length;
+        buttons[nextIndex]?.focus();
+      });
+    });
+  }
+
+  function setupActiveNavHighlighting() {
+    const trackedIds = ["current-roast", "choose", "brew", "faq", "contact"];
+    const sections = trackedIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+    const desktopLinks = new Map(
+      trackedIds.map((id) => [
+        id,
+        document.querySelector(`.nav .nav-link[href="#${id}"]`)
+      ]).filter(([, link]) => Boolean(link))
+    );
+
+    if (!sections.length || !desktopLinks.size) return;
+
+    const clearActive = () => {
+      desktopLinks.forEach((link) => link.classList.remove("is-active"));
+    };
+
+    const setActive = (id) => {
+      desktopLinks.forEach((link, linkId) => {
+        link.classList.toggle("is-active", linkId === id);
+      });
+    };
+
+    const chooseActiveSection = () => {
+      const hero = document.getElementById("hero");
+      const headerOffset = header ? header.offsetHeight : 0;
+      const heroBottom = hero ? hero.getBoundingClientRect().bottom : 0;
+
+      if (heroBottom > headerOffset + 120) {
+        clearActive();
+        return;
+      }
+
+      let bestId = "";
+      let bestDistance = Number.POSITIVE_INFINITY;
+      const targetLine = headerOffset + window.innerHeight * 0.24;
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        const isReadable = rect.bottom > headerOffset + 40 && rect.top < window.innerHeight * 0.78;
+        if (!isReadable) return;
+
+        const distance = Math.abs(rect.top - targetLine);
+        if (distance < bestDistance) {
+          bestDistance = distance;
+          bestId = section.id;
+        }
+      });
+
+      if (bestId) setActive(bestId);
+      else clearActive();
+    };
+
+    if (typeof IntersectionObserver === "function") {
+      const navObserver = new IntersectionObserver(() => chooseActiveSection(), {
+        rootMargin: "-24% 0px -54% 0px",
+        threshold: [0, 0.08, 0.24, 0.5]
+      });
+      sections.forEach((section) => navObserver.observe(section));
+    }
+
+    window.addEventListener("scroll", chooseActiveSection, { passive: true });
+    window.addEventListener("resize", chooseActiveSection);
+    chooseActiveSection();
+  }
+
+  function setupCursorCardGlow() {
+    if (!finePointerQuery?.matches || productMotionQuery?.matches) return;
+
+    const glowCards = [...document.querySelectorAll(
+      ".product-card.card-interactive, .feature-panel.card-interactive, .brew-card.card-interactive, .transparency-card.card-interactive, .contact-grid .card-action.card-interactive"
+    )];
+
+    if (!glowCards.length) return;
+
+    glowCards.forEach((card) => {
+      card.addEventListener("pointermove", (event) => {
+        if (event.pointerType && event.pointerType !== "mouse" && event.pointerType !== "pen") return;
+
+        const rect = card.getBoundingClientRect();
+        const x = ((event.clientX - rect.left) / rect.width) * 100;
+        const y = ((event.clientY - rect.top) / rect.height) * 100;
+        card.style.setProperty("--mx", `${x.toFixed(2)}%`);
+        card.style.setProperty("--my", `${y.toFixed(2)}%`);
+        card.classList.add("is-glowing");
+      });
+
+      card.addEventListener("pointerleave", () => {
+        card.classList.remove("is-glowing");
+      });
+    });
+  }
+
   function isProductTabsMode() {
     return Boolean(productTabsQuery?.matches);
   }
@@ -888,9 +1133,13 @@
   setupMobileNav();
   setupAccordion();
   setupBrewGuide();
+  setupRevealAnimations();
+  setupInteractiveSpecCards();
   setupProductTabs();
   setupCarousel();
   setupLanguageToggle();
   setupSmoothAnchorScrolling();
+  setupActiveNavHighlighting();
+  setupCursorCardGlow();
   setupAnalytics();
 })();

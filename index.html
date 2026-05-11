@@ -193,26 +193,26 @@
     <section class="hero" id="hero" aria-labelledby="hero-title">
       <div class="container hero-layout">
         <div class="hero-copy">
-          <p class="hero-eyebrow" data-i18n="hero.eyebrow">Small-batch coffee roasted in Illinois</p>
-          <h1 class="hero-title" id="hero-title" data-i18n="hero.title">Specialty coffee without the premium markup.</h1>
-          <p class="hero-sub" data-i18n="hero.sub">Fresh single-origin coffee from documented 80+ specialty lots, roasted in small batches for Springfield, Beardstown, and Central Illinois.</p>
+          <p class="hero-eyebrow" data-reveal="up" data-reveal-delay="0" data-i18n="hero.eyebrow">Small-batch coffee roasted in Illinois</p>
+          <h1 class="hero-title" id="hero-title" data-reveal="up" data-reveal-delay="90" data-i18n="hero.title">Specialty coffee without the premium markup.</h1>
+          <p class="hero-sub" data-reveal="up" data-reveal-delay="170" data-i18n="hero.sub">Fresh single-origin coffee from documented 80+ specialty lots, roasted in small batches for Springfield, Beardstown, and Central Illinois.</p>
 
-          <div class="hero-conversion">
+          <div class="hero-conversion" data-reveal="up" data-reveal-delay="240">
             <p class="hero-pricing" data-i18n="hero.pricing">14 oz bags $18 &bull; K-Cups from $10</p>
             <p class="hero-helper" data-i18n="hero.helper">Pickup in Springfield and Beardstown, local delivery, and Illinois shipping.</p>
           </div>
 
-          <div class="hero-actions">
+          <div class="hero-actions" data-reveal="up" data-reveal-delay="310">
             <a class="btn btn-gold" id="heroOrderBtn" data-shop-cta data-cta-location="hero_shop_current" href="https://millionaires-roast.square.site/" data-i18n="hero.cta.primary">Buy Now</a>
             <a class="btn btn-outline" href="#current-roast" data-i18n="hero.cta.secondary">Current Coffees</a>
           </div>
         </div>
 
-        <figure class="hero-visual">
+        <figure class="hero-visual" data-reveal="scale" data-reveal-delay="390">
           <div class="hero-image-plate">
             <img class="hero-product-image" src="CostaRica.webp" alt="Millionaire's Roast Costa Rican Tarrazu Jaguar Honey coffee bag" width="1536" height="2048" decoding="async" loading="eager" />
           </div>
-          <figcaption class="hero-floating-badge">
+          <figcaption class="hero-floating-badge" data-reveal="right" data-reveal-delay="520">
             <span class="badge-kicker" data-i18n="hero.badge.kicker">Current Flagship</span>
             <strong data-i18n="hero.badge.title">Costa Rican Tarraz&uacute; Jaguar Honey</strong>
             <span data-i18n="hero.badge.meta">Honey Process &bull; Medium Roast</span>
@@ -221,16 +221,17 @@
       </div>
     </section>
 
-    <section class="section feature-offering" id="featured-offering" aria-labelledby="featured-offering-title">
+    <section class="section feature-offering editorial-section" id="featured-offering" aria-labelledby="featured-offering-title" data-ghost-word="FLAGSHIP">
       <div class="container">
-        <article class="feature-panel">
-          <figure class="feature-media">
+        <span class="section-ghost" aria-hidden="true" data-i18n="ghost.flagship">FLAGSHIP</span>
+        <article class="feature-panel card-interactive" data-reveal="up">
+          <figure class="feature-media" data-reveal="scale" data-reveal-delay="120">
             <div class="feature-image-plate">
               <img class="feature-product-image" src="coffee.png" alt="Costa Rican Tarrazu Jaguar Honey coffee bag from Millionaire's Roast" width="419" height="419" loading="lazy" decoding="async" />
             </div>
           </figure>
 
-          <div class="feature-copy">
+          <div class="feature-copy" data-reveal="up" data-reveal-delay="180">
             <p class="section-eyebrow" data-i18n="featured.eyebrow">Featured Offering</p>
             <h2 class="section-title" id="featured-offering-title" data-i18n="featured.title">Costa Rican Tarraz&uacute; Jaguar Honey</h2>
             <p class="taste-line" data-i18n="featured.taste">Chocolate &bull; Nectarine &bull; Guava &bull; Berry &bull; Honey &bull; Citrus</p>
@@ -249,89 +250,189 @@
       </div>
     </section>
 
-    <section class="section coffees-section" id="current-roast" aria-labelledby="current-roast-title">
+    <section class="section coffees-section editorial-section" id="current-roast" aria-labelledby="current-roast-title" data-ghost-word="ORIGIN">
       <div class="container current-coffees">
-        <div class="section-head center narrow-head">
+        <span class="section-ghost" aria-hidden="true" data-i18n="ghost.origin">ORIGIN</span>
+        <div class="section-head center narrow-head" data-reveal="up">
           <p class="section-eyebrow" data-i18n="coffees.eyebrow">Current Coffees</p>
           <h2 class="section-title" id="current-roast-title" data-i18n="coffees.title">A clear lineup, roasted fresh.</h2>
           <p class="section-subtitle" data-i18n="coffees.subtitle">Three single-origin coffees, three roast profiles, simple pricing. Compare the cup you want and order from the current roast list.</p>
         </div>
 
-        <div class="mobile-roast-tabs" data-product-tabs role="tablist" aria-labelledby="current-roast-title">
+        <div class="mobile-roast-tabs" data-product-tabs role="tablist" aria-labelledby="current-roast-title" data-reveal="up" data-reveal-delay="80">
           <button id="coffee-tab-medium" class="roast-pill is-active" type="button" role="tab" aria-selected="true" aria-controls="coffee-card-medium" data-product-tab="0" data-i18n="coffee.cr.badge">Medium Roast</button>
           <button id="coffee-tab-medium-dark" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-medium-dark" data-product-tab="1" data-i18n="coffee.pe.badge">Med-Dark Roast</button>
           <button id="coffee-tab-dark" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-dark" data-product-tab="2" data-i18n="coffee.br.badge">Dark Roast</button>
         </div>
 
         <div class="coffee-product-grid">
-          <article class="card card-plate product-card product-card-featured is-active" id="coffee-card-medium" data-product-panel aria-labelledby="coffee-tab-medium">
-            <div class="product-card-head">
+          <article class="card card-plate product-card product-card-featured card-interactive is-active" id="coffee-card-medium" data-product-panel aria-labelledby="coffee-tab-medium" data-reveal="up" data-reveal-delay="0">
+            <div class="product-card-head" data-reveal="fade" data-reveal-delay="80">
               <span class="origin-badge" data-i18n="coffee.cr.badge">Medium Roast</span>
               <span class="product-process" data-i18n="coffee.cr.process">Honey Process</span>
             </div>
-            <h3 class="origin-title" data-i18n="coffee.cr.title">Costa Rican Tarraz&uacute; Jaguar Honey</h3>
-            <p class="card-text" data-i18n="coffee.cr.body">Bright, sweet, and approachable, with fruit, honey, and chocolate notes over a clean medium roast profile.</p>
-            <p class="product-notes" data-i18n="coffee.cr.notes">Chocolate, nectarine, guava, berry, honey, citrus</p>
+            <h3 class="origin-title" data-reveal="fade" data-reveal-delay="120" data-i18n="coffee.cr.title">Costa Rican Tarraz&uacute; Jaguar Honey</h3>
+            <p class="card-text" data-reveal="fade" data-reveal-delay="160" data-i18n="coffee.cr.body">Bright, sweet, and approachable, with fruit, honey, and chocolate notes over a clean medium roast profile.</p>
+            <ul class="taste-chip-list" aria-label="Tasting notes" data-reveal="up" data-reveal-delay="210">
+              <li data-i18n="coffee.cr.note1">Chocolate</li>
+              <li data-i18n="coffee.cr.note2">Nectarine</li>
+              <li data-i18n="coffee.cr.note3">Guava</li>
+              <li data-i18n="coffee.cr.note4">Berry</li>
+              <li data-i18n="coffee.cr.note5">Honey</li>
+              <li data-i18n="coffee.cr.note6">Citrus</li>
+            </ul>
 
-            <div class="product-choice">
+            <div class="product-choice" data-reveal="fade" data-reveal-delay="250">
               <span data-i18n="choose.card1.title">I want bright and sweet</span>
             </div>
 
-            <div class="product-spec-grid">
-              <div class="spec-card"><span class="spec-label" data-i18n="coffee.spec.origin">Origin</span><span class="spec-value" data-i18n="coffee.cr.origin">Tarraz&uacute;, Costa Rica</span></div>
-              <div class="spec-card"><span class="spec-label" data-i18n="coffee.spec.body">Body</span><span class="spec-value" data-i18n="coffee.cr.bodyValue">Heavy</span></div>
-              <div class="spec-card"><span class="spec-label" data-i18n="coffee.spec.acidity">Acidity</span><span class="spec-value" data-i18n="coffee.cr.acidity">Medium</span></div>
+            <div class="product-spec-grid" data-reveal="up" data-reveal-delay="290">
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-cr-origin-copy" data-spec-toggle>
+                <span class="spec-label" data-i18n="coffee.spec.origin">Origin</span>
+                <span class="spec-value" data-i18n="coffee.cr.origin">Tarraz&uacute;, Costa Rica</span>
+                <span class="spec-explain" id="spec-cr-origin-copy" data-i18n="coffee.spec.origin.explain">Where the coffee comes from. Origin affects climate, soil, variety, and the general character of the cup.</span>
+              </button>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-cr-process-copy" data-spec-toggle>
+                <span class="spec-label" data-i18n="coffee.spec.process">Process</span>
+                <span class="spec-value" data-i18n="coffee.cr.process">Honey Process</span>
+                <span class="spec-explain" id="spec-cr-process-copy" data-i18n="coffee.spec.process.explain">How the coffee fruit was removed and dried. Process can strongly affect sweetness, body, and fruit character.</span>
+              </button>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-cr-roast-copy" data-spec-toggle>
+                <span class="spec-label" data-i18n="coffee.spec.roast">Roast Level</span>
+                <span class="spec-value" data-i18n="coffee.cr.badge">Medium Roast</span>
+                <span class="spec-explain" id="spec-cr-roast-copy" data-i18n="coffee.spec.roast.explain">How developed the coffee is in the roast. Lighter roasts usually show more brightness, while darker roasts lean smoother and fuller.</span>
+              </button>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-cr-body-copy" data-spec-toggle>
+                <span class="spec-label" data-i18n="coffee.spec.body">Body</span>
+                <span class="spec-value" data-i18n="coffee.cr.bodyValue">Heavy</span>
+                <span class="spec-explain" id="spec-cr-body-copy" data-i18n="coffee.spec.body.explain">The weight or texture of the coffee in your mouth. A heavier body feels fuller and richer.</span>
+              </button>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-cr-acidity-copy" data-spec-toggle>
+                <span class="spec-label" data-i18n="coffee.spec.acidity">Acidity</span>
+                <span class="spec-value" data-i18n="coffee.cr.acidity">Medium</span>
+                <span class="spec-explain" id="spec-cr-acidity-copy" data-i18n="coffee.spec.acidity.explain">The brightness or lift in the cup. Medium acidity can make coffee taste cleaner, fruitier, or more lively.</span>
+              </button>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-cr-specialty-copy" data-spec-toggle>
+                <span class="spec-label" data-i18n="coffee.spec.specialty">80+ Specialty</span>
+                <span class="spec-value" data-i18n="coffee.spec.specialty.value">Documented lot</span>
+                <span class="spec-explain" id="spec-cr-specialty-copy" data-i18n="coffee.spec.specialty.explain">Specialty-grade coffee traditionally starts at 80 points or higher in professional cupping, meaning the green coffee was evaluated for cup quality instead of treated like ordinary commodity coffee.</span>
+              </button>
             </div>
 
             <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_medium" href="https://millionaires-roast.square.site/" data-i18n="coffee.cta.medium">Order Medium Roast</a>
           </article>
 
-          <article class="card card-plate product-card" id="coffee-card-medium-dark" data-product-panel aria-labelledby="coffee-tab-medium-dark">
-            <div class="product-card-head">
+          <article class="card card-plate product-card card-interactive" id="coffee-card-medium-dark" data-product-panel aria-labelledby="coffee-tab-medium-dark" data-reveal="up" data-reveal-delay="90">
+            <div class="product-card-head" data-reveal="fade" data-reveal-delay="170">
               <span class="origin-badge" data-i18n="coffee.pe.badge">Med-Dark Roast</span>
               <span class="product-process" data-i18n="coffee.pe.process">Washed Process</span>
             </div>
-            <h3 class="origin-title" data-i18n="coffee.pe.title">Peruvian Chonta G1 Washed</h3>
-            <p class="card-text" data-i18n="coffee.pe.body">Balanced and developed while still lively, with chocolate, orchard fruit, roasted almond, and citrus.</p>
-            <p class="product-notes" data-i18n="coffee.pe.notes">Chocolate, green apple, plum, roasted almond, citrus</p>
+            <h3 class="origin-title" data-reveal="fade" data-reveal-delay="210" data-i18n="coffee.pe.title">Peruvian Chonta G1 Washed</h3>
+            <p class="card-text" data-reveal="fade" data-reveal-delay="250" data-i18n="coffee.pe.body">Balanced and developed while still lively, with chocolate, orchard fruit, roasted almond, and citrus.</p>
+            <ul class="taste-chip-list" aria-label="Tasting notes" data-reveal="up" data-reveal-delay="300">
+              <li data-i18n="coffee.pe.note1">Chocolate</li>
+              <li data-i18n="coffee.pe.note2">Green apple</li>
+              <li data-i18n="coffee.pe.note3">Plum</li>
+              <li data-i18n="coffee.pe.note4">Roasted almond</li>
+              <li data-i18n="coffee.pe.note5">Citrus</li>
+            </ul>
 
-            <div class="product-choice">
+            <div class="product-choice" data-reveal="fade" data-reveal-delay="340">
               <span data-i18n="choose.card2.title">I want balanced and familiar</span>
             </div>
 
-            <div class="product-spec-grid">
-              <div class="spec-card"><span class="spec-label" data-i18n="coffee.spec.origin">Origin</span><span class="spec-value" data-i18n="coffee.pe.origin">Peru</span></div>
-              <div class="spec-card"><span class="spec-label" data-i18n="coffee.spec.body">Body</span><span class="spec-value" data-i18n="coffee.pe.bodyValue">Medium</span></div>
-              <div class="spec-card"><span class="spec-label" data-i18n="coffee.spec.acidity">Acidity</span><span class="spec-value" data-i18n="coffee.pe.acidity">Medium</span></div>
+            <div class="product-spec-grid" data-reveal="up" data-reveal-delay="380">
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-pe-origin-copy" data-spec-toggle>
+                <span class="spec-label" data-i18n="coffee.spec.origin">Origin</span>
+                <span class="spec-value" data-i18n="coffee.pe.origin">Peru</span>
+                <span class="spec-explain" id="spec-pe-origin-copy" data-i18n="coffee.spec.origin.explain">Where the coffee comes from. Origin affects climate, soil, variety, and the general character of the cup.</span>
+              </button>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-pe-process-copy" data-spec-toggle>
+                <span class="spec-label" data-i18n="coffee.spec.process">Process</span>
+                <span class="spec-value" data-i18n="coffee.pe.process">Washed Process</span>
+                <span class="spec-explain" id="spec-pe-process-copy" data-i18n="coffee.spec.process.explain">How the coffee fruit was removed and dried. Process can strongly affect sweetness, body, and fruit character.</span>
+              </button>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-pe-roast-copy" data-spec-toggle>
+                <span class="spec-label" data-i18n="coffee.spec.roast">Roast Level</span>
+                <span class="spec-value" data-i18n="coffee.pe.badge">Med-Dark Roast</span>
+                <span class="spec-explain" id="spec-pe-roast-copy" data-i18n="coffee.spec.roast.explain">How developed the coffee is in the roast. Lighter roasts usually show more brightness, while darker roasts lean smoother and fuller.</span>
+              </button>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-pe-body-copy" data-spec-toggle>
+                <span class="spec-label" data-i18n="coffee.spec.body">Body</span>
+                <span class="spec-value" data-i18n="coffee.pe.bodyValue">Medium</span>
+                <span class="spec-explain" id="spec-pe-body-copy" data-i18n="coffee.spec.body.explain">The weight or texture of the coffee in your mouth. A heavier body feels fuller and richer.</span>
+              </button>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-pe-acidity-copy" data-spec-toggle>
+                <span class="spec-label" data-i18n="coffee.spec.acidity">Acidity</span>
+                <span class="spec-value" data-i18n="coffee.pe.acidity">Medium</span>
+                <span class="spec-explain" id="spec-pe-acidity-copy" data-i18n="coffee.spec.acidity.explain">The brightness or lift in the cup. Medium acidity can make coffee taste cleaner, fruitier, or more lively.</span>
+              </button>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-pe-specialty-copy" data-spec-toggle>
+                <span class="spec-label" data-i18n="coffee.spec.specialty">80+ Specialty</span>
+                <span class="spec-value" data-i18n="coffee.spec.specialty.value">Documented lot</span>
+                <span class="spec-explain" id="spec-pe-specialty-copy" data-i18n="coffee.spec.specialty.explain">Specialty-grade coffee traditionally starts at 80 points or higher in professional cupping, meaning the green coffee was evaluated for cup quality instead of treated like ordinary commodity coffee.</span>
+              </button>
             </div>
 
             <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_medium_dark" href="https://millionaires-roast.square.site/" data-i18n="coffee.cta.mediumDark">Order Medium Dark Roast</a>
           </article>
 
-          <article class="card card-plate product-card" id="coffee-card-dark" data-product-panel aria-labelledby="coffee-tab-dark">
-            <div class="product-card-head">
+          <article class="card card-plate product-card card-interactive" id="coffee-card-dark" data-product-panel aria-labelledby="coffee-tab-dark" data-reveal="up" data-reveal-delay="180">
+            <div class="product-card-head" data-reveal="fade" data-reveal-delay="260">
               <span class="origin-badge" data-i18n="coffee.br.badge">Dark Roast</span>
               <span class="product-process" data-i18n="coffee.br.process">Natural Process</span>
             </div>
-            <h3 class="origin-title" data-i18n="coffee.br.title">Brazilian Cerrado Natural</h3>
-            <p class="card-text" data-i18n="coffee.br.body">Smooth and classic, built around chocolate, almond, dried fruit, and vanilla in a darker roast profile.</p>
-            <p class="product-notes" data-i18n="coffee.br.notes">Milk chocolate, almond, dried plum, vanilla</p>
+            <h3 class="origin-title" data-reveal="fade" data-reveal-delay="300" data-i18n="coffee.br.title">Brazilian Cerrado Natural</h3>
+            <p class="card-text" data-reveal="fade" data-reveal-delay="340" data-i18n="coffee.br.body">Smooth and classic, built around chocolate, almond, dried fruit, and vanilla in a darker roast profile.</p>
+            <ul class="taste-chip-list" aria-label="Tasting notes" data-reveal="up" data-reveal-delay="390">
+              <li data-i18n="coffee.br.note1">Milk chocolate</li>
+              <li data-i18n="coffee.br.note2">Almond</li>
+              <li data-i18n="coffee.br.note3">Dried plum</li>
+              <li data-i18n="coffee.br.note4">Vanilla</li>
+            </ul>
 
-            <div class="product-choice">
+            <div class="product-choice" data-reveal="fade" data-reveal-delay="430">
               <span data-i18n="choose.card3.title">I want smooth and classic</span>
             </div>
 
-            <div class="product-spec-grid">
-              <div class="spec-card"><span class="spec-label" data-i18n="coffee.spec.origin">Origin</span><span class="spec-value" data-i18n="coffee.br.origin">Brazil</span></div>
-              <div class="spec-card"><span class="spec-label" data-i18n="coffee.spec.body">Body</span><span class="spec-value" data-i18n="coffee.br.bodyValue">Medium</span></div>
-              <div class="spec-card"><span class="spec-label" data-i18n="coffee.spec.acidity">Acidity</span><span class="spec-value" data-i18n="coffee.br.acidity">Mild</span></div>
+            <div class="product-spec-grid" data-reveal="up" data-reveal-delay="470">
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-br-origin-copy" data-spec-toggle>
+                <span class="spec-label" data-i18n="coffee.spec.origin">Origin</span>
+                <span class="spec-value" data-i18n="coffee.br.origin">Brazil</span>
+                <span class="spec-explain" id="spec-br-origin-copy" data-i18n="coffee.spec.origin.explain">Where the coffee comes from. Origin affects climate, soil, variety, and the general character of the cup.</span>
+              </button>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-br-process-copy" data-spec-toggle>
+                <span class="spec-label" data-i18n="coffee.spec.process">Process</span>
+                <span class="spec-value" data-i18n="coffee.br.process">Natural Process</span>
+                <span class="spec-explain" id="spec-br-process-copy" data-i18n="coffee.spec.process.explain">How the coffee fruit was removed and dried. Process can strongly affect sweetness, body, and fruit character.</span>
+              </button>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-br-roast-copy" data-spec-toggle>
+                <span class="spec-label" data-i18n="coffee.spec.roast">Roast Level</span>
+                <span class="spec-value" data-i18n="coffee.br.badge">Dark Roast</span>
+                <span class="spec-explain" id="spec-br-roast-copy" data-i18n="coffee.spec.roast.explain">How developed the coffee is in the roast. Lighter roasts usually show more brightness, while darker roasts lean smoother and fuller.</span>
+              </button>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-br-body-copy" data-spec-toggle>
+                <span class="spec-label" data-i18n="coffee.spec.body">Body</span>
+                <span class="spec-value" data-i18n="coffee.br.bodyValue">Medium</span>
+                <span class="spec-explain" id="spec-br-body-copy" data-i18n="coffee.spec.body.explain">The weight or texture of the coffee in your mouth. A heavier body feels fuller and richer.</span>
+              </button>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-br-acidity-copy" data-spec-toggle>
+                <span class="spec-label" data-i18n="coffee.spec.acidity">Acidity</span>
+                <span class="spec-value" data-i18n="coffee.br.acidity">Mild</span>
+                <span class="spec-explain" id="spec-br-acidity-copy" data-i18n="coffee.spec.acidity.explain">The brightness or lift in the cup. Medium acidity can make coffee taste cleaner, fruitier, or more lively.</span>
+              </button>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-br-specialty-copy" data-spec-toggle>
+                <span class="spec-label" data-i18n="coffee.spec.specialty">80+ Specialty</span>
+                <span class="spec-value" data-i18n="coffee.spec.specialty.value">Documented lot</span>
+                <span class="spec-explain" id="spec-br-specialty-copy" data-i18n="coffee.spec.specialty.explain">Specialty-grade coffee traditionally starts at 80 points or higher in professional cupping, meaning the green coffee was evaluated for cup quality instead of treated like ordinary commodity coffee.</span>
+              </button>
             </div>
 
             <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_dark" href="https://millionaires-roast.square.site/" data-i18n="coffee.cta.dark">Order Dark Roast</a>
           </article>
         </div>
 
-        <article class="lineup-pricing-card">
+        <article class="lineup-pricing-card" data-reveal="up">
           <h3 data-i18n="coffee.price.title">Simple pricing across the lineup</h3>
           <div class="lineup-pricing-lines">
             <p data-i18n="coffee.price.bag">14 oz bag: $18</p>
@@ -339,7 +440,7 @@
           </div>
         </article>
 
-        <div class="choose-inline" id="choose" aria-labelledby="choose-inline-title">
+        <div class="choose-inline" id="choose" aria-labelledby="choose-inline-title" data-reveal="up">
           <div>
             <h3 id="choose-inline-title" data-i18n="choose.title">Not sure what to order?</h3>
             <p data-i18n="choose.subtitle">Pick the kind of cup you want. We'll point you toward the right roast.</p>
@@ -349,30 +450,31 @@
       </div>
     </section>
 
-    <section class="section transparency-section" id="transparency" aria-labelledby="transparency-title">
+    <section class="section transparency-section editorial-section" id="transparency" aria-labelledby="transparency-title" data-ghost-word="DETAILS">
       <div class="container">
-        <div class="section-head center narrow-head">
+        <span class="section-ghost" aria-hidden="true" data-i18n="ghost.details">DETAILS</span>
+        <div class="section-head center narrow-head" data-reveal="up">
           <h2 class="section-title" id="transparency-title" data-i18n="transparency.title">Specialty coffee, explained plainly.</h2>
           <p class="section-subtitle" data-i18n="transparency.subtitle">We do not expect customers to be coffee experts. We show the details that matter so the coffee feels easier to choose.</p>
         </div>
 
         <div class="transparency-grid">
-          <article class="transparency-card">
+          <article class="transparency-card card-interactive" data-reveal="up" data-reveal-delay="0">
             <span class="transparency-label">01</span>
             <h3 data-i18n="transparency.card1.title">Documented 80+ Lots</h3>
             <p data-i18n="transparency.card1.body">We select coffees from documented specialty-grade green coffee lots.</p>
           </article>
-          <article class="transparency-card">
+          <article class="transparency-card card-interactive" data-reveal="up" data-reveal-delay="70">
             <span class="transparency-label">02</span>
             <h3 data-i18n="transparency.card2.title">Single-Origin Focus</h3>
             <p data-i18n="transparency.card2.body">Each current coffee comes from a specific origin instead of being hidden inside a generic blend.</p>
           </article>
-          <article class="transparency-card">
+          <article class="transparency-card card-interactive" data-reveal="up" data-reveal-delay="140">
             <span class="transparency-label">03</span>
             <h3 data-i18n="transparency.card3.title">Roasted in Small Batches</h3>
             <p data-i18n="transparency.card3.body">Small-batch roasting helps us keep the lineup fresh and responsive to demand.</p>
           </article>
-          <article class="transparency-card">
+          <article class="transparency-card card-interactive" data-reveal="up" data-reveal-delay="210">
             <span class="transparency-label">04</span>
             <h3 data-i18n="transparency.card4.title">Built for Everyday Drinking</h3>
             <p data-i18n="transparency.card4.body">The goal is clean, flavorful coffee at a price normal customers can return to.</p>
@@ -381,15 +483,16 @@
       </div>
     </section>
 
-    <section class="section brew-guide" id="brew" aria-labelledby="brew-title">
+    <section class="section brew-guide editorial-section" id="brew" aria-labelledby="brew-title" data-ghost-word="BREW">
       <div class="container">
-        <div class="section-head center narrow-head">
+        <span class="section-ghost" aria-hidden="true" data-i18n="ghost.brew">BREW</span>
+        <div class="section-head center narrow-head" data-reveal="up">
           <h2 class="section-title" id="brew-title"><span data-i18n="brew.title.line1">Brew better coffee</span><span data-i18n="brew.title.line2">without overthinking it.</span></h2>
           <p class="section-subtitle" data-i18n="brew.subtitle">Simple starting points for a better cup at home.</p>
         </div>
 
         <div class="brew-grid" data-brew-guide>
-          <article class="brew-card card card-plate" data-brew-card>
+          <article class="brew-card card card-plate card-interactive" data-brew-card data-reveal="up" data-reveal-delay="0">
             <button class="brew-card-toggle" type="button" aria-expanded="false" aria-controls="brew-panel-drip" data-brew-toggle>
               <span class="brew-best" data-i18n="brew.drip.best">Best for: everyday coffee, full pots, convenience</span>
               <span class="brew-card-title-row">
@@ -409,7 +512,7 @@
             </div>
           </article>
 
-          <article class="brew-card card card-plate" data-brew-card>
+          <article class="brew-card card card-plate card-interactive" data-brew-card data-reveal="up" data-reveal-delay="70">
             <button class="brew-card-toggle" type="button" aria-expanded="false" aria-controls="brew-panel-french" data-brew-toggle>
               <span class="brew-best" data-i18n="brew.french.best">Best for: bold, full-bodied coffee</span>
               <span class="brew-card-title-row">
@@ -429,7 +532,7 @@
             </div>
           </article>
 
-          <article class="brew-card card card-plate" data-brew-card>
+          <article class="brew-card card card-plate card-interactive" data-brew-card data-reveal="up" data-reveal-delay="140">
             <button class="brew-card-toggle" type="button" aria-expanded="false" aria-controls="brew-panel-kcups" data-brew-toggle>
               <span class="brew-best" data-i18n="brew.kcups.best">Best for: speed and convenience</span>
               <span class="brew-card-title-row">
@@ -448,7 +551,7 @@
             </div>
           </article>
 
-          <article class="brew-card card card-plate" data-brew-card>
+          <article class="brew-card card card-plate card-interactive" data-brew-card data-reveal="up" data-reveal-delay="210">
             <button class="brew-card-toggle" type="button" aria-expanded="false" aria-controls="brew-panel-pourover" data-brew-toggle>
               <span class="brew-best" data-i18n="brew.pourover.best">Best for: clean, flavorful cups and more control</span>
               <span class="brew-card-title-row">
@@ -468,7 +571,7 @@
             </div>
           </article>
 
-          <article class="brew-card card card-plate" data-brew-card>
+          <article class="brew-card card card-plate card-interactive" data-brew-card data-reveal="up" data-reveal-delay="280">
             <button class="brew-card-toggle" type="button" aria-expanded="false" aria-controls="brew-panel-cold" data-brew-toggle>
               <span class="brew-best" data-i18n="brew.cold.best">Best for: smooth iced coffee and make-ahead batches</span>
               <span class="brew-card-title-row">
@@ -489,20 +592,21 @@
           </article>
         </div>
 
-        <p class="text-cta-wrap">
+        <p class="text-cta-wrap" data-reveal="up">
           <a class="btn btn-outline" data-sms-link data-contact-location="brew_text_help" href="sms:12174167072?body=Hi!%20I%27d%20like%20help%20with%20grind%20size%20for%20Millionaire%27s%20Roast%20coffee." data-i18n="brew.cta">Text us for grind help</a>
         </p>
       </div>
     </section>
 
-    <section class="section proof-section" id="proof" aria-labelledby="proof-title">
+    <section class="section proof-section editorial-section" id="proof" aria-labelledby="proof-title" data-ghost-word="LOCAL">
       <div class="container">
-        <div class="section-head center narrow-head">
+        <span class="section-ghost" aria-hidden="true" data-i18n="ghost.local">LOCAL</span>
+        <div class="section-head center narrow-head" data-reveal="up">
           <h2 class="section-title" id="proof-title" data-i18n="proof.title">A real local brand, already in motion</h2>
           <p class="section-subtitle" data-i18n="proof.subtitle">The brand looks polished because the work behind it is real: local markets, hands-on roasting, and a founder building it batch by batch.</p>
         </div>
 
-        <div class="proof-carousel card card-plate" data-carousel aria-label="Millionaire's Roast photo carousel">
+        <div class="proof-carousel card card-plate card-interactive" data-carousel aria-label="Millionaire's Roast photo carousel" data-reveal="up">
           <div class="carousel-shell">
             <button class="carousel-arrow" type="button" data-carousel-prev aria-label="Previous photo">
               <span aria-hidden="true">&lt;</span>
@@ -546,7 +650,7 @@
 
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="container">
-        <div class="section-head section-head-split">
+        <div class="section-head section-head-split" data-reveal="up">
           <div>
             <h2 class="section-title" id="about-title" data-i18n="about.title">About Millionaire's Roast</h2>
             <p class="section-subtitle" data-i18n="about.subtitle">A local coffee brand built through the Cass County CEO program and grown through markets, direct orders, and hands-on roasting, with fresh single-origin coffee at the center of it.</p>
@@ -554,7 +658,7 @@
         </div>
 
         <div class="about-layout">
-          <article class="card card-plate about-story">
+          <article class="card card-plate about-story card-interactive" data-reveal="left">
             <div class="about-story-copy">
               <h3 class="card-title" data-i18n="about.story.title">Meet Maximiliano</h3>
               <p class="card-text" data-i18n="about.story.p1">Millionaire's Roast started through the Cass County CEO program, where Maximiliano Gomez turned a business idea into a real small-batch coffee brand rooted in his community.</p>
@@ -564,7 +668,7 @@
           </article>
 
           <div class="about-side-stack">
-            <aside class="card card-plate">
+            <aside class="card card-plate card-interactive" data-reveal="right" data-reveal-delay="100">
               <h3 class="card-title" data-i18n="about.side.title">What sets it apart</h3>
               <ul class="checklist">
                 <li data-i18n="about.side.li1">Fresh single-origin coffee</li>
@@ -574,7 +678,7 @@
               </ul>
             </aside>
 
-            <aside class="card card-plate">
+            <aside class="card card-plate card-interactive" data-reveal="right" data-reveal-delay="180">
               <h3 class="card-title" data-i18n="about.find.title">Where to find us</h3>
               <p class="card-text" data-i18n="about.find.body">Watch social media for weekly market appearances, pickup coordination, and current availability updates.</p>
               <div class="follow-links">
@@ -589,7 +693,7 @@
 
     <section class="section ceo-photo-section" aria-label="Cass County CEO program photo">
       <div class="container">
-        <article class="card card-plate ceo-photo-card">
+        <article class="card card-plate ceo-photo-card" data-reveal="up">
           <img class="ceo-photo-image" src="ceo.webp" alt="Cass County CEO class of 2026 group photo" width="4032" height="3024" loading="lazy" decoding="async" />
           <a class="ceo-photo-caption ceo-photo-link" href="https://www.casscountyceo.com/about-us" target="_blank" rel="noopener noreferrer" data-i18n="ceo.caption">Proudly launched through the Cass County CEO program.</a>
         </article>
@@ -598,12 +702,12 @@
 
     <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="container">
-        <div class="section-head center narrow-head">
+        <div class="section-head center narrow-head" data-reveal="up">
           <h2 class="section-title" id="faq-title" data-i18n="faq.title">Quick answers</h2>
           <p class="section-subtitle" data-i18n="faq.subtitle">Short and useful, so ordering stays easy.</p>
         </div>
 
-        <div class="faq card card-plate" data-accordion>
+        <div class="faq card card-plate" data-accordion data-reveal="up">
           <button class="faq-item" id="faq-trigger-1" type="button" aria-expanded="false" aria-controls="faq-panel-1">
             <span class="faq-q" data-i18n="faq.q1">How do I order?</span>
             <span class="faq-icon" aria-hidden="true">+</span>
@@ -653,13 +757,13 @@ For customers, the result is simple: cleaner flavor, clearer tasting notes, and 
 
     <section class="section" id="contact" aria-labelledby="contact-title">
       <div class="container">
-        <div class="section-head center narrow-head">
+        <div class="section-head center narrow-head" data-reveal="up">
           <h2 class="section-title" id="contact-title" data-i18n="contact.title">Contact &amp; follow</h2>
           <p class="section-subtitle" data-i18n="contact.subtitle">Text is the fastest way to ask a quick question. Email works best for follow-up and custom questions.</p>
         </div>
 
         <div class="contact-grid">
-          <a class="card card-action card-action-primary" id="textUsCard" data-sms-link data-contact-location="contact_text" href="sms:12174167072?body=Hi!%20I%27d%20like%20to%20order%20coffee%20from%20Millionaire%27s%20Roast.%20What%20do%20you%20have%20available%3F">
+          <a class="card card-action card-action-primary card-interactive" id="textUsCard" data-sms-link data-contact-location="contact_text" href="sms:12174167072?body=Hi!%20I%27d%20like%20to%20order%20coffee%20from%20Millionaire%27s%20Roast.%20What%20do%20you%20have%20available%3F" data-reveal="up" data-reveal-delay="0">
             <div class="card-icon" aria-hidden="true">TXT</div>
             <div class="card-meta">
               <div class="card-kicker" data-i18n="contact.text.kicker">Text Us</div>
@@ -668,7 +772,7 @@ For customers, the result is simple: cleaner flavor, clearer tasting notes, and 
             </div>
           </a>
 
-          <a class="card card-action" id="emailUsCard" href="mailto:millionairesroast@gmail.com?subject=Coffee%20Order%20%7C%20Millionaire%27s%20Roast">
+          <a class="card card-action card-interactive" id="emailUsCard" href="mailto:millionairesroast@gmail.com?subject=Coffee%20Order%20%7C%20Millionaire%27s%20Roast" data-reveal="up" data-reveal-delay="70">
             <div class="card-icon" aria-hidden="true">EM</div>
             <div class="card-meta">
               <div class="card-kicker" data-i18n="contact.email.kicker">Email Us</div>
@@ -677,7 +781,7 @@ For customers, the result is simple: cleaner flavor, clearer tasting notes, and 
             </div>
           </a>
 
-          <a class="card card-action" id="instagramCard" href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer">
+          <a class="card card-action card-interactive" id="instagramCard" href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer" data-reveal="up" data-reveal-delay="140">
             <div class="card-icon" aria-hidden="true">IG</div>
             <div class="card-meta">
               <div class="card-kicker" data-i18n="contact.ig.kicker">Instagram</div>
@@ -686,7 +790,7 @@ For customers, the result is simple: cleaner flavor, clearer tasting notes, and 
             </div>
           </a>
 
-          <a class="card card-action" id="facebookCard" href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer">
+          <a class="card card-action card-interactive" id="facebookCard" href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer" data-reveal="up" data-reveal-delay="210">
             <div class="card-icon" aria-hidden="true">FB</div>
             <div class="card-meta">
               <div class="card-kicker" data-i18n="contact.fb.kicker">Facebook</div>
@@ -705,21 +809,21 @@ For customers, the result is simple: cleaner flavor, clearer tasting notes, and 
       <div class="footer-rule" aria-hidden="true"></div>
 
       <div class="footer-grid">
-        <div class="footer-col">
+        <div class="footer-col" data-reveal="up" data-reveal-delay="0">
           <h3 data-i18n="footer.shop.title">Shop</h3>
           <a href="#current-roast" data-i18n="footer.shop.current">Current Coffees</a>
           <a data-shop-cta data-cta-location="footer_kcups" href="https://millionaires-roast.square.site/" data-i18n="footer.shop.kcups">K-Cups</a>
           <a data-shop-cta data-cta-location="footer_order_online" href="https://millionaires-roast.square.site/" data-i18n="footer.shop.order">Order Online</a>
         </div>
 
-        <div class="footer-col">
+        <div class="footer-col" data-reveal="up" data-reveal-delay="80">
           <h3 data-i18n="footer.learn.title">Learn</h3>
           <a href="#transparency" data-i18n="footer.learn.specialty">What Makes Coffee Specialty</a>
           <a href="#choose" data-i18n="footer.learn.choose">Help Me Choose</a>
           <a href="#brew" data-i18n="footer.learn.brew">Brew It Simply</a>
         </div>
 
-        <div class="footer-col">
+        <div class="footer-col" data-reveal="up" data-reveal-delay="160">
           <h3 data-i18n="footer.local.title">Local</h3>
           <a href="#contact" data-i18n="footer.local.springfield">Springfield Pickup</a>
           <a href="#contact" data-i18n="footer.local.beardstown">Beardstown Pickup</a>

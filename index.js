@@ -700,8 +700,8 @@
   }
 
   function setupInteractiveSpecCards() {
-    const specGroups = [...document.querySelectorAll(".product-spec-grid")];
-    if (!specGroups.length) return;
+    const specButtons = [...document.querySelectorAll("[data-spec-toggle]")];
+    if (!specButtons.length) return;
 
     const closeSpecButton = (button) => {
       button.setAttribute("aria-expanded", "false");
@@ -709,10 +709,10 @@
     };
 
     const openSpecButton = (button) => {
-      const group = button.closest(".product-spec-grid");
-      if (!group) return;
+      const card = button.closest(".product-card");
+      if (!card) return;
 
-      group.querySelectorAll("[data-spec-toggle]").forEach((otherButton) => {
+      card.querySelectorAll("[data-spec-toggle]").forEach((otherButton) => {
         if (otherButton !== button) closeSpecButton(otherButton);
       });
 
@@ -720,11 +720,8 @@
       button.classList.add("is-open");
     };
 
-    specGroups.forEach((group) => {
-      group.addEventListener("click", (event) => {
-        const button = event.target.closest("[data-spec-toggle]");
-        if (!button || !group.contains(button)) return;
-
+    specButtons.forEach((button) => {
+      button.addEventListener("click", () => {
         const isOpen = button.getAttribute("aria-expanded") === "true";
         if (isOpen) {
           closeSpecButton(button);
@@ -733,10 +730,7 @@
         }
       });
 
-      group.addEventListener("keydown", (event) => {
-        const button = event.target.closest("[data-spec-toggle]");
-        if (!button || !group.contains(button)) return;
-
+      button.addEventListener("keydown", (event) => {
         if (event.key === "Escape") {
           closeSpecButton(button);
           button.focus();
@@ -747,7 +741,8 @@
           return;
         }
 
-        const buttons = [...group.querySelectorAll("[data-spec-toggle]")];
+        const card = button.closest(".product-card");
+        const buttons = card ? [...card.querySelectorAll("[data-spec-toggle]")] : specButtons;
         const currentIndex = buttons.indexOf(button);
         if (currentIndex < 0) return;
 

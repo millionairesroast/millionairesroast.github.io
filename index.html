@@ -162,9 +162,7 @@
     <div class="mobile-nav" id="mobile-nav" aria-hidden="true" inert>
       <a class="nav-cta" id="mobileNavOrderBtn" data-shop-cta data-cta-location="mobile_nav" href="https://millionaires-roast.square.site/" data-i18n="nav.orderCta">Order Now</a>
       <a class="nav-link" href="#current-roast" data-i18n="nav.roast">Current Coffees</a>
-      <a class="nav-link" href="#choose" data-i18n="nav.choose">Help Me Choose</a>
       <a class="nav-link" href="#brew" data-i18n="nav.brew">Brew Guide</a>
-      <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
       <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
       <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
       <div class="mobile-nav-language" aria-label="Language selection">
@@ -265,7 +263,7 @@
           <button id="coffee-tab-dark" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-dark" data-product-tab="2" data-i18n="coffee.br.badge">Dark Roast</button>
         </div>
 
-        <div class="coffee-product-grid">
+        <div class="coffee-product-grid" id="choose">
           <article class="card card-plate product-card product-card-featured card-interactive is-active" id="coffee-card-medium" data-product-panel aria-labelledby="coffee-tab-medium" data-reveal="up" data-reveal-delay="0">
             <div class="product-card-head" data-reveal="fade" data-reveal-delay="80">
               <span class="origin-badge" data-i18n="coffee.cr.badge">Medium Roast</span>
@@ -286,28 +284,28 @@
               <span data-i18n="choose.card1.title">I want bright and sweet</span>
             </div>
 
-            <div class="product-spec-grid" data-reveal="up" data-reveal-delay="290">
-              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-cr-origin-copy" data-spec-toggle>
+            <div class="product-spec-grid">
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-cr-origin-copy" data-spec-toggle data-reveal="up" data-reveal-delay="0">
                 <span class="spec-label" data-i18n="coffee.spec.origin">Origin</span>
                 <span class="spec-value" data-i18n="coffee.cr.origin">Tarraz&uacute;, Costa Rica</span>
                 <span class="spec-explain" id="spec-cr-origin-copy" data-i18n="coffee.spec.origin.explain">Where the coffee comes from. Origin affects climate, soil, variety, and the general character of the cup.</span>
               </button>
-              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-cr-process-copy" data-spec-toggle>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-cr-process-copy" data-spec-toggle data-reveal="up" data-reveal-delay="45">
                 <span class="spec-label" data-i18n="coffee.spec.process">Process</span>
                 <span class="spec-value" data-i18n="coffee.cr.process">Honey Process</span>
                 <span class="spec-explain" id="spec-cr-process-copy" data-i18n="coffee.spec.process.explain">How the coffee fruit was removed and dried. Process can strongly affect sweetness, body, and fruit character.</span>
               </button>
-              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-cr-roast-copy" data-spec-toggle>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-cr-roast-copy" data-spec-toggle data-reveal="up" data-reveal-delay="90">
                 <span class="spec-label" data-i18n="coffee.spec.roast">Roast Level</span>
                 <span class="spec-value" data-i18n="coffee.cr.badge">Medium Roast</span>
                 <span class="spec-explain" id="spec-cr-roast-copy" data-i18n="coffee.spec.roast.explain">How developed the coffee is in the roast. Lighter roasts usually show more brightness, while darker roasts lean smoother and fuller.</span>
               </button>
-              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-cr-body-copy" data-spec-toggle>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-cr-body-copy" data-spec-toggle data-reveal="up" data-reveal-delay="135">
                 <span class="spec-label" data-i18n="coffee.spec.body">Body</span>
                 <span class="spec-value" data-i18n="coffee.cr.bodyValue">Heavy</span>
                 <span class="spec-explain" id="spec-cr-body-copy" data-i18n="coffee.spec.body.explain">The weight or texture of the coffee in your mouth. A heavier body feels fuller and richer.</span>
               </button>
-              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-cr-acidity-copy" data-spec-toggle>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-cr-acidity-copy" data-spec-toggle data-reveal="up" data-reveal-delay="180">
                 <span class="spec-label" data-i18n="coffee.spec.acidity">Acidity</span>
                 <span class="spec-value" data-i18n="coffee.cr.acidity">Medium</span>
                 <span class="spec-explain" id="spec-cr-acidity-copy" data-i18n="coffee.spec.acidity.explain">The brightness or lift in the cup. Medium acidity can make coffee taste cleaner, fruitier, or more lively.</span>
@@ -336,28 +334,28 @@
               <span data-i18n="choose.card2.title">I want balanced and familiar</span>
             </div>
 
-            <div class="product-spec-grid" data-reveal="up" data-reveal-delay="380">
-              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-pe-origin-copy" data-spec-toggle>
+            <div class="product-spec-grid">
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-pe-origin-copy" data-spec-toggle data-reveal="up" data-reveal-delay="0">
                 <span class="spec-label" data-i18n="coffee.spec.origin">Origin</span>
                 <span class="spec-value" data-i18n="coffee.pe.origin">Peru</span>
                 <span class="spec-explain" id="spec-pe-origin-copy" data-i18n="coffee.spec.origin.explain">Where the coffee comes from. Origin affects climate, soil, variety, and the general character of the cup.</span>
               </button>
-              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-pe-process-copy" data-spec-toggle>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-pe-process-copy" data-spec-toggle data-reveal="up" data-reveal-delay="45">
                 <span class="spec-label" data-i18n="coffee.spec.process">Process</span>
                 <span class="spec-value" data-i18n="coffee.pe.process">Washed Process</span>
                 <span class="spec-explain" id="spec-pe-process-copy" data-i18n="coffee.spec.process.explain">How the coffee fruit was removed and dried. Process can strongly affect sweetness, body, and fruit character.</span>
               </button>
-              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-pe-roast-copy" data-spec-toggle>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-pe-roast-copy" data-spec-toggle data-reveal="up" data-reveal-delay="90">
                 <span class="spec-label" data-i18n="coffee.spec.roast">Roast Level</span>
                 <span class="spec-value" data-i18n="coffee.pe.badge">Med-Dark Roast</span>
                 <span class="spec-explain" id="spec-pe-roast-copy" data-i18n="coffee.spec.roast.explain">How developed the coffee is in the roast. Lighter roasts usually show more brightness, while darker roasts lean smoother and fuller.</span>
               </button>
-              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-pe-body-copy" data-spec-toggle>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-pe-body-copy" data-spec-toggle data-reveal="up" data-reveal-delay="135">
                 <span class="spec-label" data-i18n="coffee.spec.body">Body</span>
                 <span class="spec-value" data-i18n="coffee.pe.bodyValue">Medium</span>
                 <span class="spec-explain" id="spec-pe-body-copy" data-i18n="coffee.spec.body.explain">The weight or texture of the coffee in your mouth. A heavier body feels fuller and richer.</span>
               </button>
-              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-pe-acidity-copy" data-spec-toggle>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-pe-acidity-copy" data-spec-toggle data-reveal="up" data-reveal-delay="180">
                 <span class="spec-label" data-i18n="coffee.spec.acidity">Acidity</span>
                 <span class="spec-value" data-i18n="coffee.pe.acidity">Medium</span>
                 <span class="spec-explain" id="spec-pe-acidity-copy" data-i18n="coffee.spec.acidity.explain">The brightness or lift in the cup. Medium acidity can make coffee taste cleaner, fruitier, or more lively.</span>
@@ -385,28 +383,28 @@
               <span data-i18n="choose.card3.title">I want smooth and classic</span>
             </div>
 
-            <div class="product-spec-grid" data-reveal="up" data-reveal-delay="470">
-              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-br-origin-copy" data-spec-toggle>
+            <div class="product-spec-grid">
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-br-origin-copy" data-spec-toggle data-reveal="up" data-reveal-delay="0">
                 <span class="spec-label" data-i18n="coffee.spec.origin">Origin</span>
                 <span class="spec-value" data-i18n="coffee.br.origin">Brazil</span>
                 <span class="spec-explain" id="spec-br-origin-copy" data-i18n="coffee.spec.origin.explain">Where the coffee comes from. Origin affects climate, soil, variety, and the general character of the cup.</span>
               </button>
-              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-br-process-copy" data-spec-toggle>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-br-process-copy" data-spec-toggle data-reveal="up" data-reveal-delay="45">
                 <span class="spec-label" data-i18n="coffee.spec.process">Process</span>
                 <span class="spec-value" data-i18n="coffee.br.process">Natural Process</span>
                 <span class="spec-explain" id="spec-br-process-copy" data-i18n="coffee.spec.process.explain">How the coffee fruit was removed and dried. Process can strongly affect sweetness, body, and fruit character.</span>
               </button>
-              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-br-roast-copy" data-spec-toggle>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-br-roast-copy" data-spec-toggle data-reveal="up" data-reveal-delay="90">
                 <span class="spec-label" data-i18n="coffee.spec.roast">Roast Level</span>
                 <span class="spec-value" data-i18n="coffee.br.badge">Dark Roast</span>
                 <span class="spec-explain" id="spec-br-roast-copy" data-i18n="coffee.spec.roast.explain">How developed the coffee is in the roast. Lighter roasts usually show more brightness, while darker roasts lean smoother and fuller.</span>
               </button>
-              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-br-body-copy" data-spec-toggle>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-br-body-copy" data-spec-toggle data-reveal="up" data-reveal-delay="135">
                 <span class="spec-label" data-i18n="coffee.spec.body">Body</span>
                 <span class="spec-value" data-i18n="coffee.br.bodyValue">Medium</span>
                 <span class="spec-explain" id="spec-br-body-copy" data-i18n="coffee.spec.body.explain">The weight or texture of the coffee in your mouth. A heavier body feels fuller and richer.</span>
               </button>
-              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-br-acidity-copy" data-spec-toggle>
+              <button class="spec-card spec-card-button" type="button" aria-expanded="false" aria-controls="spec-br-acidity-copy" data-spec-toggle data-reveal="up" data-reveal-delay="180">
                 <span class="spec-label" data-i18n="coffee.spec.acidity">Acidity</span>
                 <span class="spec-value" data-i18n="coffee.br.acidity">Mild</span>
                 <span class="spec-explain" id="spec-br-acidity-copy" data-i18n="coffee.spec.acidity.explain">The brightness or lift in the cup. Medium acidity can make coffee taste cleaner, fruitier, or more lively.</span>
@@ -425,13 +423,6 @@
           </div>
         </article>
 
-        <div class="choose-inline" id="choose" aria-labelledby="choose-inline-title" data-reveal="up">
-          <div>
-            <h3 id="choose-inline-title" data-i18n="choose.title">Not sure what to order?</h3>
-            <p data-i18n="choose.subtitle">Pick the kind of cup you want. We'll point you toward the right roast.</p>
-          </div>
-          <a class="text-cta" data-sms-link data-contact-location="choose_text_help" href="sms:12174167072?body=Hi!%20I%27d%20like%20help%20choosing%20coffee%20from%20Millionaire%27s%20Roast." data-i18n="choose.textCta">Still unsure? Text us and we'll help.</a>
-        </div>
       </div>
     </section>
 

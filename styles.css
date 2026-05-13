@@ -145,6 +145,21 @@ a:focus-visible, button:focus-visible{
   box-shadow:none;
   transition:transform 220ms var(--ease);
 }
+.brand-mark-wrap::after{
+  content:"";
+  position:absolute;
+  inset:8px;
+  pointer-events:none;
+  opacity:0;
+  transform:scale(.88);
+  background:
+    radial-gradient(circle at 66% 24%, rgba(255,246,210,.52) 0 2px, rgba(226,196,106,.18) 3px, transparent 8px),
+    radial-gradient(circle at 37% 63%, rgba(255,246,210,.34) 0 1px, rgba(226,196,106,.13) 3px, transparent 7px),
+    radial-gradient(circle at 76% 62%, rgba(255,246,210,.24), transparent 11px);
+  mix-blend-mode:screen;
+  filter:drop-shadow(0 0 7px rgba(226,196,106,.22));
+  animation:logoSparkle 8.5s var(--ease) infinite;
+}
 .brand:hover .brand-mark-wrap{
   transform:translateY(-1px);
 }
@@ -172,6 +187,24 @@ a:focus-visible, button:focus-visible{
   background:transparent;
 }
 .brand-mark.is-hidden + .brand-mark-fallback{opacity:1}
+@keyframes logoSparkle{
+  0%, 72%{
+    opacity:0;
+    transform:scale(.88);
+  }
+  76%{
+    opacity:.42;
+    transform:scale(1);
+  }
+  80%{
+    opacity:.18;
+    transform:scale(1.04);
+  }
+  86%, 100%{
+    opacity:0;
+    transform:scale(.94);
+  }
+}
 .brand-text{display:grid;line-height:1.05}
 .brand-name{
   font-family:var(--serif);

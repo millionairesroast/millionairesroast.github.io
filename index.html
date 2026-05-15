@@ -28,7 +28,7 @@
   <link rel="canonical" href="https://millionairesroast.com/" />
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="apple-touch-icon" href="logo.png" />
-  <link rel="stylesheet" href="styles.css?v=47" />
+  <link rel="stylesheet" href="styles.css?v=48" />
 
   <script type="application/ld+json">
     {
@@ -119,7 +119,7 @@
     }
   </script>
 
-  <script defer src="index.js?v=47"></script>
+  <script defer src="index.js?v=48"></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -146,10 +146,9 @@
       <div class="header-right">
         <nav class="nav" aria-label="Primary">
           <a class="nav-link" href="#current-roast" data-i18n="nav.roast">Current Coffees</a>
-          <a class="nav-link" href="#choose" data-i18n="nav.choose">Help Me Choose</a>
+          <a class="nav-link" href="#find-us" data-i18n="nav.find">Find Us</a>
           <a class="nav-link" href="#brew" data-i18n="nav.brew">Brew Guide</a>
           <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
-          <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
           <a class="nav-cta" id="navOrderBtn" data-shop-cta data-cta-location="nav" href="https://millionaires-roast.square.site/" data-i18n="nav.orderCta">Order Now</a>
         </nav>
 
@@ -162,9 +161,9 @@
     <div class="mobile-nav" id="mobile-nav" aria-hidden="true" inert>
       <a class="nav-cta" id="mobileNavOrderBtn" data-shop-cta data-cta-location="mobile_nav" href="https://millionaires-roast.square.site/" data-i18n="nav.orderCta">Order Now</a>
       <a class="nav-link" href="#current-roast" data-i18n="nav.roast">Current Coffees</a>
+      <a class="nav-link" href="#find-us" data-i18n="nav.find">Find Us</a>
       <a class="nav-link" href="#brew" data-i18n="nav.brew">Brew Guide</a>
       <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
-      <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
       <div class="mobile-nav-language" aria-label="Language selection">
         <p class="lang-caption" data-i18n="lang.label">Language</p>
         <div class="lang-switch" role="group" aria-label="Language selection">
@@ -196,7 +195,7 @@
           <p class="hero-sub" data-reveal="up" data-reveal-delay="170" data-i18n="hero.sub">Fresh single-origin coffee from documented 80+ specialty lots, roasted in small batches for Springfield, Beardstown, and Central Illinois.</p>
 
           <div class="hero-conversion" data-reveal="up" data-reveal-delay="240">
-            <p class="hero-pricing" data-i18n="hero.pricing">14 oz bags $18 &bull; K-Cups from $10</p>
+            <p class="hero-pricing" data-i18n="hero.pricing">12 oz bags $16 &bull; K-Cups from $10</p>
             <p class="hero-helper" data-i18n="hero.helper">Pickup in Springfield and Beardstown, local delivery, and Illinois shipping.</p>
           </div>
 
@@ -207,9 +206,25 @@
         </div>
 
         <figure class="hero-visual" data-reveal="scale" data-reveal-delay="390">
-          <div class="hero-image-plate">
-            <img class="hero-product-image" src="CostaRica.webp" alt="Millionaire's Roast Costa Rican Tarrazu Jaguar Honey coffee bag" width="1536" height="2048" decoding="async" loading="eager" />
-          </div>
+          <picture class="hero-image-plate">
+            <source
+              class="hero-product-source"
+              media="(min-width: 761px)"
+              srcset="CostaRica.webp"
+              data-desktop-src="CostaRica.webp"
+            />
+            <img
+              class="hero-product-image"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+              data-desktop-src="CostaRica.webp"
+              alt="Millionaire's Roast Costa Rican Tarrazu Jaguar Honey coffee bag"
+              width="1536"
+              height="2048"
+              decoding="async"
+              loading="lazy"
+              fetchpriority="low"
+            />
+          </picture>
           <figcaption class="hero-floating-badge" data-reveal="right" data-reveal-delay="520">
             <span class="badge-kicker" data-i18n="hero.badge.kicker">Current Flagship</span>
             <strong data-i18n="hero.badge.title">Costa Rican Tarraz&uacute; Jaguar Honey</strong>
@@ -225,7 +240,7 @@
         <article class="feature-panel card-interactive" data-reveal="up">
           <figure class="feature-media" data-reveal="scale" data-reveal-delay="120">
             <div class="feature-image-plate">
-              <img class="feature-product-image" src="coffee.png" alt="Costa Rican Tarrazu Jaguar Honey coffee bag from Millionaire's Roast" width="419" height="419" loading="lazy" decoding="async" />
+              <img class="feature-product-image" src="coffee.png" alt="Costa Rican Tarrazu Jaguar Honey coffee bag from Millionaire's Roast" width="419" height="419" loading="lazy" decoding="async" data-jaguar-boop />
             </div>
           </figure>
 
@@ -418,7 +433,7 @@
         <article class="lineup-pricing-card" data-reveal="up">
           <h3 data-i18n="coffee.price.title">Simple pricing across the lineup</h3>
           <div class="lineup-pricing-lines">
-            <p data-i18n="coffee.price.bag">14 oz bag: $18</p>
+            <p data-i18n="coffee.price.bag">12 oz bag: $16</p>
             <p data-i18n="coffee.price.kcups">K-Cups: from $10</p>
           </div>
         </article>
@@ -426,35 +441,57 @@
       </div>
     </section>
 
-    <section class="section transparency-section editorial-section" id="transparency" aria-labelledby="transparency-title" data-ghost-word="DETAILS">
+    <section class="section find-us-section editorial-section" id="find-us" aria-labelledby="find-us-title" data-ghost-word="MARKETS">
       <div class="container">
-        <span class="section-ghost" aria-hidden="true" data-i18n="ghost.details">DETAILS</span>
+        <span class="section-ghost" aria-hidden="true" data-i18n="ghost.markets">MARKETS</span>
         <div class="section-head center narrow-head" data-reveal="up">
-          <h2 class="section-title" id="transparency-title" data-i18n="transparency.title">Specialty coffee, explained plainly.</h2>
-          <p class="section-subtitle" data-i18n="transparency.subtitle">We do not expect customers to be coffee experts. We show the details that matter so the coffee feels easier to choose.</p>
+          <p class="section-eyebrow" data-i18n="find.eyebrow">Markets &amp; local events</p>
+          <h2 class="section-title" id="find-us-title" data-i18n="find.title">Find us at markets.</h2>
+          <p class="section-subtitle" data-i18n="find.subtitle">Catch Millionaire&rsquo;s Roast in Springfield for fresh bags, K-Cups, samples, and current availability. Market dates, weather, and booth placement can change, so check our Facebook or Instagram before heading out.</p>
         </div>
 
-        <div class="transparency-grid">
-          <article class="transparency-card card-interactive" data-reveal="up" data-reveal-delay="0">
-            <span class="transparency-label">01</span>
-            <h3 data-i18n="transparency.card1.title">Documented 80+ Lots</h3>
-            <p data-i18n="transparency.card1.body">We select coffees from documented specialty-grade green coffee lots.</p>
+        <div class="market-event-grid">
+          <article class="card card-plate market-event-card card-interactive" data-reveal="up">
+            <div class="market-event-header">
+              <h3 data-i18n="find.oldCapitol.title">Old Capitol Farmers Market</h3>
+              <p class="market-event-location" data-i18n="find.oldCapitol.location">Downtown Springfield</p>
+            </div>
+            <div class="market-event-details">
+              <p class="market-event-detail">
+                <span data-i18n="find.label.days">Days</span>
+                <span data-i18n="find.oldCapitol.days">Wednesdays and Saturdays</span>
+              </p>
+              <p class="market-event-detail">
+                <span data-i18n="find.label.hours">Hours</span>
+                <span data-i18n="find.oldCapitol.hours">8:00 a.m. to 12:30 p.m.</span>
+              </p>
+            </div>
+            <p class="market-event-note" data-i18n="find.oldCapitol.booth">Typically Booth 30 on Wednesdays and Booth 60 on Saturdays.</p>
           </article>
-          <article class="transparency-card card-interactive" data-reveal="up" data-reveal-delay="70">
-            <span class="transparency-label">02</span>
-            <h3 data-i18n="transparency.card2.title">Single-Origin Focus</h3>
-            <p data-i18n="transparency.card2.body">Each current coffee comes from a specific origin instead of being hidden inside a generic blend.</p>
+
+          <article class="card card-plate market-event-card card-interactive" data-reveal="up" data-reveal-delay="90">
+            <div class="market-event-header">
+              <h3 data-i18n="find.illinoisProduct.title">Illinois Product Farmers Market</h3>
+              <p class="market-event-location" data-i18n="find.illinoisProduct.location">The Shed at the Illinois State Fairgrounds</p>
+            </div>
+            <div class="market-event-details">
+              <p class="market-event-detail">
+                <span data-i18n="find.label.days">Days</span>
+                <span data-i18n="find.illinoisProduct.days">Thursdays</span>
+              </p>
+              <p class="market-event-detail">
+                <span data-i18n="find.label.hours">Hours</span>
+                <span data-i18n="find.illinoisProduct.hours">3:30 p.m. to 7:00 p.m.</span>
+              </p>
+            </div>
+            <p class="market-event-note" data-i18n="find.illinoisProduct.booth">Find us during the Thursday afternoon market.</p>
           </article>
-          <article class="transparency-card card-interactive" data-reveal="up" data-reveal-delay="140">
-            <span class="transparency-label">03</span>
-            <h3 data-i18n="transparency.card3.title">Roasted in Small Batches</h3>
-            <p data-i18n="transparency.card3.body">Small-batch roasting helps us keep the lineup fresh and responsive to demand.</p>
-          </article>
-          <article class="transparency-card card-interactive" data-reveal="up" data-reveal-delay="210">
-            <span class="transparency-label">04</span>
-            <h3 data-i18n="transparency.card4.title">Built for Everyday Drinking</h3>
-            <p data-i18n="transparency.card4.body">The goal is clean, flavorful coffee at a price normal customers can return to.</p>
-          </article>
+        </div>
+
+        <div class="market-cta-row" data-reveal="up">
+          <a class="pill" href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer" data-i18n="find.cta.facebook">Facebook</a>
+          <a class="pill" href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer" data-i18n="find.cta.instagram">Instagram</a>
+          <a class="pill" data-sms-link data-contact-location="find_us_text" data-sms-body-en="Hi! Where will Millionaire's Roast be set up this week?" data-sms-body-es="&iexcl;Hola! &iquest;D&oacute;nde estar&aacute; Millionaire's Roast esta semana?" href="sms:12174167072?body=Hi!%20Where%20will%20Millionaire%27s%20Roast%20be%20set%20up%20this%20week%3F" data-i18n="find.cta.text">Text us to confirm</a>
         </div>
       </div>
     </section>
@@ -654,14 +691,6 @@
               </ul>
             </aside>
 
-            <aside class="card card-plate card-interactive" data-reveal="right" data-reveal-delay="180">
-              <h3 class="card-title" data-i18n="about.find.title">Where to find us</h3>
-              <p class="card-text" data-i18n="about.find.body">Watch social media for weekly market appearances, pickup coordination, and current availability updates.</p>
-              <div class="follow-links">
-                <a class="pill" href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer" data-i18n="about.find.facebook">Facebook</a>
-                <a class="pill" href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer" data-i18n="about.find.instagram">Instagram</a>
-              </div>
-            </aside>
           </div>
         </div>
       </div>
@@ -794,7 +823,6 @@ For customers, the result is simple: cleaner flavor, clearer tasting notes, and 
 
         <div class="footer-col" data-reveal="up" data-reveal-delay="80">
           <h3 data-i18n="footer.learn.title">Learn</h3>
-          <a href="#transparency" data-i18n="footer.learn.specialty">What Makes Coffee Specialty</a>
           <a href="#choose" data-i18n="footer.learn.choose">Help Me Choose</a>
           <a href="#brew" data-i18n="footer.learn.brew">Brew It Simply</a>
         </div>
@@ -803,7 +831,7 @@ For customers, the result is simple: cleaner flavor, clearer tasting notes, and 
           <h3 data-i18n="footer.local.title">Local</h3>
           <a href="#contact" data-i18n="footer.local.springfield">Springfield Pickup</a>
           <a href="#contact" data-i18n="footer.local.beardstown">Beardstown Pickup</a>
-          <a href="#proof" data-i18n="footer.local.markets">Farmers Markets</a>
+          <a href="#find-us" data-i18n="footer.local.markets">Old Capitol + Illinois Product Markets</a>
         </div>
 
       </div>

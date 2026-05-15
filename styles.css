@@ -76,7 +76,7 @@ a:focus-visible, button:focus-visible{
   outline-offset:3px;
 }
 
-#hero, #current-roast, #about, #faq, #contact{scroll-margin-top:96px}
+#hero, #current-roast, #find-us, #about, #faq, #contact{scroll-margin-top:96px}
 
 .container{
   position:relative;
@@ -143,25 +143,6 @@ a:focus-visible, button:focus-visible{
   border:0;
   background:transparent;
   box-shadow:none;
-  transition:transform 220ms var(--ease);
-}
-.brand-mark-wrap::after{
-  content:"";
-  position:absolute;
-  inset:8px;
-  pointer-events:none;
-  opacity:0;
-  transform:scale(.88);
-  background:
-    radial-gradient(circle at 66% 24%, rgba(255,246,210,.52) 0 2px, rgba(226,196,106,.18) 3px, transparent 8px),
-    radial-gradient(circle at 37% 63%, rgba(255,246,210,.34) 0 1px, rgba(226,196,106,.13) 3px, transparent 7px),
-    radial-gradient(circle at 76% 62%, rgba(255,246,210,.24), transparent 11px);
-  mix-blend-mode:screen;
-  filter:drop-shadow(0 0 7px rgba(226,196,106,.22));
-  animation:logoSparkle 8.5s var(--ease) infinite;
-}
-.brand:hover .brand-mark-wrap{
-  transform:translateY(-1px);
 }
 .brand-mark{
   width:auto;
@@ -187,24 +168,6 @@ a:focus-visible, button:focus-visible{
   background:transparent;
 }
 .brand-mark.is-hidden + .brand-mark-fallback{opacity:1}
-@keyframes logoSparkle{
-  0%, 72%{
-    opacity:0;
-    transform:scale(.88);
-  }
-  76%{
-    opacity:.42;
-    transform:scale(1);
-  }
-  80%{
-    opacity:.18;
-    transform:scale(1.04);
-  }
-  86%, 100%{
-    opacity:0;
-    transform:scale(.94);
-  }
-}
 .brand-text{display:grid;line-height:1.05}
 .brand-name{
   font-family:var(--serif);
@@ -1093,6 +1056,79 @@ a:focus-visible, button:focus-visible{
   display:grid;
   gap:18px;
 }
+.find-us-section .section-head{
+  margin-bottom:28px;
+}
+.market-event-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  align-items:stretch;
+}
+.market-event-card{
+  display:grid;
+  align-content:start;
+  gap:18px;
+}
+.market-event-header{
+  display:grid;
+  gap:6px;
+}
+.market-event-header h3{
+  margin:0;
+  font-family:var(--serif);
+  font-size:clamp(24px,2.4vw,32px);
+  font-weight:800;
+  line-height:1.08;
+}
+.market-event-location{
+  margin:0;
+  color:rgba(226,196,106,.94);
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.1em;
+  line-height:1.35;
+  text-transform:uppercase;
+}
+.market-event-details{
+  display:grid;
+  gap:10px;
+}
+.market-event-detail{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  margin:0;
+  padding:12px 14px;
+  border:1px solid rgba(200,164,77,.2);
+  border-radius:10px;
+  background:rgba(0,0,0,.16);
+}
+.market-event-detail span:first-child{
+  color:rgba(226,196,106,.88);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.market-event-detail span:last-child{
+  color:rgba(244,241,234,.92);
+  font-weight:800;
+  text-align:right;
+}
+.market-event-note{
+  margin:0;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.5;
+}
+.market-cta-row{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:18px;
+}
 .card-title{
   margin:0 0 12px;
   font-family:var(--serif);
@@ -1735,9 +1771,9 @@ a:focus-visible, button:focus-visible{
 
 #featured-offering,
 #choose,
-#transparency,
 #brew,
 #proof,
+#find-us,
 #current-roast,
 #about,
 #faq,
@@ -2171,50 +2207,6 @@ a:focus-visible, button:focus-visible{
   text-decoration-thickness:1px;
 }
 
-.transparency-section{
-  border-top:1px solid rgba(200,164,77,.14);
-  border-bottom:1px solid rgba(200,164,77,.14);
-  background:linear-gradient(180deg, rgba(0,0,0,.12), rgba(200,164,77,.035), rgba(0,0,0,.1));
-}
-.transparency-grid{
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:0;
-  border:1px solid rgba(200,164,77,.24);
-  border-radius:18px;
-  overflow:hidden;
-  background:rgba(0,0,0,.18);
-}
-.transparency-card{
-  min-width:0;
-  padding:24px 20px;
-  border-right:1px solid rgba(200,164,77,.18);
-}
-.transparency-card:last-child{
-  border-right:0;
-}
-.transparency-label{
-  display:block;
-  margin-bottom:18px;
-  color:rgba(226,196,106,.88);
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.18em;
-}
-.transparency-card h3{
-  margin:0;
-  padding-top:16px;
-  border-top:1px solid rgba(200,164,77,.28);
-  font-family:var(--serif);
-  font-size:22px;
-  line-height:1.08;
-}
-.transparency-card p{
-  margin:12px 0 0;
-  color:var(--muted);
-  font-size:15px;
-}
-
 .brew-card{
   min-height:0;
   overflow:hidden;
@@ -2515,28 +2507,24 @@ a:focus-visible, button:focus-visible{
   .choice-grid{
     grid-template-columns:1fr;
   }
+  .market-event-grid{
+    grid-template-columns:1fr;
+  }
   .brew-grid{
     grid-template-columns:minmax(0, 920px);
   }
-  .transparency-grid,
   .proof-grid,
   .footer-grid{
     grid-template-columns:repeat(2,minmax(0,1fr));
-  }
-  .transparency-card:nth-child(2){
-    border-right:0;
-  }
-  .transparency-card:nth-child(-n+2){
-    border-bottom:1px solid rgba(200,164,77,.18);
   }
 }
 
 @media (max-width:760px){
   #featured-offering,
   #choose,
-  #transparency,
   #brew,
   #proof,
+  #find-us,
   #current-roast,
   #about,
   #faq,
@@ -2618,6 +2606,9 @@ a:focus-visible, button:focus-visible{
   .hero-image-plate,
   .hero-floating-badge{
     display:none;
+  }
+  .hero-product-image{
+    animation:none;
   }
   .feature-panel{
     padding:20px;
@@ -2702,6 +2693,13 @@ a:focus-visible, button:focus-visible{
   .product-spec-grid .spec-value{
     text-align:left;
   }
+  .market-event-detail{
+    display:grid;
+    gap:4px;
+  }
+  .market-event-detail span:last-child{
+    text-align:left;
+  }
   .lineup-pricing-lines{
     display:grid;
     grid-template-columns:1fr;
@@ -2742,20 +2740,9 @@ a:focus-visible, button:focus-visible{
     grid-template-columns:1fr;
     gap:4px;
   }
-  .transparency-grid,
   .proof-grid,
   .footer-grid{
     grid-template-columns:1fr;
-  }
-  .transparency-card,
-  .transparency-card:nth-child(2){
-    border-right:0;
-  }
-  .transparency-card{
-    border-bottom:1px solid rgba(200,164,77,.18);
-  }
-  .transparency-card:last-child{
-    border-bottom:0;
   }
   .proof-grid{
     display:none;
@@ -2866,6 +2853,20 @@ a:focus-visible, button:focus-visible{
   clip-path:inset(0 0 14% 0);
 }
 
+@keyframes heroProductFloat{
+  0%, 100%{
+    transform:translate3d(0, 0, 0) rotate(-.45deg);
+  }
+  22%{
+    transform:translate3d(7px, -9px, 0) rotate(.25deg);
+  }
+  48%{
+    transform:translate3d(-6px, -17px, 0) rotate(-.15deg);
+  }
+  74%{
+    transform:translate3d(9px, -7px, 0) rotate(.4deg);
+  }
+}
 @keyframes productFloat{
   0%, 100%{
     transform:translate3d(0, 0, 0) rotate(-.35deg);
@@ -2874,7 +2875,15 @@ a:focus-visible, button:focus-visible{
     transform:translate3d(0, -8px, 0) rotate(.35deg);
   }
 }
-.hero-product-image,
+.hero-product-image{
+  transform-origin:center;
+  transition:
+    transform 520ms var(--ease),
+    filter 520ms var(--ease),
+    border-color 520ms var(--ease),
+    box-shadow 520ms var(--ease);
+  animation:heroProductFloat 12.5s ease-in-out infinite;
+}
 .feature-product-image{
   transform-origin:center;
   transition:
@@ -2882,22 +2891,55 @@ a:focus-visible, button:focus-visible{
     filter 520ms var(--ease),
     border-color 520ms var(--ease),
     box-shadow 520ms var(--ease);
-  animation:productFloat 7.4s var(--ease) infinite;
+  animation:heroProductFloat 12.5s ease-in-out infinite;
 }
-.feature-product-image{
-  animation-duration:6.8s;
+[data-jaguar-boop]{
+  cursor:pointer;
+  touch-action:manipulation;
 }
 .hero-image-plate:hover .hero-product-image,
-.hero-image-plate:focus-within .hero-product-image,
-.feature-image-plate:hover .feature-product-image,
-.feature-image-plate:focus-within .feature-product-image{
+.hero-image-plate:focus-within .hero-product-image{
   border-color:rgba(226,196,106,.52);
   filter:brightness(1.06);
   animation-play-state:paused;
-  transform:translate3d(0, -4px, 0) scale(1.02) rotate(.2deg);
+  transform:translate3d(0, -5px, 0) scale(1.02) rotate(.2deg);
   box-shadow:
     0 32px 88px rgba(0,0,0,.58),
     0 0 0 1px rgba(226,196,106,.1);
+}
+.feature-image-plate:hover .feature-product-image:not(.is-jaguar-booped),
+.feature-image-plate:focus-within .feature-product-image:not(.is-jaguar-booped){
+  border-color:rgba(226,196,106,.52);
+  filter:brightness(1.06);
+  animation-play-state:paused;
+  transform:translate3d(0, -5px, 0) scale(1.02) rotate(.2deg);
+  box-shadow:
+    0 32px 88px rgba(0,0,0,.58),
+    0 0 0 1px rgba(226,196,106,.1);
+}
+@keyframes jaguarBoopShudder{
+  0%, 100%{
+    transform:translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+  12%{
+    transform:translate3d(-7px, 2px, 0) scale(1.012) rotate(-.6deg);
+  }
+  24%{
+    transform:translate3d(8px, -2px, 0) scale(1.012) rotate(.55deg);
+  }
+  38%{
+    transform:translate3d(-5px, -1px, 0) scale(1.008) rotate(-.35deg);
+  }
+  54%{
+    transform:translate3d(5px, 1px, 0) scale(1.006) rotate(.32deg);
+  }
+  72%{
+    transform:translate3d(-2px, 0, 0) scale(1.003) rotate(-.12deg);
+  }
+}
+.feature-product-image.is-jaguar-booped{
+  animation:jaguarBoopShudder 560ms cubic-bezier(.2,.8,.2,1) both;
+  filter:brightness(1.08) saturate(1.05);
 }
 
 .taste-chip-list{
@@ -2970,7 +3012,7 @@ a:focus-visible, button:focus-visible{
 @media (hover:hover) and (pointer:fine){
   .product-card.card-interactive:hover,
   .feature-panel.card-interactive:hover,
-  .transparency-card.card-interactive:hover,
+  .market-event-card.card-interactive:hover,
   .brew-card.card-interactive:hover,
   .proof-carousel.card-interactive:hover,
   .about-layout .card-interactive:hover,
@@ -2986,6 +3028,10 @@ a:focus-visible, button:focus-visible{
   .product-card.card-interactive:hover img,
   .proof-carousel.card-interactive:hover .proof-image{
     transform:scale(1.02);
+  }
+  .feature-panel.card-interactive:hover .feature-product-image:not(.is-jaguar-booped){
+    animation-play-state:paused;
+    transform:translate3d(0, -5px, 0) scale(1.02) rotate(.2deg);
   }
   .card-interactive::after{
     content:"";
@@ -3322,8 +3368,8 @@ a:focus-visible, button:focus-visible{
     letter-spacing:.08em;
   }
   .feature-panel.card-interactive:hover,
+  .market-event-card.card-interactive:hover,
   .product-card.card-interactive:hover,
-  .transparency-card.card-interactive:hover,
   .brew-card.card-interactive:hover,
   .proof-carousel.card-interactive:hover,
   .about-layout .card-interactive:hover,

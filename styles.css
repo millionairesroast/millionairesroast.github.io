@@ -2138,7 +2138,7 @@ a:focus-visible, button:focus-visible{
 .lineup-pricing-lines{
   width:100%;
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-template-columns:repeat(3,minmax(0,1fr));
   gap:0;
   overflow:hidden;
   border:1px solid rgba(226,196,106,.3);
@@ -2893,10 +2893,6 @@ a:focus-visible, button:focus-visible{
     box-shadow 520ms var(--ease);
   animation:heroProductFloat 12.5s ease-in-out infinite;
 }
-[data-jaguar-boop]{
-  cursor:pointer;
-  touch-action:manipulation;
-}
 .hero-image-plate:hover .hero-product-image,
 .hero-image-plate:focus-within .hero-product-image{
   border-color:rgba(226,196,106,.52);
@@ -2907,8 +2903,8 @@ a:focus-visible, button:focus-visible{
     0 32px 88px rgba(0,0,0,.58),
     0 0 0 1px rgba(226,196,106,.1);
 }
-.feature-image-plate:hover .feature-product-image:not(.is-jaguar-booped),
-.feature-image-plate:focus-within .feature-product-image:not(.is-jaguar-booped){
+.feature-image-plate:hover .feature-product-image,
+.feature-image-plate:focus-within .feature-product-image{
   border-color:rgba(226,196,106,.52);
   filter:brightness(1.06);
   animation-play-state:paused;
@@ -2916,30 +2912,6 @@ a:focus-visible, button:focus-visible{
   box-shadow:
     0 32px 88px rgba(0,0,0,.58),
     0 0 0 1px rgba(226,196,106,.1);
-}
-@keyframes jaguarBoopShudder{
-  0%, 100%{
-    transform:translate3d(0, 0, 0) scale(1) rotate(0deg);
-  }
-  12%{
-    transform:translate3d(-7px, 2px, 0) scale(1.012) rotate(-.6deg);
-  }
-  24%{
-    transform:translate3d(8px, -2px, 0) scale(1.012) rotate(.55deg);
-  }
-  38%{
-    transform:translate3d(-5px, -1px, 0) scale(1.008) rotate(-.35deg);
-  }
-  54%{
-    transform:translate3d(5px, 1px, 0) scale(1.006) rotate(.32deg);
-  }
-  72%{
-    transform:translate3d(-2px, 0, 0) scale(1.003) rotate(-.12deg);
-  }
-}
-.feature-product-image.is-jaguar-booped{
-  animation:jaguarBoopShudder 560ms cubic-bezier(.2,.8,.2,1) both;
-  filter:brightness(1.08) saturate(1.05);
 }
 
 .taste-chip-list{
@@ -3029,7 +3001,7 @@ a:focus-visible, button:focus-visible{
   .proof-carousel.card-interactive:hover .proof-image{
     transform:scale(1.02);
   }
-  .feature-panel.card-interactive:hover .feature-product-image:not(.is-jaguar-booped){
+  .feature-panel.card-interactive:hover .feature-product-image{
     animation-play-state:paused;
     transform:translate3d(0, -5px, 0) scale(1.02) rotate(.2deg);
   }

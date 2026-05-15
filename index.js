@@ -2,14 +2,8 @@
   const PHONE_NUMBER = "12174167072";
   const STORAGE_KEY = "mr_lang";
   const DEFAULT_SHOP_URL = "https://millionaires-roast.square.site/";
-  const COFFEE_DATA_URL = "data/coffees.json?v=48";
+  const COFFEE_DATA_URL = "data/coffees.json?v=49";
   const TRANSPARENT_PIXEL = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
-  const JAGUAR_NOSE_HOTSPOT = {
-    x: 0.5,
-    y: 0.56,
-    radiusX: 0.12,
-    radiusY: 0.09
-  };
   const SMS_BODY = {
     en: "Hi! I'd like to order coffee from Millionaire's Roast. What do you have available?",
     es: "\u00a1Hola! Me gustar\u00eda ordenar caf\u00e9 de Millionaire's Roast. \u00bfQu\u00e9 tienen disponible?"
@@ -30,13 +24,13 @@
     "hero.eyebrow": "Caf\u00e9 en lotes peque\u00f1os tostado en Illinois",
     "hero.title": "Caf\u00e9 de especialidad sin el sobreprecio premium.",
     "hero.sub": "Caf\u00e9 fresco de origen \u00fanico de lotes de especialidad documentados 80+, tostado en lotes peque\u00f1os para Springfield, Beardstown y el centro de Illinois.",
-    "hero.pricing": "Bolsas de 12 oz $16 \u2022 K-Cups desde $10",
+    "hero.pricing": "Cold brew de 16 oz $5 \u2022 Bolsas de 12 oz $16 \u2022 K-Cups desde $10",
     "hero.helper": "Recogida en Springfield y Beardstown, entrega local y env\u00edo dentro de Illinois.",
     "hero.cta.primary": "Comprar ahora",
     "hero.cta.secondary": "Caf\u00e9s actuales",
-    "hero.badge.kicker": "Insignia actual",
-    "hero.badge.title": "Costa Rican Tarraz\u00fa Jaguar Honey",
-    "hero.badge.meta": "Proceso Honey \u2022 Tueste medio",
+    "hero.badge.kicker": "Nueva oferta de mercado",
+    "hero.badge.title": "Cold Brew embotellado",
+    "hero.badge.meta": "16 oz \u2022 caf\u00e9 brasile\u00f1o de especialidad \u2022 $5",
     "ghost.flagship": "INSIGNIA",
     "ghost.origin": "ORIGEN",
     "ghost.brew": "PREPARAR",
@@ -69,6 +63,7 @@
     "coffee.price.title": "Precio simple en toda la l\u00ednea",
     "coffee.price.bag": "Bolsa de 12 oz: $16",
     "coffee.price.kcups": "K-Cups: desde $10",
+    "coffee.price.coldbrew": "Cold brew de 16 oz: $5",
     "coffee.cr.badge": "Tueste medio",
     "coffee.cr.title": "Costa Rican Tarraz\u00fa Jaguar Honey",
     "coffee.cr.process": "Proceso Honey",
@@ -179,7 +174,7 @@
 
     "find.eyebrow": "Mercados y eventos locales",
     "find.title": "Encu\u00e9ntranos en los mercados.",
-    "find.subtitle": "Encuentra a Millionaire's Roast en Springfield para comprar bolsas frescas, K-Cups, muestras y ver la disponibilidad actual. Las fechas del mercado, el clima y la ubicaci\u00f3n del puesto pueden cambiar, as\u00ed que revisa nuestro Facebook o Instagram antes de venir.",
+    "find.subtitle": "Encuentra a Millionaire's Roast en Springfield para comprar bolsas frescas, K-Cups, cold brew embotellado, muestras y disponibilidad actual. Las fechas del mercado, el clima y la ubicaci\u00f3n del puesto pueden cambiar, as\u00ed que revisa nuestro Facebook o Instagram antes de venir.",
     "find.label.days": "D\u00edas",
     "find.label.hours": "Horario",
     "find.oldCapitol.title": "Old Capitol Farmers Market",
@@ -216,7 +211,7 @@
     "faq.q2": "\u00bfD\u00f3nde est\u00e1n ubicados?",
     "faq.a2": "Millionaire's Roast se tuesta en Beardstown y sirve regularmente a Springfield y al centro de Illinois.",
     "faq.q3": "\u00bfQu\u00e9 caf\u00e9s est\u00e1n disponibles ahora mismo?",
-    "faq.a3": "Actualmente ofrecemos tres caf\u00e9s frescos de origen \u00fanico: Costa Rican Tarraz\u00fa Jaguar Honey como nuestro tueste medio insignia que lleg\u00f3 para quedarse, adem\u00e1s de Peruvian Chonta G1 Washed y Brazilian Cerrado Natural como or\u00edgenes rotativos en los espacios de medio oscuro y oscuro. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido o K-Cups.",
+    "faq.a3": "Actualmente ofrecemos tres caf\u00e9s frescos de origen \u00fanico: Costa Rican Tarraz\u00fa Jaguar Honey como nuestro tueste medio insignia que lleg\u00f3 para quedarse, adem\u00e1s de Peruvian Chonta G1 Washed y Brazilian Cerrado Natural como or\u00edgenes rotativos en los espacios de medio oscuro y oscuro. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz hecho con nuestro caf\u00e9 brasile\u00f1o de especialidad por $5. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido, K-Cups o cold brew embotellado seg\u00fan el producto.",
     "faq.q4": "\u00bfCu\u00e1nto dura una rotaci\u00f3n actual?",
     "faq.a4": "Compramos caf\u00e9 verde en volumen, pero los tiempos de cosecha cambian seg\u00fan la regi\u00f3n y el ciclo agr\u00edcola. Cuando un caf\u00e9 se acaba, hay una alta probabilidad de que ese lote en espec\u00edfico se haya ido por ahora, no para siempre, y la rotaci\u00f3n sigue cambiando seg\u00fan la demanda y la disponibilidad.",
     "faq.q5": "\u00bfQu\u00e9 hace que este caf\u00e9 sea de especialidad?",
@@ -295,7 +290,6 @@
   let productTabsListenerBound = false;
   let productTabsQueryListenerBound = false;
   let specCardsListenerBound = false;
-  let jaguarBoopListenerBound = false;
   let revealObserver = null;
   let sectionObserver = null;
   let revealMotionListenerBound = false;
@@ -388,6 +382,10 @@
   function getFeaturedCoffee() {
     const activeCoffees = getActiveCoffees();
     return activeCoffees.find((coffee) => coffee.featured) || activeCoffees[0] || null;
+  }
+
+  function getHeroOffering() {
+    return coffeeLineup?.heroOffering || getFeaturedCoffee();
   }
 
   function getCoffeeCopy(coffee, lang) {
@@ -490,24 +488,24 @@
   }
 
   function renderCoffeeHero(lang) {
-    const coffee = getFeaturedCoffee();
-    if (!coffee) return;
+    const offering = getHeroOffering();
+    if (!offering) return;
 
-    const copy = getCoffeeCopy(coffee, lang);
+    const copy = getCoffeeCopy(offering, lang);
     const heroBadge = document.querySelector(".hero-floating-badge");
     const badgeSpans = heroBadge ? heroBadge.querySelectorAll("span") : [];
     const heroCta = document.getElementById("heroOrderBtn");
 
     setHeroProductImage(
-      getCoffeeImage(coffee, "hero"),
-      copy.heroAlt || `Millionaire's Roast ${copy.title || "coffee"} coffee bag`
+      getCoffeeImage(offering, "hero"),
+      copy.heroAlt || `Millionaire's Roast ${copy.title || "coffee"}`
     );
     setText(badgeSpans[0], copy.heroKicker || getCopy(lang, "hero.badge.kicker"));
     setText(heroBadge?.querySelector("strong"), copy.title);
     setText(badgeSpans[1], copy.heroMeta || formatCoffeeMeta(copy));
 
     if (heroCta) {
-      heroCta.href = getCoffeeShopUrl(coffee);
+      heroCta.href = getCoffeeShopUrl(offering);
     }
   }
 
@@ -794,47 +792,6 @@
         link_text: getLinkText(element)
       });
     });
-  }
-
-  function isJaguarNoseBoop(event, image) {
-    const rect = image?.getBoundingClientRect();
-    if (!rect || rect.width <= 0 || rect.height <= 0) return false;
-
-    const x = (event.clientX - rect.left) / rect.width;
-    const y = (event.clientY - rect.top) / rect.height;
-    const dx = (x - JAGUAR_NOSE_HOTSPOT.x) / JAGUAR_NOSE_HOTSPOT.radiusX;
-    const dy = (y - JAGUAR_NOSE_HOTSPOT.y) / JAGUAR_NOSE_HOTSPOT.radiusY;
-
-    return dx * dx + dy * dy <= 1;
-  }
-
-  function boopJaguar(image) {
-    image.classList.remove("is-jaguar-booped");
-    void image.offsetWidth;
-    image.classList.add("is-jaguar-booped");
-    image.addEventListener("animationend", () => {
-      image.classList.remove("is-jaguar-booped");
-    }, { once: true });
-  }
-
-  function setupJaguarBoopEasterEgg() {
-    if (jaguarBoopListenerBound) return;
-
-    document.addEventListener("pointerup", (event) => {
-      if (event.pointerType !== "touch" && event.button !== 0) return;
-
-      const target = event.target instanceof Element ? event.target : null;
-      const image = target?.closest("[data-jaguar-boop]");
-      if (!image || !isJaguarNoseBoop(event, image)) return;
-
-      boopJaguar(image);
-      sendAnalyticsEvent("jaguar_boop", {
-        language: getAnalyticsLanguage(),
-        boop_target: "featured_offering"
-      });
-    });
-
-    jaguarBoopListenerBound = true;
   }
 
   function setupAnalytics() {
@@ -1628,7 +1585,6 @@
   setupSmoothAnchorScrolling();
   setupActiveNavHighlighting();
   setupCursorCardGlow();
-  setupJaguarBoopEasterEgg();
   setupAnalytics();
 
   loadCoffeeLineup().then((loaded) => {

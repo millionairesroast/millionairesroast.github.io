@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "defaultShopUrl": "https://millionaires-roast.square.site/",
+  "copy": {
+    "en": {
+      "faqCurrentAnswer": "We currently offer three fresh single-origin coffees: Costa Rican Tarraz\u00fa Jaguar Honey as our flagship medium roast that is here to stay, plus Peruvian Chonta G1 Washed and Brazilian Cerrado Natural as rotating origins in the medium dark and dark slots. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, or K-Cups."
+    },
+    "es": {
+      "faqCurrentAnswer": "Actualmente ofrecemos tres caf\u00e9s frescos de origen \u00fanico: Costa Rican Tarraz\u00fa Jaguar Honey como nuestro tueste medio insignia que lleg\u00f3 para quedarse, adem\u00e1s de Peruvian Chonta G1 Washed y Brazilian Cerrado Natural como or\u00edgenes rotativos en los espacios de medio oscuro y oscuro. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido o K-Cups."
+    }
+  },
+  "coffees": [
+    {
+      "id": "costa-rica-tarrazu-jaguar-honey",
+      "slot": "medium",
+      "order": 1,
+      "active": true,
+      "featured": true,
+      "images": {
+        "hero": "CostaRica.webp",
+        "featured": "coffee.png"
+      },
+      "squareUrl": "https://millionaires-roast.square.site/",
+      "en": {
+        "heroKicker": "Current Flagship",
+        "heroAlt": "Millionaire's Roast Costa Rican Tarraz\u00fa Jaguar Honey coffee bag",
+        "featuredAlt": "Costa Rican Tarraz\u00fa Jaguar Honey coffee bag from Millionaire's Roast",
+        "badge": "Medium Roast",
+        "title": "Costa Rican Tarraz\u00fa Jaguar Honey",
+        "process": "Honey Process",
+        "processShort": "Honey",
+        "description": "Bright, sweet, and approachable, with fruit, honey, and chocolate notes over a clean medium roast profile.",
+        "featuredDescription": "Our flagship medium roast is bright, sweet, and approachable, with a clean finish that makes specialty coffee easy to come back to every day.",
+        "choice": "I want bright and sweet",
+        "notes": ["Chocolate", "Nectarine", "Guava", "Berry", "Honey", "Citrus"],
+        "origin": "Tarraz\u00fa, Costa Rica",
+        "roast": "Medium Roast",
+        "body": "Heavy",
+        "acidity": "Medium",
+        "cta": "Order Medium Roast"
+      },
+      "es": {
+        "heroKicker": "Insignia actual",
+        "heroAlt": "Bolsa de caf\u00e9 Costa Rican Tarraz\u00fa Jaguar Honey de Millionaire's Roast",
+        "featuredAlt": "Bolsa de caf\u00e9 Costa Rican Tarraz\u00fa Jaguar Honey de Millionaire's Roast",
+        "badge": "Tueste medio",
+        "title": "Costa Rican Tarraz\u00fa Jaguar Honey",
+        "process": "Proceso Honey",
+        "processShort": "Honey",
+        "description": "Brillante, dulce y accesible, con notas de fruta, miel y chocolate sobre un perfil limpio de tueste medio.",
+        "featuredDescription": "Nuestro tueste medio insignia es brillante, dulce y accesible, con un final limpio que hace que sea f\u00e1cil volver al caf\u00e9 de especialidad todos los d\u00edas.",
+        "choice": "Quiero algo brillante y dulce",
+        "notes": ["Chocolate", "Nectarina", "Guayaba", "Frutos rojos", "Miel", "C\u00edtricos"],
+        "origin": "Tarraz\u00fa, Costa Rica",
+        "roast": "Tueste medio",
+        "body": "Pesado",
+        "acidity": "Media",
+        "cta": "Ordenar tueste medio"
+      }
+    },
+    {
+      "id": "peruvian-chonta-g1-washed",
+      "slot": "medium-dark",
+      "order": 2,
+      "active": true,
+      "featured": false,
+      "images": {
+        "hero": "",
+        "featured": ""
+      },
+      "squareUrl": "https://millionaires-roast.square.site/",
+      "en": {
+        "badge": "Med-Dark Roast",
+        "title": "Peruvian Chonta G1 Washed",
+        "process": "Washed Process",
+        "processShort": "Washed",
+        "description": "Balanced and developed while still lively, with chocolate, orchard fruit, roasted almond, and citrus.",
+        "featuredDescription": "Balanced and developed while still lively, with chocolate, orchard fruit, roasted almond, and citrus.",
+        "choice": "I want balanced and familiar",
+        "notes": ["Chocolate", "Green apple", "Plum", "Roasted almond", "Citrus"],
+        "origin": "Peru",
+        "roast": "Medium Dark Roast",
+        "body": "Medium",
+        "acidity": "Medium",
+        "cta": "Order Medium Dark Roast"
+      },
+      "es": {
+        "badge": "Tueste med-oscuro",
+        "title": "Peruvian Chonta G1 Washed",
+        "process": "Proceso lavado",
+        "processShort": "Lavado",
+        "description": "Balanceado y desarrollado, pero todav\u00eda vivo, con chocolate, fruta de huerto, almendra tostada y c\u00edtricos.",
+        "featuredDescription": "Balanceado y desarrollado, pero todav\u00eda vivo, con chocolate, fruta de huerto, almendra tostada y c\u00edtricos.",
+        "choice": "Quiero algo balanceado y familiar",
+        "notes": ["Chocolate", "Manzana verde", "Ciruela", "Almendra tostada", "C\u00edtricos"],
+        "origin": "Per\u00fa",
+        "roast": "Tueste medio oscuro",
+        "body": "Medio",
+        "acidity": "Media",
+        "cta": "Ordenar tueste medio oscuro"
+      }
+    },
+    {
+      "id": "brazilian-cerrado-natural",
+      "slot": "dark",
+      "order": 3,
+      "active": true,
+      "featured": false,
+      "images": {
+        "hero": "",
+        "featured": ""
+      },
+      "squareUrl": "https://millionaires-roast.square.site/",
+      "en": {
+        "badge": "Dark Roast",
+        "title": "Brazilian Cerrado Natural",
+        "process": "Natural Process",
+        "processShort": "Natural",
+        "description": "Smooth and classic, built around chocolate, almond, dried fruit, and vanilla in a darker roast profile.",
+        "featuredDescription": "Smooth and classic, built around chocolate, almond, dried fruit, and vanilla in a darker roast profile.",
+        "choice": "I want smooth and classic",
+        "notes": ["Milk chocolate", "Almond", "Dried plum", "Vanilla"],
+        "origin": "Brazil",
+        "roast": "Dark Roast",
+        "body": "Medium",
+        "acidity": "Mild",
+        "cta": "Order Dark Roast"
+      },
+      "es": {
+        "badge": "Tueste oscuro",
+        "title": "Brazilian Cerrado Natural",
+        "process": "Proceso Natural",
+        "processShort": "Natural",
+        "description": "Suave y cl\u00e1sico, construido alrededor de chocolate, almendra, fruta seca y vainilla en un perfil de tueste oscuro.",
+        "featuredDescription": "Suave y cl\u00e1sico, construido alrededor de chocolate, almendra, fruta seca y vainilla en un perfil de tueste oscuro.",
+        "choice": "Quiero algo suave y cl\u00e1sico",
+        "notes": ["Chocolate con leche", "Almendra", "Ciruela pasa", "Vainilla"],
+        "origin": "Brasil",
+        "roast": "Tueste oscuro",
+        "body": "Medio",
+        "acidity": "Suave",
+        "cta": "Ordenar tueste oscuro"
+      }
+    }
+  ]
+}

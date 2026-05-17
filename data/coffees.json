@@ -3,10 +3,29 @@
   "defaultShopUrl": "https://millionaires-roast.square.site/",
   "copy": {
     "en": {
-      "faqCurrentAnswer": "We currently offer three fresh single-origin coffees: Costa Rican Tarraz\u00fa Jaguar Honey as our flagship medium roast that is here to stay, plus Peruvian Chonta G1 Washed and Brazilian Cerrado Natural as rotating origins in the medium dark and dark slots. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, or K-Cups."
+      "faqCurrentAnswer": "We currently offer three fresh single-origin coffees: Costa Rican Tarraz\u00fa Jaguar Honey as our flagship medium roast that is here to stay, plus Peruvian Chonta G1 Washed and Brazilian Cerrado Natural as rotating origins in the medium dark and dark slots. We also offer 16 oz bottled cold brew made with our Brazilian specialty-grade coffee for $5. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, K-Cups, or bottled cold brew depending on the item."
     },
     "es": {
-      "faqCurrentAnswer": "Actualmente ofrecemos tres caf\u00e9s frescos de origen \u00fanico: Costa Rican Tarraz\u00fa Jaguar Honey como nuestro tueste medio insignia que lleg\u00f3 para quedarse, adem\u00e1s de Peruvian Chonta G1 Washed y Brazilian Cerrado Natural como or\u00edgenes rotativos en los espacios de medio oscuro y oscuro. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido o K-Cups."
+      "faqCurrentAnswer": "Actualmente ofrecemos tres caf\u00e9s frescos de origen \u00fanico: Costa Rican Tarraz\u00fa Jaguar Honey como nuestro tueste medio insignia que lleg\u00f3 para quedarse, adem\u00e1s de Peruvian Chonta G1 Washed y Brazilian Cerrado Natural como or\u00edgenes rotativos en los espacios de medio oscuro y oscuro. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz hecho con nuestro caf\u00e9 brasile\u00f1o de especialidad por $5. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido, K-Cups o cold brew embotellado seg\u00fan el producto."
+    }
+  },
+  "heroOffering": {
+    "id": "bottled-cold-brew",
+    "squareUrl": "https://millionaires-roast.square.site/",
+    "images": {
+      "hero": "ColdBrew.webp"
+    },
+    "en": {
+      "heroKicker": "New Market Offering",
+      "title": "Bottled Cold Brew",
+      "heroMeta": "16 oz \u2022 Brazilian specialty coffee \u2022 $5",
+      "heroAlt": "Millionaire's Roast 16 oz bottled cold brew made with Brazilian specialty coffee"
+    },
+    "es": {
+      "heroKicker": "Nueva oferta de mercado",
+      "title": "Cold Brew embotellado",
+      "heroMeta": "16 oz \u2022 caf\u00e9 brasile\u00f1o de especialidad \u2022 $5",
+      "heroAlt": "Cold brew embotellado de 16 oz de Millionaire's Roast hecho con caf\u00e9 brasile\u00f1o de especialidad"
     }
   },
   "coffees": [

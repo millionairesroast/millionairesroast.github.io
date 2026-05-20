@@ -14,7 +14,6 @@
     "announce.text": "Recogida en Springfield y Beardstown \u2022 Entrega local \u2022 Env\u00edos en Illinois",
     "brand.tag": "Caf\u00e9 de especialidad en lotes peque\u00f1os",
     "nav.roast": "Caf\u00e9s actuales",
-    "nav.brew": "Gu\u00eda de preparaci\u00f3n",
     "nav.find": "Encontrarnos",
     "nav.about": "Acerca de",
     "nav.faq": "Preguntas",
@@ -24,7 +23,7 @@
     "hero.eyebrow": "Caf\u00e9 en lotes peque\u00f1os tostado en Illinois",
     "hero.title": "Caf\u00e9 de especialidad sin el sobreprecio premium.",
     "hero.sub": "Caf\u00e9 fresco de origen \u00fanico de lotes de especialidad documentados 80+, tostado en lotes peque\u00f1os para Springfield, Beardstown y el centro de Illinois.",
-    "hero.pricing": "Cold brew de 16 oz $5 \u2022 Bolsas de 12 oz $16 \u2022 K-Cups desde $10",
+    "hero.pricing": "Cold brew de 16 oz $5 \u2022 Bolsas de 12 oz $16 \u2022 K-Cups de 8 unidades: 1 por $10 \u2022 2 por $19 \u2022 3 por $27",
     "hero.helper": "Recogida en Springfield y Beardstown, entrega local y env\u00edo dentro de Illinois.",
     "hero.cta.primary": "Comprar ahora",
     "hero.cta.secondary": "Caf\u00e9s actuales",
@@ -33,7 +32,6 @@
     "hero.badge.meta": "16 oz \u2022 caf\u00e9 brasile\u00f1o de especialidad \u2022 $5",
     "ghost.flagship": "INSIGNIA",
     "ghost.origin": "ORIGEN",
-    "ghost.brew": "PREPARAR",
     "ghost.local": "LOCAL",
     "ghost.markets": "MERCADOS",
 
@@ -62,7 +60,7 @@
     "coffee.spec.acidity.explain": "El brillo o la vivacidad en la taza. Una acidez media puede hacer que el caf\u00e9 sepa m\u00e1s limpio, frutal o vivo.",
     "coffee.price.title": "Precio simple en toda la l\u00ednea",
     "coffee.price.bag": "Bolsa de 12 oz: $16",
-    "coffee.price.kcups": "K-Cups: desde $10",
+    "coffee.price.kcups": "K-Cups de 8 unidades: 1 por $10 \u2022 2 por $19 \u2022 3 por $27",
     "coffee.price.coldbrew": "Cold brew de 16 oz: $5",
     "coffee.cr.badge": "Tueste medio",
     "coffee.cr.title": "Costa Rican Tarraz\u00fa Jaguar Honey",
@@ -114,55 +112,6 @@
     "choose.card3.title": "Quiero algo suave y cl\u00e1sico",
     "choose.textCta": "\u00bfTodav\u00eda no est\u00e1s seguro? M\u00e1ndanos un texto y te ayudamos.",
 
-    "brew.title.line1": "Prepara mejor caf\u00e9",
-    "brew.title.line2": "sin complicarte.",
-    "brew.subtitle": "Puntos de inicio simples para una mejor taza en casa.",
-    "brew.label.grind": "Molienda",
-    "brew.label.ratio": "Proporci\u00f3n",
-    "brew.label.fullPot": "Jarra completa de 12 tazas",
-    "brew.label.time": "Tiempo",
-    "brew.label.setting": "Mejor ajuste",
-    "brew.drip.title": "Cafetera de goteo",
-    "brew.drip.best": "Ideal para: caf\u00e9 diario, jarras completas y conveniencia",
-    "brew.drip.summary": "Molienda media \u2022 55-60 g por litro",
-    "brew.drip.grind": "Media, como sal kosher",
-    "brew.drip.ratio": "Aproximadamente 55-60 g por litro",
-    "brew.drip.fullPot": "Aproximadamente 95-105 g de caf\u00e9, seg\u00fan el tama\u00f1o de la m\u00e1quina",
-    "brew.drip.body": "El caf\u00e9 de goteo es el m\u00e9todo cl\u00e1sico en casa. Usa molienda media, un filtro limpio y agua filtrada si es posible. Para una jarra completa de 12 tazas, empieza con unos 95-105 gramos de caf\u00e9. Si la taza sabe d\u00e9bil o aguada, usa un poco m\u00e1s de caf\u00e9 o muele un poco m\u00e1s fino. Si sabe amarga, usa un poco menos de caf\u00e9 o muele m\u00e1s grueso.",
-    "brew.drip.note": "La NCA describe el caf\u00e9 de goteo como un buen punto de inicio porque es conveniente, consistente y funciona bien para cantidades grandes. Tambi\u00e9n recomienda una molienda media para caf\u00e9 de goteo y se\u00f1ala que una preparaci\u00f3n t\u00edpica tiene unos cinco minutos de contacto.",
-    "brew.french.title": "Prensa francesa",
-    "brew.french.best": "Ideal para: caf\u00e9 intenso y con cuerpo",
-    "brew.french.summary": "Molienda gruesa \u2022 4 minutos",
-    "brew.french.grind": "Gruesa, como sal de roca",
-    "brew.french.ratio": "Aproximadamente de 1:12 a 1:16",
-    "brew.french.time": "Aproximadamente 4 minutos",
-    "brew.french.body": "La prensa francesa produce una taza m\u00e1s pesada y rica porque el caf\u00e9 se infusiona directamente en el agua y se filtra con una malla met\u00e1lica. Usa molienda gruesa, deja reposar unos 4 minutos, luego presiona suavemente y sirve de inmediato. No dejes el caf\u00e9 en la prensa, porque puede seguir extray\u00e9ndose y volverse amargo.",
-    "brew.french.note": "La NCA da para prensa francesa un rango amplio de proporci\u00f3n de 1:10 a 1:16, recomienda agua alrededor de 93 +/- 3 C y da un tiempo aproximado de 4 minutos.",
-    "brew.kcups.title": "K-cups / pods individuales",
-    "brew.kcups.best": "Ideal para: rapidez y conveniencia",
-    "brew.kcups.summary": "Usa el tama\u00f1o de taza m\u00e1s peque\u00f1o para caf\u00e9 m\u00e1s fuerte",
-    "brew.kcups.grind": "Ya viene resuelto dentro del pod",
-    "brew.kcups.setting": "Tama\u00f1o de taza m\u00e1s peque\u00f1o para caf\u00e9 m\u00e1s fuerte",
-    "brew.kcups.body": "Para obtener el mejor sabor de una K-cup, usa el ajuste de 6 oz u 8 oz si tu m\u00e1quina lo permite. Los ajustes m\u00e1s grandes pueden hacer que el caf\u00e9 sepa delgado porque la misma cantidad de caf\u00e9 se estira con m\u00e1s agua. Para una taza m\u00e1s fuerte, usa un tama\u00f1o de preparaci\u00f3n m\u00e1s peque\u00f1o en lugar de preparar el mismo pod dos veces.",
-    "brew.kcups.note": "Para las K-cups de Millionaire's Roast, el consejo clave es simple: un tama\u00f1o de preparaci\u00f3n m\u00e1s peque\u00f1o significa mejor sabor.",
-    "brew.pourover.title": "Pour-over",
-    "brew.pourover.best": "Ideal para: tazas limpias, sabrosas y con m\u00e1s control",
-    "brew.pourover.summary": "Molienda media \u2022 2-4 minutos",
-    "brew.pourover.grind": "Media",
-    "brew.pourover.ratio": "Aproximadamente de 1:15 a 1:16",
-    "brew.pourover.time": "Aproximadamente 2-4 minutos",
-    "brew.pourover.body": "El pour-over te da m\u00e1s control que una cafetera autom\u00e1tica de goteo. Usa molienda media, enjuaga el filtro de papel, agrega el caf\u00e9 y vierte una peque\u00f1a cantidad de agua caliente sobre los granos molidos para dejarlo florecer de 30-45 segundos. Sigue vertiendo lentamente hasta llegar a la cantidad de agua deseada. El tiempo total normalmente debe quedar alrededor de 2-4 minutos.",
-    "brew.pourover.note": "La NCA describe el pour-over como una versi\u00f3n manual del goteo que da m\u00e1s control, con n\u00fameros r\u00e1pidos de 1:13 a 1:16, 93 +/- 3 C y 2-4 minutos de contacto.",
-    "brew.cold.title": "Cold brew",
-    "brew.cold.best": "Ideal para: caf\u00e9 helado suave y lotes preparados con anticipaci\u00f3n",
-    "brew.cold.summary": "Molienda gruesa \u2022 unas 12 horas",
-    "brew.cold.grind": "Gruesa",
-    "brew.cold.ratio": "Concentrado alrededor de 1:4 a 1:5, luego diluir",
-    "brew.cold.time": "Aproximadamente 12 horas",
-    "brew.cold.body": "El cold brew se prepara dejando caf\u00e9 de molienda gruesa en agua fr\u00eda o a temperatura ambiente. Para un concentrado, usa cerca de 1 parte de caf\u00e9 por 4-5 partes de agua, deja reposar unas 12 horas y luego cuela. Sirve sobre hielo y diluye con agua, leche o crema al gusto.",
-    "brew.cold.note": "La NCA da para cold brew n\u00fameros r\u00e1pidos de 1:4 a 1:5, agua a temperatura ambiente o m\u00e1s fr\u00eda, y unas 12 horas de contacto.",
-    "brew.cta": "M\u00e1ndanos texto para ayuda con la molienda",
-
     "proof.title": "Una marca local real y en movimiento",
     "proof.subtitle": "La marca se ve pulida porque el trabajo detr\u00e1s es real: mercados locales, tostado manual y un fundador construyendo todo lote por lote.",
     "proof.card1.title": "Old Capitol Farmers Market",
@@ -176,17 +125,26 @@
     "find.title": "Encu\u00e9ntranos en los mercados.",
     "find.subtitle": "Encuentra a Millionaire's Roast en Springfield para comprar bolsas frescas, K-Cups, cold brew embotellado, muestras y disponibilidad actual. Las fechas del mercado, el clima y la ubicaci\u00f3n del puesto pueden cambiar, as\u00ed que revisa nuestro Facebook o Instagram antes de venir.",
     "find.label.days": "D\u00edas",
+    "find.label.location": "Lugar",
     "find.label.hours": "Horario",
+    "find.label.booth": "Puesto",
+    "find.label.note": "Nota",
     "find.oldCapitol.title": "Old Capitol Farmers Market",
     "find.oldCapitol.location": "Centro de Springfield",
     "find.oldCapitol.days": "Mi\u00e9rcoles y s\u00e1bados",
     "find.oldCapitol.hours": "8:00 a.m. a 12:30 p.m.",
-    "find.oldCapitol.booth": "Normalmente estamos en el puesto 30 los mi\u00e9rcoles y en el puesto 60 los s\u00e1bados.",
+    "find.oldCapitol.booth": "Normalmente estamos en el puesto 60 los mi\u00e9rcoles y en el puesto 30 los s\u00e1bados.",
     "find.illinoisProduct.title": "Illinois Product Farmers Market",
     "find.illinoisProduct.location": "The Shed en el Illinois State Fairgrounds",
     "find.illinoisProduct.days": "Jueves",
     "find.illinoisProduct.hours": "3:30 p.m. a 7:00 p.m.",
     "find.illinoisProduct.booth": "Encu\u00e9ntranos durante el mercado de los jueves por la tarde.",
+    "find.mobile.wednesday": "Mi\u00e9rcoles",
+    "find.mobile.thursday": "Jueves",
+    "find.mobile.saturday": "S\u00e1bado",
+    "find.mobile.wednesday.booth": "Puesto 60",
+    "find.mobile.thursday.note": "Mercado de jueves por la tarde",
+    "find.mobile.saturday.booth": "Puesto 30",
     "find.cta.facebook": "Facebook",
     "find.cta.instagram": "Instagram",
     "find.cta.text": "M\u00e1ndanos un texto para confirmar",
@@ -234,9 +192,6 @@
     "footer.shop.current": "Caf\u00e9s actuales",
     "footer.shop.kcups": "K-Cups",
     "footer.shop.order": "Ordenar en l\u00ednea",
-    "footer.learn.title": "Aprender",
-    "footer.learn.choose": "Ay\u00fadame a elegir",
-    "footer.learn.brew": "Prepararlo simple",
     "footer.local.title": "Local",
     "footer.local.springfield": "Recogida en Springfield",
     "footer.local.beardstown": "Recogida en Beardstown",
@@ -258,15 +213,13 @@
   const accordion = document.querySelector("[data-accordion]");
   const accordionButtons = accordion ? [...accordion.querySelectorAll(".faq-item")] : [];
   const carousel = document.querySelector("[data-carousel]");
-  const brewGuide = document.querySelector("[data-brew-guide]");
-  const brewButtons = brewGuide ? [...brewGuide.querySelectorAll("[data-brew-toggle]")] : [];
   const langButtons = [...document.querySelectorAll("[data-lang-btn]")];
   const langSwitches = [...document.querySelectorAll(".lang-switch")];
   const productTabsQuery = typeof window.matchMedia === "function"
     ? window.matchMedia("(max-width: 760px)")
     : null;
   const heroDesktopQuery = typeof window.matchMedia === "function"
-    ? window.matchMedia("(min-width: 761px)")
+    ? window.matchMedia("(min-width: 981px)")
     : null;
   const productMotionQuery = typeof window.matchMedia === "function"
     ? window.matchMedia("(prefers-reduced-motion: reduce)")
@@ -289,6 +242,7 @@
   let coffeeLoadWarned = false;
   let productTabsListenerBound = false;
   let productTabsQueryListenerBound = false;
+  let mobileMarketTabsListenerBound = false;
   let specCardsListenerBound = false;
   let revealObserver = null;
   let sectionObserver = null;
@@ -874,7 +828,6 @@
       syncHeaderHeight();
       syncMobileMenuHeight();
       syncOpenAccordionHeight();
-      syncOpenBrewPanels();
     });
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") setMobile(false);
@@ -945,87 +898,6 @@
         closeAccordionButton(button);
       } else {
         openAccordionButtonElement(button);
-      }
-    });
-  }
-
-  function getBrewPanel(button) {
-    const panelId = button?.getAttribute("aria-controls");
-    return panelId ? document.getElementById(panelId) : null;
-  }
-
-  function closeBrewButton(button, immediate = false) {
-    const panel = getBrewPanel(button);
-    const card = button?.closest("[data-brew-card]");
-    if (!panel || !card) return;
-
-    const wasOpen = button.getAttribute("aria-expanded") === "true";
-    button.setAttribute("aria-expanded", "false");
-
-    if (immediate) {
-      card.classList.remove("is-open");
-      panel.hidden = true;
-      panel.style.maxHeight = "0px";
-      return;
-    }
-
-    if (!wasOpen) {
-      card.classList.remove("is-open");
-      panel.hidden = true;
-      panel.style.maxHeight = "0px";
-      return;
-    }
-
-    card.classList.remove("is-open");
-    panel.style.maxHeight = "0px";
-
-    const handleTransitionEnd = () => {
-      if (button.getAttribute("aria-expanded") === "false") {
-        panel.hidden = true;
-      }
-      panel.removeEventListener("transitionend", handleTransitionEnd);
-    };
-
-    panel.addEventListener("transitionend", handleTransitionEnd);
-  }
-
-  function openBrewButton(button) {
-    const panel = getBrewPanel(button);
-    const card = button?.closest("[data-brew-card]");
-    if (!panel || !card) return;
-
-    button.setAttribute("aria-expanded", "true");
-    panel.hidden = false;
-    card.classList.add("is-open");
-    panel.style.maxHeight = `${panel.scrollHeight}px`;
-  }
-
-  function syncOpenBrewPanels() {
-    brewButtons.forEach((button) => {
-      const panel = getBrewPanel(button);
-      if (panel && button.getAttribute("aria-expanded") === "true") {
-        panel.hidden = false;
-        panel.style.maxHeight = `${panel.scrollHeight}px`;
-      }
-    });
-  }
-
-  function setupBrewGuide() {
-    if (!brewGuide || !brewButtons.length) return;
-
-    brewButtons.forEach((button) => closeBrewButton(button, true));
-
-    brewGuide.addEventListener("click", (event) => {
-      const button = event.target.closest("[data-brew-toggle]");
-      if (!button || !brewGuide.contains(button)) return;
-
-      if (button.getAttribute("aria-expanded") === "true") {
-        closeBrewButton(button);
-      } else {
-        brewButtons.forEach((otherButton) => {
-          if (otherButton !== button) closeBrewButton(otherButton);
-        });
-        openBrewButton(button);
       }
     });
   }
@@ -1169,7 +1041,7 @@
   }
 
   function setupActiveNavHighlighting() {
-    const trackedIds = ["current-roast", "find-us", "brew", "faq"];
+    const trackedIds = ["current-roast", "find-us", "faq"];
     const sections = trackedIds
       .map((id) => document.getElementById(id))
       .filter(Boolean);
@@ -1239,7 +1111,7 @@
     if (!finePointerQuery?.matches || productMotionQuery?.matches) return;
 
     const glowCards = [...document.querySelectorAll(
-      ".product-card.card-interactive, .feature-panel.card-interactive, .market-event-card.card-interactive, .brew-card.card-interactive, .contact-grid .card-action.card-interactive"
+      ".product-card.card-interactive, .feature-panel.card-interactive, .market-event-card.card-interactive, .contact-grid .card-action.card-interactive"
     )];
 
     if (!glowCards.length) return;
@@ -1367,6 +1239,67 @@
     }
 
     updateProductTabs();
+  }
+
+  function setActiveMobileMarketTab(tabList, targetTab) {
+    const tabs = [...tabList.querySelectorAll("[data-market-tab]")];
+    const wrapper = tabList.closest("[data-mobile-market-tabs]");
+    const panels = wrapper ? [...wrapper.querySelectorAll("[data-market-panel]")] : [];
+    const activeKey = targetTab?.getAttribute("data-market-tab") || tabs[0]?.getAttribute("data-market-tab") || "";
+
+    tabs.forEach((tab) => {
+      const isActive = tab.getAttribute("data-market-tab") === activeKey;
+      tab.classList.toggle("is-active", isActive);
+      tab.setAttribute("aria-selected", String(isActive));
+      tab.setAttribute("tabindex", isActive ? "0" : "-1");
+    });
+
+    panels.forEach((panel) => {
+      panel.hidden = panel.getAttribute("data-market-panel") !== activeKey;
+    });
+  }
+
+  function setupMobileMarketTabs() {
+    const wrapper = document.querySelector("[data-mobile-market-tabs]");
+    const tabList = wrapper?.querySelector("[role='tablist']");
+    const tabs = tabList ? [...tabList.querySelectorAll("[data-market-tab]")] : [];
+    const panels = wrapper ? [...wrapper.querySelectorAll("[data-market-panel]")] : [];
+    if (!wrapper || !tabList || !tabs.length || !panels.length) return;
+
+    if (!mobileMarketTabsListenerBound) {
+      tabList.addEventListener("click", (event) => {
+        const tab = event.target.closest("[data-market-tab]");
+        if (!tab || !tabList.contains(tab)) return;
+
+        setActiveMobileMarketTab(tabList, tab);
+      });
+
+      tabList.addEventListener("keydown", (event) => {
+        const tab = event.target.closest("[data-market-tab]");
+        if (!tab || !tabList.contains(tab)) return;
+        if (!["ArrowRight", "ArrowLeft", "Home", "End"].includes(event.key)) return;
+
+        const currentTabs = [...tabList.querySelectorAll("[data-market-tab]")];
+        if (!currentTabs.length) return;
+
+        event.preventDefault();
+        const currentIndex = currentTabs.indexOf(tab);
+        const direction = event.key === "ArrowRight" ? 1 : -1;
+        let nextIndex = event.key === "Home" ? 0 : currentTabs.length - 1;
+
+        if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
+          nextIndex = (currentIndex + direction + currentTabs.length) % currentTabs.length;
+        }
+
+        setActiveMobileMarketTab(tabList, currentTabs[nextIndex]);
+        currentTabs[nextIndex]?.focus();
+      });
+
+      mobileMarketTabsListenerBound = true;
+    }
+
+    const selectedTab = tabs.find((tab) => tab.getAttribute("aria-selected") === "true") || tabs[0];
+    setActiveMobileMarketTab(tabList, selectedTab);
   }
 
   function setupCarousel() {
@@ -1507,7 +1440,6 @@
     } catch {}
 
     syncOpenAccordionHeight();
-    syncOpenBrewPanels();
     syncMobileMenuHeight();
   }
 
@@ -1576,10 +1508,10 @@
   syncHeroProductImageLoading();
   setupMobileNav();
   setupAccordion();
-  setupBrewGuide();
   setupRevealAnimations();
   setupInteractiveSpecCards();
   setupProductTabs();
+  setupMobileMarketTabs();
   setupCarousel();
   setupLanguageToggle();
   setupSmoothAnchorScrolling();

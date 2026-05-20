@@ -36,7 +36,7 @@
   <link rel="canonical" href="https://millionairesroast.com/" />
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="apple-touch-icon" href="logo.png" />
-  <link rel="stylesheet" href="styles.css?v=50" />
+  <link rel="stylesheet" href="styles.css?v=53" />
 
   <script type="application/ld+json">
     {
@@ -127,7 +127,7 @@
     }
   </script>
 
-  <script defer src="index.js?v=50"></script>
+  <script defer src="index.js?v=54"></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -155,7 +155,6 @@
         <nav class="nav" aria-label="Primary">
           <a class="nav-link" href="#current-roast" data-i18n="nav.roast">Current Coffees</a>
           <a class="nav-link" href="#find-us" data-i18n="nav.find">Find Us</a>
-          <a class="nav-link" href="#brew" data-i18n="nav.brew">Brew Guide</a>
           <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
           <a class="nav-cta" id="navOrderBtn" data-shop-cta data-cta-location="nav" href="https://millionaires-roast.square.site/" data-i18n="nav.orderCta">Order Now</a>
         </nav>
@@ -170,7 +169,6 @@
       <a class="nav-cta" id="mobileNavOrderBtn" data-shop-cta data-cta-location="mobile_nav" href="https://millionaires-roast.square.site/" data-i18n="nav.orderCta">Order Now</a>
       <a class="nav-link" href="#current-roast" data-i18n="nav.roast">Current Coffees</a>
       <a class="nav-link" href="#find-us" data-i18n="nav.find">Find Us</a>
-      <a class="nav-link" href="#brew" data-i18n="nav.brew">Brew Guide</a>
       <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
       <div class="mobile-nav-language" aria-label="Language selection">
         <p class="lang-caption" data-i18n="lang.label">Language</p>
@@ -203,7 +201,7 @@
           <p class="hero-sub" data-reveal="up" data-reveal-delay="170" data-i18n="hero.sub">Fresh single-origin coffee from documented 80+ specialty lots, roasted in small batches for Springfield, Beardstown, and Central Illinois.</p>
 
           <div class="hero-conversion" data-reveal="up" data-reveal-delay="240">
-            <p class="hero-pricing" data-i18n="hero.pricing">16 oz cold brew $5 &bull; 12 oz bags $16 &bull; K-Cups from $10</p>
+            <p class="hero-pricing" data-i18n="hero.pricing">16 oz cold brew $5 &bull; 12 oz bags $16 &bull; 8-pack K-Cups: 1 for $10 &bull; 2 for $19 &bull; 3 for $27</p>
             <p class="hero-helper" data-i18n="hero.helper">Pickup in Springfield and Beardstown, local delivery, and Illinois shipping.</p>
           </div>
 
@@ -217,7 +215,7 @@
           <picture class="hero-image-plate">
             <source
               class="hero-product-source"
-              media="(min-width: 761px)"
+              media="(min-width: 981px)"
               srcset="ColdBrew.webp"
               data-desktop-src="ColdBrew.webp"
             />
@@ -442,7 +440,7 @@
           <h3 data-i18n="coffee.price.title">Simple pricing across the lineup</h3>
           <div class="lineup-pricing-lines">
             <p data-i18n="coffee.price.bag">12 oz bag: $16</p>
-            <p data-i18n="coffee.price.kcups">K-Cups: from $10</p>
+            <p data-i18n="coffee.price.kcups">8-pack K-Cups: 1 for $10 &bull; 2 for $19 &bull; 3 for $27</p>
             <p data-i18n="coffee.price.coldbrew">16 oz cold brew: $5</p>
           </div>
         </article>
@@ -475,7 +473,7 @@
                 <span data-i18n="find.oldCapitol.hours">8:00 a.m. to 12:30 p.m.</span>
               </p>
             </div>
-            <p class="market-event-note" data-i18n="find.oldCapitol.booth">Typically Booth 30 on Wednesdays and Booth 60 on Saturdays.</p>
+            <p class="market-event-note" data-i18n="find.oldCapitol.booth">Typically Booth 60 on Wednesdays and Booth 30 on Saturdays.</p>
           </article>
 
           <article class="card card-plate market-event-card card-interactive" data-reveal="up" data-reveal-delay="90">
@@ -497,126 +495,46 @@
           </article>
         </div>
 
+        <div class="mobile-market-tabs" data-mobile-market-tabs data-reveal="up" aria-label="Market days">
+          <div class="mobile-market-tablist" role="tablist" aria-label="Market days">
+            <button id="market-tab-wednesday" class="market-day-pill is-active" type="button" role="tab" aria-selected="true" aria-controls="market-panel-wednesday" data-market-tab="wednesday" data-i18n="find.mobile.wednesday">Wednesday</button>
+            <button id="market-tab-thursday" class="market-day-pill" type="button" role="tab" aria-selected="false" aria-controls="market-panel-thursday" data-market-tab="thursday" data-i18n="find.mobile.thursday">Thursday</button>
+            <button id="market-tab-saturday" class="market-day-pill" type="button" role="tab" aria-selected="false" aria-controls="market-panel-saturday" data-market-tab="saturday" data-i18n="find.mobile.saturday">Saturday</button>
+          </div>
+
+          <article class="mobile-market-panel card card-plate" id="market-panel-wednesday" role="tabpanel" aria-labelledby="market-tab-wednesday" data-market-panel="wednesday">
+            <h3 data-i18n="find.oldCapitol.title">Old Capitol Farmers Market</h3>
+            <div class="mobile-market-lines">
+              <p><span data-i18n="find.label.location">Location</span><strong data-i18n="find.oldCapitol.location">Downtown Springfield</strong></p>
+              <p><span data-i18n="find.label.hours">Hours</span><strong data-i18n="find.oldCapitol.hours">8:00 a.m. to 12:30 p.m.</strong></p>
+              <p><span data-i18n="find.label.booth">Booth</span><strong data-i18n="find.mobile.wednesday.booth">Booth 60</strong></p>
+            </div>
+          </article>
+
+          <article class="mobile-market-panel card card-plate" id="market-panel-thursday" role="tabpanel" aria-labelledby="market-tab-thursday" data-market-panel="thursday" hidden>
+            <h3 data-i18n="find.illinoisProduct.title">Illinois Product Farmers Market</h3>
+            <div class="mobile-market-lines">
+              <p><span data-i18n="find.label.location">Location</span><strong data-i18n="find.illinoisProduct.location">The Shed at the Illinois State Fairgrounds</strong></p>
+              <p><span data-i18n="find.label.hours">Hours</span><strong data-i18n="find.illinoisProduct.hours">3:30 p.m. to 7:00 p.m.</strong></p>
+              <p><span data-i18n="find.label.note">Note</span><strong data-i18n="find.mobile.thursday.note">Thursday afternoon market</strong></p>
+            </div>
+          </article>
+
+          <article class="mobile-market-panel card card-plate" id="market-panel-saturday" role="tabpanel" aria-labelledby="market-tab-saturday" data-market-panel="saturday" hidden>
+            <h3 data-i18n="find.oldCapitol.title">Old Capitol Farmers Market</h3>
+            <div class="mobile-market-lines">
+              <p><span data-i18n="find.label.location">Location</span><strong data-i18n="find.oldCapitol.location">Downtown Springfield</strong></p>
+              <p><span data-i18n="find.label.hours">Hours</span><strong data-i18n="find.oldCapitol.hours">8:00 a.m. to 12:30 p.m.</strong></p>
+              <p><span data-i18n="find.label.booth">Booth</span><strong data-i18n="find.mobile.saturday.booth">Booth 30</strong></p>
+            </div>
+          </article>
+        </div>
+
         <div class="market-cta-row" data-reveal="up">
           <a class="pill" href="https://www.facebook.com/millionairesroast" target="_blank" rel="noopener noreferrer" data-i18n="find.cta.facebook">Facebook</a>
           <a class="pill" href="https://www.instagram.com/millionairesroast" target="_blank" rel="noopener noreferrer" data-i18n="find.cta.instagram">Instagram</a>
           <a class="pill" data-sms-link data-contact-location="find_us_text" data-sms-body-en="Hi! Where will Millionaire's Roast be set up this week?" data-sms-body-es="&iexcl;Hola! &iquest;D&oacute;nde estar&aacute; Millionaire's Roast esta semana?" href="sms:12174167072?body=Hi!%20Where%20will%20Millionaire%27s%20Roast%20be%20set%20up%20this%20week%3F" data-i18n="find.cta.text">Text us to confirm</a>
         </div>
-      </div>
-    </section>
-
-    <section class="section brew-guide editorial-section" id="brew" aria-labelledby="brew-title" data-ghost-word="BREW">
-      <div class="container">
-        <span class="section-ghost" aria-hidden="true" data-i18n="ghost.brew">BREW</span>
-        <div class="section-head center narrow-head" data-reveal="up">
-          <h2 class="section-title" id="brew-title"><span data-i18n="brew.title.line1">Brew better coffee</span><span data-i18n="brew.title.line2">without overthinking it.</span></h2>
-          <p class="section-subtitle" data-i18n="brew.subtitle">Simple starting points for a better cup at home.</p>
-        </div>
-
-        <div class="brew-grid" data-brew-guide>
-          <article class="brew-card card card-plate card-interactive" data-brew-card data-reveal="up" data-reveal-delay="0">
-            <button class="brew-card-toggle" type="button" aria-expanded="false" aria-controls="brew-panel-drip" data-brew-toggle>
-              <span class="brew-best" data-i18n="brew.drip.best">Best for: everyday coffee, full pots, convenience</span>
-              <span class="brew-card-title-row">
-                <span class="card-title" data-i18n="brew.drip.title">Drip coffee maker</span>
-                <span class="brew-card-icon" aria-hidden="true">+</span>
-              </span>
-              <span class="brew-card-meta" data-i18n="brew.drip.summary">Medium grind &bull; 55-60 g per liter</span>
-            </button>
-            <div class="brew-card-panel" id="brew-panel-drip" data-brew-panel hidden>
-              <dl class="brew-spec-list">
-                <div><dt data-i18n="brew.label.grind">Grind</dt><dd data-i18n="brew.drip.grind">Medium, like kosher salt</dd></div>
-                <div><dt data-i18n="brew.label.ratio">Ratio</dt><dd data-i18n="brew.drip.ratio">About 55-60 g per liter</dd></div>
-                <div><dt data-i18n="brew.label.fullPot">Full 12-cup pot</dt><dd data-i18n="brew.drip.fullPot">About 95-105 g coffee, depending on machine size</dd></div>
-              </dl>
-              <p class="brew-copy" data-i18n="brew.drip.body">Drip coffee is the classic home coffee method. Use a medium grind, a clean filter, and filtered water if possible. For a full 12-cup pot, start around 95-105 grams of coffee. If the cup tastes weak or watery, use a little more coffee or grind slightly finer. If it tastes bitter, use slightly less coffee or grind coarser.</p>
-              <p class="brew-note" data-i18n="brew.drip.note">NCA describes drip coffee as a common starting point because it is convenient, consistent, and good for larger batches. It also recommends a medium grind for drip coffee and notes that a typical drip brew has about five minutes of contact time.</p>
-            </div>
-          </article>
-
-          <article class="brew-card card card-plate card-interactive" data-brew-card data-reveal="up" data-reveal-delay="70">
-            <button class="brew-card-toggle" type="button" aria-expanded="false" aria-controls="brew-panel-french" data-brew-toggle>
-              <span class="brew-best" data-i18n="brew.french.best">Best for: bold, full-bodied coffee</span>
-              <span class="brew-card-title-row">
-                <span class="card-title" data-i18n="brew.french.title">French press</span>
-                <span class="brew-card-icon" aria-hidden="true">+</span>
-              </span>
-              <span class="brew-card-meta" data-i18n="brew.french.summary">Coarse grind &bull; 4 minutes</span>
-            </button>
-            <div class="brew-card-panel" id="brew-panel-french" data-brew-panel hidden>
-              <dl class="brew-spec-list">
-                <div><dt data-i18n="brew.label.grind">Grind</dt><dd data-i18n="brew.french.grind">Coarse, like rock salt</dd></div>
-                <div><dt data-i18n="brew.label.ratio">Ratio</dt><dd data-i18n="brew.french.ratio">About 1:12 to 1:16</dd></div>
-                <div><dt data-i18n="brew.label.time">Time</dt><dd data-i18n="brew.french.time">About 4 minutes</dd></div>
-              </dl>
-              <p class="brew-copy" data-i18n="brew.french.body">French press makes a heavier, richer cup because the coffee steeps directly in the water and is filtered with a metal screen. Use a coarse grind, steep for about 4 minutes, then press gently and pour right away. Do not leave the coffee sitting in the press, or it can keep extracting and turn bitter.</p>
-              <p class="brew-note" data-i18n="brew.french.note">NCA gives French press a broad ratio range of 1:10 to 1:16, recommends water around 93 +/- 3 C, and gives an approximate brew time of 4 minutes.</p>
-            </div>
-          </article>
-
-          <article class="brew-card card card-plate card-interactive" data-brew-card data-reveal="up" data-reveal-delay="140">
-            <button class="brew-card-toggle" type="button" aria-expanded="false" aria-controls="brew-panel-kcups" data-brew-toggle>
-              <span class="brew-best" data-i18n="brew.kcups.best">Best for: speed and convenience</span>
-              <span class="brew-card-title-row">
-                <span class="card-title" data-i18n="brew.kcups.title">K-cups / single-serve pods</span>
-                <span class="brew-card-icon" aria-hidden="true">+</span>
-              </span>
-              <span class="brew-card-meta" data-i18n="brew.kcups.summary">Use the smaller cup size for stronger coffee</span>
-            </button>
-            <div class="brew-card-panel" id="brew-panel-kcups" data-brew-panel hidden>
-              <dl class="brew-spec-list">
-                <div><dt data-i18n="brew.label.grind">Grind</dt><dd data-i18n="brew.kcups.grind">Already handled inside the pod</dd></div>
-                <div><dt data-i18n="brew.label.setting">Best setting</dt><dd data-i18n="brew.kcups.setting">Smaller cup size for stronger coffee</dd></div>
-              </dl>
-              <p class="brew-copy" data-i18n="brew.kcups.body">For the best K-cup flavor, use the 6 oz or 8 oz setting if your machine allows it. Larger settings can make the coffee taste thin because the same amount of coffee is being stretched across more water. For a stronger cup, use a smaller brew size rather than brewing the same pod twice.</p>
-              <p class="brew-note" data-i18n="brew.kcups.note">For Millionaire's Roast K-cups, the key advice is simple: smaller brew size means better flavor.</p>
-            </div>
-          </article>
-
-          <article class="brew-card card card-plate card-interactive" data-brew-card data-reveal="up" data-reveal-delay="210">
-            <button class="brew-card-toggle" type="button" aria-expanded="false" aria-controls="brew-panel-pourover" data-brew-toggle>
-              <span class="brew-best" data-i18n="brew.pourover.best">Best for: clean, flavorful cups and more control</span>
-              <span class="brew-card-title-row">
-                <span class="card-title" data-i18n="brew.pourover.title">Pour-over</span>
-                <span class="brew-card-icon" aria-hidden="true">+</span>
-              </span>
-              <span class="brew-card-meta" data-i18n="brew.pourover.summary">Medium grind &bull; 2-4 minutes</span>
-            </button>
-            <div class="brew-card-panel" id="brew-panel-pourover" data-brew-panel hidden>
-              <dl class="brew-spec-list">
-                <div><dt data-i18n="brew.label.grind">Grind</dt><dd data-i18n="brew.pourover.grind">Medium</dd></div>
-                <div><dt data-i18n="brew.label.ratio">Ratio</dt><dd data-i18n="brew.pourover.ratio">About 1:15 to 1:16</dd></div>
-                <div><dt data-i18n="brew.label.time">Time</dt><dd data-i18n="brew.pourover.time">About 2-4 minutes</dd></div>
-              </dl>
-              <p class="brew-copy" data-i18n="brew.pourover.body">Pour-over gives you more control than an automatic drip machine. Use a medium grind, rinse the paper filter, add your coffee, then pour a small amount of hot water over the grounds and let it bloom for 30-45 seconds. Continue pouring slowly until you reach your target amount of water. Total brew time should usually land around 2-4 minutes.</p>
-              <p class="brew-note" data-i18n="brew.pourover.note">NCA describes pour-over as a manual version of drip brewing that gives the brewer more control, with quick numbers of 1:13 to 1:16, 93 +/- 3 C, and 2-4 minutes contact time.</p>
-            </div>
-          </article>
-
-          <article class="brew-card card card-plate card-interactive" data-brew-card data-reveal="up" data-reveal-delay="280">
-            <button class="brew-card-toggle" type="button" aria-expanded="false" aria-controls="brew-panel-cold" data-brew-toggle>
-              <span class="brew-best" data-i18n="brew.cold.best">Best for: smooth iced coffee and make-ahead batches</span>
-              <span class="brew-card-title-row">
-                <span class="card-title" data-i18n="brew.cold.title">Cold brew</span>
-                <span class="brew-card-icon" aria-hidden="true">+</span>
-              </span>
-              <span class="brew-card-meta" data-i18n="brew.cold.summary">Coarse grind &bull; about 12 hours</span>
-            </button>
-            <div class="brew-card-panel" id="brew-panel-cold" data-brew-panel hidden>
-              <dl class="brew-spec-list">
-                <div><dt data-i18n="brew.label.grind">Grind</dt><dd data-i18n="brew.cold.grind">Coarse</dd></div>
-                <div><dt data-i18n="brew.label.ratio">Ratio</dt><dd data-i18n="brew.cold.ratio">Concentrate around 1:4 to 1:5, then dilute</dd></div>
-                <div><dt data-i18n="brew.label.time">Time</dt><dd data-i18n="brew.cold.time">About 12 hours</dd></div>
-              </dl>
-              <p class="brew-copy" data-i18n="brew.cold.body">Cold brew is made by steeping coarse-ground coffee in cool or room-temperature water. For a concentrate, use about 1 part coffee to 4-5 parts water, steep for about 12 hours, then strain. Serve over ice and dilute with water, milk, or creamer to taste.</p>
-              <p class="brew-note" data-i18n="brew.cold.note">NCA gives cold brew quick numbers of 1:4 to 1:5, room temperature or cooler water, and about 12 hours of contact time.</p>
-            </div>
-          </article>
-        </div>
-
-        <p class="text-cta-wrap" data-reveal="up">
-          <a class="btn btn-outline" data-sms-link data-contact-location="brew_text_help" href="sms:12174167072?body=Hi!%20I%27d%20like%20help%20with%20grind%20size%20for%20Millionaire%27s%20Roast%20coffee." data-i18n="brew.cta">Text us for grind help</a>
-        </p>
       </div>
     </section>
 
@@ -831,12 +749,6 @@ For customers, the result is simple: cleaner flavor, clearer tasting notes, and 
         </div>
 
         <div class="footer-col" data-reveal="up" data-reveal-delay="80">
-          <h3 data-i18n="footer.learn.title">Learn</h3>
-          <a href="#choose" data-i18n="footer.learn.choose">Help Me Choose</a>
-          <a href="#brew" data-i18n="footer.learn.brew">Brew It Simply</a>
-        </div>
-
-        <div class="footer-col" data-reveal="up" data-reveal-delay="160">
           <h3 data-i18n="footer.local.title">Local</h3>
           <a href="#contact" data-i18n="footer.local.springfield">Springfield Pickup</a>
           <a href="#contact" data-i18n="footer.local.beardstown">Beardstown Pickup</a>

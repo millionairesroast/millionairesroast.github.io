@@ -1122,6 +1122,9 @@ a:focus-visible, button:focus-visible{
   font-size:15px;
   line-height:1.5;
 }
+.mobile-market-tabs{
+  display:none;
+}
 .market-cta-row{
   display:flex;
   justify-content:center;
@@ -1771,7 +1774,6 @@ a:focus-visible, button:focus-visible{
 
 #featured-offering,
 #choose,
-#brew,
 #proof,
 #find-us,
 #current-roast,
@@ -1987,16 +1989,14 @@ a:focus-visible, button:focus-visible{
 }
 
 .coffee-product-grid,
-.choice-grid,
-.brew-grid{
+.choice-grid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:18px;
   align-items:stretch;
 }
 .product-card,
-.choice-card,
-.brew-card{
+.choice-card{
   display:flex;
   flex-direction:column;
   min-width:0;
@@ -2207,154 +2207,6 @@ a:focus-visible, button:focus-visible{
   text-decoration-thickness:1px;
 }
 
-.brew-card{
-  min-height:0;
-  overflow:hidden;
-  cursor:default;
-  transition:border-color var(--t) var(--ease), background var(--t) var(--ease), box-shadow var(--t) var(--ease), transform var(--t) var(--ease);
-}
-.brew-card.card-plate{
-  padding:0;
-}
-.brew-guide .section-title{
-  max-width:640px;
-  margin-inline:auto;
-  line-height:1.08;
-}
-.brew-guide .section-title span{
-  display:block;
-  white-space:nowrap;
-}
-.brew-grid{
-  grid-template-columns:minmax(0, 920px);
-  justify-content:center;
-  align-items:start;
-  gap:12px;
-}
-.brew-card-toggle{
-  width:100%;
-  min-height:0;
-  display:grid;
-  align-content:start;
-  gap:12px;
-  padding:22px;
-  border:0;
-  background:transparent;
-  color:inherit;
-  font:inherit;
-  text-align:left;
-  cursor:pointer;
-}
-.brew-card-title-row{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:14px;
-}
-.brew-card .card-title{
-  margin:0;
-  color:rgba(244,241,234,.98);
-  font-family:var(--serif);
-  font-size:clamp(22px,2.2vw,28px);
-  line-height:1.08;
-}
-.brew-best,
-.brew-card-meta{
-  display:block;
-  color:rgba(244,241,234,.7);
-  font-size:13px;
-  font-weight:800;
-  line-height:1.45;
-}
-.brew-best{
-  color:rgba(226,196,106,.9);
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-.brew-card-icon{
-  width:34px;
-  height:34px;
-  flex:0 0 34px;
-  display:grid;
-  place-items:center;
-  border:1px solid rgba(226,196,106,.32);
-  border-radius:50%;
-  color:rgba(226,196,106,.96);
-  font-size:22px;
-  line-height:1;
-  transition:transform var(--t) var(--ease), background var(--t) var(--ease);
-}
-.brew-card-panel{
-  max-height:0;
-  opacity:0;
-  overflow:hidden;
-  padding:0 22px;
-  transition:max-height var(--t) var(--ease), opacity var(--t) var(--ease);
-}
-.brew-card:hover,
-.brew-card:focus-within{
-  border-color:rgba(226,196,106,.44);
-  background:linear-gradient(180deg, rgba(200,164,77,.08), var(--plate-strong));
-  transform:translateY(-2px);
-}
-.brew-card.is-open{
-  border-color:rgba(226,196,106,.5);
-  background:linear-gradient(180deg, rgba(200,164,77,.1), var(--plate-strong));
-}
-.brew-card.is-open .brew-card-panel{
-  opacity:1;
-  padding-bottom:22px;
-}
-.brew-card.is-open .brew-card-icon{
-  background:rgba(226,196,106,.16);
-  transform:rotate(45deg);
-}
-.brew-card-toggle:focus-visible{
-  outline:2px solid rgba(226,196,106,.92);
-  outline-offset:-6px;
-}
-.brew-spec-list{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:10px;
-  margin:0 0 16px;
-  padding-top:16px;
-  border-top:1px solid rgba(200,164,77,.2);
-}
-.brew-spec-list div{
-  display:grid;
-  gap:5px;
-  align-items:start;
-}
-.brew-spec-list dt{
-  color:rgba(226,196,106,.88);
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-}
-.brew-spec-list dd{
-  margin:0;
-  color:rgba(244,241,234,.88);
-  font-size:14px;
-  font-weight:800;
-  line-height:1.45;
-}
-.brew-copy,
-.brew-note{
-  margin:0;
-  color:var(--muted);
-  font-size:15px;
-  line-height:1.65;
-}
-.brew-note{
-  margin-top:12px;
-  padding-top:12px;
-  border-top:1px solid rgba(200,164,77,.16);
-  color:rgba(244,241,234,.62);
-  font-size:13px;
-}
-
 .proof-grid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
@@ -2414,7 +2266,7 @@ a:focus-visible, button:focus-visible{
 }
 .footer-grid{
   display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-columns:repeat(2,minmax(0,1fr));
   gap:18px;
   margin-top:22px;
 }
@@ -2494,8 +2346,7 @@ a:focus-visible, button:focus-visible{
     max-width:13ch;
   }
   .hero-visual{
-    justify-self:center;
-    width:min(100%, 560px);
+    display:none;
   }
   .feature-panel{
     padding:26px;
@@ -2510,9 +2361,6 @@ a:focus-visible, button:focus-visible{
   .market-event-grid{
     grid-template-columns:1fr;
   }
-  .brew-grid{
-    grid-template-columns:minmax(0, 920px);
-  }
   .proof-grid,
   .footer-grid{
     grid-template-columns:repeat(2,minmax(0,1fr));
@@ -2520,9 +2368,23 @@ a:focus-visible, button:focus-visible{
 }
 
 @media (max-width:760px){
+  .section{
+    padding:28px 0;
+  }
+  .section-head{
+    margin-bottom:16px;
+  }
+  .find-us-section .section-head{
+    margin-bottom:16px;
+  }
+  .card-plate{
+    padding:18px 16px;
+  }
+  .section-ghost{
+    display:none;
+  }
   #featured-offering,
   #choose,
-  #brew,
   #proof,
   #find-us,
   #current-roast,
@@ -2611,15 +2473,30 @@ a:focus-visible, button:focus-visible{
     animation:none;
   }
   .feature-panel{
-    padding:20px;
-    border-radius:20px;
-    gap:22px;
+    padding:16px;
+    border-radius:18px;
+    gap:12px;
+  }
+  .feature-media,
+  .feature-specs{
+    display:none;
   }
   .feature-image-plate{
     width:min(100%, 320px);
   }
-  .feature-specs{
-    grid-template-columns:1fr;
+  .feature-copy{
+    gap:10px;
+    justify-items:start;
+    text-align:left;
+  }
+  .feature-copy .section-subtitle{
+    margin-top:0;
+    font-size:14.5px;
+    line-height:1.45;
+  }
+  .feature-copy .btn{
+    width:100%;
+    min-width:0;
   }
   .taste-line{
     font-size:13px;
@@ -2637,16 +2514,45 @@ a:focus-visible, button:focus-visible{
     transform:translateY(6px);
   }
   .coffee-product-grid .product-card-head .origin-badge{
-    display:none;
+    display:inline-flex;
   }
   .product-card{
     grid-template-rows:none;
+    gap:11px;
+    padding:16px;
   }
   .product-card .origin-title,
   .product-card .card-text,
   .product-notes,
   .product-choice{
     min-height:0;
+  }
+  .product-card .origin-title{
+    font-size:clamp(24px, 7.4vw, 32px);
+  }
+  .product-card .card-text{
+    font-size:14.5px;
+    line-height:1.45;
+  }
+  .product-card .product-spec-grid{
+    display:none;
+  }
+  .taste-chip-list{
+    min-height:0;
+    gap:6px;
+    padding-top:10px;
+  }
+  .taste-chip-list li{
+    padding:6px 9px;
+    font-size:11px;
+    letter-spacing:.06em;
+  }
+  .product-choice{
+    min-height:50px;
+    padding:10px 12px;
+  }
+  .product-choice span{
+    font-size:15px;
   }
   .mobile-roast-tabs{
     display:grid;
@@ -2693,6 +2599,91 @@ a:focus-visible, button:focus-visible{
   .product-spec-grid .spec-value{
     text-align:left;
   }
+  .market-event-grid{
+    display:none;
+  }
+  .mobile-market-tabs{
+    display:grid;
+    gap:10px;
+  }
+  .mobile-market-tablist{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:8px;
+  }
+  .market-day-pill{
+    min-width:0;
+    min-height:44px;
+    padding:8px 8px;
+    border:1px solid rgba(226,196,106,.28);
+    border-radius:999px;
+    background:rgba(0,0,0,.22);
+    color:rgba(244,241,234,.84);
+    cursor:pointer;
+    font:inherit;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:.08em;
+    line-height:1.15;
+    text-align:center;
+    text-transform:uppercase;
+  }
+  .market-day-pill.is-active,
+  .market-day-pill[aria-selected="true"]{
+    border-color:rgba(226,196,106,.68);
+    background:linear-gradient(180deg, rgba(226,196,106,.25), rgba(200,164,77,.12));
+    color:rgba(244,241,234,.98);
+  }
+  .market-day-pill:focus-visible{
+    outline:2px solid rgba(226,196,106,.92);
+    outline-offset:3px;
+  }
+  .mobile-market-panel{
+    display:grid;
+    gap:12px;
+  }
+  .mobile-market-panel[hidden]{
+    display:none;
+  }
+  .mobile-market-panel h3{
+    margin:0;
+    font-family:var(--serif);
+    font-size:clamp(22px, 7vw, 28px);
+    line-height:1.08;
+  }
+  .mobile-market-lines{
+    display:grid;
+    gap:8px;
+  }
+  .mobile-market-lines p{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:12px;
+    align-items:baseline;
+    margin:0;
+    padding:10px 12px;
+    border:1px solid rgba(200,164,77,.2);
+    border-radius:10px;
+    background:rgba(0,0,0,.16);
+  }
+  .mobile-market-lines span{
+    color:rgba(226,196,106,.88);
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:.11em;
+    line-height:1.2;
+    text-transform:uppercase;
+  }
+  .mobile-market-lines strong{
+    color:rgba(244,241,234,.92);
+    font-size:14px;
+    line-height:1.35;
+    text-align:right;
+  }
+  .market-cta-row{
+    gap:8px;
+    margin-top:12px;
+  }
   .market-event-detail{
     display:grid;
     gap:4px;
@@ -2718,28 +2709,6 @@ a:focus-visible, button:focus-visible{
     border-left:0;
     border-top:1px solid rgba(226,196,106,.22);
   }
-  .brew-grid{
-    grid-template-columns:1fr;
-  }
-  .brew-guide .section-title{
-    max-width:calc(100vw - 32px);
-    font-size:30px;
-    text-wrap:balance;
-  }
-  .brew-guide .section-title span{
-    white-space:normal;
-    overflow-wrap:break-word;
-  }
-  .brew-card-toggle{
-    padding:19px 18px;
-  }
-  .brew-spec-list{
-    grid-template-columns:1fr;
-  }
-  .brew-spec-list div{
-    grid-template-columns:1fr;
-    gap:4px;
-  }
   .proof-grid,
   .footer-grid{
     grid-template-columns:1fr;
@@ -2750,8 +2719,38 @@ a:focus-visible, button:focus-visible{
   .mobile-proof-carousel{
     display:grid;
   }
+  .proof-carousel{
+    gap:10px;
+  }
+  .carousel-shell,
+  .carousel-slide{
+    gap:10px;
+  }
+  .proof-image{
+    max-height:280px;
+  }
   .proof-caption{
     max-width:36ch;
+    gap:4px;
+  }
+  .proof-caption strong{
+    font-size:16px;
+  }
+  .proof-caption span{
+    font-size:13px;
+    line-height:1.35;
+  }
+  .carousel-footer{
+    gap:10px;
+  }
+  .carousel-dots{
+    gap:8px;
+  }
+  .carousel-count{
+    font-size:11px;
+  }
+  .ceo-photo-section{
+    display:none;
   }
   .footer-col{
     justify-items:center;
@@ -2800,9 +2799,6 @@ a:focus-visible, button:focus-visible{
   .origin-title,
   .section-title{
     overflow-wrap:anywhere;
-  }
-  .brew-guide .section-title{
-    font-size:28px;
   }
 }
 
@@ -2885,13 +2881,10 @@ a:focus-visible, button:focus-visible{
   animation:heroProductFloat 12.5s ease-in-out infinite;
 }
 .feature-product-image{
-  transform-origin:center;
   transition:
-    transform 520ms var(--ease),
     filter 520ms var(--ease),
     border-color 520ms var(--ease),
     box-shadow 520ms var(--ease);
-  animation:heroProductFloat 12.5s ease-in-out infinite;
 }
 .hero-image-plate:hover .hero-product-image,
 .hero-image-plate:focus-within .hero-product-image{
@@ -2903,17 +2896,6 @@ a:focus-visible, button:focus-visible{
     0 32px 88px rgba(0,0,0,.58),
     0 0 0 1px rgba(226,196,106,.1);
 }
-.feature-image-plate:hover .feature-product-image,
-.feature-image-plate:focus-within .feature-product-image{
-  border-color:rgba(226,196,106,.52);
-  filter:brightness(1.06);
-  animation-play-state:paused;
-  transform:translate3d(0, -5px, 0) scale(1.02) rotate(.2deg);
-  box-shadow:
-    0 32px 88px rgba(0,0,0,.58),
-    0 0 0 1px rgba(226,196,106,.1);
-}
-
 .taste-chip-list{
   display:flex;
   flex-wrap:wrap;
@@ -2983,9 +2965,7 @@ a:focus-visible, button:focus-visible{
 }
 @media (hover:hover) and (pointer:fine){
   .product-card.card-interactive:hover,
-  .feature-panel.card-interactive:hover,
   .market-event-card.card-interactive:hover,
-  .brew-card.card-interactive:hover,
   .proof-carousel.card-interactive:hover,
   .about-layout .card-interactive:hover,
   .contact-grid .card-action.card-interactive:hover,
@@ -2996,14 +2976,15 @@ a:focus-visible, button:focus-visible{
       0 22px 62px rgba(0,0,0,.54),
       0 0 0 1px rgba(226,196,106,.08) inset;
   }
-  .feature-panel.card-interactive:hover .feature-product-image,
   .product-card.card-interactive:hover img,
   .proof-carousel.card-interactive:hover .proof-image{
     transform:scale(1.02);
   }
-  .feature-panel.card-interactive:hover .feature-product-image{
-    animation-play-state:paused;
-    transform:translate3d(0, -5px, 0) scale(1.02) rotate(.2deg);
+  .feature-panel.card-interactive:hover{
+    border-color:rgba(226,196,106,.56);
+    box-shadow:
+      0 22px 62px rgba(0,0,0,.54),
+      0 0 0 1px rgba(226,196,106,.08) inset;
   }
   .card-interactive::after{
     content:"";
@@ -3122,55 +3103,6 @@ a:focus-visible, button:focus-visible{
   margin-top:4px;
   opacity:1;
   transform:translateY(0);
-}
-
-.brew-card-toggle{
-  position:relative;
-}
-.brew-card-toggle::after{
-  content:"";
-  position:absolute;
-  left:22px;
-  right:22px;
-  bottom:0;
-  height:1px;
-  transform:scaleX(0);
-  transform-origin:left;
-  background:linear-gradient(90deg, rgba(226,196,106,.84), transparent);
-  transition:transform 420ms var(--ease);
-}
-.brew-card.is-open .brew-card-toggle::after{
-  transform:scaleX(1);
-}
-.brew-card-panel{
-  transform:translateY(-4px);
-}
-.brew-card.is-open .brew-card-panel{
-  transform:translateY(0);
-}
-.brew-spec-list,
-.brew-copy,
-.brew-note{
-  opacity:0;
-  transform:translateY(8px);
-  transition:
-    opacity 360ms var(--ease),
-    transform 360ms var(--ease);
-}
-.brew-card.is-open .brew-spec-list{
-  opacity:1;
-  transform:translateY(0);
-  transition-delay:70ms;
-}
-.brew-card.is-open .brew-copy{
-  opacity:1;
-  transform:translateY(0);
-  transition-delay:150ms;
-}
-.brew-card.is-open .brew-note{
-  opacity:1;
-  transform:translateY(0);
-  transition-delay:210ms;
 }
 
 .carousel-slide{
@@ -3339,10 +3271,8 @@ a:focus-visible, button:focus-visible{
     font-size:clamp(52px, 19vw, 92px);
     letter-spacing:.08em;
   }
-  .feature-panel.card-interactive:hover,
   .market-event-card.card-interactive:hover,
   .product-card.card-interactive:hover,
-  .brew-card.card-interactive:hover,
   .proof-carousel.card-interactive:hover,
   .about-layout .card-interactive:hover,
   .contact-grid .card-action.card-interactive:hover{
@@ -3364,9 +3294,6 @@ a:focus-visible, button:focus-visible{
   .carousel-slide.is-active .proof-image{
     animation:none!important;
   }
-  .brew-spec-list,
-  .brew-copy,
-  .brew-note,
   .proof-caption,
   .section-ghost,
   .editorial-section::before{

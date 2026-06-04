@@ -36,7 +36,7 @@
   <link rel="canonical" href="https://millionairesroast.com/" />
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="apple-touch-icon" href="logo.png" />
-  <link rel="stylesheet" href="styles.css?v=56" />
+  <link rel="stylesheet" href="styles.css?v=58" />
 
   <script type="application/ld+json">
     {
@@ -110,7 +110,7 @@
           "name": "What coffees are available right now?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We currently offer four fresh single-origin coffees: Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Colombian Sugarcane Decaf, and Guatemalan \"La Morena\". We also offer 16 oz bottled cold brew made with our Guatemalan La Morena specialty-grade coffee for $5. The Guatemalan coffee comes through Genuine Origin's La Morena program, sourced from various women producers in Huehuetenango. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, K-Cups, or bottled cold brew depending on the item."
+            "text": "We currently offer four fresh single-origin coffees: Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\", and Colombian Sugarcane Decaf. We also offer 16 oz bottled cold brew for $5, currently made with the last of our Brazilian Cerrado Natural lot to keep the flavor stable while that coffee lasts. Once the Brazilian runs out, cold brew will transition to our Guatemalan La Morena specialty coffee. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, K-Cups, or bottled cold brew depending on the item."
           }
         },
         {
@@ -133,16 +133,10 @@
     }
   </script>
 
-  <script defer src="index.js?v=60"></script>
+  <script defer src="index.js?v=62"></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
-
-  <div class="announcement-bar" role="status">
-    <div class="container announcement-inner">
-      <span data-i18n="announce.text">Pickup in Springfield &amp; Beardstown &bull; Local delivery &bull; Illinois shipping</span>
-    </div>
-  </div>
 
   <header class="site-header" id="top">
     <div class="container header-inner">
@@ -207,7 +201,11 @@
           <p class="hero-sub" data-reveal="up" data-reveal-delay="170" data-i18n="hero.sub">Fresh single-origin coffee from documented 80+ specialty lots, roasted in small batches from Springfield for Springfield, Beardstown, and Central Illinois.</p>
 
           <div class="hero-conversion" data-reveal="up" data-reveal-delay="240">
-            <p class="hero-pricing" data-i18n="hero.pricing">16 oz cold brew $5 &bull; 12 oz bags $16 &bull; 8-pack K-Cups: 1 for $10 &bull; 2 for $19 &bull; 3 for $27</p>
+            <div class="hero-pricing" aria-label="Current pricing">
+              <span data-i18n="hero.price.coldbrew">16 oz cold brew: $5</span>
+              <span data-i18n="hero.price.bags">12 oz bags: $16</span>
+              <span data-i18n="hero.price.kcups">8-pack K-Cups: 1 for $10 &bull; 2 for $19 &bull; 3 for $27</span>
+            </div>
             <p class="hero-helper" data-i18n="hero.helper">Pickup in Springfield and Beardstown, local delivery, and Illinois shipping.</p>
           </div>
 
@@ -229,7 +227,7 @@
               class="hero-product-image"
               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
               data-desktop-src="ColdBrew.webp"
-              alt="Millionaire's Roast 16 oz bottled cold brew made with Guatemalan La Morena specialty coffee"
+              alt="Millionaire's Roast 16 oz bottled cold brew made with Brazilian Cerrado Natural coffee"
               width="1536"
               height="2048"
               decoding="async"
@@ -240,7 +238,7 @@
           <figcaption class="hero-floating-badge" data-reveal="right" data-reveal-delay="520">
             <span class="badge-kicker" data-i18n="hero.badge.kicker">New Market Offering</span>
             <strong data-i18n="hero.badge.title">Bottled Cold Brew</strong>
-            <span data-i18n="hero.badge.meta">16 oz &bull; Guatemalan La Morena specialty coffee &bull; $5</span>
+            <span data-i18n="hero.badge.meta">16 oz &bull; Brazil Cerrado Natural &bull; $5</span>
           </figcaption>
         </figure>
       </div>
@@ -287,8 +285,8 @@
         <div class="mobile-roast-tabs" data-product-tabs role="tablist" aria-labelledby="current-roast-title" data-reveal="up" data-reveal-delay="80">
           <button id="coffee-tab-medium" class="roast-pill is-active" type="button" role="tab" aria-selected="true" aria-controls="coffee-card-medium" data-product-tab="0" data-i18n="coffee.cr.badge">Medium Roast</button>
           <button id="coffee-tab-medium-dark" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-medium-dark" data-product-tab="1" data-i18n="coffee.pe.badge">Med-Dark Roast</button>
-          <button id="coffee-tab-decaf" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-decaf" data-product-tab="2" data-i18n="coffee.co.badge">Medium Dark Decaf</button>
-          <button id="coffee-tab-dark" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-dark" data-product-tab="3" data-i18n="coffee.gt.badge">Dark Roast</button>
+          <button id="coffee-tab-dark" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-dark" data-product-tab="2" data-i18n="coffee.gt.badge">Dark Roast</button>
+          <button id="coffee-tab-decaf" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-decaf" data-product-tab="3" data-i18n="coffee.co.badge">Decaf</button>
         </div>
 
         <div class="coffee-product-grid" id="choose">
@@ -411,7 +409,7 @@
 
           <article class="card card-plate product-card card-interactive" id="coffee-card-decaf" data-product-panel aria-labelledby="coffee-tab-decaf" data-reveal="up" data-reveal-delay="270">
             <div class="product-card-head" data-reveal="fade" data-reveal-delay="350">
-              <span class="origin-badge" data-i18n="coffee.co.badge">Medium Dark Decaf</span>
+              <span class="origin-badge" data-i18n="coffee.co.badge">Decaf</span>
               <span class="product-process" data-i18n="coffee.co.process">Sugarcane EA Decaf</span>
             </div>
             <h3 class="origin-title" data-reveal="fade" data-reveal-delay="390" data-i18n="coffee.co.title">Colombian Sugarcane Decaf</h3>
@@ -445,7 +443,7 @@
               </div>
             </div>
 
-            <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_decaf" href="https://millionaires-roast.square.site/" data-i18n="coffee.cta.decaf">Order Medium Dark Decaf</a>
+            <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_decaf" href="https://millionaires-roast.square.site/" data-i18n="coffee.cta.decaf">Order Decaf</a>
           </article>
         </div>
 
@@ -677,7 +675,7 @@
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-a" id="faq-panel-3" data-panel role="region" aria-labelledby="faq-trigger-3" hidden>
-            <p data-i18n="faq.a3">We currently offer four fresh single-origin coffees: Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Colombian Sugarcane Decaf, and Guatemalan "La Morena". We also offer 16 oz bottled cold brew made with our Guatemalan La Morena specialty-grade coffee for $5. The Guatemalan coffee comes through Genuine Origin's La Morena program, sourced from various women producers in Huehuetenango. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, K-Cups, or bottled cold brew depending on the item.</p>
+            <p data-i18n="faq.a3">We currently offer four fresh single-origin coffees: Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan "La Morena", and Colombian Sugarcane Decaf. We also offer 16 oz bottled cold brew for $5, currently made with the last of our Brazilian Cerrado Natural lot to keep the flavor stable while that coffee lasts. Once the Brazilian runs out, cold brew will transition to our Guatemalan La Morena specialty coffee. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, K-Cups, or bottled cold brew depending on the item.</p>
           </div>
 
           <button class="faq-item" id="faq-trigger-4" type="button" aria-expanded="false" aria-controls="faq-panel-4">
@@ -765,15 +763,13 @@ For customers, the result is simple: cleaner flavor, clearer tasting notes, and 
           <div class="footer-col">
             <h3 data-i18n="footer.shop.title">Shop</h3>
             <a href="#current-roast" data-i18n="footer.shop.current">Current Coffees</a>
-            <a data-shop-cta data-cta-location="footer_kcups" href="https://millionaires-roast.square.site/" data-i18n="footer.shop.kcups">K-Cups</a>
             <a data-shop-cta data-cta-location="footer_order_online" href="https://millionaires-roast.square.site/" data-i18n="footer.shop.order">Order Online</a>
           </div>
 
           <div class="footer-col">
             <h3 data-i18n="footer.local.title">Local</h3>
-            <a href="#contact" data-i18n="footer.local.springfield">Springfield Pickup</a>
-            <a href="#contact" data-i18n="footer.local.beardstown">Beardstown Pickup</a>
-            <a href="#find-us" data-i18n="footer.local.markets">Old Capitol + Illinois Product Markets</a>
+            <a href="#find-us" data-i18n="footer.local.markets">Markets</a>
+            <a href="#contact" data-i18n="footer.local.contact">Contact</a>
           </div>
         </nav>
       </div>

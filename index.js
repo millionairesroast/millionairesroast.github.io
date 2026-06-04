@@ -2,7 +2,7 @@
   const PHONE_NUMBER = "12174167072";
   const STORAGE_KEY = "mr_lang";
   const DEFAULT_SHOP_URL = "https://millionaires-roast.square.site/";
-  const COFFEE_DATA_URL = "data/coffees.json?v=53";
+  const COFFEE_DATA_URL = "data/coffees.json?v=54";
   const TRANSPARENT_PIXEL = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
   const SMS_BODY = {
     en: "Hi! I'd like to order coffee from Millionaire's Roast. What do you have available?",
@@ -24,12 +24,15 @@
     "hero.title": "Caf\u00e9 de especialidad sin el sobreprecio premium.",
     "hero.sub": "Caf\u00e9 fresco de origen \u00fanico de lotes de especialidad documentados 80+, tostado en lotes peque\u00f1os desde Springfield para Springfield, Beardstown y el centro de Illinois.",
     "hero.pricing": "Cold brew de 16 oz $5 \u2022 Bolsas de 12 oz $16 \u2022 K-Cups de 8 unidades: 1 por $10 \u2022 2 por $19 \u2022 3 por $27",
+    "hero.price.coldbrew": "Cold brew de 16 oz: $5",
+    "hero.price.bags": "Bolsas de 12 oz: $16",
+    "hero.price.kcups": "K-Cups de 8 unidades: 1 por $10 \u2022 2 por $19 \u2022 3 por $27",
     "hero.helper": "Recogida en Springfield y Beardstown, entrega local y env\u00edo dentro de Illinois.",
     "hero.cta.primary": "Comprar ahora",
     "hero.cta.secondary": "Caf\u00e9s actuales",
     "hero.badge.kicker": "Nueva oferta de mercado",
     "hero.badge.title": "Cold Brew embotellado",
-    "hero.badge.meta": "16 oz \u2022 caf\u00e9 guatemalteco La Morena de especialidad \u2022 $5",
+    "hero.badge.meta": "16 oz \u2022 Brasil Cerrado Natural \u2022 $5",
     "ghost.flagship": "INSIGNIA",
     "ghost.origin": "ORIGEN",
     "ghost.local": "LOCAL",
@@ -110,7 +113,7 @@
     "coffee.gt.acidity": "Media",
     "coffee.gt.cupScore": "85.5",
     "coffee.gt.cupScoreLabel": "Puntaje 85.5",
-    "coffee.co.badge": "Tueste medio oscuro decaf",
+    "coffee.co.badge": "Decaf",
     "coffee.co.title": "Colombian Sugarcane Decaf",
     "coffee.co.process": "Descafeinado Sugarcane EA",
     "coffee.co.body": "Descafeinado sugarcane EA de Valle del Cauca, puntaje 84.5, con chocolate con leche, almendra, fresa, vainilla y c\u00edtricos.",
@@ -128,7 +131,7 @@
     "coffee.cta.medium": "Ordenar tueste medio",
     "coffee.cta.mediumDark": "Ordenar tueste medio oscuro",
     "coffee.cta.dark": "Ordenar tueste oscuro",
-    "coffee.cta.decaf": "Ordenar decaf medio oscuro",
+    "coffee.cta.decaf": "Ordenar decaf",
 
     "choose.title": "\u00bfNo sabes qu\u00e9 ordenar?",
     "choose.subtitle": "Elige el tipo de taza que quieres. Te guiaremos hacia el tueste correcto.",
@@ -196,7 +199,7 @@
     "faq.q2": "\u00bfD\u00f3nde est\u00e1n ubicados?",
     "faq.a2": "Millionaire's Roast tiene base en Springfield, Illinois, y sirve regularmente a Springfield, Beardstown y el centro de Illinois.",
     "faq.q3": "\u00bfQu\u00e9 caf\u00e9s est\u00e1n disponibles ahora mismo?",
-    "faq.a3": "Actualmente ofrecemos cuatro caf\u00e9s frescos de origen \u00fanico: Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Colombian Sugarcane Decaf y Guatemalan \"La Morena\". Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz hecho con nuestro caf\u00e9 guatemalteco La Morena de especialidad por $5. El caf\u00e9 guatemalteco viene del programa La Morena de Genuine Origin, obtenido de varias mujeres productoras en Huehuetenango. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido, K-Cups o cold brew embotellado seg\u00fan el producto.",
+    "faq.a3": "Actualmente ofrecemos cuatro caf\u00e9s frescos de origen \u00fanico: Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\" y Colombian Sugarcane Decaf. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, actualmente hecho con lo \u00faltimo de nuestro lote brasile\u00f1o Cerrado Natural para mantener el sabor estable mientras dure ese caf\u00e9. Cuando se termine el brasile\u00f1o, el cold brew pasar\u00e1 a nuestro caf\u00e9 guatemalteco La Morena de especialidad. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido, K-Cups o cold brew embotellado seg\u00fan el producto.",
     "faq.q4": "\u00bfCu\u00e1nto dura una rotaci\u00f3n actual?",
     "faq.a4": "Compramos caf\u00e9 verde en volumen, pero los tiempos de cosecha cambian seg\u00fan la regi\u00f3n y el ciclo agr\u00edcola. Cuando un caf\u00e9 se acaba, hay una alta probabilidad de que ese lote en espec\u00edfico se haya ido por ahora, no para siempre, y la rotaci\u00f3n sigue cambiando seg\u00fan la demanda y la disponibilidad.",
     "faq.q5": "\u00bfQu\u00e9 hace que este caf\u00e9 sea de especialidad?",
@@ -217,12 +220,10 @@
     "footer.srTitle": "Pie de p\u00e1gina de Millionaire's Roast",
     "footer.shop.title": "Comprar",
     "footer.shop.current": "Caf\u00e9s actuales",
-    "footer.shop.kcups": "K-Cups",
     "footer.shop.order": "Ordenar en l\u00ednea",
     "footer.local.title": "Local",
-    "footer.local.springfield": "Recogida en Springfield",
-    "footer.local.beardstown": "Recogida en Beardstown",
-    "footer.local.markets": "Mercados Old Capitol e Illinois Product",
+    "footer.local.markets": "Mercados",
+    "footer.local.contact": "Contacto",
     "footer.line": "Este producto fue elaborado en una cocina del hogar no inspeccionada por un departamento de salud que tambi\u00e9n puede procesar al\u00e9rgenos alimentarios comunes. Si tiene preocupaciones de seguridad, comun\u00edquese con su departamento de salud local."
   };
 

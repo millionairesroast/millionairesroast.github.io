@@ -1,12 +1,12 @@
 {
-  "version": 4,
+  "version": 5,
   "defaultShopUrl": "https://millionaires-roast.square.site/",
   "copy": {
     "en": {
-      "faqCurrentAnswer": "We currently offer four fresh single-origin coffees: Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Colombian Sugarcane Decaf, and Guatemalan \"La Morena\". We also offer 16 oz bottled cold brew made with our Guatemalan La Morena specialty-grade coffee for $5. The Guatemalan coffee comes through Genuine Origin's La Morena program, sourced from various women producers in Huehuetenango. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, K-Cups, or bottled cold brew depending on the item."
+      "faqCurrentAnswer": "We currently offer four fresh single-origin coffees: Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\", and Colombian Sugarcane Decaf. We also offer 16 oz bottled cold brew for $5, currently made with the last of our Brazilian Cerrado Natural lot to keep the flavor stable while that coffee lasts. Once the Brazilian runs out, cold brew will transition to our Guatemalan La Morena specialty coffee. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, K-Cups, or bottled cold brew depending on the item."
     },
     "es": {
-      "faqCurrentAnswer": "Actualmente ofrecemos cuatro caf\u00e9s frescos de origen \u00fanico: Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Colombian Sugarcane Decaf y Guatemalan \"La Morena\". Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz hecho con nuestro caf\u00e9 guatemalteco La Morena de especialidad por $5. El caf\u00e9 guatemalteco viene del programa La Morena de Genuine Origin, obtenido de varias mujeres productoras en Huehuetenango. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido, K-Cups o cold brew embotellado seg\u00fan el producto."
+      "faqCurrentAnswer": "Actualmente ofrecemos cuatro caf\u00e9s frescos de origen \u00fanico: Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\" y Colombian Sugarcane Decaf. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, actualmente hecho con lo \u00faltimo de nuestro lote brasile\u00f1o Cerrado Natural para mantener el sabor estable mientras dure ese caf\u00e9. Cuando se termine el brasile\u00f1o, el cold brew pasar\u00e1 a nuestro caf\u00e9 guatemalteco La Morena de especialidad. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido, K-Cups o cold brew embotellado seg\u00fan el producto."
     }
   },
   "heroOffering": {
@@ -19,28 +19,30 @@
     "en": {
       "heroKicker": "New Market Offering",
       "title": "Bottled Cold Brew",
-      "heroMeta": "16 oz \u2022 Guatemalan La Morena specialty coffee \u2022 $5",
-      "heroAlt": "Millionaire's Roast 16 oz bottled cold brew made with Guatemalan La Morena specialty coffee",
-      "featuredAlt": "Millionaire's Roast 16 oz bottled cold brew made with Guatemalan La Morena specialty coffee",
-      "featuredDescription": "Our 16 oz bottled cold brew is made with Guatemalan \"La Morena\" specialty coffee, a Huehuetenango lot from women producers, for a smooth cold cup with dark chocolate, caramel, blackberry, and vanilla.",
+      "heroMeta": "16 oz \u2022 Brazil Cerrado Natural \u2022 $5",
+      "heroAlt": "Millionaire's Roast 16 oz bottled cold brew made with Brazilian Cerrado Natural coffee",
+      "featuredAlt": "Millionaire's Roast 16 oz bottled cold brew made with Brazilian Cerrado Natural coffee",
+      "featuredDescription": "Our 16 oz bottled cold brew is currently made with the last of our Brazilian Cerrado Natural lot, held back to keep the cold brew flavor stable for as long as possible. Expect a smooth cup with milk chocolate, almond, dried plum, and vanilla. Once this Brazilian runs out, cold brew will transition to Guatemalan \"La Morena\".",
       "featuredCta": "Order Cold Brew",
-      "notes": ["Dark chocolate", "Caramel", "Blackberry", "Vanilla"],
-      "origin": "Huehuetenango, Guatemala",
+      "notes": ["Milk chocolate", "Almond", "Dried plum", "Vanilla"],
+      "origin": "Cerrado, Minas Gerais, Brazil",
       "body": "Medium",
-      "cupScore": "85.5"
+      "acidity": "Mild",
+      "cupScore": "83.5"
     },
     "es": {
       "heroKicker": "Nueva oferta de mercado",
       "title": "Cold Brew embotellado",
-      "heroMeta": "16 oz \u2022 caf\u00e9 guatemalteco La Morena de especialidad \u2022 $5",
-      "heroAlt": "Cold brew embotellado de 16 oz de Millionaire's Roast hecho con caf\u00e9 guatemalteco La Morena de especialidad",
-      "featuredAlt": "Cold brew embotellado de 16 oz de Millionaire's Roast hecho con caf\u00e9 guatemalteco La Morena de especialidad",
-      "featuredDescription": "Nuestro cold brew embotellado de 16 oz est\u00e1 hecho con caf\u00e9 guatemalteco \"La Morena\" de especialidad, un lote de Huehuetenango de mujeres productoras, para una taza fr\u00eda suave con chocolate oscuro, caramelo, mora y vainilla.",
+      "heroMeta": "16 oz \u2022 Brasil Cerrado Natural \u2022 $5",
+      "heroAlt": "Cold brew embotellado de 16 oz de Millionaire's Roast hecho con caf\u00e9 brasile\u00f1o Cerrado Natural",
+      "featuredAlt": "Cold brew embotellado de 16 oz de Millionaire's Roast hecho con caf\u00e9 brasile\u00f1o Cerrado Natural",
+      "featuredDescription": "Nuestro cold brew embotellado de 16 oz actualmente est\u00e1 hecho con lo \u00faltimo de nuestro lote brasile\u00f1o Cerrado Natural, reservado para mantener el sabor del cold brew estable el mayor tiempo posible. Espera una taza suave con chocolate con leche, almendra, ciruela seca y vainilla. Cuando se termine este brasile\u00f1o, el cold brew pasar\u00e1 al guatemalteco \"La Morena\".",
       "featuredCta": "Ordenar cold brew",
-      "notes": ["Chocolate oscuro", "Caramelo", "Mora", "Vainilla"],
-      "origin": "Huehuetenango, Guatemala",
+      "notes": ["Chocolate con leche", "Almendra", "Ciruela seca", "Vainilla"],
+      "origin": "Cerrado, Minas Gerais, Brasil",
       "body": "Medio",
-      "cupScore": "85.5"
+      "acidity": "Suave",
+      "cupScore": "83.5"
     }
   },
   "coffees": [
@@ -141,7 +143,7 @@
     {
       "id": "guatemala-la-morena-huehuetenango-2026",
       "slot": "dark",
-      "order": 4,
+      "order": 3,
       "active": true,
       "featured": false,
       "images": {
@@ -185,7 +187,7 @@
     {
       "id": "colombia-valle-del-cauca-sugarcane-ea-decaf-2026",
       "slot": "decaf",
-      "order": 3,
+      "order": 4,
       "active": true,
       "featured": false,
       "images": {
@@ -194,7 +196,7 @@
       },
       "squareUrl": "https://millionaires-roast.square.site/",
       "en": {
-        "badge": "Medium Dark Decaf",
+        "badge": "Decaf",
         "title": "Colombian Sugarcane Decaf",
         "process": "Sugarcane EA Decaf",
         "processShort": "EA Decaf",
@@ -207,10 +209,10 @@
         "body": "Medium",
         "acidity": "Bright",
         "cupScore": "84.5",
-        "cta": "Order Medium Dark Decaf"
+        "cta": "Order Decaf"
       },
       "es": {
-        "badge": "Tueste medio oscuro decaf",
+        "badge": "Decaf",
         "title": "Colombian Sugarcane Decaf",
         "process": "Descafeinado Sugarcane EA",
         "processShort": "Decaf EA",
@@ -223,7 +225,7 @@
         "body": "Medio",
         "acidity": "Brillante",
         "cupScore": "84.5",
-        "cta": "Ordenar decaf medio oscuro"
+        "cta": "Ordenar decaf"
       }
     }
   ]

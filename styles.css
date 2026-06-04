@@ -534,10 +534,15 @@ a:focus-visible, button:focus-visible{
   max-width:40rem;
 }
 .hero-pricing{
+  display:grid;
+  gap:4px;
   margin:0;
   color:rgba(226,196,106,.94);
   font-size:15px;
   font-weight:700;
+}
+.hero-pricing span{
+  display:block;
 }
 .hero-helper{
   margin:0;
@@ -1735,26 +1740,6 @@ a:focus-visible, button:focus-visible{
   scroll-margin-top:110px;
 }
 
-.announcement-bar{
-  position:relative;
-  z-index:60;
-  border-bottom:1px solid rgba(200,164,77,.2);
-  background:linear-gradient(180deg, rgba(17,12,7,.96), rgba(7,7,10,.94));
-  color:rgba(226,196,106,.9);
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:.14em;
-  line-height:1.35;
-  text-transform:uppercase;
-}
-.announcement-inner{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-height:34px;
-  text-align:center;
-}
-
 .section-eyebrow{
   margin:0 0 10px;
   color:rgba(226,196,106,.9);
@@ -1981,8 +1966,8 @@ a:focus-visible, button:focus-visible{
 }
 #coffee-card-medium{order:1}
 #coffee-card-medium-dark{order:2}
-#coffee-card-decaf{order:3}
-#coffee-card-dark{order:4}
+#coffee-card-dark{order:3}
+#coffee-card-decaf{order:4}
 .product-card .origin-title{
   min-height:0;
   height:112px;
@@ -2455,20 +2440,13 @@ a:focus-visible, button:focus-visible{
   #contact{
     scroll-margin-top:86px;
   }
-  .announcement-bar{
-    font-size:10px;
-    letter-spacing:.09em;
-  }
-  .announcement-inner{
-    min-height:26px;
-  }
   .lang-section{
     display:none;
   }
   .hero{
     display:grid;
-    min-height:max(0px, calc(var(--mobile-visual-height, 100svh) - var(--header-height, 66px) - 26px));
-    padding:10px 0 max(14px, env(safe-area-inset-bottom));
+    min-height:auto;
+    padding:12px 0 max(26px, calc(env(safe-area-inset-bottom) + 18px));
     align-items:start;
   }
   .hero-layout{
@@ -2507,14 +2485,26 @@ a:focus-visible, button:focus-visible{
   .hero-layout .hero-conversion{
     justify-items:start;
     text-align:left;
-    margin-top:14px;
-    padding-top:14px;
-    border-top:1px solid rgba(226,196,106,.18);
+    gap:8px;
+    margin-top:16px;
+    padding-top:0;
+    border-top:0;
   }
-  .hero-layout .hero-pricing,
+  .hero-layout .hero-pricing{
+    width:100%;
+    gap:6px;
+    padding:0;
+    color:rgba(226,196,106,.96);
+    font-size:13.5px;
+    line-height:1.24;
+    text-align:left;
+  }
+  .hero-layout .hero-pricing span{
+    padding:0;
+  }
   .hero-layout .hero-helper{
     text-align:left;
-    font-size:13.25px;
+    font-size:13px;
     line-height:1.35;
   }
   .hero-layout .hero-actions{

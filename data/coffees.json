@@ -1,36 +1,51 @@
 {
-  "version": 1,
+  "version": 4,
   "defaultShopUrl": "https://millionaires-roast.square.site/",
   "copy": {
     "en": {
-      "faqCurrentAnswer": "We currently offer three fresh single-origin coffees: Costa Rican Tarraz\u00fa Jaguar Honey as our flagship medium roast that is here to stay, plus Peruvian Chonta G1 Washed and Brazilian Cerrado Natural as rotating origins in the medium dark and dark slots. We also offer 16 oz bottled cold brew made with our Brazilian specialty-grade coffee for $5. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, K-Cups, or bottled cold brew depending on the item."
+      "faqCurrentAnswer": "We currently offer four fresh single-origin coffees: Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Colombian Sugarcane Decaf, and Guatemalan \"La Morena\". We also offer 16 oz bottled cold brew made with our Guatemalan La Morena specialty-grade coffee for $5. The Guatemalan coffee comes through Genuine Origin's La Morena program, sourced from various women producers in Huehuetenango. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, K-Cups, or bottled cold brew depending on the item."
     },
     "es": {
-      "faqCurrentAnswer": "Actualmente ofrecemos tres caf\u00e9s frescos de origen \u00fanico: Costa Rican Tarraz\u00fa Jaguar Honey como nuestro tueste medio insignia que lleg\u00f3 para quedarse, adem\u00e1s de Peruvian Chonta G1 Washed y Brazilian Cerrado Natural como or\u00edgenes rotativos en los espacios de medio oscuro y oscuro. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz hecho con nuestro caf\u00e9 brasile\u00f1o de especialidad por $5. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido, K-Cups o cold brew embotellado seg\u00fan el producto."
+      "faqCurrentAnswer": "Actualmente ofrecemos cuatro caf\u00e9s frescos de origen \u00fanico: Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Colombian Sugarcane Decaf y Guatemalan \"La Morena\". Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz hecho con nuestro caf\u00e9 guatemalteco La Morena de especialidad por $5. El caf\u00e9 guatemalteco viene del programa La Morena de Genuine Origin, obtenido de varias mujeres productoras en Huehuetenango. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido, K-Cups o cold brew embotellado seg\u00fan el producto."
     }
   },
   "heroOffering": {
     "id": "bottled-cold-brew",
     "squareUrl": "https://millionaires-roast.square.site/",
     "images": {
-      "hero": "ColdBrew.webp"
+      "hero": "ColdBrew.webp",
+      "featured": "ColdBrew.webp"
     },
     "en": {
       "heroKicker": "New Market Offering",
       "title": "Bottled Cold Brew",
-      "heroMeta": "16 oz \u2022 Brazilian specialty coffee \u2022 $5",
-      "heroAlt": "Millionaire's Roast 16 oz bottled cold brew made with Brazilian specialty coffee"
+      "heroMeta": "16 oz \u2022 Guatemalan La Morena specialty coffee \u2022 $5",
+      "heroAlt": "Millionaire's Roast 16 oz bottled cold brew made with Guatemalan La Morena specialty coffee",
+      "featuredAlt": "Millionaire's Roast 16 oz bottled cold brew made with Guatemalan La Morena specialty coffee",
+      "featuredDescription": "Our 16 oz bottled cold brew is made with Guatemalan \"La Morena\" specialty coffee, a Huehuetenango lot from women producers, for a smooth cold cup with dark chocolate, caramel, blackberry, and vanilla.",
+      "featuredCta": "Order Cold Brew",
+      "notes": ["Dark chocolate", "Caramel", "Blackberry", "Vanilla"],
+      "origin": "Huehuetenango, Guatemala",
+      "body": "Medium",
+      "cupScore": "85.5"
     },
     "es": {
       "heroKicker": "Nueva oferta de mercado",
       "title": "Cold Brew embotellado",
-      "heroMeta": "16 oz \u2022 caf\u00e9 brasile\u00f1o de especialidad \u2022 $5",
-      "heroAlt": "Cold brew embotellado de 16 oz de Millionaire's Roast hecho con caf\u00e9 brasile\u00f1o de especialidad"
+      "heroMeta": "16 oz \u2022 caf\u00e9 guatemalteco La Morena de especialidad \u2022 $5",
+      "heroAlt": "Cold brew embotellado de 16 oz de Millionaire's Roast hecho con caf\u00e9 guatemalteco La Morena de especialidad",
+      "featuredAlt": "Cold brew embotellado de 16 oz de Millionaire's Roast hecho con caf\u00e9 guatemalteco La Morena de especialidad",
+      "featuredDescription": "Nuestro cold brew embotellado de 16 oz est\u00e1 hecho con caf\u00e9 guatemalteco \"La Morena\" de especialidad, un lote de Huehuetenango de mujeres productoras, para una taza fr\u00eda suave con chocolate oscuro, caramelo, mora y vainilla.",
+      "featuredCta": "Ordenar cold brew",
+      "notes": ["Chocolate oscuro", "Caramelo", "Mora", "Vainilla"],
+      "origin": "Huehuetenango, Guatemala",
+      "body": "Medio",
+      "cupScore": "85.5"
     }
   },
   "coffees": [
     {
-      "id": "costa-rica-tarrazu-jaguar-honey",
+      "id": "costa-rica-tarrazu-san-diego-jaguar-honey-2026",
       "slot": "medium",
       "order": 1,
       "active": true,
@@ -42,38 +57,40 @@
       "squareUrl": "https://millionaires-roast.square.site/",
       "en": {
         "heroKicker": "Current Flagship",
-        "heroAlt": "Millionaire's Roast Costa Rican Tarraz\u00fa Jaguar Honey coffee bag",
-        "featuredAlt": "Costa Rican Tarraz\u00fa Jaguar Honey coffee bag from Millionaire's Roast",
+        "heroAlt": "Millionaire's Roast Costa Rican Jaguar Honey coffee bag",
+        "featuredAlt": "Costa Rican Jaguar Honey coffee bag from Millionaire's Roast",
         "badge": "Medium Roast",
-        "title": "Costa Rican Tarraz\u00fa Jaguar Honey",
+        "title": "Costa Rican Jaguar Honey",
         "process": "Honey Process",
         "processShort": "Honey",
-        "description": "Bright, sweet, and approachable, with fruit, honey, and chocolate notes over a clean medium roast profile.",
-        "featuredDescription": "Our flagship medium roast is bright, sweet, and approachable, with a clean finish that makes specialty coffee easy to come back to every day.",
-        "choice": "I want bright and sweet",
-        "notes": ["Chocolate", "Nectarine", "Guava", "Berry", "Honey", "Citrus"],
+        "description": "Bright 2026 San Diego Mill honey lot, cup score 85.25, with milk chocolate, honey, and raspberry over a clean medium roast profile.",
+        "featuredDescription": "Our 2026 flagship medium roast is a San Diego Mill honey lot from Tarraz\u00fa, cupping at 85.25 with milk chocolate, honey, and raspberry in a bright, clean cup.",
+        "choice": "I want a bright, honey-sweet cup with soft chocolate and raspberry.",
+        "notes": ["Milk chocolate", "Honey", "Raspberry"],
         "origin": "Tarraz\u00fa, Costa Rica",
         "roast": "Medium Roast",
-        "body": "Heavy",
-        "acidity": "Medium",
+        "body": "Light",
+        "acidity": "Bright",
+        "cupScore": "85.25",
         "cta": "Order Medium Roast"
       },
       "es": {
         "heroKicker": "Insignia actual",
-        "heroAlt": "Bolsa de caf\u00e9 Costa Rican Tarraz\u00fa Jaguar Honey de Millionaire's Roast",
-        "featuredAlt": "Bolsa de caf\u00e9 Costa Rican Tarraz\u00fa Jaguar Honey de Millionaire's Roast",
+        "heroAlt": "Bolsa de caf\u00e9 Costa Rican Jaguar Honey de Millionaire's Roast",
+        "featuredAlt": "Bolsa de caf\u00e9 Costa Rican Jaguar Honey de Millionaire's Roast",
         "badge": "Tueste medio",
-        "title": "Costa Rican Tarraz\u00fa Jaguar Honey",
+        "title": "Costa Rican Jaguar Honey",
         "process": "Proceso Honey",
         "processShort": "Honey",
-        "description": "Brillante, dulce y accesible, con notas de fruta, miel y chocolate sobre un perfil limpio de tueste medio.",
-        "featuredDescription": "Nuestro tueste medio insignia es brillante, dulce y accesible, con un final limpio que hace que sea f\u00e1cil volver al caf\u00e9 de especialidad todos los d\u00edas.",
-        "choice": "Quiero algo brillante y dulce",
-        "notes": ["Chocolate", "Nectarina", "Guayaba", "Frutos rojos", "Miel", "C\u00edtricos"],
+        "description": "Lote honey 2026 del beneficio San Diego, puntaje 85.25, con chocolate con leche, miel y frambuesa sobre un perfil limpio de tueste medio.",
+        "featuredDescription": "Nuestro tueste medio insignia 2026 es un lote honey del beneficio San Diego en Tarraz\u00fa, con puntaje de taza 85.25 y notas de chocolate con leche, miel y frambuesa en una taza brillante y limpia.",
+        "choice": "Quiero una taza brillante y dulce a miel, con chocolate suave y frambuesa.",
+        "notes": ["Chocolate con leche", "Miel", "Frambuesa"],
         "origin": "Tarraz\u00fa, Costa Rica",
         "roast": "Tueste medio",
-        "body": "Pesado",
-        "acidity": "Media",
+        "body": "Ligero",
+        "acidity": "Brillante",
+        "cupScore": "85.25",
         "cta": "Ordenar tueste medio"
       }
     },
@@ -93,14 +110,15 @@
         "title": "Peruvian Chonta G1 Washed",
         "process": "Washed Process",
         "processShort": "Washed",
-        "description": "Balanced and developed while still lively, with chocolate, orchard fruit, roasted almond, and citrus.",
-        "featuredDescription": "Balanced and developed while still lively, with chocolate, orchard fruit, roasted almond, and citrus.",
-        "choice": "I want balanced and familiar",
+        "description": "Balanced 2026 Chonta washed coffee from Cajamarca, cup score 85.5, with chocolate, green apple, plum, roasted almond, and citrus.",
+        "featuredDescription": "A balanced 2026 washed coffee from Chonta, Cajamarca, cupping at 85.5 with chocolate, green apple, plum, roasted almond, and citrus.",
+        "choice": "I want a balanced cup with chocolate, orchard fruit, and roasted almond.",
         "notes": ["Chocolate", "Green apple", "Plum", "Roasted almond", "Citrus"],
-        "origin": "Peru",
+        "origin": "Chonta, Cajamarca, Peru",
         "roast": "Medium Dark Roast",
         "body": "Medium",
         "acidity": "Medium",
+        "cupScore": "85.5",
         "cta": "Order Medium Dark Roast"
       },
       "es": {
@@ -108,21 +126,22 @@
         "title": "Peruvian Chonta G1 Washed",
         "process": "Proceso lavado",
         "processShort": "Lavado",
-        "description": "Balanceado y desarrollado, pero todav\u00eda vivo, con chocolate, fruta de huerto, almendra tostada y c\u00edtricos.",
-        "featuredDescription": "Balanceado y desarrollado, pero todav\u00eda vivo, con chocolate, fruta de huerto, almendra tostada y c\u00edtricos.",
-        "choice": "Quiero algo balanceado y familiar",
+        "description": "Caf\u00e9 lavado 2026 de Chonta, Cajamarca, puntaje 85.5, con chocolate, manzana verde, ciruela, almendra tostada y c\u00edtricos.",
+        "featuredDescription": "Un caf\u00e9 lavado 2026 balanceado de Chonta, Cajamarca, con puntaje de taza 85.5 y notas de chocolate, manzana verde, ciruela, almendra tostada y c\u00edtricos.",
+        "choice": "Quiero una taza balanceada con chocolate, fruta de huerto y almendra tostada.",
         "notes": ["Chocolate", "Manzana verde", "Ciruela", "Almendra tostada", "C\u00edtricos"],
-        "origin": "Per\u00fa",
+        "origin": "Chonta, Cajamarca, Per\u00fa",
         "roast": "Tueste medio oscuro",
         "body": "Medio",
         "acidity": "Media",
+        "cupScore": "85.5",
         "cta": "Ordenar tueste medio oscuro"
       }
     },
     {
-      "id": "brazilian-cerrado-natural",
+      "id": "guatemala-la-morena-huehuetenango-2026",
       "slot": "dark",
-      "order": 3,
+      "order": 4,
       "active": true,
       "featured": false,
       "images": {
@@ -132,33 +151,79 @@
       "squareUrl": "https://millionaires-roast.square.site/",
       "en": {
         "badge": "Dark Roast",
-        "title": "Brazilian Cerrado Natural",
-        "process": "Natural Process",
-        "processShort": "Natural",
-        "description": "Smooth and classic, built around chocolate, almond, dried fruit, and vanilla in a darker roast profile.",
-        "featuredDescription": "Smooth and classic, built around chocolate, almond, dried fruit, and vanilla in a darker roast profile.",
-        "choice": "I want smooth and classic",
-        "notes": ["Milk chocolate", "Almond", "Dried plum", "Vanilla"],
-        "origin": "Brazil",
+        "title": "Guatemalan \"La Morena\"",
+        "process": "Washed Process",
+        "processShort": "Washed",
+        "description": "Rich 2026 Huehuetenango lot from women producers through La Morena, cup score 85.5, with dark chocolate, caramel, blackberry, and vanilla.",
+        "featuredDescription": "A rich 2026 Huehuetenango lot from various women producers through the La Morena program, cupping at 85.5 with dark chocolate, caramel, blackberry, and vanilla.",
+        "choice": "I want a deeper cup with dark chocolate, caramel, and blackberry.",
+        "notes": ["Dark chocolate", "Caramel", "Blackberry", "Vanilla"],
+        "origin": "Huehuetenango, Guatemala",
         "roast": "Dark Roast",
         "body": "Medium",
-        "acidity": "Mild",
+        "acidity": "Medium",
+        "cupScore": "85.5",
         "cta": "Order Dark Roast"
       },
       "es": {
         "badge": "Tueste oscuro",
-        "title": "Brazilian Cerrado Natural",
-        "process": "Proceso Natural",
-        "processShort": "Natural",
-        "description": "Suave y cl\u00e1sico, construido alrededor de chocolate, almendra, fruta seca y vainilla en un perfil de tueste oscuro.",
-        "featuredDescription": "Suave y cl\u00e1sico, construido alrededor de chocolate, almendra, fruta seca y vainilla en un perfil de tueste oscuro.",
-        "choice": "Quiero algo suave y cl\u00e1sico",
-        "notes": ["Chocolate con leche", "Almendra", "Ciruela pasa", "Vainilla"],
-        "origin": "Brasil",
+        "title": "Guatemalan \"La Morena\"",
+        "process": "Proceso lavado",
+        "processShort": "Lavado",
+        "description": "Lote rico 2026 de Huehuetenango, de mujeres productoras del programa La Morena, puntaje 85.5, con chocolate oscuro, caramelo, mora y vainilla.",
+        "featuredDescription": "Un lote rico 2026 de Huehuetenango, producido por varias mujeres productoras a trav\u00e9s del programa La Morena, con puntaje de taza 85.5 y notas de chocolate oscuro, caramelo, mora y vainilla.",
+        "choice": "Quiero una taza m\u00e1s profunda con chocolate oscuro, caramelo y mora.",
+        "notes": ["Chocolate oscuro", "Caramelo", "Mora", "Vainilla"],
+        "origin": "Huehuetenango, Guatemala",
         "roast": "Tueste oscuro",
         "body": "Medio",
-        "acidity": "Suave",
+        "acidity": "Media",
+        "cupScore": "85.5",
         "cta": "Ordenar tueste oscuro"
+      }
+    },
+    {
+      "id": "colombia-valle-del-cauca-sugarcane-ea-decaf-2026",
+      "slot": "decaf",
+      "order": 3,
+      "active": true,
+      "featured": false,
+      "images": {
+        "hero": "",
+        "featured": ""
+      },
+      "squareUrl": "https://millionaires-roast.square.site/",
+      "en": {
+        "badge": "Medium Dark Decaf",
+        "title": "Colombian Sugarcane Decaf",
+        "process": "Sugarcane EA Decaf",
+        "processShort": "EA Decaf",
+        "description": "Medium-dark sugarcane EA decaf from Valle del Cauca, cup score 84.5, with milk chocolate, almond, strawberry, vanilla, and citrus.",
+        "featuredDescription": "A bright, full-flavored 2026 sugarcane EA decaf from Valle del Cauca, cupping at 84.5 with milk chocolate, almond, strawberry, vanilla, and citrus.",
+        "choice": "I want real coffee flavor without the caffeine: chocolate, almond, and bright fruit.",
+        "notes": ["Milk chocolate", "Almond", "Strawberry", "Vanilla", "Citrus"],
+        "origin": "Valle del Cauca, Colombia",
+        "roast": "Medium Dark Roast",
+        "body": "Medium",
+        "acidity": "Bright",
+        "cupScore": "84.5",
+        "cta": "Order Medium Dark Decaf"
+      },
+      "es": {
+        "badge": "Tueste medio oscuro decaf",
+        "title": "Colombian Sugarcane Decaf",
+        "process": "Descafeinado Sugarcane EA",
+        "processShort": "Decaf EA",
+        "description": "Descafeinado sugarcane EA de Valle del Cauca, puntaje 84.5, con chocolate con leche, almendra, fresa, vainilla y c\u00edtricos.",
+        "featuredDescription": "Un descafeinado sugarcane EA 2026 de Valle del Cauca, brillante y con sabor completo, con puntaje de taza 84.5 y notas de chocolate con leche, almendra, fresa, vainilla y c\u00edtricos.",
+        "choice": "Quiero sabor de caf\u00e9 real sin cafe\u00edna: chocolate, almendra y fruta brillante.",
+        "notes": ["Chocolate con leche", "Almendra", "Fresa", "Vainilla", "C\u00edtricos"],
+        "origin": "Valle del Cauca, Colombia",
+        "roast": "Tueste medio oscuro",
+        "body": "Medio",
+        "acidity": "Brillante",
+        "cupScore": "84.5",
+        "cta": "Ordenar decaf medio oscuro"
       }
     }
   ]

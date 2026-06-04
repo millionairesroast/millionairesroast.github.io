@@ -810,7 +810,13 @@
 
   function syncHeaderHeight() {
     const headerHeight = header ? header.offsetHeight : 0;
+    const visualViewport = window.visualViewport;
+    const visualHeight = visualViewport?.height || window.innerHeight || document.documentElement.clientHeight || 0;
+    const browserBuffer = Math.max(0, Math.round((window.innerHeight || visualHeight) - visualHeight - (visualViewport?.offsetTop || 0)));
+
     root.style.setProperty("--header-height", `${headerHeight}px`);
+    root.style.setProperty("--mobile-visual-height", `${Math.round(visualHeight)}px`);
+    root.style.setProperty("--mobile-browser-buffer", `${browserBuffer}px`);
   }
 
   function setupViewportSizing() {

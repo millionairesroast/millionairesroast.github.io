@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 9,
   "defaultShopUrl": "https://millionaires-roast.square.site/",
   "copy": {
     "en": {
@@ -11,7 +11,7 @@
   },
   "heroOffering": {
     "id": "bottled-cold-brew",
-    "squareUrl": "https://millionaires-roast.square.site/",
+    "squareUrl": "https://millionaires-roast.square.site/product/16-oz-cold-brew/BU7ZO2I67C4QEHKAYR2TLAEG?cs=true&cst=custom",
     "images": {
       "hero": "ColdBrew.webp",
       "featured": "ColdBrew.webp"
@@ -56,7 +56,8 @@
         "hero": "CostaRica.webp",
         "featured": "coffee.png"
       },
-      "squareUrl": "https://millionaires-roast.square.site/",
+      "squareUrl": "https://millionaires-roast.square.site/product/12-oz-costa-rican-jaguar-honey/QEJ5SCYU6IBG5MJL5OSHC5NJ?cs=true&cst=custom",
+      "kcupUrl": "https://millionaires-roast.square.site/product/costa-rican-k-cups/XK2O6BI64E6QYRPV26KEOIKT?cs=true&cst=custom",
       "en": {
         "heroKicker": "Current Flagship",
         "heroAlt": "Millionaire's Roast Costa Rican Jaguar Honey coffee bag",
@@ -64,7 +65,6 @@
         "badge": "Medium Roast",
         "title": "Costa Rican Jaguar Honey",
         "process": "Honey Process",
-        "processShort": "Honey",
         "description": "Bright 2026 San Diego Mill honey lot, cup score 85.25, with milk chocolate, honey, and raspberry over a clean medium roast profile.",
         "featuredDescription": "Our 2026 flagship medium roast is a San Diego Mill honey lot from Tarraz\u00fa, cupping at 85.25 with milk chocolate, honey, and raspberry in a bright, clean cup.",
         "choice": "I want a bright, honey-sweet cup with soft chocolate and raspberry.",
@@ -83,7 +83,6 @@
         "badge": "Tueste medio",
         "title": "Costa Rican Jaguar Honey",
         "process": "Proceso Honey",
-        "processShort": "Honey",
         "description": "Lote honey 2026 del beneficio San Diego, puntaje 85.25, con chocolate con leche, miel y frambuesa sobre un perfil limpio de tueste medio.",
         "featuredDescription": "Nuestro tueste medio insignia 2026 es un lote honey del beneficio San Diego en Tarraz\u00fa, con puntaje de taza 85.25 y notas de chocolate con leche, miel y frambuesa en una taza brillante y limpia.",
         "choice": "Quiero una taza brillante y dulce a miel, con chocolate suave y frambuesa.",
@@ -106,12 +105,12 @@
         "hero": "",
         "featured": ""
       },
-      "squareUrl": "https://millionaires-roast.square.site/",
+      "squareUrl": "https://millionaires-roast.square.site/product/12-oz-peruvian-chonta-g1-washed/JMMXFQ25WAPEBGCDHDJQZIRC?cs=true&cst=custom",
+      "kcupUrl": "https://millionaires-roast.square.site/product/peruvian-k-cups/GCITAQKY3XZGPXZZ4HE762VO?cs=true&cst=custom",
       "en": {
         "badge": "Med-Dark Roast",
         "title": "Peruvian Chonta G1 Washed",
         "process": "Washed Process",
-        "processShort": "Washed",
         "description": "Balanced 2026 Chonta washed coffee from Cajamarca, cup score 85.5, with chocolate, green apple, plum, roasted almond, and citrus.",
         "featuredDescription": "A balanced 2026 washed coffee from Chonta, Cajamarca, cupping at 85.5 with chocolate, green apple, plum, roasted almond, and citrus.",
         "choice": "I want a balanced cup with chocolate, orchard fruit, and roasted almond.",
@@ -127,7 +126,6 @@
         "badge": "Tueste med-oscuro",
         "title": "Peruvian Chonta G1 Washed",
         "process": "Proceso lavado",
-        "processShort": "Lavado",
         "description": "Caf\u00e9 lavado 2026 de Chonta, Cajamarca, puntaje 85.5, con chocolate, manzana verde, ciruela, almendra tostada y c\u00edtricos.",
         "featuredDescription": "Un caf\u00e9 lavado 2026 balanceado de Chonta, Cajamarca, con puntaje de taza 85.5 y notas de chocolate, manzana verde, ciruela, almendra tostada y c\u00edtricos.",
         "choice": "Quiero una taza balanceada con chocolate, fruta de huerto y almendra tostada.",
@@ -150,12 +148,12 @@
         "hero": "",
         "featured": ""
       },
-      "squareUrl": "https://millionaires-roast.square.site/",
+      "squareUrl": "https://millionaires-roast.square.site/product/12-oz-guatemalan-la-morena-/CQKGUQKGYPFRX4HIJ7OHCC3D?cs=true&cst=custom",
+      "kcupUrl": "https://millionaires-roast.square.site/product/guatemalan-k-cups/VXJ4XFCR73UYWLNIGMNDAUV6?cs=true&cst=custom",
       "en": {
         "badge": "Dark Roast",
         "title": "Guatemalan \"La Morena\"",
         "process": "Washed Process",
-        "processShort": "Washed",
         "description": "Rich 2026 Huehuetenango lot from women producers through La Morena, cup score 85.5, with dark chocolate, caramel, blackberry, and vanilla.",
         "featuredDescription": "A rich 2026 Huehuetenango lot from various women producers through the La Morena program, cupping at 85.5 with dark chocolate, caramel, blackberry, and vanilla.",
         "choice": "I want a deeper cup with dark chocolate, caramel, and blackberry.",
@@ -171,7 +169,6 @@
         "badge": "Tueste oscuro",
         "title": "Guatemalan \"La Morena\"",
         "process": "Proceso lavado",
-        "processShort": "Lavado",
         "description": "Lote rico 2026 de Huehuetenango, de mujeres productoras del programa La Morena, puntaje 85.5, con chocolate oscuro, caramelo, mora y vainilla.",
         "featuredDescription": "Un lote rico 2026 de Huehuetenango, producido por varias mujeres productoras a trav\u00e9s del programa La Morena, con puntaje de taza 85.5 y notas de chocolate oscuro, caramelo, mora y vainilla.",
         "choice": "Quiero una taza m\u00e1s profunda con chocolate oscuro, caramelo y mora.",
@@ -194,12 +191,12 @@
         "hero": "",
         "featured": ""
       },
-      "squareUrl": "https://millionaires-roast.square.site/",
+      "squareUrl": "https://millionaires-roast.square.site/product/12-oz-columbian-sugarcane-decaf/KRJHD33242YLSVMEPIWHQBEW?cs=true&cst=custom",
+      "kcupUrl": "https://millionaires-roast.square.site/product/columbian-decaf-k-cups/VUE35XOSATA5FVISDKYNO62F?cs=true&cst=custom",
       "en": {
         "badge": "Decaf",
         "title": "Colombian Sugarcane Decaf",
         "process": "Sugarcane EA Decaf",
-        "processShort": "EA Decaf",
         "description": "Medium-dark sugarcane EA decaf from Valle del Cauca, cup score 84.5, with milk chocolate, almond, strawberry, vanilla, and citrus.",
         "featuredDescription": "A bright, full-flavored 2026 sugarcane EA decaf from Valle del Cauca, cupping at 84.5 with milk chocolate, almond, strawberry, vanilla, and citrus.",
         "choice": "I want real coffee flavor without the caffeine: chocolate, almond, and bright fruit.",
@@ -215,7 +212,6 @@
         "badge": "Decaf",
         "title": "Colombian Sugarcane Decaf",
         "process": "Descafeinado Sugarcane EA",
-        "processShort": "Decaf EA",
         "description": "Descafeinado sugarcane EA de Valle del Cauca, puntaje 84.5, con chocolate con leche, almendra, fresa, vainilla y c\u00edtricos.",
         "featuredDescription": "Un descafeinado sugarcane EA 2026 de Valle del Cauca, brillante y con sabor completo, con puntaje de taza 84.5 y notas de chocolate con leche, almendra, fresa, vainilla y c\u00edtricos.",
         "choice": "Quiero sabor de caf\u00e9 real sin cafe\u00edna: chocolate, almendra y fruta brillante.",

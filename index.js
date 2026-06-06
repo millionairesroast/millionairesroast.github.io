@@ -2,7 +2,7 @@
   const PHONE_NUMBER = "12174167072";
   const STORAGE_KEY = "mr_lang";
   const DEFAULT_SHOP_URL = "https://millionaires-roast.square.site/";
-  const COFFEE_DATA_URL = "data/coffees.json?v=54";
+  const COFFEE_DATA_URL = "data/coffees.json?v=58";
   const TRANSPARENT_PIXEL = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
   const SMS_BODY = {
     en: "Hi! I'd like to order coffee from Millionaire's Roast. What do you have available?",
@@ -11,11 +11,10 @@
 
   const ES = {
     "skip": "Saltar al contenido",
-    "announce.text": "Recogida en Springfield y Beardstown \u2022 Entrega local \u2022 Env\u00edos en Illinois",
+    "announce.text": "Pedidos en l\u00ednea \u2022 Mercados en Springfield \u2022 The Cottage en Beardstown",
     "brand.tag": "Caf\u00e9 de especialidad en lotes peque\u00f1os",
     "nav.roast": "Caf\u00e9s actuales",
     "nav.find": "Encontrarnos",
-    "nav.about": "Acerca de",
     "nav.faq": "Preguntas",
     "nav.orderCta": "Ordenar ahora",
     "lang.label": "Idioma",
@@ -23,11 +22,10 @@
     "hero.eyebrow": "Caf\u00e9 en lotes peque\u00f1os tostado en Illinois",
     "hero.title": "Caf\u00e9 de especialidad sin el sobreprecio premium.",
     "hero.sub": "Caf\u00e9 fresco de origen \u00fanico de lotes de especialidad documentados 80+, tostado en lotes peque\u00f1os desde Springfield para Springfield, Beardstown y el centro de Illinois.",
-    "hero.pricing": "Cold brew de 16 oz $5 \u2022 Bolsas de 12 oz $16 \u2022 K-Cups de 8 unidades: 1 por $10 \u2022 2 por $19 \u2022 3 por $27",
     "hero.price.coldbrew": "Cold brew de 16 oz: $5",
     "hero.price.bags": "Bolsas de 12 oz: $16",
     "hero.price.kcups": "K-Cups de 8 unidades: 1 por $10 \u2022 2 por $19 \u2022 3 por $27",
-    "hero.helper": "Recogida en Springfield y Beardstown, entrega local y env\u00edo dentro de Illinois.",
+    "hero.helper": "Ordena en l\u00ednea para env\u00edos en Illinois, o encuentra disponibilidad local en mercados de Springfield y en The Cottage en Beardstown.",
     "hero.cta.primary": "Comprar ahora",
     "hero.cta.secondary": "Caf\u00e9s actuales",
     "hero.badge.kicker": "Nueva oferta de mercado",
@@ -52,15 +50,11 @@
     "coffees.title": "Una l\u00ednea clara, reci\u00e9n tostada.",
     "coffees.subtitle": "Cuatro caf\u00e9s de origen \u00fanico, perfiles claros y precios simples. Compara la taza que quieres y ordena de la lista actual.",
     "coffee.spec.origin": "Origen",
-    "coffee.spec.process": "Proceso",
-    "coffee.spec.roast": "Nivel de tueste",
     "coffee.spec.body": "Cuerpo",
     "coffee.spec.acidity": "Acidez",
     "coffee.spec.cupScore": "Puntaje de taza",
     "coffee.notes.label": "Notas",
     "coffee.spec.origin.explain": "De d\u00f3nde viene el caf\u00e9. El origen afecta el clima, el suelo, la variedad y el car\u00e1cter general de la taza.",
-    "coffee.spec.process.explain": "C\u00f3mo se quit\u00f3 y se sec\u00f3 la fruta del caf\u00e9. El proceso puede influir mucho en la dulzura, el cuerpo y el car\u00e1cter frutal.",
-    "coffee.spec.roast.explain": "Qu\u00e9 tan desarrollado est\u00e1 el caf\u00e9 en el tueste. Los tuestes m\u00e1s claros suelen mostrar m\u00e1s brillo, mientras que los m\u00e1s oscuros tienden a ser m\u00e1s suaves y llenos.",
     "coffee.spec.body.explain": "El peso o la textura del caf\u00e9 en la boca. Un cuerpo m\u00e1s pesado se siente m\u00e1s lleno y rico.",
     "coffee.spec.acidity.explain": "El brillo o la vivacidad en la taza. Una acidez media puede hacer que el caf\u00e9 sepa m\u00e1s limpio, frutal o vivo.",
     "coffee.spec.cupScore.explain": "El puntaje de cata resume la calidad de la taza. Un puntaje de 80 o m\u00e1s se considera caf\u00e9 de especialidad.",
@@ -73,73 +67,46 @@
     "coffee.cr.process": "Proceso Honey",
     "coffee.cr.body": "Lote honey 2026 del beneficio San Diego, puntaje 85.25, con chocolate con leche, miel y frambuesa sobre un perfil limpio de tueste medio.",
     "coffee.cr.notes": "Chocolate con leche, miel, frambuesa",
-    "coffee.cr.note1": "Chocolate con leche",
-    "coffee.cr.note2": "Miel",
-    "coffee.cr.note3": "Frambuesa",
-    "coffee.cr.note4": "",
-    "coffee.cr.note5": "",
-    "coffee.cr.note6": "",
     "coffee.cr.origin": "Tarraz\u00fa, Costa Rica",
     "coffee.cr.bodyValue": "Ligero",
     "coffee.cr.acidity": "Brillante",
     "coffee.cr.cupScore": "85.25",
-    "coffee.cr.cupScoreLabel": "Puntaje 85.25",
     "coffee.pe.badge": "Tueste med-oscuro",
     "coffee.pe.title": "Peruvian Chonta G1 Washed",
     "coffee.pe.process": "Proceso lavado",
     "coffee.pe.body": "Caf\u00e9 lavado 2026 de Chonta, Cajamarca, puntaje 85.5, con chocolate, manzana verde, ciruela, almendra tostada y c\u00edtricos.",
     "coffee.pe.notes": "Chocolate, manzana verde, ciruela, almendra tostada, c\u00edtricos",
-    "coffee.pe.note1": "Chocolate",
-    "coffee.pe.note2": "Manzana verde",
-    "coffee.pe.note3": "Ciruela",
-    "coffee.pe.note4": "Almendra tostada",
-    "coffee.pe.note5": "C\u00edtricos",
     "coffee.pe.origin": "Chonta, Cajamarca, Per\u00fa",
     "coffee.pe.bodyValue": "Medio",
     "coffee.pe.acidity": "Media",
     "coffee.pe.cupScore": "85.5",
-    "coffee.pe.cupScoreLabel": "Puntaje 85.5",
     "coffee.gt.badge": "Tueste oscuro",
     "coffee.gt.title": "Guatemalan \"La Morena\"",
     "coffee.gt.process": "Proceso lavado",
     "coffee.gt.body": "Lote rico 2026 de Huehuetenango, de mujeres productoras del programa La Morena, puntaje 85.5, con chocolate oscuro, caramelo, mora y vainilla.",
     "coffee.gt.notes": "Chocolate oscuro, caramelo, mora, vainilla",
-    "coffee.gt.note1": "Chocolate oscuro",
-    "coffee.gt.note2": "Caramelo",
-    "coffee.gt.note3": "Mora",
-    "coffee.gt.note4": "Vainilla",
     "coffee.gt.origin": "Huehuetenango, Guatemala",
     "coffee.gt.bodyValue": "Medio",
     "coffee.gt.acidity": "Media",
     "coffee.gt.cupScore": "85.5",
-    "coffee.gt.cupScoreLabel": "Puntaje 85.5",
     "coffee.co.badge": "Decaf",
     "coffee.co.title": "Colombian Sugarcane Decaf",
     "coffee.co.process": "Descafeinado Sugarcane EA",
     "coffee.co.body": "Descafeinado sugarcane EA de Valle del Cauca, puntaje 84.5, con chocolate con leche, almendra, fresa, vainilla y c\u00edtricos.",
     "coffee.co.notes": "Chocolate con leche, almendra, fresa, vainilla, c\u00edtricos",
-    "coffee.co.note1": "Chocolate con leche",
-    "coffee.co.note2": "Almendra",
-    "coffee.co.note3": "Fresa",
-    "coffee.co.note4": "Vainilla",
-    "coffee.co.note5": "C\u00edtricos",
     "coffee.co.origin": "Valle del Cauca, Colombia",
     "coffee.co.bodyValue": "Medio",
     "coffee.co.acidity": "Brillante",
     "coffee.co.cupScore": "84.5",
-    "coffee.co.cupScoreLabel": "Puntaje 84.5",
     "coffee.cta.medium": "Ordenar tueste medio",
     "coffee.cta.mediumDark": "Ordenar tueste medio oscuro",
     "coffee.cta.dark": "Ordenar tueste oscuro",
     "coffee.cta.decaf": "Ordenar decaf",
 
-    "choose.title": "\u00bfNo sabes qu\u00e9 ordenar?",
-    "choose.subtitle": "Elige el tipo de taza que quieres. Te guiaremos hacia el tueste correcto.",
     "choose.card1.title": "Quiero una taza brillante y dulce a miel, con chocolate suave y frambuesa.",
     "choose.card2.title": "Quiero una taza balanceada con chocolate, fruta de huerto y almendra tostada.",
     "choose.card3.title": "Quiero una taza m\u00e1s profunda con chocolate oscuro, caramelo y mora.",
     "choose.card4.title": "Quiero sabor de caf\u00e9 real sin cafe\u00edna: chocolate, almendra y fruta brillante.",
-    "choose.textCta": "\u00bfTodav\u00eda no est\u00e1s seguro? M\u00e1ndanos un texto y te ayudamos.",
 
     "proof.title": "Una marca local real y en movimiento",
     "proof.subtitle": "La marca se ve pulida porque el trabajo detr\u00e1s es real: mercados locales, tostado manual y un fundador construyendo todo lote por lote.",
@@ -150,14 +117,26 @@
     "proof.card3.title": "Tostado y vendido en lotes peque\u00f1os",
     "proof.card3.body": "La l\u00ednea se construye lote por lote mientras la marca crece.",
 
-    "find.eyebrow": "Mercados y eventos locales",
-    "find.title": "Encu\u00e9ntranos en los mercados.",
-    "find.subtitle": "Encuentra a Millionaire's Roast en Springfield para comprar bolsas frescas, K-Cups, cold brew embotellado, muestras y disponibilidad actual. Las fechas del mercado, el clima y la ubicaci\u00f3n del puesto pueden cambiar, as\u00ed que revisa nuestro Facebook o Instagram antes de venir.",
+    "find.eyebrow": "Mercados y disponibilidad local",
+    "find.title": "Encu\u00e9ntranos localmente.",
+    "find.subtitle": "Encuentra a Millionaire's Roast en los mercados de Springfield y a trav\u00e9s de The Cottage en 201 W Main St en Beardstown, nuestro socio local principal para disponibilidad en Beardstown. Las fechas del mercado, el clima y la ubicaci\u00f3n del puesto pueden cambiar, as\u00ed que revisa nuestro Facebook o Instagram antes de venir.",
     "find.label.days": "D\u00edas",
     "find.label.location": "Lugar",
     "find.label.hours": "Horario",
     "find.label.booth": "Puesto",
     "find.label.note": "Nota",
+    "find.label.format": "Formato",
+    "find.label.availability": "Disponibilidad",
+    "find.label.partner": "Socio",
+    "find.label.role": "Rol",
+    "find.cottage.title": "The Cottage",
+    "find.cottage.location": "201 W Main St \u2022 Beardstown, IL 62618",
+    "find.cottage.format": "Puesto local sin personal",
+    "find.cottage.partner": "Conectado con Rosebud & Co.",
+    "find.cottage.availability": "Bolsas, K-Cups, cold brew negro y cold brew con crema",
+    "find.cottage.role": "Punto de contacto principal en Beardstown",
+    "find.cottage.note": "The Cottage es nuestra conexi\u00f3n principal en Beardstown: una tienda estilo puesto local sin personal en 201 W Main St, conectada con Rosebud & Co., que tendra la l\u00ednea completa de Millionaire's Roast para clientes de Beardstown.",
+    "find.cottage.photoCaption": "The Cottage \u2022 201 W Main St",
     "find.oldCapitol.title": "Old Capitol Farmers Market",
     "find.oldCapitol.location": "Centro de Springfield",
     "find.oldCapitol.days": "Mi\u00e9rcoles y s\u00e1bados",
@@ -184,20 +163,20 @@
     "about.story.p1": "Millionaire's Roast comenz\u00f3 a trav\u00e9s del programa Cass County CEO, donde Maximiliano Gomez convirti\u00f3 una idea de negocio en una marca real de caf\u00e9 artesanal arraigada en su comunidad.",
     "about.story.p2": "Cada lote comienza con caf\u00e9 verde cuidadosamente seleccionado de lotes documentados de origen \u00fanico y grado de especialidad con puntajes de 80+. La meta no es hacer que el caf\u00e9 se sienta exclusivo. Es ofrecer caf\u00e9 de alta calidad a un precio al que la gente normal pueda volver.",
     "about.story.p3": "Despu\u00e9s de graduarse de la preparatoria, Maximiliano se mud\u00f3 a Springfield para continuar su educaci\u00f3n superior en negocios. Sigue desarrollando Millionaire's Roast como parte pasi\u00f3n, parte hobby y parte peque\u00f1o negocio en crecimiento.",
-    "about.story.p4": "Ahora con base y operaciones en Springfield, y todav\u00eda sirviendo a Beardstown y al centro de Illinois, la marca sigue creciendo a trav\u00e9s de ventas directas, eventos locales, recogida, entrega y env\u00edos sencillos en l\u00ednea para clientes de Illinois.",
+    "about.story.p4": "Ahora con base y operaciones en Springfield, y todav\u00eda sirviendo a Beardstown y al centro de Illinois, la marca sigue creciendo a trav\u00e9s de ventas directas, mercados en Springfield, pedidos en l\u00ednea y una nueva colaboraci\u00f3n en Beardstown con The Cottage como el hogar local de nuestra l\u00ednea completa all\u00ed.",
     "about.side.title": "Lo que lo distingue",
     "about.side.li1": "Caf\u00e9 fresco de origen \u00fanico",
     "about.side.li2": "Caf\u00e9 de grado de especialidad documentado de lotes 80+",
-    "about.side.li3": "Pedidos flexibles para env\u00edo, recogida, entrega y K-Cups",
+    "about.side.li3": "Pedidos flexibles para env\u00edos en Illinois, mercados locales, The Cottage y K-Cups",
     "about.side.li4": "Hecho para clientes del centro de Illinois, no solo para conocedores del caf\u00e9",
     "ceo.caption": "Lanzado con orgullo a trav\u00e9s del programa Cass County CEO.",
 
     "faq.title": "Respuestas r\u00e1pidas",
     "faq.subtitle": "Corto y \u00fatil, para que ordenar sea sencillo.",
     "faq.q1": "\u00bfC\u00f3mo ordeno?",
-    "faq.a1": "Usa nuestra tienda en l\u00ednea para elegir env\u00edo, recogida o entrega en un solo lugar.",
+    "faq.a1": "Usa nuestra tienda en l\u00ednea para ver caf\u00e9s actuales y env\u00edos en Illinois. En Beardstown, The Cottage en 201 W Main St es nuestro punto de contacto local principal y tendra la l\u00ednea completa de Millionaire's Roast: bolsas, K-Cups y cold brew embotellado en versiones negro y con crema.",
     "faq.q2": "\u00bfD\u00f3nde est\u00e1n ubicados?",
-    "faq.a2": "Millionaire's Roast tiene base en Springfield, Illinois, y sirve regularmente a Springfield, Beardstown y el centro de Illinois.",
+    "faq.a2": "Millionaire's Roast tiene base en Springfield, Illinois. Servimos a Springfield a trav\u00e9s de mercados locales y pedidos en l\u00ednea, y a Beardstown a trav\u00e9s de The Cottage en 201 W Main St, un puesto local sin personal conectado con Rosebud & Co.",
     "faq.q3": "\u00bfQu\u00e9 caf\u00e9s est\u00e1n disponibles ahora mismo?",
     "faq.a3": "Actualmente ofrecemos cuatro caf\u00e9s frescos de origen \u00fanico: Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\" y Colombian Sugarcane Decaf. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, actualmente hecho con lo \u00faltimo de nuestro lote brasile\u00f1o Cerrado Natural para mantener el sabor estable mientras dure ese caf\u00e9. Cuando se termine el brasile\u00f1o, el cold brew pasar\u00e1 a nuestro caf\u00e9 guatemalteco La Morena de especialidad. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido, K-Cups o cold brew embotellado seg\u00fan el producto.",
     "faq.q4": "\u00bfCu\u00e1nto dura una rotaci\u00f3n actual?",
@@ -206,7 +185,7 @@
     "faq.a5": "El caf\u00e9 de grado de especialidad empieza con mejor caf\u00e9 verde antes de llegar al tostador. Nuestros caf\u00e9s se seleccionan de lotes documentados con puntajes de 80+, lo que significa que fueron evaluados por la calidad de la taza en lugar de tratarse como caf\u00e9 comercial com\u00fan.\n\nEn la industria del caf\u00e9, los caf\u00e9s se eval\u00faan mediante cata: un proceso estandarizado que considera aroma, sabor, retrogusto, acidez, cuerpo, balance, dulzura, limpieza y defectos. Un puntaje de 80 o m\u00e1s es el umbral tradicional para caf\u00e9 de grado de especialidad.\n\nPara el cliente, el resultado es simple: sabores m\u00e1s limpios, notas m\u00e1s claras y una taza m\u00e1s intencional.",
 
     "contact.title": "Contacto y redes",
-    "contact.subtitle": "El texto es la forma m\u00e1s r\u00e1pida de hacer una pregunta r\u00e1pida. El correo funciona mejor para seguimiento y preguntas personalizadas.",
+    "contact.subtitle": "M\u00e1ndanos un texto para preguntas r\u00e1pidas sobre caf\u00e9s actuales, fechas de mercado o disponibilidad local completa en The Cottage. El correo funciona mejor para seguimiento y preguntas personalizadas.",
     "contact.text.kicker": "Texto",
     "contact.text.sub": "La forma m\u00e1s r\u00e1pida de hacer una pregunta r\u00e1pida",
     "contact.email.kicker": "Correo",
@@ -272,7 +251,6 @@
   let productTabsListenerBound = false;
   let productTabsQueryListenerBound = false;
   let mobileMarketTabsListenerBound = false;
-  let specCardsListenerBound = false;
   let revealObserver = null;
   let sectionObserver = null;
   let revealMotionListenerBound = false;
@@ -651,7 +629,6 @@
     renderCoffeeTabs(lang);
     renderCoffeeCards(lang);
     setupRevealAnimations();
-    setupInteractiveSpecCards();
     setupProductTabs();
     setupCursorCardGlow();
     setupAnalytics();
@@ -948,23 +925,30 @@
     });
   }
 
+  function revealElement(element) {
+    element.classList.add("is-visible");
+    element.dataset.revealObserved = "true";
+  }
+
+  function revealCoffeeCard(card) {
+    revealElement(card);
+    card.querySelectorAll("[data-reveal]").forEach(revealElement);
+  }
+
   function setupRevealAnimations() {
     const revealElements = [...document.querySelectorAll("[data-reveal]")];
     const editorialSections = [...document.querySelectorAll(".editorial-section")];
+    const groupedCoffeeCardChildren = new Set(
+      revealElements.filter((element) => element.closest(".product-card") && !element.matches(".product-card"))
+    );
 
     revealElements.forEach((element) => {
       const delay = Number(element.getAttribute("data-reveal-delay") || 0);
       element.style.setProperty("--reveal-delay", `${Math.max(0, delay)}ms`);
-
-      if (element.matches(".taste-chip-list")) {
-        [...element.children].forEach((chip, index) => {
-          chip.style.setProperty("--chip-index", String(index));
-        });
-      }
     });
 
     const showImmediately = () => {
-      revealElements.forEach((element) => element.classList.add("is-visible"));
+      revealElements.forEach(revealElement);
       editorialSections.forEach((section) => section.classList.add("has-revealed"));
     };
 
@@ -977,8 +961,11 @@
       revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
-          entry.target.classList.add("is-visible");
-          entry.target.dataset.revealObserved = "true";
+          if (entry.target.matches(".product-card")) {
+            revealCoffeeCard(entry.target);
+          } else {
+            revealElement(entry.target);
+          }
           observer.unobserve(entry.target);
         });
       }, {
@@ -988,6 +975,7 @@
     }
 
     revealElements.forEach((element) => {
+      if (groupedCoffeeCardChildren.has(element)) return;
       if (element.classList.contains("is-visible") || element.dataset.revealObserved === "true") return;
       element.dataset.revealObserved = "true";
       revealObserver.observe(element);
@@ -1021,10 +1009,6 @@
       });
       revealMotionListenerBound = true;
     }
-  }
-
-  function setupInteractiveSpecCards() {
-    specCardsListenerBound = true;
   }
 
   function setupActiveNavHighlighting() {
@@ -1139,6 +1123,19 @@
     return { tabList, grid, tabs, panels };
   }
 
+  function revealProductPanelIfReadable(panel) {
+    if (!panel || !isProductTabsMode()) return;
+
+    const revealIfReadable = () => {
+      const rect = panel.getBoundingClientRect();
+      if (rect.bottom <= 0 || rect.top >= window.innerHeight) return;
+      revealCoffeeCard(panel);
+    };
+
+    requestAnimationFrame(revealIfReadable);
+    window.setTimeout(revealIfReadable, 250);
+  }
+
   function renderProductTabs() {
     const { tabs: productTabs, panels: productPanels } = getProductTabElements();
     if (!productTabs.length || !productPanels.length) return;
@@ -1157,6 +1154,8 @@
       panel.classList.toggle("is-active", isActive);
       panel.hidden = tabsMode && !isActive;
     });
+
+    revealProductPanelIfReadable(productPanels[activeProductIndex]);
   }
 
   function updateProductTabs(nextIndex = activeProductIndex, animate = false) {
@@ -1530,7 +1529,6 @@
   setupMobileNav();
   setupAccordion();
   setupRevealAnimations();
-  setupInteractiveSpecCards();
   setupProductTabs();
   setupMobileMarketTabs();
   setupCarousel();

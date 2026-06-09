@@ -2,7 +2,7 @@
   const PHONE_NUMBER = "12174167072";
   const STORAGE_KEY = "mr_lang";
   const DEFAULT_SHOP_URL = "https://millionaires-roast.square.site/";
-  const COFFEE_DATA_URL = "data/coffees.json?v=58";
+  const COFFEE_DATA_URL = "data/coffees.json?v=59";
   const TRANSPARENT_PIXEL = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
   const SMS_BODY = {
     en: "Hi! I'd like to order coffee from Millionaire's Roast. What do you have available?",
@@ -30,7 +30,7 @@
     "hero.cta.secondary": "Caf\u00e9s actuales",
     "hero.badge.kicker": "Nueva oferta de mercado",
     "hero.badge.title": "Cold Brew embotellado",
-    "hero.badge.meta": "16 oz \u2022 Brasil Cerrado Natural \u2022 $5",
+    "hero.badge.meta": "16 oz \u2022 Guatemalan La Morena \u2022 $5",
     "ghost.flagship": "INSIGNIA",
     "ghost.origin": "ORIGEN",
     "ghost.local": "LOCAL",
@@ -178,7 +178,7 @@
     "faq.q2": "\u00bfD\u00f3nde est\u00e1n ubicados?",
     "faq.a2": "Millionaire's Roast tiene base en Springfield, Illinois. Servimos a Springfield a trav\u00e9s de mercados locales y pedidos en l\u00ednea, y a Beardstown a trav\u00e9s de The Cottage en 201 W Main St, un puesto local sin personal conectado con Rosebud & Co.",
     "faq.q3": "\u00bfQu\u00e9 caf\u00e9s est\u00e1n disponibles ahora mismo?",
-    "faq.a3": "Actualmente ofrecemos cuatro caf\u00e9s frescos de origen \u00fanico: Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\" y Colombian Sugarcane Decaf. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, actualmente hecho con lo \u00faltimo de nuestro lote brasile\u00f1o Cerrado Natural para mantener el sabor estable mientras dure ese caf\u00e9. Cuando se termine el brasile\u00f1o, el cold brew pasar\u00e1 a nuestro caf\u00e9 guatemalteco La Morena de especialidad. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido, K-Cups o cold brew embotellado seg\u00fan el producto.",
+    "faq.a3": "Actualmente ofrecemos cuatro caf\u00e9s frescos de origen \u00fanico: Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\" y Colombian Sugarcane Decaf. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, ahora preparado con nuestro tueste oscuro Guatemalan \"La Morena\" para una taza m\u00e1s profunda con chocolate oscuro, caramelo, mora y vainilla. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido, K-Cups o cold brew embotellado seg\u00fan el producto.",
     "faq.q4": "\u00bfCu\u00e1nto dura una rotaci\u00f3n actual?",
     "faq.a4": "Compramos caf\u00e9 verde en volumen, pero los tiempos de cosecha cambian seg\u00fan la regi\u00f3n y el ciclo agr\u00edcola. Cuando un caf\u00e9 se acaba, hay una alta probabilidad de que ese lote en espec\u00edfico se haya ido por ahora, no para siempre, y la rotaci\u00f3n sigue cambiando seg\u00fan la demanda y la disponibilidad.",
     "faq.q5": "\u00bfQu\u00e9 hace que este caf\u00e9 sea de especialidad?",

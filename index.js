@@ -2,7 +2,7 @@
   const PHONE_NUMBER = "12174167072";
   const STORAGE_KEY = "mr_lang";
   const DEFAULT_SHOP_URL = "https://millionaires-roast.square.site/";
-  const COFFEE_DATA_URL = "data/coffees.json?v=59";
+  const COFFEE_DATA_URL = "data/coffees.json?v=62";
   const TRANSPARENT_PIXEL = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
   const SMS_BODY = {
     en: "Hi! I'd like to order coffee from Millionaire's Roast. What do you have available?",
@@ -48,7 +48,7 @@
 
     "coffees.eyebrow": "Caf\u00e9s actuales",
     "coffees.title": "Una l\u00ednea clara, reci\u00e9n tostada.",
-    "coffees.subtitle": "Cuatro caf\u00e9s de origen \u00fanico, perfiles claros y precios simples. Compara la taza que quieres y ordena de la lista actual.",
+    "coffees.subtitle": "Cinco caf\u00e9s de origen \u00fanico, perfiles claros y precios simples. Compara la taza que quieres y ordena de la lista actual.",
     "coffee.spec.origin": "Origen",
     "coffee.spec.body": "Cuerpo",
     "coffee.spec.acidity": "Acidez",
@@ -62,6 +62,16 @@
     "coffee.price.bag": "Bolsa de 12 oz: $16",
     "coffee.price.kcups": "K-Cups de 8 unidades: 1 por $10 \u2022 2 por $19 \u2022 3 por $27",
     "coffee.price.coldbrew": "Cold brew de 16 oz: $5",
+    "coffee.ug.badge": "Tueste claro",
+    "coffee.ug.title": "Ugandan Rwenzori Kasese",
+    "coffee.ug.process": "Proceso natural",
+    "coffee.ug.body": "Caf\u00e9 natural 2026 frutal de Kasese, puntaje 86.25, de peque\u00f1os productores de Kyagalanyi Coffee listados como 43% mujeres, con frambuesa, ciruela, az\u00facar morena, clementina y t\u00e9 negro.",
+    "coffee.ug.notes": "Frambuesa, ciruela, az\u00facar morena, clementina, t\u00e9 negro",
+    "coffee.ug.origin": "Kasese, monta\u00f1as Rwenzori, Uganda",
+    "coffee.ug.bodyValue": "Medio",
+    "coffee.ug.acidity": "Suave",
+    "coffee.ug.cupScore": "86.25",
+    "coffee.ug.choice": "Quiero un tueste claro frutal con dulzura de berries, clementina y t\u00e9 negro.",
     "coffee.cr.badge": "Tueste medio",
     "coffee.cr.title": "Costa Rican Jaguar Honey",
     "coffee.cr.process": "Proceso Honey",
@@ -98,6 +108,7 @@
     "coffee.co.bodyValue": "Medio",
     "coffee.co.acidity": "Brillante",
     "coffee.co.cupScore": "84.5",
+    "coffee.cta.light": "Ordenar tueste claro",
     "coffee.cta.medium": "Ordenar tueste medio",
     "coffee.cta.mediumDark": "Ordenar tueste medio oscuro",
     "coffee.cta.dark": "Ordenar tueste oscuro",
@@ -178,7 +189,7 @@
     "faq.q2": "\u00bfD\u00f3nde est\u00e1n ubicados?",
     "faq.a2": "Millionaire's Roast tiene base en Springfield, Illinois. Servimos a Springfield a trav\u00e9s de mercados locales y pedidos en l\u00ednea, y a Beardstown a trav\u00e9s de The Cottage en 201 W Main St, un puesto local sin personal conectado con Rosebud & Co.",
     "faq.q3": "\u00bfQu\u00e9 caf\u00e9s est\u00e1n disponibles ahora mismo?",
-    "faq.a3": "Actualmente ofrecemos cuatro caf\u00e9s frescos de origen \u00fanico: Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\" y Colombian Sugarcane Decaf. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, ahora preparado con nuestro tueste oscuro Guatemalan \"La Morena\" para una taza m\u00e1s profunda con chocolate oscuro, caramelo, mora y vainilla. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido, K-Cups o cold brew embotellado seg\u00fan el producto.",
+    "faq.a3": "Actualmente ofrecemos cinco caf\u00e9s frescos de origen \u00fanico: Ugandan Rwenzori Kasese como nuestro tueste claro, Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\" y Colombian Sugarcane Decaf. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, ahora preparado con nuestro tueste oscuro Guatemalan \"La Morena\" para una taza m\u00e1s profunda con chocolate oscuro, caramelo, mora y vainilla. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido, K-Cups o cold brew embotellado seg\u00fan el producto.",
     "faq.q4": "\u00bfCu\u00e1nto dura una rotaci\u00f3n actual?",
     "faq.a4": "Compramos caf\u00e9 verde en volumen, pero los tiempos de cosecha cambian seg\u00fan la regi\u00f3n y el ciclo agr\u00edcola. Cuando un caf\u00e9 se acaba, hay una alta probabilidad de que ese lote en espec\u00edfico se haya ido por ahora, no para siempre, y la rotaci\u00f3n sigue cambiando seg\u00fan la demanda y la disponibilidad.",
     "faq.q5": "\u00bfQu\u00e9 hace que este caf\u00e9 sea de especialidad?",

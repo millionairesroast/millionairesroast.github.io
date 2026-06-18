@@ -36,7 +36,7 @@
   <link rel="canonical" href="https://millionairesroast.com/" />
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="apple-touch-icon" href="logo.png" />
-  <link rel="stylesheet" href="styles.css?v=63" />
+  <link rel="stylesheet" href="styles.css?v=64" />
 
   <script type="application/ld+json">
     {
@@ -110,7 +110,7 @@
           "name": "What coffees are available right now?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We currently offer four fresh single-origin coffees: Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\", and Colombian Sugarcane Decaf. We also offer 16 oz bottled cold brew for $5, now brewed with our Guatemalan \"La Morena\" dark roast for a deeper cup with dark chocolate, caramel, blackberry, and vanilla. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, K-Cups, or bottled cold brew depending on the item."
+            "text": "We currently offer five fresh single-origin coffees: Ugandan Rwenzori Kasese as our light roast, Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\", and Colombian Sugarcane Decaf. We also offer 16 oz bottled cold brew for $5, now brewed with our Guatemalan \"La Morena\" dark roast for a deeper cup with dark chocolate, caramel, blackberry, and vanilla. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, K-Cups, or bottled cold brew depending on the item."
           }
         },
         {
@@ -133,7 +133,7 @@
     }
   </script>
 
-  <script defer src="index.js?v=74"></script>
+  <script defer src="index.js?v=77"></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -279,18 +279,58 @@
         <div class="section-head center narrow-head" data-reveal="up">
           <p class="section-eyebrow" data-i18n="coffees.eyebrow">Current Coffees</p>
           <h2 class="section-title" id="current-roast-title" data-i18n="coffees.title">A clear lineup, roasted fresh.</h2>
-          <p class="section-subtitle" data-i18n="coffees.subtitle">Four single-origin coffees, clear cup profiles, simple pricing. Compare the cup you want and order from the current roast list.</p>
+          <p class="section-subtitle" data-i18n="coffees.subtitle">Five single-origin coffees, clear cup profiles, simple pricing. Compare the cup you want and order from the current roast list.</p>
         </div>
 
         <div class="mobile-roast-tabs" data-product-tabs role="tablist" aria-labelledby="current-roast-title" data-reveal="up" data-reveal-delay="80">
-          <button id="coffee-tab-medium" class="roast-pill is-active" type="button" role="tab" aria-selected="true" aria-controls="coffee-card-medium" data-product-tab="0" data-i18n="coffee.cr.badge">Medium Roast</button>
-          <button id="coffee-tab-medium-dark" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-medium-dark" data-product-tab="1" data-i18n="coffee.pe.badge">Med-Dark Roast</button>
-          <button id="coffee-tab-dark" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-dark" data-product-tab="2" data-i18n="coffee.gt.badge">Dark Roast</button>
-          <button id="coffee-tab-decaf" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-decaf" data-product-tab="3" data-i18n="coffee.co.badge">Decaf</button>
+          <button id="coffee-tab-light" class="roast-pill is-active" type="button" role="tab" aria-selected="true" aria-controls="coffee-card-light" data-product-tab="0" data-i18n="coffee.ug.badge">Light Roast</button>
+          <button id="coffee-tab-medium" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-medium" data-product-tab="1" data-i18n="coffee.cr.badge">Medium Roast</button>
+          <button id="coffee-tab-medium-dark" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-medium-dark" data-product-tab="2" data-i18n="coffee.pe.badge">Med-Dark Roast</button>
+          <button id="coffee-tab-dark" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-dark" data-product-tab="3" data-i18n="coffee.gt.badge">Dark Roast</button>
+          <button id="coffee-tab-decaf" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-decaf" data-product-tab="4" data-i18n="coffee.co.badge">Decaf</button>
         </div>
 
         <div class="coffee-product-grid" id="choose">
-          <article class="card card-plate product-card product-card-featured card-interactive is-active" id="coffee-card-medium" data-product-panel aria-labelledby="coffee-tab-medium" data-reveal="up" data-reveal-delay="0">
+          <article class="card card-plate product-card card-interactive is-active" id="coffee-card-light" data-product-panel aria-labelledby="coffee-tab-light" data-reveal="up" data-reveal-delay="0">
+            <div class="product-card-head" data-reveal="fade" data-reveal-delay="80">
+              <span class="origin-badge" data-i18n="coffee.ug.badge">Light Roast</span>
+              <span class="product-process" data-i18n="coffee.ug.process">Natural Process</span>
+            </div>
+            <h3 class="origin-title" data-reveal="fade" data-reveal-delay="120" data-i18n="coffee.ug.title">Ugandan Rwenzori Kasese</h3>
+            <p class="card-text" data-reveal="fade" data-reveal-delay="160" data-i18n="coffee.ug.body">Fruit-forward 2026 Kasese natural, cup score 86.25, from Kyagalanyi Coffee smallholders listed as 43% women, with raspberry, plum, brown sugar, clementine, and black tea.</p>
+            <p class="product-notes-line" data-reveal="fade" data-reveal-delay="210"><strong data-i18n="coffee.notes.label">Tasting Notes</strong><span data-i18n="coffee.ug.notes">Raspberry &bull; Plum &bull; Brown sugar &bull; Clementine &bull; Black tea</span></p>
+
+            <div class="product-choice" data-reveal="fade" data-reveal-delay="250">
+              <span data-i18n="coffee.ug.choice">I want a fruit-forward light roast with berry sweetness, clementine, and black tea.</span>
+            </div>
+
+            <div class="product-spec-grid">
+              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-ug-cup-score-copy" data-reveal="up" data-reveal-delay="0">
+                <span class="spec-label" data-i18n="coffee.spec.cupScore">Cup Score</span>
+                <span class="spec-value" data-i18n="coffee.ug.cupScore">86.25</span>
+                <span class="spec-explain" id="spec-ug-cup-score-copy" data-i18n="coffee.spec.cupScore.explain">The cupping score summarizes cup quality. A score of 80 or higher is considered specialty-grade coffee.</span>
+              </div>
+              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-ug-origin-copy" data-reveal="up" data-reveal-delay="0">
+                <span class="spec-label" data-i18n="coffee.spec.origin">Origin</span>
+                <span class="spec-value" data-i18n="coffee.ug.origin">Kasese, Rwenzori Mountains, Uganda</span>
+                <span class="spec-explain" id="spec-ug-origin-copy" data-i18n="coffee.spec.origin.explain">Where the coffee comes from. Origin affects climate, soil, variety, and the general character of the cup.</span>
+              </div>
+              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-ug-body-copy" data-reveal="up" data-reveal-delay="45">
+                <span class="spec-label" data-i18n="coffee.spec.body">Body</span>
+                <span class="spec-value" data-i18n="coffee.ug.bodyValue">Medium</span>
+                <span class="spec-explain" id="spec-ug-body-copy" data-i18n="coffee.spec.body.explain">The weight or texture of the coffee in your mouth. A heavier body feels fuller and richer.</span>
+              </div>
+              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-ug-acidity-copy" data-reveal="up" data-reveal-delay="90">
+                <span class="spec-label" data-i18n="coffee.spec.acidity">Acidity</span>
+                <span class="spec-value" data-i18n="coffee.ug.acidity">Mild</span>
+                <span class="spec-explain" id="spec-ug-acidity-copy" data-i18n="coffee.spec.acidity.explain">The brightness or lift in the cup. Medium acidity can make coffee taste cleaner, fruitier, or more lively.</span>
+              </div>
+            </div>
+
+            <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_light" href="https://millionaires-roast.square.site/" data-i18n="coffee.cta.light">Order Light Roast</a>
+          </article>
+
+          <article class="card card-plate product-card product-card-featured card-interactive" id="coffee-card-medium" data-product-panel aria-labelledby="coffee-tab-medium" data-reveal="up" data-reveal-delay="90">
             <div class="product-card-head" data-reveal="fade" data-reveal-delay="80">
               <span class="origin-badge" data-i18n="coffee.cr.badge">Medium Roast</span>
               <span class="product-process" data-i18n="coffee.cr.process">Honey Process</span>
@@ -710,7 +750,7 @@
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-a" id="faq-panel-3" data-panel role="region" aria-labelledby="faq-trigger-3" hidden>
-            <p data-i18n="faq.a3">We currently offer four fresh single-origin coffees: Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan "La Morena", and Colombian Sugarcane Decaf. We also offer 16 oz bottled cold brew for $5, now brewed with our Guatemalan "La Morena" dark roast for a deeper cup with dark chocolate, caramel, blackberry, and vanilla. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, K-Cups, or bottled cold brew depending on the item.</p>
+            <p data-i18n="faq.a3">We currently offer five fresh single-origin coffees: Ugandan Rwenzori Kasese as our light roast, Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan "La Morena", and Colombian Sugarcane Decaf. We also offer 16 oz bottled cold brew for $5, now brewed with our Guatemalan "La Morena" dark roast for a deeper cup with dark chocolate, caramel, blackberry, and vanilla. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, K-Cups, or bottled cold brew depending on the item.</p>
           </div>
 
           <button class="faq-item" id="faq-trigger-4" type="button" aria-expanded="false" aria-controls="faq-panel-4">

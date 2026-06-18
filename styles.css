@@ -2028,10 +2028,25 @@ a:focus-visible, button:focus-visible{
 .product-card-featured{
   border-color:rgba(226,196,106,.48);
 }
-#coffee-card-medium{order:1}
-#coffee-card-medium-dark{order:2}
-#coffee-card-dark{order:3}
-#coffee-card-decaf{order:4}
+#coffee-card-light{order:1}
+#coffee-card-medium{order:2}
+#coffee-card-medium-dark{order:3}
+#coffee-card-dark{order:4}
+#coffee-card-decaf{order:5}
+@media (min-width:981px){
+  .coffee-product-grid{
+    grid-template-columns:repeat(6,minmax(0,1fr));
+  }
+  .coffee-product-grid .product-card{
+    grid-column:span 2;
+  }
+  #coffee-card-dark{
+    grid-column:2 / span 2;
+  }
+  #coffee-card-decaf{
+    grid-column:4 / span 2;
+  }
+}
 .product-card .origin-title{
   min-height:0;
   height:112px;
@@ -2705,6 +2720,9 @@ a:focus-visible, button:focus-visible{
   .roast-pill:focus-visible{
     outline:2px solid rgba(226,196,106,.92);
     outline-offset:3px;
+  }
+  .mobile-roast-tabs .roast-pill:last-child:nth-child(odd){
+    grid-column:1 / -1;
   }
   .coffee-product-grid .product-card{
     display:none;

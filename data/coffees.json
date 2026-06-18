@@ -1,12 +1,12 @@
 {
-  "version": 10,
+  "version": 13,
   "defaultShopUrl": "https://millionaires-roast.square.site/",
   "copy": {
     "en": {
-      "faqCurrentAnswer": "We currently offer four fresh single-origin coffees: Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\", and Colombian Sugarcane Decaf. We also offer 16 oz bottled cold brew for $5, now brewed with our Guatemalan \"La Morena\" dark roast for a deeper cup with dark chocolate, caramel, blackberry, and vanilla. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, K-Cups, or bottled cold brew depending on the item."
+      "faqCurrentAnswer": "We currently offer five fresh single-origin coffees: Ugandan Rwenzori Kasese as our light roast, Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\", and Colombian Sugarcane Decaf. We also offer 16 oz bottled cold brew for $5, now brewed with our Guatemalan \"La Morena\" dark roast for a deeper cup with dark chocolate, caramel, blackberry, and vanilla. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, K-Cups, or bottled cold brew depending on the item."
     },
     "es": {
-      "faqCurrentAnswer": "Actualmente ofrecemos cuatro caf\u00e9s frescos de origen \u00fanico: Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\" y Colombian Sugarcane Decaf. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, ahora preparado con nuestro tueste oscuro Guatemalan \"La Morena\" para una taza m\u00e1s profunda con chocolate oscuro, caramelo, mora y vainilla. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido, K-Cups o cold brew embotellado seg\u00fan el producto."
+      "faqCurrentAnswer": "Actualmente ofrecemos cinco caf\u00e9s frescos de origen \u00fanico: Ugandan Rwenzori Kasese como nuestro tueste claro, Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\" y Colombian Sugarcane Decaf. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, ahora preparado con nuestro tueste oscuro Guatemalan \"La Morena\" para una taza m\u00e1s profunda con chocolate oscuro, caramelo, mora y vainilla. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido, K-Cups o cold brew embotellado seg\u00fan el producto."
     }
   },
   "heroOffering": {
@@ -47,9 +47,51 @@
   },
   "coffees": [
     {
+      "id": "uganda-rwenzori-kasese-natural-2026",
+      "slot": "light",
+      "order": 1,
+      "active": true,
+      "featured": false,
+      "images": {
+        "hero": "",
+        "featured": ""
+      },
+      "squareUrl": "https://millionaires-roast.square.site/",
+      "en": {
+        "badge": "Light Roast",
+        "title": "Ugandan Rwenzori Kasese",
+        "process": "Natural Process",
+        "description": "Fruit-forward 2026 Kasese natural, cup score 86.25, from Kyagalanyi Coffee smallholders listed as 43% women, with raspberry, plum, brown sugar, clementine, and black tea.",
+        "featuredDescription": "A fruit-forward 2026 natural coffee from Kasese in Uganda's Rwenzori Mountains, cupping at 86.25 with raspberry, plum, brown sugar, clementine, and black tea.",
+        "choice": "I want a fruit-forward light roast with berry sweetness, clementine, and black tea.",
+        "notes": ["Raspberry", "Plum", "Brown sugar", "Clementine", "Black tea"],
+        "origin": "Kasese, Rwenzori Mountains, Uganda",
+        "roast": "Light Roast",
+        "body": "Medium",
+        "acidity": "Mild",
+        "cupScore": "86.25",
+        "cta": "Order Light Roast"
+      },
+      "es": {
+        "badge": "Tueste claro",
+        "title": "Ugandan Rwenzori Kasese",
+        "process": "Proceso natural",
+        "description": "Caf\u00e9 natural 2026 frutal de Kasese, puntaje 86.25, de peque\u00f1os productores de Kyagalanyi Coffee listados como 43% mujeres, con frambuesa, ciruela, az\u00facar morena, clementina y t\u00e9 negro.",
+        "featuredDescription": "Un caf\u00e9 natural 2026 frutal de Kasese, en las monta\u00f1as Rwenzori de Uganda, con puntaje de taza 86.25 y notas de frambuesa, ciruela, az\u00facar morena, clementina y t\u00e9 negro.",
+        "choice": "Quiero un tueste claro frutal con dulzura de berries, clementina y t\u00e9 negro.",
+        "notes": ["Frambuesa", "Ciruela", "Az\u00facar morena", "Clementina", "T\u00e9 negro"],
+        "origin": "Kasese, monta\u00f1as Rwenzori, Uganda",
+        "roast": "Tueste claro",
+        "body": "Medio",
+        "acidity": "Suave",
+        "cupScore": "86.25",
+        "cta": "Ordenar tueste claro"
+      }
+    },
+    {
       "id": "costa-rica-tarrazu-san-diego-jaguar-honey-2026",
       "slot": "medium",
-      "order": 1,
+      "order": 2,
       "active": true,
       "featured": true,
       "images": {
@@ -98,7 +140,7 @@
     {
       "id": "peruvian-chonta-g1-washed",
       "slot": "medium-dark",
-      "order": 2,
+      "order": 3,
       "active": true,
       "featured": false,
       "images": {
@@ -141,7 +183,7 @@
     {
       "id": "guatemala-la-morena-huehuetenango-2026",
       "slot": "dark",
-      "order": 3,
+      "order": 4,
       "active": true,
       "featured": false,
       "images": {
@@ -184,7 +226,7 @@
     {
       "id": "colombia-valle-del-cauca-sugarcane-ea-decaf-2026",
       "slot": "decaf",
-      "order": 4,
+      "order": 5,
       "active": true,
       "featured": false,
       "images": {

@@ -2,7 +2,7 @@
   const PHONE_NUMBER = "12174167072";
   const STORAGE_KEY = "mr_lang";
   const DEFAULT_SHOP_URL = "https://millionaires-roast.square.site/";
-  const COFFEE_DATA_URL = "data/coffees.json?v=62";
+  const COFFEE_DATA_URL = "data/coffees.json?v=64";
   const TRANSPARENT_PIXEL = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
   const SMS_BODY = {
     en: "Hi! I'd like to order coffee from Millionaire's Roast. What do you have available?",
@@ -26,25 +26,31 @@
     "hero.price.bags": "Bolsas de 12 oz: $16",
     "hero.price.kcups": "K-Cups de 8 unidades: 1 por $10 \u2022 2 por $19 \u2022 3 por $27",
     "hero.helper": "Ordena en l\u00ednea para env\u00edos en Illinois, o encuentra disponibilidad local en mercados de Springfield y en The Cottage en Beardstown.",
-    "hero.cta.primary": "Comprar ahora",
+    "hero.cta.primary": "Probar la Discovery Box",
     "hero.cta.secondary": "Caf\u00e9s actuales",
     "hero.badge.kicker": "Nueva oferta de mercado",
-    "hero.badge.title": "Cold Brew embotellado",
-    "hero.badge.meta": "16 oz \u2022 Guatemalan La Morena \u2022 $5",
-    "ghost.flagship": "INSIGNIA",
+    "hero.badge.title": "Discovery Box",
+    "hero.badge.meta": "3 x 3.5 oz \u2022 Claro \u2022 Medio \u2022 Oscuro",
+    "hero.placeholder.kicker": "Tres caf\u00e9s. Una caja.",
+    "hero.placeholder.title": "Discovery Box",
+    "hero.placeholder.light": "Claro",
+    "hero.placeholder.medium": "Medio",
+    "hero.placeholder.dark": "Oscuro",
+    "hero.placeholder.meta": "Tres muestras de 3.5 oz \u2022 En grano entero o molido",
+    "ghost.featured": "COLD BREW",
     "ghost.origin": "ORIGEN",
     "ghost.local": "LOCAL",
     "ghost.markets": "MERCADOS",
 
     "featured.eyebrow": "Oferta destacada",
-    "featured.title": "Costa Rican Jaguar Honey",
-    "featured.taste": "Chocolate con leche \u2022 Miel \u2022 Frambuesa",
-    "featured.body": "Nuestro tueste medio insignia 2026 es un lote honey del beneficio San Diego en Tarraz\u00fa, con puntaje de taza 85.25 y notas de chocolate con leche, miel y frambuesa en una taza brillante y limpia.",
-    "featured.spec.origin": "Origen: Tarraz\u00fa, Costa Rica",
-    "featured.spec.roast": "Tueste: Medio",
-    "featured.spec.body": "Cuerpo: Ligero",
-    "featured.spec.cupScore": "Puntaje de taza: 85.25",
-    "featured.cta": "Comprar el insignia",
+    "featured.title": "Cold Brew embotellado",
+    "featured.taste": "Chocolate oscuro \u2022 Caramelo \u2022 Mora \u2022 Vainilla",
+    "featured.body": "Nuestro cold brew embotellado de 16 oz se prepara con Guatemalan \"La Morena\", nuestro tueste oscuro de Huehuetenango de mujeres productoras a trav\u00e9s del programa La Morena.",
+    "featured.spec.origin": "Origen: Huehuetenango, Guatemala",
+    "featured.spec.roast": "Tueste: Oscuro",
+    "featured.spec.body": "Cuerpo: Medio",
+    "featured.spec.cupScore": "Puntaje de taza: 85.5",
+    "featured.cta": "Ordenar cold brew",
 
     "coffees.eyebrow": "Caf\u00e9s actuales",
     "coffees.title": "Una l\u00ednea clara, reci\u00e9n tostada.",
@@ -189,7 +195,7 @@
     "faq.q2": "\u00bfD\u00f3nde est\u00e1n ubicados?",
     "faq.a2": "Millionaire's Roast tiene base en Springfield, Illinois. Servimos a Springfield a trav\u00e9s de mercados locales y pedidos en l\u00ednea, y a Beardstown a trav\u00e9s de The Cottage en 201 W Main St, un puesto local sin personal conectado con Rosebud & Co.",
     "faq.q3": "\u00bfQu\u00e9 caf\u00e9s est\u00e1n disponibles ahora mismo?",
-    "faq.a3": "Actualmente ofrecemos cinco caf\u00e9s frescos de origen \u00fanico: Ugandan Rwenzori Kasese como nuestro tueste claro, Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\" y Colombian Sugarcane Decaf. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, ahora preparado con nuestro tueste oscuro Guatemalan \"La Morena\" para una taza m\u00e1s profunda con chocolate oscuro, caramelo, mora y vainilla. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido, K-Cups o cold brew embotellado seg\u00fan el producto.",
+    "faq.a3": "Actualmente ofrecemos cinco caf\u00e9s frescos de origen \u00fanico: Ugandan Rwenzori Kasese como nuestro tueste claro, Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\" y Colombian Sugarcane Decaf. Nuestra Discovery Box incluye tres muestras de 3.5 oz de los tuestes claro, medio y oscuro, disponibles en grano entero o molido. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, preparado con Guatemalan \"La Morena\". Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+.",
     "faq.q4": "\u00bfCu\u00e1nto dura una rotaci\u00f3n actual?",
     "faq.a4": "Compramos caf\u00e9 verde en volumen, pero los tiempos de cosecha cambian seg\u00fan la regi\u00f3n y el ciclo agr\u00edcola. Cuando un caf\u00e9 se acaba, hay una alta probabilidad de que ese lote en espec\u00edfico se haya ido por ahora, no para siempre, y la rotaci\u00f3n sigue cambiando seg\u00fan la demanda y la disponibilidad.",
     "faq.q5": "\u00bfQu\u00e9 hace que este caf\u00e9 sea de especialidad?",
@@ -351,21 +357,17 @@
     return (coffeeLineup?.coffees || []).filter((coffee) => coffee.active !== false);
   }
 
-  function getFeaturedCoffee() {
+  function getFallbackCoffee() {
     const activeCoffees = getActiveCoffees();
     return activeCoffees.find((coffee) => coffee.featured) || activeCoffees[0] || null;
   }
 
   function getFeaturedOffering() {
-    if (isProductTabsMode() && coffeeLineup?.heroOffering) {
-      return coffeeLineup.heroOffering;
-    }
-
-    return getFeaturedCoffee();
+    return coffeeLineup?.featuredOffering || getFallbackCoffee();
   }
 
   function getHeroOffering() {
-    return coffeeLineup?.heroOffering || getFeaturedCoffee();
+    return coffeeLineup?.heroOffering || getFallbackCoffee();
   }
 
   function getCoffeeCopy(coffee, lang) {
@@ -413,6 +415,16 @@
     return heroDesktopQuery ? heroDesktopQuery.matches : true;
   }
 
+  function setHeroProductPlaceholder(isVisible) {
+    const plate = document.querySelector(".hero-image-plate");
+    const picture = document.querySelector(".hero-product-picture");
+    const placeholder = document.querySelector(".hero-product-placeholder");
+
+    plate?.classList.toggle("is-placeholder", isVisible);
+    if (picture) picture.hidden = isVisible;
+    if (placeholder) placeholder.hidden = !isVisible;
+  }
+
   function syncHeroProductImageLoading() {
     const image = document.querySelector(".hero-product-image");
     const source = document.querySelector(".hero-product-source");
@@ -430,13 +442,22 @@
     }
 
     if (isHeroDesktopImageAllowed() && desktopSrc) {
+      setHeroProductPlaceholder(true);
+      image.onload = () => setHeroProductPlaceholder(false);
+      image.onerror = () => setHeroProductPlaceholder(true);
       image.src = desktopSrc;
       image.loading = "eager";
       image.setAttribute("fetchpriority", "high");
+      if (image.complete) {
+        setHeroProductPlaceholder(!image.naturalWidth);
+      }
     } else {
+      image.onload = null;
+      image.onerror = null;
       image.src = TRANSPARENT_PIXEL;
       image.loading = "lazy";
       image.setAttribute("fetchpriority", "low");
+      setHeroProductPlaceholder(!desktopSrc);
     }
   }
 
@@ -467,11 +488,6 @@
     return Array.isArray(notes) ? notes.filter(Boolean).join(" \u2022 ") : "";
   }
 
-  function getCupScoreLabel(lang, score) {
-    if (!score) return "";
-    return `${lang === "es" ? "Puntaje" : "Cup Score"} ${score}`;
-  }
-
   function getNotesLabel(lang) {
     return lang === "es" ? "Notas" : "Tasting Notes";
   }
@@ -492,9 +508,14 @@
     setText(badgeSpans[0], copy.heroKicker || getCopy(lang, "hero.badge.kicker"));
     setText(heroBadge?.querySelector("strong"), copy.title);
     setText(badgeSpans[1], copy.heroMeta || formatCoffeeMeta(copy));
+    setText(document.querySelector("[data-hero-placeholder-kicker]"), copy.placeholderKicker || getCopy(lang, "hero.placeholder.kicker"));
+    setText(document.querySelector("[data-hero-placeholder-title]"), copy.title || getCopy(lang, "hero.placeholder.title"));
+    setText(document.querySelector("[data-hero-placeholder-meta]"), copy.placeholderMeta || getCopy(lang, "hero.placeholder.meta"));
 
     if (heroCta) {
       heroCta.href = getCoffeeShopUrl(offering);
+      heroCta.textContent = copy.heroCta || getCopy(lang, "hero.cta.primary");
+      heroCta.dataset.ctaLocation = offering.id === "discovery-box" ? "hero_discovery_box" : "hero_shop_current";
     }
   }
 
@@ -503,7 +524,7 @@
     if (!coffee) return;
 
     const copy = getCoffeeCopy(coffee, lang);
-    const isMobileColdBrewFeature = Boolean(coffeeLineup?.heroOffering && coffee === coffeeLineup.heroOffering && isProductTabsMode());
+    const isColdBrewFeature = coffee.id === "bottled-cold-brew";
     const featuredPanel = document.querySelector("#featured-offering .feature-panel");
     const featuredImage = document.querySelector(".feature-product-image");
     const featuredCta = document.querySelector("#featured-offering [data-shop-cta]");
@@ -514,13 +535,14 @@
       { label: getCopy(lang, "coffee.spec.body") || (lang === "es" ? "Cuerpo" : "Body"), value: copy.body }
     ].filter((spec) => spec.label && spec.value);
 
-    featuredPanel?.classList.toggle("is-mobile-cold-brew", isMobileColdBrewFeature);
+    featuredPanel?.classList.toggle("is-cold-brew-feature", isColdBrewFeature);
     setImage(
       featuredImage,
       getCoffeeImage(coffee, "featured"),
       copy.featuredAlt || `Millionaire's Roast ${copy.title || "coffee"} coffee bag`
     );
     setText(document.getElementById("featured-offering-title"), copy.title);
+    setText(document.querySelector("#featured-offering .section-eyebrow"), copy.featuredKicker || getCopy(lang, "featured.eyebrow"));
     setText(document.querySelector("#featured-offering .taste-line"), formatNotes(copy.notes));
     setText(document.querySelector("#featured-offering .section-subtitle"), copy.featuredDescription || copy.description);
 
@@ -534,7 +556,7 @@
     if (featuredCta) {
       featuredCta.href = getCoffeeShopUrl(coffee);
       featuredCta.textContent = copy.featuredCta || copy.cta || getCopy(lang, "featured.cta");
-      featuredCta.dataset.ctaLocation = isMobileColdBrewFeature ? "featured_cold_brew_mobile" : "featured_flagship";
+      featuredCta.dataset.ctaLocation = isColdBrewFeature ? "featured_cold_brew" : "featured_flagship";
     }
   }
 
@@ -1233,10 +1255,7 @@
     }
 
     if (!productTabsQueryListenerBound) {
-      productTabsQuery?.addEventListener?.("change", () => {
-        updateProductTabs();
-        renderFeaturedCoffee(getCurrentLang());
-      });
+      productTabsQuery?.addEventListener?.("change", () => updateProductTabs());
       productTabsQueryListenerBound = true;
     }
 

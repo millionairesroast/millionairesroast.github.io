@@ -1,45 +1,67 @@
 {
-  "version": 13,
+  "version": 14,
   "defaultShopUrl": "https://millionaires-roast.square.site/",
   "copy": {
     "en": {
-      "faqCurrentAnswer": "We currently offer five fresh single-origin coffees: Ugandan Rwenzori Kasese as our light roast, Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\", and Colombian Sugarcane Decaf. We also offer 16 oz bottled cold brew for $5, now brewed with our Guatemalan \"La Morena\" dark roast for a deeper cup with dark chocolate, caramel, blackberry, and vanilla. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, K-Cups, or bottled cold brew depending on the item."
+      "faqCurrentAnswer": "We currently offer five fresh single-origin coffees: Ugandan Rwenzori Kasese as our light roast, Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\", and Colombian Sugarcane Decaf. Our Discovery Box includes three 3.5 oz samples of the light, medium, and dark roasts, available whole bean or ground. We also offer 16 oz bottled cold brew for $5, brewed with Guatemalan \"La Morena\". Every coffee in the lineup is specialty grade, selected from coffees that cup 80+."
     },
     "es": {
-      "faqCurrentAnswer": "Actualmente ofrecemos cinco caf\u00e9s frescos de origen \u00fanico: Ugandan Rwenzori Kasese como nuestro tueste claro, Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\" y Colombian Sugarcane Decaf. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, ahora preparado con nuestro tueste oscuro Guatemalan \"La Morena\" para una taza m\u00e1s profunda con chocolate oscuro, caramelo, mora y vainilla. Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+, y est\u00e1 disponible en grano, molido, K-Cups o cold brew embotellado seg\u00fan el producto."
+      "faqCurrentAnswer": "Actualmente ofrecemos cinco caf\u00e9s frescos de origen \u00fanico: Ugandan Rwenzori Kasese como nuestro tueste claro, Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\" y Colombian Sugarcane Decaf. Nuestra Discovery Box incluye tres muestras de 3.5 oz de los tuestes claro, medio y oscuro, disponibles en grano entero o molido. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, preparado con Guatemalan \"La Morena\". Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+."
     }
   },
   "heroOffering": {
-    "id": "bottled-cold-brew",
-    "squareUrl": "https://millionaires-roast.square.site/product/16-oz-cold-brew/BU7ZO2I67C4QEHKAYR2TLAEG?cs=true&cst=custom",
+    "id": "discovery-box",
+    "squareUrl": "https://millionaires-roast.square.site/product/discovery-box/I4FOVQ3W64GJPGNMPODEMAHV?cs=true&cst=custom",
     "images": {
-      "hero": "ColdBrew.webp",
-      "featured": "ColdBrew.webp"
+      "hero": "DiscoveryBox.webp"
     },
     "en": {
       "heroKicker": "New Market Offering",
+      "title": "Discovery Box",
+      "heroMeta": "3 x 3.5 oz \u2022 Light \u2022 Medium \u2022 Dark",
+      "heroAlt": "Millionaire's Roast Discovery Box with three 3.5 oz coffee samples",
+      "heroCta": "Try the Discovery Box",
+      "placeholderKicker": "Three coffees. One box.",
+      "placeholderMeta": "Whole bean or ground"
+    },
+    "es": {
+      "heroKicker": "Nueva oferta de mercado",
+      "title": "Discovery Box",
+      "heroMeta": "3 x 3.5 oz \u2022 Claro \u2022 Medio \u2022 Oscuro",
+      "heroAlt": "Discovery Box de Millionaire's Roast con tres muestras de caf\u00e9 de 3.5 oz",
+      "heroCta": "Probar la Discovery Box",
+      "placeholderKicker": "Tres caf\u00e9s. Una caja.",
+      "placeholderMeta": "En grano entero o molido"
+    }
+  },
+  "featuredOffering": {
+    "id": "bottled-cold-brew",
+    "squareUrl": "https://millionaires-roast.square.site/product/16-oz-cold-brew/BU7ZO2I67C4QEHKAYR2TLAEG?cs=true&cst=custom",
+    "images": {
+      "featured": "ColdBrew.webp"
+    },
+    "en": {
+      "featuredKicker": "Featured Offering",
       "title": "Bottled Cold Brew",
-      "heroMeta": "16 oz \u2022 Guatemalan La Morena \u2022 $5",
-      "heroAlt": "Millionaire's Roast 16 oz bottled cold brew made with Guatemalan La Morena dark roast coffee",
       "featuredAlt": "Millionaire's Roast 16 oz bottled cold brew made with Guatemalan La Morena dark roast coffee",
       "featuredDescription": "Our 16 oz bottled cold brew is now brewed with Guatemalan \"La Morena\", our dark roast Huehuetenango lot from women producers through the La Morena program. Expect a smooth, deeper cup with dark chocolate, caramel, blackberry, and vanilla.",
       "featuredCta": "Order Cold Brew",
       "notes": ["Dark chocolate", "Caramel", "Blackberry", "Vanilla"],
       "origin": "Huehuetenango, Guatemala",
+      "roast": "Dark",
       "body": "Medium",
       "acidity": "Medium",
       "cupScore": "85.5"
     },
     "es": {
-      "heroKicker": "Nueva oferta de mercado",
+      "featuredKicker": "Oferta destacada",
       "title": "Cold Brew embotellado",
-      "heroMeta": "16 oz \u2022 Guatemalan La Morena \u2022 $5",
-      "heroAlt": "Cold brew embotellado de 16 oz de Millionaire's Roast hecho con caf\u00e9 de tueste oscuro Guatemalan La Morena",
       "featuredAlt": "Cold brew embotellado de 16 oz de Millionaire's Roast hecho con caf\u00e9 de tueste oscuro Guatemalan La Morena",
       "featuredDescription": "Nuestro cold brew embotellado de 16 oz ahora se prepara con Guatemalan \"La Morena\", nuestro tueste oscuro de Huehuetenango de mujeres productoras a trav\u00e9s del programa La Morena. Espera una taza suave y m\u00e1s profunda con chocolate oscuro, caramelo, mora y vainilla.",
       "featuredCta": "Ordenar cold brew",
       "notes": ["Chocolate oscuro", "Caramelo", "Mora", "Vainilla"],
       "origin": "Huehuetenango, Guatemala",
+      "roast": "Oscuro",
       "body": "Medio",
       "acidity": "Media",
       "cupScore": "85.5"
@@ -56,7 +78,7 @@
         "hero": "",
         "featured": ""
       },
-      "squareUrl": "https://millionaires-roast.square.site/",
+      "squareUrl": "https://millionaires-roast.square.site/product/12-oz-ugandan-rwenzori-kasese/JS5ATKDNVEHHH4AZ4KKWM2KD?cs=true&cst=custom",
       "en": {
         "badge": "Light Roast",
         "title": "Ugandan Rwenzori Kasese",

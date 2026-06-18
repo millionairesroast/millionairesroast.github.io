@@ -36,7 +36,7 @@
   <link rel="canonical" href="https://millionairesroast.com/" />
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="apple-touch-icon" href="logo.png" />
-  <link rel="stylesheet" href="styles.css?v=64" />
+  <link rel="stylesheet" href="styles.css?v=67" />
 
   <script type="application/ld+json">
     {
@@ -110,7 +110,7 @@
           "name": "What coffees are available right now?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We currently offer five fresh single-origin coffees: Ugandan Rwenzori Kasese as our light roast, Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\", and Colombian Sugarcane Decaf. We also offer 16 oz bottled cold brew for $5, now brewed with our Guatemalan \"La Morena\" dark roast for a deeper cup with dark chocolate, caramel, blackberry, and vanilla. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, K-Cups, or bottled cold brew depending on the item."
+            "text": "We currently offer five fresh single-origin coffees: Ugandan Rwenzori Kasese as our light roast, Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\", and Colombian Sugarcane Decaf. Our Discovery Box includes three 3.5 oz samples of the light, medium, and dark roasts, available whole bean or ground. We also offer 16 oz bottled cold brew for $5, brewed with Guatemalan \"La Morena\". Every coffee in the lineup is specialty grade, selected from coffees that cup 80+."
           }
         },
         {
@@ -133,7 +133,7 @@
     }
   </script>
 
-  <script defer src="index.js?v=77"></script>
+  <script defer src="index.js?v=80"></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -210,64 +210,77 @@
           </div>
 
           <div class="hero-actions" data-reveal="up" data-reveal-delay="310">
-            <a class="btn btn-gold" id="heroOrderBtn" data-shop-cta data-cta-location="hero_shop_current" href="https://millionaires-roast.square.site/product/16-oz-cold-brew/BU7ZO2I67C4QEHKAYR2TLAEG?cs=true&amp;cst=custom" data-i18n="hero.cta.primary">Buy Now</a>
+            <a class="btn btn-gold" id="heroOrderBtn" data-shop-cta data-cta-location="hero_discovery_box" href="https://millionaires-roast.square.site/product/discovery-box/I4FOVQ3W64GJPGNMPODEMAHV?cs=true&amp;cst=custom" data-i18n="hero.cta.primary">Try the Discovery Box</a>
             <a class="btn btn-outline" href="#current-roast" data-i18n="hero.cta.secondary">Current Coffees</a>
           </div>
         </div>
 
         <figure class="hero-visual" data-reveal="scale" data-reveal-delay="390">
-          <picture class="hero-image-plate">
-            <source
-              class="hero-product-source"
-              media="(min-width: 981px)"
-              srcset="ColdBrew.webp"
-              data-desktop-src="ColdBrew.webp"
-            />
-            <img
-              class="hero-product-image"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-              data-desktop-src="ColdBrew.webp"
-              alt="Millionaire's Roast 16 oz bottled cold brew made with Guatemalan La Morena dark roast coffee"
-              width="1536"
-              height="2048"
-              decoding="async"
-              loading="lazy"
-              fetchpriority="low"
-            />
-          </picture>
+          <div class="hero-image-plate is-placeholder">
+            <picture class="hero-product-picture" hidden>
+              <source
+                class="hero-product-source"
+                media="(min-width: 981px)"
+                srcset="DiscoveryBox.webp"
+                data-desktop-src="DiscoveryBox.webp"
+              />
+              <img
+                class="hero-product-image"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                data-desktop-src="DiscoveryBox.webp"
+                alt="Millionaire's Roast Discovery Box with three 3.5 oz coffee samples"
+                width="1200"
+                height="1500"
+                decoding="async"
+                loading="lazy"
+                fetchpriority="low"
+              />
+            </picture>
+            <div class="hero-product-placeholder" aria-hidden="true">
+              <span class="hero-placeholder-kicker" data-hero-placeholder-kicker data-i18n="hero.placeholder.kicker">Three coffees. One box.</span>
+              <img class="hero-placeholder-logo" src="logo.png" alt="" width="180" height="180" decoding="async" />
+              <strong class="hero-placeholder-title" data-hero-placeholder-title data-i18n="hero.placeholder.title">Discovery Box</strong>
+              <div class="hero-placeholder-roasts">
+                <span data-i18n="hero.placeholder.light">Light</span>
+                <span data-i18n="hero.placeholder.medium">Medium</span>
+                <span data-i18n="hero.placeholder.dark">Dark</span>
+              </div>
+              <small data-hero-placeholder-meta data-i18n="hero.placeholder.meta">Three 3.5 oz samples &bull; Whole bean or ground</small>
+            </div>
+          </div>
           <figcaption class="hero-floating-badge" data-reveal="right" data-reveal-delay="520">
             <span class="badge-kicker" data-i18n="hero.badge.kicker">New Market Offering</span>
-            <strong data-i18n="hero.badge.title">Bottled Cold Brew</strong>
-            <span data-i18n="hero.badge.meta">16 oz &bull; Guatemalan La Morena &bull; $5</span>
+            <strong data-i18n="hero.badge.title">Discovery Box</strong>
+            <span data-i18n="hero.badge.meta">3 x 3.5 oz &bull; Light &bull; Medium &bull; Dark</span>
           </figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="section feature-offering editorial-section" id="featured-offering" aria-labelledby="featured-offering-title" data-ghost-word="FLAGSHIP">
+    <section class="section feature-offering editorial-section" id="featured-offering" aria-labelledby="featured-offering-title" data-ghost-word="COLD BREW">
       <div class="container">
-        <span class="section-ghost" aria-hidden="true" data-i18n="ghost.flagship">FLAGSHIP</span>
-        <article class="feature-panel card-interactive" data-reveal="up">
+        <span class="section-ghost" aria-hidden="true" data-i18n="ghost.featured">COLD BREW</span>
+        <article class="feature-panel is-cold-brew-feature card-interactive" data-reveal="up">
           <figure class="feature-media" data-reveal="scale" data-reveal-delay="120">
             <div class="feature-image-plate">
-              <img class="feature-product-image" src="coffee.png" alt="Costa Rican Jaguar Honey coffee bag from Millionaire's Roast" width="419" height="419" loading="lazy" decoding="async" />
+              <img class="feature-product-image" src="ColdBrew.webp" alt="Millionaire's Roast 16 oz bottled cold brew made with Guatemalan La Morena dark roast coffee" width="1536" height="2048" loading="lazy" decoding="async" />
             </div>
           </figure>
 
           <div class="feature-copy" data-reveal="up" data-reveal-delay="180">
             <p class="section-eyebrow" data-i18n="featured.eyebrow">Featured Offering</p>
-            <h2 class="section-title" id="featured-offering-title" data-i18n="featured.title">Costa Rican Jaguar Honey</h2>
-            <p class="taste-line" data-i18n="featured.taste">Milk chocolate &bull; Honey &bull; Raspberry</p>
-            <p class="section-subtitle" data-i18n="featured.body">Our 2026 flagship medium roast is a San Diego Mill honey lot from Tarraz&uacute;, cupping at 85.25 with milk chocolate, honey, and raspberry in a bright, clean cup.</p>
+            <h2 class="section-title" id="featured-offering-title" data-i18n="featured.title">Bottled Cold Brew</h2>
+            <p class="taste-line" data-i18n="featured.taste">Dark chocolate &bull; Caramel &bull; Blackberry &bull; Vanilla</p>
+            <p class="section-subtitle" data-i18n="featured.body">Our 16 oz bottled cold brew is brewed with Guatemalan "La Morena", our dark roast Huehuetenango lot from women producers through the La Morena program. Expect a smooth, deeper cup with dark chocolate, caramel, blackberry, and vanilla.</p>
 
-            <div class="feature-specs" aria-label="Featured coffee details">
-              <div class="feature-spec"><span data-i18n="featured.spec.cupScore">Cup Score: 85.25</span></div>
-              <div class="feature-spec"><span data-i18n="featured.spec.origin">Origin: Tarraz&uacute;, Costa Rica</span></div>
-              <div class="feature-spec"><span data-i18n="featured.spec.roast">Roast: Medium</span></div>
-              <div class="feature-spec"><span data-i18n="featured.spec.body">Body: Light</span></div>
+            <div class="feature-specs" aria-label="Featured offering details">
+              <div class="feature-spec"><span data-i18n="featured.spec.cupScore">Cup Score: 85.5</span></div>
+              <div class="feature-spec"><span data-i18n="featured.spec.origin">Origin: Huehuetenango, Guatemala</span></div>
+              <div class="feature-spec"><span data-i18n="featured.spec.roast">Roast: Dark</span></div>
+              <div class="feature-spec"><span data-i18n="featured.spec.body">Body: Medium</span></div>
             </div>
 
-            <a class="btn btn-gold" data-shop-cta data-cta-location="featured_flagship" href="https://millionaires-roast.square.site/product/12-oz-costa-rican-jaguar-honey/QEJ5SCYU6IBG5MJL5OSHC5NJ?cs=true&amp;cst=custom" data-i18n="featured.cta">Shop the Flagship</a>
+            <a class="btn btn-gold" data-shop-cta data-cta-location="featured_cold_brew" href="https://millionaires-roast.square.site/product/16-oz-cold-brew/BU7ZO2I67C4QEHKAYR2TLAEG?cs=true&amp;cst=custom" data-i18n="featured.cta">Order Cold Brew</a>
           </div>
         </article>
       </div>
@@ -327,7 +340,7 @@
               </div>
             </div>
 
-            <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_light" href="https://millionaires-roast.square.site/" data-i18n="coffee.cta.light">Order Light Roast</a>
+            <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_light" href="https://millionaires-roast.square.site/product/12-oz-ugandan-rwenzori-kasese/JS5ATKDNVEHHH4AZ4KKWM2KD?cs=true&amp;cst=custom" data-i18n="coffee.cta.light">Order Light Roast</a>
           </article>
 
           <article class="card card-plate product-card product-card-featured card-interactive" id="coffee-card-medium" data-product-panel aria-labelledby="coffee-tab-medium" data-reveal="up" data-reveal-delay="90">
@@ -750,7 +763,7 @@
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-a" id="faq-panel-3" data-panel role="region" aria-labelledby="faq-trigger-3" hidden>
-            <p data-i18n="faq.a3">We currently offer five fresh single-origin coffees: Ugandan Rwenzori Kasese as our light roast, Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan "La Morena", and Colombian Sugarcane Decaf. We also offer 16 oz bottled cold brew for $5, now brewed with our Guatemalan "La Morena" dark roast for a deeper cup with dark chocolate, caramel, blackberry, and vanilla. Every coffee in the lineup is specialty grade, selected from coffees that cup 80+, and available as whole bean, ground, K-Cups, or bottled cold brew depending on the item.</p>
+            <p data-i18n="faq.a3">We currently offer five fresh single-origin coffees: Ugandan Rwenzori Kasese as our light roast, Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan "La Morena", and Colombian Sugarcane Decaf. Our Discovery Box includes three 3.5 oz samples of the light, medium, and dark roasts, available whole bean or ground. We also offer 16 oz bottled cold brew for $5, brewed with Guatemalan "La Morena". Every coffee in the lineup is specialty grade, selected from coffees that cup 80+.</p>
           </div>
 
           <button class="faq-item" id="faq-trigger-4" type="button" aria-expanded="false" aria-controls="faq-panel-4">

@@ -2,7 +2,7 @@
   const PHONE_NUMBER = "12174167072";
   const STORAGE_KEY = "mr_lang";
   const DEFAULT_SHOP_URL = "https://millionaires-roast.square.site/";
-  const COFFEE_DATA_URL = "data/coffees.json?v=66";
+  const COFFEE_DATA_URL = "data/coffees.json?v=67";
   const TRANSPARENT_PIXEL = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
   const SMS_BODY = {
     en: "Hi! I'd like to order coffee from Millionaire's Roast. What do you have available?",

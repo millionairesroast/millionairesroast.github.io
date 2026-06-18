@@ -43,7 +43,7 @@ body{
   font-family:var(--sans);
   line-height:1.6;
   text-rendering:optimizeLegibility;
-  background:var(--bg0) url("bg-tile.png") repeat;
+  background:var(--bg0) url("images/bg-tile.png") repeat;
   background-size:1200px 1200px;
 }
 body::before{
@@ -1433,7 +1433,7 @@ a:focus-visible, button:focus-visible{
   border:1px solid rgba(226,196,106,.38);
   border-radius:22px;
   background-color:#0c0a09;
-  background-image:url("bg-tile.png");
+  background-image:url("images/bg-tile.png");
   background-position:center;
   background-size:430px auto;
   box-shadow:0 28px 82px rgba(0,0,0,.55);

@@ -1,5 +1,5 @@
 {
-  "version": 16,
+  "version": 17,
   "defaultShopUrl": "https://millionaires-roast.square.site/",
   "copy": {
     "en": {
@@ -13,7 +13,7 @@
     "id": "discovery-box",
     "squareUrl": "https://millionaires-roast.square.site/product/discovery-box/I4FOVQ3W64GJPGNMPODEMAHV?cs=true&cst=custom",
     "images": {
-      "hero": "DiscoveryBox.webp"
+      "hero": "images/DiscoveryBox.webp"
     },
     "en": {
       "heroKicker": "New Market Offering",
@@ -52,7 +52,7 @@
     "id": "bottled-cold-brew",
     "squareUrl": "https://millionaires-roast.square.site/product/16-oz-cold-brew/BU7ZO2I67C4QEHKAYR2TLAEG?cs=true&cst=custom",
     "images": {
-      "featured": "ColdBrew.webp"
+      "featured": "images/ColdBrew.webp"
     },
     "en": {
       "featuredKicker": "Featured Offering",
@@ -131,8 +131,8 @@
       "active": true,
       "featured": true,
       "images": {
-        "hero": "CostaRica.webp",
-        "featured": "coffee.png"
+        "hero": "images/CostaRica.webp",
+        "featured": "images/coffee.png"
       },
       "squareUrl": "https://millionaires-roast.square.site/product/12-oz-costa-rican-jaguar-honey/QEJ5SCYU6IBG5MJL5OSHC5NJ?cs=true&cst=custom",
       "kcupUrl": "https://millionaires-roast.square.site/product/costa-rican-k-cups/XK2O6BI64E6QYRPV26KEOIKT?cs=true&cst=custom",

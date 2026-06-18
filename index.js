@@ -2,7 +2,7 @@
   const PHONE_NUMBER = "12174167072";
   const STORAGE_KEY = "mr_lang";
   const DEFAULT_SHOP_URL = "https://millionaires-roast.square.site/";
-  const COFFEE_DATA_URL = "data/coffees.json?v=65";
+  const COFFEE_DATA_URL = "data/coffees.json?v=66";
   const TRANSPARENT_PIXEL = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
   const SMS_BODY = {
     en: "Hi! I'd like to order coffee from Millionaire's Roast. What do you have available?",
@@ -35,11 +35,11 @@
     "hero.placeholder.kicker": "Tres caf\u00e9s. Una caja.",
     "hero.placeholder.title": "Discovery Box",
     "hero.placeholder.light": "Claro",
-    "hero.placeholder.lightOrigin": "Ugandan Rwenzori Kasese",
+    "hero.placeholder.lightOrigin": "Ugandan Rwenzori\nKasese",
     "hero.placeholder.medium": "Medio",
-    "hero.placeholder.mediumOrigin": "Costa Rican Jaguar Honey",
+    "hero.placeholder.mediumOrigin": "Costa Rican\nJaguar Honey",
     "hero.placeholder.dark": "Oscuro",
-    "hero.placeholder.darkOrigin": "Guatemalan La Morena",
+    "hero.placeholder.darkOrigin": "Guatemalan\nLa Morena",
     "hero.placeholder.meta": "Tres muestras de 3.5 oz \u2022 En grano entero o molido",
     "ghost.featured": "COLD BREW",
     "ghost.origin": "ORIGEN",

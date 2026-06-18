@@ -1,5 +1,5 @@
 {
-  "version": 15,
+  "version": 16,
   "defaultShopUrl": "https://millionaires-roast.square.site/",
   "copy": {
     "en": {
@@ -26,9 +26,9 @@
       "placeholderKicker": "Three coffees. One box.",
       "placeholderMeta": "Three 3.5 oz samples \u2022 Whole bean or ground",
       "heroSamples": [
-        { "roast": "Light", "origin": "Ugandan Rwenzori Kasese" },
-        { "roast": "Medium", "origin": "Costa Rican Jaguar Honey" },
-        { "roast": "Dark", "origin": "Guatemalan La Morena" }
+        { "roast": "Light", "origin": "Ugandan Rwenzori\nKasese" },
+        { "roast": "Medium", "origin": "Costa Rican\nJaguar Honey" },
+        { "roast": "Dark", "origin": "Guatemalan\nLa Morena" }
       ]
     },
     "es": {
@@ -42,9 +42,9 @@
       "placeholderKicker": "Tres caf\u00e9s. Una caja.",
       "placeholderMeta": "Tres muestras de 3.5 oz \u2022 En grano entero o molido",
       "heroSamples": [
-        { "roast": "Claro", "origin": "Ugandan Rwenzori Kasese" },
-        { "roast": "Medio", "origin": "Costa Rican Jaguar Honey" },
-        { "roast": "Oscuro", "origin": "Guatemalan La Morena" }
+        { "roast": "Claro", "origin": "Ugandan Rwenzori\nKasese" },
+        { "roast": "Medio", "origin": "Costa Rican\nJaguar Honey" },
+        { "roast": "Oscuro", "origin": "Guatemalan\nLa Morena" }
       ]
     }
   },

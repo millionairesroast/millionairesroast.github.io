@@ -36,7 +36,7 @@
   <link rel="canonical" href="https://millionairesroast.com/" />
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="apple-touch-icon" href="logo.png" />
-  <link rel="stylesheet" href="styles.css?v=67" />
+  <link rel="stylesheet" href="styles.css?v=68" />
 
   <script type="application/ld+json">
     {
@@ -110,7 +110,7 @@
           "name": "What coffees are available right now?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We currently offer five fresh single-origin coffees: Ugandan Rwenzori Kasese as our light roast, Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\", and Colombian Sugarcane Decaf. Our Discovery Box includes three 3.5 oz samples of the light, medium, and dark roasts, available whole bean or ground. We also offer 16 oz bottled cold brew for $5, brewed with Guatemalan \"La Morena\". Every coffee in the lineup is specialty grade, selected from coffees that cup 80+."
+            "text": "We currently offer five fresh single-origin coffees: Ugandan Rwenzori Kasese as our light roast, Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\", and Colombian Sugarcane Decaf. Our $18 Discovery Box includes three 3.5 oz samples: Ugandan light, Costa Rican medium, and Guatemalan dark, available whole bean or ground. We also offer 16 oz bottled cold brew for $5, brewed with Guatemalan \"La Morena\". Every coffee in the lineup is specialty grade, selected from coffees that cup 80+."
           }
         },
         {
@@ -133,7 +133,7 @@
     }
   </script>
 
-  <script defer src="index.js?v=80"></script>
+  <script defer src="index.js?v=81"></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -241,9 +241,18 @@
               <img class="hero-placeholder-logo" src="logo.png" alt="" width="180" height="180" decoding="async" />
               <strong class="hero-placeholder-title" data-hero-placeholder-title data-i18n="hero.placeholder.title">Discovery Box</strong>
               <div class="hero-placeholder-roasts">
-                <span data-i18n="hero.placeholder.light">Light</span>
-                <span data-i18n="hero.placeholder.medium">Medium</span>
-                <span data-i18n="hero.placeholder.dark">Dark</span>
+                <span data-hero-sample>
+                  <b data-hero-sample-roast data-i18n="hero.placeholder.light">Light</b>
+                  <small data-hero-sample-origin data-i18n="hero.placeholder.lightOrigin">Ugandan Rwenzori Kasese</small>
+                </span>
+                <span data-hero-sample>
+                  <b data-hero-sample-roast data-i18n="hero.placeholder.medium">Medium</b>
+                  <small data-hero-sample-origin data-i18n="hero.placeholder.mediumOrigin">Costa Rican Jaguar Honey</small>
+                </span>
+                <span data-hero-sample>
+                  <b data-hero-sample-roast data-i18n="hero.placeholder.dark">Dark</b>
+                  <small data-hero-sample-origin data-i18n="hero.placeholder.darkOrigin">Guatemalan La Morena</small>
+                </span>
               </div>
               <small data-hero-placeholder-meta data-i18n="hero.placeholder.meta">Three 3.5 oz samples &bull; Whole bean or ground</small>
             </div>
@@ -251,7 +260,7 @@
           <figcaption class="hero-floating-badge" data-reveal="right" data-reveal-delay="520">
             <span class="badge-kicker" data-i18n="hero.badge.kicker">New Market Offering</span>
             <strong data-i18n="hero.badge.title">Discovery Box</strong>
-            <span data-i18n="hero.badge.meta">3 x 3.5 oz &bull; Light &bull; Medium &bull; Dark</span>
+            <span data-i18n="hero.badge.meta">3.5 oz each &bull; Ugandan Light &bull; Costa Rican Medium &bull; Guatemalan Dark</span>
           </figcaption>
         </figure>
       </div>
@@ -295,12 +304,15 @@
           <p class="section-subtitle" data-i18n="coffees.subtitle">Five single-origin coffees, clear cup profiles, simple pricing. Compare the cup you want and order from the current roast list.</p>
         </div>
 
-        <div class="mobile-roast-tabs" data-product-tabs role="tablist" aria-labelledby="current-roast-title" data-reveal="up" data-reveal-delay="80">
-          <button id="coffee-tab-light" class="roast-pill is-active" type="button" role="tab" aria-selected="true" aria-controls="coffee-card-light" data-product-tab="0" data-i18n="coffee.ug.badge">Light Roast</button>
-          <button id="coffee-tab-medium" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-medium" data-product-tab="1" data-i18n="coffee.cr.badge">Medium Roast</button>
-          <button id="coffee-tab-medium-dark" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-medium-dark" data-product-tab="2" data-i18n="coffee.pe.badge">Med-Dark Roast</button>
-          <button id="coffee-tab-dark" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-dark" data-product-tab="3" data-i18n="coffee.gt.badge">Dark Roast</button>
-          <button id="coffee-tab-decaf" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-decaf" data-product-tab="4" data-i18n="coffee.co.badge">Decaf</button>
+        <div class="mobile-roast-controls" data-reveal="up" data-reveal-delay="80">
+          <div class="mobile-roast-tabs" data-product-tabs role="tablist" aria-labelledby="current-roast-title">
+            <button id="coffee-tab-light" class="roast-pill is-active" type="button" role="tab" aria-selected="true" aria-controls="coffee-card-light" data-product-tab="0" data-i18n="coffee.ug.badge">Light Roast</button>
+            <button id="coffee-tab-medium" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-medium" data-product-tab="1" data-i18n="coffee.cr.badge">Medium Roast</button>
+            <button id="coffee-tab-medium-dark" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-medium-dark" data-product-tab="2" data-i18n="coffee.pe.badge">Med-Dark Roast</button>
+            <button id="coffee-tab-dark" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-dark" data-product-tab="3" data-i18n="coffee.gt.badge">Dark Roast</button>
+            <button id="coffee-tab-decaf" class="roast-pill" type="button" role="tab" aria-selected="false" aria-controls="coffee-card-decaf" data-product-tab="4" data-i18n="coffee.co.badge">Decaf</button>
+          </div>
+          <a class="roast-pill mobile-discovery-box-cta" data-discovery-box-mobile-cta data-shop-cta data-cta-location="coffee_discovery_box_mobile" href="https://millionaires-roast.square.site/product/discovery-box/I4FOVQ3W64GJPGNMPODEMAHV?cs=true&amp;cst=custom" data-i18n="coffee.cta.discovery">Discovery Box</a>
         </div>
 
         <div class="coffee-product-grid" id="choose">
@@ -506,6 +518,7 @@
             <p data-i18n="coffee.price.bag">12 oz bag: $16</p>
             <p data-i18n="coffee.price.kcups">8-pack K-Cups: 1 for $10 &bull; 2 for $19 &bull; 3 for $27</p>
             <p data-i18n="coffee.price.coldbrew">16 oz cold brew: $5</p>
+            <p data-i18n="coffee.price.discovery">Discovery Box: $18</p>
           </div>
         </article>
 
@@ -763,7 +776,7 @@
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-a" id="faq-panel-3" data-panel role="region" aria-labelledby="faq-trigger-3" hidden>
-            <p data-i18n="faq.a3">We currently offer five fresh single-origin coffees: Ugandan Rwenzori Kasese as our light roast, Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan "La Morena", and Colombian Sugarcane Decaf. Our Discovery Box includes three 3.5 oz samples of the light, medium, and dark roasts, available whole bean or ground. We also offer 16 oz bottled cold brew for $5, brewed with Guatemalan "La Morena". Every coffee in the lineup is specialty grade, selected from coffees that cup 80+.</p>
+            <p data-i18n="faq.a3">We currently offer five fresh single-origin coffees: Ugandan Rwenzori Kasese as our light roast, Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan "La Morena", and Colombian Sugarcane Decaf. Our $18 Discovery Box includes three 3.5 oz samples: Ugandan light, Costa Rican medium, and Guatemalan dark, available whole bean or ground. We also offer 16 oz bottled cold brew for $5, brewed with Guatemalan "La Morena". Every coffee in the lineup is specialty grade, selected from coffees that cup 80+.</p>
           </div>
 
           <button class="faq-item" id="faq-trigger-4" type="button" aria-expanded="false" aria-controls="faq-panel-4">

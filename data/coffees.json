@@ -1,12 +1,12 @@
 {
-  "version": 14,
+  "version": 15,
   "defaultShopUrl": "https://millionaires-roast.square.site/",
   "copy": {
     "en": {
-      "faqCurrentAnswer": "We currently offer five fresh single-origin coffees: Ugandan Rwenzori Kasese as our light roast, Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\", and Colombian Sugarcane Decaf. Our Discovery Box includes three 3.5 oz samples of the light, medium, and dark roasts, available whole bean or ground. We also offer 16 oz bottled cold brew for $5, brewed with Guatemalan \"La Morena\". Every coffee in the lineup is specialty grade, selected from coffees that cup 80+."
+      "faqCurrentAnswer": "We currently offer five fresh single-origin coffees: Ugandan Rwenzori Kasese as our light roast, Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\", and Colombian Sugarcane Decaf. Our $18 Discovery Box includes three 3.5 oz samples: Ugandan light, Costa Rican medium, and Guatemalan dark, available whole bean or ground. We also offer 16 oz bottled cold brew for $5, brewed with Guatemalan \"La Morena\". Every coffee in the lineup is specialty grade, selected from coffees that cup 80+."
     },
     "es": {
-      "faqCurrentAnswer": "Actualmente ofrecemos cinco caf\u00e9s frescos de origen \u00fanico: Ugandan Rwenzori Kasese como nuestro tueste claro, Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\" y Colombian Sugarcane Decaf. Nuestra Discovery Box incluye tres muestras de 3.5 oz de los tuestes claro, medio y oscuro, disponibles en grano entero o molido. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, preparado con Guatemalan \"La Morena\". Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+."
+      "faqCurrentAnswer": "Actualmente ofrecemos cinco caf\u00e9s frescos de origen \u00fanico: Ugandan Rwenzori Kasese como nuestro tueste claro, Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\" y Colombian Sugarcane Decaf. Nuestra Discovery Box de $18 incluye tres muestras de 3.5 oz: tueste claro de Uganda, tueste medio de Costa Rica y tueste oscuro de Guatemala, disponibles en grano entero o molido. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, preparado con Guatemalan \"La Morena\". Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+."
     }
   },
   "heroOffering": {
@@ -18,20 +18,34 @@
     "en": {
       "heroKicker": "New Market Offering",
       "title": "Discovery Box",
-      "heroMeta": "3 x 3.5 oz \u2022 Light \u2022 Medium \u2022 Dark",
+      "heroMeta": "3.5 oz each \u2022 Ugandan Light \u2022 Costa Rican Medium \u2022 Guatemalan Dark",
       "heroAlt": "Millionaire's Roast Discovery Box with three 3.5 oz coffee samples",
       "heroCta": "Try the Discovery Box",
+      "mobileHeroCta": "Shop Online",
+      "mobileCta": "Discovery Box",
       "placeholderKicker": "Three coffees. One box.",
-      "placeholderMeta": "Whole bean or ground"
+      "placeholderMeta": "Three 3.5 oz samples \u2022 Whole bean or ground",
+      "heroSamples": [
+        { "roast": "Light", "origin": "Ugandan Rwenzori Kasese" },
+        { "roast": "Medium", "origin": "Costa Rican Jaguar Honey" },
+        { "roast": "Dark", "origin": "Guatemalan La Morena" }
+      ]
     },
     "es": {
       "heroKicker": "Nueva oferta de mercado",
       "title": "Discovery Box",
-      "heroMeta": "3 x 3.5 oz \u2022 Claro \u2022 Medio \u2022 Oscuro",
+      "heroMeta": "3.5 oz cada uno \u2022 Uganda claro \u2022 Costa Rica medio \u2022 Guatemala oscuro",
       "heroAlt": "Discovery Box de Millionaire's Roast con tres muestras de caf\u00e9 de 3.5 oz",
       "heroCta": "Probar la Discovery Box",
+      "mobileHeroCta": "Comprar en l\u00ednea",
+      "mobileCta": "Discovery Box",
       "placeholderKicker": "Tres caf\u00e9s. Una caja.",
-      "placeholderMeta": "En grano entero o molido"
+      "placeholderMeta": "Tres muestras de 3.5 oz \u2022 En grano entero o molido",
+      "heroSamples": [
+        { "roast": "Claro", "origin": "Ugandan Rwenzori Kasese" },
+        { "roast": "Medio", "origin": "Costa Rican Jaguar Honey" },
+        { "roast": "Oscuro", "origin": "Guatemalan La Morena" }
+      ]
     }
   },
   "featuredOffering": {

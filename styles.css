@@ -1479,18 +1479,29 @@ a:focus-visible, button:focus-visible{
 }
 .hero-placeholder-roasts span{
   min-width:0;
+  display:grid;
+  align-content:center;
+  gap:6px;
   padding:15px 8px;
+  line-height:1.2;
+}
+.hero-placeholder-roasts b{
   color:rgba(226,196,106,.92);
   font-size:12px;
   font-weight:900;
   letter-spacing:.1em;
-  line-height:1.2;
   text-transform:uppercase;
+}
+.hero-placeholder-roasts small{
+  color:rgba(244,241,234,.72);
+  font-size:10px;
+  line-height:1.25;
+  letter-spacing:0;
 }
 .hero-placeholder-roasts span + span{
   border-left:1px solid rgba(226,196,106,.24);
 }
-.hero-product-placeholder small{
+.hero-product-placeholder > small{
   color:rgba(244,241,234,.74);
   font-size:13px;
   line-height:1.35;
@@ -1787,6 +1798,7 @@ a:focus-visible, button:focus-visible{
   line-height:1.35;
   text-transform:uppercase;
 }
+.mobile-roast-controls,
 .mobile-roast-tabs{
   display:none;
 }
@@ -1822,7 +1834,7 @@ a:focus-visible, button:focus-visible{
 .lineup-pricing-lines{
   width:100%;
   display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-columns:repeat(2,minmax(0,1fr));
   gap:0;
   overflow:hidden;
   border:1px solid rgba(226,196,106,.3);
@@ -1845,6 +1857,12 @@ a:focus-visible, button:focus-visible{
 }
 .lineup-pricing-lines p + p{
   border-left:1px solid rgba(226,196,106,.22);
+}
+.lineup-pricing-lines p:nth-child(n+3){
+  border-top:1px solid rgba(226,196,106,.22);
+}
+.lineup-pricing-lines p:nth-child(odd){
+  border-left:0;
 }
 .proof-caption{
   display:grid;
@@ -2301,11 +2319,16 @@ a:focus-visible, button:focus-visible{
   .product-choice span{
     font-size:15px;
   }
+  .mobile-roast-controls{
+    display:grid;
+    gap:8px;
+    margin:0 0 14px;
+  }
   .mobile-roast-tabs{
     display:grid;
     grid-template-columns:repeat(2,minmax(0,1fr));
     gap:8px;
-    margin:0 0 14px;
+    margin:0;
   }
   .roast-pill{
     min-width:0;
@@ -2336,6 +2359,13 @@ a:focus-visible, button:focus-visible{
   }
   .mobile-roast-tabs .roast-pill:last-child:nth-child(odd){
     grid-column:1 / -1;
+  }
+  .mobile-discovery-box-cta{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
   }
   .coffee-product-grid .product-card{
     display:none;

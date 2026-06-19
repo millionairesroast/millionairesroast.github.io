@@ -2,7 +2,7 @@
   const PHONE_NUMBER = "12174167072";
   const STORAGE_KEY = "mr_lang";
   const DEFAULT_SHOP_URL = "https://millionaires-roast.square.site/";
-  const COFFEE_DATA_URL = "data/coffees.json?v=68";
+  const COFFEE_DATA_URL = "data/coffees.json?v=69";
   const TRANSPARENT_PIXEL = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
   const SMS_BODY = {
     en: "Hi! I'd like to order coffee from Millionaire's Roast. What do you have available?",
@@ -517,7 +517,6 @@
 
     const copy = getCoffeeCopy(offering, lang);
     const usesCompactHero = !isHeroDesktopImageAllowed();
-    const heroVisual = document.querySelector(".hero-visual");
     const heroBadge = document.querySelector(".hero-floating-badge");
     const badgeSpans = heroBadge ? heroBadge.querySelectorAll("span") : [];
     const heroCta = document.getElementById("heroOrderBtn");
@@ -527,7 +526,6 @@
       getCoffeeImage(offering, "hero"),
       copy.heroAlt || `Millionaire's Roast ${copy.title || "coffee"}`
     );
-    heroVisual?.classList.toggle("is-discovery-box", offering.id === "discovery-box");
     setText(badgeSpans[0], copy.heroKicker || getCopy(lang, "hero.badge.kicker"));
     setText(heroBadge?.querySelector("strong"), copy.title);
     setText(badgeSpans[1], copy.heroMeta || formatCoffeeMeta(copy));

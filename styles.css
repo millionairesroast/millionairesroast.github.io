@@ -1560,6 +1560,25 @@ a:focus-visible, button:focus-visible{
   letter-spacing:.16em;
   text-transform:uppercase;
 }
+.hero-visual.is-discovery-box .hero-floating-badge{
+  right:8px;
+  bottom:18px;
+  width:min(250px, 58%);
+  gap:3px;
+  padding:11px 13px;
+  border-radius:10px;
+}
+.hero-visual.is-discovery-box .hero-floating-badge strong{
+  font-size:15px;
+}
+.hero-visual.is-discovery-box .hero-floating-badge span:last-child{
+  font-size:11px;
+  line-height:1.3;
+}
+.hero-visual.is-discovery-box .badge-kicker{
+  font-size:9px;
+  letter-spacing:.12em;
+}
 
 .feature-panel{
   display:grid;
@@ -1662,6 +1681,11 @@ a:focus-visible, button:focus-visible{
 #coffee-card-medium-dark{order:3}
 #coffee-card-dark{order:4}
 #coffee-card-decaf{order:5}
+@media (min-width:761px){
+  .discovery-box-product-card{
+    display:none!important;
+  }
+}
 @media (min-width:981px){
   .coffee-product-grid{
     grid-template-columns:repeat(6,minmax(0,1fr));
@@ -1803,8 +1827,7 @@ a:focus-visible, button:focus-visible{
   line-height:1.35;
   text-transform:uppercase;
 }
-.mobile-roast-controls,
-.mobile-roast-tabs{
+.mobile-product-picker{
   display:none;
 }
 .lineup-pricing-card{
@@ -2324,53 +2347,36 @@ a:focus-visible, button:focus-visible{
   .product-choice span{
     font-size:15px;
   }
-  .mobile-roast-controls{
+  .mobile-product-picker{
     display:grid;
     gap:8px;
     margin:0 0 14px;
   }
-  .mobile-roast-tabs{
-    display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:8px;
-    margin:0;
-  }
-  .roast-pill{
-    min-width:0;
-    min-height:46px;
-    padding:9px 8px;
-    border:1px solid rgba(226,196,106,.28);
-    border-radius:999px;
-    background:rgba(0,0,0,.22);
-    color:rgba(244,241,234,.82);
-    cursor:pointer;
-    font:inherit;
+  .mobile-product-picker label{
+    color:rgba(226,196,106,.9);
     font-size:11px;
     font-weight:900;
-    letter-spacing:.08em;
-    line-height:1.15;
-    text-align:center;
+    letter-spacing:.14em;
+    line-height:1.3;
     text-transform:uppercase;
   }
-  .roast-pill.is-active,
-  .roast-pill[aria-selected="true"]{
-    border-color:rgba(226,196,106,.68);
-    background:linear-gradient(180deg, rgba(226,196,106,.25), rgba(200,164,77,.12));
-    color:rgba(244,241,234,.98);
+  .mobile-product-picker select{
+    width:100%;
+    min-height:48px;
+    padding:10px 38px 10px 14px;
+    border:1px solid rgba(226,196,106,.28);
+    border-radius:10px;
+    background-color:rgba(7,7,10,.92);
+    color:rgba(244,241,234,.96);
+    cursor:pointer;
+    font:inherit;
+    font-size:14px;
+    font-weight:900;
+    letter-spacing:0;
   }
-  .roast-pill:focus-visible{
+  .mobile-product-picker select:focus-visible{
     outline:2px solid rgba(226,196,106,.92);
     outline-offset:3px;
-  }
-  .mobile-roast-tabs .roast-pill:last-child:nth-child(odd){
-    grid-column:1 / -1;
-  }
-  .mobile-discovery-box-cta{
-    width:100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
   }
   .coffee-product-grid .product-card{
     display:none;

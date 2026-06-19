@@ -1,5 +1,5 @@
 {
-  "version": 17,
+  "version": 18,
   "defaultShopUrl": "https://millionaires-roast.square.site/",
   "copy": {
     "en": {
@@ -23,6 +23,16 @@
       "heroCta": "Try the Discovery Box",
       "mobileHeroCta": "Shop Online",
       "mobileCta": "Discovery Box",
+      "cardBadge": "Discovery Box",
+      "cardProcess": "Three-Pack Sampler \u2022 $18",
+      "cardDescription": "Three 3.5 oz coffee samples for comparing our light, medium, and dark roasts before committing to a full bag. Choose whole bean or ground.",
+      "cardContentsLabel": "Inside the Box",
+      "cardChoice": "I want to compare three distinct coffees and find the roast profile that fits me best.",
+      "cardCta": "Order Discovery Box",
+      "price": "$18",
+      "format": "3 x 3.5 oz",
+      "grind": "Whole bean or ground",
+      "roasts": "Light \u2022 Medium \u2022 Dark",
       "placeholderKicker": "Three coffees. One box.",
       "placeholderMeta": "Three 3.5 oz samples \u2022 Whole bean or ground",
       "heroSamples": [
@@ -39,6 +49,16 @@
       "heroCta": "Probar la Discovery Box",
       "mobileHeroCta": "Comprar en l\u00ednea",
       "mobileCta": "Discovery Box",
+      "cardBadge": "Discovery Box",
+      "cardProcess": "Sampler de tres paquetes \u2022 $18",
+      "cardDescription": "Tres muestras de caf\u00e9 de 3.5 oz para comparar nuestros tuestes claro, medio y oscuro antes de elegir una bolsa completa. Disponible en grano entero o molido.",
+      "cardContentsLabel": "Dentro de la caja",
+      "cardChoice": "Quiero comparar tres caf\u00e9s distintos y encontrar el perfil de tueste ideal para m\u00ed.",
+      "cardCta": "Ordenar Discovery Box",
+      "price": "$18",
+      "format": "3 x 3.5 oz",
+      "grind": "En grano entero o molido",
+      "roasts": "Claro \u2022 Medio \u2022 Oscuro",
       "placeholderKicker": "Tres caf\u00e9s. Una caja.",
       "placeholderMeta": "Tres muestras de 3.5 oz \u2022 En grano entero o molido",
       "heroSamples": [

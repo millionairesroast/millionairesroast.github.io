@@ -2,7 +2,7 @@
   const PHONE_NUMBER = "12174167072";
   const STORAGE_KEY = "mr_lang";
   const DEFAULT_SHOP_URL = "https://millionaires-roast.square.site/";
-  const COFFEE_DATA_URL = "data/coffees.json?v=67";
+  const COFFEE_DATA_URL = "data/coffees.json?v=68";
   const TRANSPARENT_PIXEL = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
   const SMS_BODY = {
     en: "Hi! I'd like to order coffee from Millionaire's Roast. What do you have available?",
@@ -73,6 +73,19 @@
     "coffee.price.kcups": "K-Cups de 8 unidades: 1 por $10 \u2022 2 por $19 \u2022 3 por $27",
     "coffee.price.coldbrew": "Cold brew de 16 oz: $5",
     "coffee.price.discovery": "Discovery Box: $18",
+    "product.select.label": "Elige una oferta",
+    "discovery.card.badge": "Discovery Box",
+    "discovery.card.process": "Sampler de tres paquetes \u2022 $18",
+    "discovery.card.body": "Tres muestras de caf\u00e9 de 3.5 oz para comparar nuestros tuestes claro, medio y oscuro antes de elegir una bolsa completa. Disponible en grano entero o molido.",
+    "discovery.card.contents": "Dentro de la caja",
+    "discovery.card.contentsList": "Ugandan Rwenzori Kasese \u2014 Claro \u2022 Costa Rican Jaguar Honey \u2014 Medio \u2022 Guatemalan La Morena \u2014 Oscuro",
+    "discovery.card.choice": "Quiero comparar tres caf\u00e9s distintos y encontrar el perfil de tueste ideal para m\u00ed.",
+    "discovery.spec.price": "Precio",
+    "discovery.spec.format": "Formato",
+    "discovery.spec.grind": "Preparaci\u00f3n",
+    "discovery.spec.roasts": "Tuestes",
+    "discovery.value.grind": "En grano entero o molido",
+    "discovery.value.roasts": "Claro \u2022 Medio \u2022 Oscuro",
     "coffee.ug.badge": "Tueste claro",
     "coffee.ug.title": "Ugandan Rwenzori Kasese",
     "coffee.ug.process": "Proceso natural",
@@ -124,7 +137,7 @@
     "coffee.cta.mediumDark": "Ordenar tueste medio oscuro",
     "coffee.cta.dark": "Ordenar tueste oscuro",
     "coffee.cta.decaf": "Ordenar decaf",
-    "coffee.cta.discovery": "Discovery Box",
+    "discovery.cta": "Ordenar Discovery Box",
 
     "choose.card1.title": "Quiero una taza brillante y dulce a miel, con chocolate suave y frambuesa.",
     "choose.card2.title": "Quiero una taza balanceada con chocolate, fruta de huerto y almendra tostada.",
@@ -245,7 +258,7 @@
   const carousel = document.querySelector("[data-carousel]");
   const langButtons = [...document.querySelectorAll("[data-lang-btn]")];
   const langSwitches = [...document.querySelectorAll(".lang-switch")];
-  const productTabsQuery = typeof window.matchMedia === "function"
+  const productSelectorQuery = typeof window.matchMedia === "function"
     ? window.matchMedia("(max-width: 760px)")
     : null;
   const heroDesktopQuery = typeof window.matchMedia === "function"
@@ -271,8 +284,8 @@
   let mobileMarketSwitchTimer = 0;
   let coffeeLineup = null;
   let coffeeLoadWarned = false;
-  let productTabsListenerBound = false;
-  let productTabsQueryListenerBound = false;
+  let productSelectorListenerBound = false;
+  let productModeListenerBound = false;
   let mobileMarketTabsListenerBound = false;
   let revealObserver = null;
   let sectionObserver = null;
@@ -503,7 +516,8 @@
     if (!offering) return;
 
     const copy = getCoffeeCopy(offering, lang);
-    const isMobileHero = isProductTabsMode();
+    const usesCompactHero = !isHeroDesktopImageAllowed();
+    const heroVisual = document.querySelector(".hero-visual");
     const heroBadge = document.querySelector(".hero-floating-badge");
     const badgeSpans = heroBadge ? heroBadge.querySelectorAll("span") : [];
     const heroCta = document.getElementById("heroOrderBtn");
@@ -513,6 +527,7 @@
       getCoffeeImage(offering, "hero"),
       copy.heroAlt || `Millionaire's Roast ${copy.title || "coffee"}`
     );
+    heroVisual?.classList.toggle("is-discovery-box", offering.id === "discovery-box");
     setText(badgeSpans[0], copy.heroKicker || getCopy(lang, "hero.badge.kicker"));
     setText(heroBadge?.querySelector("strong"), copy.title);
     setText(badgeSpans[1], copy.heroMeta || formatCoffeeMeta(copy));
@@ -526,13 +541,13 @@
     });
 
     if (heroCta) {
-      heroCta.href = isMobileHero
+      heroCta.href = usesCompactHero
         ? coffeeLineup?.defaultShopUrl || DEFAULT_SHOP_URL
         : getCoffeeShopUrl(offering);
-      heroCta.textContent = isMobileHero
+      heroCta.textContent = usesCompactHero
         ? copy.mobileHeroCta || getCopy(lang, "hero.cta.mobile")
         : copy.heroCta || getCopy(lang, "hero.cta.primary");
-      heroCta.dataset.ctaLocation = isMobileHero
+      heroCta.dataset.ctaLocation = usesCompactHero
         ? "hero_shop_mobile"
         : offering.id === "discovery-box" ? "hero_discovery_box" : "hero_shop_current";
     }
@@ -579,32 +594,20 @@
     }
   }
 
-  function renderCoffeeTabs(lang) {
-    const tabList = document.querySelector("[data-product-tabs]");
-    const discoveryCta = document.querySelector("[data-discovery-box-mobile-cta]");
+  function renderProductSelector(lang) {
+    const selector = document.querySelector("[data-product-select]");
     const discoveryOffering = coffeeLineup?.heroOffering;
     const activeCoffees = getActiveCoffees();
-    if (!tabList || !activeCoffees.length) return;
+    const offerings = [discoveryOffering, ...activeCoffees].filter(Boolean);
+    if (!selector || !offerings.length) return;
 
-    activeProductIndex = Math.min(activeProductIndex, activeCoffees.length - 1);
-    tabList.innerHTML = activeCoffees.map((coffee, index) => {
-      const copy = getCoffeeCopy(coffee, lang);
-      const tabId = makeCoffeeDomId("coffee-tab", coffee, index);
-      const panelId = makeCoffeeDomId("coffee-card", coffee, index);
-      const isActive = index === activeProductIndex;
-
-      return `
-        <button id="${escapeHtml(tabId)}" class="roast-pill${isActive ? " is-active" : ""}" type="button" role="tab" aria-selected="${isActive}" aria-controls="${escapeHtml(panelId)}" data-product-tab="${index}">
-          ${escapeHtml(copy.badge || copy.roast || copy.title)}
-        </button>
-      `;
+    activeProductIndex = Math.min(activeProductIndex, offerings.length - 1);
+    selector.innerHTML = offerings.map((offering, index) => {
+      const copy = getCoffeeCopy(offering, lang);
+      const label = index === 0 ? copy.title : copy.badge || copy.roast || copy.title;
+      return `<option value="${index}">${escapeHtml(label || "")}</option>`;
     }).join("");
-
-    if (discoveryCta && discoveryOffering) {
-      const discoveryCopy = getCoffeeCopy(discoveryOffering, lang);
-      discoveryCta.href = getCoffeeShopUrl(discoveryOffering);
-      discoveryCta.textContent = discoveryCopy.mobileCta || discoveryCopy.title || getCopy(lang, "coffee.cta.discovery");
-    }
+    selector.value = String(activeProductIndex);
   }
 
   function renderCoffeeSpecButton(spec, coffee, index, specIndex) {
@@ -618,11 +621,54 @@
     `;
   }
 
+  function renderDiscoveryBoxCard(offering, lang) {
+    const copy = getCoffeeCopy(offering, lang);
+    const panelId = "coffee-card-discovery";
+    const titleId = "coffee-title-discovery";
+    const isActive = activeProductIndex === 0;
+    const contents = Array.isArray(copy.heroSamples)
+      ? copy.heroSamples.map((sample) => {
+        const origin = String(sample?.origin || "").replace(/\s+/g, " ").trim();
+        return [origin, sample?.roast].filter(Boolean).join(" \u2014 ");
+      }).filter(Boolean).join(" \u2022 ")
+      : "";
+    const specs = [
+      { label: getCopy(lang, "discovery.spec.price"), value: copy.price },
+      { label: getCopy(lang, "discovery.spec.format"), value: copy.format },
+      { label: getCopy(lang, "discovery.spec.grind"), value: copy.grind },
+      { label: getCopy(lang, "discovery.spec.roasts"), value: copy.roasts }
+    ].filter((spec) => spec.label && spec.value);
+
+    return `
+      <article class="card card-plate product-card discovery-box-product-card card-interactive${isActive ? " is-active" : ""}" id="${panelId}" data-product-panel aria-labelledby="${titleId}" data-reveal="up" data-reveal-delay="0"${isProductSelectorMode() && !isActive ? " hidden" : ""}>
+        <div class="product-card-head" data-reveal="fade" data-reveal-delay="80">
+          <span class="origin-badge">${escapeHtml(copy.cardBadge || copy.title || "")}</span>
+          <span class="product-process">${escapeHtml(copy.cardProcess || "")}</span>
+        </div>
+        <h3 class="origin-title" id="${titleId}" data-reveal="fade" data-reveal-delay="120">${escapeHtml(copy.title || "")}</h3>
+        <p class="card-text" data-reveal="fade" data-reveal-delay="160">${escapeHtml(copy.cardDescription || "")}</p>
+        ${contents ? `<p class="product-notes-line" data-reveal="fade" data-reveal-delay="210"><strong>${escapeHtml(copy.cardContentsLabel || "")}</strong><span>${escapeHtml(contents)}</span></p>` : ""}
+        <div class="product-choice" data-reveal="fade" data-reveal-delay="250">
+          <span>${escapeHtml(copy.cardChoice || "")}</span>
+        </div>
+        <div class="product-spec-grid">
+          ${specs.map((spec, index) => `
+            <div class="spec-card" data-reveal="up" data-reveal-delay="${index * 45}">
+              <span class="spec-label">${escapeHtml(spec.label)}</span>
+              <span class="spec-value">${escapeHtml(spec.value)}</span>
+            </div>
+          `).join("")}
+        </div>
+        <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_discovery_box_mobile" href="${escapeHtml(getCoffeeShopUrl(offering))}">${escapeHtml(copy.cardCta || getCopy(lang, "discovery.cta"))}</a>
+      </article>
+    `;
+  }
+
   function renderCoffeeCard(coffee, index, lang) {
     const copy = getCoffeeCopy(coffee, lang);
-    const tabId = makeCoffeeDomId("coffee-tab", coffee, index);
     const panelId = makeCoffeeDomId("coffee-card", coffee, index);
-    const isActive = index === activeProductIndex;
+    const titleId = makeCoffeeDomId("coffee-title", coffee, index);
+    const isActive = index + 1 === activeProductIndex;
     const revealBase = index * 90;
     const specs = [
       {
@@ -653,12 +699,12 @@
     const notesLine = formatNotes(copy.notes);
 
     return `
-      <article class="card card-plate product-card${coffee.featured ? " product-card-featured" : ""} card-interactive${isActive ? " is-active" : ""}" id="${escapeHtml(panelId)}" data-product-panel aria-labelledby="${escapeHtml(tabId)}" data-reveal="up" data-reveal-delay="${revealBase}"${isProductTabsMode() && !isActive ? " hidden" : ""}>
+      <article class="card card-plate product-card${coffee.featured ? " product-card-featured" : ""} card-interactive${isActive ? " is-active" : ""}" id="${escapeHtml(panelId)}" data-product-panel aria-labelledby="${escapeHtml(titleId)}" data-reveal="up" data-reveal-delay="${revealBase}"${isProductSelectorMode() && !isActive ? " hidden" : ""}>
         <div class="product-card-head" data-reveal="fade" data-reveal-delay="${80 + revealBase}">
           <span class="origin-badge">${escapeHtml(copy.badge || copy.roast || "")}</span>
           <span class="product-process">${escapeHtml(copy.process || "")}</span>
         </div>
-        <h3 class="origin-title" data-reveal="fade" data-reveal-delay="${120 + revealBase}">${escapeHtml(copy.title || "")}</h3>
+        <h3 class="origin-title" id="${escapeHtml(titleId)}" data-reveal="fade" data-reveal-delay="${120 + revealBase}">${escapeHtml(copy.title || "")}</h3>
         <p class="card-text" data-reveal="fade" data-reveal-delay="${160 + revealBase}">${escapeHtml(copy.description || "")}</p>
         ${notesLine ? `<p class="product-notes-line" data-reveal="fade" data-reveal-delay="${210 + revealBase}"><strong>${escapeHtml(getNotesLabel(lang))}</strong><span>${escapeHtml(notesLine)}</span></p>` : ""}
         <div class="product-choice" data-reveal="fade" data-reveal-delay="${250 + revealBase}">
@@ -674,11 +720,16 @@
 
   function renderCoffeeCards(lang) {
     const grid = document.querySelector(".coffee-product-grid");
+    const discoveryOffering = coffeeLineup?.heroOffering;
     const activeCoffees = getActiveCoffees();
     if (!grid || !activeCoffees.length) return;
 
-    activeProductIndex = Math.min(activeProductIndex, activeCoffees.length - 1);
-    grid.innerHTML = activeCoffees.map((coffee, index) => renderCoffeeCard(coffee, index, lang)).join("");
+    const productCount = activeCoffees.length + (discoveryOffering ? 1 : 0);
+    activeProductIndex = Math.min(activeProductIndex, productCount - 1);
+    grid.innerHTML = [
+      discoveryOffering ? renderDiscoveryBoxCard(discoveryOffering, lang) : "",
+      ...activeCoffees.map((coffee, index) => renderCoffeeCard(coffee, index, lang))
+    ].join("");
   }
 
   function renderCoffeeLineup(lang = getCurrentLang()) {
@@ -686,10 +737,10 @@
 
     renderCoffeeHero(lang);
     renderFeaturedCoffee(lang);
-    renderCoffeeTabs(lang);
+    renderProductSelector(lang);
     renderCoffeeCards(lang);
     setupRevealAnimations();
-    setupProductTabs();
+    setupProductSelector();
     setupCursorCardGlow();
     setupAnalytics();
   }
@@ -1168,23 +1219,20 @@
     });
   }
 
-  function isProductTabsMode() {
-    return Boolean(productTabsQuery?.matches);
+  function isProductSelectorMode() {
+    return Boolean(productSelectorQuery?.matches);
   }
 
-  function getProductTabElements() {
-    const tabList = document.querySelector("[data-product-tabs]");
+  function getProductSelectorElements() {
+    const selector = document.querySelector("[data-product-select]");
     const grid = document.querySelector(".coffee-product-grid");
-    const tabs = tabList ? [...tabList.querySelectorAll("[data-product-tab]")] : [];
-    const panels = tabs
-      .map((tab) => document.getElementById(tab.getAttribute("aria-controls") || ""))
-      .filter(Boolean);
+    const panels = grid ? [...grid.querySelectorAll("[data-product-panel]")] : [];
 
-    return { tabList, grid, tabs, panels };
+    return { selector, grid, panels };
   }
 
   function revealProductPanelIfReadable(panel) {
-    if (!panel || !isProductTabsMode()) return;
+    if (!panel || !isProductSelectorMode()) return;
 
     const revealIfReadable = () => {
       const rect = panel.getBoundingClientRect();
@@ -1196,36 +1244,31 @@
     window.setTimeout(revealIfReadable, 250);
   }
 
-  function renderProductTabs() {
-    const { tabs: productTabs, panels: productPanels } = getProductTabElements();
-    if (!productTabs.length || !productPanels.length) return;
+  function renderProductSelection() {
+    const { selector, panels: productPanels } = getProductSelectorElements();
+    if (!productPanels.length) return;
 
     activeProductIndex = Math.min(activeProductIndex, productPanels.length - 1);
-    const tabsMode = isProductTabsMode();
-    productTabs.forEach((tab, index) => {
-      const isActive = index === activeProductIndex;
-      tab.classList.toggle("is-active", isActive);
-      tab.setAttribute("aria-selected", String(isActive));
-      tab.setAttribute("tabindex", tabsMode && !isActive ? "-1" : "0");
-    });
+    const selectorMode = isProductSelectorMode();
+    if (selector) selector.value = String(activeProductIndex);
 
     productPanels.forEach((panel, index) => {
       const isActive = index === activeProductIndex;
       panel.classList.toggle("is-active", isActive);
-      panel.hidden = tabsMode && !isActive;
+      panel.hidden = selectorMode && !isActive;
     });
 
     revealProductPanelIfReadable(productPanels[activeProductIndex]);
   }
 
-  function updateProductTabs(nextIndex = activeProductIndex, animate = false) {
-    const { grid: productGrid, tabs: productTabs, panels: productPanels } = getProductTabElements();
-    if (!productTabs.length || !productPanels.length) return;
+  function updateProductSelection(nextIndex = activeProductIndex, animate = false) {
+    const { grid: productGrid, panels: productPanels } = getProductSelectorElements();
+    if (!productPanels.length) return;
 
     const boundedIndex = Math.min(Math.max(nextIndex, 0), productPanels.length - 1);
     const shouldAnimate = animate
       && productGrid
-      && isProductTabsMode()
+      && isProductSelectorMode()
       && boundedIndex !== activeProductIndex
       && !productMotionQuery?.matches;
 
@@ -1234,62 +1277,39 @@
     if (!shouldAnimate) {
       productGrid?.classList.remove("is-switching");
       activeProductIndex = boundedIndex;
-      renderProductTabs();
+      renderProductSelection();
       return;
     }
 
     productGrid.classList.add("is-switching");
     productSwitchTimer = window.setTimeout(() => {
       activeProductIndex = boundedIndex;
-      renderProductTabs();
+      renderProductSelection();
       requestAnimationFrame(() => {
         productGrid.classList.remove("is-switching");
       });
     }, 150);
   }
 
-  function setupProductTabs() {
-    const { tabList: productTabList, tabs: productTabs, panels: productPanels } = getProductTabElements();
-    if (!productTabList || !productTabs.length || !productPanels.length) return;
+  function setupProductSelector() {
+    const { selector, panels: productPanels } = getProductSelectorElements();
+    if (!selector || !productPanels.length) return;
 
-    if (!productTabsListenerBound) {
-      productTabList.addEventListener("click", (event) => {
-        const tab = event.target.closest("[data-product-tab]");
-        if (!tab || !productTabList.contains(tab)) return;
-
-        const currentTabs = [...productTabList.querySelectorAll("[data-product-tab]")];
-        const index = currentTabs.indexOf(tab);
-        if (index < 0) return;
-        updateProductTabs(index, true);
+    if (!productSelectorListenerBound) {
+      selector.addEventListener("change", () => {
+        updateProductSelection(Number(selector.value), true);
       });
-
-      productTabList.addEventListener("keydown", (event) => {
-        const tab = event.target.closest("[data-product-tab]");
-        if (!tab || !productTabList.contains(tab)) return;
-        if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
-
-        const currentTabs = [...productTabList.querySelectorAll("[data-product-tab]")];
-        if (!currentTabs.length) return;
-
-        event.preventDefault();
-        const direction = event.key === "ArrowRight" ? 1 : -1;
-        const nextIndex = (activeProductIndex + direction + currentTabs.length) % currentTabs.length;
-        updateProductTabs(nextIndex, true);
-        currentTabs[nextIndex]?.focus();
-      });
-
-      productTabsListenerBound = true;
+      productSelectorListenerBound = true;
     }
 
-    if (!productTabsQueryListenerBound) {
-      productTabsQuery?.addEventListener?.("change", () => {
-        updateProductTabs();
-        renderCoffeeHero(getCurrentLang());
+    if (!productModeListenerBound) {
+      productSelectorQuery?.addEventListener?.("change", () => {
+        updateProductSelection();
       });
-      productTabsQueryListenerBound = true;
+      productModeListenerBound = true;
     }
 
-    updateProductTabs();
+    updateProductSelection();
   }
 
   function applyMobileMarketTabState(tabList, activeKey) {
@@ -1584,12 +1604,15 @@
 
   applyBrandFallback();
   setupViewportSizing();
-  heroDesktopQuery?.addEventListener?.("change", syncHeroProductImageLoading);
+  heroDesktopQuery?.addEventListener?.("change", () => {
+    syncHeroProductImageLoading();
+    renderCoffeeHero(getCurrentLang());
+  });
   syncHeroProductImageLoading();
   setupMobileNav();
   setupAccordion();
   setupRevealAnimations();
-  setupProductTabs();
+  setupProductSelector();
   setupMobileMarketTabs();
   setupCarousel();
   setupLanguageToggle();

@@ -2,7 +2,7 @@
   const PHONE_NUMBER = "12174167072";
   const STORAGE_KEY = "mr_lang";
   const DEFAULT_SHOP_URL = "https://millionaires-roast.square.site/";
-  const COFFEE_DATA_URL = "data/coffees.json?v=69";
+  const COFFEE_DATA_URL = "data/coffees.json?v=72";
   const TRANSPARENT_PIXEL = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
   const SMS_BODY = {
     en: "Hi! I'd like to order coffee from Millionaire's Roast. What do you have available?",
@@ -662,11 +662,11 @@
     `;
   }
 
-  function renderCoffeeCard(coffee, index, lang) {
+  function renderCoffeeCard(coffee, index, lang, productIndex) {
     const copy = getCoffeeCopy(coffee, lang);
     const panelId = makeCoffeeDomId("coffee-card", coffee, index);
     const titleId = makeCoffeeDomId("coffee-title", coffee, index);
-    const isActive = index + 1 === activeProductIndex;
+    const isActive = productIndex === activeProductIndex;
     const revealBase = index * 90;
     const specs = [
       {
@@ -722,11 +722,15 @@
     const activeCoffees = getActiveCoffees();
     if (!grid || !activeCoffees.length) return;
 
+    const coffeeProductOffset = discoveryOffering ? 1 : 0;
+
     const productCount = activeCoffees.length + (discoveryOffering ? 1 : 0);
     activeProductIndex = Math.min(activeProductIndex, productCount - 1);
     grid.innerHTML = [
       discoveryOffering ? renderDiscoveryBoxCard(discoveryOffering, lang) : "",
-      ...activeCoffees.map((coffee, index) => renderCoffeeCard(coffee, index, lang))
+      ...activeCoffees.map((coffee, index) =>
+        renderCoffeeCard(coffee, index, lang, index + coffeeProductOffset)
+      )
     ].join("");
   }
 

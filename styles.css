@@ -2517,9 +2517,6 @@ a:focus-visible, button:focus-visible{
   .lineup-pricing-card h3::after{
     margin-inline:auto;
   }
-  .lineup-pricing-lines{
-    grid-template-columns:1fr;
-  }
   .lineup-pricing-lines p + p{
     border-left:0;
     border-top:1px solid rgba(226,196,106,.22);

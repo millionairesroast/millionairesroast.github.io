@@ -1,5 +1,5 @@
 {
-  "version": 18,
+  "version": 22,
   "defaultShopUrl": "https://millionaires-roast.square.site/",
   "copy": {
     "en": {
@@ -12,9 +12,6 @@
   "heroOffering": {
     "id": "discovery-box",
     "squareUrl": "https://millionaires-roast.square.site/product/discovery-box/I4FOVQ3W64GJPGNMPODEMAHV?cs=true&cst=custom",
-    "images": {
-      "hero": "images/DiscoveryBox.webp"
-    },
     "en": {
       "heroKicker": "New Market Offering",
       "title": "Discovery Box",
@@ -22,7 +19,6 @@
       "heroAlt": "Millionaire's Roast Discovery Box with three 3.5 oz coffee samples",
       "heroCta": "Try the Discovery Box",
       "mobileHeroCta": "Shop Online",
-      "mobileCta": "Discovery Box",
       "cardBadge": "Discovery Box",
       "cardProcess": "Three-Pack Sampler \u2022 $18",
       "cardDescription": "Three 3.5 oz coffee samples for comparing our light, medium, and dark roasts before committing to a full bag. Choose whole bean or ground.",
@@ -48,7 +44,6 @@
       "heroAlt": "Discovery Box de Millionaire's Roast con tres muestras de caf\u00e9 de 3.5 oz",
       "heroCta": "Probar la Discovery Box",
       "mobileHeroCta": "Comprar en l\u00ednea",
-      "mobileCta": "Discovery Box",
       "cardBadge": "Discovery Box",
       "cardProcess": "Sampler de tres paquetes \u2022 $18",
       "cardDescription": "Tres muestras de caf\u00e9 de 3.5 oz para comparar nuestros tuestes claro, medio y oscuro antes de elegir una bolsa completa. Disponible en grano entero o molido.",
@@ -108,10 +103,6 @@
       "order": 1,
       "active": true,
       "featured": false,
-      "images": {
-        "hero": "",
-        "featured": ""
-      },
       "squareUrl": "https://millionaires-roast.square.site/product/12-oz-ugandan-rwenzori-kasese/JS5ATKDNVEHHH4AZ4KKWM2KD?cs=true&cst=custom",
       "en": {
         "badge": "Light Roast",
@@ -150,10 +141,6 @@
       "order": 2,
       "active": true,
       "featured": true,
-      "images": {
-        "hero": "images/CostaRica.webp",
-        "featured": "images/coffee.png"
-      },
       "squareUrl": "https://millionaires-roast.square.site/product/12-oz-costa-rican-jaguar-honey/QEJ5SCYU6IBG5MJL5OSHC5NJ?cs=true&cst=custom",
       "kcupUrl": "https://millionaires-roast.square.site/product/costa-rican-k-cups/XK2O6BI64E6QYRPV26KEOIKT?cs=true&cst=custom",
       "en": {
@@ -199,10 +186,6 @@
       "order": 3,
       "active": true,
       "featured": false,
-      "images": {
-        "hero": "",
-        "featured": ""
-      },
       "squareUrl": "https://millionaires-roast.square.site/product/12-oz-peruvian-chonta-g1-washed/JMMXFQ25WAPEBGCDHDJQZIRC?cs=true&cst=custom",
       "kcupUrl": "https://millionaires-roast.square.site/product/peruvian-k-cups/GCITAQKY3XZGPXZZ4HE762VO?cs=true&cst=custom",
       "en": {
@@ -242,10 +225,6 @@
       "order": 4,
       "active": true,
       "featured": false,
-      "images": {
-        "hero": "",
-        "featured": ""
-      },
       "squareUrl": "https://millionaires-roast.square.site/product/12-oz-guatemalan-la-morena-/CQKGUQKGYPFRX4HIJ7OHCC3D?cs=true&cst=custom",
       "kcupUrl": "https://millionaires-roast.square.site/product/guatemalan-k-cups/VXJ4XFCR73UYWLNIGMNDAUV6?cs=true&cst=custom",
       "en": {
@@ -285,10 +264,6 @@
       "order": 5,
       "active": true,
       "featured": false,
-      "images": {
-        "hero": "",
-        "featured": ""
-      },
       "squareUrl": "https://millionaires-roast.square.site/product/12-oz-columbian-sugarcane-decaf/KRJHD33242YLSVMEPIWHQBEW?cs=true&cst=custom",
       "kcupUrl": "https://millionaires-roast.square.site/product/columbian-decaf-k-cups/VUE35XOSATA5FVISDKYNO62F?cs=true&cst=custom",
       "en": {

@@ -173,6 +173,7 @@
     "find.cottage.role": "Punto de contacto principal en Beardstown",
     "find.cottage.note": "The Cottage es nuestra conexi\u00f3n principal en Beardstown: una tienda estilo puesto local sin personal en 201 W Main St, conectada con Rosebud & Co., que tendra la l\u00ednea completa de Millionaire's Roast para clientes de Beardstown.",
     "find.cottage.photoCaption": "The Cottage \u2022 201 W Main St",
+    "find.cottage.directions": "C\u00f3mo llegar",
     "find.oldCapitol.title": "Old Capitol Farmers Market",
     "find.oldCapitol.location": "Centro de Springfield",
     "find.oldCapitol.days": "Mi\u00e9rcoles y s\u00e1bados",
@@ -897,6 +898,14 @@
     registerContactClickTracking(emailCard, "email_click", "contact_email");
     registerContactClickTracking(instagramCard, "instagram_click", "contact_instagram");
     registerContactClickTracking(facebookCard, "facebook_click", "contact_facebook");
+
+    document.querySelectorAll("[data-map-link]").forEach((link, index) => {
+      registerContactClickTracking(
+        link,
+        "directions_click",
+        link.dataset.contactLocation || `directions_${index + 1}`
+      );
+    });
   }
 
   function syncHeaderHeight() {

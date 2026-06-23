@@ -1,12 +1,12 @@
 {
-  "version": 22,
+  "version": 23,
   "defaultShopUrl": "https://millionaires-roast.square.site/",
   "copy": {
     "en": {
-      "faqCurrentAnswer": "We currently offer five fresh single-origin coffees: Ugandan Rwenzori Kasese as our light roast, Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\", and Colombian Sugarcane Decaf. Our $18 Discovery Box includes three 3.5 oz samples: Ugandan light, Costa Rican medium, and Guatemalan dark, available whole bean or ground. We also offer 16 oz bottled cold brew for $5, brewed with Guatemalan \"La Morena\". Every coffee in the lineup is specialty grade, selected from coffees that cup 80+."
+      "faqCurrentAnswer": "We currently offer five fresh single-origin coffees: Ugandan Rwenzori Kasese as our light roast, Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\", and Colombian Sugarcane Decaf. Our $18 Discovery Box includes three 3.5 oz samples: Ugandan light, Costa Rican medium, and Guatemalan dark, available whole bean or ground. We also offer 16 oz bottled cold brew for $5, brewed with Guatemalan \"La Morena\". Every coffee in the lineup is specialty grade."
     },
     "es": {
-      "faqCurrentAnswer": "Actualmente ofrecemos cinco caf\u00e9s frescos de origen \u00fanico: Ugandan Rwenzori Kasese como nuestro tueste claro, Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\" y Colombian Sugarcane Decaf. Nuestra Discovery Box de $18 incluye tres muestras de 3.5 oz: tueste claro de Uganda, tueste medio de Costa Rica y tueste oscuro de Guatemala, disponibles en grano entero o molido. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, preparado con Guatemalan \"La Morena\". Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+."
+      "faqCurrentAnswer": "Actualmente ofrecemos cinco caf\u00e9s frescos de origen \u00fanico: Ugandan Rwenzori Kasese como nuestro tueste claro, Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\" y Colombian Sugarcane Decaf. Nuestra Discovery Box de $18 incluye tres muestras de 3.5 oz: tueste claro de Uganda, tueste medio de Costa Rica y tueste oscuro de Guatemala, disponibles en grano entero o molido. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, preparado con Guatemalan \"La Morena\". Toda la l\u00ednea es de grado de especialidad."
     }
   },
   "heroOffering": {
@@ -73,14 +73,13 @@
       "featuredKicker": "Featured Offering",
       "title": "Bottled Cold Brew",
       "featuredAlt": "Millionaire's Roast 16 oz bottled cold brew made with Guatemalan La Morena dark roast coffee",
-      "featuredDescription": "Our 16 oz bottled cold brew is now brewed with Guatemalan \"La Morena\", our dark roast Huehuetenango lot from women producers through the La Morena program. Expect a smooth, deeper cup with dark chocolate, caramel, blackberry, and vanilla.",
+      "featuredDescription": "Our 16 oz bottled cold brew is brewed with Guatemalan \"La Morena\", our dark roast Huehuetenango lot from women producers through the La Morena program. Expect a smooth, deeper cup with dark chocolate, caramel, blackberry, and vanilla.",
       "featuredCta": "Order Cold Brew",
       "notes": ["Dark chocolate", "Caramel", "Blackberry", "Vanilla"],
       "origin": "Huehuetenango, Guatemala",
       "roast": "Dark",
       "body": "Medium",
-      "acidity": "Medium",
-      "cupScore": "85.5"
+      "acidity": "Medium"
     },
     "es": {
       "featuredKicker": "Oferta destacada",
@@ -92,8 +91,7 @@
       "origin": "Huehuetenango, Guatemala",
       "roast": "Oscuro",
       "body": "Medio",
-      "acidity": "Media",
-      "cupScore": "85.5"
+      "acidity": "Media"
     }
   },
   "coffees": [
@@ -108,30 +106,28 @@
         "badge": "Light Roast",
         "title": "Ugandan Rwenzori Kasese",
         "process": "Natural Process",
-        "description": "Fruit-forward 2026 Kasese natural, cup score 86.25, from Kyagalanyi Coffee smallholders listed as 43% women, with raspberry, plum, brown sugar, clementine, and black tea.",
-        "featuredDescription": "A fruit-forward 2026 natural coffee from Kasese in Uganda's Rwenzori Mountains, cupping at 86.25 with raspberry, plum, brown sugar, clementine, and black tea.",
+        "description": "Fruit-forward 2026 Kasese natural from Kyagalanyi Coffee smallholders listed as 43% women, with raspberry, plum, brown sugar, clementine, and black tea.",
+        "featuredDescription": "A fruit-forward 2026 natural coffee from Kasese in Uganda's Rwenzori Mountains with raspberry, plum, brown sugar, clementine, and black tea.",
         "choice": "I want a fruit-forward light roast with berry sweetness, clementine, and black tea.",
         "notes": ["Raspberry", "Plum", "Brown sugar", "Clementine", "Black tea"],
         "origin": "Kasese, Rwenzori Mountains, Uganda",
         "roast": "Light Roast",
         "body": "Medium",
         "acidity": "Mild",
-        "cupScore": "86.25",
         "cta": "Order Light Roast"
       },
       "es": {
         "badge": "Tueste claro",
         "title": "Ugandan Rwenzori Kasese",
         "process": "Proceso natural",
-        "description": "Caf\u00e9 natural 2026 frutal de Kasese, puntaje 86.25, de peque\u00f1os productores de Kyagalanyi Coffee listados como 43% mujeres, con frambuesa, ciruela, az\u00facar morena, clementina y t\u00e9 negro.",
-        "featuredDescription": "Un caf\u00e9 natural 2026 frutal de Kasese, en las monta\u00f1as Rwenzori de Uganda, con puntaje de taza 86.25 y notas de frambuesa, ciruela, az\u00facar morena, clementina y t\u00e9 negro.",
+        "description": "Caf\u00e9 natural 2026 frutal de Kasese, de peque\u00f1os productores de Kyagalanyi Coffee listados como 43% mujeres, con frambuesa, ciruela, az\u00facar morena, clementina y t\u00e9 negro.",
+        "featuredDescription": "Un caf\u00e9 natural 2026 frutal de Kasese, en las monta\u00f1as Rwenzori de Uganda, con notas de frambuesa, ciruela, az\u00facar morena, clementina y t\u00e9 negro.",
         "choice": "Quiero un tueste claro frutal con dulzura de berries, clementina y t\u00e9 negro.",
         "notes": ["Frambuesa", "Ciruela", "Az\u00facar morena", "Clementina", "T\u00e9 negro"],
         "origin": "Kasese, monta\u00f1as Rwenzori, Uganda",
         "roast": "Tueste claro",
         "body": "Medio",
         "acidity": "Suave",
-        "cupScore": "86.25",
         "cta": "Ordenar tueste claro"
       }
     },
@@ -150,15 +146,14 @@
         "badge": "Medium Roast",
         "title": "Costa Rican Jaguar Honey",
         "process": "Honey Process",
-        "description": "Bright 2026 San Diego Mill honey lot, cup score 85.25, with milk chocolate, honey, and raspberry over a clean medium roast profile.",
-        "featuredDescription": "Our 2026 flagship medium roast is a San Diego Mill honey lot from Tarraz\u00fa, cupping at 85.25 with milk chocolate, honey, and raspberry in a bright, clean cup.",
+        "description": "Bright 2026 San Diego Mill honey lot with milk chocolate, honey, and raspberry over a clean medium roast profile.",
+        "featuredDescription": "Our 2026 flagship medium roast is a San Diego Mill honey lot from Tarraz\u00fa with milk chocolate, honey, and raspberry in a bright, clean cup.",
         "choice": "I want a bright, honey-sweet cup with soft chocolate and raspberry.",
         "notes": ["Milk chocolate", "Honey", "Raspberry"],
         "origin": "Tarraz\u00fa, Costa Rica",
         "roast": "Medium Roast",
         "body": "Light",
         "acidity": "Bright",
-        "cupScore": "85.25",
         "cta": "Order Medium Roast"
       },
       "es": {
@@ -168,15 +163,14 @@
         "badge": "Tueste medio",
         "title": "Costa Rican Jaguar Honey",
         "process": "Proceso Honey",
-        "description": "Lote honey 2026 del beneficio San Diego, puntaje 85.25, con chocolate con leche, miel y frambuesa sobre un perfil limpio de tueste medio.",
-        "featuredDescription": "Nuestro tueste medio insignia 2026 es un lote honey del beneficio San Diego en Tarraz\u00fa, con puntaje de taza 85.25 y notas de chocolate con leche, miel y frambuesa en una taza brillante y limpia.",
+        "description": "Lote honey 2026 del beneficio San Diego, con chocolate con leche, miel y frambuesa sobre un perfil limpio de tueste medio.",
+        "featuredDescription": "Nuestro tueste medio insignia 2026 es un lote honey del beneficio San Diego en Tarraz\u00fa, con notas de chocolate con leche, miel y frambuesa en una taza brillante y limpia.",
         "choice": "Quiero una taza brillante y dulce a miel, con chocolate suave y frambuesa.",
         "notes": ["Chocolate con leche", "Miel", "Frambuesa"],
         "origin": "Tarraz\u00fa, Costa Rica",
         "roast": "Tueste medio",
         "body": "Ligero",
         "acidity": "Brillante",
-        "cupScore": "85.25",
         "cta": "Ordenar tueste medio"
       }
     },
@@ -192,30 +186,28 @@
         "badge": "Med-Dark Roast",
         "title": "Peruvian Chonta G1 Washed",
         "process": "Washed Process",
-        "description": "Balanced 2026 Chonta washed coffee from Cajamarca, cup score 85.5, with chocolate, green apple, plum, roasted almond, and citrus.",
-        "featuredDescription": "A balanced 2026 washed coffee from Chonta, Cajamarca, cupping at 85.5 with chocolate, green apple, plum, roasted almond, and citrus.",
+        "description": "Balanced 2026 Chonta washed coffee from Cajamarca with chocolate, green apple, plum, roasted almond, and citrus.",
+        "featuredDescription": "A balanced 2026 washed coffee from Chonta, Cajamarca with chocolate, green apple, plum, roasted almond, and citrus.",
         "choice": "I want a balanced cup with chocolate, orchard fruit, and roasted almond.",
         "notes": ["Chocolate", "Green apple", "Plum", "Roasted almond", "Citrus"],
         "origin": "Chonta, Cajamarca, Peru",
         "roast": "Medium Dark Roast",
         "body": "Medium",
         "acidity": "Medium",
-        "cupScore": "85.5",
         "cta": "Order Medium Dark Roast"
       },
       "es": {
         "badge": "Tueste med-oscuro",
         "title": "Peruvian Chonta G1 Washed",
         "process": "Proceso lavado",
-        "description": "Caf\u00e9 lavado 2026 de Chonta, Cajamarca, puntaje 85.5, con chocolate, manzana verde, ciruela, almendra tostada y c\u00edtricos.",
-        "featuredDescription": "Un caf\u00e9 lavado 2026 balanceado de Chonta, Cajamarca, con puntaje de taza 85.5 y notas de chocolate, manzana verde, ciruela, almendra tostada y c\u00edtricos.",
+        "description": "Caf\u00e9 lavado 2026 de Chonta, Cajamarca, con chocolate, manzana verde, ciruela, almendra tostada y c\u00edtricos.",
+        "featuredDescription": "Un caf\u00e9 lavado 2026 balanceado de Chonta, Cajamarca, con notas de chocolate, manzana verde, ciruela, almendra tostada y c\u00edtricos.",
         "choice": "Quiero una taza balanceada con chocolate, fruta de huerto y almendra tostada.",
         "notes": ["Chocolate", "Manzana verde", "Ciruela", "Almendra tostada", "C\u00edtricos"],
         "origin": "Chonta, Cajamarca, Per\u00fa",
         "roast": "Tueste medio oscuro",
         "body": "Medio",
         "acidity": "Media",
-        "cupScore": "85.5",
         "cta": "Ordenar tueste medio oscuro"
       }
     },
@@ -231,30 +223,28 @@
         "badge": "Dark Roast",
         "title": "Guatemalan \"La Morena\"",
         "process": "Washed Process",
-        "description": "Rich 2026 Huehuetenango lot from women producers through La Morena, cup score 85.5, with dark chocolate, caramel, blackberry, and vanilla.",
-        "featuredDescription": "A rich 2026 Huehuetenango lot from various women producers through the La Morena program, cupping at 85.5 with dark chocolate, caramel, blackberry, and vanilla.",
+        "description": "Rich 2026 Huehuetenango lot from women producers through La Morena with dark chocolate, caramel, blackberry, and vanilla.",
+        "featuredDescription": "A rich 2026 Huehuetenango lot from various women producers through the La Morena program with dark chocolate, caramel, blackberry, and vanilla.",
         "choice": "I want a deeper cup with dark chocolate, caramel, and blackberry.",
         "notes": ["Dark chocolate", "Caramel", "Blackberry", "Vanilla"],
         "origin": "Huehuetenango, Guatemala",
         "roast": "Dark Roast",
         "body": "Medium",
         "acidity": "Medium",
-        "cupScore": "85.5",
         "cta": "Order Dark Roast"
       },
       "es": {
         "badge": "Tueste oscuro",
         "title": "Guatemalan \"La Morena\"",
         "process": "Proceso lavado",
-        "description": "Lote rico 2026 de Huehuetenango, de mujeres productoras del programa La Morena, puntaje 85.5, con chocolate oscuro, caramelo, mora y vainilla.",
-        "featuredDescription": "Un lote rico 2026 de Huehuetenango, producido por varias mujeres productoras a trav\u00e9s del programa La Morena, con puntaje de taza 85.5 y notas de chocolate oscuro, caramelo, mora y vainilla.",
+        "description": "Lote rico 2026 de Huehuetenango, de mujeres productoras del programa La Morena, con chocolate oscuro, caramelo, mora y vainilla.",
+        "featuredDescription": "Un lote rico 2026 de Huehuetenango, producido por varias mujeres productoras a trav\u00e9s del programa La Morena, con notas de chocolate oscuro, caramelo, mora y vainilla.",
         "choice": "Quiero una taza m\u00e1s profunda con chocolate oscuro, caramelo y mora.",
         "notes": ["Chocolate oscuro", "Caramelo", "Mora", "Vainilla"],
         "origin": "Huehuetenango, Guatemala",
         "roast": "Tueste oscuro",
         "body": "Medio",
         "acidity": "Media",
-        "cupScore": "85.5",
         "cta": "Ordenar tueste oscuro"
       }
     },
@@ -270,30 +260,28 @@
         "badge": "Decaf",
         "title": "Colombian Sugarcane Decaf",
         "process": "Sugarcane EA Decaf",
-        "description": "Medium-dark sugarcane EA decaf from Valle del Cauca, cup score 84.5, with milk chocolate, almond, strawberry, vanilla, and citrus.",
-        "featuredDescription": "A bright, full-flavored 2026 sugarcane EA decaf from Valle del Cauca, cupping at 84.5 with milk chocolate, almond, strawberry, vanilla, and citrus.",
+        "description": "Medium-dark sugarcane EA decaf from Valle del Cauca with milk chocolate, almond, strawberry, vanilla, and citrus.",
+        "featuredDescription": "A bright, full-flavored 2026 sugarcane EA decaf from Valle del Cauca with milk chocolate, almond, strawberry, vanilla, and citrus.",
         "choice": "I want real coffee flavor without the caffeine: chocolate, almond, and bright fruit.",
         "notes": ["Milk chocolate", "Almond", "Strawberry", "Vanilla", "Citrus"],
         "origin": "Valle del Cauca, Colombia",
         "roast": "Medium Dark Roast",
         "body": "Medium",
         "acidity": "Bright",
-        "cupScore": "84.5",
         "cta": "Order Decaf"
       },
       "es": {
         "badge": "Decaf",
         "title": "Colombian Sugarcane Decaf",
         "process": "Descafeinado Sugarcane EA",
-        "description": "Descafeinado sugarcane EA de Valle del Cauca, puntaje 84.5, con chocolate con leche, almendra, fresa, vainilla y c\u00edtricos.",
-        "featuredDescription": "Un descafeinado sugarcane EA 2026 de Valle del Cauca, brillante y con sabor completo, con puntaje de taza 84.5 y notas de chocolate con leche, almendra, fresa, vainilla y c\u00edtricos.",
+        "description": "Descafeinado sugarcane EA de Valle del Cauca con chocolate con leche, almendra, fresa, vainilla y c\u00edtricos.",
+        "featuredDescription": "Un descafeinado sugarcane EA 2026 de Valle del Cauca, brillante y con sabor completo, con notas de chocolate con leche, almendra, fresa, vainilla y c\u00edtricos.",
         "choice": "Quiero sabor de caf\u00e9 real sin cafe\u00edna: chocolate, almendra y fruta brillante.",
         "notes": ["Chocolate con leche", "Almendra", "Fresa", "Vainilla", "C\u00edtricos"],
         "origin": "Valle del Cauca, Colombia",
         "roast": "Tueste medio oscuro",
         "body": "Medio",
         "acidity": "Brillante",
-        "cupScore": "84.5",
         "cta": "Ordenar decaf"
       }
     }

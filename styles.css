@@ -1456,7 +1456,7 @@ a:focus-visible, button:focus-visible{
 .hero-placeholder-kicker{
   align-self:start;
   color:rgba(226,196,106,.94);
-  font-size:12px;
+  font-size:13px;
   font-weight:900;
   letter-spacing:.16em;
   line-height:1.35;
@@ -1485,17 +1485,34 @@ a:focus-visible, button:focus-visible{
   grid-template-columns:repeat(3,minmax(0,1fr));
   border-block:1px solid rgba(226,196,106,.3);
 }
+.hero-placeholder-roasts a,
 .hero-placeholder-roasts span{
   min-width:0;
   display:grid;
   align-content:center;
   gap:6px;
-  padding:15px 8px;
+  padding:16px 8px;
+  border:0;
+  color:inherit;
   line-height:1.2;
+  text-decoration:none;
+  transition:
+    background var(--t) var(--ease),
+    box-shadow var(--t) var(--ease),
+    color var(--t) var(--ease);
+}
+.hero-placeholder-roasts a{
+  cursor:pointer;
+}
+.hero-placeholder-roasts a:hover,
+.hero-placeholder-roasts a:focus-visible{
+  background:rgba(226,196,106,.1);
+  box-shadow:inset 0 0 0 1px rgba(226,196,106,.2);
+  outline:none;
 }
 .hero-placeholder-roasts b{
   color:rgba(226,196,106,.92);
-  font-size:12px;
+  font-size:14px;
   font-weight:900;
   letter-spacing:.1em;
   text-transform:uppercase;
@@ -1505,18 +1522,19 @@ a:focus-visible, button:focus-visible{
   display:flex;
   align-items:center;
   justify-content:center;
-  color:rgba(244,241,234,.72);
-  font-size:10px;
+  color:rgba(244,241,234,.8);
+  font-size:12px;
   line-height:1.25;
   letter-spacing:0;
   white-space:pre-line;
 }
+.hero-placeholder-roasts a + a,
 .hero-placeholder-roasts span + span{
   border-left:1px solid rgba(226,196,106,.24);
 }
 .hero-product-placeholder > small{
-  color:rgba(244,241,234,.74);
-  font-size:13px;
+  color:rgba(244,241,234,.8);
+  font-size:14px;
   line-height:1.35;
   letter-spacing:0;
 }
@@ -1642,10 +1660,11 @@ a:focus-visible, button:focus-visible{
   display:flex;
   flex-direction:column;
   min-width:0;
+  scroll-margin-top:120px;
 }
 .product-card{
   display:grid;
-  grid-template-rows:72px 112px 134px 82px 94px 1fr 54px;
+  grid-template-rows:46px 112px 134px 82px 94px 1fr 54px;
   gap:14px;
   align-content:start;
   overflow:visible;
@@ -1705,7 +1724,7 @@ a:focus-visible, button:focus-visible{
   justify-items:start;
   align-content:start;
   gap:8px;
-  min-height:72px;
+  min-height:46px;
 }
 .product-card-head .origin-badge,
 .product-card-head .product-process{
@@ -1814,6 +1833,27 @@ a:focus-visible, button:focus-visible{
   letter-spacing:.12em;
   line-height:1.35;
   text-transform:uppercase;
+}
+.discovery-box-product-card .product-process,
+.discovery-box-product-card .card-text,
+.discovery-box-product-card .product-notes-line,
+.discovery-box-product-card .product-choice span,
+.discovery-box-product-card .spec-card,
+.discovery-box-product-card .coffee-order-btn{
+  font-size:16px;
+}
+.discovery-box-product-card .card-text{
+  line-height:1.48;
+}
+.discovery-box-product-card .product-notes-line{
+  line-height:1.45;
+}
+.discovery-box-product-card .product-notes-line strong,
+.discovery-box-product-card .spec-label{
+  font-size:12px;
+}
+.discovery-box-product-card .spec-value{
+  font-size:15px;
 }
 .mobile-product-picker{
   display:none;
@@ -2096,14 +2136,14 @@ a:focus-visible, button:focus-visible{
   }
   .hero{
     display:grid;
-    min-height:auto;
+    min-height:calc(var(--mobile-visual-height, 100svh) - var(--header-height, 66px));
     padding:10px 0 max(10px, calc(env(safe-area-inset-bottom) + 8px));
-    align-items:start;
+    align-items:center;
   }
   .hero-layout{
     width:min(var(--container), calc(100% - 24px));
-    min-height:0;
-    align-content:start;
+    min-height:min(820px, max(640px, calc(var(--mobile-visual-height, 100svh) - var(--header-height, 66px) - 28px)));
+    align-content:stretch;
     gap:0;
     padding:16px;
     overflow:visible;
@@ -2117,7 +2157,7 @@ a:focus-visible, button:focus-visible{
       inset 0 1px 0 rgba(255,255,255,.035);
   }
   .hero-layout .hero-copy{
-    min-height:0;
+    min-height:100%;
     display:flex;
     flex-direction:column;
     justify-content:flex-start;
@@ -2138,7 +2178,7 @@ a:focus-visible, button:focus-visible{
     justify-items:start;
     text-align:left;
     gap:8px;
-    margin-top:12px;
+    margin-top:auto;
     padding-top:0;
     border-top:0;
   }
@@ -2334,6 +2374,16 @@ a:focus-visible, button:focus-visible{
   }
   .product-choice span{
     font-size:15px;
+  }
+  .discovery-box-product-card .product-process,
+  .discovery-box-product-card .card-text,
+  .discovery-box-product-card .product-notes-line,
+  .discovery-box-product-card .product-choice span,
+  .discovery-box-product-card .coffee-order-btn{
+    font-size:15.5px;
+  }
+  .discovery-box-product-card .product-notes-line strong{
+    font-size:11.5px;
   }
   .mobile-product-picker{
     display:grid;
@@ -2594,7 +2644,12 @@ a:focus-visible, button:focus-visible{
 }
 
 @media (max-width:760px) and (max-height:720px){
+  .hero{
+    min-height:auto;
+    align-items:start;
+  }
   .hero-layout{
+    min-height:auto;
     padding-top:14px;
     padding-bottom:14px;
   }
@@ -2763,6 +2818,7 @@ a:focus-visible, button:focus-visible{
   z-index:1;
 }
 @media (hover:hover) and (pointer:fine){
+  .hero-product-placeholder.card-interactive:hover,
   .product-card.card-interactive:hover,
   .market-event-card.card-interactive:hover,
   .proof-carousel.card-interactive:hover,
@@ -2799,6 +2855,25 @@ a:focus-visible, button:focus-visible{
   .card-interactive:hover::after,
   .card-interactive:focus-within::after{
     opacity:1;
+  }
+}
+
+.product-card.is-jump-highlight,
+.product-card:target{
+  border-color:rgba(226,196,106,.78);
+  box-shadow:
+    0 24px 72px rgba(0,0,0,.58),
+    0 0 0 2px rgba(226,196,106,.42) inset,
+    0 0 34px rgba(226,196,106,.22);
+  animation:productJumpHighlight 3200ms var(--ease) both;
+}
+
+@keyframes productJumpHighlight{
+  0%, 100%{
+    transform:translateY(0);
+  }
+  18%{
+    transform:translateY(-6px);
   }
 }
 

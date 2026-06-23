@@ -2,7 +2,8 @@
   const PHONE_NUMBER = "12174167072";
   const STORAGE_KEY = "mr_lang";
   const DEFAULT_SHOP_URL = "https://millionaires-roast.square.site/";
-  const COFFEE_DATA_URL = "data/coffees.json?v=72";
+  const COFFEE_DATA_URL = "data/coffees.json?v=73";
+  const HERO_SAMPLE_TARGETS = ["#coffee-card-light", "#coffee-card-medium", "#coffee-card-dark"];
   const TRANSPARENT_PIXEL = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
   const SMS_BODY = {
     en: "Hi! I'd like to order coffee from Millionaire's Roast. What do you have available?",
@@ -21,7 +22,7 @@
 
     "hero.eyebrow": "Caf\u00e9 en lotes peque\u00f1os tostado en Illinois",
     "hero.title": "Caf\u00e9 de especialidad sin el sobreprecio premium.",
-    "hero.sub": "Caf\u00e9 fresco de origen \u00fanico de lotes de especialidad documentados 80+, tostado en lotes peque\u00f1os desde Springfield para Springfield, Beardstown y el centro de Illinois.",
+    "hero.sub": "Caf\u00e9 fresco de origen \u00fanico y grado de especialidad, tostado en lotes peque\u00f1os desde Springfield para Springfield, Beardstown y el centro de Illinois.",
     "hero.price.coldbrew": "Cold brew de 16 oz: $5",
     "hero.price.bags": "Bolsas de 12 oz: $16",
     "hero.price.kcups": "K-Cups de 8 unidades: 1 por $10 \u2022 2 por $19 \u2022 3 por $27",
@@ -53,21 +54,20 @@
     "featured.spec.origin": "Origen: Huehuetenango, Guatemala",
     "featured.spec.roast": "Tueste: Oscuro",
     "featured.spec.body": "Cuerpo: Medio",
-    "featured.spec.cupScore": "Puntaje de taza: 85.5",
     "featured.cta": "Ordenar cold brew",
 
     "coffees.eyebrow": "Caf\u00e9s actuales",
     "coffees.title": "Una l\u00ednea clara, reci\u00e9n tostada.",
     "coffees.subtitle": "Cinco caf\u00e9s de origen \u00fanico, perfiles claros y precios simples. Compara la taza que quieres y ordena de la lista actual.",
     "coffee.spec.origin": "Origen",
+    "coffee.spec.process": "Proceso",
     "coffee.spec.body": "Cuerpo",
     "coffee.spec.acidity": "Acidez",
-    "coffee.spec.cupScore": "Puntaje de taza",
     "coffee.notes.label": "Notas",
     "coffee.spec.origin.explain": "De d\u00f3nde viene el caf\u00e9. El origen afecta el clima, el suelo, la variedad y el car\u00e1cter general de la taza.",
+    "coffee.spec.process.explain": "C\u00f3mo se procesa el caf\u00e9 despu\u00e9s de la cosecha. El proceso afecta la dulzura, la textura, la claridad y el sabor frutal.",
     "coffee.spec.body.explain": "El peso o la textura del caf\u00e9 en la boca. Un cuerpo m\u00e1s pesado se siente m\u00e1s lleno y rico.",
     "coffee.spec.acidity.explain": "El brillo o la vivacidad en la taza. Una acidez media puede hacer que el caf\u00e9 sepa m\u00e1s limpio, frutal o vivo.",
-    "coffee.spec.cupScore.explain": "El puntaje de cata resume la calidad de la taza. Un puntaje de 80 o m\u00e1s se considera caf\u00e9 de especialidad.",
     "coffee.price.title": "Precio simple en toda la l\u00ednea",
     "coffee.price.bag": "Bolsa de 12 oz: $16",
     "coffee.price.kcups": "K-Cups de 8 unidades: 1 por $10 \u2022 2 por $19 \u2022 3 por $27",
@@ -89,49 +89,44 @@
     "coffee.ug.badge": "Tueste claro",
     "coffee.ug.title": "Ugandan Rwenzori Kasese",
     "coffee.ug.process": "Proceso natural",
-    "coffee.ug.body": "Caf\u00e9 natural 2026 frutal de Kasese, puntaje 86.25, de peque\u00f1os productores de Kyagalanyi Coffee listados como 43% mujeres, con frambuesa, ciruela, az\u00facar morena, clementina y t\u00e9 negro.",
+    "coffee.ug.body": "Caf\u00e9 natural 2026 frutal de Kasese, de peque\u00f1os productores de Kyagalanyi Coffee listados como 43% mujeres, con frambuesa, ciruela, az\u00facar morena, clementina y t\u00e9 negro.",
     "coffee.ug.notes": "Frambuesa, ciruela, az\u00facar morena, clementina, t\u00e9 negro",
     "coffee.ug.origin": "Kasese, monta\u00f1as Rwenzori, Uganda",
     "coffee.ug.bodyValue": "Medio",
     "coffee.ug.acidity": "Suave",
-    "coffee.ug.cupScore": "86.25",
     "coffee.ug.choice": "Quiero un tueste claro frutal con dulzura de berries, clementina y t\u00e9 negro.",
     "coffee.cr.badge": "Tueste medio",
     "coffee.cr.title": "Costa Rican Jaguar Honey",
     "coffee.cr.process": "Proceso Honey",
-    "coffee.cr.body": "Lote honey 2026 del beneficio San Diego, puntaje 85.25, con chocolate con leche, miel y frambuesa sobre un perfil limpio de tueste medio.",
+    "coffee.cr.body": "Lote honey 2026 del beneficio San Diego, con chocolate con leche, miel y frambuesa sobre un perfil limpio de tueste medio.",
     "coffee.cr.notes": "Chocolate con leche, miel, frambuesa",
     "coffee.cr.origin": "Tarraz\u00fa, Costa Rica",
     "coffee.cr.bodyValue": "Ligero",
     "coffee.cr.acidity": "Brillante",
-    "coffee.cr.cupScore": "85.25",
     "coffee.pe.badge": "Tueste med-oscuro",
     "coffee.pe.title": "Peruvian Chonta G1 Washed",
     "coffee.pe.process": "Proceso lavado",
-    "coffee.pe.body": "Caf\u00e9 lavado 2026 de Chonta, Cajamarca, puntaje 85.5, con chocolate, manzana verde, ciruela, almendra tostada y c\u00edtricos.",
+    "coffee.pe.body": "Caf\u00e9 lavado 2026 de Chonta, Cajamarca, con chocolate, manzana verde, ciruela, almendra tostada y c\u00edtricos.",
     "coffee.pe.notes": "Chocolate, manzana verde, ciruela, almendra tostada, c\u00edtricos",
     "coffee.pe.origin": "Chonta, Cajamarca, Per\u00fa",
     "coffee.pe.bodyValue": "Medio",
     "coffee.pe.acidity": "Media",
-    "coffee.pe.cupScore": "85.5",
     "coffee.gt.badge": "Tueste oscuro",
     "coffee.gt.title": "Guatemalan \"La Morena\"",
     "coffee.gt.process": "Proceso lavado",
-    "coffee.gt.body": "Lote rico 2026 de Huehuetenango, de mujeres productoras del programa La Morena, puntaje 85.5, con chocolate oscuro, caramelo, mora y vainilla.",
+    "coffee.gt.body": "Lote rico 2026 de Huehuetenango, de mujeres productoras del programa La Morena, con chocolate oscuro, caramelo, mora y vainilla.",
     "coffee.gt.notes": "Chocolate oscuro, caramelo, mora, vainilla",
     "coffee.gt.origin": "Huehuetenango, Guatemala",
     "coffee.gt.bodyValue": "Medio",
     "coffee.gt.acidity": "Media",
-    "coffee.gt.cupScore": "85.5",
     "coffee.co.badge": "Decaf",
     "coffee.co.title": "Colombian Sugarcane Decaf",
     "coffee.co.process": "Descafeinado Sugarcane EA",
-    "coffee.co.body": "Descafeinado sugarcane EA de Valle del Cauca, puntaje 84.5, con chocolate con leche, almendra, fresa, vainilla y c\u00edtricos.",
+    "coffee.co.body": "Descafeinado sugarcane EA de Valle del Cauca con chocolate con leche, almendra, fresa, vainilla y c\u00edtricos.",
     "coffee.co.notes": "Chocolate con leche, almendra, fresa, vainilla, c\u00edtricos",
     "coffee.co.origin": "Valle del Cauca, Colombia",
     "coffee.co.bodyValue": "Medio",
     "coffee.co.acidity": "Brillante",
-    "coffee.co.cupScore": "84.5",
     "coffee.cta.light": "Ordenar tueste claro",
     "coffee.cta.medium": "Ordenar tueste medio",
     "coffee.cta.mediumDark": "Ordenar tueste medio oscuro",
@@ -198,12 +193,12 @@
     "about.subtitle": "Una marca de caf\u00e9 con base en Springfield, construida a trav\u00e9s del programa Cass County CEO y fortalecida por mercados, pedidos directos y tostado manual, con caf\u00e9 fresco de origen \u00fanico en el centro de todo.",
     "about.story.title": "Conoce a Maximiliano",
     "about.story.p1": "Millionaire's Roast comenz\u00f3 a trav\u00e9s del programa Cass County CEO, donde Maximiliano Gomez convirti\u00f3 una idea de negocio en una marca real de caf\u00e9 artesanal arraigada en su comunidad.",
-    "about.story.p2": "Cada lote comienza con caf\u00e9 verde cuidadosamente seleccionado de lotes documentados de origen \u00fanico y grado de especialidad con puntajes de 80+. La meta no es hacer que el caf\u00e9 se sienta exclusivo. Es ofrecer caf\u00e9 de alta calidad a un precio al que la gente normal pueda volver.",
+    "about.story.p2": "Cada lote comienza con caf\u00e9 verde cuidadosamente seleccionado de origen \u00fanico y grado de especialidad. La meta no es hacer que el caf\u00e9 se sienta exclusivo. Es ofrecer caf\u00e9 de alta calidad a un precio al que la gente normal pueda volver.",
     "about.story.p3": "Despu\u00e9s de graduarse de la preparatoria, Maximiliano se mud\u00f3 a Springfield para continuar su educaci\u00f3n superior en negocios. Sigue desarrollando Millionaire's Roast como parte pasi\u00f3n, parte hobby y parte peque\u00f1o negocio en crecimiento.",
     "about.story.p4": "Ahora con base y operaciones en Springfield, y todav\u00eda sirviendo a Beardstown y al centro de Illinois, la marca sigue creciendo a trav\u00e9s de ventas directas, mercados en Springfield, pedidos en l\u00ednea y una nueva colaboraci\u00f3n en Beardstown con The Cottage como el hogar local de nuestra l\u00ednea completa all\u00ed.",
     "about.side.title": "Lo que lo distingue",
     "about.side.li1": "Caf\u00e9 fresco de origen \u00fanico",
-    "about.side.li2": "Caf\u00e9 de grado de especialidad documentado de lotes 80+",
+    "about.side.li2": "Caf\u00e9 de origen \u00fanico y grado de especialidad",
     "about.side.li3": "Pedidos flexibles para env\u00edos en Illinois, mercados locales, The Cottage y K-Cups",
     "about.side.li4": "Hecho para clientes del centro de Illinois, no solo para conocedores del caf\u00e9",
     "ceo.caption": "Lanzado con orgullo a trav\u00e9s del programa Cass County CEO.",
@@ -215,11 +210,11 @@
     "faq.q2": "\u00bfD\u00f3nde est\u00e1n ubicados?",
     "faq.a2": "Millionaire's Roast tiene base en Springfield, Illinois. Servimos a Springfield a trav\u00e9s de mercados locales y pedidos en l\u00ednea, y a Beardstown a trav\u00e9s de The Cottage en 201 W Main St, un puesto local sin personal conectado con Rosebud & Co.",
     "faq.q3": "\u00bfQu\u00e9 caf\u00e9s est\u00e1n disponibles ahora mismo?",
-    "faq.a3": "Actualmente ofrecemos cinco caf\u00e9s frescos de origen \u00fanico: Ugandan Rwenzori Kasese como nuestro tueste claro, Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\" y Colombian Sugarcane Decaf. Nuestra Discovery Box de $18 incluye tres muestras de 3.5 oz: tueste claro de Uganda, tueste medio de Costa Rica y tueste oscuro de Guatemala, disponibles en grano entero o molido. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, preparado con Guatemalan \"La Morena\". Toda la l\u00ednea es de grado de especialidad, seleccionada de caf\u00e9s que punt\u00faan 80+.",
+    "faq.a3": "Actualmente ofrecemos cinco caf\u00e9s frescos de origen \u00fanico: Ugandan Rwenzori Kasese como nuestro tueste claro, Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\" y Colombian Sugarcane Decaf. Nuestra Discovery Box de $18 incluye tres muestras de 3.5 oz: tueste claro de Uganda, tueste medio de Costa Rica y tueste oscuro de Guatemala, disponibles en grano entero o molido. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, preparado con Guatemalan \"La Morena\". Toda la l\u00ednea es de grado de especialidad.",
     "faq.q4": "\u00bfCu\u00e1nto dura una rotaci\u00f3n actual?",
     "faq.a4": "Compramos caf\u00e9 verde en volumen, pero los tiempos de cosecha cambian seg\u00fan la regi\u00f3n y el ciclo agr\u00edcola. Cuando un caf\u00e9 se acaba, hay una alta probabilidad de que ese lote en espec\u00edfico se haya ido por ahora, no para siempre, y la rotaci\u00f3n sigue cambiando seg\u00fan la demanda y la disponibilidad.",
     "faq.q5": "\u00bfQu\u00e9 hace que este caf\u00e9 sea de especialidad?",
-    "faq.a5": "El caf\u00e9 de grado de especialidad empieza con mejor caf\u00e9 verde antes de llegar al tostador. Nuestros caf\u00e9s se seleccionan de lotes documentados con puntajes de 80+, lo que significa que fueron evaluados por la calidad de la taza en lugar de tratarse como caf\u00e9 comercial com\u00fan.\n\nEn la industria del caf\u00e9, los caf\u00e9s se eval\u00faan mediante cata: un proceso estandarizado que considera aroma, sabor, retrogusto, acidez, cuerpo, balance, dulzura, limpieza y defectos. Un puntaje de 80 o m\u00e1s es el umbral tradicional para caf\u00e9 de grado de especialidad.\n\nPara el cliente, el resultado es simple: sabores m\u00e1s limpios, notas m\u00e1s claras y una taza m\u00e1s intencional.",
+    "faq.a5": "El caf\u00e9 de grado de especialidad empieza con mejor caf\u00e9 verde antes de llegar al tostador. Seleccionamos caf\u00e9s por su origen, frescura, trazabilidad y claridad de sabor, no por tratarlos como caf\u00e9 comercial com\u00fan.\n\nPara el cliente, el resultado es simple: sabores m\u00e1s limpios, notas m\u00e1s claras y una taza m\u00e1s intencional.",
 
     "contact.title": "Contacto y redes",
     "contact.subtitle": "M\u00e1ndanos un texto para preguntas r\u00e1pidas sobre caf\u00e9s actuales, fechas de mercado o disponibilidad local completa en The Cottage. El correo funciona mejor para seguimiento y preguntas personalizadas.",
@@ -288,6 +283,7 @@
   let productSelectorListenerBound = false;
   let productModeListenerBound = false;
   let mobileMarketTabsListenerBound = false;
+  let heroSampleLinksBound = false;
   let revealObserver = null;
   let sectionObserver = null;
   let revealMotionListenerBound = false;
@@ -537,6 +533,17 @@
       const sample = Array.isArray(copy.heroSamples) ? copy.heroSamples[index] : null;
       setText(row.querySelector("[data-hero-sample-roast]"), sample?.roast);
       setText(row.querySelector("[data-hero-sample-origin]"), sample?.origin);
+      if (HERO_SAMPLE_TARGETS[index]) {
+        row.setAttribute("href", HERO_SAMPLE_TARGETS[index]);
+      }
+      const roastLabel = sample?.roast || "";
+      const originLabel = String(sample?.origin || "").replace(/\s+/g, " ").trim();
+      const ariaLabel = [roastLabel, originLabel].filter(Boolean).join(": ");
+      if (ariaLabel) {
+        row.setAttribute("aria-label", lang === "es"
+          ? `Ver caf\u00e9 ${ariaLabel}`
+          : `View ${ariaLabel} coffee`);
+      }
     });
 
     if (heroCta) {
@@ -562,7 +569,6 @@
     const featuredImage = document.querySelector(".feature-product-image");
     const featuredCta = document.querySelector("#featured-offering [data-shop-cta]");
     const specs = [
-      { label: getCopy(lang, "coffee.spec.cupScore") || (lang === "es" ? "Puntaje de taza" : "Cup Score"), value: copy.cupScore },
       { label: getCopy(lang, "coffee.spec.origin") || (lang === "es" ? "Origen" : "Origin"), value: copy.origin },
       { label: lang === "es" ? "Tueste" : "Roast", value: copy.roast || copy.badge },
       { label: getCopy(lang, "coffee.spec.body") || (lang === "es" ? "Cuerpo" : "Body"), value: copy.body }
@@ -671,16 +677,16 @@
     const revealBase = index * 90;
     const specs = [
       {
-        key: "cup-score",
-        label: getCopy(lang, "coffee.spec.cupScore"),
-        value: copy.cupScore,
-        explain: getCopy(lang, "coffee.spec.cupScore.explain")
-      },
-      {
         key: "origin",
         label: getCopy(lang, "coffee.spec.origin"),
         value: copy.origin,
         explain: getCopy(lang, "coffee.spec.origin.explain")
+      },
+      {
+        key: "process",
+        label: getCopy(lang, "coffee.spec.process"),
+        value: copy.process,
+        explain: getCopy(lang, "coffee.spec.process.explain")
       },
       {
         key: "body",
@@ -701,7 +707,6 @@
       <article class="card card-plate product-card${coffee.featured ? " product-card-featured" : ""} card-interactive${isActive ? " is-active" : ""}" id="${escapeHtml(panelId)}" data-product-panel aria-labelledby="${escapeHtml(titleId)}" data-reveal="up" data-reveal-delay="${revealBase}"${isProductSelectorMode() && !isActive ? " hidden" : ""}>
         <div class="product-card-head" data-reveal="fade" data-reveal-delay="${80 + revealBase}">
           <span class="origin-badge">${escapeHtml(copy.badge || copy.roast || "")}</span>
-          <span class="product-process">${escapeHtml(copy.process || "")}</span>
         </div>
         <h3 class="origin-title" id="${escapeHtml(titleId)}" data-reveal="fade" data-reveal-delay="${120 + revealBase}">${escapeHtml(copy.title || "")}</h3>
         <p class="card-text" data-reveal="fade" data-reveal-delay="${160 + revealBase}">${escapeHtml(copy.description || "")}</p>
@@ -1204,7 +1209,7 @@
     if (!finePointerQuery?.matches || productMotionQuery?.matches) return;
 
     const glowCards = [...document.querySelectorAll(
-      ".product-card.card-interactive, .feature-panel.card-interactive, .market-event-card.card-interactive, .contact-grid .card-action.card-interactive"
+      ".hero-product-placeholder.card-interactive, .product-card.card-interactive, .feature-panel.card-interactive, .market-event-card.card-interactive, .contact-grid .card-action.card-interactive"
     )];
 
     if (!glowCards.length) return;
@@ -1270,6 +1275,76 @@
     });
 
     revealProductPanelIfReadable(productPanels[activeProductIndex]);
+  }
+
+  function highlightProductPanel(panel) {
+    if (!panel) return;
+
+    document.querySelectorAll(".product-card.is-jump-highlight").forEach((highlightedPanel) => {
+      if (highlightedPanel === panel) return;
+      window.clearTimeout(Number(highlightedPanel.dataset.highlightTimer || 0));
+      highlightedPanel.classList.remove("is-jump-highlight");
+      delete highlightedPanel.dataset.highlightTimer;
+    });
+
+    window.clearTimeout(Number(panel.dataset.highlightTimer || 0));
+    panel.classList.remove("is-jump-highlight");
+    requestAnimationFrame(() => {
+      panel.classList.add("is-jump-highlight");
+      panel.dataset.highlightTimer = String(window.setTimeout(() => {
+        panel.classList.remove("is-jump-highlight");
+        delete panel.dataset.highlightTimer;
+      }, 3200));
+    });
+  }
+
+  function prepareProductPanelJump(target) {
+    if (!target?.matches?.("[data-product-panel]")) return false;
+
+    const { panels } = getProductSelectorElements();
+    const targetIndex = panels.indexOf(target);
+    if (targetIndex >= 0 && isProductSelectorMode()) {
+      updateProductSelection(targetIndex, false);
+    }
+
+    revealCoffeeCard(target);
+    highlightProductPanel(target);
+    return true;
+  }
+
+  function scrollToProductPanel(target) {
+    const isProductPanelJump = prepareProductPanelJump(target);
+    const reducedMotionQuery = typeof window.matchMedia === "function"
+      ? window.matchMedia("(prefers-reduced-motion: reduce)")
+      : null;
+
+    target.scrollIntoView({
+      behavior: reducedMotionQuery?.matches ? "auto" : "smooth",
+      block: isProductPanelJump ? "center" : "start"
+    });
+
+    return isProductPanelJump;
+  }
+
+  function setupHeroSampleLinks() {
+    if (heroSampleLinksBound) return;
+
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest("[data-hero-sample-link]");
+      if (!link) return;
+
+      const href = link.getAttribute("href");
+      if (!href || !href.startsWith("#")) return;
+
+      const target = document.querySelector(href);
+      if (!target) return;
+
+      event.preventDefault();
+      scrollToProductPanel(target);
+      history.pushState(null, "", href);
+    });
+
+    heroSampleLinksBound = true;
   }
 
   function updateProductSelection(nextIndex = activeProductIndex, animate = false) {
@@ -1603,10 +1678,11 @@
       if (!target) return;
 
       event.preventDefault();
+      const isProductPanelJump = prepareProductPanelJump(target);
 
       target.scrollIntoView({
         behavior: reducedMotionQuery?.matches ? "auto" : "smooth",
-        block: "start"
+        block: isProductPanelJump ? "center" : "start"
       });
 
       history.pushState(null, "", href);
@@ -1627,6 +1703,7 @@
   setupMobileMarketTabs();
   setupCarousel();
   setupLanguageToggle();
+  setupHeroSampleLinks();
   setupSmoothAnchorScrolling();
   setupActiveNavHighlighting();
   setupCursorCardGlow();

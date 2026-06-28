@@ -1,12 +1,12 @@
 {
-  "version": 23,
+  "version": 25,
   "defaultShopUrl": "https://millionaires-roast.square.site/",
   "copy": {
     "en": {
-      "faqCurrentAnswer": "We currently offer five fresh single-origin coffees: Ugandan Rwenzori Kasese as our light roast, Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\", and Colombian Sugarcane Decaf. Our $18 Discovery Box includes three 3.5 oz samples: Ugandan light, Costa Rican medium, and Guatemalan dark, available whole bean or ground. We also offer 16 oz bottled cold brew for $5, brewed with Guatemalan \"La Morena\". Every coffee in the lineup is specialty grade."
+      "faqCurrentAnswer": "We currently offer five fresh single-origin coffees: Ugandan Rwenzori Kasese as our light roast, Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan Organic Highlands, and Colombian Sugarcane Decaf. Our $18 Discovery Box includes three 3.5 oz samples: Ugandan light, Costa Rican medium, and Guatemalan dark, available whole bean or ground. We also offer 16 oz bottled cold brew for $5, brewed with Guatemalan Organic Highlands. Every coffee in the lineup is specialty grade."
     },
     "es": {
-      "faqCurrentAnswer": "Actualmente ofrecemos cinco caf\u00e9s frescos de origen \u00fanico: Ugandan Rwenzori Kasese como nuestro tueste claro, Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\" y Colombian Sugarcane Decaf. Nuestra Discovery Box de $18 incluye tres muestras de 3.5 oz: tueste claro de Uganda, tueste medio de Costa Rica y tueste oscuro de Guatemala, disponibles en grano entero o molido. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, preparado con Guatemalan \"La Morena\". Toda la l\u00ednea es de grado de especialidad."
+      "faqCurrentAnswer": "Actualmente ofrecemos cinco caf\u00e9s frescos de origen \u00fanico: Ugandan Rwenzori Kasese como nuestro tueste claro, Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan Organic Highlands y Colombian Sugarcane Decaf. Nuestra Discovery Box de $18 incluye tres muestras de 3.5 oz: tueste claro de Uganda, tueste medio de Costa Rica y tueste oscuro de Guatemala, disponibles en grano entero o molido. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, preparado con Guatemalan Organic Highlands. Toda la l\u00ednea es de grado de especialidad."
     }
   },
   "heroOffering": {
@@ -34,7 +34,7 @@
       "heroSamples": [
         { "roast": "Light", "origin": "Ugandan Rwenzori\nKasese" },
         { "roast": "Medium", "origin": "Costa Rican\nJaguar Honey" },
-        { "roast": "Dark", "origin": "Guatemalan\nLa Morena" }
+        { "roast": "Dark", "origin": "Guatemalan\nOrganic Highlands" }
       ]
     },
     "es": {
@@ -59,7 +59,7 @@
       "heroSamples": [
         { "roast": "Claro", "origin": "Ugandan Rwenzori\nKasese" },
         { "roast": "Medio", "origin": "Costa Rican\nJaguar Honey" },
-        { "roast": "Oscuro", "origin": "Guatemalan\nLa Morena" }
+        { "roast": "Oscuro", "origin": "Guatemalan\nOrganic Highlands" }
       ]
     }
   },
@@ -72,11 +72,11 @@
     "en": {
       "featuredKicker": "Featured Offering",
       "title": "Bottled Cold Brew",
-      "featuredAlt": "Millionaire's Roast 16 oz bottled cold brew made with Guatemalan La Morena dark roast coffee",
-      "featuredDescription": "Our 16 oz bottled cold brew is brewed with Guatemalan \"La Morena\", our dark roast Huehuetenango lot from women producers through the La Morena program. Expect a smooth, deeper cup with dark chocolate, caramel, blackberry, and vanilla.",
+      "featuredAlt": "Millionaire's Roast 16 oz bottled cold brew made with Guatemalan Organic Highlands dark roast coffee",
+      "featuredDescription": "Our 16 oz bottled cold brew is brewed with Guatemalan Organic Highlands, a dark roast sourced from certified-organic small-farm cooperatives across Guatemala. Expect a smooth, balanced cup with cherry, caramel, cashew, and baker's chocolate.",
       "featuredCta": "Order Cold Brew",
-      "notes": ["Dark chocolate", "Caramel", "Blackberry", "Vanilla"],
-      "origin": "Huehuetenango, Guatemala",
+      "notes": ["Cherry", "Caramel", "Cashew", "Baker's chocolate"],
+      "origin": "Guatemalan Highlands",
       "roast": "Dark",
       "body": "Medium",
       "acidity": "Medium"
@@ -84,11 +84,11 @@
     "es": {
       "featuredKicker": "Oferta destacada",
       "title": "Cold Brew embotellado",
-      "featuredAlt": "Cold brew embotellado de 16 oz de Millionaire's Roast hecho con caf\u00e9 de tueste oscuro Guatemalan La Morena",
-      "featuredDescription": "Nuestro cold brew embotellado de 16 oz ahora se prepara con Guatemalan \"La Morena\", nuestro tueste oscuro de Huehuetenango de mujeres productoras a trav\u00e9s del programa La Morena. Espera una taza suave y m\u00e1s profunda con chocolate oscuro, caramelo, mora y vainilla.",
+      "featuredAlt": "Cold brew embotellado de 16 oz de Millionaire's Roast hecho con caf\u00e9 de tueste oscuro Guatemalan Organic Highlands",
+      "featuredDescription": "Nuestro cold brew embotellado de 16 oz se prepara con Guatemalan Organic Highlands, un tueste oscuro procedente de cooperativas de peque\u00f1as fincas de Guatemala con certificaci\u00f3n org\u00e1nica. Espera una taza suave y balanceada con cereza, caramelo, mara\u00f1\u00f3n y chocolate de reposter\u00eda.",
       "featuredCta": "Ordenar cold brew",
-      "notes": ["Chocolate oscuro", "Caramelo", "Mora", "Vainilla"],
-      "origin": "Huehuetenango, Guatemala",
+      "notes": ["Cereza", "Caramelo", "Mara\u00f1\u00f3n", "Chocolate de reposter\u00eda"],
+      "origin": "Tierras altas de Guatemala",
       "roast": "Oscuro",
       "body": "Medio",
       "acidity": "Media"
@@ -212,7 +212,7 @@
       }
     },
     {
-      "id": "guatemala-la-morena-huehuetenango-2026",
+      "id": "guatemala-organic-highlands-37981",
       "slot": "dark",
       "order": 4,
       "active": true,
@@ -221,30 +221,30 @@
       "kcupUrl": "https://millionaires-roast.square.site/product/guatemalan-k-cups/VXJ4XFCR73UYWLNIGMNDAUV6?cs=true&cst=custom",
       "en": {
         "badge": "Dark Roast",
-        "title": "Guatemalan \"La Morena\"",
-        "process": "Washed Process",
-        "description": "Rich 2026 Huehuetenango lot from women producers through La Morena with dark chocolate, caramel, blackberry, and vanilla.",
-        "featuredDescription": "A rich 2026 Huehuetenango lot from various women producers through the La Morena program with dark chocolate, caramel, blackberry, and vanilla.",
-        "choice": "I want a deeper cup with dark chocolate, caramel, and blackberry.",
-        "notes": ["Dark chocolate", "Caramel", "Blackberry", "Vanilla"],
-        "origin": "Huehuetenango, Guatemala",
+        "title": "Guatemalan Organic Highlands",
+        "process": "Fully Washed & Sun-Dried",
+        "description": "Guatemalan highlands coffee sourced from certified-organic small-farm cooperatives, fully washed and sun-dried, with cherry, caramel, cashew, and baker's chocolate.",
+        "featuredDescription": "A Guatemalan highlands coffee sourced from certified-organic small-farm cooperatives with cherry, caramel, cashew, and baker's chocolate.",
+        "choice": "I want a deep, balanced cup with cherry sweetness, caramel, cashew, and baker's chocolate.",
+        "notes": ["Cherry", "Caramel", "Cashew", "Baker's chocolate"],
+        "origin": "Guatemalan Highlands",
         "roast": "Dark Roast",
         "body": "Medium",
-        "acidity": "Medium",
+        "acidity": "Mild",
         "cta": "Order Dark Roast"
       },
       "es": {
         "badge": "Tueste oscuro",
-        "title": "Guatemalan \"La Morena\"",
-        "process": "Proceso lavado",
-        "description": "Lote rico 2026 de Huehuetenango, de mujeres productoras del programa La Morena, con chocolate oscuro, caramelo, mora y vainilla.",
-        "featuredDescription": "Un lote rico 2026 de Huehuetenango, producido por varias mujeres productoras a trav\u00e9s del programa La Morena, con notas de chocolate oscuro, caramelo, mora y vainilla.",
-        "choice": "Quiero una taza m\u00e1s profunda con chocolate oscuro, caramelo y mora.",
-        "notes": ["Chocolate oscuro", "Caramelo", "Mora", "Vainilla"],
-        "origin": "Huehuetenango, Guatemala",
+        "title": "Guatemalan Organic Highlands",
+        "process": "Lavado y secado al sol",
+        "description": "Caf\u00e9 de las tierras altas de Guatemala procedente de cooperativas de peque\u00f1as fincas con certificaci\u00f3n org\u00e1nica, lavado y secado al sol, con cereza, caramelo, mara\u00f1\u00f3n y chocolate de reposter\u00eda.",
+        "featuredDescription": "Un caf\u00e9 de las tierras altas de Guatemala procedente de cooperativas de peque\u00f1as fincas con certificaci\u00f3n org\u00e1nica, con cereza, caramelo, mara\u00f1\u00f3n y chocolate de reposter\u00eda.",
+        "choice": "Quiero una taza profunda y balanceada con dulzura de cereza, caramelo, mara\u00f1\u00f3n y chocolate de reposter\u00eda.",
+        "notes": ["Cereza", "Caramelo", "Mara\u00f1\u00f3n", "Chocolate de reposter\u00eda"],
+        "origin": "Tierras altas de Guatemala",
         "roast": "Tueste oscuro",
         "body": "Medio",
-        "acidity": "Media",
+        "acidity": "Suave",
         "cta": "Ordenar tueste oscuro"
       }
     },

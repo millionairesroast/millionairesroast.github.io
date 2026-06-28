@@ -2,7 +2,7 @@
   const PHONE_NUMBER = "12174167072";
   const STORAGE_KEY = "mr_lang";
   const DEFAULT_SHOP_URL = "https://millionaires-roast.square.site/";
-  const COFFEE_DATA_URL = "data/coffees.json?v=73";
+  const COFFEE_DATA_URL = "data/coffees.json?v=75";
   const HERO_SAMPLE_TARGETS = ["#coffee-card-light", "#coffee-card-medium", "#coffee-card-dark"];
   const TRANSPARENT_PIXEL = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
   const SMS_BODY = {
@@ -40,7 +40,7 @@
     "hero.placeholder.medium": "Medio",
     "hero.placeholder.mediumOrigin": "Costa Rican\nJaguar Honey",
     "hero.placeholder.dark": "Oscuro",
-    "hero.placeholder.darkOrigin": "Guatemalan\nLa Morena",
+    "hero.placeholder.darkOrigin": "Guatemalan\nOrganic Highlands",
     "hero.placeholder.meta": "Tres muestras de 3.5 oz \u2022 En grano entero o molido",
     "ghost.featured": "COLD BREW",
     "ghost.origin": "ORIGEN",
@@ -49,9 +49,9 @@
 
     "featured.eyebrow": "Oferta destacada",
     "featured.title": "Cold Brew embotellado",
-    "featured.taste": "Chocolate oscuro \u2022 Caramelo \u2022 Mora \u2022 Vainilla",
-    "featured.body": "Nuestro cold brew embotellado de 16 oz se prepara con Guatemalan \"La Morena\", nuestro tueste oscuro de Huehuetenango de mujeres productoras a trav\u00e9s del programa La Morena.",
-    "featured.spec.origin": "Origen: Huehuetenango, Guatemala",
+    "featured.taste": "Cereza \u2022 Caramelo \u2022 Mara\u00f1\u00f3n \u2022 Chocolate de reposter\u00eda",
+    "featured.body": "Nuestro cold brew embotellado de 16 oz se prepara con Guatemalan Organic Highlands, un tueste oscuro procedente de cooperativas de peque\u00f1as fincas de Guatemala con certificaci\u00f3n org\u00e1nica. Espera una taza suave y balanceada con cereza, caramelo, mara\u00f1\u00f3n y chocolate de reposter\u00eda.",
+    "featured.spec.origin": "Origen: Tierras altas de Guatemala",
     "featured.spec.roast": "Tueste: Oscuro",
     "featured.spec.body": "Cuerpo: Medio",
     "featured.cta": "Ordenar cold brew",
@@ -78,7 +78,7 @@
     "discovery.card.process": "Sampler de tres paquetes \u2022 $18",
     "discovery.card.body": "Tres muestras de caf\u00e9 de 3.5 oz para comparar nuestros tuestes claro, medio y oscuro antes de elegir una bolsa completa. Disponible en grano entero o molido.",
     "discovery.card.contents": "Dentro de la caja",
-    "discovery.card.contentsList": "Ugandan Rwenzori Kasese \u2014 Claro \u2022 Costa Rican Jaguar Honey \u2014 Medio \u2022 Guatemalan La Morena \u2014 Oscuro",
+    "discovery.card.contentsList": "Ugandan Rwenzori Kasese \u2014 Claro \u2022 Costa Rican Jaguar Honey \u2014 Medio \u2022 Guatemalan Organic Highlands \u2014 Oscuro",
     "discovery.card.choice": "Quiero comparar tres caf\u00e9s distintos y encontrar el perfil de tueste ideal para m\u00ed.",
     "discovery.spec.price": "Precio",
     "discovery.spec.format": "Formato",
@@ -112,13 +112,13 @@
     "coffee.pe.bodyValue": "Medio",
     "coffee.pe.acidity": "Media",
     "coffee.gt.badge": "Tueste oscuro",
-    "coffee.gt.title": "Guatemalan \"La Morena\"",
-    "coffee.gt.process": "Proceso lavado",
-    "coffee.gt.body": "Lote rico 2026 de Huehuetenango, de mujeres productoras del programa La Morena, con chocolate oscuro, caramelo, mora y vainilla.",
-    "coffee.gt.notes": "Chocolate oscuro, caramelo, mora, vainilla",
-    "coffee.gt.origin": "Huehuetenango, Guatemala",
+    "coffee.gt.title": "Guatemalan Organic Highlands",
+    "coffee.gt.process": "Lavado y secado al sol",
+    "coffee.gt.body": "Caf\u00e9 de las tierras altas de Guatemala procedente de cooperativas de peque\u00f1as fincas con certificaci\u00f3n org\u00e1nica, lavado y secado al sol, con cereza, caramelo, mara\u00f1\u00f3n y chocolate de reposter\u00eda.",
+    "coffee.gt.notes": "Cereza, caramelo, mara\u00f1\u00f3n, chocolate de reposter\u00eda",
+    "coffee.gt.origin": "Tierras altas de Guatemala",
     "coffee.gt.bodyValue": "Medio",
-    "coffee.gt.acidity": "Media",
+    "coffee.gt.acidity": "Suave",
     "coffee.co.badge": "Decaf",
     "coffee.co.title": "Colombian Sugarcane Decaf",
     "coffee.co.process": "Descafeinado Sugarcane EA",
@@ -136,7 +136,7 @@
 
     "choose.card1.title": "Quiero una taza brillante y dulce a miel, con chocolate suave y frambuesa.",
     "choose.card2.title": "Quiero una taza balanceada con chocolate, fruta de huerto y almendra tostada.",
-    "choose.card3.title": "Quiero una taza m\u00e1s profunda con chocolate oscuro, caramelo y mora.",
+    "choose.card3.title": "Quiero una taza profunda y balanceada con dulzura de cereza, caramelo, mara\u00f1\u00f3n y chocolate de reposter\u00eda.",
     "choose.card4.title": "Quiero sabor de caf\u00e9 real sin cafe\u00edna: chocolate, almendra y fruta brillante.",
 
     "proof.title": "Una marca local real y en movimiento",
@@ -210,7 +210,7 @@
     "faq.q2": "\u00bfD\u00f3nde est\u00e1n ubicados?",
     "faq.a2": "Millionaire's Roast tiene base en Springfield, Illinois. Servimos a Springfield a trav\u00e9s de mercados locales y pedidos en l\u00ednea, y a Beardstown a trav\u00e9s de The Cottage en 201 W Main St, un puesto local sin personal conectado con Rosebud & Co.",
     "faq.q3": "\u00bfQu\u00e9 caf\u00e9s est\u00e1n disponibles ahora mismo?",
-    "faq.a3": "Actualmente ofrecemos cinco caf\u00e9s frescos de origen \u00fanico: Ugandan Rwenzori Kasese como nuestro tueste claro, Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan \"La Morena\" y Colombian Sugarcane Decaf. Nuestra Discovery Box de $18 incluye tres muestras de 3.5 oz: tueste claro de Uganda, tueste medio de Costa Rica y tueste oscuro de Guatemala, disponibles en grano entero o molido. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, preparado con Guatemalan \"La Morena\". Toda la l\u00ednea es de grado de especialidad.",
+    "faq.a3": "Actualmente ofrecemos cinco caf\u00e9s frescos de origen \u00fanico: Ugandan Rwenzori Kasese como nuestro tueste claro, Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan Organic Highlands y Colombian Sugarcane Decaf. Nuestra Discovery Box de $18 incluye tres muestras de 3.5 oz: tueste claro de Uganda, tueste medio de Costa Rica y tueste oscuro de Guatemala, disponibles en grano entero o molido. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, preparado con Guatemalan Organic Highlands. Toda la l\u00ednea es de grado de especialidad.",
     "faq.q4": "\u00bfCu\u00e1nto dura una rotaci\u00f3n actual?",
     "faq.a4": "Compramos caf\u00e9 verde en volumen, pero los tiempos de cosecha cambian seg\u00fan la regi\u00f3n y el ciclo agr\u00edcola. Cuando un caf\u00e9 se acaba, hay una alta probabilidad de que ese lote en espec\u00edfico se haya ido por ahora, no para siempre, y la rotaci\u00f3n sigue cambiando seg\u00fan la demanda y la disponibilidad.",
     "faq.q5": "\u00bfQu\u00e9 hace que este caf\u00e9 sea de especialidad?",
@@ -287,6 +287,7 @@
   let revealObserver = null;
   let sectionObserver = null;
   let revealMotionListenerBound = false;
+  const accordionCloseCleanups = new WeakMap();
 
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
@@ -975,7 +976,6 @@
       if (event.target.closest("a")) setMobile(false);
     });
     window.addEventListener("resize", () => {
-      syncHeaderHeight();
       syncMobileMenuHeight();
       syncOpenAccordionHeight();
     });
@@ -993,6 +993,7 @@
     const panel = getAccordionPanel(button);
     if (!panel) return;
 
+    accordionCloseCleanups.get(panel)?.();
     button.setAttribute("aria-expanded", "false");
 
     if (immediate) {
@@ -1006,20 +1007,29 @@
       panel.style.maxHeight = "0px";
     });
 
+    let fallbackTimer = 0;
+    const cleanup = () => {
+      window.clearTimeout(fallbackTimer);
+      panel.removeEventListener("transitionend", handleTransitionEnd);
+      accordionCloseCleanups.delete(panel);
+    };
     const handleTransitionEnd = () => {
       if (button.getAttribute("aria-expanded") === "false") {
         panel.hidden = true;
       }
-      panel.removeEventListener("transitionend", handleTransitionEnd);
+      cleanup();
     };
 
     panel.addEventListener("transitionend", handleTransitionEnd);
+    fallbackTimer = window.setTimeout(handleTransitionEnd, 400);
+    accordionCloseCleanups.set(panel, cleanup);
   }
 
   function openAccordionButtonElement(button) {
     const panel = getAccordionPanel(button);
     if (!panel) return;
 
+    accordionCloseCleanups.get(panel)?.();
     button.setAttribute("aria-expanded", "true");
     panel.hidden = false;
     panel.style.maxHeight = `${panel.scrollHeight}px`;
@@ -1314,12 +1324,9 @@
 
   function scrollToProductPanel(target) {
     const isProductPanelJump = prepareProductPanelJump(target);
-    const reducedMotionQuery = typeof window.matchMedia === "function"
-      ? window.matchMedia("(prefers-reduced-motion: reduce)")
-      : null;
 
     target.scrollIntoView({
-      behavior: reducedMotionQuery?.matches ? "auto" : "smooth",
+      behavior: productMotionQuery?.matches ? "auto" : "smooth",
       block: isProductPanelJump ? "center" : "start"
     });
 
@@ -1540,7 +1547,7 @@
     const startAutoplay = () => {
       stopAutoplay();
       if (reducedMotionQuery?.matches) return;
-      autoplayId = window.setInterval(() => goTo(activeIndex + 1, "next"), 5000);
+      autoplayId = window.setInterval(() => goTo(activeIndex + 1), 5000);
     };
 
     prevButton?.addEventListener("click", () => goTo(activeIndex - 1));
@@ -1659,10 +1666,6 @@
   }
 
   function setupSmoothAnchorScrolling() {
-    const reducedMotionQuery = typeof window.matchMedia === "function"
-      ? window.matchMedia("(prefers-reduced-motion: reduce)")
-      : null;
-
     document.addEventListener("click", (event) => {
       const link = event.target.closest('a[href^="#"]');
       if (!link) return;
@@ -1681,7 +1684,7 @@
       const isProductPanelJump = prepareProductPanelJump(target);
 
       target.scrollIntoView({
-        behavior: reducedMotionQuery?.matches ? "auto" : "smooth",
+        behavior: productMotionQuery?.matches ? "auto" : "smooth",
         block: isProductPanelJump ? "center" : "start"
       });
 

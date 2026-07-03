@@ -1,5 +1,5 @@
 {
-  "version": 26,
+  "version": 27,
   "defaultShopUrl": "https://millionaires-roast.square.site/",
   "copy": {
     "en": {
@@ -17,8 +17,8 @@
       "title": "Discovery Box",
       "heroMeta": "3.5 oz each \u2022 Ugandan Light \u2022 Costa Rican Medium \u2022 Guatemalan Dark",
       "heroAlt": "Millionaire's Roast Discovery Box with three 3.5 oz coffee samples",
-      "heroCta": "Try the Discovery Box",
-      "mobileHeroCta": "Shop Online",
+      "heroCta": "Shop Coffee",
+      "mobileHeroCta": "Shop Coffee",
       "cardBadge": "Discovery Box",
       "cardProcess": "Three-Pack Sampler \u2022 $18",
       "cardDescription": "Three 3.5 oz coffee samples for comparing our light, medium, and dark roasts before committing to a full bag. Choose whole bean or ground.",
@@ -42,8 +42,8 @@
       "title": "Discovery Box",
       "heroMeta": "3.5 oz cada uno \u2022 Uganda claro \u2022 Costa Rica medio \u2022 Guatemala oscuro",
       "heroAlt": "Discovery Box de Millionaire's Roast con tres muestras de caf\u00e9 de 3.5 oz",
-      "heroCta": "Probar la Discovery Box",
-      "mobileHeroCta": "Comprar en l\u00ednea",
+      "heroCta": "Comprar caf\u00e9",
+      "mobileHeroCta": "Comprar caf\u00e9",
       "cardBadge": "Discovery Box",
       "cardProcess": "Sampler de tres paquetes \u2022 $18",
       "cardDescription": "Tres muestras de caf\u00e9 de 3.5 oz para comparar nuestros tuestes claro, medio y oscuro antes de elegir una bolsa completa. Disponible en grano entero o molido.",

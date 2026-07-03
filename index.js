@@ -2,12 +2,16 @@
   const PHONE_NUMBER = "12174167072";
   const STORAGE_KEY = "mr_lang";
   const DEFAULT_SHOP_URL = "https://millionaires-roast.square.site/";
-  const COFFEE_DATA_URL = "data/coffees.json?v=76";
+  const COFFEE_DATA_URL = "data/coffees.json?v=77";
   const HERO_SAMPLE_TARGETS = ["#coffee-card-light", "#coffee-card-medium", "#coffee-card-dark"];
   const TRANSPARENT_PIXEL = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
   const SMS_BODY = {
     en: "Hi! I'd like to order coffee from Millionaire's Roast. What do you have available?",
     es: "\u00a1Hola! Me gustar\u00eda ordenar caf\u00e9 de Millionaire's Roast. \u00bfQu\u00e9 tienen disponible?"
+  };
+  const MOBILE_MENU_LABELS = {
+    en: { open: "Open menu", close: "Close menu" },
+    es: { open: "Abrir men\u00fa", close: "Cerrar men\u00fa" }
   };
 
   const ES = {
@@ -22,14 +26,20 @@
 
     "hero.eyebrow": "Caf\u00e9 en lotes peque\u00f1os tostado en Illinois",
     "hero.title": "Caf\u00e9 de especialidad sin el sobreprecio premium.",
-    "hero.sub": "Caf\u00e9 fresco de origen \u00fanico y grado de especialidad, tostado en lotes peque\u00f1os desde Springfield para Springfield, Beardstown y el centro de Illinois.",
-    "hero.price.coldbrew": "Cold brew de 16 oz: $5",
-    "hero.price.bags": "Bolsas de 12 oz: $16",
-    "hero.price.kcups": "K-Cups de 8 unidades: 1 por $10 \u2022 2 por $19 \u2022 3 por $27",
-    "hero.helper": "Ordena en l\u00ednea para env\u00edos en Illinois, o encuentra disponibilidad local en mercados de Springfield y en The Cottage en Beardstown.",
-    "hero.cta.primary": "Probar la Discovery Box",
-    "hero.cta.mobile": "Comprar en l\u00ednea",
-    "hero.cta.secondary": "Caf\u00e9s actuales",
+    "hero.sub": "Caf\u00e9 fresco de origen \u00fanico y grado de especialidad, tostado en lotes peque\u00f1os para Springfield, Beardstown y las comunidades del centro de Illinois.",
+    "hero.proof.label": "Detalles del caf\u00e9",
+    "hero.proof.roasted": "Tostado en Springfield",
+    "hero.proof.origin": "Caf\u00e9s de origen \u00fanico",
+    "hero.proof.batches": "Lotes peque\u00f1os",
+    "hero.pricing.label": "Precios actuales",
+    "hero.price.coldbrew.label": "Cold brew de 16 oz",
+    "hero.price.bags.label": "Bolsas de 12 oz",
+    "hero.price.kcups.label": "K-Cups de 8 unidades",
+    "hero.price.kcups.multi": "Paquetes: 2 por $19 \u2022 3 por $27",
+    "hero.helper": "Compra en l\u00ednea, vis\u00edtanos en los mercados de Springfield o encuentra la l\u00ednea completa en The Cottage en Beardstown.",
+    "hero.cta.primary": "Comprar caf\u00e9",
+    "hero.cta.mobile": "Comprar caf\u00e9",
+    "hero.cta.secondary": "Explorar caf\u00e9s actuales",
     "hero.badge.kicker": "Nueva oferta de mercado",
     "hero.badge.title": "Discovery Box",
     "hero.badge.meta": "3.5 oz cada uno \u2022 Uganda claro \u2022 Costa Rica medio \u2022 Guatemala oscuro",
@@ -269,10 +279,16 @@
   const faqSchemaScript = document.getElementById("faq-schema");
   const roastFaqAnswer = document.querySelector('[data-i18n="faq.a3"]');
   const BASE = Object.fromEntries(
-    [...document.querySelectorAll("[data-i18n]")].map((element) => [
-      element.getAttribute("data-i18n"),
-      element.textContent
-    ]).filter(([key]) => Boolean(key))
+    [
+      ...[...document.querySelectorAll("[data-i18n]")].map((element) => [
+        element.getAttribute("data-i18n"),
+        element.textContent
+      ]),
+      ...[...document.querySelectorAll("[data-i18n-aria-label]")].map((element) => [
+        element.getAttribute("data-i18n-aria-label"),
+        element.getAttribute("aria-label")
+      ])
+    ].filter(([key]) => Boolean(key))
   );
   const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
   let activeProductIndex = 0;
@@ -514,7 +530,6 @@
     if (!offering) return;
 
     const copy = getCoffeeCopy(offering, lang);
-    const usesCompactHero = !isHeroDesktopImageAllowed();
     const heroBadge = document.querySelector(".hero-floating-badge");
     const badgeSpans = heroBadge ? heroBadge.querySelectorAll("span") : [];
     const heroCta = document.getElementById("heroOrderBtn");
@@ -548,15 +563,9 @@
     });
 
     if (heroCta) {
-      heroCta.href = usesCompactHero
-        ? coffeeLineup?.defaultShopUrl || DEFAULT_SHOP_URL
-        : getCoffeeShopUrl(offering);
-      heroCta.textContent = usesCompactHero
-        ? copy.mobileHeroCta || getCopy(lang, "hero.cta.mobile")
-        : copy.heroCta || getCopy(lang, "hero.cta.primary");
-      heroCta.dataset.ctaLocation = usesCompactHero
-        ? "hero_shop_mobile"
-        : offering.id === "discovery-box" ? "hero_discovery_box" : "hero_shop_current";
+      heroCta.href = coffeeLineup?.defaultShopUrl || DEFAULT_SHOP_URL;
+      heroCta.textContent = copy.heroCta || copy.mobileHeroCta || getCopy(lang, "hero.cta.primary");
+      heroCta.dataset.ctaLocation = "hero_shop";
     }
   }
 
@@ -918,11 +927,9 @@
     const headerHeight = header ? header.offsetHeight : 0;
     const visualViewport = window.visualViewport;
     const visualHeight = visualViewport?.height || window.innerHeight || document.documentElement.clientHeight || 0;
-    const browserBuffer = Math.max(0, Math.round((window.innerHeight || visualHeight) - visualHeight - (visualViewport?.offsetTop || 0)));
 
     root.style.setProperty("--header-height", `${headerHeight}px`);
     root.style.setProperty("--mobile-visual-height", `${Math.round(visualHeight)}px`);
-    root.style.setProperty("--mobile-browser-buffer", `${browserBuffer}px`);
   }
 
   function setupViewportSizing() {
@@ -949,8 +956,9 @@
   function setMobile(open) {
     if (!toggle || !mobileNav) return;
 
+    const menuLabels = MOBILE_MENU_LABELS[getCurrentLang()] || MOBILE_MENU_LABELS.en;
     toggle.setAttribute("aria-expanded", String(open));
-    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    toggle.setAttribute("aria-label", open ? menuLabels.close : menuLabels.open);
     mobileNav.classList.toggle("is-open", open);
     mobileNav.setAttribute("aria-hidden", String(!open));
     body.classList.toggle("nav-open", open);
@@ -1620,6 +1628,10 @@
       const key = element.getAttribute("data-i18n");
       if (key) element.textContent = getCopy(lang, key);
     });
+    document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+      const key = element.getAttribute("data-i18n-aria-label");
+      if (key) element.setAttribute("aria-label", getCopy(lang, key));
+    });
 
     renderCoffeeLineup(lang);
     updateDerivedContent(lang);
@@ -1627,6 +1639,13 @@
       button.setAttribute("aria-pressed", String(button.getAttribute("data-lang-btn") === lang));
     });
     setSmsLinks(lang);
+    if (toggle) {
+      const menuLabels = MOBILE_MENU_LABELS[lang] || MOBILE_MENU_LABELS.en;
+      toggle.setAttribute(
+        "aria-label",
+        toggle.getAttribute("aria-expanded") === "true" ? menuLabels.close : menuLabels.open
+      );
+    }
 
     try {
       localStorage.setItem(STORAGE_KEY, lang);

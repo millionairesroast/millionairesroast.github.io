@@ -27,10 +27,6 @@
     "hero.eyebrow": "Caf\u00e9 en lotes peque\u00f1os tostado en Illinois",
     "hero.title": "Caf\u00e9 de especialidad sin el sobreprecio premium.",
     "hero.sub": "Caf\u00e9 fresco de origen \u00fanico y grado de especialidad, tostado en lotes peque\u00f1os para Springfield, Beardstown y las comunidades del centro de Illinois.",
-    "hero.proof.label": "Detalles del caf\u00e9",
-    "hero.proof.roasted": "Tostado en Springfield",
-    "hero.proof.origin": "Caf\u00e9s de origen \u00fanico",
-    "hero.proof.batches": "Lotes peque\u00f1os",
     "hero.pricing.label": "Precios actuales",
     "hero.price.coldbrew.label": "Cold brew de 16 oz",
     "hero.price.bags.label": "Bolsas de 12 oz",
@@ -276,6 +272,9 @@
   const finePointerQuery = typeof window.matchMedia === "function"
     ? window.matchMedia("(hover: hover) and (pointer: fine)")
     : null;
+  const supportsSmallViewportUnits = typeof CSS !== "undefined"
+    && typeof CSS.supports === "function"
+    && CSS.supports("height", "100svh");
   const faqSchemaScript = document.getElementById("faq-schema");
   const roastFaqAnswer = document.querySelector('[data-i18n="faq.a3"]');
   const BASE = Object.fromEntries(
@@ -303,6 +302,7 @@
   let revealObserver = null;
   let sectionObserver = null;
   let revealMotionListenerBound = false;
+  let stableViewportWidth = 0;
   const accordionCloseCleanups = new WeakMap();
 
   if (yearEl) {
@@ -923,22 +923,27 @@
     });
   }
 
-  function syncHeaderHeight() {
+  function syncViewportSizing(forceHeight = false) {
     const headerHeight = header ? header.offsetHeight : 0;
     const visualViewport = window.visualViewport;
     const visualHeight = visualViewport?.height || window.innerHeight || document.documentElement.clientHeight || 0;
+    const visualWidth = visualViewport?.width || window.innerWidth || document.documentElement.clientWidth || 0;
 
     root.style.setProperty("--header-height", `${headerHeight}px`);
-    root.style.setProperty("--mobile-visual-height", `${Math.round(visualHeight)}px`);
+    if (!supportsSmallViewportUnits
+      && (forceHeight || !stableViewportWidth || Math.abs(visualWidth - stableViewportWidth) > 1)) {
+      stableViewportWidth = visualWidth;
+      root.style.setProperty("--mobile-visual-height", `${Math.round(visualHeight)}px`);
+    }
   }
 
   function setupViewportSizing() {
-    syncHeaderHeight();
+    syncViewportSizing(true);
 
-    window.addEventListener("resize", syncHeaderHeight);
+    window.addEventListener("resize", () => syncViewportSizing());
 
     if (window.visualViewport) {
-      window.visualViewport.addEventListener("resize", syncHeaderHeight);
+      window.visualViewport.addEventListener("resize", () => syncViewportSizing());
     }
   }
 

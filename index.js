@@ -1,10 +1,6 @@
 (() => {
   const PHONE_NUMBER = "12174167072";
   const STORAGE_KEY = "mr_lang";
-  const DEFAULT_SHOP_URL = "https://millionaires-roast.square.site/";
-  const COFFEE_DATA_URL = "data/coffees.json?v=77";
-  const HERO_SAMPLE_TARGETS = ["#coffee-card-light", "#coffee-card-medium", "#coffee-card-dark"];
-  const TRANSPARENT_PIXEL = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
   const SMS_BODY = {
     en: "Hi! I'd like to order coffee from Millionaire's Roast. What do you have available?",
     es: "\u00a1Hola! Me gustar\u00eda ordenar caf\u00e9 de Millionaire's Roast. \u00bfQu\u00e9 tienen disponible?"
@@ -35,7 +31,7 @@
     "hero.helper": "Compra en l\u00ednea, vis\u00edtanos en los mercados de Springfield o encuentra la l\u00ednea completa en The Cottage en Beardstown.",
     "hero.cta.primary": "Comprar caf\u00e9",
     "hero.cta.mobile": "Comprar caf\u00e9",
-    "hero.cta.secondary": "Explorar caf\u00e9s actuales",
+    "hero.cta.secondary": "Ver el men\u00fa actual",
     "hero.badge.kicker": "Nueva oferta de mercado",
     "hero.badge.title": "Discovery Box",
     "hero.badge.meta": "3.5 oz cada uno \u2022 Uganda claro \u2022 Costa Rica medio \u2022 Guatemala oscuro",
@@ -53,97 +49,27 @@
     "ghost.local": "LOCAL",
     "ghost.markets": "MERCADOS",
 
-    "featured.eyebrow": "Oferta destacada",
+    "featured.eyebrow": "Favorito local",
     "featured.title": "Cold Brew embotellado",
-    "featured.taste": "Cereza \u2022 Caramelo \u2022 Mara\u00f1\u00f3n \u2022 Chocolate de reposter\u00eda",
-    "featured.body": "Nuestro cold brew embotellado de 16 oz se prepara con Guatemalan Organic Highlands, un tueste oscuro procedente de cooperativas de peque\u00f1as fincas de Guatemala con certificaci\u00f3n org\u00e1nica. Espera una taza suave y balanceada con cereza, caramelo, mara\u00f1\u00f3n y chocolate de reposter\u00eda.",
-    "featured.spec.origin": "Origen: Tierras altas de Guatemala",
-    "featured.spec.roast": "Tueste: Oscuro",
-    "featured.spec.body": "Cuerpo: Medio",
+    "featured.body": "Cold brew suave de lotes peque\u00f1os en una botella de 16 oz lista para tomar.",
+    "featured.meta": "16 oz \u2022 Listo para tomar",
     "featured.cta": "Ordenar cold brew",
 
     "coffees.eyebrow": "Caf\u00e9s actuales",
-    "coffees.title": "Una l\u00ednea clara, reci\u00e9n tostada.",
-    "coffees.subtitle": "Cinco caf\u00e9s de origen \u00fanico, perfiles claros y precios simples. Compara la taza que quieres y ordena de la lista actual.",
-    "coffee.spec.origin": "Origen",
-    "coffee.spec.process": "Proceso",
-    "coffee.spec.body": "Cuerpo",
-    "coffee.spec.acidity": "Acidez",
-    "coffee.notes.label": "Notas",
-    "coffee.spec.origin.explain": "De d\u00f3nde viene el caf\u00e9. El origen afecta el clima, el suelo, la variedad y el car\u00e1cter general de la taza.",
-    "coffee.spec.process.explain": "C\u00f3mo se procesa el caf\u00e9 despu\u00e9s de la cosecha. El proceso afecta la dulzura, la textura, la claridad y el sabor frutal.",
-    "coffee.spec.body.explain": "El peso o la textura del caf\u00e9 en la boca. Un cuerpo m\u00e1s pesado se siente m\u00e1s lleno y rico.",
-    "coffee.spec.acidity.explain": "El brillo o la vivacidad en la taza. Una acidez media puede hacer que el caf\u00e9 sepa m\u00e1s limpio, frutal o vivo.",
+    "coffees.title": "Mira lo que estamos tostando ahora.",
+    "coffees.subtitle": "Nuestros caf\u00e9s rotan a medida que se agotan los lotes. Para ver la selecci\u00f3n, los perfiles de tueste y la disponibilidad m\u00e1s precisos, visita la tienda en l\u00ednea de Millionaire's Roast.",
+    "coffees.cta": "Ver caf\u00e9s actuales",
     "coffee.price.title": "Precio simple en toda la l\u00ednea",
-    "coffee.price.bag": "Bolsa de 12 oz: $16",
-    "coffee.price.kcups": "K-Cups de 8 unidades: 1 por $10 \u2022 2 por $19 \u2022 3 por $27",
-    "coffee.price.coldbrew": "Cold brew de 16 oz: $5",
-    "coffee.price.discovery": "Discovery Box: $18",
-    "product.select.label": "Elige una oferta",
+    "coffee.price.bag.label": "Bolsas de 12 oz",
+    "coffee.price.kcups.label": "K-Cups de 8 unidades",
+    "coffee.price.kcups.multi": "2 por $19 • 3 por $27",
+    "coffee.price.coldbrew.label": "Cold brew de 16 oz",
+    "coffee.price.discovery.label": "Discovery Box",
     "discovery.card.badge": "Discovery Box",
-    "discovery.card.process": "Sampler de tres paquetes \u2022 $18",
-    "discovery.card.body": "Tres muestras de caf\u00e9 de 3.5 oz para comparar nuestros tuestes claro, medio y oscuro antes de elegir una bolsa completa. Disponible en grano entero o molido.",
-    "discovery.card.contents": "Dentro de la caja",
-    "discovery.card.contentsList": "Ugandan Rwenzori Kasese \u2014 Claro \u2022 Costa Rican Jaguar Honey \u2014 Medio \u2022 Guatemalan Organic Highlands \u2014 Oscuro",
-    "discovery.card.choice": "Quiero comparar tres caf\u00e9s distintos y encontrar el perfil de tueste ideal para m\u00ed.",
-    "discovery.spec.price": "Precio",
-    "discovery.spec.format": "Formato",
-    "discovery.spec.grind": "Preparaci\u00f3n",
-    "discovery.spec.roasts": "Tuestes",
-    "discovery.value.grind": "En grano entero o molido",
-    "discovery.value.roasts": "Claro \u2022 Medio \u2022 Oscuro",
-    "coffee.ug.badge": "Tueste claro",
-    "coffee.ug.title": "Ugandan Rwenzori Kasese",
-    "coffee.ug.process": "Proceso natural",
-    "coffee.ug.body": "Caf\u00e9 natural 2026 frutal de Kasese, de peque\u00f1os productores de Kyagalanyi Coffee listados como 43% mujeres, con frambuesa, ciruela, az\u00facar morena, clementina y t\u00e9 negro.",
-    "coffee.ug.notes": "Frambuesa, ciruela, az\u00facar morena, clementina, t\u00e9 negro",
-    "coffee.ug.origin": "Kasese, monta\u00f1as Rwenzori, Uganda",
-    "coffee.ug.bodyValue": "Medio",
-    "coffee.ug.acidity": "Suave",
-    "coffee.ug.choice": "Quiero un tueste claro frutal con dulzura de berries, clementina y t\u00e9 negro.",
-    "coffee.cr.badge": "Tueste medio",
-    "coffee.cr.title": "Costa Rican Jaguar Honey",
-    "coffee.cr.process": "Proceso Honey",
-    "coffee.cr.body": "Lote honey 2026 del beneficio San Diego, con chocolate con leche, miel y frambuesa sobre un perfil limpio de tueste medio.",
-    "coffee.cr.notes": "Chocolate con leche, miel, frambuesa",
-    "coffee.cr.origin": "Tarraz\u00fa, Costa Rica",
-    "coffee.cr.bodyValue": "Ligero",
-    "coffee.cr.acidity": "Brillante",
-    "coffee.pe.badge": "Tueste med-oscuro",
-    "coffee.pe.title": "Peruvian Chonta G1 Washed",
-    "coffee.pe.process": "Proceso lavado",
-    "coffee.pe.body": "Caf\u00e9 lavado 2026 de Chonta, Cajamarca, con chocolate, manzana verde, ciruela, almendra tostada y c\u00edtricos.",
-    "coffee.pe.notes": "Chocolate, manzana verde, ciruela, almendra tostada, c\u00edtricos",
-    "coffee.pe.origin": "Chonta, Cajamarca, Per\u00fa",
-    "coffee.pe.bodyValue": "Medio",
-    "coffee.pe.acidity": "Media",
-    "coffee.gt.badge": "Tueste oscuro",
-    "coffee.gt.title": "Guatemalan Organic Highlands",
-    "coffee.gt.process": "Lavado y secado al sol",
-    "coffee.gt.body": "Caf\u00e9 de las tierras altas de Guatemala procedente de cooperativas de peque\u00f1as fincas con certificaci\u00f3n org\u00e1nica, lavado y secado al sol, con cereza, caramelo, mara\u00f1\u00f3n y chocolate de reposter\u00eda.",
-    "coffee.gt.notes": "Cereza, caramelo, mara\u00f1\u00f3n, chocolate de reposter\u00eda",
-    "coffee.gt.origin": "Tierras altas de Guatemala",
-    "coffee.gt.bodyValue": "Medio",
-    "coffee.gt.acidity": "Suave",
-    "coffee.co.badge": "Decaf",
-    "coffee.co.title": "Colombian Sugarcane Decaf",
-    "coffee.co.process": "Descafeinado Sugarcane EA",
-    "coffee.co.body": "Descafeinado sugarcane EA de Valle del Cauca con chocolate con leche, almendra, fresa, vainilla y c\u00edtricos.",
-    "coffee.co.notes": "Chocolate con leche, almendra, fresa, vainilla, c\u00edtricos",
-    "coffee.co.origin": "Valle del Cauca, Colombia",
-    "coffee.co.bodyValue": "Medio",
-    "coffee.co.acidity": "Brillante",
-    "coffee.cta.light": "Ordenar tueste claro",
-    "coffee.cta.medium": "Ordenar tueste medio",
-    "coffee.cta.mediumDark": "Ordenar tueste medio oscuro",
-    "coffee.cta.dark": "Ordenar tueste oscuro",
-    "coffee.cta.decaf": "Ordenar decaf",
+    "discovery.card.title": "Encuentra tu tueste antes de comprar una bolsa completa.",
+    "discovery.card.body": "Tres muestras de cafe de 3.5 oz que cubren tuestes claro, medio y oscuro. Elige en grano entero o molido.",
+    "discovery.card.meta": "3 × 3.5 oz • En grano entero o molido",
     "discovery.cta": "Ordenar Discovery Box",
-
-    "choose.card1.title": "Quiero una taza brillante y dulce a miel, con chocolate suave y frambuesa.",
-    "choose.card2.title": "Quiero una taza balanceada con chocolate, fruta de huerto y almendra tostada.",
-    "choose.card3.title": "Quiero una taza profunda y balanceada con dulzura de cereza, caramelo, mara\u00f1\u00f3n y chocolate de reposter\u00eda.",
-    "choose.card4.title": "Quiero sabor de caf\u00e9 real sin cafe\u00edna: chocolate, almendra y fruta brillante.",
 
     "proof.title": "Una marca local real y en movimiento",
     "proof.subtitle": "La marca se ve pulida porque el trabajo detr\u00e1s es real: mercados locales, tostado manual y un fundador construyendo todo lote por lote.",
@@ -216,7 +142,7 @@
     "faq.q2": "\u00bfD\u00f3nde est\u00e1n ubicados?",
     "faq.a2": "Millionaire's Roast tiene base en Springfield, Illinois. Servimos a Springfield a trav\u00e9s de mercados locales y pedidos en l\u00ednea, y a Beardstown a trav\u00e9s de The Cottage en 201 W Main St, un puesto local sin personal conectado con Rosebud & Co.",
     "faq.q3": "\u00bfQu\u00e9 caf\u00e9s est\u00e1n disponibles ahora mismo?",
-    "faq.a3": "Actualmente ofrecemos cinco caf\u00e9s frescos de origen \u00fanico: Ugandan Rwenzori Kasese como nuestro tueste claro, Costa Rican Jaguar Honey como nuestro tueste medio insignia 2026, Peruvian Chonta G1 Washed, Guatemalan Organic Highlands y Colombian Sugarcane Decaf. Nuestra Discovery Box de $18 incluye tres muestras de 3.5 oz: tueste claro de Uganda, tueste medio de Costa Rica y tueste oscuro de Guatemala, disponibles en grano entero o molido. Tambi\u00e9n ofrecemos cold brew embotellado de 16 oz por $5, preparado con Guatemalan Organic Highlands. Toda la l\u00ednea es de grado de especialidad.",
+    "faq.a3": "Nuestros caf\u00e9s rotan a medida que se agotan los lotes, por lo que la tienda en l\u00ednea es la fuente m\u00e1s precisa para ver lo que est\u00e1 disponible ahora. La Discovery Box y el cold brew embotellado siguen siendo productos destacados, y todo el caf\u00e9 que tostamos es de grado de especialidad.",
     "faq.q4": "\u00bfCu\u00e1nto dura una rotaci\u00f3n actual?",
     "faq.a4": "Compramos caf\u00e9 verde en volumen, pero los tiempos de cosecha cambian seg\u00fan la regi\u00f3n y el ciclo agr\u00edcola. Cuando un caf\u00e9 se acaba, hay una alta probabilidad de que ese lote en espec\u00edfico se haya ido por ahora, no para siempre, y la rotaci\u00f3n sigue cambiando seg\u00fan la demanda y la disponibilidad.",
     "faq.q5": "\u00bfQu\u00e9 hace que este caf\u00e9 sea de especialidad?",
@@ -260,12 +186,6 @@
   const carousel = document.querySelector("[data-carousel]");
   const langButtons = [...document.querySelectorAll("[data-lang-btn]")];
   const langSwitches = [...document.querySelectorAll(".lang-switch")];
-  const productSelectorQuery = typeof window.matchMedia === "function"
-    ? window.matchMedia("(max-width: 760px)")
-    : null;
-  const heroDesktopQuery = typeof window.matchMedia === "function"
-    ? window.matchMedia("(min-width: 981px)")
-    : null;
   const productMotionQuery = typeof window.matchMedia === "function"
     ? window.matchMedia("(prefers-reduced-motion: reduce)")
     : null;
@@ -276,7 +196,6 @@
     && typeof CSS.supports === "function"
     && CSS.supports("height", "100svh");
   const faqSchemaScript = document.getElementById("faq-schema");
-  const roastFaqAnswer = document.querySelector('[data-i18n="faq.a3"]');
   const BASE = Object.fromEntries(
     [
       ...[...document.querySelectorAll("[data-i18n]")].map((element) => [
@@ -290,15 +209,8 @@
     ].filter(([key]) => Boolean(key))
   );
   const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-  let activeProductIndex = 0;
-  let productSwitchTimer = 0;
   let mobileMarketSwitchTimer = 0;
-  let coffeeLineup = null;
-  let coffeeLoadWarned = false;
-  let productSelectorListenerBound = false;
-  let productModeListenerBound = false;
   let mobileMarketTabsListenerBound = false;
-  let heroSampleLinksBound = false;
   let revealObserver = null;
   let sectionObserver = null;
   let revealMotionListenerBound = false;
@@ -343,492 +255,25 @@
     return root.dataset.lang === "es" ? "es" : "en";
   }
 
-  function normalizeCoffeeLineup(data) {
-    if (!data || typeof data !== "object") {
-      throw new Error("Coffee lineup data is not an object.");
-    }
-
-    const coffees = Array.isArray(data.coffees)
-      ? data.coffees
-        .filter((coffee) => coffee && typeof coffee === "object")
-        .sort((a, b) => Number(a.order || 0) - Number(b.order || 0))
-      : [];
-
-    if (!coffees.length) {
-      throw new Error("Coffee lineup data does not include coffees.");
-    }
-
-    return {
-      ...data,
-      defaultShopUrl: data.defaultShopUrl || DEFAULT_SHOP_URL,
-      coffees
-    };
-  }
-
-  async function loadCoffeeLineup() {
-    if (typeof fetch !== "function") return false;
-
-    try {
-      const response = await fetch(COFFEE_DATA_URL);
-      if (!response.ok) {
-        throw new Error(`Coffee lineup request failed with ${response.status}.`);
-      }
-
-      coffeeLineup = normalizeCoffeeLineup(await response.json());
-      return true;
-    } catch (error) {
-      coffeeLineup = null;
-      if (!coffeeLoadWarned) {
-        console.warn("Millionaire's Roast coffee lineup could not be loaded; using static fallback.", error);
-        coffeeLoadWarned = true;
-      }
-      return false;
-    }
-  }
-
-  function getActiveCoffees() {
-    return (coffeeLineup?.coffees || []).filter((coffee) => coffee.active !== false);
-  }
-
-  function getFallbackCoffee() {
-    const activeCoffees = getActiveCoffees();
-    return activeCoffees.find((coffee) => coffee.featured) || activeCoffees[0] || null;
-  }
-
-  function getFeaturedOffering() {
-    return coffeeLineup?.featuredOffering || getFallbackCoffee();
-  }
-
-  function getHeroOffering() {
-    return coffeeLineup?.heroOffering || getFallbackCoffee();
-  }
-
-  function getCoffeeCopy(coffee, lang) {
-    return coffee?.[lang] || coffee?.en || {};
-  }
-
-  function getCoffeeLineupCopy(lang, key) {
-    return coffeeLineup?.copy?.[lang]?.[key] || coffeeLineup?.copy?.en?.[key] || "";
-  }
-
-  function getCoffeeShopUrl(coffee) {
-    return coffee?.squareUrl || coffeeLineup?.defaultShopUrl || DEFAULT_SHOP_URL;
-  }
-
-  function getCoffeeImage(coffee, imageKey) {
-    const image = coffee?.images?.[imageKey];
-    return typeof image === "string" && image.trim() ? image : "";
-  }
-
-  function makeCoffeeDomId(prefix, coffee, index) {
-    const base = String(coffee?.slot || coffee?.id || `coffee-${index + 1}`)
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-|-$/g, "");
-    return `${prefix}-${base || index + 1}`;
-  }
-
-  function makeCoffeeCtaLocation(coffee) {
-    return `coffee_${String(coffee?.slot || coffee?.id || "current").replace(/[^a-z0-9]+/gi, "_").replace(/^_|_$/g, "").toLowerCase()}`;
-  }
-
-  function setText(element, text) {
-    if (element && text !== undefined && text !== null) {
-      element.textContent = text;
-    }
-  }
-
-  function setImage(image, src, alt) {
-    if (!image) return;
-    if (src) image.src = src;
-    if (typeof alt === "string") image.alt = alt;
-  }
-
-  function isHeroDesktopImageAllowed() {
-    return heroDesktopQuery ? heroDesktopQuery.matches : true;
-  }
-
-  function setHeroProductPlaceholder(isVisible) {
-    const plate = document.querySelector(".hero-image-plate");
-    const picture = document.querySelector(".hero-product-picture");
-    const placeholder = document.querySelector(".hero-product-placeholder");
-
-    plate?.classList.toggle("is-placeholder", isVisible);
-    if (picture) picture.hidden = isVisible;
-    if (placeholder) placeholder.hidden = !isVisible;
-  }
-
-  function syncHeroProductImageLoading() {
-    const image = document.querySelector(".hero-product-image");
-    const source = document.querySelector(".hero-product-source");
-    if (!image) return;
-
-    const desktopSrc = image.dataset.desktopSrc || source?.dataset.desktopSrc || "";
-
-    if (source) {
-      if (desktopSrc) {
-        source.dataset.desktopSrc = desktopSrc;
-        source.srcset = desktopSrc;
-      } else {
-        source.removeAttribute("srcset");
-      }
-    }
-
-    if (isHeroDesktopImageAllowed() && desktopSrc) {
-      setHeroProductPlaceholder(true);
-      image.onload = () => setHeroProductPlaceholder(false);
-      image.onerror = () => setHeroProductPlaceholder(true);
-      image.src = desktopSrc;
-      image.loading = "eager";
-      image.setAttribute("fetchpriority", "high");
-      if (image.complete) {
-        setHeroProductPlaceholder(!image.naturalWidth);
-      }
-    } else {
-      image.onload = null;
-      image.onerror = null;
-      image.src = TRANSPARENT_PIXEL;
-      image.loading = "lazy";
-      image.setAttribute("fetchpriority", "low");
-      setHeroProductPlaceholder(!desktopSrc);
-    }
-  }
-
-  function setHeroProductImage(src, alt) {
-    const image = document.querySelector(".hero-product-image");
-    const source = document.querySelector(".hero-product-source");
-    if (!image) return;
-
-    const desktopSrc = typeof src === "string" ? src.trim() : "";
-
-    image.dataset.desktopSrc = desktopSrc;
-    if (source) {
-      source.dataset.desktopSrc = desktopSrc;
-    }
-
-    if (typeof alt === "string") {
-      image.alt = alt;
-    }
-
-    syncHeroProductImageLoading();
-  }
-
-  function formatCoffeeMeta(copy) {
-    return [copy.process, copy.roast || copy.badge].filter(Boolean).join(" \u2022 ");
-  }
-
-  function formatNotes(notes) {
-    return Array.isArray(notes) ? notes.filter(Boolean).join(" \u2022 ") : "";
-  }
-
-  function getNotesLabel(lang) {
-    return lang === "es" ? "Notas" : "Tasting Notes";
-  }
-
-  function renderCoffeeHero(lang) {
-    const offering = getHeroOffering();
-    if (!offering) return;
-
-    const copy = getCoffeeCopy(offering, lang);
-    const heroBadge = document.querySelector(".hero-floating-badge");
-    const badgeSpans = heroBadge ? heroBadge.querySelectorAll("span") : [];
-    const heroCta = document.getElementById("heroOrderBtn");
-    const heroSampleRows = [...document.querySelectorAll("[data-hero-sample]")];
-
-    setHeroProductImage(
-      getCoffeeImage(offering, "hero"),
-      copy.heroAlt || `Millionaire's Roast ${copy.title || "coffee"}`
-    );
-    setText(badgeSpans[0], copy.heroKicker || getCopy(lang, "hero.badge.kicker"));
-    setText(heroBadge?.querySelector("strong"), copy.title);
-    setText(badgeSpans[1], copy.heroMeta || formatCoffeeMeta(copy));
-    setText(document.querySelector("[data-hero-placeholder-kicker]"), copy.placeholderKicker || getCopy(lang, "hero.placeholder.kicker"));
-    setText(document.querySelector("[data-hero-placeholder-title]"), copy.title || getCopy(lang, "hero.placeholder.title"));
-    setText(document.querySelector("[data-hero-placeholder-meta]"), copy.placeholderMeta || getCopy(lang, "hero.placeholder.meta"));
-    heroSampleRows.forEach((row, index) => {
-      const sample = Array.isArray(copy.heroSamples) ? copy.heroSamples[index] : null;
-      setText(row.querySelector("[data-hero-sample-roast]"), sample?.roast);
-      setText(row.querySelector("[data-hero-sample-origin]"), sample?.origin);
-      if (HERO_SAMPLE_TARGETS[index]) {
-        row.setAttribute("href", HERO_SAMPLE_TARGETS[index]);
-      }
-      const roastLabel = sample?.roast || "";
-      const originLabel = String(sample?.origin || "").replace(/\s+/g, " ").trim();
-      const ariaLabel = [roastLabel, originLabel].filter(Boolean).join(": ");
-      if (ariaLabel) {
-        row.setAttribute("aria-label", lang === "es"
-          ? `Ver caf\u00e9 ${ariaLabel}`
-          : `View ${ariaLabel} coffee`);
-      }
-    });
-
-    if (heroCta) {
-      heroCta.href = coffeeLineup?.defaultShopUrl || DEFAULT_SHOP_URL;
-      heroCta.textContent = copy.heroCta || copy.mobileHeroCta || getCopy(lang, "hero.cta.primary");
-      heroCta.dataset.ctaLocation = "hero_shop";
-    }
-  }
-
-  function renderFeaturedCoffee(lang) {
-    const coffee = getFeaturedOffering();
-    if (!coffee) return;
-
-    const copy = getCoffeeCopy(coffee, lang);
-    const isColdBrewFeature = coffee.id === "bottled-cold-brew";
-    const featuredPanel = document.querySelector("#featured-offering .feature-panel");
-    const featuredImage = document.querySelector(".feature-product-image");
-    const featuredCta = document.querySelector("#featured-offering [data-shop-cta]");
-    const specs = [
-      { label: getCopy(lang, "coffee.spec.origin") || (lang === "es" ? "Origen" : "Origin"), value: copy.origin },
-      { label: lang === "es" ? "Tueste" : "Roast", value: copy.roast || copy.badge },
-      { label: getCopy(lang, "coffee.spec.body") || (lang === "es" ? "Cuerpo" : "Body"), value: copy.body }
-    ].filter((spec) => spec.label && spec.value);
-
-    featuredPanel?.classList.toggle("is-cold-brew-feature", isColdBrewFeature);
-    setImage(
-      featuredImage,
-      getCoffeeImage(coffee, "featured"),
-      copy.featuredAlt || `Millionaire's Roast ${copy.title || "coffee"} coffee bag`
-    );
-    setText(document.getElementById("featured-offering-title"), copy.title);
-    setText(document.querySelector("#featured-offering .section-eyebrow"), copy.featuredKicker || getCopy(lang, "featured.eyebrow"));
-    setText(document.querySelector("#featured-offering .taste-line"), formatNotes(copy.notes));
-    setText(document.querySelector("#featured-offering .section-subtitle"), copy.featuredDescription || copy.description);
-
-    const specGrid = document.querySelector("#featured-offering .feature-specs");
-    if (specGrid && specs.length) {
-      specGrid.innerHTML = specs
-        .map((spec) => `<div class="feature-spec"><span>${escapeHtml(spec.label)}: ${escapeHtml(spec.value)}</span></div>`)
-        .join("");
-    }
-
-    if (featuredCta) {
-      featuredCta.href = getCoffeeShopUrl(coffee);
-      featuredCta.textContent = copy.featuredCta || copy.cta || getCopy(lang, "featured.cta");
-      featuredCta.dataset.ctaLocation = isColdBrewFeature ? "featured_cold_brew" : "featured_flagship";
-    }
-  }
-
-  function renderProductSelector(lang) {
-    const selector = document.querySelector("[data-product-select]");
-    const discoveryOffering = coffeeLineup?.heroOffering;
-    const activeCoffees = getActiveCoffees();
-    const offerings = [discoveryOffering, ...activeCoffees].filter(Boolean);
-    if (!selector || !offerings.length) return;
-
-    activeProductIndex = Math.min(activeProductIndex, offerings.length - 1);
-    selector.innerHTML = offerings.map((offering, index) => {
-      const copy = getCoffeeCopy(offering, lang);
-      const label = index === 0 ? copy.title : copy.badge || copy.roast || copy.title;
-      return `<option value="${index}">${escapeHtml(label || "")}</option>`;
-    }).join("");
-    selector.value = String(activeProductIndex);
-  }
-
-  function renderCoffeeSpecButton(spec, coffee, index, specIndex) {
-    const controlId = `${makeCoffeeDomId("spec", coffee, index)}-${spec.key}-copy`;
-    return `
-      <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="${escapeHtml(controlId)}" data-reveal="up" data-reveal-delay="${specIndex * 45}">
-        <span class="spec-label">${escapeHtml(spec.label)}</span>
-        <span class="spec-value">${escapeHtml(spec.value)}</span>
-        <span class="spec-explain" id="${escapeHtml(controlId)}">${escapeHtml(spec.explain)}</span>
-      </div>
-    `;
-  }
-
-  function renderDiscoveryBoxCard(offering, lang) {
-    const copy = getCoffeeCopy(offering, lang);
-    const panelId = "coffee-card-discovery";
-    const titleId = "coffee-title-discovery";
-    const isActive = activeProductIndex === 0;
-    const contents = Array.isArray(copy.heroSamples)
-      ? copy.heroSamples.map((sample) => {
-        const origin = String(sample?.origin || "").replace(/\s+/g, " ").trim();
-        return [origin, sample?.roast].filter(Boolean).join(" \u2014 ");
-      }).filter(Boolean).join(" \u2022 ")
-      : "";
-    const specs = [
-      { label: getCopy(lang, "discovery.spec.price"), value: copy.price },
-      { label: getCopy(lang, "discovery.spec.format"), value: copy.format },
-      { label: getCopy(lang, "discovery.spec.grind"), value: copy.grind },
-      { label: getCopy(lang, "discovery.spec.roasts"), value: copy.roasts }
-    ].filter((spec) => spec.label && spec.value);
-
-    return `
-      <article class="card card-plate product-card discovery-box-product-card card-interactive${isActive ? " is-active" : ""}" id="${panelId}" data-product-panel aria-labelledby="${titleId}" data-reveal="up" data-reveal-delay="0"${isProductSelectorMode() && !isActive ? " hidden" : ""}>
-        <div class="product-card-head" data-reveal="fade" data-reveal-delay="80">
-          <span class="origin-badge">${escapeHtml(copy.cardBadge || copy.title || "")}</span>
-          <span class="product-process">${escapeHtml(copy.cardProcess || "")}</span>
-        </div>
-        <h3 class="origin-title" id="${titleId}" data-reveal="fade" data-reveal-delay="120">${escapeHtml(copy.title || "")}</h3>
-        <p class="card-text" data-reveal="fade" data-reveal-delay="160">${escapeHtml(copy.cardDescription || "")}</p>
-        ${contents ? `<p class="product-notes-line" data-reveal="fade" data-reveal-delay="210"><strong>${escapeHtml(copy.cardContentsLabel || "")}</strong><span>${escapeHtml(contents)}</span></p>` : ""}
-        <div class="product-choice" data-reveal="fade" data-reveal-delay="250">
-          <span>${escapeHtml(copy.cardChoice || "")}</span>
-        </div>
-        <div class="product-spec-grid">
-          ${specs.map((spec, index) => `
-            <div class="spec-card" data-reveal="up" data-reveal-delay="${index * 45}">
-              <span class="spec-label">${escapeHtml(spec.label)}</span>
-              <span class="spec-value">${escapeHtml(spec.value)}</span>
-            </div>
-          `).join("")}
-        </div>
-        <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_discovery_box_mobile" href="${escapeHtml(getCoffeeShopUrl(offering))}">${escapeHtml(copy.cardCta || getCopy(lang, "discovery.cta"))}</a>
-      </article>
-    `;
-  }
-
-  function renderCoffeeCard(coffee, index, lang, productIndex) {
-    const copy = getCoffeeCopy(coffee, lang);
-    const panelId = makeCoffeeDomId("coffee-card", coffee, index);
-    const titleId = makeCoffeeDomId("coffee-title", coffee, index);
-    const isActive = productIndex === activeProductIndex;
-    const revealBase = index * 90;
-    const specs = [
-      {
-        key: "origin",
-        label: getCopy(lang, "coffee.spec.origin"),
-        value: copy.origin,
-        explain: getCopy(lang, "coffee.spec.origin.explain")
-      },
-      {
-        key: "process",
-        label: getCopy(lang, "coffee.spec.process"),
-        value: copy.process,
-        explain: getCopy(lang, "coffee.spec.process.explain")
-      },
-      {
-        key: "body",
-        label: getCopy(lang, "coffee.spec.body"),
-        value: copy.body,
-        explain: getCopy(lang, "coffee.spec.body.explain")
-      },
-      {
-        key: "acidity",
-        label: getCopy(lang, "coffee.spec.acidity"),
-        value: copy.acidity,
-        explain: getCopy(lang, "coffee.spec.acidity.explain")
-      }
-    ].filter((spec) => spec.label && spec.value);
-    const notesLine = formatNotes(copy.notes);
-
-    return `
-      <article class="card card-plate product-card${coffee.featured ? " product-card-featured" : ""} card-interactive${isActive ? " is-active" : ""}" id="${escapeHtml(panelId)}" data-product-panel aria-labelledby="${escapeHtml(titleId)}" data-reveal="up" data-reveal-delay="${revealBase}"${isProductSelectorMode() && !isActive ? " hidden" : ""}>
-        <div class="product-card-head" data-reveal="fade" data-reveal-delay="${80 + revealBase}">
-          <span class="origin-badge">${escapeHtml(copy.badge || copy.roast || "")}</span>
-        </div>
-        <h3 class="origin-title" id="${escapeHtml(titleId)}" data-reveal="fade" data-reveal-delay="${120 + revealBase}">${escapeHtml(copy.title || "")}</h3>
-        <p class="card-text" data-reveal="fade" data-reveal-delay="${160 + revealBase}">${escapeHtml(copy.description || "")}</p>
-        ${notesLine ? `<p class="product-notes-line" data-reveal="fade" data-reveal-delay="${210 + revealBase}"><strong>${escapeHtml(getNotesLabel(lang))}</strong><span>${escapeHtml(notesLine)}</span></p>` : ""}
-        <div class="product-choice" data-reveal="fade" data-reveal-delay="${250 + revealBase}">
-          <span>${escapeHtml(copy.choice || "")}</span>
-        </div>
-        <div class="product-spec-grid">
-          ${specs.map((spec, specIndex) => renderCoffeeSpecButton(spec, coffee, index, specIndex)).join("")}
-        </div>
-        <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="${escapeHtml(makeCoffeeCtaLocation(coffee))}" href="${escapeHtml(getCoffeeShopUrl(coffee))}">${escapeHtml(copy.cta || getCopy(lang, "nav.orderCta"))}</a>
-      </article>
-    `;
-  }
-
-  function renderCoffeeCards(lang) {
-    const grid = document.querySelector(".coffee-product-grid");
-    const discoveryOffering = coffeeLineup?.heroOffering;
-    const activeCoffees = getActiveCoffees();
-    if (!grid || !activeCoffees.length) return;
-
-    const coffeeProductOffset = discoveryOffering ? 1 : 0;
-
-    const productCount = activeCoffees.length + (discoveryOffering ? 1 : 0);
-    activeProductIndex = Math.min(activeProductIndex, productCount - 1);
-    grid.innerHTML = [
-      discoveryOffering ? renderDiscoveryBoxCard(discoveryOffering, lang) : "",
-      ...activeCoffees.map((coffee, index) =>
-        renderCoffeeCard(coffee, index, lang, index + coffeeProductOffset)
-      )
-    ].join("");
-  }
-
-  function renderCoffeeLineup(lang = getCurrentLang()) {
-    if (!coffeeLineup) return;
-
-    renderCoffeeHero(lang);
-    renderFeaturedCoffee(lang);
-    renderProductSelector(lang);
-    renderCoffeeCards(lang);
-    setupRevealAnimations();
-    setupProductSelector();
-    setupCursorCardGlow();
-    setupAnalytics();
-  }
-
-  function buildCoffeeFaqAnswer(lang) {
-    const configuredAnswer = getCoffeeLineupCopy(lang, "faqCurrentAnswer");
-    if (configuredAnswer) return configuredAnswer;
-
-    const names = getActiveCoffees()
-      .map((coffee) => getCoffeeCopy(coffee, lang).title)
-      .filter(Boolean);
-
-    if (!names.length) return "";
-    if (names.length === 1) {
-      return lang === "es"
-        ? `Actualmente ofrecemos ${names[0]}.`
-        : `We currently offer ${names[0]}.`;
-    }
-
-    const lastName = names[names.length - 1];
-    const leadingNames = names.slice(0, -1).join(", ");
-    const conjunction = lang === "es" ? " y " : ", and ";
-    const coffeeList = `${leadingNames}${conjunction}${lastName}`;
-
-    return lang === "es"
-      ? `Actualmente ofrecemos estos caf\u00e9s frescos de origen \u00fanico: ${coffeeList}.`
-      : `We currently offer these fresh single-origin coffees: ${coffeeList}.`;
-  }
-
-  function buildRoastFaqAnswer(lang) {
-    return buildCoffeeFaqAnswer(lang) || getCopy(lang, "faq.a3");
-  }
-
   function updateFaqSchema(lang) {
     if (!faqSchemaScript) return;
 
+    const questionKeys = ["1", "2", "3", "4", "5"];
     const schema = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "@id": "https://millionairesroast.com/#faq",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: getCopy(lang, "faq.q1"),
-          acceptedAnswer: { "@type": "Answer", text: getCopy(lang, "faq.a1") }
-        },
-        {
-          "@type": "Question",
-          name: getCopy(lang, "faq.q2"),
-          acceptedAnswer: { "@type": "Answer", text: getCopy(lang, "faq.a2") }
-        },
-        {
-          "@type": "Question",
-          name: getCopy(lang, "faq.q3"),
-          acceptedAnswer: { "@type": "Answer", text: buildRoastFaqAnswer(lang) }
-        },
-        {
-          "@type": "Question",
-          name: getCopy(lang, "faq.q4"),
-          acceptedAnswer: { "@type": "Answer", text: getCopy(lang, "faq.a4") }
-        },
-        {
-          "@type": "Question",
-          name: getCopy(lang, "faq.q5"),
-          acceptedAnswer: { "@type": "Answer", text: getCopy(lang, "faq.a5") }
+      mainEntity: questionKeys.map((number) => ({
+        "@type": "Question",
+        name: getCopy(lang, `faq.q${number}`),
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: getCopy(lang, `faq.a${number}`)
         }
-      ]
+      }))
     };
 
-    faqSchemaScript.textContent = JSON.stringify(schema, null, 2);
+    faqSchemaScript.textContent = JSON.stringify(schema);
   }
 
   function getSmsBody(lang) {
@@ -1258,166 +703,6 @@
     });
   }
 
-  function isProductSelectorMode() {
-    return Boolean(productSelectorQuery?.matches);
-  }
-
-  function getProductSelectorElements() {
-    const selector = document.querySelector("[data-product-select]");
-    const grid = document.querySelector(".coffee-product-grid");
-    const panels = grid ? [...grid.querySelectorAll("[data-product-panel]")] : [];
-
-    return { selector, grid, panels };
-  }
-
-  function revealProductPanelIfReadable(panel) {
-    if (!panel || !isProductSelectorMode()) return;
-
-    const revealIfReadable = () => {
-      const rect = panel.getBoundingClientRect();
-      if (rect.bottom <= 0 || rect.top >= window.innerHeight) return;
-      revealCoffeeCard(panel);
-    };
-
-    requestAnimationFrame(revealIfReadable);
-    window.setTimeout(revealIfReadable, 250);
-  }
-
-  function renderProductSelection() {
-    const { selector, panels: productPanels } = getProductSelectorElements();
-    if (!productPanels.length) return;
-
-    activeProductIndex = Math.min(activeProductIndex, productPanels.length - 1);
-    const selectorMode = isProductSelectorMode();
-    if (selector) selector.value = String(activeProductIndex);
-
-    productPanels.forEach((panel, index) => {
-      const isActive = index === activeProductIndex;
-      panel.classList.toggle("is-active", isActive);
-      panel.hidden = selectorMode && !isActive;
-    });
-
-    revealProductPanelIfReadable(productPanels[activeProductIndex]);
-  }
-
-  function highlightProductPanel(panel) {
-    if (!panel) return;
-
-    document.querySelectorAll(".product-card.is-jump-highlight").forEach((highlightedPanel) => {
-      if (highlightedPanel === panel) return;
-      window.clearTimeout(Number(highlightedPanel.dataset.highlightTimer || 0));
-      highlightedPanel.classList.remove("is-jump-highlight");
-      delete highlightedPanel.dataset.highlightTimer;
-    });
-
-    window.clearTimeout(Number(panel.dataset.highlightTimer || 0));
-    panel.classList.remove("is-jump-highlight");
-    requestAnimationFrame(() => {
-      panel.classList.add("is-jump-highlight");
-      panel.dataset.highlightTimer = String(window.setTimeout(() => {
-        panel.classList.remove("is-jump-highlight");
-        delete panel.dataset.highlightTimer;
-      }, 3200));
-    });
-  }
-
-  function prepareProductPanelJump(target) {
-    if (!target?.matches?.("[data-product-panel]")) return false;
-
-    const { panels } = getProductSelectorElements();
-    const targetIndex = panels.indexOf(target);
-    if (targetIndex >= 0 && isProductSelectorMode()) {
-      updateProductSelection(targetIndex, false);
-    }
-
-    revealCoffeeCard(target);
-    highlightProductPanel(target);
-    return true;
-  }
-
-  function scrollToProductPanel(target) {
-    const isProductPanelJump = prepareProductPanelJump(target);
-
-    target.scrollIntoView({
-      behavior: productMotionQuery?.matches ? "auto" : "smooth",
-      block: isProductPanelJump ? "center" : "start"
-    });
-
-    return isProductPanelJump;
-  }
-
-  function setupHeroSampleLinks() {
-    if (heroSampleLinksBound) return;
-
-    document.addEventListener("click", (event) => {
-      const link = event.target.closest("[data-hero-sample-link]");
-      if (!link) return;
-
-      const href = link.getAttribute("href");
-      if (!href || !href.startsWith("#")) return;
-
-      const target = document.querySelector(href);
-      if (!target) return;
-
-      event.preventDefault();
-      scrollToProductPanel(target);
-      history.pushState(null, "", href);
-    });
-
-    heroSampleLinksBound = true;
-  }
-
-  function updateProductSelection(nextIndex = activeProductIndex, animate = false) {
-    const { grid: productGrid, panels: productPanels } = getProductSelectorElements();
-    if (!productPanels.length) return;
-
-    const boundedIndex = Math.min(Math.max(nextIndex, 0), productPanels.length - 1);
-    const shouldAnimate = animate
-      && productGrid
-      && isProductSelectorMode()
-      && boundedIndex !== activeProductIndex
-      && !productMotionQuery?.matches;
-
-    window.clearTimeout(productSwitchTimer);
-
-    if (!shouldAnimate) {
-      productGrid?.classList.remove("is-switching");
-      activeProductIndex = boundedIndex;
-      renderProductSelection();
-      return;
-    }
-
-    productGrid.classList.add("is-switching");
-    productSwitchTimer = window.setTimeout(() => {
-      activeProductIndex = boundedIndex;
-      renderProductSelection();
-      requestAnimationFrame(() => {
-        productGrid.classList.remove("is-switching");
-      });
-    }, 150);
-  }
-
-  function setupProductSelector() {
-    const { selector, panels: productPanels } = getProductSelectorElements();
-    if (!selector || !productPanels.length) return;
-
-    if (!productSelectorListenerBound) {
-      selector.addEventListener("change", () => {
-        updateProductSelection(Number(selector.value), true);
-      });
-      productSelectorListenerBound = true;
-    }
-
-    if (!productModeListenerBound) {
-      productSelectorQuery?.addEventListener?.("change", () => {
-        updateProductSelection();
-      });
-      productModeListenerBound = true;
-    }
-
-    updateProductSelection();
-  }
-
   function applyMobileMarketTabState(tabList, activeKey) {
     const tabs = [...tabList.querySelectorAll("[data-market-tab]")];
     const wrapper = tabList.closest("[data-mobile-market-tabs]");
@@ -1619,9 +904,6 @@
   }
 
   function updateDerivedContent(lang) {
-    if (roastFaqAnswer) {
-      roastFaqAnswer.textContent = buildRoastFaqAnswer(lang);
-    }
     updateFaqSchema(lang);
   }
 
@@ -1638,7 +920,6 @@
       if (key) element.setAttribute("aria-label", getCopy(lang, key));
     });
 
-    renderCoffeeLineup(lang);
     updateDerivedContent(lang);
     langButtons.forEach((button) => {
       button.setAttribute("aria-pressed", String(button.getAttribute("data-lang-btn") === lang));
@@ -1705,11 +986,9 @@
       if (!target) return;
 
       event.preventDefault();
-      const isProductPanelJump = prepareProductPanelJump(target);
-
       target.scrollIntoView({
         behavior: productMotionQuery?.matches ? "auto" : "smooth",
-        block: isProductPanelJump ? "center" : "start"
+        block: "start"
       });
 
       history.pushState(null, "", href);
@@ -1718,31 +997,14 @@
 
   applyBrandFallback();
   setupViewportSizing();
-  heroDesktopQuery?.addEventListener?.("change", () => {
-    syncHeroProductImageLoading();
-    renderCoffeeHero(getCurrentLang());
-  });
-  syncHeroProductImageLoading();
   setupMobileNav();
   setupAccordion();
   setupRevealAnimations();
-  setupProductSelector();
   setupMobileMarketTabs();
   setupCarousel();
   setupLanguageToggle();
-  setupHeroSampleLinks();
   setupSmoothAnchorScrolling();
   setupActiveNavHighlighting();
   setupCursorCardGlow();
   setupAnalytics();
-
-  loadCoffeeLineup().then((loaded) => {
-    if (!loaded) return;
-
-    const lang = getCurrentLang();
-    renderCoffeeLineup(lang);
-    updateDerivedContent(lang);
-    syncOpenAccordionHeight();
-    syncMobileMenuHeight();
-  });
 })();

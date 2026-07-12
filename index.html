@@ -36,7 +36,7 @@
   <link rel="canonical" href="https://millionairesroast.com/" />
   <link rel="icon" type="image/png" href="images/logo.png" />
   <link rel="apple-touch-icon" href="images/logo.png" />
-  <link rel="stylesheet" href="styles.css?v=84" />
+  <link rel="stylesheet" href="styles.css?v=85" />
 
   <script type="application/ld+json">
     {
@@ -110,7 +110,7 @@
           "name": "What coffees are available right now?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We currently offer five fresh single-origin coffees: Ugandan Rwenzori Kasese as our light roast, Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan Organic Highlands, and Colombian Sugarcane Decaf. Our $18 Discovery Box includes three 3.5 oz samples: Ugandan light, Costa Rican medium, and Guatemalan dark, available whole bean or ground. We also offer 16 oz bottled cold brew for $5, brewed with Guatemalan Organic Highlands. Every coffee in the lineup is specialty grade."
+            "text": "Our coffees rotate as lots sell through, so the Millionaire's Roast online shop is the source of truth for what is available now. The Discovery Box and bottled cold brew remain featured staples, and every coffee we roast is specialty grade."
           }
         },
         {
@@ -133,7 +133,7 @@
     }
   </script>
 
-  <script defer src="index.js?v=101"></script>
+  <script defer src="index.js?v=102"></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -222,7 +222,7 @@
 
             <div class="hero-actions">
               <a class="btn btn-gold hero-primary" id="heroOrderBtn" data-shop-cta data-cta-location="hero_shop" href="https://millionaires-roast.square.site/" data-i18n="hero.cta.primary">Shop Coffee</a>
-              <a class="btn btn-outline hero-secondary" href="#current-roast" data-i18n="hero.cta.secondary">Explore Current Coffees</a>
+              <a class="btn btn-outline hero-secondary" href="#current-roast" data-i18n="hero.cta.secondary">Browse the Live Menu</a>
             </div>
           </div>
         </div>
@@ -247,18 +247,18 @@
               <img class="hero-placeholder-product-image" src="images/DiscoveryBox.webp?v=3" alt="" width="2560" height="1444" decoding="async" />
               <strong class="hero-placeholder-title" data-hero-placeholder-title data-i18n="hero.placeholder.title">Discovery Box</strong>
               <div class="hero-placeholder-roasts">
-                <a href="#coffee-card-light" data-hero-sample data-hero-sample-link="light" aria-label="View Light: Ugandan Rwenzori Kasese coffee">
+                <span data-hero-sample>
                   <b data-hero-sample-roast data-i18n="hero.placeholder.light">Light</b>
                   <small data-hero-sample-origin data-i18n="hero.placeholder.lightOrigin">Ugandan Rwenzori&#10;Kasese</small>
-                </a>
-                <a href="#coffee-card-medium" data-hero-sample data-hero-sample-link="medium" aria-label="View Medium: Costa Rican Jaguar Honey coffee">
+                </span>
+                <span data-hero-sample>
                   <b data-hero-sample-roast data-i18n="hero.placeholder.medium">Medium</b>
                   <small data-hero-sample-origin data-i18n="hero.placeholder.mediumOrigin">Costa Rican&#10;Jaguar Honey</small>
-                </a>
-                <a href="#coffee-card-dark" data-hero-sample data-hero-sample-link="dark" aria-label="View Dark: Guatemalan Organic Highlands coffee">
+                </span>
+                <span data-hero-sample>
                   <b data-hero-sample-roast data-i18n="hero.placeholder.dark">Dark</b>
                   <small data-hero-sample-origin data-i18n="hero.placeholder.darkOrigin">Guatemalan&#10;Organic Highlands</small>
-                </a>
+                </span>
               </div>
               <small data-hero-placeholder-meta data-i18n="hero.placeholder.meta">Three 3.5 oz samples &bull; Whole bean or ground</small>
             </div>
@@ -272,295 +272,59 @@
       </div>
     </section>
 
-    <section class="section feature-offering editorial-section" id="featured-offering" aria-labelledby="featured-offering-title" data-ghost-word="COLD BREW">
-      <div class="container">
-        <span class="section-ghost" aria-hidden="true" data-i18n="ghost.featured">COLD BREW</span>
-        <article class="feature-panel is-cold-brew-feature card-interactive" data-reveal="up">
-          <figure class="feature-media" data-reveal="scale" data-reveal-delay="120">
-            <div class="feature-image-plate">
-              <img class="feature-product-image" src="images/ColdBrew.webp" alt="Millionaire's Roast 16 oz bottled cold brew made with Guatemalan Organic Highlands dark roast coffee" width="1536" height="2048" loading="lazy" decoding="async" />
-            </div>
-          </figure>
-
-          <div class="feature-copy" data-reveal="up" data-reveal-delay="180">
-            <p class="section-eyebrow" data-i18n="featured.eyebrow">Featured Offering</p>
-            <h2 class="section-title" id="featured-offering-title" data-i18n="featured.title">Bottled Cold Brew</h2>
-            <p class="taste-line" data-i18n="featured.taste">Cherry &bull; Caramel &bull; Cashew &bull; Baker's chocolate</p>
-            <p class="section-subtitle" data-i18n="featured.body">Our 16 oz bottled cold brew is brewed with Guatemalan Organic Highlands, a dark roast sourced from certified-organic small-farm cooperatives across Guatemala. Expect a smooth, balanced cup with cherry, caramel, cashew, and baker's chocolate.</p>
-
-            <div class="feature-specs" aria-label="Featured offering details">
-              <div class="feature-spec"><span data-i18n="featured.spec.origin">Origin: Guatemalan Highlands</span></div>
-              <div class="feature-spec"><span data-i18n="featured.spec.roast">Roast: Dark</span></div>
-              <div class="feature-spec"><span data-i18n="featured.spec.body">Body: Medium</span></div>
-            </div>
-
-            <a class="btn btn-gold" data-shop-cta data-cta-location="featured_cold_brew" href="https://millionaires-roast.square.site/product/16-oz-cold-brew/BU7ZO2I67C4QEHKAYR2TLAEG?cs=true&amp;cst=custom" data-i18n="featured.cta">Order Cold Brew</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
     <section class="section coffees-section editorial-section" id="current-roast" aria-labelledby="current-roast-title" data-ghost-word="ORIGIN">
-      <div class="container current-coffees">
+      <div class="container current-coffees current-coffees-refined">
         <span class="section-ghost" aria-hidden="true" data-i18n="ghost.origin">ORIGIN</span>
         <div class="section-head center narrow-head" data-reveal="up">
           <p class="section-eyebrow" data-i18n="coffees.eyebrow">Current Coffees</p>
-          <h2 class="section-title" id="current-roast-title" data-i18n="coffees.title">A clear lineup, roasted fresh.</h2>
-          <p class="section-subtitle" data-i18n="coffees.subtitle">Five single-origin coffees, clear cup profiles, simple pricing. Compare the cup you want and order from the current roast list.</p>
+          <h2 class="section-title" id="current-roast-title" data-i18n="coffees.title">See what&rsquo;s roasting now.</h2>
+          <p class="section-subtitle" data-i18n="coffees.subtitle">Our coffees rotate as lots sell through. For the most accurate selection, roast profiles, and availability, browse the live Millionaire&rsquo;s Roast shop.</p>
+          <a class="btn btn-gold current-shop-cta" data-shop-cta data-cta-location="current_coffees_primary" href="https://millionaires-roast.square.site/" data-i18n="coffees.cta">Shop Current Coffees</a>
         </div>
 
-        <div class="mobile-product-picker" data-reveal="up" data-reveal-delay="80">
-          <label for="mobile-product-select" data-i18n="product.select.label">Choose an offering</label>
-          <select id="mobile-product-select" data-product-select aria-controls="choose">
-            <option value="0" selected data-i18n="hero.placeholder.title">Discovery Box</option>
-            <option value="1" data-i18n="coffee.ug.badge">Light Roast</option>
-            <option value="2" data-i18n="coffee.cr.badge">Medium Roast</option>
-            <option value="3" data-i18n="coffee.pe.badge">Med-Dark Roast</option>
-            <option value="4" data-i18n="coffee.gt.badge">Dark Roast</option>
-            <option value="5" data-i18n="coffee.co.badge">Decaf</option>
-          </select>
-        </div>
-
-        <div class="coffee-product-grid" id="choose">
-          <article class="card card-plate product-card discovery-box-product-card card-interactive is-active" id="coffee-card-discovery" data-product-panel aria-labelledby="coffee-title-discovery" data-reveal="up" data-reveal-delay="0">
-            <div class="product-card-head" data-reveal="fade" data-reveal-delay="80">
-              <span class="origin-badge" data-i18n="discovery.card.badge">Discovery Box</span>
-              <span class="product-process" data-i18n="discovery.card.process">Three-Pack Sampler &bull; $18</span>
-            </div>
-            <h3 class="origin-title" id="coffee-title-discovery" data-reveal="fade" data-reveal-delay="120">Discovery Box</h3>
-            <p class="card-text" data-reveal="fade" data-reveal-delay="160" data-i18n="discovery.card.body">Three 3.5 oz coffee samples for comparing our light, medium, and dark roasts before committing to a full bag. Choose whole bean or ground.</p>
-            <p class="product-notes-line" data-reveal="fade" data-reveal-delay="210">
-              <strong data-i18n="discovery.card.contents">Inside the Box</strong>
-              <span data-i18n="discovery.card.contentsList">Ugandan Rwenzori Kasese &mdash; Light &bull; Costa Rican Jaguar Honey &mdash; Medium &bull; Guatemalan Organic Highlands &mdash; Dark</span>
-            </p>
-
-            <div class="product-choice" data-reveal="fade" data-reveal-delay="250">
-              <span data-i18n="discovery.card.choice">I want to compare three distinct coffees and find the roast profile that fits me best.</span>
-            </div>
-
-            <div class="product-spec-grid">
-              <div class="spec-card" data-reveal="up" data-reveal-delay="0">
-                <span class="spec-label" data-i18n="discovery.spec.price">Price</span>
-                <span class="spec-value">$18</span>
-              </div>
-              <div class="spec-card" data-reveal="up" data-reveal-delay="45">
-                <span class="spec-label" data-i18n="discovery.spec.format">Format</span>
-                <span class="spec-value">3 x 3.5 oz</span>
-              </div>
-              <div class="spec-card" data-reveal="up" data-reveal-delay="90">
-                <span class="spec-label" data-i18n="discovery.spec.grind">Preparation</span>
-                <span class="spec-value" data-i18n="discovery.value.grind">Whole bean or ground</span>
-              </div>
-              <div class="spec-card" data-reveal="up" data-reveal-delay="135">
-                <span class="spec-label" data-i18n="discovery.spec.roasts">Roasts</span>
-                <span class="spec-value" data-i18n="discovery.value.roasts">Light &bull; Medium &bull; Dark</span>
-              </div>
-            </div>
-
-            <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_discovery_box_mobile" href="https://millionaires-roast.square.site/product/discovery-box/I4FOVQ3W64GJPGNMPODEMAHV?cs=true&amp;cst=custom" data-i18n="discovery.cta">Order Discovery Box</a>
-          </article>
-
-          <article class="card card-plate product-card card-interactive" id="coffee-card-light" data-product-panel aria-labelledby="coffee-title-light" data-reveal="up" data-reveal-delay="0">
-            <div class="product-card-head" data-reveal="fade" data-reveal-delay="80">
-              <span class="origin-badge" data-i18n="coffee.ug.badge">Light Roast</span>
-            </div>
-            <h3 class="origin-title" id="coffee-title-light" data-reveal="fade" data-reveal-delay="120" data-i18n="coffee.ug.title">Ugandan Rwenzori Kasese</h3>
-            <p class="card-text" data-reveal="fade" data-reveal-delay="160" data-i18n="coffee.ug.body">Fruit-forward 2026 Kasese natural from Kyagalanyi Coffee smallholders listed as 43% women, with raspberry, plum, brown sugar, clementine, and black tea.</p>
-            <p class="product-notes-line" data-reveal="fade" data-reveal-delay="210"><strong data-i18n="coffee.notes.label">Tasting Notes</strong><span data-i18n="coffee.ug.notes">Raspberry &bull; Plum &bull; Brown sugar &bull; Clementine &bull; Black tea</span></p>
-
-            <div class="product-choice" data-reveal="fade" data-reveal-delay="250">
-              <span data-i18n="coffee.ug.choice">I want a fruit-forward light roast with berry sweetness, clementine, and black tea.</span>
-            </div>
-
-            <div class="product-spec-grid">
-              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-ug-origin-copy" data-reveal="up" data-reveal-delay="0">
-                <span class="spec-label" data-i18n="coffee.spec.origin">Origin</span>
-                <span class="spec-value" data-i18n="coffee.ug.origin">Kasese, Rwenzori Mountains, Uganda</span>
-                <span class="spec-explain" id="spec-ug-origin-copy" data-i18n="coffee.spec.origin.explain">Where the coffee comes from. Origin affects climate, soil, variety, and the general character of the cup.</span>
-              </div>
-              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-ug-process-copy" data-reveal="up" data-reveal-delay="45">
-                <span class="spec-label" data-i18n="coffee.spec.process">Process</span>
-                <span class="spec-value" data-i18n="coffee.ug.process">Natural Process</span>
-                <span class="spec-explain" id="spec-ug-process-copy" data-i18n="coffee.spec.process.explain">How the coffee is handled after harvest. Process affects sweetness, texture, clarity, and fruit character.</span>
-              </div>
-              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-ug-body-copy" data-reveal="up" data-reveal-delay="90">
-                <span class="spec-label" data-i18n="coffee.spec.body">Body</span>
-                <span class="spec-value" data-i18n="coffee.ug.bodyValue">Medium</span>
-                <span class="spec-explain" id="spec-ug-body-copy" data-i18n="coffee.spec.body.explain">The weight or texture of the coffee in your mouth. A heavier body feels fuller and richer.</span>
-              </div>
-              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-ug-acidity-copy" data-reveal="up" data-reveal-delay="135">
-                <span class="spec-label" data-i18n="coffee.spec.acidity">Acidity</span>
-                <span class="spec-value" data-i18n="coffee.ug.acidity">Mild</span>
-                <span class="spec-explain" id="spec-ug-acidity-copy" data-i18n="coffee.spec.acidity.explain">The brightness or lift in the cup. Medium acidity can make coffee taste cleaner, fruitier, or more lively.</span>
-              </div>
-            </div>
-
-            <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_light" href="https://millionaires-roast.square.site/product/12-oz-ugandan-rwenzori-kasese/JS5ATKDNVEHHH4AZ4KKWM2KD?cs=true&amp;cst=custom" data-i18n="coffee.cta.light">Order Light Roast</a>
-          </article>
-
-          <article class="card card-plate product-card product-card-featured card-interactive" id="coffee-card-medium" data-product-panel aria-labelledby="coffee-title-medium" data-reveal="up" data-reveal-delay="90">
-            <div class="product-card-head" data-reveal="fade" data-reveal-delay="80">
-              <span class="origin-badge" data-i18n="coffee.cr.badge">Medium Roast</span>
-            </div>
-            <h3 class="origin-title" id="coffee-title-medium" data-reveal="fade" data-reveal-delay="120" data-i18n="coffee.cr.title">Costa Rican Jaguar Honey</h3>
-            <p class="card-text" data-reveal="fade" data-reveal-delay="160" data-i18n="coffee.cr.body">Bright 2026 San Diego Mill honey lot with milk chocolate, honey, and raspberry over a clean medium roast profile.</p>
-            <p class="product-notes-line" data-reveal="fade" data-reveal-delay="210"><strong data-i18n="coffee.notes.label">Tasting Notes</strong><span data-i18n="coffee.cr.notes">Milk chocolate &bull; Honey &bull; Raspberry</span></p>
-
-            <div class="product-choice" data-reveal="fade" data-reveal-delay="250">
-              <span data-i18n="choose.card1.title">I want a bright, honey-sweet cup with soft chocolate and raspberry.</span>
-            </div>
-
-            <div class="product-spec-grid">
-              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-cr-origin-copy" data-reveal="up" data-reveal-delay="0">
-                <span class="spec-label" data-i18n="coffee.spec.origin">Origin</span>
-                <span class="spec-value" data-i18n="coffee.cr.origin">Tarraz&uacute;, Costa Rica</span>
-                <span class="spec-explain" id="spec-cr-origin-copy" data-i18n="coffee.spec.origin.explain">Where the coffee comes from. Origin affects climate, soil, variety, and the general character of the cup.</span>
-              </div>
-              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-cr-process-copy" data-reveal="up" data-reveal-delay="45">
-                <span class="spec-label" data-i18n="coffee.spec.process">Process</span>
-                <span class="spec-value" data-i18n="coffee.cr.process">Honey Process</span>
-                <span class="spec-explain" id="spec-cr-process-copy" data-i18n="coffee.spec.process.explain">How the coffee is handled after harvest. Process affects sweetness, texture, clarity, and fruit character.</span>
-              </div>
-              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-cr-body-copy" data-reveal="up" data-reveal-delay="90">
-                <span class="spec-label" data-i18n="coffee.spec.body">Body</span>
-                <span class="spec-value" data-i18n="coffee.cr.bodyValue">Light</span>
-                <span class="spec-explain" id="spec-cr-body-copy" data-i18n="coffee.spec.body.explain">The weight or texture of the coffee in your mouth. A heavier body feels fuller and richer.</span>
-              </div>
-              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-cr-acidity-copy" data-reveal="up" data-reveal-delay="135">
-                <span class="spec-label" data-i18n="coffee.spec.acidity">Acidity</span>
-                <span class="spec-value" data-i18n="coffee.cr.acidity">Bright</span>
-                <span class="spec-explain" id="spec-cr-acidity-copy" data-i18n="coffee.spec.acidity.explain">The brightness or lift in the cup. Medium acidity can make coffee taste cleaner, fruitier, or more lively.</span>
-              </div>
-            </div>
-
-            <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_medium" href="https://millionaires-roast.square.site/product/12-oz-costa-rican-jaguar-honey/QEJ5SCYU6IBG5MJL5OSHC5NJ?cs=true&amp;cst=custom" data-i18n="coffee.cta.medium">Order Medium Roast</a>
-          </article>
-
-          <article class="card card-plate product-card card-interactive" id="coffee-card-medium-dark" data-product-panel aria-labelledby="coffee-title-medium-dark" data-reveal="up" data-reveal-delay="90">
-            <div class="product-card-head" data-reveal="fade" data-reveal-delay="170">
-              <span class="origin-badge" data-i18n="coffee.pe.badge">Med-Dark Roast</span>
-            </div>
-            <h3 class="origin-title" id="coffee-title-medium-dark" data-reveal="fade" data-reveal-delay="210" data-i18n="coffee.pe.title">Peruvian Chonta G1 Washed</h3>
-            <p class="card-text" data-reveal="fade" data-reveal-delay="250" data-i18n="coffee.pe.body">Balanced 2026 Chonta washed coffee from Cajamarca with chocolate, green apple, plum, roasted almond, and citrus.</p>
-            <p class="product-notes-line" data-reveal="fade" data-reveal-delay="300"><strong data-i18n="coffee.notes.label">Tasting Notes</strong><span data-i18n="coffee.pe.notes">Chocolate &bull; Green apple &bull; Plum &bull; Roasted almond &bull; Citrus</span></p>
-
-            <div class="product-choice" data-reveal="fade" data-reveal-delay="340">
-              <span data-i18n="choose.card2.title">I want a balanced cup with chocolate, orchard fruit, and roasted almond.</span>
-            </div>
-
-            <div class="product-spec-grid">
-              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-pe-origin-copy" data-reveal="up" data-reveal-delay="0">
-                <span class="spec-label" data-i18n="coffee.spec.origin">Origin</span>
-                <span class="spec-value" data-i18n="coffee.pe.origin">Chonta, Cajamarca, Peru</span>
-                <span class="spec-explain" id="spec-pe-origin-copy" data-i18n="coffee.spec.origin.explain">Where the coffee comes from. Origin affects climate, soil, variety, and the general character of the cup.</span>
-              </div>
-              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-pe-process-copy" data-reveal="up" data-reveal-delay="45">
-                <span class="spec-label" data-i18n="coffee.spec.process">Process</span>
-                <span class="spec-value" data-i18n="coffee.pe.process">Washed Process</span>
-                <span class="spec-explain" id="spec-pe-process-copy" data-i18n="coffee.spec.process.explain">How the coffee is handled after harvest. Process affects sweetness, texture, clarity, and fruit character.</span>
-              </div>
-              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-pe-body-copy" data-reveal="up" data-reveal-delay="90">
-                <span class="spec-label" data-i18n="coffee.spec.body">Body</span>
-                <span class="spec-value" data-i18n="coffee.pe.bodyValue">Medium</span>
-                <span class="spec-explain" id="spec-pe-body-copy" data-i18n="coffee.spec.body.explain">The weight or texture of the coffee in your mouth. A heavier body feels fuller and richer.</span>
-              </div>
-              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-pe-acidity-copy" data-reveal="up" data-reveal-delay="135">
-                <span class="spec-label" data-i18n="coffee.spec.acidity">Acidity</span>
-                <span class="spec-value" data-i18n="coffee.pe.acidity">Medium</span>
-                <span class="spec-explain" id="spec-pe-acidity-copy" data-i18n="coffee.spec.acidity.explain">The brightness or lift in the cup. Medium acidity can make coffee taste cleaner, fruitier, or more lively.</span>
-              </div>
-            </div>
-
-            <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_medium_dark" href="https://millionaires-roast.square.site/product/12-oz-peruvian-chonta-g1-washed/JMMXFQ25WAPEBGCDHDJQZIRC?cs=true&amp;cst=custom" data-i18n="coffee.cta.mediumDark">Order Medium Dark Roast</a>
-          </article>
-
-          <article class="card card-plate product-card card-interactive" id="coffee-card-dark" data-product-panel aria-labelledby="coffee-title-dark" data-reveal="up" data-reveal-delay="180">
-            <div class="product-card-head" data-reveal="fade" data-reveal-delay="260">
-              <span class="origin-badge" data-i18n="coffee.gt.badge">Dark Roast</span>
-            </div>
-            <h3 class="origin-title" id="coffee-title-dark" data-reveal="fade" data-reveal-delay="300" data-i18n="coffee.gt.title">Guatemalan Organic Highlands</h3>
-            <p class="card-text" data-reveal="fade" data-reveal-delay="340" data-i18n="coffee.gt.body">Guatemalan highlands coffee sourced from certified-organic small-farm cooperatives, fully washed and sun-dried, with cherry, caramel, cashew, and baker's chocolate.</p>
-            <p class="product-notes-line" data-reveal="fade" data-reveal-delay="390"><strong data-i18n="coffee.notes.label">Tasting Notes</strong><span data-i18n="coffee.gt.notes">Cherry &bull; Caramel &bull; Cashew &bull; Baker's chocolate</span></p>
-
-            <div class="product-choice" data-reveal="fade" data-reveal-delay="430">
-              <span data-i18n="choose.card3.title">I want a deep, balanced cup with cherry sweetness, caramel, cashew, and baker's chocolate.</span>
-            </div>
-
-            <div class="product-spec-grid">
-              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-gt-origin-copy" data-reveal="up" data-reveal-delay="0">
-                <span class="spec-label" data-i18n="coffee.spec.origin">Origin</span>
-                <span class="spec-value" data-i18n="coffee.gt.origin">Guatemalan Highlands</span>
-                <span class="spec-explain" id="spec-gt-origin-copy" data-i18n="coffee.spec.origin.explain">Where the coffee comes from. Origin affects climate, soil, variety, and the general character of the cup.</span>
-              </div>
-              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-gt-process-copy" data-reveal="up" data-reveal-delay="45">
-                <span class="spec-label" data-i18n="coffee.spec.process">Process</span>
-                <span class="spec-value" data-i18n="coffee.gt.process">Fully Washed &amp; Sun-Dried</span>
-                <span class="spec-explain" id="spec-gt-process-copy" data-i18n="coffee.spec.process.explain">How the coffee is handled after harvest. Process affects sweetness, texture, clarity, and fruit character.</span>
-              </div>
-              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-gt-body-copy" data-reveal="up" data-reveal-delay="90">
-                <span class="spec-label" data-i18n="coffee.spec.body">Body</span>
-                <span class="spec-value" data-i18n="coffee.gt.bodyValue">Medium</span>
-                <span class="spec-explain" id="spec-gt-body-copy" data-i18n="coffee.spec.body.explain">The weight or texture of the coffee in your mouth. A heavier body feels fuller and richer.</span>
-              </div>
-              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-gt-acidity-copy" data-reveal="up" data-reveal-delay="135">
-                <span class="spec-label" data-i18n="coffee.spec.acidity">Acidity</span>
-                <span class="spec-value" data-i18n="coffee.gt.acidity">Mild</span>
-                <span class="spec-explain" id="spec-gt-acidity-copy" data-i18n="coffee.spec.acidity.explain">The brightness or lift in the cup. Medium acidity can make coffee taste cleaner, fruitier, or more lively.</span>
-              </div>
-            </div>
-
-            <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_dark" href="https://millionaires-roast.square.site/product/12-oz-guatemalan-organic-highlands/KCHEANVTHCUOLM4OQBQRYKEO?cs=true&amp;cst=custom" data-i18n="coffee.cta.dark">Order Dark Roast</a>
-          </article>
-
-          <article class="card card-plate product-card card-interactive" id="coffee-card-decaf" data-product-panel aria-labelledby="coffee-title-decaf" data-reveal="up" data-reveal-delay="270">
-            <div class="product-card-head" data-reveal="fade" data-reveal-delay="350">
-              <span class="origin-badge" data-i18n="coffee.co.badge">Decaf</span>
-            </div>
-            <h3 class="origin-title" id="coffee-title-decaf" data-reveal="fade" data-reveal-delay="390" data-i18n="coffee.co.title">Colombian Sugarcane Decaf</h3>
-            <p class="card-text" data-reveal="fade" data-reveal-delay="430" data-i18n="coffee.co.body">Medium-dark sugarcane EA decaf from Valle del Cauca with milk chocolate, almond, strawberry, vanilla, and citrus.</p>
-            <p class="product-notes-line" data-reveal="fade" data-reveal-delay="480"><strong data-i18n="coffee.notes.label">Tasting Notes</strong><span data-i18n="coffee.co.notes">Milk chocolate &bull; Almond &bull; Strawberry &bull; Vanilla &bull; Citrus</span></p>
-
-            <div class="product-choice" data-reveal="fade" data-reveal-delay="520">
-              <span data-i18n="choose.card4.title">I want real coffee flavor without the caffeine: chocolate, almond, and bright fruit.</span>
-            </div>
-
-            <div class="product-spec-grid">
-              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-co-origin-copy" data-reveal="up" data-reveal-delay="0">
-                <span class="spec-label" data-i18n="coffee.spec.origin">Origin</span>
-                <span class="spec-value" data-i18n="coffee.co.origin">Valle del Cauca, Colombia</span>
-                <span class="spec-explain" id="spec-co-origin-copy" data-i18n="coffee.spec.origin.explain">Where the coffee comes from. Origin affects climate, soil, variety, and the general character of the cup.</span>
-              </div>
-              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-co-process-copy" data-reveal="up" data-reveal-delay="45">
-                <span class="spec-label" data-i18n="coffee.spec.process">Process</span>
-                <span class="spec-value" data-i18n="coffee.co.process">Sugarcane EA Decaf</span>
-                <span class="spec-explain" id="spec-co-process-copy" data-i18n="coffee.spec.process.explain">How the coffee is handled after harvest. Process affects sweetness, texture, clarity, and fruit character.</span>
-              </div>
-              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-co-body-copy" data-reveal="up" data-reveal-delay="90">
-                <span class="spec-label" data-i18n="coffee.spec.body">Body</span>
-                <span class="spec-value" data-i18n="coffee.co.bodyValue">Medium</span>
-                <span class="spec-explain" id="spec-co-body-copy" data-i18n="coffee.spec.body.explain">The weight or texture of the coffee in your mouth. A heavier body feels fuller and richer.</span>
-              </div>
-              <div class="spec-card spec-card-tooltip" tabindex="0" aria-describedby="spec-co-acidity-copy" data-reveal="up" data-reveal-delay="135">
-                <span class="spec-label" data-i18n="coffee.spec.acidity">Acidity</span>
-                <span class="spec-value" data-i18n="coffee.co.acidity">Bright</span>
-                <span class="spec-explain" id="spec-co-acidity-copy" data-i18n="coffee.spec.acidity.explain">The brightness or lift in the cup. Medium acidity can make coffee taste cleaner, fruitier, or more lively.</span>
-              </div>
-            </div>
-
-            <a class="btn btn-gold coffee-order-btn" data-shop-cta data-cta-location="coffee_decaf" href="https://millionaires-roast.square.site/product/12-oz-columbian-sugarcane-decaf/KRJHD33242YLSVMEPIWHQBEW?cs=true&amp;cst=custom" data-i18n="coffee.cta.decaf">Order Decaf</a>
-          </article>
-        </div>
-
-        <article class="lineup-pricing-card" data-reveal="up">
-          <h3 data-i18n="coffee.price.title">Simple pricing across the lineup</h3>
+        <div class="lineup-pricing-card" data-reveal="up" data-reveal-delay="70" aria-labelledby="lineup-pricing-title">
+          <h3 id="lineup-pricing-title" data-i18n="coffee.price.title">Simple pricing across the lineup</h3>
           <div class="lineup-pricing-lines">
-            <p data-i18n="coffee.price.bag">12 oz bag: $16</p>
-            <p data-i18n="coffee.price.kcups">8-pack K-Cups: 1 for $10 &bull; 2 for $19 &bull; 3 for $27</p>
-            <p data-i18n="coffee.price.coldbrew">16 oz cold brew: $5</p>
-            <p data-i18n="coffee.price.discovery">Discovery Box: $18</p>
+            <p><span data-i18n="coffee.price.bag.label">12 oz bags</span><strong>$16</strong></p>
+            <p><span data-i18n="coffee.price.kcups.label">8-pack K-Cups</span><strong>$10</strong><small data-i18n="coffee.price.kcups.multi">2 for $19 &bull; 3 for $27</small></p>
+            <p><span data-i18n="coffee.price.coldbrew.label">16 oz cold brew</span><strong>$5</strong></p>
+            <p><span data-i18n="coffee.price.discovery.label">Discovery Box</span><strong>$18</strong></p>
           </div>
-        </article>
+        </div>
 
+        <div class="featured-product-grid" id="featured-products">
+          <article class="featured-product-card featured-product-card--discovery card card-plate card-interactive" data-reveal="up" data-reveal-delay="110">
+            <figure class="featured-product-media">
+              <img src="images/DiscoveryBox.webp?v=3" alt="Millionaire's Roast Discovery Box with three 3.5 oz coffee samples" width="2560" height="1444" loading="lazy" decoding="async" />
+            </figure>
+            <div class="featured-product-copy">
+              <div class="featured-product-heading">
+                <p class="section-eyebrow" data-i18n="discovery.card.badge">Discovery Box</p>
+                <strong>$18</strong>
+              </div>
+              <h3 data-i18n="discovery.card.title">Find your roast before buying a full bag.</h3>
+              <p data-i18n="discovery.card.body">Three 3.5 oz coffee samples spanning light, medium, and dark roasts. Choose whole bean or ground.</p>
+              <p class="featured-product-meta" data-i18n="discovery.card.meta">3 &times; 3.5 oz &bull; Whole bean or ground</p>
+              <a class="btn btn-gold" data-shop-cta data-cta-location="featured_discovery_box" href="https://millionaires-roast.square.site/product/discovery-box/I4FOVQ3W64GJPGNMPODEMAHV?cs=true&amp;cst=custom" data-i18n="discovery.cta">Order Discovery Box</a>
+            </div>
+          </article>
+
+          <article class="featured-product-card featured-product-card--cold-brew card card-plate card-interactive" data-reveal="up" data-reveal-delay="170">
+            <figure class="featured-product-media featured-product-media--portrait">
+              <img src="images/ColdBrew.webp" alt="Millionaire's Roast 16 oz bottled cold brew" width="1536" height="2048" loading="lazy" decoding="async" />
+            </figure>
+            <div class="featured-product-copy">
+              <div class="featured-product-heading">
+                <p class="section-eyebrow" data-i18n="featured.eyebrow">Local Favorite</p>
+                <strong>$5</strong>
+              </div>
+              <h3 data-i18n="featured.title">Bottled Cold Brew</h3>
+              <p data-i18n="featured.body">Smooth, small-batch cold brew in a ready-to-drink 16 oz bottle.</p>
+              <p class="featured-product-meta" data-i18n="featured.meta">16 oz &bull; Ready to drink</p>
+              <a class="btn btn-outline" data-shop-cta data-cta-location="featured_cold_brew" href="https://millionaires-roast.square.site/product/16-oz-cold-brew/BU7ZO2I67C4QEHKAYR2TLAEG?cs=true&amp;cst=custom" data-i18n="featured.cta">Order Cold Brew</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -818,7 +582,7 @@
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-a" id="faq-panel-3" data-panel role="region" aria-labelledby="faq-trigger-3" hidden>
-            <p data-i18n="faq.a3">We currently offer five fresh single-origin coffees: Ugandan Rwenzori Kasese as our light roast, Costa Rican Jaguar Honey as our 2026 flagship medium roast, Peruvian Chonta G1 Washed, Guatemalan Organic Highlands, and Colombian Sugarcane Decaf. Our $18 Discovery Box includes three 3.5 oz samples: Ugandan light, Costa Rican medium, and Guatemalan dark, available whole bean or ground. We also offer 16 oz bottled cold brew for $5, brewed with Guatemalan Organic Highlands. Every coffee in the lineup is specialty grade.</p>
+            <p data-i18n="faq.a3">Our coffees rotate as lots sell through, so the online shop is the source of truth for what is available right now. The Discovery Box and bottled cold brew remain featured staples, and every coffee we roast is specialty grade.</p>
           </div>
 
           <button class="faq-item" id="faq-trigger-4" type="button" aria-expanded="false" aria-controls="faq-panel-4">

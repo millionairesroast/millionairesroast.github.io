@@ -1524,265 +1524,6 @@ a:focus-visible, button:focus-visible{
   letter-spacing:.16em;
   text-transform:uppercase;
 }
-.feature-panel{
-  display:grid;
-  grid-template-columns:minmax(260px,.86fr) minmax(0,1.14fr);
-  gap:40px;
-  align-items:center;
-  padding:32px;
-  border:1px solid rgba(226,196,106,.35);
-  border-radius:24px;
-  background:
-    linear-gradient(135deg, rgba(18,13,8,.58), rgba(7,7,10,.88));
-  box-shadow:var(--shadow);
-  overflow:hidden;
-}
-.feature-media{
-  margin:0;
-  min-width:0;
-}
-.feature-image-plate{
-  width:min(100%, 440px);
-  aspect-ratio:auto;
-  margin:auto;
-  display:grid;
-  place-items:center;
-  padding:0;
-  overflow:visible;
-  line-height:0;
-  border:0;
-  border-radius:22px;
-  background:transparent;
-}
-.feature-copy{
-  min-width:0;
-  display:grid;
-  justify-items:start;
-  gap:16px;
-}
-.feature-copy .section-title{
-  max-width:13ch;
-  line-height:1;
-}
-.taste-line{
-  margin:0;
-  color:rgba(226,196,106,.95);
-  font-size:15px;
-  font-weight:900;
-  letter-spacing:.08em;
-  line-height:1.55;
-  text-transform:uppercase;
-}
-.feature-specs{
-  width:100%;
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:10px;
-}
-.feature-spec{
-  padding:13px 14px;
-  border:1px solid rgba(200,164,77,.22);
-  border-radius:10px;
-  background:rgba(0,0,0,.2);
-  color:rgba(244,241,234,.88);
-  font-weight:800;
-}
-
-.coffee-product-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:18px;
-  align-items:stretch;
-}
-.product-card{
-  display:flex;
-  flex-direction:column;
-  min-width:0;
-  scroll-margin-top:120px;
-}
-.product-card{
-  display:grid;
-  grid-template-rows:46px 112px 134px 82px 94px 1fr 54px;
-  gap:14px;
-  align-content:start;
-  overflow:visible;
-}
-.coffee-product-grid{
-  isolation:isolate;
-}
-.product-card:has(.spec-card-tooltip:hover),
-.product-card:has(.spec-card-tooltip:focus-visible){
-  z-index:80;
-}
-.product-card:has(.spec-card-tooltip:hover) .product-spec-grid,
-.product-card:has(.spec-card-tooltip:focus-visible) .product-spec-grid{
-  z-index:40;
-}
-.product-card-featured{
-  border-color:rgba(226,196,106,.48);
-}
-#coffee-card-light{order:1}
-#coffee-card-medium{order:2}
-#coffee-card-medium-dark{order:3}
-#coffee-card-dark{order:4}
-#coffee-card-decaf{order:5}
-@media (min-width:761px){
-  .discovery-box-product-card{
-    display:none!important;
-  }
-}
-@media (min-width:981px){
-  .coffee-product-grid{
-    grid-template-columns:repeat(6,minmax(0,1fr));
-  }
-  .coffee-product-grid .product-card{
-    grid-column:span 2;
-  }
-  #coffee-card-dark{
-    grid-column:2 / span 2;
-  }
-  #coffee-card-decaf{
-    grid-column:4 / span 2;
-  }
-}
-.product-card .origin-title{
-  min-height:0;
-  height:112px;
-  font-size:clamp(29px,2.55vw,35px);
-  line-height:1.04;
-}
-.product-card .card-text{
-  min-height:0;
-  height:134px;
-  overflow:hidden;
-}
-.product-card-head{
-  display:grid;
-  grid-template-columns:1fr;
-  justify-items:start;
-  align-content:start;
-  gap:8px;
-  min-height:46px;
-}
-.product-card-head .origin-badge,
-.product-card-head .product-process{
-  max-width:100%;
-}
-.product-process{
-  display:block;
-  color:rgba(226,196,106,.9);
-  font-size:13px;
-  font-weight:900;
-  letter-spacing:.08em;
-  line-height:1.25;
-  text-transform:uppercase;
-}
-.product-notes-line{
-  margin:0;
-  display:grid;
-  gap:6px;
-  padding:13px 0 0;
-  border-top:1px solid rgba(200,164,77,.2);
-  color:rgba(226,196,106,.92);
-  font-size:14px;
-  font-weight:800;
-  line-height:1.5;
-  min-height:0;
-  height:82px;
-  overflow:hidden;
-}
-.product-notes-line strong{
-  color:rgba(244,241,234,.78);
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:.12em;
-  line-height:1.2;
-  text-transform:uppercase;
-}
-.product-notes-line span{
-  color:rgba(226,196,106,.94);
-}
-.product-spec-grid{
-  position:relative;
-  z-index:2;
-  display:grid;
-  grid-template-columns:1fr;
-  grid-template-rows:repeat(4,minmax(54px, auto));
-  gap:10px;
-  margin-top:0;
-}
-.product-spec-grid .spec-card{
-  position:relative;
-  grid-template-columns:auto 1fr;
-  align-items:baseline;
-  justify-content:space-between;
-  gap:12px;
-  border-radius:10px;
-  min-height:54px;
-}
-.product-spec-grid .spec-value{
-  text-align:right;
-}
-.product-choice{
-  display:grid;
-  gap:6px;
-  padding:14px;
-  min-height:0;
-  height:94px;
-  align-content:center;
-  justify-items:center;
-  text-align:center;
-  border:1px solid rgba(226,196,106,.26);
-  border-radius:10px;
-  background:linear-gradient(180deg, rgba(200,164,77,.12), rgba(0,0,0,.16));
-}
-.product-choice span{
-  color:rgba(244,241,234,.94);
-  font-size:17px;
-  font-weight:900;
-  line-height:1.15;
-  text-align:center;
-}
-.coffee-product-grid .coffee-order-btn{
-  position:relative;
-  z-index:1;
-  min-height:54px;
-  padding-inline:12px;
-  white-space:nowrap;
-  font-size:15px;
-  line-height:1.15;
-}
-.product-choice strong{
-  color:rgba(226,196,106,.94);
-  font-size:12px;
-  letter-spacing:.12em;
-  line-height:1.35;
-  text-transform:uppercase;
-}
-.discovery-box-product-card .product-process,
-.discovery-box-product-card .card-text,
-.discovery-box-product-card .product-notes-line,
-.discovery-box-product-card .product-choice span,
-.discovery-box-product-card .spec-card,
-.discovery-box-product-card .coffee-order-btn{
-  font-size:16px;
-}
-.discovery-box-product-card .card-text{
-  line-height:1.48;
-}
-.discovery-box-product-card .product-notes-line{
-  line-height:1.45;
-}
-.discovery-box-product-card .product-notes-line strong,
-.discovery-box-product-card .spec-label{
-  font-size:12px;
-}
-.discovery-box-product-card .spec-value{
-  font-size:15px;
-}
-.mobile-product-picker{
-  display:none;
-}
 .lineup-pricing-card{
   position:relative;
   width:min(100%, 620px);
@@ -3141,4 +2882,168 @@ a:focus-visible, button:focus-visible{
   .card-interactive::after{
     display:none;
   }
+}
+
+/* Current menu: Square owns the rotating inventory; the site keeps pricing and staples clear. */
+.current-coffees-refined .section-head{
+  margin-bottom:26px;
+}
+.current-shop-cta{
+  margin-top:20px;
+}
+.current-coffees-refined .lineup-pricing-card{
+  width:min(100%, 920px);
+  margin:0 auto 30px;
+}
+.current-coffees-refined .lineup-pricing-lines{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+}
+.current-coffees-refined .lineup-pricing-lines p{
+  display:grid;
+  align-content:center;
+  justify-items:center;
+  gap:4px;
+  min-height:112px;
+  padding:18px 14px;
+}
+.current-coffees-refined .lineup-pricing-lines p:nth-child(n+3){border-top:0}
+.current-coffees-refined .lineup-pricing-lines p:nth-child(odd){border-left:1px solid rgba(226,196,106,.22)}
+.current-coffees-refined .lineup-pricing-lines p:first-child{border-left:0}
+.lineup-pricing-lines span{
+  color:rgba(244,241,234,.75);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.1em;
+  line-height:1.25;
+  text-transform:uppercase;
+}
+.lineup-pricing-lines strong{
+  color:rgba(226,196,106,.98);
+  font-size:30px;
+  line-height:1;
+}
+.lineup-pricing-lines small{
+  color:rgba(244,241,234,.62);
+  font-size:12px;
+  font-weight:800;
+  line-height:1.25;
+}
+.featured-product-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px;
+  align-items:stretch;
+}
+.featured-product-card{
+  min-width:0;
+  display:grid;
+  grid-template-columns:minmax(180px,.78fr) minmax(0,1.22fr);
+  gap:24px;
+  align-items:center;
+  padding:24px;
+  overflow:hidden;
+}
+.featured-product-media{
+  width:100%;
+  min-width:0;
+  min-height:250px;
+  margin:0;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  border:1px solid rgba(226,196,106,.24);
+  border-radius:16px;
+  background:rgba(0,0,0,.24);
+}
+.featured-product-media img{
+  display:block;
+  width:100%;
+  height:250px;
+  object-fit:contain;
+  filter:drop-shadow(0 14px 28px rgba(0,0,0,.42));
+}
+.featured-product-media--portrait img{
+  width:auto;
+  max-width:100%;
+}
+.featured-product-copy{
+  min-width:0;
+  display:grid;
+  align-content:center;
+  gap:12px;
+}
+.featured-product-heading{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+}
+.featured-product-heading .section-eyebrow{margin:0}
+.featured-product-heading > strong{
+  color:rgba(226,196,106,.98);
+  font-size:24px;
+  line-height:1;
+}
+.featured-product-copy h3{
+  margin:0;
+  color:rgba(244,241,234,.98);
+  font-family:var(--serif);
+  font-size:clamp(26px,2.4vw,36px);
+  line-height:1.04;
+}
+.featured-product-copy > p{
+  margin:0;
+  color:rgba(244,241,234,.76);
+  font-size:15px;
+  line-height:1.5;
+}
+.featured-product-copy .featured-product-meta{
+  padding-top:10px;
+  border-top:1px solid rgba(226,196,106,.2);
+  color:rgba(226,196,106,.9);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.featured-product-copy .btn{
+  width:100%;
+  min-width:0;
+  margin-top:2px;
+}
+
+@media (max-width:980px){
+  .featured-product-card{grid-template-columns:1fr}
+  .featured-product-media{min-height:220px}
+  .featured-product-media img{height:220px}
+}
+
+@media (max-width:760px){
+  .current-coffees-refined .section-head{margin-bottom:20px}
+  .current-shop-cta{
+    width:100%;
+    margin-top:16px;
+  }
+  .current-coffees-refined .lineup-pricing-card{margin-bottom:18px}
+  .current-coffees-refined .lineup-pricing-lines{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .current-coffees-refined .lineup-pricing-lines p{
+    min-height:98px;
+    padding:14px 10px;
+  }
+  .current-coffees-refined .lineup-pricing-lines p:nth-child(n+3){border-top:1px solid rgba(226,196,106,.22)}
+  .current-coffees-refined .lineup-pricing-lines p:nth-child(odd){border-left:0}
+  .lineup-pricing-lines strong{font-size:27px}
+  .featured-product-grid{grid-template-columns:1fr}
+  .featured-product-card{
+    padding:16px;
+    gap:16px;
+  }
+  .featured-product-card--cold-brew{display:none}
+  .featured-product-media,
+  .featured-product-media img{
+    min-height:0;
+    height:auto;
+  }
+  .featured-product-media img{max-height:260px}
+  .featured-product-copy h3{font-size:30px}
 }

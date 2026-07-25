@@ -5,10 +5,14 @@
   const LANGUAGE_FADE_MS = 180;
   const languages = new Set(["en", "es"]);
   const root = document.documentElement;
+  const siteHeader = document.querySelector(".site-header");
   const menuToggle = document.querySelector(".menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
   const stickyShop = document.querySelector(".mobile-shop-bar");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const compactMotion = window.matchMedia(
+    "(max-width: 900px), (pointer: coarse)",
+  );
   let currentLanguage = "en";
   let pendingLanguage = null;
   let languageTimer;
@@ -154,7 +158,10 @@
       scrollable > 0
         ? Math.min(1, Math.max(0, window.scrollY / scrollable))
         : 0;
-    root.style.setProperty("--scroll-progress", progress.toFixed(4));
+    // Keep this rapidly changing value on the header instead of the root.
+    // Root-level custom properties can invalidate styles across the full page
+    // on every scroll frame, which is especially costly on mobile.
+    siteHeader?.style.setProperty("--scroll-progress", progress.toFixed(4));
     scrollFrame = undefined;
   }
 
@@ -170,21 +177,37 @@
   requestScrollProgressUpdate();
 
   const revealElements = [];
-  const revealGroups = [
-    [".trust-item", "up", 70],
-    [".section-heading > *", "up", 90],
-    [".product-card", "scale", 105],
-    [".center-link", "up", 0],
-    [".difference-intro > :not(.ornament)", "left", 75],
-    [".benefit", "right", 90],
-    [".story-photos figure", "left", 120],
-    [".story-copy > *", "right", 70],
-    [".local-card", "scale", 120],
-    [".faq-heading > *", "left", 70],
-    [".faq-list details", "up", 55],
-    [".final-panel > *", "up", 90],
-    [".footer-top > *", "up", 80],
-  ];
+  const revealGroups = compactMotion.matches
+    ? [
+        [".trust-grid", "up", 0],
+        [".section-heading", "up", 0],
+        [".product-card", "up", 45],
+        [".center-link", "up", 0],
+        [".difference-intro", "up", 0],
+        [".benefit-list", "up", 0],
+        [".story-photos", "up", 0],
+        [".story-copy", "up", 0],
+        [".local-card", "up", 45],
+        [".faq-heading", "up", 0],
+        [".faq-list", "up", 0],
+        [".final-panel", "up", 0],
+        [".footer-top", "up", 0],
+      ]
+    : [
+        [".trust-grid", "up", 0],
+        [".section-heading > *", "up", 90],
+        [".product-card", "scale", 105],
+        [".center-link", "up", 0],
+        [".difference-intro > :not(.ornament)", "left", 75],
+        [".benefit", "right", 90],
+        [".story-photos", "left", 0],
+        [".story-copy", "right", 0],
+        [".local-card", "scale", 120],
+        [".faq-heading > *", "left", 70],
+        [".faq-list details", "up", 55],
+        [".final-panel > *", "up", 90],
+        [".footer-top > *", "up", 80],
+      ];
 
   revealGroups.forEach(([selector, direction, delayStep]) => {
     document.querySelectorAll(selector).forEach((element, index) => {
@@ -209,7 +232,7 @@
           revealObserver.unobserve(entry.target);
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -7% 0px" },
+      { threshold: 0.08, rootMargin: "0px 0px -4% 0px" },
     );
 
     window.requestAnimationFrame(() => {

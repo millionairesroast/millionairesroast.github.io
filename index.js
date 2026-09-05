@@ -48,6 +48,8 @@
     menuToggle.setAttribute("aria-expanded", String(open));
     mobileMenu.setAttribute("aria-hidden", String(!open));
     setInert(mobileMenu, !open);
+    // The menu owns the viewport while open; keep the sticky shop CTA clear.
+    siteHeader?.classList.toggle("has-open-menu", open);
     updateMenuLabel();
     if (!open && returnFocus) menuToggle.focus();
   }
@@ -90,6 +92,9 @@
     }
 
     requestScrollProgressUpdate();
+    document.dispatchEvent(
+      new CustomEvent("mr:languagechange", { detail: { language } }),
+    );
   }
 
   function setLanguage(language, animate = true) {
@@ -148,7 +153,7 @@
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 1080 && menuIsOpen()) setMenu(false);
+    if (window.innerWidth > 1240 && menuIsOpen()) setMenu(false);
   });
 
   function updateScrollProgress() {

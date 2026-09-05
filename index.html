@@ -53,6 +53,7 @@
       name="twitter:image"
       content="https://millionairesroast.com/images/social-preview.jpg"
     />
+    <link rel="preload" as="image" href="images/logo.webp" />
     <link rel="stylesheet" href="styles.css" />
     <script
       async
@@ -69,9 +70,6 @@
     <script src="index.js" defer></script>
   </head>
   <body>
-    <link rel="preload" as="image" href="images/logo.webp" />
-    <link rel="preload" as="image" href="images/discovery-box.webp" />
-    <link rel="preload" as="image" href="images/cold-brew.webp" />
     <a
       class="skip-link"
       href="#main-content"
@@ -106,7 +104,7 @@
     </script>
     <header class="site-header">
       <div class="shell header-inner">
-        <a class="brand" href="#top" aria-label="Millionaire's Roast home"
+        <a class="brand" href="#top" aria-label="Millionaire's Roast home" data-aria-label-en="Millionaire's Roast home" data-aria-label-es="Inicio de Millionaire's Roast"
           ><img
             src="images/logo.webp"
             alt=""
@@ -122,7 +120,7 @@
             ></span
           ></a
         >
-        <nav class="desktop-nav" aria-label="Primary navigation">
+        <nav class="desktop-nav" aria-label="Primary navigation" data-aria-label-en="Primary navigation" data-aria-label-es="Navegación principal">
           <a href="#coffee" data-en="Coffee" data-es="Café">Coffee</a
           ><a href="#difference" data-en="Why us" data-es="Por qué nosotros"
             >Why us</a
@@ -130,7 +128,7 @@
             >Our story</a
           ><a href="#find-us" data-en="Find us" data-es="Encuéntranos"
             >Find us</a
-          >
+          ><a href="wholesale/" data-en="Wholesale" data-es="Mayoreo">Wholesale</a>
         </nav>
         <div class="header-actions">
           <div
@@ -166,7 +164,7 @@
         </div>
       </div>
       <div class="mobile-menu" id="mobile-menu" aria-hidden="true" inert="">
-        <nav aria-label="Mobile navigation">
+        <nav aria-label="Mobile navigation" data-aria-label-en="Mobile navigation" data-aria-label-es="Navegación móvil">
           <a href="#coffee" data-en="Coffee" data-es="Café">Coffee</a
           ><a href="#difference" data-en="Why us" data-es="Por qué nosotros"
             >Why us</a
@@ -174,7 +172,7 @@
             >Our story</a
           ><a href="#find-us" data-en="Find us" data-es="Encuéntranos"
             >Find us</a
-          ><a
+          ><a href="wholesale/" data-en="Wholesale" data-es="Mayoreo">Wholesale</a><a
             class="button button-gold mobile-menu-shop"
             href="https://millionaires-roast.square.site/"
             data-location="mobile_menu"
@@ -279,8 +277,8 @@
               ><span
                 ><span class="hero-image-frame"
                   ><img
-                    src="images/discovery-box.webp"
-                    alt="Millionaire's Roast Discovery Box coffee sampler"
+                    src="images/discovery-box.webp" srcset="images/discovery-box-640.webp 640w, images/discovery-box-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 900px) 50vw, 440px"
+                    alt="Millionaire's Roast Discovery Box coffee sampler" data-alt-en="Millionaire's Roast Discovery Box coffee sampler" data-alt-es="Caja de muestras de café Discovery Box de Millionaire's Roast"
                     width="1400"
                     height="790"
                     decoding="async"
@@ -310,8 +308,8 @@
               data-location="hero_cold_brew"
               ><span
                 ><img
-                  src="images/cold-brew.webp"
-                  alt="Black and crema Millionaire's Roast bottled cold brew"
+                  src="images/cold-brew.webp" srcset="images/cold-brew-480.webp 480w, images/cold-brew-960.webp 960w" sizes="(max-width: 660px) calc(100vw - 40px), 360px"
+                  alt="Black and crema Millionaire's Roast bottled cold brew" data-alt-en="Black and crema Millionaire's Roast bottled cold brew" data-alt-es="Cold brew negro y con crema embotellado de Millionaire's Roast"
                   width="1200"
                   height="1600"
                   decoding="async"
@@ -355,7 +353,7 @@
           </section>
         </div>
       </section>
-      <section class="trust-band" aria-label="What defines Millionaire's Roast">
+      <section class="trust-band" aria-label="What defines Millionaire's Roast" data-aria-label-en="What defines Millionaire's Roast" data-aria-label-es="Lo que define a Millionaire's Roast">
         <div class="shell trust-grid">
           <div class="trust-item">
             <strong>100%</strong
@@ -427,7 +425,7 @@
                   height="512"
                   decoding="async"
                 />
-                <p>LIGHT • MEDIUM • DARK • DECAF</p>
+                <p data-en="LIGHT • MEDIUM • DARK • DECAF" data-es="CLARO • MEDIO • OSCURO • DESCAFEINADO">LIGHT • MEDIUM • DARK • DECAF</p>
               </div>
               <div class="product-copy">
                 <p
@@ -448,7 +446,7 @@
                   bean and ground options.
                 </p>
                 <div class="price-row">
-                  <strong>$16</strong
+                  <strong data-en="From $16" data-es="Desde $16">From $16</strong
                   ><span data-en="12 oz bags" data-es="bolsas de 12 oz"
                     >12 oz bags</span
                   >
@@ -468,8 +466,8 @@
             <article class="product-card">
               <div class="product-media">
                 <img
-                  src="images/discovery-box.webp"
-                  alt="Millionaire's Roast Discovery Box"
+                  src="images/discovery-box.webp" srcset="images/discovery-box-640.webp 640w, images/discovery-box-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 900px) 50vw, 440px"
+                  alt="Millionaire's Roast Discovery Box" data-alt-en="Millionaire's Roast Discovery Box" data-alt-es="Discovery Box de Millionaire's Roast"
                   width="1400"
                   height="790"
                   loading="lazy"
@@ -507,13 +505,13 @@
             <article class="product-card">
               <div class="product-media product-media-cold">
                 <img
-                  src="images/cold-brew.webp"
-                  alt="Millionaire's Roast bottled cold brew"
+                  src="images/cold-brew.webp" srcset="images/cold-brew-480.webp 480w, images/cold-brew-960.webp 960w" sizes="(max-width: 660px) calc(100vw - 40px), 360px"
+                  alt="Millionaire's Roast bottled cold brew" data-alt-en="Millionaire's Roast bottled cold brew" data-alt-es="Cold brew embotellado de Millionaire's Roast"
                   width="1200"
                   height="1600"
                   loading="lazy"
                   decoding="async"
-                /><span class="media-price">$5</span>
+                /><span class="media-price" data-en="From $5" data-es="Desde $5">From $5</span>
               </div>
               <div class="product-copy">
                 <p
@@ -647,8 +645,8 @@
           <div class="story-photos">
             <figure class="market-photo">
               <img
-                src="images/market.webp"
-                alt="Millionaire's Roast booth at a Springfield farmers market"
+                src="images/market.webp" srcset="images/market-640.webp 640w, images/market-1280.webp 1280w" sizes="(max-width: 660px) calc(100vw - 40px), (max-width: 900px) 70vw, 620px"
+                alt="Millionaire's Roast booth at a Springfield farmers market" data-alt-en="Millionaire's Roast booth at a Springfield farmers market" data-alt-es="Puesto de Millionaire's Roast en un mercado de Springfield"
                 width="1800"
                 height="1350"
                 loading="lazy"
@@ -660,8 +658,8 @@
             </figure>
             <figure class="founder-photo">
               <img
-                src="images/maximiliano.webp"
-                alt="Millionaire's Roast founder Maximiliano Gomez"
+                src="images/maximiliano.webp" srcset="images/maximiliano-480.webp 480w, images/maximiliano-960.webp 960w" sizes="(max-width: 900px) 40vw, 280px"
+                alt="Millionaire's Roast founder Maximiliano Gomez" data-alt-en="Millionaire's Roast founder Maximiliano Gomez" data-alt-es="Maximiliano Gomez, fundador de Millionaire's Roast"
                 width="900"
                 height="1200"
                 loading="lazy"
@@ -745,8 +743,8 @@
             <article class="local-card cottage-card">
               <div class="local-image">
                 <img
-                  src="images/cottage.webp"
-                  alt="The Cottage storefront in Beardstown, Illinois"
+                  src="images/cottage.webp" srcset="images/cottage-640.webp 640w, images/cottage.webp 1113w" sizes="(max-width: 660px) calc(100vw - 40px), 580px"
+                  alt="The Cottage storefront in Beardstown, Illinois" data-alt-en="The Cottage storefront in Beardstown, Illinois" data-alt-es="Fachada de The Cottage en Beardstown, Illinois"
                   width="1113"
                   height="835"
                   loading="lazy"
@@ -855,6 +853,16 @@
               </div>
             </article>
           </div>
+        </div>
+      </section>
+      <section class="section wholesale-invitation" aria-labelledby="wholesale-invitation-title">
+        <div class="shell wholesale-invitation-inner">
+          <div>
+            <p class="eyebrow" data-en="Looking ahead, together" data-es="Mirando al futuro, juntos">Looking ahead, together</p>
+            <h2 id="wholesale-invitation-title" data-en="Good coffee belongs in good company." data-es="El buen café merece buena compañía.">Good coffee belongs in good company.</h2>
+            <p data-en="Have a business and a coffee idea? Tell us about it. We’re gathering interest in future wholesale partnerships as a home-kitchen roaster; resale supply depends on the required approvals." data-es="¿Tienes un negocio y una idea con café? Cuéntanos. Como tostador que opera desde una cocina doméstica, reunimos interés en futuras colaboraciones de mayoreo; el suministro para reventa depende de las autorizaciones necesarias.">Have a business and a coffee idea? Tell us about it. We’re gathering interest in future wholesale partnerships as a home-kitchen roaster; resale supply depends on the required approvals.</p>
+          </div>
+          <a class="button button-gold" href="wholesale/" data-wholesale-location="home_invitation"><span data-en="Let’s talk wholesale" data-es="Hablemos de mayoreo">Let’s talk wholesale</span><span class="arrow" aria-hidden="true">→</span></a>
         </div>
       </section>
       <section class="section faq-section" id="faq">
@@ -1039,7 +1047,7 @@
     <footer class="site-footer">
       <div class="shell footer-top">
         <div class="footer-brand">
-          <a class="brand" href="#top" aria-label="Millionaire's Roast home"
+          <a class="brand" href="#top" aria-label="Millionaire's Roast home" data-aria-label-en="Millionaire's Roast home" data-aria-label-es="Inicio de Millionaire's Roast"
             ><img
               src="images/logo.webp"
               alt=""
@@ -1090,15 +1098,11 @@
               data-en="Local availability"
               data-es="Disponibilidad local"
               >Local availability</a
-            >
+            ><a href="wholesale/" data-en="Wholesale inquiries" data-es="Consultas de mayoreo">Wholesale inquiries</a>
           </div>
           <div>
             <h3 data-en="Contact" data-es="Contacto">Contact</h3>
-            <a
-              href="mailto:millionairesroast@gmail.com"
-              data-en="Email us"
-              data-es="Correo"
-              >Email us</a
+            <a href="mailto:millionairesroast@gmail.com" data-en="Email us" data-es="Correo">Email us</a
             ><a
               href="sms:12174167072"
               data-en="Text (217) 416-7072"

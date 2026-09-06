@@ -16,7 +16,7 @@ The shared navigation and footer appear in both HTML pages; keep both in sync wh
 
 ## Page navigation
 
-Both pages opt into native cross-document view transitions through the shared stylesheet. Navigation between the homepage and wholesale page uses a short fade and subtle content movement while keeping the header steady. Reduced-motion users and browsers without cross-document support keep immediate, ordinary navigation. Same-page section links keep their existing smooth scrolling.
+Both pages opt into native cross-document view transitions through the shared stylesheet. Navigation between the homepage and wholesale page uses a short fade and subtle content movement while keeping the header steady. Browsers without native support use a brief JavaScript animation when available. Reduced-motion users keep immediate navigation. Same-page section links keep their existing smooth scrolling.
 
 The Wholesale links on the wholesale page itself point to its main content, so choosing the current page scrolls up without reloading or clearing a draft inquiry. Retail links to Square continue to use normal external navigation.
 
@@ -33,10 +33,10 @@ The page collects interest in potential future partnerships. It does not accept 
 Serve this directory with a static HTTP server, for example:
 
 ```sh
-python -m http.server 4173 --bind 127.0.0.1
+python -m http.server 4183 --bind 127.0.0.1
 ```
 
-Open `http://127.0.0.1:4173/` or `http://127.0.0.1:4173/wholesale/`. There is no build step or package installation.
+Open `http://127.0.0.1:4183/` or `http://127.0.0.1:4183/wholesale/`. There is no build step or package installation.
 
 ## Publish
 
@@ -53,7 +53,7 @@ GitHub Pages has restrictions on commercial hosting. Confirm the hosting arrange
 
 - JavaScript syntax checks and local HTML link/asset/accessibility-reference checks.
 - Desktop and mobile browser review in English and Spanish, including landscape menu scrolling and the dropdown route to Wholesale.
-- Final static audit: 78 local links/assets, 222 translation pairs, image descriptions, control/ARIA references, HTML nesting, JSON-LD, and sitemap validation passed.
+- Static checks cover local links/assets, translation pairs, image descriptions, control/ARIA references, HTML nesting, JSON-LD, and the sitemap.
 - Form validation, success, and connection-failure checks with a local mock that sends nothing to Formspree.
 - Additional isolated checks for provider errors, duplicate submissions, timeout, honeypot, and language changes.
 

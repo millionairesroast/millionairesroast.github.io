@@ -1020,23 +1020,6 @@ a:hover .arrow {
   animation: halo-breathe 5.5s ease-in-out infinite;
 }
 
-.media-price {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  display: grid;
-  width: 54px;
-  height: 54px;
-  place-items: center;
-  color: #0b0805;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--gold-bright), #b88639);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  font-family: var(--serif);
-  font-size: 1rem;
-  font-weight: 700;
-}
-
 .product-copy {
   display: flex;
   flex: 1;
@@ -1071,8 +1054,9 @@ a:hover .arrow {
 
 .price-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
-  gap: 10px;
+  gap: 4px 10px;
   margin-bottom: 20px;
 }
 
@@ -1081,6 +1065,7 @@ a:hover .arrow {
   font-family: var(--serif);
   font-size: 1.65rem;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .price-row span {
@@ -2297,19 +2282,19 @@ html.motion-ready [data-reveal].is-visible {
   }
 
   .hero-grid {
-    gap: 44px;
-    padding-block: 58px 72px;
+    gap: 32px;
+    padding-block: 38px 60px;
   }
 
   .hero h1 {
-    margin-bottom: 21px;
-    font-size: clamp(2.85rem, 14.5vw, 4.15rem);
+    margin-bottom: 18px;
+    font-size: clamp(2.65rem, 13vw, 3.6rem);
     line-height: 1;
   }
 
   .hero-body {
     font-size: 0.98rem;
-    line-height: 1.72;
+    line-height: 1.6;
   }
 
   .hero-actions {

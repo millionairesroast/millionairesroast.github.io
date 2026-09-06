@@ -582,30 +582,6 @@ a:hover .arrow {
   gap: 12px;
 }
 
-.hero-proof {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 13px 22px;
-  margin: 30px 0 0;
-  padding: 0;
-  color: var(--cream-dim);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  list-style: none;
-}
-
-.hero-proof li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.hero-proof span {
-  color: var(--gold);
-  font-size: 0.52rem;
-}
-
 .hero-showcase {
   position: relative;
   height: 590px;
@@ -2304,13 +2280,6 @@ html.motion-ready [data-reveal].is-visible {
 
   .hero-actions .button {
     width: 100%;
-  }
-
-  .hero-proof {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 9px;
-    margin-top: 26px;
   }
 
   .hero-showcase {

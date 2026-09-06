@@ -156,6 +156,91 @@
     if (window.innerWidth > 1240 && menuIsOpen()) setMenu(false);
   });
 
+  function setupPageNavigation() {
+    const main = document.querySelector("main");
+    // CSS handles supported cross-document transitions without intercepting links.
+    if ("CSSViewTransitionRule" in window || !main?.animate) return;
+
+    const arrivalKey = "mr-page-arrival";
+    let departure;
+    let departureTimer;
+    let recoveryTimer;
+
+    function resetDeparture() {
+      window.clearTimeout(departureTimer);
+      window.clearTimeout(recoveryTimer);
+      departure?.cancel();
+      departure = undefined;
+    }
+
+    try {
+      const arrival = JSON.parse(window.sessionStorage.getItem(arrivalKey));
+      window.sessionStorage.removeItem(arrivalKey);
+      if (
+        arrival?.url === window.location.href &&
+        Date.now() - arrival.at < 10000 &&
+        !reduceMotion.matches
+      ) {
+        main.animate(
+          [
+            { opacity: 0, transform: "translateY(8px)" },
+            { opacity: 1, transform: "translateY(0)" },
+          ],
+          { duration: 280, easing: "cubic-bezier(0.22, 1, 0.36, 1)" },
+        );
+      }
+    } catch {
+      // Navigation still works when session storage is unavailable.
+    }
+
+    // A restored page must never retain its departure animation or timer.
+    window.addEventListener("pageshow", resetDeparture);
+    window.addEventListener("pagehide", resetDeparture);
+
+    document.addEventListener("click", (event) => {
+      if (
+        event.defaultPrevented || event.button !== 0 ||
+        event.metaKey || event.ctrlKey || event.shiftKey || event.altKey ||
+        reduceMotion.matches || !(event.target instanceof Element)
+      ) return;
+
+      const link = event.target.closest("a[href]");
+      if (
+        !link || link.hasAttribute("download") ||
+        (link.target && link.target.toLowerCase() !== "_self")
+      ) return;
+
+      const destination = new URL(link.href, window.location.href);
+      if (
+        destination.origin !== window.location.origin ||
+        destination.pathname === window.location.pathname ||
+        (!document.body.classList.contains("wholesale-page") &&
+          !/\/wholesale(?:\/(?:index\.html)?)?$/.test(destination.pathname))
+      ) return;
+
+      event.preventDefault();
+      resetDeparture();
+      // A brief softening keeps the page readable while the real navigation starts.
+      departure = main.animate([{ opacity: 1 }, { opacity: 0.55 }], {
+        duration: 140, easing: "ease-out", fill: "forwards",
+      });
+      departureTimer = window.setTimeout(() => {
+        try {
+          window.sessionStorage.setItem(arrivalKey, JSON.stringify({
+            url: destination.href, at: Date.now(),
+          }));
+        } catch {
+          // The departure effect does not depend on browser storage.
+        }
+        window.location.assign(destination.href);
+        // Restore the page if a navigation is cancelled or takes unusually long.
+        recoveryTimer = window.setTimeout(resetDeparture, 1500);
+      }, 140);
+    });
+  }
+
+  setupPageNavigation();
+
   function updateScrollProgress() {
     const scrollable =
       document.documentElement.scrollHeight - window.innerHeight;

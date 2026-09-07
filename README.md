@@ -14,6 +14,8 @@ A static HTML, CSS, and JavaScript website, with retail shopping handled by Squa
 
 The shared navigation and footer appear in both HTML pages; keep both in sync when editing links. Translation text belongs in matching `data-en` and `data-es` attributes. Dynamic form status text lives in `wholesale.js`.
 
+The header and footer use `images/logo-160.webp`; larger logo artwork uses `images/logo.webp`. Keep both sizes. The Discovery Box image receives a high-priority preload only on desktop, while below-the-fold and hidden images use native lazy loading. When replacing shared styles, update the stylesheet version query in both HTML pages together so returning visitors receive the new layout.
+
 ## Page navigation
 
 Both pages opt into native cross-document view transitions through the shared stylesheet. Navigation between the homepage and wholesale page uses a short fade and subtle content movement while keeping the header steady. Browsers without native support use a brief JavaScript animation when available. Reduced-motion users keep immediate navigation. Same-page section links keep their existing smooth scrolling.

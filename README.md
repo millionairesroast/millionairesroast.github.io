@@ -16,6 +16,23 @@ The shared navigation and footer appear in both HTML pages; keep both in sync wh
 
 The header and footer use `images/logo-160.webp`; larger logo artwork uses `images/logo.webp`. Keep both sizes. The Discovery Box image receives a high-priority preload only on desktop, while below-the-fold and hidden images use native lazy loading. When replacing shared styles, update the stylesheet version query in both HTML pages together so returning visitors receive the new layout.
 
+## Cacao retail update — October 3, 2026
+
+The homepage now includes released cacao products with their own photographs, prices, English/Spanish descriptions, and direct Square links:
+
+- [8 oz Drinking Chocolate](https://millionaires-roast.square.site/product/8-oz-drinking-chocolate/ZMWO643HKYKFW32RAFJLELUY?cs=true&cst=custom): $16, 60% Ecuadorian cacao and 40% cane sugar, stone-ground for approximately 24 hours. Prepare with hot milk; it can also be used in coffee and baking.
+- [12 oz Cacao Nibs](https://millionaires-roast.square.site/product/12-oz-shelled-cacao-beans/FIBSRSAADKSDK24KM3QKAHJF?cs=true&cst=custom): $18, roasted, cracked, and winnowed to remove the shells; 100% unsweetened cacao nibs with nothing added.
+
+The business's [Facebook announcement](https://www.facebook.com/millionairesroast/posts/pfbid0i9YNk5fTWtcos96qs2QsaUkDz7NtpSASoYYeU9Uja6jFrV6HSXLbKNDdRZhYV4fBl) confirms the drinking chocolate process and retail availability at The Cottage, market booths, and online. Both products use Hacienda Victoria cacao from Ecuador. Chocolate-covered coffee beans and chocolate bars remain in development. The wholesale form collects future interest in the released products without offering wholesale supply.
+
+The drinking chocolate photograph comes from the business's Square listing and uses two responsive WebP sizes. The nibs card uses the existing crest as a placeholder because the previous photo shows a package labeled whole shelled beans. All product images are lazy-loaded, and retail links use the existing `shop_click` analytics handling. The old beans photo is no longer referenced by the website.
+
+The October 3 business update confirms complimentary full 8 oz cups of coffee and hot chocolate at the market stand. This wording appears in the mobile hero, cacao section, and local market card in both languages. The inquiry form has one roasted cacao nibs option.
+
+The existing 12 oz/$18 Square item URL still works, but its public title remains "12 oz Shelled Cacao Beans". Rename the Square listing and update its description/photo to cacao nibs; the website retains its verified URL and existing analytics identifiers until the item is updated.
+
+The Illinois Products Thursday market's 2026 season ended September 24, according to the [Illinois Department of Agriculture](https://agr.illinois.gov/consumers/illinoisproductsfarmersmarket/contact-us.html). Local-shopping copy now directs visitors to social channels for current seasonal appearances instead of promising year-round Thursday attendance.
+
 ## Page navigation
 
 Both pages opt into native cross-document view transitions through the shared stylesheet. Navigation between the homepage and wholesale page uses a short fade and subtle content movement while keeping the header steady. Browsers without native support use a brief JavaScript animation when available. Reduced-motion users keep immediate navigation. Same-page section links keep their existing smooth scrolling.
@@ -43,6 +60,8 @@ Open `http://127.0.0.1:4183/` or `http://127.0.0.1:4183/wholesale/`. There is no
 ## Publish
 
 This supplied folder is not currently a Git checkout; its empty `.git` placeholder was removed during directory cleanup. The updates have not been committed, pushed, or deployed.
+
+Before the October 2 edits, all 29 local files matched the GitHub repository byte for byte at commit `4f14f56f66b52879c488a6dab5a18dff417caa89` on `main`. Differences now consist of the cacao update and its documentation/assets.
 
 1. Copy the updated HTML, CSS, JavaScript, `wholesale/`, `images/`, favicon, CNAME, robots, and sitemap files into the actual repository’s GitHub Pages publishing directory. Preserve its Git history and deployment settings.
 2. Keep the configured Formspree endpoint, `https://formspree.io/f/xljelzak`, and complete the dashboard checks in [FORMSPREE-SETUP.md](FORMSPREE-SETUP.md).

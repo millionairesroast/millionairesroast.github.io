@@ -1136,6 +1136,19 @@ a:hover .arrow {
   object-position: 60% center;
 }
 
+.cacao-product-placeholder {
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: radial-gradient(ellipse at center, rgba(180, 125, 60, 0.13), transparent 75%);
+}
+
+.cacao-product-placeholder img {
+  width: min(100%, 128px);
+  height: auto;
+  object-fit: contain;
+}
+
 .cacao-product-copy {
   display: flex;
   min-width: 0;

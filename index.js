@@ -152,6 +152,14 @@
     if (event.key === "Escape" && menuIsOpen()) setMenu(false, true);
   });
 
+  // Let keyboard users leave the disclosure without covering the next link.
+  document.addEventListener("focusin", (event) => {
+    if (
+      menuIsOpen() && event.target instanceof Node &&
+      !siteHeader?.contains(event.target)
+    ) setMenu(false);
+  });
+
   window.addEventListener("resize", () => {
     if (window.innerWidth > 1240 && menuIsOpen()) setMenu(false);
   });

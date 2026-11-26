@@ -20,11 +20,11 @@
     <meta name="twitter:title" content="Wholesale Inquiries | Millionaire's Roast" />
     <meta name="twitter:description" content="Explore a future partnership for drinking chocolate, specialty coffee, chocolate bars, and roasted cacao nibs." />
     <meta name="twitter:image" content="https://millionairesroast.com/assets/social-preview.d2bdfbea87bdc5b6.jpg" />
-    <link rel="stylesheet" href="../assets/styles.1c3d6b6116727fc5.css" />
-    <link rel="stylesheet" href="../assets/styles-wholesale.46be36d07fd00468.css" />
+    <link rel="stylesheet" href="../assets/styles.e9484f9efd6058bb.css" />
+    <link rel="stylesheet" href="../assets/styles-wholesale.7d49b4aa95b0c812.css" />
     <script src="../assets/analytics.7d87ce13913cc6cc.js" defer></script>
-    <script src="../assets/index.0935972bd32e37d2.js" defer></script>
-    <script src="../assets/wholesale.965e77395335ac16.js" defer></script>
+    <script src="../assets/index.2ff05e50769a37e2.js" defer></script>
+    <script src="../assets/wholesale.b705071fd8183fca.js" defer></script>
   </head>
   <body class="wholesale-page">
     <a class="skip-link" href="#main-content" data-en="Skip to content" data-es="Saltar al contenido">Skip to content</a>
@@ -70,7 +70,10 @@
           <a class="button button-primary partner-start" href="#partner-inquiry"><span data-en="Start an inquiry" data-es="Iniciar consulta">Start an inquiry</span> <span aria-hidden="true">↓</span></a>
         </div>
         <figure class="partner-portrait">
-          <img src="../assets/cottage-640.071ca8d51faf8b65.webp" srcset="../assets/cottage-640.071ca8d51faf8b65.webp 640w, ../assets/cottage.f08d284c24075091.webp 1113w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) 43vw, 530px" width="640" height="480" loading="eager" fetchpriority="high" decoding="async" alt="The Cottage, a red brick storefront in Beardstown" data-alt-en="The Cottage, a red brick storefront in Beardstown" data-alt-es="The Cottage, una tienda de ladrillo rojo en Beardstown" />
+          <picture>
+            <source media="(max-width: 700px)" srcset="../assets/cottage-wide-400.aec9c160a2831065.webp 400w, ../assets/cottage-wide-720.60a14b678a6f2867.webp 720w, ../assets/cottage-wide-1080.406d27ce1335982d.webp 1080w" sizes="(max-width: 400px) calc(100vw - 40px), 90vw" width="720" height="360" />
+            <img src="../assets/cottage-640.071ca8d51faf8b65.webp" srcset="../assets/cottage-640.071ca8d51faf8b65.webp 640w, ../assets/cottage.f08d284c24075091.webp 1113w" sizes="(max-width: 1493px) 36.52vw, 546px" width="640" height="480" loading="eager" fetchpriority="high" decoding="async" alt="The Cottage, a red brick storefront in Beardstown" data-alt-en="The Cottage, a red brick storefront in Beardstown" data-alt-es="The Cottage, una tienda de ladrillo rojo en Beardstown" />
+          </picture>
           <figcaption data-en="The Cottage, our retail home in Beardstown, Illinois." data-es="The Cottage, nuestra tienda en Beardstown, Illinois.">The Cottage, our retail home in Beardstown, Illinois.</figcaption>
         </figure>
       </section>
@@ -113,14 +116,17 @@
                   </div>
                   <div class="form-field">
                     <label for="business_type"><span data-en="Business type" data-es="Tipo de negocio">Business type</span> <span class="required-mark" aria-hidden="true">*</span></label>
-                    <select id="business_type" name="business_type" required>
-                      <option value="" data-en="Select one" data-es="Selecciona uno">Select one</option>
-                      <option value="cafe_restaurant" data-en="Café or restaurant" data-es="Cafetería o restaurante">Café or restaurant</option>
-                      <option value="retail" data-en="Retail shop" data-es="Tienda">Retail shop</option>
-                      <option value="office" data-en="Office or workplace" data-es="Oficina o lugar de trabajo">Office or workplace</option>
-                      <option value="hospitality" data-en="Hotel or hospitality" data-es="Hotel u hospedaje">Hotel or hospitality</option>
-                      <option value="other" data-en="Something else" data-es="Otro">Something else</option>
-                    </select>
+                    <div class="inquiry-select">
+                      <select id="business_type" name="business_type" required>
+                        <option value="" data-en="Select one" data-es="Selecciona uno">Select one</option>
+                        <option value="cafe_restaurant" data-en="Café or restaurant" data-es="Cafetería o restaurante">Café or restaurant</option>
+                        <option value="retail" data-en="Retail shop" data-es="Tienda">Retail shop</option>
+                        <option value="office" data-en="Office or workplace" data-es="Oficina o lugar de trabajo">Office or workplace</option>
+                        <option value="hospitality" data-en="Hotel or hospitality" data-es="Hotel u hospedaje">Hotel or hospitality</option>
+                        <option value="other" data-en="Something else" data-es="Otro">Something else</option>
+                      </select>
+                      <span class="inquiry-select-value" aria-hidden="true" hidden></span>
+                    </div>
                   </div>
                   <div class="form-field">
                     <label for="location"><span data-en="City and state" data-es="Ciudad y estado">City and state</span> <span class="required-mark" aria-hidden="true">*</span></label>
@@ -154,19 +160,22 @@
                 <div class="partner-fields">
                   <div class="form-field form-field-wide">
                     <label for="interest"><span data-en="What are you interested in?" data-es="¿Qué te interesa?">What are you interested in?</span> <span class="required-mark" aria-hidden="true">*</span></label>
-                    <select id="interest" name="interest" required aria-describedby="interest-hint">
-                      <option value="" data-en="Select one" data-es="Selecciona uno">Select one</option>
-                      <option value="drinking_chocolate" data-en="Drinking chocolate" data-es="Chocolate para beber">Drinking chocolate</option>
-                      <option value="discovery_box" data-en="Discovery Box coffee sampler" data-es="Discovery Box de tres cafés">Discovery Box coffee sampler</option>
-                      <option value="retail_bags" data-en="Packaged coffee for resale" data-es="Café empacado para reventa">Packaged coffee for resale</option>
-                      <option value="brewing" data-en="Coffee to brew and serve" data-es="Café para preparar y servir">Coffee to brew and serve</option>
-                      <option value="workplace" data-en="Coffee for our workplace" data-es="Café para nuestro lugar de trabajo">Coffee for our workplace</option>
-                      <option value="chocolate_bars" data-en="Chocolate bars (52 g)" data-es="Barras de chocolate (52 g)">Chocolate bars (52 g)</option>
-                      <option value="cacao_nibs" data-en="Roasted cacao nibs" data-es="Nibs de cacao tostados">Roasted cacao nibs</option>
-                      <option value="chocolate_covered_coffee" data-en="Chocolate-covered espresso beans (in development)" data-es="Granos de café espresso cubiertos de chocolate (en desarrollo)">Chocolate-covered espresso beans (in development)</option>
-                      <option value="multiple_products" data-en="Multiple products" data-es="Varios productos">Multiple products</option>
-                      <option value="other" data-en="Another idea / not sure yet" data-es="Otra idea / aún no sé">Another idea / not sure yet</option>
-                    </select>
+                    <div class="inquiry-select">
+                      <select id="interest" name="interest" required aria-describedby="interest-hint">
+                        <option value="" data-en="Select one" data-es="Selecciona uno">Select one</option>
+                        <option value="drinking_chocolate" data-en="Drinking chocolate" data-es="Chocolate para beber">Drinking chocolate</option>
+                        <option value="discovery_box" data-en="Discovery Box coffee sampler" data-es="Discovery Box de tres cafés">Discovery Box coffee sampler</option>
+                        <option value="retail_bags" data-en="Packaged coffee for resale" data-es="Café empacado para reventa">Packaged coffee for resale</option>
+                        <option value="brewing" data-en="Coffee to brew and serve" data-es="Café para preparar y servir">Coffee to brew and serve</option>
+                        <option value="workplace" data-en="Coffee for our workplace" data-es="Café para nuestro lugar de trabajo">Coffee for our workplace</option>
+                        <option value="chocolate_bars" data-en="Chocolate bars (52 g)" data-es="Barras de chocolate (52 g)">Chocolate bars (52 g)</option>
+                        <option value="cacao_nibs" data-en="Roasted cacao nibs" data-es="Nibs de cacao tostados">Roasted cacao nibs</option>
+                        <option value="chocolate_covered_coffee" data-en="Chocolate-covered espresso beans (in development)" data-es="Granos de café espresso cubiertos de chocolate (en desarrollo)">Chocolate-covered espresso beans (in development)</option>
+                        <option value="multiple_products" data-en="Multiple products" data-es="Varios productos">Multiple products</option>
+                        <option value="other" data-en="Another idea / not sure yet" data-es="Otra idea / aún no sé">Another idea / not sure yet</option>
+                      </select>
+                      <span class="inquiry-select-value" aria-hidden="true" hidden></span>
+                    </div>
                     <p id="interest-hint" class="field-hint" data-en="Our 52 g chocolate bars retail for $4 each, tax included. We’ll set wholesale prices once the required approvals are in place." data-es="Cada barra de chocolate de 52 g cuesta $4 al público, con impuestos incluidos. Fijaremos los precios de mayoreo cuando contemos con las autorizaciones necesarias.">Our 52 g chocolate bars retail for $4 each, tax included. We’ll set wholesale prices once the required approvals are in place.</p>
                   </div>
                   <div class="form-field form-field-wide">
@@ -207,7 +216,7 @@
             <h3 data-en="Shop" data-es="Tienda">Shop</h3>
             <a href="https://millionaires-roast.square.site/product/8-oz-drinking-chocolate/ZMWO643HKYKFW32RAFJLELUY?cs=true&amp;cst=custom" data-location="footer_drinking_chocolate" data-en="Drinking chocolate" data-es="Chocolate para beber">Drinking chocolate</a>
             <a href="https://millionaires-roast.square.site/product/discovery-box/I4FOVQ3W64GJPGNMPODEMAHV?cs=true&amp;cst=custom" data-location="footer_discovery">Discovery Box</a>
-            <a href="../#chocolate-bars" data-en="Chocolate bars" data-es="Barras de chocolate">Chocolate bars</a>
+            <a href="https://millionaires-roast.square.site/product/chocolate-bar/ONMEJ2LHZ3CQOASZO4UQ5MYF" data-location="footer_chocolate_bars" data-en="Chocolate bars" data-es="Barras de chocolate">Chocolate bars</a>
             <a href="https://millionaires-roast.square.site/product/12-oz-cacao-nibs/FIBSRSAADKSDK24KM3QKAHJF?cs=true&amp;cst=custom" data-location="footer_cacao_beans" data-en="Cacao nibs" data-es="Nibs de cacao">Cacao nibs</a>
             <a href="https://millionaires-roast.square.site/" data-location="footer_all_coffee" data-en="Coffee and cacao" data-es="Café y cacao">Coffee and cacao</a>
           </div>
